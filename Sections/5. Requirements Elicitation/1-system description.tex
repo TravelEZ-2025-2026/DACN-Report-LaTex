@@ -1,0 +1,110 @@
+% File: system description.tex
+
+% % --- PHẦN BỐI CẢNH KINH DOANH VÀ MÔ TẢ HỆ THỐNG ---
+
+% \subsubsection{Bối cảnh kinh doanh}
+% Ngành du lịch trong kỷ nguyên số đang đối mặt với một thách thức kép: Về phía du khách, quá trình lập kế hoạch bị \textbf{phân mảnh} trên quá nhiều nền tảng, dẫn đến tình trạng quá tải thông tin và rủi ro gặp phải các đánh giá giả (seeding) không đáng tin cậy. Cùng lúc đó, các nhà cung cấp dịch vụ, đặc biệt là doanh nghiệp vừa và nhỏ, lại gặp khó khăn trong việc \textbf{tiếp cận đúng khách hàng} và thiếu các công cụ phân tích chuyên sâu để nắm bắt xu hướng thị trường.
+
+% Từ bối cảnh đó, hệ thống \textbf{TravelEZ} ra đời như một giải pháp tích hợp toàn diện, lấp đầy khoảng trống của thị trường. Hệ thống được phát triển với mục tiêu trở thành một trợ lý du lịch đáng tin cậy, kết hợp sức mạnh của AI để tạo ra các lộ trình cá nhân hóa và khả thi, đồng thời xây dựng một môi trường cộng đồng trong sạch, tạo cầu nối hiệu quả giữa du khách và các nhà cung cấp dịch vụ.
+
+Trên cơ sở phân tích và đánh giá các giải pháp hỗ trợ du lịch hiện có ở Chương 4, chương này đề xuất Hệ thống Gợi ý Hành trình Du lịch Thông minh TravelEZ 
+nhằm giải quyết các hạn chế đã được chỉ ra. Hệ thống được cấu thành từ các nhóm chức năng chính, mỗi nhóm đảm nhiệm một vai trò chuyên biệt để hiện thực hóa mục tiêu xây dựng một nền tảng du lịch toàn diện — từ việc tạo ra các gợi ý cá nhân hóa sâu sắc, thúc đẩy tương tác cộng đồng, cho đến việc cung cấp công cụ hỗ trợ cho các nhà cung cấp dịch vụ.
+
+Hệ thống bao gồm 8 module chính sau:
+
+% --- HÌNH ẢNH TỔNG QUAN ĐƯỢC ĐẶT NGAY TRƯỚC DANH SÁCH MODULE ---
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{Images/5 Hệ thống đề xuất/System Overview.png} 
+    \caption{Sơ đồ tổng quan các thành phần chính của hệ thống TravelEZ.}
+    \label{fig:system_overview}
+\end{figure}
+
+% --- MÔ TẢ CHI TIẾT CÁC MODULE ---
+\begin{enumerate}
+    \item \textbf{Module gợi ý lộ trình:} Đây là module lõi của hệ thống, chịu trách nhiệm chuyển hóa dữ liệu thô thành các lịch trình du lịch được cá nhân hóa và có tính khả thi cao.
+    \begin{itemize}
+        \item \textbf{Mục tiêu}: Tự động tạo ra các kế hoạch hành trình tối ưu dựa trên các ràng buộc và sở thích của người dùng. 
+        \item \textbf{Chức năng chính}: 
+        \begin{itemize}
+            \item Tổng hợp dữ liệu đa nguồn: Định kỳ thu thập và hợp nhất dữ liệu về địa điểm, dịch vụ, sự kiện, và thời tiết từ nhiều nguồn khác nhau. 
+            \item Tiền xử lý và chuẩn hóa dữ liệu: Triển khai các thuật toán để làm sạch dữ liệu, loại bỏ thông tin rác (spam), nội dung giả mạo, đồng thời chuẩn hóa các thuộc tính như tên gọi, tọa độ, phân loại (taxonomy) và lịch hoạt động. Quá trình này đảm bảo một kho dữ liệu nhất quán và đáng tin cậy cho các mô hình AI. 
+            \item Gợi ý dựa trên AI: Áp dụng các mô hình học máy để phân tích các ràng buộc đầu vào của người dùng (thời gian, ngân sách, sở thích, nhịp độ di chuyển). Từ đó, hệ thống đề xuất các lộ trình chi tiết theo ngày và khung giờ, tối ưu hóa việc di chuyển, cân bằng hoạt động và dự báo các yếu tố ngoại cảnh như chi phí, thời tiết.
+        \end{itemize}
+    \end{itemize}
+
+    \item \textbf{Module quản lý \& tương tác lộ trình:} Module này cung cấp các công cụ cho phép người dùng toàn quyền kiểm soát, tùy chỉnh và chia sẻ các lộ trình đã được hệ thống gợi ý.
+    \begin{itemize}
+        \item \textbf{Mục tiêu}: Tăng cường tính linh hoạt và cá nhân hóa, cho phép người dùng tinh chỉnh kế hoạch để phù hợp tuyệt đối với nhu cầu thực tế.
+        \item \textbf{Chức năng chính:}
+        \begin{itemize}
+            \item Tùy chỉnh linh hoạt: Cung cấp giao diện trực quan để người dùng có thể dễ dàng thêm/bớt điểm đến, thay đổi thứ tự các hoạt động, và điều chỉnh thời lượng, chi phí dự kiến.
+            \item Quản lý phiên bản: Hỗ trợ lưu trữ, đặt tên và quản lý nhiều phiên bản khác nhau của một kế hoạch, giúp người dùng dễ dàng so sánh và lựa chọn.
+            \item Hỗ trợ cộng tác và chia sẻ: Cho phép người dùng chia sẻ lộ trình với bạn đồng hành, mời họ cùng tham gia chỉnh sửa, tạo ra một vòng lặp phản hồi giúp hệ thống liên tục học hỏi và cải thiện độ chính xác.
+        \end{itemize}
+    \end{itemize}
+
+    \item \textbf{Module tìm kiếm \& khám phá:} Module này hoạt động như cổng giao tiếp chính, cho phép người dùng truy vấn và khám phá kho dữ liệu du lịch công khai của hệ thống. 
+    \begin{itemize}
+        \item \textbf{Mục tiêu:} Cung cấp một cơ chế tìm kiếm thông tin hiệu quả, có tổ chức và được cá nhân hóa. 
+        \item \textbf{Chức năng chính:}
+        \begin{itemize}
+            \item Tìm kiếm đa phương thức: Hỗ trợ tìm kiếm theo từ khóa, chủ đề, và bộ lọc nâng cao (địa điểm, loại hình, ngân sách).
+            \item Trực quan hóa trên bản đồ: Hiển thị kết quả tìm kiếm trên một giao diện bản đồ tương tác để tăng tính ngữ cảnh không gian.
+            \item Quản lý nội dung yêu thích: Cho phép người dùng lưu lại (bookmark) các địa điểm, bài viết, hoặc tạo các bộ sưu tập cá nhân để tiện tham khảo và sử dụng sau này. 
+        \end{itemize}
+    \end{itemize}
+
+    \item \textbf{Module xây dựng cộng đồng \& nội dung người dùng:} Đây là một nền tảng tương tác xã hội chuyên biệt, nơi người dùng có thể chia sẻ kinh nghiệm, kết nối và đóng góp nội dung cho hệ sinh thái.
+    \begin{itemize}
+        \item \textbf{Mục tiêu:} Xây dựng một cộng đồng du lịch gắn kết, tạo ra nguồn nội dung chân thực và giá trị do chính người dùng đóng góp. 
+        \item \textbf{Chức năng chính:}
+        \begin{itemize}
+            \item Tạo và chia sẻ nội dung: Người dùng có thể đăng tải bài viết (blog), hình ảnh, video về các chuyến đi và chia sẻ kinh nghiệm thực tế.
+            \item Tương tác xã hội: Cung cấp các tính năng tương tác quen thuộc như bình luận, bày tỏ cảm xúc, theo dõi tác giả và chia sẻ bài viết. 
+            \item Hệ thống đánh giá (Review): Tích hợp chức năng đánh giá và xếp hạng cho các địa điểm, dịch vụ, giúp người dùng khác có thông tin tham khảo đáng tin cậy.
+            \item Hồ sơ người dùng: Mỗi thành viên có một hồ sơ cá nhân thể hiện lịch sử du lịch, các nội dung đã đóng góp và danh sách các điểm đến yêu thích. 
+        \end{itemize}
+    \end{itemize}
+
+    \item \textbf{Module quản lý \& kiểm duyệt nội dung:} Module này là cơ chế kiểm soát chất lượng, đảm bảo môi trường thông tin trên nền tảng luôn trong sạch, phù hợp và đáng tin cậy. 
+    \begin{itemize}
+        \item \textbf{Mục tiêu:} Giám sát, phân loại và xử lý các nội dung do người dùng tạo ra nhằm duy trì một cộng đồng lành mạnh, tập trung vào chủ đề du lịch.
+        \item \textbf{Chức năng chính:}
+        \begin{itemize}
+            \item Kiểm duyệt tự động: Sử dụng các bộ lọc và mô hình AI để tự động phát hiện và gắn cờ các nội dung có dấu hiệu spam, sai chủ đề, hoặc vi phạm chính sách. 
+            \item Giao diện kiểm duyệt thủ công: Cung cấp công cụ cho quản trị viên để xem xét, phê duyệt, hoặc gỡ bỏ nội dung một cách trực quan và hiệu quả. 
+            \item Xử lý tài khoản vi phạm: Quản lý lịch sử vi phạm và áp dụng các biện pháp xử lý tương ứng (cảnh cáo, khóa tài khoản tạm thời/vĩnh viễn).
+            \item Cơ chế báo cáo từ cộng đồng: Cho phép người dùng chủ động báo cáo các nội dung hoặc tài khoản có hành vi không phù hợp. 
+        \end{itemize}
+    \end{itemize}   
+
+    \item \textbf{Module phân tích dữ liệu \& xu hướng thị trường:} Module này chịu trách nhiệm tổng hợp, phân tích và trực quan hóa dữ liệu người dùng ẩn danh để nhận diện các xu hướng của thị trường.
+    \begin{itemize}
+        \item \textbf{Mục tiêu:} Cung cấp cho các nhà cung cấp dịch vụ một cái nhìn tổng quan, dựa trên dữ liệu, về nhu cầu và hành vi của du khách.
+        \item \textbf{Chức năng chính:}
+        \begin{itemize}
+            \item Dashboard trực quan: Hiển thị các chỉ số quan trọng (KPIs) dưới dạng biểu đồ, bản đồ nhiệt về các điểm đến phổ biến, các chủ đề tìm kiếm thịnh hành, và các mô hình hành vi của du khách. 
+        \end{itemize}
+    \end{itemize}
+
+    \item \textbf{Module Gợi ý cải thiện lịch trình:} Module này ứng dụng các mô hình AI để chuyển hóa dữ liệu đã phân tích thành những gợi ý, cải thiện dịch vụ, mang tính hành động cho nhà cung cấp.
+    \begin{itemize}
+        \item \textbf{Mục tiêu:} Giúp nhà cung cấp dịch vụ lữ hành cải thiện chiến lược dịch vụ một cách hiệu quả hơn. 
+        \item \textbf{Chức năng chính:}
+        \begin{itemize}
+            \item Đề xuất chiến lược: Dựa trên kết quả phân tích, hệ thống đưa ra các gợi ý cụ thể về việc điều chỉnh sản phẩm, dịch vụ để nâng cao năng lực cạnh tranh. 
+        \end{itemize}
+    \end{itemize}
+
+    \item \textbf{Module quản trị hệ thống \& người dùng:} Đây là module hạ tầng nền tảng, đảm bảo sự ổn định, an toàn và toàn vẹn dữ liệu cho toàn bộ hệ thống. 
+    \begin{itemize}
+        \item \textbf{Mục tiêu}: Mục tiêu: Cung cấp các công cụ cần thiết để quản lý định danh người dùng, phân quyền truy cập và bảo trì cơ sở dữ liệu hệ thống.
+        \item \textbf{Chức năng chính:}
+        \begin{itemize}
+            \item Xác thực và phân quyền (Authentication \& Authorization): Quản lý quá trình đăng ký, đăng nhập (email, social login), khoá, mở tài khoản.
+            \item Quản lý danh mục hệ thống: Cung cấp giao diện cho quản trị viên để thực hiện các thao tác CRUD (Create, Read, Update, Delete) trên các danh mục dữ liệu lõi. 
+            \item Quản lý hồ sơ người dùng: Cho phép người dùng tự cập nhật thông tin cá nhân và quản trị viên giám sát, quản lý danh sách tài khoản trên toàn hệ thống. 
+        \end{itemize}
+    \end{itemize}
+\end{enumerate}

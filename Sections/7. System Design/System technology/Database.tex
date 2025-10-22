@@ -1,0 +1,82 @@
+% File: database.tex
+
+\subsubsection{Cơ sở dữ liệu}
+
+\paragraph{PostgreSQL}
+
+\subparagraph{Giới thiệu}
+PostgreSQL là một hệ quản trị cơ sở dữ liệu quan hệ (RDBMS) mã nguồn mở, mạnh mẽ, hỗ trợ cả dữ liệu có cấu trúc và không cấu trúc (qua JSONB), cùng với các tính năng như giao dịch ACID, truy vấn phức tạp, và khả năng mở rộng. Trong hệ thống gợi ý hành trình du lịch thông minh, PostgreSQL được sử dụng để lưu trữ và quản lý dữ liệu cho các chức năng như hồ sơ người dùng, lịch sử gợi ý, nội dung cộng đồng (review, bài chia sẻ), dữ liệu ngữ cảnh (thời tiết, sự kiện), và audit trail kiểm duyệt. PostgreSQL cung cấp nền tảng đáng tin cậy để lưu trữ, truy vấn, và xử lý dữ liệu, đáp ứng các yêu cầu của hệ thống.
+
+\subparagraph{Ưu điểm}
+\begin{itemize}
+    \item \textbf{Lưu trữ dữ liệu linh hoạt}: Hỗ trợ cả dữ liệu có cấu trúc (như hồ sơ người dùng, lịch sử hội thoại) và không cấu trúc (như review, hành trình) thông qua JSONB, giúp lưu trữ dữ liệu gợi ý và nội dung cộng đồng hiệu quả.
+    \item \textbf{Truy vấn hiệu quả}: PostgreSQL cung cấp khả năng truy vấn phức tạp (JOIN, full-text search) để hỗ trợ tìm kiếm điểm đến, bảng xếp hạng, và gợi ý hành trình dựa trên sở thích người dùng.
+    \item \textbf{Độ tin cậy cao}: Tính năng giao dịch ACID đảm bảo dữ liệu nhất quán khi lưu trữ lịch sử gợi ý, kiểm duyệt nội dung, hoặc audit trail, tránh mất mát dữ liệu trong các tác vụ như cập nhật hành trình.
+    \item \textbf{Bảo mật dữ liệu}: Hỗ trợ mã hóa (qua extension pgcrypto) và quản lý quyền truy cập chi tiết, bảo vệ dữ liệu nhạy cảm như hồ sơ người dùng và nội dung cộng đồng.
+    \item \textbf{Dễ tích hợp và mở rộng}: PostgreSQL hỗ trợ tích hợp với các công cụ ETL để xử lý dữ liệu từ nguồn ngoài (như review, thời tiết), đồng thời cho phép mở rộng dung lượng mà không cần thay đổi cấu trúc.
+\end{itemize}
+
+\subparagraph{So sánh PostgreSQL và các công nghệ khác}
+\clearpage
+\begin{landscape}
+\begin{table}[h!]
+\centering
+\setlength{\tabcolsep}{4pt}
+\footnotesize
+\begin{tabularx}{\linewidth}{|l|X|X|X|X|X|}
+\hline
+\textbf{Tiêu chí} & \textbf{PostgreSQL} & \textbf{MySQL} & \textbf{MongoDB} & \textbf{SQLite} & \textbf{MariaDB} \\
+\hline
+\textbf{Lưu trữ dữ liệu} & \textbf{Cao}: Hỗ trợ dữ liệu có cấu trúc và JSONB cho review, hành trình, ngữ cảnh. & \textbf{Cao}: Tốt cho dữ liệu có cấu trúc, nhưng JSON kém linh hoạt hơn JSONB. & \textbf{Cao}: Tài liệu NoSQL, mạnh cho dữ liệu không cấu trúc, nhưng kém cho JOIN & \textbf{Trung bình}: Nhẹ, hỗ trợ dữ liệu có cấu trúc, nhưng JSON giới hạn. & \textbf{Cao}: Tương tự MySQL, hỗ trợ JSON nhưng kém linh hoạt hơn PostgreSQL. \\
+\hline
+\textbf{Truy vấn hiệu quả} & \textbf{Cao}: Full-text search, JOIN, và index mạnh, hỗ trợ tìm kiếm và gợi ý nhanh. & \textbf{Cao}: Truy vấn nhanh, nhưng full-text search kém hơn PostgreSQL. & \textbf{Trung bình}: Truy vấn NoSQL tốt cho dữ liệu lớn, nhưng phức tạp cho JOIN. & \textbf{Thấp}: Truy vấn đơn giản, không tối ưu cho tìm kiếm phức tạp hoặc lớn. & \textbf{Cao}: Tương tự MySQL, nhưng full-text search không mạnh bằng PostgreSQL. \\
+\hline
+\textbf{Độ tin cậy} & \textbf{Cao}: Giao dịch ACID, đảm bảo nhất quán cho audit trail và cập nhật hành trình. & \textbf{Cao}: ACID hỗ trợ tốt, nhưng tính năng nâng cao kém hơn PostgreSQL. & \textbf{Trung bình}: Không hỗ trợ ACID đầy đủ, kém tin cậy cho audit trail. & \textbf{Cao}: ACID, nhưng không tối ưu cho đồng thời nhiều người dùng. & \textbf{Cao}: Tương tự MySQL, nhưng không mạnh bằng PostgreSQL cho giao dịch phức tạp. \\
+\hline
+\textbf{Bảo mật dữ liệu} & \textbf{Cao}: pgcrypto hỗ trợ mã hóa, quyền truy cập chi tiết cho hồ sơ người dùng. & \textbf{Cao}: Mã hóa và quyền truy cập tốt, nhưng cấu hình phức tạp hơn PostgreSQL & \textbf{Trung bình}: Mã hóa có, nhưng quyền truy cập kém chi tiết hơn PostgreSQL. & \textbf{Thấp}: Bảo mật giới hạn, không phù hợp cho dữ liệu nhạy cảm lớn. & \textbf{Cao}: Tương tự MySQL, nhưng cấu hình bảo mật không linh hoạt bằng PostgreSQL. \\
+\hline
+\textbf{Dễ tích hợp và mở rộng} & \textbf{Cao}: Tích hợp ETL (Spring Batch), mở rộng dễ cho dữ liệu review, thời tiết. & \textbf{Cao}: Tích hợp tốt, nhưng mở rộng JSON kém hơn PostgreSQL & \textbf{Cao}: Tốt cho dữ liệu lớn, nhưng tích hợp ETL phức tạp hơn PostgreSQL. & \textbf{Thấp}: Không phù hợp cho dữ liệu lớn hoặc đồng thời nhiều người dùng. & \textbf{Cao}: Tương tự MySQL, nhưng mở rộng JSON kém hơn PostgreSQL. \\
+\hline
+\textbf{Hệ sinh thái và cộng đồng} & \textbf{Cao}: Hệ sinh thái lớn, công cụ như pgAdmin, DBeaver hỗ trợ quản lý dữ liệu. & \textbf{Cao}: Hệ sinh thái lớn, nhưng tài liệu kỹ thuật kém hơn PostgreSQL. & \textbf{Cao}: Hệ sinh thái NoSQL mạnh, nhưng phức tạp hơn cho dữ liệu quan hệ. & \textbf{Thấp}: Hệ sinh thái nhỏ, ít công cụ hỗ trợ so với PostgreSQL. & \textbf{Cao}: Tương tự MySQL, nhưng cộng đồng nhỏ hơn PostgreSQL. \\
+\hline
+\end{tabularx}
+\caption{So sánh PostgreSQL và các công nghệ khác}
+\end{table}
+\end{landscape}
+
+\paragraph{Redis}
+
+\subparagraph{Giới thiệu}
+Redis là một hệ quản trị cơ sở dữ liệu key-value trong bộ nhớ (in-memory), nổi bật với tốc độ truy xuất cực nhanh. Trong hệ thống gợi ý hành trình, Redis được sử dụng làm \textbf{lớp đệm (caching layer)} và quản lý phiên (session management). Cụ thể, Redis sẽ lưu trữ các dữ liệu thường xuyên truy cập như hồ sơ người dùng, các bài viết/review nổi bật, kết quả tìm kiếm phổ biến, và token đăng nhập. Điều này giúp giảm tải đáng kể cho PostgreSQL và tăng tốc độ phản hồi của hệ thống, đặc biệt với các chức năng tương tác cộng đồng và tìm kiếm.
+
+\subparagraph{Ưu điểm}
+\begin{itemize}
+    \item \textbf{Tăng tốc độ phản hồi:} Lưu các dữ liệu hay đọc vào RAM giúp các chức năng như xem review, tìm kiếm điểm đến, xem hồ sơ người dùng phản hồi gần như tức thì.
+    \item \textbf{Quản lý phiên đăng nhập hiệu quả:} Lưu trữ session/JWT token của người dùng trong Redis giúp xác thực các yêu cầu tiếp theo nhanh hơn rất nhiều so với việc truy vấn vào PostgreSQL.
+    \item \textbf{Hỗ trợ các tác vụ thời gian thực:} Redis Pub/Sub là nền tảng lý tưởng để xây dựng hệ thống \textbf{thông báo} (notifications) theo thời gian thực khi có người tương tác với bài viết hoặc nhận được tin nhắn mới.
+    \item \textbf{Giảm tải cho cơ sở dữ liệu chính:} Giảm số lượng truy vấn đọc đến PostgreSQL, giúp cơ sở dữ liệu này tập trung vào các tác vụ ghi và truy vấn phức tạp, đảm bảo sự ổn định chung.
+\end{itemize}
+
+\subparagraph{So sánh Redis và các công nghệ khác}
+\clearpage
+\begin{landscape}
+\begin{table}[h!]
+\centering
+\setlength{\tabcolsep}{4pt}
+\footnotesize
+\begin{tabularx}{\linewidth}{|l|X|X|X|}
+\hline
+\textbf{Tiêu chí} & \textbf{Redis} & \textbf{Memcached} & \textbf{Dùng PostgreSQL làm Cache} \\
+\hline
+\textbf{Hiệu suất} & \textbf{Rất cao}: Hoạt động trên RAM, tối ưu cho các tác vụ đọc/ghi nhanh. & \textbf{Cao}: Tương tự Redis nhưng đơn giản hơn, chỉ hỗ trợ key-value dạng chuỗi. & \textbf{Thấp}: Phải truy cập từ đĩa, chậm hơn RAM rất nhiều, không phù hợp cho caching. \\
+\hline
+\textbf{Loại dữ liệu} & \textbf{Linh hoạt}: Hỗ trợ nhiều cấu trúc (string, list, hash, set), phù hợp cho session, cache, và hàng đợi (queue). & \textbf{Cơ bản}: Chỉ hỗ trợ key-value dạng chuỗi, ít linh hoạt hơn. & \textbf{Rất linh hoạt}: Hỗ trợ đầy đủ dữ liệu quan hệ và JSONB. \\
+\hline
+\textbf{Độ bền (persistence)} & \textbf{Tốt}: Có thể cấu hình để lưu dữ liệu xuống đĩa (snapshotting, AOF), đảm bảo không mất dữ liệu cache khi khởi động lại. & \textbf{Không}: Dữ liệu sẽ mất hoàn toàn khi dịch vụ khởi động lại. & \textbf{Rất cao}: Dữ liệu được lưu trữ an toàn trên đĩa. \\
+\hline
+\textbf{Tính năng mở rộng} & \textbf{Cao}: Hỗ trợ Pub/Sub cho thông báo, transaction, và có thể dùng làm hàng đợi cho các tác vụ nền (như gửi email). & \textbf{Thấp}: Chỉ tập trung vào caching, không có các tính năng mở rộng. & \textbf{Thấp}: Không có các tính năng chuyên dụng cho caching hoặc Pub/Sub. \\
+\hline
+\end{tabularx}
+\caption{So sánh Redis và các công nghệ khác}
+\end{table}
+\end{landscape}

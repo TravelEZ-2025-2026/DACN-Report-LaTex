@@ -1,0 +1,171 @@
+\subsubsection{Giới thiệu}
+\textbf{- Mục đích:} Nhằm mục đích xác định và mô tả chi tiết tất cả các yêu cầu về dữ liệu cho dự án “Gợi ý hành trình du lịch dựa trên AI và đánh giá cộng đồng”. Nó đóng vai trò là nguồn thông tin chính cho nhóm trong việc thiết kế cơ sở dữ liệu, phát triển phần mềm và kiểm thử trong suốt vòng đời của dự án.\\
+\textbf{- Phạm vi:} Bao gồm các yêu cầu về nguồn dữ liệu, các thực thể dữ liệu, mối quan hệ, các thao tác dữ liệu cơ bản, các tiêu chuẩn về chất lượng dữ liệu, và mô hình dữ liệu logic (EERD).
+
+\subsubsection{Nguồn dữ liệu}
+Hệ thống sẽ thu thập và quản lý dữ liệu từ hai nguồn chính:
+
+% Bảng 1: Nguồn dữ liệu
+\begin{longtable}{|p{3cm}|p{4cm}|p{3cm}|p{4cm}|}
+    \hline
+    \textbf{Nguồn Dữ liệu} & \textbf{Mô tả} & \textbf{Loại Dữ liệu} & \textbf{Phương thức Thu thập} \\
+    \hline
+    \endfirsthead
+    
+    \hline
+    \textbf{Nguồn Dữ liệu} & \textbf{Mô tả} & \textbf{Loại Dữ liệu} & \textbf{Phương thức Thu thập} \\
+    \hline
+    \endhead
+
+    \hline
+    \endlastfoot
+
+    \textbf{Hệ thống thu thập tự động (Crawling System)} & Một hệ thống backend có nhiệm vụ quét và thu thập thông tin từ các trang web du lịch công khai. & Dữ liệu tham khảo & Các scripts thu thập dữ liệu được admin chạy định kỳ. \\
+    \hline
+    \textbf{Người dùng cuối (Travelers)} & Người dùng đã đăng ký tài khoản trên nền tảng. & Dữ liệu tương tác (User-Generated Content) & Thông qua các giao diện người dùng trên ứng dụng web/di động. \\
+    \hline
+\end{longtable}
+
+\subsubsection{Các thực thể dữ liệu}
+% Bảng 2: Các thực thể dữ liệu
+\begin{longtable}{|p{4.5cm}|p{7cm}|p{3cm}|}
+    \hline
+    \textbf{Tên thực thể} & \textbf{Mô tả} & \textbf{Nguồn dữ liệu} \\
+    \hline
+    \endfirsthead
+
+    \hline
+    \textbf{Tên thực thể} & \textbf{Mô tả} & \textbf{Nguồn dữ liệu} \\
+    \hline
+    \endhead
+
+    \hline
+    \endlastfoot
+
+    \url{ADMINS} & Tài khoản quản trị hệ thống. & Nội bộ \\
+    \hline
+    \url{USERS} & Tài khoản người dùng cuối của nền tảng. & Người dùng cuối \\
+    \hline
+    \url{PROVIDERS} & Danh bạ các nhà cung cấp dịch vụ du lịch. & Crawling System \\
+    \hline
+    \url{TOURS} & Các chương trình tour du lịch mẫu. & Crawling System \\
+    \hline
+    \url{OTHER\_SERVICES} & Các dịch vụ khác (khách sạn, nhà hàng). & Crawling System \\
+    \hline
+    \url{LOCATIONS} & Các địa điểm, địa danh du lịch. & Crawling System / Nội bộ \\
+    \hline
+    \url{REVIEWS} & Đánh giá của người dùng về Tours, Services, Locations. & Người dùng cuối \\
+    \hline
+    \url{BLOG\_POSTS} & Các bài viết blog chia sẻ kinh nghiệm. & Người dùng cuối \\
+    \hline
+    \url{BLOG\_COMMENTS} & Bình luận trong các bài viết blog. & Người dùng cuối \\
+    \hline
+    \url{USER\_ITINERARIES} & Các kế hoạch, lịch trình du lịch cá nhân. & Người dùng cuối \\
+    \hline
+    \url{MESSAGES} & Các tin nhắn riêng tư giữa hai người dùng. & Người dùng cuối \\
+    \hline
+    \url{CONTENT\_REPORTS} & Các báo cáo về nội dung vi phạm. & Người dùng cuối \\
+    \hline
+    \url{NOTIFICATIONS} & Các thông báo được gửi đến người dùng. & Hệ thống \\
+    \hline
+    \url{MEDIA (User generate)} & Các tệp đa phương tiện do người dùng tải lên (VD: trong bài blog, bình luận, hoặc review.) & Người dùng cuối \\
+    \hline
+    \url{MEDIA (Reference)} & Các tệp đa phương tiện được thu thập từ nguồn bên ngoài (VD: liên quan đến Tours, Locations, và Services). & Crawling System \\
+    \hline
+\end{longtable}
+
+\subsubsection{Mối quan hệ dữ liệu}
+% Bảng 3: Mối quan hệ dữ liệu
+\begin{longtable}{|p{3.5cm}|p{2cm}|p{3.5cm}|p{1cm}|p{4.5cm}|}
+    \hline
+    \textbf{Thực thể 1} & \textbf{Mối quan hệ} & \textbf{Thực thể 2} & \textbf{Bản số} & \textbf{Mô tả} \\
+    \hline
+    \endfirsthead
+
+    \hline
+    \textbf{Thực thể 1} & \textbf{Mối quan hệ} & \textbf{Thực thể 2} & \textbf{Bản số} & \textbf{Mô tả} \\
+    \hline
+    \endhead
+    
+    \hline
+    \endlastfoot
+
+    \url{ADMINS} & Xử lý & \url{CONTENT_REPORTS} & 1:N & Một Admin có thể xử lý nhiều báo cáo vi phạm. \\
+    \hline
+    \url{USERS} & Theo dõi & \url{USERS} & N:N & Quan hệ tự tham chiếu (đệ quy) thông qua bảng join \url{FOLLOWS}. \\
+    \hline
+    \url{USERS} & Chặn & \url{USERS} & N:N & Quan hệ tự tham chiếu (đệ quy) thông qua bảng join \url{BLOCKED_USERS}. \\
+    \hline
+    \url{USERS} & Trò chuyện với & \url{USERS} & N:N & Mối quan hệ nhiều-nhiều được hiện thực hóa qua bảng \url{CONVERSATIONS}, trong đó mỗi cặp User chỉ có một bản ghi \url{CONVERSATION} duy nhất. \\
+    \hline
+    \url{CONVERSATIONS} & Chứa các & \url{MESSAGES} & 1:N & Một cuộc trò chuyện chứa nhiều tin nhắn. \\
+    \hline
+    \url{USERS} & Gửi & \url{MESSAGES} & 1:N & Một traveler có thể gửi nhiều tin nhắn. \\
+    \hline
+    \url{PROVIDERS} & Cung cấp & \url{TOURS,OTHER_SERVICES} & 1:N & Một nhà cung cấp có thể cung cấp nhiều tour, dịch vụ khác. \\
+    \hline
+    \url{LOCATIONS} & Là địa điểm của & \url{TOUR_ACTIVITIES,USER_ACTIVITIES} & 1:N & Một địa điểm có thể có nhiều hoạt động của tour/người dùng custom diễn ra. \\
+    \hline
+    \url{TOURS} & Có lịch trình gồm & \url{TOUR_DAYS} & 1:N & Một tour được chia thành nhiều ngày. \\
+    \hline
+    \url{TOUR_DAYS} & Có các hoạt động & \url{TOUR_ACTIVITIES} & 1:N & Một ngày trong tour có nhiều hoạt động diễn ra. \\
+    \hline
+    \url{USERS} & Sở hữu & \url{USER_ITINERARIES} & 1:N & Một traveler có thể lưu nhiều lịch trình. \\
+    \hline
+    \url{USER_ITINERARIES} & Được chia sẻ với & \url{USERS} & N:N & Một lịch trình có thể được chia sẻ với nhiều traveler khác thông qua bảng \url{ITINERARY_SHARES}. \\
+    \hline
+    \url{USERS} & Viết & \url{BLOG_POSTS} & 1:N & Một traveler có thể là tác giả của nhiều bài blog. \\
+    \hline
+    \url{USERS} & Lưu & \url{BLOG_POSTS} & N:N & Một traveler có thể lưu nhiều bài blog và ngược lại, thông qua bảng \url{SAVED_BLOG_POSTS}. \\
+    \hline
+    \url{BLOG_POSTS} & Có & \url{BLOG_COMMENTS} & 1:N & Một bài blog có nhiều bình luận. \\
+    \hline
+    \url{BLOG_COMMENTS} & Trả lời & \url{BLOG_COMMENTS} & 1:N & Bình luận có thể được trả lời (quan hệ đệ quy). \\
+    \hline
+    \url{USERS} & Viết các reviews & \url{TOUR_REVIEWS,OTHER_SERVICE_REVIEWS,LOCATION_REVIEWS} & 1:N & Một traveler có thể viết nhiều review cho các dịch vụ tour/ các dịch vụ khác/ địa điểm. \\
+    \hline
+    \url{USERS} & Bày tỏ & \url{TOUR_REVIEW_REACTIONS,BLOG_COMMENT_REACTIONS} & 1:N & Một traveler có thể react với nhiều review/ bình luận. \\
+    \hline
+    \url{TOURS,OTHER_SERVICES,LOCATIONS} & Có & \url{MEDIA(TOUR_MEDIA,OTHER_SERVICE_MEDIA,LOCATION_MEDIA)} & 1:N & Một tour/dịch vụ/địa điểm có thể đính kèm media. \\
+    \hline
+    \url{TOUR_REVIEWS,OTHER_SERVICE_REVIEWS,LOCATION_REVIEWS} & Có & \url{MEDIA(TOUR_REVIEW_MEDIA,OTHER_SERVICE_REVIEW_MEDIA,LOCATION_REVIEW_MEDIA)} & 1:N & Một review về tour, dịch vụ, địa điểm có thể đính kèm media. \\
+    \hline
+    \url{BLOG_POSTS} & Có & \url{BLOG_POST_MEDIA} & 1:N & Một bài blog có thể đính kèm media. \\
+    \hline
+    \url{BLOG_COMMENTS} & Có & \url{BLOG_COMMENT_MEDIA} & 1:N & Một bình luận có thể đính kèm media. \\
+    \hline
+    \url{USERS} & Gửi & \url{CONTENT_REPORTS} & 1:N & Một traveler có thể gửi nhiều báo cáo vi phạm. \\
+    \hline
+    \url{USERS} & Nhận & \url{NOTIFICATIONS} & 1:N & Một traveler có thể nhận nhiều thông báo từ hệ thống. \\
+    \hline
+\end{longtable}
+
+\subsubsection{Yêu cầu về chất lượng dữ liệu}
+% Bảng 4: Chất lượng dữ liệu
+\begin{longtable}{|p{3cm}|p{5.5cm}|p{6cm}|}
+    \hline
+    \textbf{Tiêu chí} & \textbf{Yêu cầu} & \textbf{Cách thực thi} \\
+    \hline
+    \endfirsthead
+    
+    \hline
+    \textbf{Tiêu chí} & \textbf{Yêu cầu} & \textbf{Cách thực thi} \\
+    \hline
+    \endhead
+
+    \hline
+    \endlastfoot
+
+    \textbf{Tính toàn vẹn} & Dữ liệu phải duy trì các mối quan hệ logic và không được phép tồn tại "dữ liệu mồ côi" & \textbf{CSDL:} Sử dụng FOREIGN KEY constraints với ON DELETE CASCADE. \newline \textbf{Ứng dụng:} Xử lý logic xóa phức tạp (ví dụ: xóa User) để đảm bảo các dữ liệu liên quan được xử lý đúng cách. \\
+    \hline
+    \textbf{Tính hợp lệ} & Dữ liệu phải tuân thủ các định dạng, loại và phạm vi giá trị đã được định nghĩa trước. & \textbf{CSDL:} Sử dụng các kiểu dữ liệu ENUM, CHECK constraints. \newline \textbf{Ứng dụng:} Xác thực đầu vào (input validation) ở cả phía client và server. \\
+    \hline
+    \textbf{Tính chính xác} & Dữ liệu phải phản ánh đúng giá trị của nó trong thế giới thực & \textbf{Quy trình:} Đảm bảo chất lượng của kịch bản crawling. \newline \textbf{Hệ thống:} Cung cấp tính năng "Báo cáo nội dung" cho người dùng. \newline \textbf{Vận hành:} Quy trình kiểm tra thủ công bởi Admin. \\
+    \hline
+    \textbf{Tính nhất quán} & Dữ liệu phải đồng nhất trên toàn hệ thống. & \textbf{CSDL:} Thiết kế chuẩn hóa với FOREIGN KEY. \newline \textbf{Ứng dụng:} Quy định chuẩn chung cho việc xử lý dữ liệu. \\
+    \hline
+    \textbf{Tính duy nhất} & Dữ liệu không được phép có các bản sao trùng lặp ở những nơi không được phép. & \textbf{CSDL:} Sử dụng UNIQUE constraints và PRIMARY KEY (bao gồm cả khóa chính kết hợp - composite primary key). \\
+    \hline
+    \textbf{Tính kịp thời} & Dữ liệu phải được cập nhật và phản ánh trạng thái mới nhất trong một khoảng thời gian hợp lý. & \textbf{Kiến trúc hệ thống:} Sử dụng Cron Jobs để làm mới dữ liệu crawl. Sử dụng Hàng đợi (Message Queue) cho các tác vụ bất đồng bộ như gửi thông báo. \\
+    \hline
+\end{longtable}

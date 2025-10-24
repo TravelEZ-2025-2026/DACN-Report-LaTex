@@ -619,6 +619,10 @@ INPUT .\Images\hcmut.png
 INPUT .\Images\hcmut.png
 INPUT .\Images\hcmut.png
 INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
 INPUT .\Sections\1. Introduction\introduction.tex
 INPUT .\Sections\1. Introduction\introduction.tex
 INPUT .\Sections\1. Introduction\introduction.tex
@@ -849,6 +853,41 @@ INPUT .\Images\6. System analysis\Use-case-1.png
 INPUT .\Images\6. System analysis\Use-case-1.png
 INPUT .\Images\6. System analysis\Use-case-1.png
 INPUT .\Images\6. System analysis\Use-case-1.png
+INPUT .\Sections\6. System Analysis\1-Analysis\use-case-diagram\1-module1.tex
+INPUT .\Sections\6. System Analysis\1-Analysis\use-case-diagram\1-module1.tex
+INPUT Sections\6. System Analysis\1-Analysis\use-case-diagram\1-module1.tex
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
 INPUT .\Images\hcmut.png
 INPUT .\Images\hcmut.png
 INPUT .\Images\hcmut.png
@@ -860,17 +899,35 @@ INPUT .\Images\6. System analysis\Use-case-2.png
 INPUT .\Images\6. System analysis\Use-case-2.png
 INPUT .\Images\6. System analysis\Use-case-2.png
 INPUT .\Images\6. System analysis\Use-case-2.png
+INPUT .\Sections\6. System Analysis\1-Analysis\use-case-diagram\2-module2.tex
+INPUT .\Sections\6. System Analysis\1-Analysis\use-case-diagram\2-module2.tex
+INPUT Sections\6. System Analysis\1-Analysis\use-case-diagram\2-module2.tex
+INPUT .\Images\6. System analysis\Use-case-3.png
+INPUT .\Images\6. System analysis\Use-case-3.png
+INPUT .\Images\6. System analysis\Use-case-3.png
+INPUT .\Images\6. System analysis\Use-case-3.png
+INPUT .\Images\6. System analysis\Use-case-3.png
+INPUT .\Images\6. System analysis\Use-case-3.png
+INPUT .\Images\6. System analysis\Use-case-3.png
+INPUT .\Sections\6. System Analysis\1-Analysis\use-case-diagram\3-module3.tex
+INPUT .\Sections\6. System Analysis\1-Analysis\use-case-diagram\3-module3.tex
+INPUT Sections\6. System Analysis\1-Analysis\use-case-diagram\3-module3.tex
 INPUT .\Images\hcmut.png
 INPUT .\Images\hcmut.png
 INPUT .\Images\hcmut.png
 INPUT .\Images\hcmut.png
-INPUT .\Images\6. System analysis\Use-case-3.png
-INPUT .\Images\6. System analysis\Use-case-3.png
-INPUT .\Images\6. System analysis\Use-case-3.png
-INPUT .\Images\6. System analysis\Use-case-3.png
-INPUT .\Images\6. System analysis\Use-case-3.png
-INPUT .\Images\6. System analysis\Use-case-3.png
-INPUT .\Images\6. System analysis\Use-case-3.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
 INPUT .\Images\hcmut.png
 INPUT .\Images\hcmut.png
 INPUT .\Images\hcmut.png
@@ -904,6 +961,9 @@ INPUT .\Images\6. System analysis\Use-case-6.png
 INPUT .\Images\6. System analysis\Use-case-6.png
 INPUT .\Images\6. System analysis\Use-case-6.png
 INPUT .\Images\6. System analysis\Use-case-6.png
+INPUT .\Sections\6. System Analysis\1-Analysis\use-case-diagram\6-module6.tex
+INPUT .\Sections\6. System Analysis\1-Analysis\use-case-diagram\6-module6.tex
+INPUT Sections\6. System Analysis\1-Analysis\use-case-diagram\6-module6.tex
 INPUT .\Images\hcmut.png
 INPUT .\Images\hcmut.png
 INPUT .\Images\hcmut.png
@@ -915,6 +975,17 @@ INPUT .\Images\6. System analysis\Use-case-7.png
 INPUT .\Images\6. System analysis\Use-case-7.png
 INPUT .\Images\6. System analysis\Use-case-7.png
 INPUT .\Images\6. System analysis\Use-case-7.png
+INPUT .\Sections\6. System Analysis\1-Analysis\use-case-diagram\7-module7.tex
+INPUT .\Sections\6. System Analysis\1-Analysis\use-case-diagram\7-module7.tex
+INPUT Sections\6. System Analysis\1-Analysis\use-case-diagram\7-module7.tex
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
 INPUT .\Images\6. System analysis\Use-case-8.png
 INPUT .\Images\6. System analysis\Use-case-8.png
 INPUT .\Images\6. System analysis\Use-case-8.png
@@ -922,6 +993,9 @@ INPUT .\Images\6. System analysis\Use-case-8.png
 INPUT .\Images\6. System analysis\Use-case-8.png
 INPUT .\Images\6. System analysis\Use-case-8.png
 INPUT .\Images\6. System analysis\Use-case-8.png
+INPUT .\Sections\6. System Analysis\1-Analysis\use-case-diagram\8-module8.tex
+INPUT .\Sections\6. System Analysis\1-Analysis\use-case-diagram\8-module8.tex
+INPUT Sections\6. System Analysis\1-Analysis\use-case-diagram\8-module8.tex
 INPUT .\Images\hcmut.png
 INPUT .\Images\hcmut.png
 INPUT .\Images\hcmut.png
@@ -933,6 +1007,25 @@ INPUT .\Images\6. System analysis\Use-case-9.png
 INPUT .\Images\6. System analysis\Use-case-9.png
 INPUT .\Images\6. System analysis\Use-case-9.png
 INPUT .\Images\6. System analysis\Use-case-9.png
+INPUT .\Sections\6. System Analysis\1-Analysis\use-case-diagram\9-module9.tex
+INPUT .\Sections\6. System Analysis\1-Analysis\use-case-diagram\9-module9.tex
+INPUT Sections\6. System Analysis\1-Analysis\use-case-diagram\9-module9.tex
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
 INPUT .\Images\hcmut.png
 INPUT .\Images\hcmut.png
 INPUT .\Images\hcmut.png
@@ -945,10 +1038,6 @@ INPUT .\Sections\6. System Analysis\2-Technology solutions\Frontend.tex
 INPUT .\Sections\6. System Analysis\2-Technology solutions\Frontend.tex
 INPUT .\Sections\6. System Analysis\2-Technology solutions\Frontend.tex
 INPUT Sections\6. System Analysis\2-Technology solutions\Frontend.tex
-INPUT .\Images\hcmut.png
-INPUT .\Images\hcmut.png
-INPUT .\Images\hcmut.png
-INPUT .\Images\hcmut.png
 INPUT .\Images\hcmut.png
 INPUT .\Images\hcmut.png
 INPUT .\Images\hcmut.png

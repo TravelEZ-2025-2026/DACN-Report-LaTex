@@ -4,11 +4,25 @@
 \input{Sections/5. Requirements Elicitation/1-system description}
 
 \subsection{Mô tả người dùng}
-Hệ thống hướng đến ba nhóm người dùng chính, mỗi nhóm có vai trò, mục tiêu và mức độ tương tác khác nhau với các chức năng của hệ thống:
+\label{sec:mo_ta_nguoi_dung}
+Hệ thống phân chia người dùng thành hai nhóm tài khoản chính: Người dùng cuối (END\_USERS) và Quản trị viên (ADMINS). Mỗi tài khoản được gán một vai trò (ROLE) cụ thể để phân định rõ ràng quyền hạn và chức năng.
+
 \begin{enumerate}
-    \item Khách du lịch (Traveler): Là người dùng cuối của hệ thống, bao gồm cả người mới và người đã có kinh nghiệm du lịch. Khách du lịch sử dụng hệ thống để lên kế hoạch, tìm kiếm, và gợi ý hành trình cá nhân hóa dựa trên sở thích, thời gian, ngân sách và các đánh giá cộng đồng. Họ có thể tương tác với nội dung du lịch công khai, như bài viết, đánh giá, địa điểm (POI), và hành trình gợi ý; theo dõi chủ đề/địa điểm yêu thích, cũng như chia sẻ trải nghiệm cá nhân để đóng góp vào cộng đồng du lịch.
-    \item Nhà cung cấp dịch vụ (Provider): Là các cá nhân hoặc tổ chức hoạt động trong lĩnh vực du lịch (như công ty tour, khách sạn, nhà hàng, đơn vị trải nghiệm, v.v.) tham gia hệ thống để theo dõi xu hướng du lịch và hành vi khách hàng.
-    \item Quản trị viên hệ thống (Admin): Là người chịu trách nhiệm duy trì và kiểm soát hoạt động của hệ thống, bao gồm quản lý người dùng, nội dung công khai, phân quyền truy cập, và giám sát chất lượng dữ liệu. Admin cũng đảm bảo bảo mật hệ thống, phát hiện và xử lý vi phạm, cũng như quản lý mô hình gợi ý AI và hiệu năng dịch vụ.
+    \item \textbf{Người dùng cuối (END\_USERS):} Là nhóm tài khoản lưu trữ thông tin cho tất cả những người tham gia trên nền tảng. Các vai trò trong nhóm này bao gồm:
+    \begin{itemize}
+        \item \textbf{Khách du lịch (TRAVELER):} Là vai trò cốt lõi của hệ thống. Họ có đầy đủ quyền truy cập vào các tính năng lập kế hoạch (tạo/quản lý lịch trình cá nhân) và các tính năng xã hội như viết blog, đánh giá (review), kết bạn, theo dõi và tương tác với cộng đồng.
+        
+        \item \textbf{Nhà cung cấp (PROVIDER):} Là một tài khoản đã đăng ký, tập trung vào việc sử dụng các công cụ phân tích. Họ có quyền truy cập vào các dashboard thống kê xu hướng du lịch (từ Module 6) và sử dụng công cụ AI để phân tích, cải thiện lịch trình (từ Module 7). Họ không có quyền tạo hay chỉnh sửa dịch vụ trên nền tảng.
+    \end{itemize}
+
+    \item \textbf{Quản trị viên (ADMINS):} Là nhóm tài khoản chịu trách nhiệm vận hành, duy trì và kiểm soát hệ thống. Nhóm này hoàn toàn tách biệt với Người dùng cuối và được phân chia thành các vai trò chuyên biệt:
+    \begin{itemize}
+        \item \textbf{Siêu quản trị viên (SUPER\_ADMINS):} Có quyền hạn cao nhất, chịu trách nhiệm quản lý chính các tài khoản ADMINS khác và phân vai trò cho họ.
+        
+        \item \textbf{Quản trị viên Hệ thống (SYSTEM\_ADMINS):} Chịu trách nhiệm về dữ liệu cốt lõi (master data) và quản lý người dùng cuối. Vai trò này có quyền quản lý danh mục dữ liệu gốc (như LOCATIONS, TOURS, VIOLATING\_KEYWORDS) và thực thi các hành động đối với tài khoản END\_USERS (ví dụ: khoá/mở tài khoản).
+        
+        \item \textbf{Quản trị viên cộng đồng (COMMUNITY\_ADMINS):} Chịu trách nhiệm duy trì môi trường cộng đồng. Vai trò này sẽ trực tiếp xem xét, xử lý các báo cáo vi phạm nội dung (CONTENT\_REPORTS) và ghi lại Lịch sử vi phạm (VIOLATION\_RECORDS) của người dùng.
+    \end{itemize}
 \end{enumerate}
 
 \subsection{Yêu cầu chức năng}
@@ -20,4 +34,4 @@ Hệ thống hướng đến ba nhóm người dùng chính, mỗi nhóm có vai
 \input{Sections/5. Requirements Elicitation/3-non functional requirements}
 
 \subsection{Yêu cầu dữ liệu}
-% \input{Sections/5. Requirements Elicitation/data requirements}
+\input{Sections/5. Requirements Elicitation/4-data requirements}

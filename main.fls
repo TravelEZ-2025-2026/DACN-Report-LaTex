@@ -17,29 +17,14 @@ INPUT C:\Users\PC\AppData\Local\Programs\MiKTeX\tex\latex\vntex\t5enc.dfu
 INPUT C:\Users\PC\AppData\Local\Programs\MiKTeX\tex\latex\vntex\t5enc.dfu
 INPUT C:\Users\PC\AppData\Local\Programs\MiKTeX\tex\latex\vntex\t5enc.dfu
 INPUT C:\Users\PC\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecrm1200.tfm
-INPUT C:\Users\PC\AppData\Local\Programs\MiKTeX\tex\latex\vntex\vietnam.sty
-INPUT C:\Users\PC\AppData\Local\Programs\MiKTeX\tex\latex\vntex\vietnam.sty
-INPUT C:\Users\PC\AppData\Local\Programs\MiKTeX\tex\latex\base\ifthen.sty
-INPUT C:\Users\PC\AppData\Local\Programs\MiKTeX\tex\latex\base\ifthen.sty
 INPUT C:\Users\PC\AppData\Local\Programs\MiKTeX\tex\latex\base\inputenc.sty
-INPUT C:\Users\PC\AppData\Local\Programs\MiKTeX\tex\latex\base\fontenc.sty
-INPUT C:\Users\PC\AppData\Local\Programs\MiKTeX\tex\latex\vntex\t5cmr.fd
-INPUT C:\Users\PC\AppData\Local\Programs\MiKTeX\tex\latex\vntex\t5cmr.fd
-INPUT C:\Users\PC\AppData\Local\Programs\MiKTeX\tex\latex\vntex\t5cmr.fd
-INPUT C:\Users\PC\AppData\Local\Programs\MiKTeX\fonts\tfm\vntex\vnr\vnr12.tfm
 INPUT C:\Users\PC\AppData\Local\Programs\MiKTeX\tex\latex\base\inputenc.sty
-INPUT C:\Users\PC\AppData\Local\Programs\MiKTeX\tex\latex\vntex\vncaps.tex
-INPUT C:\Users\PC\AppData\Local\Programs\MiKTeX\tex\latex\vntex\vncaps.tex
-INPUT C:\Users\PC\AppData\Local\Programs\MiKTeX\tex\latex\vntex\vncaps.tex
 INPUT C:\Users\PC\AppData\Local\Programs\MiKTeX\tex\generic\babel\babel.sty
 INPUT C:\Users\PC\AppData\Local\Programs\MiKTeX\tex\generic\babel\babel.sty
 INPUT C:\Users\PC\AppData\Local\Programs\MiKTeX\tex\generic\babel\txtbabel.def
 INPUT C:\Users\PC\AppData\Local\Programs\MiKTeX\tex\latex\arabi\bblopts.cfg
 INPUT C:\Users\PC\AppData\Local\Programs\MiKTeX\tex\latex\arabi\bblopts.cfg
 INPUT C:\Users\PC\AppData\Local\Programs\MiKTeX\tex\latex\arabi\bblopts.cfg
-INPUT C:\Users\PC\AppData\Local\Programs\MiKTeX\tex\latex\babel-english\english.ldf
-INPUT C:\Users\PC\AppData\Local\Programs\MiKTeX\tex\latex\babel-english\english.ldf
-INPUT C:\Users\PC\AppData\Local\Programs\MiKTeX\tex\latex\babel-english\english.ldf
 INPUT C:\Users\PC\AppData\Local\Programs\MiKTeX\tex\latex\babel-english\american.ldf
 INPUT C:\Users\PC\AppData\Local\Programs\MiKTeX\tex\latex\babel-english\american.ldf
 INPUT C:\Users\PC\AppData\Local\Programs\MiKTeX\tex\latex\babel-english\american.ldf
@@ -56,14 +41,17 @@ INPUT C:\Users\PC\AppData\Local\Programs\MiKTeX\tex\generic\babel\locale\en\babe
 INPUT C:\Users\PC\AppData\Local\Programs\MiKTeX\tex\generic\babel\locale\en\babel-american.tex
 INPUT C:\Users\PC\AppData\Local\Programs\MiKTeX\tex\generic\babel\locale\en\babel-american.tex
 INPUT C:\Users\PC\AppData\Local\Programs\MiKTeX\tex\generic\babel\locale\en\babel-en-US.ini
-INPUT C:\Users\PC\AppData\Local\Programs\MiKTeX\tex\generic\babel\locale\en\babel-english.tex
-INPUT C:\Users\PC\AppData\Local\Programs\MiKTeX\tex\generic\babel\locale\en\babel-english.tex
-INPUT C:\Users\PC\AppData\Local\Programs\MiKTeX\tex\generic\babel\locale\en\babel-english.tex
-INPUT C:\Users\PC\AppData\Local\Programs\MiKTeX\tex\generic\babel\locale\en\babel-en.ini
-INPUT C:\Users\PC\AppData\Local\Programs\MiKTeX\tex\latex\a4wide\a4wide.sty
-INPUT C:\Users\PC\AppData\Local\Programs\MiKTeX\tex\latex\a4wide\a4wide.sty
-INPUT C:\Users\PC\AppData\Local\Programs\MiKTeX\tex\latex\ntgclass\a4.sty
-INPUT C:\Users\PC\AppData\Local\Programs\MiKTeX\tex\latex\ntgclass\a4.sty
+INPUT C:\Users\PC\AppData\Local\Programs\MiKTeX\tex\latex\geometry\geometry.sty
+INPUT C:\Users\PC\AppData\Local\Programs\MiKTeX\tex\latex\geometry\geometry.sty
+INPUT C:\Users\PC\AppData\Local\Programs\MiKTeX\tex\latex\graphics\keyval.sty
+INPUT C:\Users\PC\AppData\Local\Programs\MiKTeX\tex\latex\graphics\keyval.sty
+INPUT C:\Users\PC\AppData\Local\Programs\MiKTeX\tex\generic\iftex\ifvtex.sty
+INPUT C:\Users\PC\AppData\Local\Programs\MiKTeX\tex\generic\iftex\ifvtex.sty
+INPUT C:\Users\PC\AppData\Local\Programs\MiKTeX\tex\generic\iftex\iftex.sty
+INPUT C:\Users\PC\AppData\Local\Programs\MiKTeX\tex\generic\iftex\iftex.sty
+INPUT C:\Users\PC\AppData\Local\Programs\MiKTeX\tex\latex\geometry\geometry.cfg
+INPUT C:\Users\PC\AppData\Local\Programs\MiKTeX\tex\latex\geometry\geometry.cfg
+INPUT C:\Users\PC\AppData\Local\Programs\MiKTeX\tex\latex\geometry\geometry.cfg
 INPUT C:\Users\PC\AppData\Local\Programs\MiKTeX\tex\latex\amsfonts\amssymb.sty
 INPUT C:\Users\PC\AppData\Local\Programs\MiKTeX\tex\latex\amsfonts\amssymb.sty
 INPUT C:\Users\PC\AppData\Local\Programs\MiKTeX\tex\latex\amsfonts\amsfonts.sty
@@ -72,8 +60,6 @@ INPUT C:\Users\PC\AppData\Local\Programs\MiKTeX\tex\latex\graphics\epsfig.sty
 INPUT C:\Users\PC\AppData\Local\Programs\MiKTeX\tex\latex\graphics\epsfig.sty
 INPUT C:\Users\PC\AppData\Local\Programs\MiKTeX\tex\latex\graphics\graphicx.sty
 INPUT C:\Users\PC\AppData\Local\Programs\MiKTeX\tex\latex\graphics\graphicx.sty
-INPUT C:\Users\PC\AppData\Local\Programs\MiKTeX\tex\latex\graphics\keyval.sty
-INPUT C:\Users\PC\AppData\Local\Programs\MiKTeX\tex\latex\graphics\keyval.sty
 INPUT C:\Users\PC\AppData\Local\Programs\MiKTeX\tex\latex\graphics\graphics.sty
 INPUT C:\Users\PC\AppData\Local\Programs\MiKTeX\tex\latex\graphics\graphics.sty
 INPUT C:\Users\PC\AppData\Local\Programs\MiKTeX\tex\latex\graphics\trig.sty
@@ -108,8 +94,6 @@ INPUT C:\Users\PC\AppData\Local\Programs\MiKTeX\tex\generic\pdftexcmds\pdftexcmd
 INPUT C:\Users\PC\AppData\Local\Programs\MiKTeX\tex\generic\pdftexcmds\pdftexcmds.sty
 INPUT C:\Users\PC\AppData\Local\Programs\MiKTeX\tex\generic\infwarerr\infwarerr.sty
 INPUT C:\Users\PC\AppData\Local\Programs\MiKTeX\tex\generic\infwarerr\infwarerr.sty
-INPUT C:\Users\PC\AppData\Local\Programs\MiKTeX\tex\generic\iftex\iftex.sty
-INPUT C:\Users\PC\AppData\Local\Programs\MiKTeX\tex\generic\iftex\iftex.sty
 INPUT C:\Users\PC\AppData\Local\Programs\MiKTeX\tex\generic\ltxcmds\ltxcmds.sty
 INPUT C:\Users\PC\AppData\Local\Programs\MiKTeX\tex\generic\ltxcmds\ltxcmds.sty
 INPUT C:\Users\PC\AppData\Local\Programs\MiKTeX\tex\latex\kvoptions\kvoptions.sty
@@ -121,6 +105,8 @@ INPUT C:\Users\PC\AppData\Local\Programs\MiKTeX\tex\latex\logreq\logreq.sty
 INPUT C:\Users\PC\AppData\Local\Programs\MiKTeX\tex\latex\logreq\logreq.def
 INPUT C:\Users\PC\AppData\Local\Programs\MiKTeX\tex\latex\logreq\logreq.def
 INPUT C:\Users\PC\AppData\Local\Programs\MiKTeX\tex\latex\logreq\logreq.def
+INPUT C:\Users\PC\AppData\Local\Programs\MiKTeX\tex\latex\base\ifthen.sty
+INPUT C:\Users\PC\AppData\Local\Programs\MiKTeX\tex\latex\base\ifthen.sty
 INPUT C:\Users\PC\AppData\Local\Programs\MiKTeX\tex\latex\url\url.sty
 INPUT C:\Users\PC\AppData\Local\Programs\MiKTeX\tex\latex\url\url.sty
 INPUT C:\Users\PC\AppData\Local\Programs\MiKTeX\tex\latex\biblatex\blx-dm.def
@@ -373,13 +359,6 @@ INPUT C:\Users\PC\AppData\Local\Programs\MiKTeX\tex\latex\enumitem\enumitem.sty
 INPUT C:\Users\PC\AppData\Local\Programs\MiKTeX\tex\latex\enumitem\enumitem.sty
 INPUT C:\Users\PC\AppData\Local\Programs\MiKTeX\tex\latex\graphics\rotating.sty
 INPUT C:\Users\PC\AppData\Local\Programs\MiKTeX\tex\latex\graphics\rotating.sty
-INPUT C:\Users\PC\AppData\Local\Programs\MiKTeX\tex\latex\geometry\geometry.sty
-INPUT C:\Users\PC\AppData\Local\Programs\MiKTeX\tex\latex\geometry\geometry.sty
-INPUT C:\Users\PC\AppData\Local\Programs\MiKTeX\tex\generic\iftex\ifvtex.sty
-INPUT C:\Users\PC\AppData\Local\Programs\MiKTeX\tex\generic\iftex\ifvtex.sty
-INPUT C:\Users\PC\AppData\Local\Programs\MiKTeX\tex\latex\geometry\geometry.cfg
-INPUT C:\Users\PC\AppData\Local\Programs\MiKTeX\tex\latex\geometry\geometry.cfg
-INPUT C:\Users\PC\AppData\Local\Programs\MiKTeX\tex\latex\geometry\geometry.cfg
 INPUT C:\Users\PC\AppData\Local\Programs\MiKTeX\tex\latex\setspace\setspace.sty
 INPUT C:\Users\PC\AppData\Local\Programs\MiKTeX\tex\latex\setspace\setspace.sty
 INPUT C:\Users\PC\AppData\Local\Programs\MiKTeX\tex\latex\titlesec\titlesec.sty
@@ -481,6 +460,10 @@ INPUT C:\Users\PC\AppData\Local\Programs\MiKTeX\tex\latex\listings\lstlang3.sty
 INPUT .\main.aux
 INPUT .\main.aux
 INPUT main.aux
+INPUT C:\Users\PC\AppData\Local\Programs\MiKTeX\tex\latex\vntex\t5cmr.fd
+INPUT C:\Users\PC\AppData\Local\Programs\MiKTeX\tex\latex\vntex\t5cmr.fd
+INPUT C:\Users\PC\AppData\Local\Programs\MiKTeX\tex\latex\vntex\t5cmr.fd
+INPUT C:\Users\PC\AppData\Local\Programs\MiKTeX\fonts\tfm\vntex\vnr\vnr12.tfm
 OUTPUT main.aux
 INPUT C:\Users\PC\AppData\Local\Programs\MiKTeX\tex\context\base\mkii\supp-pdf.mkii
 INPUT C:\Users\PC\AppData\Local\Programs\MiKTeX\tex\context\base\mkii\supp-pdf.mkii
@@ -510,19 +493,6 @@ INPUT C:\Users\PC\AppData\Local\Programs\MiKTeX\tex\latex\biblatex\lbx\american.
 INPUT C:\Users\PC\AppData\Local\Programs\MiKTeX\tex\latex\biblatex-apa\english-apa.lbx
 INPUT C:\Users\PC\AppData\Local\Programs\MiKTeX\tex\latex\biblatex-apa\english-apa.lbx
 INPUT C:\Users\PC\AppData\Local\Programs\MiKTeX\tex\latex\biblatex-apa\english-apa.lbx
-INPUT C:\Users\PC\AppData\Local\Programs\MiKTeX\tex\latex\biblatex\lbx\american.lbx
-INPUT C:\Users\PC\AppData\Local\Programs\MiKTeX\tex\latex\biblatex\lbx\english.lbx
-INPUT C:\Users\PC\AppData\Local\Programs\MiKTeX\tex\latex\biblatex\lbx\english.lbx
-INPUT C:\Users\PC\AppData\Local\Programs\MiKTeX\tex\latex\biblatex\lbx\english.lbx
-INPUT C:\Users\PC\AppData\Local\Programs\MiKTeX\tex\latex\biblatex-apa\english-apa.lbx
-INPUT C:\Users\PC\AppData\Local\Programs\MiKTeX\tex\latex\biblatex-apa\english-apa.lbx
-INPUT C:\Users\PC\AppData\Local\Programs\MiKTeX\tex\latex\biblatex-apa\english-apa.lbx
-INPUT C:\Users\PC\AppData\Local\Programs\MiKTeX\tex\latex\biblatex\lbx\english.lbx
-INPUT C:\Users\PC\AppData\Local\Programs\MiKTeX\tex\latex\biblatex\lbx\english.lbx
-INPUT C:\Users\PC\AppData\Local\Programs\MiKTeX\tex\latex\biblatex\lbx\english.lbx
-INPUT C:\Users\PC\AppData\Local\Programs\MiKTeX\tex\latex\biblatex-apa\american-apa.lbx
-INPUT C:\Users\PC\AppData\Local\Programs\MiKTeX\tex\latex\biblatex\lbx\american.lbx
-INPUT C:\Users\PC\AppData\Local\Programs\MiKTeX\tex\latex\biblatex\lbx\american.lbx
 INPUT C:\Users\PC\AppData\Local\Programs\MiKTeX\tex\latex\biblatex\lbx\american.lbx
 INPUT C:\Users\PC\AppData\Local\Programs\MiKTeX\tex\latex\biblatex\lbx\english.lbx
 INPUT C:\Users\PC\AppData\Local\Programs\MiKTeX\tex\latex\biblatex\lbx\english.lbx
@@ -790,10 +760,6 @@ INPUT .\Images\hcmut.png
 INPUT .\Images\hcmut.png
 INPUT .\Images\hcmut.png
 INPUT .\Images\hcmut.png
-INPUT .\Images\hcmut.png
-INPUT .\Images\hcmut.png
-INPUT .\Images\hcmut.png
-INPUT .\Images\hcmut.png
 INPUT .\Sections\5. Requirements Elicitation\2-requirement function.tex
 INPUT .\Sections\5. Requirements Elicitation\2-requirement function.tex
 INPUT .\Sections\5. Requirements Elicitation\2-requirement function.tex
@@ -828,6 +794,35 @@ INPUT .\Images\hcmut.png
 INPUT .\Images\hcmut.png
 INPUT .\Images\hcmut.png
 INPUT .\Images\hcmut.png
+INPUT .\Sections\5. Requirements Elicitation\4-data requirements.tex
+INPUT .\Sections\5. Requirements Elicitation\4-data requirements.tex
+INPUT .\Sections\5. Requirements Elicitation\4-data requirements.tex
+INPUT .\Sections\5. Requirements Elicitation\4-data requirements.tex
+INPUT Sections\5. Requirements Elicitation\4-data requirements.tex
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
 INPUT .\Images\hcmut.png
 INPUT .\Images\hcmut.png
 INPUT .\Images\hcmut.png
@@ -837,11 +832,9 @@ INPUT .\Sections\6. System Analysis\system analysis.tex
 INPUT .\Sections\6. System Analysis\system analysis.tex
 INPUT .\Sections\6. System Analysis\system analysis.tex
 INPUT Sections\6. System Analysis\system analysis.tex
-INPUT .\Sections\6. System Analysis\1-analysis.tex
-INPUT .\Sections\6. System Analysis\1-analysis.tex
-INPUT .\Sections\6. System Analysis\1-analysis.tex
-INPUT .\Sections\6. System Analysis\1-analysis.tex
-INPUT Sections\6. System Analysis\1-analysis.tex
+INPUT .\Sections\6. System Analysis\1-Analysis\1-analysis.tex
+INPUT .\Sections\6. System Analysis\1-Analysis\1-analysis.tex
+INPUT Sections\6. System Analysis\1-Analysis\1-analysis.tex
 INPUT .\Images\6. System analysis\Use case-Tổng quan hệ thống.png
 INPUT .\Images\6. System analysis\Use case-Tổng quan hệ thống.png
 INPUT .\Images\6. System analysis\Use case-Tổng quan hệ thống.png
@@ -849,13 +842,109 @@ INPUT .\Images\6. System analysis\Use case-Tổng quan hệ thống.png
 INPUT .\Images\6. System analysis\Use case-Tổng quan hệ thống.png
 INPUT .\Images\6. System analysis\Use case-Tổng quan hệ thống.png
 INPUT .\Images\6. System analysis\Use case-Tổng quan hệ thống.png
-INPUT .\Images\6. System analysis\Use case-Gợi ý & quản lý lộ trình.drawio.png
-INPUT .\Images\6. System analysis\Use case-Gợi ý & quản lý lộ trình.drawio.png
-INPUT .\Images\6. System analysis\Use case-Gợi ý & quản lý lộ trình.drawio.png
-INPUT .\Images\6. System analysis\Use case-Gợi ý & quản lý lộ trình.drawio.png
-INPUT .\Images\6. System analysis\Use case-Gợi ý & quản lý lộ trình.drawio.png
-INPUT .\Images\6. System analysis\Use case-Gợi ý & quản lý lộ trình.drawio.png
-INPUT .\Images\6. System analysis\Use case-Gợi ý & quản lý lộ trình.drawio.png
+INPUT .\Images\6. System analysis\Use-case-1.png
+INPUT .\Images\6. System analysis\Use-case-1.png
+INPUT .\Images\6. System analysis\Use-case-1.png
+INPUT .\Images\6. System analysis\Use-case-1.png
+INPUT .\Images\6. System analysis\Use-case-1.png
+INPUT .\Images\6. System analysis\Use-case-1.png
+INPUT .\Images\6. System analysis\Use-case-1.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\6. System analysis\Use-case-2.png
+INPUT .\Images\6. System analysis\Use-case-2.png
+INPUT .\Images\6. System analysis\Use-case-2.png
+INPUT .\Images\6. System analysis\Use-case-2.png
+INPUT .\Images\6. System analysis\Use-case-2.png
+INPUT .\Images\6. System analysis\Use-case-2.png
+INPUT .\Images\6. System analysis\Use-case-2.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\6. System analysis\Use-case-3.png
+INPUT .\Images\6. System analysis\Use-case-3.png
+INPUT .\Images\6. System analysis\Use-case-3.png
+INPUT .\Images\6. System analysis\Use-case-3.png
+INPUT .\Images\6. System analysis\Use-case-3.png
+INPUT .\Images\6. System analysis\Use-case-3.png
+INPUT .\Images\6. System analysis\Use-case-3.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\6. System analysis\Use-case-4.png
+INPUT .\Images\6. System analysis\Use-case-4.png
+INPUT .\Images\6. System analysis\Use-case-4.png
+INPUT .\Images\6. System analysis\Use-case-4.png
+INPUT .\Images\6. System analysis\Use-case-4.png
+INPUT .\Images\6. System analysis\Use-case-4.png
+INPUT .\Images\6. System analysis\Use-case-4.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\6. System analysis\Use-case-5.png
+INPUT .\Images\6. System analysis\Use-case-5.png
+INPUT .\Images\6. System analysis\Use-case-5.png
+INPUT .\Images\6. System analysis\Use-case-5.png
+INPUT .\Images\6. System analysis\Use-case-5.png
+INPUT .\Images\6. System analysis\Use-case-5.png
+INPUT .\Images\6. System analysis\Use-case-5.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\6. System analysis\Use-case-6.png
+INPUT .\Images\6. System analysis\Use-case-6.png
+INPUT .\Images\6. System analysis\Use-case-6.png
+INPUT .\Images\6. System analysis\Use-case-6.png
+INPUT .\Images\6. System analysis\Use-case-6.png
+INPUT .\Images\6. System analysis\Use-case-6.png
+INPUT .\Images\6. System analysis\Use-case-6.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\6. System analysis\Use-case-7.png
+INPUT .\Images\6. System analysis\Use-case-7.png
+INPUT .\Images\6. System analysis\Use-case-7.png
+INPUT .\Images\6. System analysis\Use-case-7.png
+INPUT .\Images\6. System analysis\Use-case-7.png
+INPUT .\Images\6. System analysis\Use-case-7.png
+INPUT .\Images\6. System analysis\Use-case-7.png
+INPUT .\Images\6. System analysis\Use-case-8.png
+INPUT .\Images\6. System analysis\Use-case-8.png
+INPUT .\Images\6. System analysis\Use-case-8.png
+INPUT .\Images\6. System analysis\Use-case-8.png
+INPUT .\Images\6. System analysis\Use-case-8.png
+INPUT .\Images\6. System analysis\Use-case-8.png
+INPUT .\Images\6. System analysis\Use-case-8.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\6. System analysis\Use-case-9.png
+INPUT .\Images\6. System analysis\Use-case-9.png
+INPUT .\Images\6. System analysis\Use-case-9.png
+INPUT .\Images\6. System analysis\Use-case-9.png
+INPUT .\Images\6. System analysis\Use-case-9.png
+INPUT .\Images\6. System analysis\Use-case-9.png
+INPUT .\Images\6. System analysis\Use-case-9.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Sections\6. System Analysis\2-Technology solutions\Technology.tex
+INPUT .\Sections\6. System Analysis\2-Technology solutions\Technology.tex
+INPUT Sections\6. System Analysis\2-Technology solutions\Technology.tex
+INPUT .\Sections\6. System Analysis\2-Technology solutions\Frontend.tex
+INPUT .\Sections\6. System Analysis\2-Technology solutions\Frontend.tex
+INPUT .\Sections\6. System Analysis\2-Technology solutions\Frontend.tex
+INPUT .\Sections\6. System Analysis\2-Technology solutions\Frontend.tex
+INPUT Sections\6. System Analysis\2-Technology solutions\Frontend.tex
 INPUT .\Images\hcmut.png
 INPUT .\Images\hcmut.png
 INPUT .\Images\hcmut.png
@@ -876,6 +965,24 @@ INPUT .\Images\hcmut.png
 INPUT .\Images\hcmut.png
 INPUT .\Images\hcmut.png
 INPUT .\Images\hcmut.png
+INPUT .\Sections\6. System Analysis\2-Technology solutions\Backend.tex
+INPUT .\Sections\6. System Analysis\2-Technology solutions\Backend.tex
+INPUT .\Sections\6. System Analysis\2-Technology solutions\Backend.tex
+INPUT .\Sections\6. System Analysis\2-Technology solutions\Backend.tex
+INPUT Sections\6. System Analysis\2-Technology solutions\Backend.tex
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Sections\6. System Analysis\2-Technology solutions\Database.tex
+INPUT .\Sections\6. System Analysis\2-Technology solutions\Database.tex
+INPUT .\Sections\6. System Analysis\2-Technology solutions\Database.tex
+INPUT .\Sections\6. System Analysis\2-Technology solutions\Database.tex
+INPUT Sections\6. System Analysis\2-Technology solutions\Database.tex
 INPUT .\Images\hcmut.png
 INPUT .\Images\hcmut.png
 INPUT .\Images\hcmut.png
@@ -892,53 +999,15 @@ INPUT .\Images\hcmut.png
 INPUT .\Images\hcmut.png
 INPUT .\Images\hcmut.png
 INPUT .\Images\hcmut.png
-INPUT .\Images\6. System analysis\Use case-Tìm kiếm và khám phá.drawio.png
-INPUT .\Images\6. System analysis\Use case-Tìm kiếm và khám phá.drawio.png
-INPUT .\Images\6. System analysis\Use case-Tìm kiếm và khám phá.drawio.png
-INPUT .\Images\6. System analysis\Use case-Tìm kiếm và khám phá.drawio.png
-INPUT .\Images\6. System analysis\Use case-Tìm kiếm và khám phá.drawio.png
-INPUT .\Images\6. System analysis\Use case-Tìm kiếm và khám phá.drawio.png
-INPUT .\Images\6. System analysis\Use case-Tìm kiếm và khám phá.drawio.png
-INPUT .\Images\6. System analysis\Use case-Xây dựng cộng đồng.drawio.png
-INPUT .\Images\6. System analysis\Use case-Xây dựng cộng đồng.drawio.png
-INPUT .\Images\6. System analysis\Use case-Xây dựng cộng đồng.drawio.png
-INPUT .\Images\6. System analysis\Use case-Xây dựng cộng đồng.drawio.png
-INPUT .\Images\6. System analysis\Use case-Xây dựng cộng đồng.drawio.png
-INPUT .\Images\6. System analysis\Use case-Xây dựng cộng đồng.drawio.png
-INPUT .\Images\6. System analysis\Use case-Xây dựng cộng đồng.drawio.png
+INPUT .\Sections\6. System Analysis\2-Technology solutions\Other Tech.tex
+INPUT .\Sections\6. System Analysis\2-Technology solutions\Other Tech.tex
+INPUT .\Sections\6. System Analysis\2-Technology solutions\Other Tech.tex
+INPUT .\Sections\6. System Analysis\2-Technology solutions\Other Tech.tex
+INPUT Sections\6. System Analysis\2-Technology solutions\Other Tech.tex
 INPUT .\Images\hcmut.png
 INPUT .\Images\hcmut.png
 INPUT .\Images\hcmut.png
 INPUT .\Images\hcmut.png
-INPUT .\Images\6. System analysis\Use case-Quản lý & kiểm duyệt nội dung.drawio.png
-INPUT .\Images\6. System analysis\Use case-Quản lý & kiểm duyệt nội dung.drawio.png
-INPUT .\Images\6. System analysis\Use case-Quản lý & kiểm duyệt nội dung.drawio.png
-INPUT .\Images\6. System analysis\Use case-Quản lý & kiểm duyệt nội dung.drawio.png
-INPUT .\Images\6. System analysis\Use case-Quản lý & kiểm duyệt nội dung.drawio.png
-INPUT .\Images\6. System analysis\Use case-Quản lý & kiểm duyệt nội dung.drawio.png
-INPUT .\Images\6. System analysis\Use case-Quản lý & kiểm duyệt nội dung.drawio.png
-INPUT .\Images\hcmut.png
-INPUT .\Images\hcmut.png
-INPUT .\Images\hcmut.png
-INPUT .\Images\hcmut.png
-INPUT .\Images\6. System analysis\Use case-Phân tích & Gợi ý cho nhà cung cấp.drawio.png
-INPUT .\Images\6. System analysis\Use case-Phân tích & Gợi ý cho nhà cung cấp.drawio.png
-INPUT .\Images\6. System analysis\Use case-Phân tích & Gợi ý cho nhà cung cấp.drawio.png
-INPUT .\Images\6. System analysis\Use case-Phân tích & Gợi ý cho nhà cung cấp.drawio.png
-INPUT .\Images\6. System analysis\Use case-Phân tích & Gợi ý cho nhà cung cấp.drawio.png
-INPUT .\Images\6. System analysis\Use case-Phân tích & Gợi ý cho nhà cung cấp.drawio.png
-INPUT .\Images\6. System analysis\Use case-Phân tích & Gợi ý cho nhà cung cấp.drawio.png
-INPUT .\Images\hcmut.png
-INPUT .\Images\hcmut.png
-INPUT .\Images\hcmut.png
-INPUT .\Images\hcmut.png
-INPUT .\Images\6. System analysis\Use case-Quản trị hệ thống & người dùng.drawio.png
-INPUT .\Images\6. System analysis\Use case-Quản trị hệ thống & người dùng.drawio.png
-INPUT .\Images\6. System analysis\Use case-Quản trị hệ thống & người dùng.drawio.png
-INPUT .\Images\6. System analysis\Use case-Quản trị hệ thống & người dùng.drawio.png
-INPUT .\Images\6. System analysis\Use case-Quản trị hệ thống & người dùng.drawio.png
-INPUT .\Images\6. System analysis\Use case-Quản trị hệ thống & người dùng.drawio.png
-INPUT .\Images\6. System analysis\Use case-Quản trị hệ thống & người dùng.drawio.png
 INPUT .\Images\hcmut.png
 INPUT .\Images\hcmut.png
 INPUT .\Images\hcmut.png
@@ -952,82 +1021,6 @@ INPUT .\Sections\7. System Design\system design.tex
 INPUT .\Sections\7. System Design\system design.tex
 INPUT .\Sections\7. System Design\system design.tex
 INPUT Sections\7. System Design\system design.tex
-INPUT .\Sections\7. System Design\System technology\Technology.tex
-INPUT .\Sections\7. System Design\System technology\Technology.tex
-INPUT .\Sections\7. System Design\System technology\Technology.tex
-INPUT .\Sections\7. System Design\System technology\Technology.tex
-INPUT Sections\7. System Design\System technology\Technology.tex
-INPUT .\Sections\7. System Design\System technology\Frontend.tex
-INPUT .\Sections\7. System Design\System technology\Frontend.tex
-INPUT .\Sections\7. System Design\System technology\Frontend.tex
-INPUT .\Sections\7. System Design\System technology\Frontend.tex
-INPUT Sections\7. System Design\System technology\Frontend.tex
-INPUT .\Images\hcmut.png
-INPUT .\Images\hcmut.png
-INPUT .\Images\hcmut.png
-INPUT .\Images\hcmut.png
-INPUT .\Images\hcmut.png
-INPUT .\Images\hcmut.png
-INPUT .\Images\hcmut.png
-INPUT .\Images\hcmut.png
-INPUT .\Images\hcmut.png
-INPUT .\Images\hcmut.png
-INPUT .\Images\hcmut.png
-INPUT .\Images\hcmut.png
-INPUT .\Images\hcmut.png
-INPUT .\Images\hcmut.png
-INPUT .\Images\hcmut.png
-INPUT .\Images\hcmut.png
-INPUT .\Sections\7. System Design\System technology\Backend.tex
-INPUT .\Sections\7. System Design\System technology\Backend.tex
-INPUT .\Sections\7. System Design\System technology\Backend.tex
-INPUT .\Sections\7. System Design\System technology\Backend.tex
-INPUT Sections\7. System Design\System technology\Backend.tex
-INPUT .\Images\hcmut.png
-INPUT .\Images\hcmut.png
-INPUT .\Images\hcmut.png
-INPUT .\Images\hcmut.png
-INPUT .\Images\hcmut.png
-INPUT .\Images\hcmut.png
-INPUT .\Images\hcmut.png
-INPUT .\Images\hcmut.png
-INPUT .\Sections\7. System Design\System technology\Database.tex
-INPUT .\Sections\7. System Design\System technology\Database.tex
-INPUT .\Sections\7. System Design\System technology\Database.tex
-INPUT .\Sections\7. System Design\System technology\Database.tex
-INPUT Sections\7. System Design\System technology\Database.tex
-INPUT .\Images\hcmut.png
-INPUT .\Images\hcmut.png
-INPUT .\Images\hcmut.png
-INPUT .\Images\hcmut.png
-INPUT .\Images\hcmut.png
-INPUT .\Images\hcmut.png
-INPUT .\Images\hcmut.png
-INPUT .\Images\hcmut.png
-INPUT .\Images\hcmut.png
-INPUT .\Images\hcmut.png
-INPUT .\Images\hcmut.png
-INPUT .\Images\hcmut.png
-INPUT .\Images\hcmut.png
-INPUT .\Images\hcmut.png
-INPUT .\Images\hcmut.png
-INPUT .\Images\hcmut.png
-INPUT .\Sections\7. System Design\System technology\Storage Service.tex
-INPUT .\Sections\7. System Design\System technology\Storage Service.tex
-INPUT .\Sections\7. System Design\System technology\Storage Service.tex
-INPUT .\Sections\7. System Design\System technology\Storage Service.tex
-INPUT Sections\7. System Design\System technology\Storage Service.tex
-INPUT .\Images\hcmut.png
-INPUT .\Images\hcmut.png
-INPUT .\Images\hcmut.png
-INPUT .\Images\hcmut.png
-INPUT .\Images\hcmut.png
-INPUT .\Images\hcmut.png
-INPUT .\Images\hcmut.png
-INPUT .\Images\hcmut.png
-INPUT .\Sections\7. System Design\System architecture\System architecture.tex
-INPUT .\Sections\7. System Design\System architecture\System architecture.tex
-INPUT Sections\7. System Design\System architecture\System architecture.tex
 INPUT .\Sections\7. System Design\System architecture\Model architecture.tex
 INPUT .\Sections\7. System Design\System architecture\Model architecture.tex
 INPUT Sections\7. System Design\System architecture\Model architecture.tex

@@ -1,4 +1,4 @@
-\subsubsection{Thiết kế hệ thống}
+
 Nhằm đảm bảo hệ thống có khả năng bảo trì, mở rộng và kiểm thử dễ dàng, kiến trúc của dự án được thiết kế theo mô hình \textbf{Layered Architecture}. Đây là một mô hình kiến trúc phổ biến và vững chắc, giúp tách bạch rõ ràng các mối quan tâm của ứng dụng thành các lớp logic riêng biệt. Luồng xử lý chính của hệ thống tuân theo quy tắc phụ thuộc chặt chẽ: một lớp ở trên chỉ có thể giao tiếp với lớp ngay bên dưới nó. Dữ liệu yêu cầu sẽ đi từ lớp trên cùng xuống các lớp dưới để xử lý và truy xuất dữ liệu, sau đó dữ liệu phản hồi sẽ được trả ngược lên trên.
 \begin{figure}[H]
     \centering

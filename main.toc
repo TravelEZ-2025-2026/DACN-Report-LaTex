@@ -45,44 +45,48 @@
 \contentsline {section}{\numberline {5}Phân tích và Thiết kế}{37}{section.5}%
 \contentsline {subsection}{\numberline {5.1}Phân tích}{37}{subsection.5.1}%
 \contentsline {subsubsection}{\numberline {5.1.1}Mô hình hoá tương tác}{37}{subsubsection.5.1.1}%
-\contentsline {section}{\numberline {6}System Design}{61}{section.6}%
-\contentsline {subsection}{\numberline {6.1}Công nghệ sử dụng}{61}{subsection.6.1}%
-\contentsline {subsubsection}{\numberline {6.1.1}Công nghệ Front-end}{61}{subsubsection.6.1.1}%
-\contentsline {paragraph}{\numberline {6.1.1.1}NextJS}{61}{paragraph.6.1.1.1}%
+\contentsline {subsection}{\numberline {5.2}Giải pháp công nghệ}{61}{subsection.5.2}%
+\contentsline {subsubsection}{\numberline {5.2.1}Công nghệ Front-end}{61}{subsubsection.5.2.1}%
+\contentsline {paragraph}{\numberline {5.2.1.1}NextJS}{61}{paragraph.5.2.1.1}%
 \contentsline {subparagraph}{Giới thiệu}{61}{subparagraph*.35}%
 \contentsline {subparagraph}{Ưu điểm}{61}{subparagraph*.36}%
 \contentsline {subparagraph}{So sánh NextJS và các công nghệ khác}{61}{subparagraph*.37}%
-\contentsline {paragraph}{\numberline {6.1.1.2}ShadCN/UI}{63}{paragraph.6.1.1.2}%
+\contentsline {paragraph}{\numberline {5.2.1.2}ShadCN/UI}{63}{paragraph.5.2.1.2}%
 \contentsline {subparagraph}{Giới thiệu}{63}{subparagraph*.39}%
 \contentsline {subparagraph}{Ưu điểm}{63}{subparagraph*.40}%
 \contentsline {subparagraph}{So sánh ShadCN/UI và các thư viện UI khác}{63}{subparagraph*.41}%
-\contentsline {subsubsection}{\numberline {6.1.2}Công nghệ Back-end}{65}{subsubsection.6.1.2}%
-\contentsline {paragraph}{\numberline {6.1.2.1}Spring Boot}{65}{paragraph.6.1.2.1}%
+\contentsline {subsubsection}{\numberline {5.2.2}Công nghệ Back-end}{65}{subsubsection.5.2.2}%
+\contentsline {paragraph}{\numberline {5.2.2.1}Spring Boot}{65}{paragraph.5.2.2.1}%
 \contentsline {subparagraph}{Giới thiệu}{65}{subparagraph*.43}%
 \contentsline {subparagraph}{Ưu điểm}{65}{subparagraph*.44}%
 \contentsline {subparagraph}{So sánh Spring Boot và các công nghệ khác}{65}{subparagraph*.45}%
-\contentsline {subsubsection}{\numberline {6.1.3}Cơ sở dữ liệu}{67}{subsubsection.6.1.3}%
-\contentsline {paragraph}{\numberline {6.1.3.1}PostgreSQL}{67}{paragraph.6.1.3.1}%
+\contentsline {subsubsection}{\numberline {5.2.3}Cơ sở dữ liệu}{67}{subsubsection.5.2.3}%
+\contentsline {paragraph}{\numberline {5.2.3.1}PostgreSQL}{67}{paragraph.5.2.3.1}%
 \contentsline {subparagraph}{Giới thiệu}{67}{subparagraph*.47}%
 \contentsline {subparagraph}{Ưu điểm}{67}{subparagraph*.48}%
 \contentsline {subparagraph}{So sánh PostgreSQL và các công nghệ khác}{67}{subparagraph*.49}%
-\contentsline {paragraph}{\numberline {6.1.3.2}Redis}{69}{paragraph.6.1.3.2}%
+\contentsline {paragraph}{\numberline {5.2.3.2}Redis}{69}{paragraph.5.2.3.2}%
 \contentsline {subparagraph}{Giới thiệu}{69}{subparagraph*.51}%
 \contentsline {subparagraph}{Ưu điểm}{69}{subparagraph*.52}%
 \contentsline {subparagraph}{So sánh Redis và các công nghệ khác}{69}{subparagraph*.53}%
-\contentsline {subsubsection}{\numberline {6.1.4}Dịch vụ Lưu trữ File}{71}{subsubsection.6.1.4}%
-\contentsline {paragraph}{\numberline {6.1.4.1}Amazon S3}{71}{paragraph.6.1.4.1}%
+\contentsline {subsubsection}{\numberline {5.2.4}Dịch vụ Lưu trữ File}{71}{subsubsection.5.2.4}%
+\contentsline {paragraph}{\numberline {5.2.4.1}Amazon S3}{71}{paragraph.5.2.4.1}%
 \contentsline {subparagraph}{Giới thiệu}{71}{subparagraph*.55}%
 \contentsline {subparagraph}{Ưu điểm}{71}{subparagraph*.56}%
 \contentsline {subparagraph}{So sánh Amazon S3 và các lựa chọn khác}{71}{subparagraph*.57}%
-\contentsline {subsection}{\numberline {6.2}Kiến trúc hệ thống}{73}{subsection.6.2}%
-\contentsline {subsubsection}{\numberline {6.2.1}Mô hình kiến trúc}{73}{subsubsection.6.2.1}%
-\contentsline {subsubsection}{\numberline {6.2.2}Thiết kế hệ thống}{74}{subsubsection.6.2.2}%
-\contentsline {section}{\numberline {7}System Implementation}{77}{section.7}%
-\contentsline {section}{\numberline {8}System Evaluation}{78}{section.8}%
-\contentsline {section}{\numberline {9}Conclusion}{79}{section.9}%
-\contentsline {subsection}{\numberline {9.1}Achievements}{79}{subsection.9.1}%
-\contentsline {subsection}{\numberline {9.2}Limitations}{79}{subsection.9.2}%
-\contentsline {subsection}{\numberline {9.3}Further improvements}{79}{subsection.9.3}%
-\contentsline {section}{References}{80}{subsection.9.3}%
+\contentsline {section}{\numberline {6}Thiết kế}{73}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Kiến trúc hệ thống}{73}{subsection.6.1}%
+\contentsline {subsubsection}{\numberline {6.1.1}Mô hình kiến trúc}{73}{subsubsection.6.1.1}%
+\contentsline {subsubsection}{\numberline {6.1.2}Thiết kế hệ thống}{74}{subsubsection.6.1.2}%
+\contentsline {subsection}{\numberline {6.2}Thiết kế cơ sở dữ liệu}{76}{subsection.6.2}%
+\contentsline {subsection}{\numberline {6.3}Thiết kế chi tiết bên trong}{76}{subsection.6.3}%
+\contentsline {subsection}{\numberline {6.4}Thiết kế giao diện}{76}{subsection.6.4}%
+\contentsline {section}{\numberline {7}Hiện thực và kiểm thử}{77}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Hiện thực}{77}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}Kiểm thử}{77}{subsection.7.2}%
+\contentsline {section}{\numberline {8}Đánh giá hệ thống}{78}{section.8}%
+\contentsline {section}{\numberline {9}Tổng kết}{79}{section.9}%
+\contentsline {subsection}{\numberline {9.1}Kết quả đạt được}{79}{subsection.9.1}%
+\contentsline {subsection}{\numberline {9.2}Hướng phát triển}{79}{subsection.9.2}%
+\contentsline {section}{References}{80}{subsection.9.2}%
 \contentsline {section}{Appendices}{80}{section*.61}%

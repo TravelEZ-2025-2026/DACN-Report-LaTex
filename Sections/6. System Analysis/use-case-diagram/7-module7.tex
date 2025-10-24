@@ -1,0 +1,57 @@
+\begin{table}[H]
+\centering
+\renewcommand{\arraystretch}{1.2}
+\begin{tabular}{@{}p{4cm} p{11cm}@{}}
+\toprule
+\textbf{Use case ID}       & UC-M7-01 \\ \midrule
+\textbf{Tên Use case}      & Gửi yêu cầu tư vấn \\ \midrule
+\textbf{Các tác nhân}      & Provider \\ \midrule
+\textbf{Mô tả}             & Cho phép Provider gửi lộ trình du lịch, AI sẽ phân tích dữ liệu xu hướng (ví dụ: địa điểm, dịch vụ đang phổ biến, sự kiện sắp diễn ra, tệp khách hàng) để xây dựng và gợi ý một lịch trình cụ thể. Nhà cung cấp có thể xem xét, tham khảo lộ trình mẫu này.\\ \midrule
+\textbf{Trigger}    & Người dùng chọn tab “Gợi ý” trên thanh điều hướng.\\ \midrule
+\textbf{Tiền điều kiện}    & Người dùng đã đăng nhập.\\ \midrule
+\textbf{Hậu điều kiện}     & Hệ thống xử lý yêu cầu, tạo ra một phản hồi và lưu lại trong lịch sử của Provider. \\ \midrule
+\textbf{Luồng sự kiện chính} & 
+\begin{tabular}[t]{@{}p{10.5cm}@{}}
+1. Provider nhập nội dung lộ trình cần góp ý cải thiện trong ô "Tạo gợi ý mới" và mục tiêu với lộ trình mong muốn. \\
+2. Hệ thống thông báo đang xử lý và tự động hiển thị kết quả sau khi hoàn tất.
+\end{tabular} \\ \midrule
+\textbf{Luồng ngoại lệ} &
+\begin{tabular}[t]{@{}p{10.5cm}@{}}
+6a. Nếu có lỗi kết nối trong quá trình xử lý của AI, hệ thống hiển thị thông báo “Lỗi kết nối”
+\end{tabular} \\
+\bottomrule
+\end{tabular}
+\caption{Mô tả Use Case: Gửi yêu cầu tư vấn}
+\label{usecase-7-01}
+\end{table}
+
+\begin{table}[H]
+\centering
+\renewcommand{\arraystretch}{1.2}
+\begin{tabular}{@{}p{4cm} p{11cm}@{}}
+\toprule
+\textbf{Use case ID}       & UC-M7-02 \\ \midrule
+\textbf{Tên Use case}      & Xem lịch sử yêu cầu \\ \midrule
+\textbf{Các tác nhân}      & Provider \\ \midrule
+\textbf{Mô tả}             & Cho phép Provider xem lại danh sách các báo cáo/gợi ý đã tạo trước đó.\\ \midrule
+\textbf{Trigger}    & Người dùng chọn tab “Gợi ý” trên thanh điều hướng.\\ \midrule
+\textbf{Tiền điều kiện}    & \begin{tabular}[t]{@{}p{10.5cm}@{}}
+1. Provider đã đăng nhập vào hệ thống \\
+2. Provider đã tạo ít nhất một gợi ý từ AI
+\end{tabular} \\ \midrule
+\textbf{Hậu điều kiện}     & Hệ thống hiển thị danh sách các báo cáo/gợi ý đã được tạo. \\ \midrule
+\textbf{Luồng sự kiện chính} & 
+\begin{tabular}[t]{@{}p{10.5cm}@{}}
+1. NCC chọn mục "Lịch sử tư vấn". \\
+2. Hệ thống hiển thị danh sách các gợi ý đã tạo.
+\end{tabular} \\ \midrule
+\textbf{Luồng ngoại lệ} &
+\begin{tabular}[t]{@{}p{10.5cm}@{}}
+2a. Nếu có lỗi kết nối, hệ thống hiển thị thông báo “Lỗi kết nối”\\
+2b. Nếu hệ thống ghi nhận chưa có yêu cầu nào được tạo trước đó, hiển thị thông báo "Chưa có yêu cầu".
+\end{tabular} \\
+\bottomrule
+\end{tabular}
+\caption{Mô tả Use Case: Xem lịch sử yêu cầu}
+\label{usecase-7-02}
+\end{table}

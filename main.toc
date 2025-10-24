@@ -44,8 +44,7 @@
 \contentsline {subsection}{\numberline {4.5}Yêu cầu dữ liệu}{35}{subsection.4.5}%
 \contentsline {section}{\numberline {5}Phân tích và Thiết kế}{36}{section.5}%
 \contentsline {subsection}{\numberline {5.1}Phân tích}{36}{subsection.5.1}%
-\contentsline {subsubsection}{\numberline {5.1.1}Mô hình hoá quy trình nghiệp vụ}{36}{subsubsection.5.1.1}%
-\contentsline {subsubsection}{\numberline {5.1.2}Mô hình hoá tương tác}{36}{subsubsection.5.1.2}%
+\contentsline {subsubsection}{\numberline {5.1.1}Mô hình hoá tương tác}{36}{subsubsection.5.1.1}%
 \contentsline {subsection}{\numberline {5.2}Giải pháp công nghệ}{49}{subsection.5.2}%
 \contentsline {subsubsection}{\numberline {5.2.1}Front-end}{49}{subsubsection.5.2.1}%
 \contentsline {subsubsection}{\numberline {5.2.2}Back-end}{49}{subsubsection.5.2.2}%

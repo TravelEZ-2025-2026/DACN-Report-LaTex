@@ -1,27 +1,32 @@
 \babel@toc {vietnamese}{}\relax 
-\contentsline {table}{\numberline {2}{\ignorespaces Đánh giá các hệ thống theo tiêu chí chức năng (cấp độ 1–3).}}{26}{table.caption.3}%
-\contentsline {table}{\numberline {3}{\ignorespaces Danh sách Yêu cầu Chức năng}}{29}{table.3}%
-\contentsline {table}{\numberline {4}{\ignorespaces Yêu cầu Phi chức năng}}{33}{table.4}%
-\contentsline {table}{\numberline {5}{\ignorespaces Mô tả Use Case: Tạo lộ trình}}{38}{table.caption.7}%
-\contentsline {table}{\numberline {6}{\ignorespaces Mô tả Use Case: Gợi ý Lộ trình Du lịch}}{39}{table.caption.8}%
-\contentsline {table}{\numberline {7}{\ignorespaces Mô tả Use Case: Chỉnh sửa Lộ trình Du lịch}}{40}{table.caption.9}%
-\contentsline {table}{\numberline {8}{\ignorespaces Mô tả Use Case: Chia sẻ Lộ trình Du lịch}}{41}{table.caption.10}%
-\contentsline {table}{\numberline {9}{\ignorespaces Mô tả Use Case: Xem lộ trình được chia sẻ}}{42}{table.caption.11}%
-\contentsline {table}{\numberline {10}{\ignorespaces Mô tả Use Case: Hủy Lộ trình}}{43}{table.caption.12}%
-\contentsline {table}{\numberline {11}{\ignorespaces Mô tả Use Case: Xóa Lộ trình}}{44}{table.caption.13}%
-\contentsline {table}{\numberline {12}{\ignorespaces Mô tả Use Case: Xem danh sách nội dung}}{46}{table.caption.15}%
-\contentsline {table}{\numberline {13}{\ignorespaces Mô tả Use Case: Lọc và sắp xếp nội dung}}{46}{table.caption.16}%
-\contentsline {table}{\numberline {14}{\ignorespaces Mô tả Use Case: Tìm kiếm nội dung}}{47}{table.caption.17}%
-\contentsline {table}{\numberline {15}{\ignorespaces Mô tả Use Case: Lưu địa điểm, bài viết}}{48}{table.caption.18}%
-\contentsline {table}{\numberline {16}{\ignorespaces Mô tả Use Case: Xem danh sách nội dung địa điểm, bài viết đã lưu}}{49}{table.caption.19}%
-\contentsline {table}{\numberline {17}{\ignorespaces Mô tả Use Case: Theo dõi chủ đề hoặc địa điểm}}{49}{table.caption.20}%
-\contentsline {table}{\numberline {18}{\ignorespaces Mô tả Use Case: Xem dashboard xu hướng thị trường}}{52}{table.caption.24}%
-\contentsline {table}{\numberline {19}{\ignorespaces Mô tả Use Case: Gửi yêu cầu tư vấn}}{53}{table.caption.26}%
-\contentsline {table}{\numberline {20}{\ignorespaces Mô tả Use Case: Xem lịch sử yêu cầu}}{54}{table.caption.27}%
-\contentsline {table}{\numberline {22}{\ignorespaces So sánh NextJS và các công nghệ khác}}{58}{table.caption.33}%
-\contentsline {table}{\numberline {24}{\ignorespaces So sánh ShadCN/UI và các thư viện UI khác}}{60}{table.caption.37}%
-\contentsline {table}{\numberline {26}{\ignorespaces So sánh Spring Boot và các công nghệ khác}}{62}{table.caption.41}%
-\contentsline {table}{\numberline {28}{\ignorespaces So sánh PostgreSQL và các công nghệ khác}}{64}{table.caption.45}%
-\contentsline {table}{\numberline {30}{\ignorespaces So sánh Redis và các công nghệ khác}}{66}{table.caption.49}%
-\contentsline {table}{\numberline {32}{\ignorespaces So sánh Amazon S3 và các lựa chọn khác}}{68}{table.caption.53}%
-\contentsline {table}{\numberline {33}{\ignorespaces Phân tích so sánh các mô hình kiến trúc}}{70}{table.caption.54}%
+\contentsline {table}{\numberline {2}{\ignorespaces Đánh giá các hệ thống theo tiêu chí chức năng (cấp độ 1–3).}}{27}{table.caption.3}%
+\contentsline {table}{\numberline {3}{\ignorespaces Danh sách Yêu cầu Chức năng}}{30}{table.3}%
+\contentsline {table}{\numberline {4}{\ignorespaces Yêu cầu Phi chức năng}}{34}{table.4}%
+\contentsline {table}{\numberline {5}{\ignorespaces Mô tả Use Case: Tạo lộ trình}}{39}{table.caption.7}%
+\contentsline {table}{\numberline {6}{\ignorespaces Mô tả Use Case: Gợi ý Lộ trình Du lịch}}{40}{table.caption.8}%
+\contentsline {table}{\numberline {7}{\ignorespaces Mô tả Use Case: Chỉnh sửa Lộ trình Du lịch}}{41}{table.caption.9}%
+\contentsline {table}{\numberline {8}{\ignorespaces Mô tả Use Case: Chia sẻ Lộ trình Du lịch}}{42}{table.caption.10}%
+\contentsline {table}{\numberline {9}{\ignorespaces Mô tả Use Case: Xem lộ trình được chia sẻ}}{43}{table.caption.11}%
+\contentsline {table}{\numberline {10}{\ignorespaces Mô tả Use Case: Hủy Lộ trình}}{44}{table.caption.12}%
+\contentsline {table}{\numberline {11}{\ignorespaces Mô tả Use Case: Xóa Lộ trình}}{45}{table.caption.13}%
+\contentsline {table}{\numberline {12}{\ignorespaces Mô tả Use Case: Xem danh sách nội dung}}{47}{table.caption.15}%
+\contentsline {table}{\numberline {13}{\ignorespaces Mô tả Use Case: Lọc và sắp xếp nội dung}}{47}{table.caption.16}%
+\contentsline {table}{\numberline {14}{\ignorespaces Mô tả Use Case: Tìm kiếm nội dung}}{48}{table.caption.17}%
+\contentsline {table}{\numberline {15}{\ignorespaces Mô tả Use Case: Lưu địa điểm, bài viết}}{49}{table.caption.18}%
+\contentsline {table}{\numberline {16}{\ignorespaces Mô tả Use Case: Xem danh sách nội dung địa điểm, bài viết đã lưu}}{50}{table.caption.19}%
+\contentsline {table}{\numberline {17}{\ignorespaces Mô tả Use Case: Theo dõi chủ đề hoặc địa điểm}}{50}{table.caption.20}%
+\contentsline {table}{\numberline {18}{\ignorespaces Mô tả Use Case: Xem dashboard xu hướng thị trường}}{53}{table.caption.24}%
+\contentsline {table}{\numberline {19}{\ignorespaces Mô tả Use Case: Gửi yêu cầu tư vấn}}{54}{table.caption.26}%
+\contentsline {table}{\numberline {20}{\ignorespaces Mô tả Use Case: Xem lịch sử yêu cầu}}{55}{table.caption.27}%
+\contentsline {table}{\numberline {21}{\ignorespaces Mô tả Use Case: Nhận thông báo từ các nội dung theo dõi}}{57}{table.caption.30}%
+\contentsline {table}{\numberline {22}{\ignorespaces Mô tả Use Case: Xem nhật ký hoạt động của cá nhân}}{58}{table.caption.31}%
+\contentsline {table}{\numberline {23}{\ignorespaces Mô tả Use Case: Xem nhật ký hoạt động của người dùng}}{58}{table.caption.32}%
+\contentsline {table}{\numberline {24}{\ignorespaces Mô tả Use Case: Xem danh sách danh mục của hệ thống}}{59}{table.caption.33}%
+\contentsline {table}{\numberline {25}{\ignorespaces Mô tả Use Case: Quản lý nội dung của danh mục}}{60}{table.caption.34}%
+\contentsline {table}{\numberline {27}{\ignorespaces So sánh NextJS và các công nghệ khác}}{62}{table.caption.38}%
+\contentsline {table}{\numberline {29}{\ignorespaces So sánh ShadCN/UI và các thư viện UI khác}}{64}{table.caption.42}%
+\contentsline {table}{\numberline {31}{\ignorespaces So sánh Spring Boot và các công nghệ khác}}{66}{table.caption.46}%
+\contentsline {table}{\numberline {33}{\ignorespaces So sánh PostgreSQL và các công nghệ khác}}{68}{table.caption.50}%
+\contentsline {table}{\numberline {35}{\ignorespaces So sánh Redis và các công nghệ khác}}{70}{table.caption.54}%
+\contentsline {table}{\numberline {37}{\ignorespaces So sánh Amazon S3 và các lựa chọn khác}}{72}{table.caption.58}%
+\contentsline {table}{\numberline {38}{\ignorespaces Phân tích so sánh các mô hình kiến trúc}}{74}{table.caption.59}%

@@ -80,11 +80,11 @@
 \contentsline {subsubsection}{\numberline {5.3.2}Mô hình kiến trúc}{66}{subsubsection.5.3.2}%
 \contentsline {subsubsection}{\numberline {5.3.3}Thiết kế cơ sở dữ liệu}{68}{subsubsection.5.3.3}%
 \contentsline {subsubsection}{\numberline {5.3.4}Thiết kế Sitemap}{68}{subsubsection.5.3.4}%
-\contentsline {subsubsection}{\numberline {5.3.5}Thiết kế giao diện}{68}{subsubsection.5.3.5}%
-\contentsline {section}{\numberline {6}System Evaluation}{69}{section.6}%
-\contentsline {section}{\numberline {7}Conclusion}{70}{section.7}%
-\contentsline {subsection}{\numberline {7.1}Achievements}{70}{subsection.7.1}%
-\contentsline {subsection}{\numberline {7.2}Limitations}{70}{subsection.7.2}%
-\contentsline {subsection}{\numberline {7.3}Further improvements}{70}{subsection.7.3}%
-\contentsline {section}{References}{71}{subsection.7.3}%
-\contentsline {section}{Appendices}{71}{section*.46}%
+\contentsline {subsubsection}{\numberline {5.3.5}Thiết kế giao diện}{70}{subsubsection.5.3.5}%
+\contentsline {section}{\numberline {6}System Evaluation}{71}{section.6}%
+\contentsline {section}{\numberline {7}Conclusion}{72}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Achievements}{72}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}Limitations}{72}{subsection.7.2}%
+\contentsline {subsection}{\numberline {7.3}Further improvements}{72}{subsection.7.3}%
+\contentsline {section}{References}{73}{subsection.7.3}%
+\contentsline {section}{Appendices}{73}{section*.50}%

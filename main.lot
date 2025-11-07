@@ -2,21 +2,21 @@
 \contentsline {table}{\numberline {2}{\ignorespaces Đánh giá các hệ thống theo tiêu chí chức năng (cấp độ 1–3).}}{26}{table.caption.3}%
 \contentsline {table}{\numberline {3}{\ignorespaces Danh sách Yêu cầu Chức năng}}{31}{table.3}%
 \contentsline {table}{\numberline {4}{\ignorespaces Yêu cầu Phi chức năng}}{36}{table.4}%
-\contentsline {table}{\numberline {6}{\ignorespaces Mô tả Use Case: Tạo lộ trình}}{45}{table.caption.8}%
-\contentsline {table}{\numberline {7}{\ignorespaces Mô tả Use Case: Gợi ý Lộ trình Du lịch}}{46}{table.caption.9}%
-\contentsline {table}{\numberline {8}{\ignorespaces Mô tả Use Case: Chỉnh sửa Lộ trình Du lịch}}{47}{table.caption.10}%
-\contentsline {table}{\numberline {9}{\ignorespaces Mô tả Use Case: Chia sẻ Lộ trình Du lịch}}{48}{table.caption.11}%
-\contentsline {table}{\numberline {10}{\ignorespaces Mô tả Use Case: Xem lộ trình được chia sẻ}}{49}{table.caption.12}%
-\contentsline {table}{\numberline {11}{\ignorespaces Mô tả Use Case: Hủy Lộ trình}}{50}{table.caption.13}%
-\contentsline {table}{\numberline {12}{\ignorespaces Mô tả Use Case: Xóa Lộ trình}}{51}{table.caption.14}%
-\contentsline {table}{\numberline {14}{\ignorespaces So sánh NextJS và các công nghệ khác}}{60}{table.caption.26}%
-\contentsline {table}{\numberline {16}{\ignorespaces So sánh ShadCN/UI và các thư viện UI khác}}{62}{table.caption.30}%
-\contentsline {table}{\numberline {18}{\ignorespaces So sánh Spring Boot và các công nghệ khác}}{64}{table.caption.34}%
-\contentsline {table}{\numberline {20}{\ignorespaces So sánh PostgreSQL và các công nghệ khác}}{66}{table.caption.38}%
-\contentsline {table}{\numberline {22}{\ignorespaces So sánh Redis và các công nghệ khác}}{68}{table.caption.42}%
-\contentsline {table}{\numberline {24}{\ignorespaces So sánh Amazon S3 và các lựa chọn khác}}{70}{table.caption.46}%
-\contentsline {table}{\numberline {25}{\ignorespaces Phân tích so sánh các mô hình kiến trúc}}{74}{table.caption.48}%
-\contentsline {table}{\numberline {26}{\ignorespaces Sitemap dành cho tất cả người dùng}}{75}{table.caption.50}%
-\contentsline {table}{\numberline {27}{\ignorespaces Sitemap dành cho Nhà cung cấp (Provider)}}{76}{table.caption.51}%
-\contentsline {table}{\numberline {28}{\ignorespaces Sitemap dành cho Khách du lịch (Travelers) và người dùng đã xác thực.}}{76}{table.caption.52}%
-\contentsline {table}{\numberline {29}{\ignorespaces Sitemap dành cho Quản trị viên hệ thống (Admin)}}{77}{table.caption.53}%
+\contentsline {table}{\numberline {6}{\ignorespaces Mô tả Use Case: Tạo lộ trình}}{44}{table.caption.8}%
+\contentsline {table}{\numberline {7}{\ignorespaces Mô tả Use Case: Gợi ý Lộ trình Du lịch}}{45}{table.caption.9}%
+\contentsline {table}{\numberline {8}{\ignorespaces Mô tả Use Case: Chỉnh sửa Lộ trình Du lịch}}{46}{table.caption.10}%
+\contentsline {table}{\numberline {9}{\ignorespaces Mô tả Use Case: Chia sẻ Lộ trình Du lịch}}{47}{table.caption.11}%
+\contentsline {table}{\numberline {10}{\ignorespaces Mô tả Use Case: Xem lộ trình được chia sẻ}}{48}{table.caption.12}%
+\contentsline {table}{\numberline {11}{\ignorespaces Mô tả Use Case: Hủy Lộ trình}}{49}{table.caption.13}%
+\contentsline {table}{\numberline {12}{\ignorespaces Mô tả Use Case: Xóa Lộ trình}}{50}{table.caption.14}%
+\contentsline {table}{\numberline {14}{\ignorespaces So sánh NextJS và các công nghệ khác}}{59}{table.caption.26}%
+\contentsline {table}{\numberline {16}{\ignorespaces So sánh ShadCN/UI và các thư viện UI khác}}{61}{table.caption.30}%
+\contentsline {table}{\numberline {18}{\ignorespaces So sánh Spring Boot và các công nghệ khác}}{63}{table.caption.34}%
+\contentsline {table}{\numberline {20}{\ignorespaces So sánh PostgreSQL và các công nghệ khác}}{65}{table.caption.38}%
+\contentsline {table}{\numberline {22}{\ignorespaces So sánh Redis và các công nghệ khác}}{67}{table.caption.42}%
+\contentsline {table}{\numberline {24}{\ignorespaces So sánh Amazon S3 và các lựa chọn khác}}{69}{table.caption.46}%
+\contentsline {table}{\numberline {25}{\ignorespaces Phân tích so sánh các mô hình kiến trúc}}{73}{table.caption.48}%
+\contentsline {table}{\numberline {26}{\ignorespaces Sitemap dành cho tất cả người dùng}}{74}{table.caption.50}%
+\contentsline {table}{\numberline {27}{\ignorespaces Sitemap dành cho Nhà cung cấp (Provider)}}{75}{table.caption.51}%
+\contentsline {table}{\numberline {28}{\ignorespaces Sitemap dành cho Khách du lịch (Travelers) và người dùng đã xác thực.}}{75}{table.caption.52}%
+\contentsline {table}{\numberline {29}{\ignorespaces Sitemap dành cho Quản trị viên hệ thống (Admin)}}{76}{table.caption.53}%

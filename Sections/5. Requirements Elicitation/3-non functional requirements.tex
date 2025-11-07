@@ -3,52 +3,49 @@
 \setlength\LTright{\fill}
 \renewcommand{\arraystretch}{1.2}
 % {p{1.7cm} p{6cm} p{2.8cm} p{2.2cm} p{2.2cm}
-\begin{longtable}{p{1.7cm} p{6.0cm} p{2.0cm} p{2.0cm} p{2.4cm}}
+\begin{longtable}{p{2.4cm} p{7.0cm} p{2.0cm} p{2.0cm}}
 \caption{Yêu cầu Phi chức năng}\label{tab:nfr}\\
 \toprule
-\textbf{ID} & \textbf{Mô tả yêu cầu} & \textbf{Doable} & \textbf{Testable} & \textbf{Ghi chú (Áp dụng cho)} \\
+\textbf{ID} & \textbf{Mô tả yêu cầu} & \textbf{Doable} & \textbf{Testable}  \\
 \midrule
 \endfirsthead
 
 \toprule
-\textbf{ID} & \textbf{Mô tả yêu cầu} & \textbf{Doable} & \textbf{Testable} & \textbf{Ghi chú (Áp dụng cho)} \\
+\textbf{ID} & \textbf{Mô tả yêu cầu} & \textbf{Doable} & \textbf{Testable}  \\
 \midrule
 \endhead
 
 \midrule
-\multicolumn{5}{r}{\footnotesize (Còn tiếp trang sau)}\\
+\multicolumn{4}{r}{\footnotesize (Còn tiếp trang sau)}\\
 \endfoot
 
 \bottomrule
 \endlastfoot
 
-\multicolumn{5}{l}{\textbf{Hiệu năng (Performance)}}\\[2pt]
-NFR-PERF-01  & Thời gian phản hồi trung bình của tất cả API phải $< 2$ giây.                                                                                           & Trung bình & Trung bình &  \\
-NFR-PERF-02  & Thời gian để AI sinh ra lộ trình ban đầu phải $\leq 30$ giây.                                                                                          & Trung bình & Trung bình & FR1.2 \\
-NFR-PERF-03  & Thời gian hệ thống tối ưu và cập nhật lại lộ trình sau khi người dùng chỉnh sửa phải $\leq 10$ giây.                                                    & Trung bình & Trung bình & FR1.5 \\
-NFR-PERF-04  & Thời gian phản hồi cho các truy vấn tìm kiếm cơ bản phải $< 5$ giây.                                                                                     & Trung bình & Trung bình & FR2.1, FR2.2 \\
-NFR-PERF-05  & Quá trình tải lên media (tối đa 10 ảnh, tổng dung lượng $\leq 20$MB).                                                                                   & Trung bình & Trung bình & FR3.1, FR3.2 \\
-NFR-PERF-06  & Hệ thống phải hỗ trợ tối thiểu 10\,000 người dùng đồng thời mà không suy giảm hiệu năng đáng kể.                                                         & Trung bình & Trung bình &  \\
+\multicolumn{4}{l}{\textbf{Hiệu năng (Performance)}}\\[2pt]
+NFR-PERF-01  & Thời gian trung bình hệ thống nhận và phản hồi của tất cả API giây. & Trung bình & Trung bình \\
+NFR-PERF-02  & Thời gian hệ thống xác nhận yêu cầu tạo lộ trình phải < 1 giây & Trung bình & Trung bình  \\
+NFR-PERF-03  & Thời gian phản hồi cho các truy vấn tìm kiếm cơ bản phải $< 5$ giây.  & Trung bình & Trung bình \\
+NFR-PERF-05  & Thời gian hệ thống xử lý media (tính từ lúc server nhận đủ file cho đến khi lưu trữ thành công trên S3 và cập nhật database) phải < 5giây cho một yêu cầu 20MB. & Trung bình & Trung bình\\
+NFR-PERF-06  & Hệ thống phải hỗ trợ \~ 3500 người dùng đồng thời mà không suy giảm hiệu năng đáng kể. & Trung bình & Trung bình \\
 
 \addlinespace
-\multicolumn{5}{l}{\textbf{Độ sẵn sàng (Availability)}}\\[2pt]
-NFR-AVAIL-01 & Độ sẵn sàng của hệ thống (Uptime) phải đạt $\geq 99.5\%$ mỗi tháng (thời gian gián đoạn không quá 3.5 giờ/tháng).                                       & Thấp       & Thấp       &  \\
-NFR-AVAIL-02 & Thời gian khôi phục sau sự cố (RTO) $\leq 30$ phút; Mất mát dữ liệu tối đa (RPO) $\leq 5$ phút.                                                          & Thấp       & Thấp       &  \\
+\multicolumn{4}{l}{\textbf{Độ sẵn sàng (Availability)}}\\[2pt]
+NFR-AVAIL-01 & Độ sẵn sàng của hệ thống (Uptime) phải đạt $\geq 99.5\%$ mỗi tháng (thời gian gián đoạn không quá 3.5 giờ/tháng).  & Thấp       & Thấp      \\
 
 \addlinespace
-\multicolumn{5}{l}{\textbf{Bảo mật (Security)}}\\[2pt]
-NFR-SEC-01   & Tất cả các giao tiếp giữa client và server phải được mã hóa bằng HTTPS (TLS $\geq$ 1.3).                                                                & Cao        & Cao        &  \\
-NFR-SEC-02   & Dữ liệu nhạy cảm (mật khẩu) phải được mã hóa (ví dụ: AES-256) khi lưu trữ.                                                                               & Cao        & Cao        & FR6.1, FR6.4 \\
-NFR-SEC-03   & Mật khẩu người dùng phải có độ phức tạp tối thiểu (ít nhất 8 ký tự, bao gồm chữ hoa, chữ thường, số và ký tự đặc biệt).                                   & Cao        & Cao        & FR6.1 \\
-NFR-SEC-04   & Hệ thống phải có cơ chế khóa tài khoản tạm thời sau 5 lần đăng nhập sai liên tiếp trong vòng 10 phút.                                                    & Cao        & Cao        & FR6.2 \\
+\multicolumn{4}{l}{\textbf{Bảo mật (Security)}}\\[2pt]
+NFR-SEC-01   & Tất cả các giao tiếp giữa client và server phải được mã hóa bằng HTTPS (TLS $\geq$ 1.3).  & Cao        & Cao   \\
+NFR-SEC-02   & Dữ liệu nhạy cảm (mật khẩu) phải được mã hóa (ví dụ: AES-256) khi lưu trữ. & Cao        & Cao      \\
+NFR-SEC-03   & Mật khẩu người dùng phải có độ phức tạp tối thiểu (ít nhất 8 ký tự, bao gồm chữ hoa, chữ thường, số và ký tự đặc biệt).   & Cao        & Cao      \\
 
 \addlinespace
-\multicolumn{5}{l}{\textbf{Khả năng bảo trì (Maintainability)}}\\[2pt]
-NFR-MAINT-01 & Nhật ký (log) về lỗi và các hoạt động quan trọng phải được lưu trữ.                                                                                       & Cao        & Cao        &  \\
+\multicolumn{4}{l}{\textbf{Khả năng bảo trì (Maintainability)}}\\[2pt]
+NFR-MAINT-01 & Nhật ký (log) về lỗi và các hoạt động quan trọng phải được lưu trữ.   & Cao        & Cao   \\
 
 \addlinespace
-\multicolumn{5}{l}{\textbf{Tính tương thích (Compatibility)}}\\[2pt]
-NFR-COMP-01  & Ứng dụng web hoạt động được trên nhiều trình duyệt.                                                                                                       & Cao        & Cao        &  \\
-NFR-COMP-02  & Giao diện người dùng phải hiển thị và hoạt động tốt trên các kích thước màn hình phổ biến (mobile, tablet, desktop) mà không bị vỡ bố cục, mất nội dung hay mất chức năng. & Cao & Cao &  \\
+\multicolumn{4}{l}{\textbf{Tính tương thích (Compatibility)}}\\[2pt]
+NFR-COMP-01  & Ứng dụng web hoạt động được trên nhiều trình duyệt.   & Cao        & Cao  \\
+NFR-COMP-02  & Giao diện người dùng phải hiển thị và hoạt động tốt trên các kích thước màn hình phổ biến (mobile, tablet, desktop) mà không bị vỡ bố cục, mất nội dung hay mất chức năng. & Cao & Cao \\
 
 \end{longtable}

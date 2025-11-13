@@ -46,14 +46,7 @@
 \contentsline {table}{\numberline {52}{\ignorespaces So sánh Redis và các công nghệ khác}}{108}{table.caption.49}%
 \contentsline {table}{\numberline {54}{\ignorespaces So sánh Amazon S3 và các lựa chọn khác}}{110}{table.caption.53}%
 \contentsline {table}{\numberline {55}{\ignorespaces Phân tích so sánh các mô hình kiến trúc}}{112}{table.caption.54}%
-\contentsline {table}{\numberline {56}{\ignorespaces Sitemap dành cho tất cả người dùng}}{113}{table.caption.56}%
-\contentsline {table}{\numberline {57}{\ignorespaces Sitemap dành cho Nhà cung cấp (Provider)}}{114}{table.caption.57}%
-\contentsline {table}{\numberline {58}{\ignorespaces Sitemap dành cho Khách du lịch (Travelers) và người dùng đã xác thực.}}{114}{table.caption.58}%
-\contentsline {table}{\numberline {59}{\ignorespaces Sitemap dành cho Quản trị viên hệ thống (Admin)}}{115}{table.caption.59}%
-\contentsline {table}{\numberline {61}{\ignorespaces So sánh NextJS và các công nghệ khác}}{117}{table.caption.63}%
-\contentsline {table}{\numberline {63}{\ignorespaces So sánh ShadCN/UI và các thư viện UI khác}}{119}{table.caption.67}%
-\contentsline {table}{\numberline {65}{\ignorespaces So sánh Spring Boot và các công nghệ khác}}{121}{table.caption.71}%
-\contentsline {table}{\numberline {67}{\ignorespaces So sánh PostgreSQL và các công nghệ khác}}{124}{table.caption.75}%
-\contentsline {table}{\numberline {69}{\ignorespaces So sánh Redis và các công nghệ khác}}{126}{table.caption.79}%
-\contentsline {table}{\numberline {71}{\ignorespaces So sánh Amazon S3 và các lựa chọn khác}}{128}{table.caption.83}%
-\contentsline {table}{\numberline {72}{\ignorespaces Phân tích so sánh các mô hình kiến trúc}}{133}{table.caption.85}%
+\contentsline {table}{\numberline {57}{\ignorespaces Sitemap dành cho tất cả người dùng}}{117}{table.caption.57}%
+\contentsline {table}{\numberline {58}{\ignorespaces Sitemap dành cho Nhà cung cấp (Provider)}}{118}{table.caption.58}%
+\contentsline {table}{\numberline {59}{\ignorespaces Sitemap dành cho Khách du lịch (Travelers) và người dùng đã xác thực.}}{118}{table.caption.59}%
+\contentsline {table}{\numberline {60}{\ignorespaces Sitemap dành cho Quản trị viên hệ thống (Admin)}}{119}{table.caption.60}%

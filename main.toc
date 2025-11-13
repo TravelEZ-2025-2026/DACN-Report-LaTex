@@ -48,11 +48,11 @@
 \contentsline {subsection}{\numberline {5.1}Phân tích}{41}{subsection.5.1}%
 \contentsline {subsubsection}{\numberline {5.1.1}Mô hình hoá quy trình nghiệp vụ}{41}{subsubsection.5.1.1}%
 \contentsline {subsubsection}{\numberline {5.1.2}Mô hình hoá tương tác}{41}{subsubsection.5.1.2}%
-\contentsline {subsection}{\numberline {5.2}Giải pháp công nghệ}{99}{subsection.5.2}%
-\contentsline {subsubsection}{\numberline {5.2.1}Front-end}{99}{subsubsection.5.2.1}%
-\contentsline {paragraph}{\numberline {5.2.1.1}NextJS}{99}{paragraph.5.2.1.1}%
-\contentsline {subparagraph}{Giới thiệu}{99}{subparagraph*.30}%
-\contentsline {subparagraph}{Ưu điểm}{99}{subparagraph*.31}%
+\contentsline {subsection}{\numberline {5.2}Giải pháp công nghệ}{98}{subsection.5.2}%
+\contentsline {subsubsection}{\numberline {5.2.1}Front-end}{98}{subsubsection.5.2.1}%
+\contentsline {paragraph}{\numberline {5.2.1.1}NextJS}{98}{paragraph.5.2.1.1}%
+\contentsline {subparagraph}{Giới thiệu}{98}{subparagraph*.30}%
+\contentsline {subparagraph}{Ưu điểm}{98}{subparagraph*.31}%
 \contentsline {subparagraph}{So sánh NextJS và các công nghệ khác}{99}{subparagraph*.32}%
 \contentsline {paragraph}{\numberline {5.2.1.2}ShadCN/UI}{101}{paragraph.5.2.1.2}%
 \contentsline {subparagraph}{Giới thiệu}{101}{subparagraph*.34}%
@@ -79,51 +79,15 @@
 \contentsline {subparagraph}{So sánh Amazon S3 và các lựa chọn khác}{109}{subparagraph*.52}%
 \contentsline {subsection}{\numberline {5.3}Thiết kế}{111}{subsection.5.3}%
 \contentsline {subsubsection}{\numberline {5.3.1}Mô hình kiến trúc}{111}{subsubsection.5.3.1}%
-\contentsline {subsubsection}{\numberline {5.3.2}Thiết kế cơ sở dữ liệu}{113}{subsubsection.5.3.2}%
-\contentsline {subsubsection}{\numberline {5.3.3}Thiết kế Sitemap}{113}{subsubsection.5.3.3}%
-\contentsline {subsubsection}{\numberline {5.3.4}Front-end}{115}{subsubsection.5.3.4}%
-\contentsline {paragraph}{\numberline {5.3.4.1}NextJS}{115}{paragraph.5.3.4.1}%
-\contentsline {subparagraph}{Giới thiệu}{115}{subparagraph*.60}%
-\contentsline {subparagraph}{Ưu điểm}{115}{subparagraph*.61}%
-\contentsline {subparagraph}{So sánh NextJS và các công nghệ khác}{116}{subparagraph*.62}%
-\contentsline {paragraph}{\numberline {5.3.4.2}ShadCN/UI}{118}{paragraph.5.3.4.2}%
-\contentsline {subparagraph}{Giới thiệu}{118}{subparagraph*.64}%
-\contentsline {subparagraph}{Ưu điểm}{118}{subparagraph*.65}%
-\contentsline {subparagraph}{So sánh ShadCN/UI và các thư viện UI khác}{118}{subparagraph*.66}%
-\contentsline {subsubsection}{\numberline {5.3.5}Back-end}{120}{subsubsection.5.3.5}%
-\contentsline {paragraph}{\numberline {5.3.5.1}Spring Boot}{120}{paragraph.5.3.5.1}%
-\contentsline {subparagraph}{Giới thiệu}{120}{subparagraph*.68}%
-\contentsline {subparagraph}{Ưu điểm}{120}{subparagraph*.69}%
-\contentsline {subparagraph}{So sánh Spring Boot và các công nghệ khác}{120}{subparagraph*.70}%
-\contentsline {subsubsection}{\numberline {5.3.6}Database}{122}{subsubsection.5.3.6}%
-\contentsline {subsubsection}{\numberline {5.3.7}Công nghệ cơ sở dữ liệu}{122}{subsubsection.5.3.7}%
-\contentsline {paragraph}{\numberline {5.3.7.1}PostgreSQL}{122}{paragraph.5.3.7.1}%
-\contentsline {subparagraph}{Giới thiệu}{122}{subparagraph*.72}%
-\contentsline {subparagraph}{Ưu điểm}{122}{subparagraph*.73}%
-\contentsline {subparagraph}{So sánh PostgreSQL và các công nghệ khác}{123}{subparagraph*.74}%
-\contentsline {paragraph}{\numberline {5.3.7.2}Redis}{125}{paragraph.5.3.7.2}%
-\contentsline {subparagraph}{Giới thiệu}{125}{subparagraph*.76}%
-\contentsline {subparagraph}{Ưu điểm}{125}{subparagraph*.77}%
-\contentsline {subparagraph}{So sánh Redis và các công nghệ khác}{125}{subparagraph*.78}%
-\contentsline {subsubsection}{\numberline {5.3.8}Dịch vụ lưu trữ}{127}{subsubsection.5.3.8}%
-\contentsline {subsubsection}{\numberline {5.3.9}Công nghệ khác}{127}{subsubsection.5.3.9}%
-\contentsline {paragraph}{\numberline {5.3.9.1}Amazon S3}{127}{paragraph.5.3.9.1}%
-\contentsline {subparagraph}{Giới thiệu}{127}{subparagraph*.80}%
-\contentsline {subparagraph}{Ưu điểm}{127}{subparagraph*.81}%
-\contentsline {subparagraph}{So sánh Amazon S3 và các lựa chọn khác}{127}{subparagraph*.82}%
-\contentsline {subsection}{\numberline {5.4}Thiết kế}{129}{subsection.5.4}%
-\contentsline {subsubsection}{\numberline {5.4.1}Thiết kế hệ thống}{129}{subsubsection.5.4.1}%
-\contentsline {subsubsubsection}{\numberline {5.4.1.a}Mô hình kiến trúc}{129}{subsubsubsection.5.4.1.1}%
-\contentsline {subsubsection}{\numberline {5.4.2}Thiết kế hệ thống}{129}{subsubsection.5.4.2}%
-\contentsline {subsubsection}{\numberline {5.4.3}Mô hình kiến trúc}{131}{subsubsection.5.4.3}%
-\contentsline {subsubsubsection}{\numberline {5.4.3.a}Thiết kế kiến trúc}{132}{subsubsubsection.5.4.3.1}%
-\contentsline {subsubsection}{\numberline {5.4.4}Thiết kế cơ sở dữ liệu}{135}{subsubsection.5.4.4}%
-\contentsline {subsubsection}{\numberline {5.4.5}Thiết kế Sitemap}{135}{subsubsection.5.4.5}%
-\contentsline {subsubsection}{\numberline {5.4.6}Thiết kế giao diện}{135}{subsubsection.5.4.6}%
-\contentsline {section}{\numberline {6}Đánh giá hệ thống}{136}{section.6}%
-\contentsline {section}{\numberline {7}Conclusion}{137}{section.7}%
-\contentsline {subsection}{\numberline {7.1}Achievements}{137}{subsection.7.1}%
-\contentsline {subsection}{\numberline {7.2}Limitations}{137}{subsection.7.2}%
-\contentsline {subsection}{\numberline {7.3}Further improvements}{137}{subsection.7.3}%
-\contentsline {section}{References}{138}{subsection.7.3}%
-\contentsline {section}{Appendices}{138}{section*.88}%
+\contentsline {subsubsection}{\numberline {5.3.2}Thiết kế cơ sở dữ liệu}{112}{subsubsection.5.3.2}%
+\contentsline {subsubsubsection}{\numberline {5.3.2.a}Thiết kế mô hình luận lý}{112}{subsubsubsection.5.3.2.1}%
+\contentsline {subsubsubsection}{\numberline {5.3.2.b}Thiết kế mô hình vật lý}{114}{subsubsubsection.5.3.2.2}%
+\contentsline {subsubsection}{\numberline {5.3.3}Thiết kế Sitemap}{117}{subsubsection.5.3.3}%
+\contentsline {subsubsection}{\numberline {5.3.4}Thiết kế giao diện}{119}{subsubsection.5.3.4}%
+\contentsline {section}{\numberline {6}Đánh giá hệ thống}{120}{section.6}%
+\contentsline {section}{\numberline {7}Conclusion}{121}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Achievements}{121}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}Limitations}{121}{subsection.7.2}%
+\contentsline {subsection}{\numberline {7.3}Further improvements}{121}{subsection.7.3}%
+\contentsline {section}{References}{122}{subsection.7.3}%
+\contentsline {section}{Appendices}{122}{section*.61}%

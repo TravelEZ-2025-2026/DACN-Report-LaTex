@@ -1,0 +1,59 @@
+\babel@toc {vietnamese}{}\relax 
+\contentsline {table}{\numberline {2}{\ignorespaces Đánh giá các hệ thống theo tiêu chí chức năng (cấp độ 1–3).}}{27}{table.caption.3}%
+\contentsline {table}{\numberline {3}{\ignorespaces Danh sách Yêu cầu Chức năng}}{31}{table.3}%
+\contentsline {table}{\numberline {4}{\ignorespaces Yêu cầu Phi chức năng}}{35}{table.4}%
+\contentsline {table}{\numberline {5}{\ignorespaces Mô tả Use Case: Tạo lộ trình}}{39}{table.5}%
+\contentsline {table}{\numberline {6}{\ignorespaces Mô tả Use Case: Nhập yêu cầu gợi ý lộ trình du lịch}}{41}{table.6}%
+\contentsline {table}{\numberline {7}{\ignorespaces Mô tả Use Case: Đề xuất thông tin Nhà cung cấp Dịch vụ}}{42}{table.7}%
+\contentsline {table}{\numberline {8}{\ignorespaces Mô tả Use Case: Điều chỉnh lộ trình}}{44}{table.8}%
+\contentsline {table}{\numberline {9}{\ignorespaces Mô tả Use Case: Lưu Lộ trình}}{46}{table.9}%
+\contentsline {table}{\numberline {10}{\ignorespaces Mô tả Use Case: Xóa Lộ trình}}{48}{table.10}%
+\contentsline {table}{\numberline {11}{\ignorespaces Mô tả Use Case: Chia sẻ Lộ trình}}{50}{table.11}%
+\contentsline {table}{\numberline {12}{\ignorespaces Mô tả Use Case: Xem Lộ trình được chia sẻ}}{51}{table.12}%
+\contentsline {table}{\numberline {13}{\ignorespaces Mô tả Use Case: Hủy Lộ trình}}{52}{table.13}%
+\contentsline {table}{\numberline {14}{\ignorespaces Mô tả Use Case: Tích hợp Lộ trình với Google Calendar}}{54}{table.14}%
+\contentsline {table}{\numberline {15}{\ignorespaces Mô tả Use Case: Xem danh sách nội dung}}{58}{table.caption.9}%
+\contentsline {table}{\numberline {16}{\ignorespaces Mô tả Use Case: Lọc và sắp xếp nội dung}}{58}{table.caption.10}%
+\contentsline {table}{\numberline {17}{\ignorespaces Mô tả Use Case: Tìm kiếm nội dung}}{59}{table.caption.11}%
+\contentsline {table}{\numberline {18}{\ignorespaces Mô tả Use Case: Lưu địa điểm, bài viết}}{60}{table.caption.12}%
+\contentsline {table}{\numberline {19}{\ignorespaces Mô tả Use Case: Xem danh sách nội dung địa điểm, bài viết đã lưu}}{61}{table.caption.13}%
+\contentsline {table}{\numberline {20}{\ignorespaces Mô tả Use Case: Theo dõi chủ đề hoặc địa điểm}}{61}{table.caption.14}%
+\contentsline {table}{\numberline {21}{\ignorespaces Mô tả Use Case: Xem danh sách các review của mình}}{62}{table.21}%
+\contentsline {table}{\numberline {22}{\ignorespaces Mô tả Use Case: Quản lý Review}}{63}{table.22}%
+\contentsline {table}{\numberline {23}{\ignorespaces Mô tả Use Case: Xem danh sách các bài blog của mình}}{66}{table.23}%
+\contentsline {table}{\numberline {24}{\ignorespaces Mô tả Use Case: Quản lý Blog}}{67}{table.24}%
+\contentsline {table}{\numberline {25}{\ignorespaces Mô tả Use Case: Tương tác với nội dung}}{70}{table.25}%
+\contentsline {table}{\numberline {26}{\ignorespaces Mô tả Use Case: Tạo Group Chat}}{73}{table.26}%
+\contentsline {table}{\numberline {27}{\ignorespaces Mô tả Use Case: Gửi tin nhắn 1-1}}{74}{table.27}%
+\contentsline {table}{\numberline {28}{\ignorespaces Mô tả Use Case: Gửi tin nhắn Group}}{76}{table.28}%
+\contentsline {table}{\numberline {29}{\ignorespaces Mô tả Use Case: Báo cáo nội dung vi phạm}}{77}{table.29}%
+\contentsline {table}{\numberline {30}{\ignorespaces Mô tả Use Case: Xem danh sách báo cáo nội dung vi phạm từ người dùng}}{80}{table.30}%
+\contentsline {table}{\numberline {31}{\ignorespaces Mô tả Use Case: Ghi lại Lịch sử Vi phạm}}{82}{table.31}%
+\contentsline {table}{\numberline {32}{\ignorespaces Mô tả Use Case: Xem danh sách nội dung bị gắn cờ vi phạm tự động}}{83}{table.32}%
+\contentsline {table}{\numberline {33}{\ignorespaces Mô tả Use Case: Quản lý bộ lọc từ khóa}}{86}{table.33}%
+\contentsline {table}{\numberline {34}{\ignorespaces Mô tả Use Case: Xem dashboard xu hướng thị trường}}{88}{table.caption.18}%
+\contentsline {table}{\numberline {35}{\ignorespaces Mô tả Use Case: Gửi yêu cầu tư vấn}}{89}{table.caption.20}%
+\contentsline {table}{\numberline {36}{\ignorespaces Mô tả Use Case: Xem lịch sử yêu cầu}}{90}{table.caption.21}%
+\contentsline {table}{\numberline {37}{\ignorespaces Mô tả Use Case: Nhận thông báo từ các nội dung theo dõi}}{92}{table.caption.24}%
+\contentsline {table}{\numberline {38}{\ignorespaces Mô tả Use Case: Xem nhật ký hoạt động của cá nhân}}{93}{table.caption.25}%
+\contentsline {table}{\numberline {39}{\ignorespaces Mô tả Use Case: Xem nhật ký hoạt động của người dùng}}{93}{table.caption.26}%
+\contentsline {table}{\numberline {40}{\ignorespaces Mô tả Use Case: Xem danh sách danh mục của hệ thống}}{94}{table.caption.27}%
+\contentsline {table}{\numberline {41}{\ignorespaces Mô tả Use Case: Quản lý nội dung của danh mục}}{95}{table.caption.28}%
+\contentsline {table}{\numberline {43}{\ignorespaces So sánh NextJS và các công nghệ khác}}{97}{table.caption.32}%
+\contentsline {table}{\numberline {45}{\ignorespaces So sánh ShadCN/UI và các thư viện UI khác}}{99}{table.caption.36}%
+\contentsline {table}{\numberline {47}{\ignorespaces So sánh Spring Boot và các công nghệ khác}}{101}{table.caption.40}%
+\contentsline {table}{\numberline {49}{\ignorespaces So sánh PostgreSQL và các công nghệ khác}}{104}{table.caption.44}%
+\contentsline {table}{\numberline {51}{\ignorespaces So sánh Redis và các công nghệ khác}}{106}{table.caption.48}%
+\contentsline {table}{\numberline {53}{\ignorespaces So sánh Amazon S3 và các lựa chọn khác}}{108}{table.caption.52}%
+\contentsline {table}{\numberline {54}{\ignorespaces Phân tích so sánh các mô hình kiến trúc}}{113}{table.caption.54}%
+\contentsline {table}{\numberline {55}{\ignorespaces Sitemap dành cho tất cả người dùng}}{114}{table.caption.56}%
+\contentsline {table}{\numberline {56}{\ignorespaces Sitemap dành cho Nhà cung cấp (Provider)}}{115}{table.caption.57}%
+\contentsline {table}{\numberline {57}{\ignorespaces Sitemap dành cho Khách du lịch (Travelers) và người dùng đã xác thực.}}{115}{table.caption.58}%
+\contentsline {table}{\numberline {58}{\ignorespaces Sitemap dành cho Quản trị viên hệ thống (Admin)}}{116}{table.caption.59}%
+\contentsline {table}{\numberline {60}{\ignorespaces So sánh NextJS và các công nghệ khác}}{118}{table.caption.63}%
+\contentsline {table}{\numberline {62}{\ignorespaces So sánh ShadCN/UI và các thư viện UI khác}}{120}{table.caption.67}%
+\contentsline {table}{\numberline {64}{\ignorespaces So sánh Spring Boot và các công nghệ khác}}{122}{table.caption.71}%
+\contentsline {table}{\numberline {66}{\ignorespaces So sánh PostgreSQL và các công nghệ khác}}{125}{table.caption.75}%
+\contentsline {table}{\numberline {68}{\ignorespaces So sánh Redis và các công nghệ khác}}{127}{table.caption.79}%
+\contentsline {table}{\numberline {70}{\ignorespaces So sánh Amazon S3 và các lựa chọn khác}}{129}{table.caption.83}%
+\contentsline {table}{\numberline {71}{\ignorespaces Phân tích so sánh các mô hình kiến trúc}}{134}{table.caption.85}%

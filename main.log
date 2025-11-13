@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.10.23)  13 NOV 2025 10:59
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.10.23)  13 NOV 2025 11:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1712,9 +1712,6 @@ LaTeX Warning: Label `usecase-7-02' multiply defined.
 LaTeX Warning: Label `usecase-9-04' multiply defined.
 
 
-LaTeX Warning: Label `fig:overview_system' multiply defined.
-
-
 LaTeX Warning: Label `tab:so_sanh_kien_truc' multiply defined.
 
 
@@ -1876,7 +1873,7 @@ Package hyperref Info: Link coloring ON on input line 233.
 \openout5 = `main.out'.
 
 \c@lstlisting=\count588
-<Images/hcmut.png, id=339, 514.3215pt x 491.9178pt>
+<Images/hcmut.png, id=327, 514.3215pt x 491.9178pt>
 File: Images/hcmut.png Graphic file (type png)
 <use Images/hcmut.png>
 Package pdftex.def Info: Images/hcmut.png  used on input line 260.
@@ -1985,7 +1982,7 @@ Package pdftex.def Info: Images/hcmut.png  used on input line 31.
 
 File: Images/hcmut.png Graphic file (type png)
 <use Images/hcmut.png>
-Package pdftex.def Info: Images/hcmut.png  used on input line 85.
+Package pdftex.def Info: Images/hcmut.png  used on input line 93.
 (pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
 [5])
 \tf@toc=\write6
@@ -2072,7 +2069,7 @@ File: Images/hcmut.png Graphic file (type png)
 Package pdftex.def Info: Images/hcmut.png  used on input line 56.
 (pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
 [17]
-<Images/2-knowledge/customer-journey.png, id=684, 1003.75pt x 670.505pt>
+<Images/2-knowledge/customer-journey.png, id=667, 1003.75pt x 670.505pt>
 File: Images/2-knowledge/customer-journey.png Graphic file (type png)
 <use Images/2-knowledge/customer-journey.png>
 Package pdftex.def Info: Images/2-knowledge/customer-journey.png  used on input line 62.
@@ -2141,7 +2138,7 @@ Package pdftex.def Info: Images/hcmut.png  used on input line 119.
 
 
 ]) (./Sections/5. Requirements Elicitation/requirements elicitation.tex (./Sections/5. Requirements Elicitation/1-system description.tex
-<Images/5 H·ªá th·ªëng ƒë·ªÅ xu·∫•t/System Overview.png, id=758, 636.3775pt x 398.48875pt>
+<Images/5 H·ªá th·ªëng ƒë·ªÅ xu·∫•t/System Overview.png, id=741, 636.3775pt x 398.48875pt>
 File: Images/5 H·ªá th·ªëng ƒë·ªÅ xu·∫•t/System Overview.png Graphic file (type png)
 <use Images/5 H·ªá th·ªëng ƒë·ªÅ xu·∫•t/System Overview.png>
 Package pdftex.def Info: Images/5 H·ªá th·ªëng ƒë·ªÅ xu·∫•t/System Overview.png  used on input line 8.
@@ -2497,7 +2494,7 @@ File: Images/hcmut.png Graphic file (type png)
 Package pdftex.def Info: Images/hcmut.png  used on input line 27.
 (pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
 [38]
-<Images/5 H·ªá th·ªëng ƒë·ªÅ xu·∫•t/EERD.png, id=833, 2937.97626pt x 2761.31625pt>
+<Images/5 H·ªá th·ªëng ƒë·ªÅ xu·∫•t/EERD.png, id=816, 2937.97626pt x 2761.31625pt>
 File: Images/5 H·ªá th·ªëng ƒë·ªÅ xu·∫•t/EERD.png Graphic file (type png)
 <use Images/5 H·ªá th·ªëng ƒë·ªÅ xu·∫•t/EERD.png>
 Package pdftex.def Info: Images/5 H·ªá th·ªëng ƒë·ªÅ xu·∫•t/EERD.png  used on input line 30.
@@ -2582,12 +2579,12 @@ Package pdftex.def Info: Images/hcmut.png  used on input line 379.
 
 
 ] (./Sections/6. System Analysis/system analysis.tex (./Sections/6. System Analysis/1-Analysis/1-analysis.tex
-<Images/6. System analysis/0.png, id=846, 754.82pt x 654.445pt>
+<Images/6. System analysis/0.png, id=829, 754.82pt x 654.445pt>
 File: Images/6. System analysis/0.png Graphic file (type png)
 <use Images/6. System analysis/0.png>
 Package pdftex.def Info: Images/6. System analysis/0.png  used on input line 9.
 (pdftex.def)             Requested size: 396.91325pt x 344.12802pt.
-<Images/6. System analysis/1.png, id=847, 586.19pt x 631.35875pt>
+<Images/6. System analysis/1.png, id=830, 586.19pt x 631.35875pt>
 File: Images/6. System analysis/1.png Graphic file (type png)
 <use Images/6. System analysis/1.png>
 Package pdftex.def Info: Images/6. System analysis/1.png  used on input line 20.
@@ -2678,7 +2675,7 @@ File: Images/hcmut.png Graphic file (type png)
 Package pdftex.def Info: Images/hcmut.png  used on input line 253.
 (pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
 [51])
-<Images/6. System analysis/2.png, id=908, 589.20125pt x 576.1525pt>
+<Images/6. System analysis/2.png, id=891, 589.20125pt x 576.1525pt>
 File: Images/6. System analysis/2.png Graphic file (type png)
 <use Images/6. System analysis/2.png>
 Package pdftex.def Info: Images/6. System analysis/2.png  used on input line 31.
@@ -2736,7 +2733,7 @@ File: Images/hcmut.png Graphic file (type png)
 Package pdftex.def Info: Images/hcmut.png  used on input line 168.
 (pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
  [58])
-<Images/6. System analysis/3.png, id=946, 775.89874pt x 1079.03125pt>
+<Images/6. System analysis/3.png, id=929, 775.89874pt x 1079.03125pt>
 File: Images/6. System analysis/3.png Graphic file (type png)
 <use Images/6. System analysis/3.png>
 Package pdftex.def Info: Images/6. System analysis/3.png  used on input line 42.
@@ -2802,7 +2799,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 169--169
  []
 
 )
-<Images/6. System analysis/4.png, id=974, 918.43124pt x 1134.2375pt>
+<Images/6. System analysis/4.png, id=957, 918.43124pt x 1134.2375pt>
 File: Images/6. System analysis/4.png Graphic file (type png)
 <use Images/6. System analysis/4.png>
 Package pdftex.def Info: Images/6. System analysis/4.png  used on input line 53.
@@ -2945,7 +2942,7 @@ File: Images/hcmut.png Graphic file (type png)
 Package pdftex.def Info: Images/hcmut.png  used on input line 412.
 (pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
  [81])
-<Images/6. System analysis/5.png, id=1070, 815.045pt x 933.4875pt>
+<Images/6. System analysis/5.png, id=1053, 815.045pt x 933.4875pt>
 File: Images/6. System analysis/5.png Graphic file (type png)
 <use Images/6. System analysis/5.png>
 Package pdftex.def Info: Images/6. System analysis/5.png  used on input line 64.
@@ -3025,7 +3022,7 @@ File: Images/hcmut.png Graphic file (type png)
 Package pdftex.def Info: Images/hcmut.png  used on input line 195.
 (pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
  [89])
-<Images/6. System analysis/6.png, id=1114, 685.56125pt x 350.30875pt>
+<Images/6. System analysis/6.png, id=1097, 685.56125pt x 350.30875pt>
 File: Images/6. System analysis/6.png Graphic file (type png)
 <use Images/6. System analysis/6.png>
 Package pdftex.def Info: Images/6. System analysis/6.png  used on input line 75.
@@ -3042,7 +3039,7 @@ File: Images/hcmut.png Graphic file (type png)
 Package pdftex.def Info: Images/hcmut.png  used on input line 28.
 (pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
 [90])
-<Images/6. System analysis/7.png, id=1121, 636.3775pt x 414.54875pt>
+<Images/6. System analysis/7.png, id=1104, 636.3775pt x 414.54875pt>
 File: Images/6. System analysis/7.png Graphic file (type png)
 <use Images/6. System analysis/7.png>
 Package pdftex.def Info: Images/6. System analysis/7.png  used on input line 86.
@@ -3070,7 +3067,7 @@ File: Images/hcmut.png Graphic file (type png)
 Package pdftex.def Info: Images/hcmut.png  used on input line 91.
 (pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
 [92 <./Images/6. System analysis/7.png>]
-<Images/6. System analysis/8.png, id=1134, 766.865pt x 880.28876pt>
+<Images/6. System analysis/8.png, id=1117, 766.865pt x 880.28876pt>
 File: Images/6. System analysis/8.png Graphic file (type png)
 <use Images/6. System analysis/8.png>
 Package pdftex.def Info: Images/6. System analysis/8.png  used on input line 97.
@@ -3082,7 +3079,7 @@ File: Images/hcmut.png Graphic file (type png)
 Package pdftex.def Info: Images/hcmut.png  used on input line 32.
 (pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
 [93])
-<Images/6. System analysis/9.png, id=1140, 781.92125pt x 420.57124pt>
+<Images/6. System analysis/9.png, id=1123, 781.92125pt x 420.57124pt>
 File: Images/6. System analysis/9.png Graphic file (type png)
 <use Images/6. System analysis/9.png>
 Package pdftex.def Info: Images/6. System analysis/9.png  used on input line 108.
@@ -3798,200 +3795,194 @@ Package pdftex.def Info: Images/hcmut.png  used on input line 42.
 
 File: Images/hcmut.png Graphic file (type png)
 <use Images/hcmut.png>
-Package pdftex.def Info: Images/hcmut.png  used on input line 24.
+Package pdftex.def Info: Images/hcmut.png  used on input line 18.
 (pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
 [105
 
 
 
 ]
-
-File: Images/hcmut.png Graphic file (type png)
-<use Images/hcmut.png>
-Package pdftex.def Info: Images/hcmut.png  used on input line 24.
-(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
-[106]
-Underfull \hbox (badness 5403) in paragraph at lines 46--46
+Underfull \hbox (badness 5403) in paragraph at lines 40--40
 \T5/cmr/m/n/10 c‚ cßu trÛc, nh˜ng
  []
 
 
-Underfull \hbox (badness 1158) in paragraph at lines 46--46
+Underfull \hbox (badness 1158) in paragraph at lines 40--40
 \T5/cmr/m/n/10 JSON k≤m linh ho§t
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 46--46
+Underfull \hbox (badness 10000) in paragraph at lines 40--40
 []|\T5/cmr/bx/n/10 Cao\T5/cmr/m/n/10 : T˜Ïng t¸
  []
 
 
-Underfull \hbox (badness 1478) in paragraph at lines 46--46
+Underfull \hbox (badness 1478) in paragraph at lines 40--40
 \T5/cmr/m/n/10 lÓn, nh˜ng ph˘c t§p
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 46--46
+Underfull \hbox (badness 10000) in paragraph at lines 40--40
 []|\T5/cmr/bx/n/10 Cao\T5/cmr/m/n/10 : T˜Ïng t¸
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 46--46
+Underfull \hbox (badness 10000) in paragraph at lines 40--40
 \T5/cmr/m/n/10 MySQL, nh˜ng
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 46--46
+Underfull \hbox (badness 10000) in paragraph at lines 40--40
 \T5/cmr/m/n/10 full-text search
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 46--46
+Underfull \hbox (badness 10000) in paragraph at lines 40--40
 \T5/cmr/m/n/10 khÊng m§nh b¨ng
  []
 
 
-Underfull \hbox (badness 6094) in paragraph at lines 46--46
+Underfull \hbox (badness 6094) in paragraph at lines 40--40
 []|\T5/cmr/bx/n/10 Cao\T5/cmr/m/n/10 : ACID hÈ trÒ
  []
 
 
-Underfull \hbox (badness 8189) in paragraph at lines 46--46
+Underfull \hbox (badness 8189) in paragraph at lines 40--40
 \T5/cmr/m/n/10 n•ng cao k≤m hÏn
  []
 
 
-Underfull \hbox (badness 1953) in paragraph at lines 46--46
+Underfull \hbox (badness 1953) in paragraph at lines 40--40
 []|\T5/cmr/bx/n/10 Trung bºnh\T5/cmr/m/n/10 : KhÊng
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 46--46
+Underfull \hbox (badness 10000) in paragraph at lines 40--40
 []|\T5/cmr/bx/n/10 Cao\T5/cmr/m/n/10 : ACID, nh˜ng
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 46--46
+Underfull \hbox (badness 10000) in paragraph at lines 40--40
 []|\T5/cmr/bx/n/10 Cao\T5/cmr/m/n/10 : T˜Ïng t¸
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 46--46
+Underfull \hbox (badness 10000) in paragraph at lines 40--40
 \T5/cmr/m/n/10 MySQL, nh˜ng
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 46--46
+Underfull \hbox (badness 10000) in paragraph at lines 40--40
 \T5/cmr/m/n/10 khÊng m§nh b¨ng
  []
 
 
-Underfull \hbox (badness 2460) in paragraph at lines 46--46
+Underfull \hbox (badness 2460) in paragraph at lines 40--40
 \T5/cmr/m/n/10 PostgreSQL cho giao
  []
 
 
-Underfull \hbox (badness 2564) in paragraph at lines 46--46
+Underfull \hbox (badness 2564) in paragraph at lines 40--40
 \T5/cmr/m/n/10 truy c™p tËt, nh˜ng
  []
 
 
-Underfull \hbox (badness 1430) in paragraph at lines 46--46
+Underfull \hbox (badness 1430) in paragraph at lines 40--40
 []|\T5/cmr/bx/n/10 Thßp\T5/cmr/m/n/10 : B£o m™t giÓi
  []
 
 
-Underfull \hbox (badness 1917) in paragraph at lines 46--46
+Underfull \hbox (badness 1917) in paragraph at lines 40--40
 \T5/cmr/m/n/10 h§n, khÊng phÚ hÒp
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 46--46
+Underfull \hbox (badness 10000) in paragraph at lines 40--40
 []|\T5/cmr/bx/n/10 Cao\T5/cmr/m/n/10 : T˜Ïng t¸
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 46--46
+Underfull \hbox (badness 10000) in paragraph at lines 40--40
 \T5/cmr/m/n/10 MySQL, nh˜ng
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 46--46
+Underfull \hbox (badness 10000) in paragraph at lines 40--40
 \T5/cmr/m/n/10 cßu hºnh b£o m™t
  []
 
 
-Underfull \hbox (badness 1603) in paragraph at lines 46--46
+Underfull \hbox (badness 1603) in paragraph at lines 40--40
 []|\T5/cmr/bx/n/10 Cao\T5/cmr/m/n/10 : TΩch hÒp ETL
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 46--46
+Underfull \hbox (badness 10000) in paragraph at lines 40--40
 \T5/cmr/m/n/10 (Spring Batch), m
  []
 
 
-Underfull \hbox (badness 1648) in paragraph at lines 46--46
+Underfull \hbox (badness 1648) in paragraph at lines 40--40
 \T5/cmr/m/n/10 rÎng dπ cho d˙ liªu
  []
 
 
-Underfull \hbox (badness 4168) in paragraph at lines 46--46
+Underfull \hbox (badness 4168) in paragraph at lines 40--40
 []|\T5/cmr/bx/n/10 Cao\T5/cmr/m/n/10 : TΩch hÒp tËt,
  []
 
 
-Underfull \hbox (badness 2875) in paragraph at lines 46--46
+Underfull \hbox (badness 2875) in paragraph at lines 40--40
 \T5/cmr/m/n/10 lÓn, nh˜ng tΩch hÒp
  []
 
 
-Underfull \hbox (badness 5681) in paragraph at lines 46--46
+Underfull \hbox (badness 5681) in paragraph at lines 40--40
 \T5/cmr/m/n/10 ETL ph˘c t§p hÏn
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 46--46
+Underfull \hbox (badness 10000) in paragraph at lines 40--40
 []|\T5/cmr/bx/n/10 Cao\T5/cmr/m/n/10 : T˜Ïng t¸
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 46--46
+Underfull \hbox (badness 10000) in paragraph at lines 40--40
 \T5/cmr/m/n/10 MySQL, nh˜ng m
  []
 
 
-Underfull \hbox (badness 1325) in paragraph at lines 46--46
+Underfull \hbox (badness 1325) in paragraph at lines 40--40
 \T5/cmr/m/n/10 rÎng JSON k≤m hÏn
  []
 
 
-Underfull \hbox (badness 8189) in paragraph at lines 46--46
+Underfull \hbox (badness 8189) in paragraph at lines 40--40
 []|\T5/cmr/bx/n/10 Cao\T5/cmr/m/n/10 : Hª sinh th°i
  []
 
 
-Underfull \hbox (badness 1365) in paragraph at lines 46--46
+Underfull \hbox (badness 1365) in paragraph at lines 40--40
 \T5/cmr/m/n/10 NoSQL m§nh, nh˜ng
  []
 
 
-Underfull \hbox (badness 2698) in paragraph at lines 46--46
+Underfull \hbox (badness 2698) in paragraph at lines 40--40
 []|\T5/cmr/bx/n/10 Thßp\T5/cmr/m/n/10 : Hª sinh th°i
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 46--46
+Underfull \hbox (badness 10000) in paragraph at lines 40--40
 []|\T5/cmr/bx/n/10 Cao\T5/cmr/m/n/10 : T˜Ïng t¸
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 46--46
+Underfull \hbox (badness 10000) in paragraph at lines 40--40
 \T5/cmr/m/n/10 MySQL, nh˜ng
  []
 
 
-Underfull \hbox (badness 4531) in paragraph at lines 46--46
+Underfull \hbox (badness 4531) in paragraph at lines 40--40
 \T5/cmr/m/n/10 cÎng ^^_Áng nh‰ hÏn
  []
 
@@ -3999,21 +3990,21 @@ Underfull \hbox (badness 4531) in paragraph at lines 46--46
 
 File: Images/hcmut.png Graphic file (type png)
 <use Images/hcmut.png>
-Package pdftex.def Info: Images/hcmut.png  used on input line 49.
+Package pdftex.def Info: Images/hcmut.png  used on input line 43.
 (pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
-[107
+[106
 
 
 ]
 
 File: Images/hcmut.png Graphic file (type png)
 <use Images/hcmut.png>
-Package pdftex.def Info: Images/hcmut.png  used on input line 65.
+Package pdftex.def Info: Images/hcmut.png  used on input line 59.
 (pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
-[108
+[107
 
 ]
-Underfull \hbox (badness 1776) in paragraph at lines 83--83
+Underfull \hbox (badness 1776) in paragraph at lines 77--77
 \T5/cmr/m/n/10 RAM rßt nhi∑u, khÊng phÚ hÒp cho
  []
 
@@ -4021,209 +4012,173 @@ Underfull \hbox (badness 1776) in paragraph at lines 83--83
 
 File: Images/hcmut.png Graphic file (type png)
 <use Images/hcmut.png>
-Package pdftex.def Info: Images/hcmut.png  used on input line 86.
+Package pdftex.def Info: Images/hcmut.png  used on input line 80.
 (pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
-[109
+[108
 
 
 ]) (./Sections/6. System Analysis/5-storage.tex
-Underfull \hbox (badness 10000) in paragraph at lines 7--8
-[]\T5/cmr/m/n/12 >>>>>>>> origin/main:Sections/6. System Analysis/2-Technology solutions/Other
- []
-
-
 
 File: Images/hcmut.png Graphic file (type png)
 <use Images/hcmut.png>
-Package pdftex.def Info: Images/hcmut.png  used on input line 24.
+Package pdftex.def Info: Images/hcmut.png  used on input line 18.
+(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
+[109
+
+]
+
+File: Images/hcmut.png Graphic file (type png)
+<use Images/hcmut.png>
+Package pdftex.def Info: Images/hcmut.png  used on input line 41.
 (pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
 [110
 
-]
+
+]) (./Sections/6. System Analysis/6-architecture.tex
 
 File: Images/hcmut.png Graphic file (type png)
 <use Images/hcmut.png>
-Package pdftex.def Info: Images/hcmut.png  used on input line 47.
+Package pdftex.def Info: Images/hcmut.png  used on input line 52.
 (pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
 [111
 
-
-]) (./Sections/6. System Analysis/6-architecture.tex
-<Images/7. System Design/Ki·∫øn tr√∫c h·ªá th·ªëng.png, id=1267, 1853.92625pt x 2272.49pt>
-File: Images/7. System Design/Ki·∫øn tr√∫c h·ªá th·ªëng.png Graphic file (type png)
-<use Images/7. System Design/Ki·∫øn tr√∫c h·ªá th·ªëng.png>
-Package pdftex.def Info: Images/7. System Design/Ki·∫øn tr√∫c h·ªá th·ªëng.png  used on input line 6.
-(pdftex.def)             Requested size: 396.91325pt x 486.49532pt.
-
-
-File: Images/hcmut.png Graphic file (type png)
-<use Images/hcmut.png>
-Package pdftex.def Info: Images/hcmut.png  used on input line 10.
-(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
-[112
-
 ]
-Underfull \hbox (badness 1400) in paragraph at lines 13--14
-[]\T5/cmr/bx/n/12 Presentation Layer: \T5/cmr/m/n/12 ti∏p nh™n, x°c th¸c v† ^^_i∑u h˜Óng c°c y∂u c¶u
- []
-
-
-
-File: Images/hcmut.png Graphic file (type png)
-<use Images/hcmut.png>
-Package pdftex.def Info: Images/hcmut.png  used on input line 16.
-(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
-[113 <./Images/7. System Design/Ki·∫øn tr√∫c h·ªá th·ªëng.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 22--24
-[]\T5/cmr/m/n/12 ======== >>>>>>>> origin/main:Sections/6. System Analysis/3-System
- []
-
-
-
-File: Images/hcmut.png Graphic file (type png)
-<use Images/hcmut.png>
-Package pdftex.def Info: Images/hcmut.png  used on input line 45.
-(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
-[114]
-Underfull \hbox (badness 2717) in paragraph at lines 82--82
+Underfull \hbox (badness 2717) in paragraph at lines 79--79
 []|\T5/cmr/bx/n/12 Ki∏n trÛc H˜Óng
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 82--82
+Underfull \hbox (badness 10000) in paragraph at lines 79--79
 \T5/cmr/bx/n/12 s¸ kiªn (Event-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 82--82
+Underfull \hbox (badness 10000) in paragraph at lines 79--79
 []|\T5/cmr/bx/n/12 Ki∏n trÛc ^^^Ïn
  []
 
 
-Underfull \hbox (badness 7030) in paragraph at lines 82--82
+Underfull \hbox (badness 7030) in paragraph at lines 79--79
 \T5/cmr/m/n/12 (Frontend, Backend)
  []
 
 
-Underfull \hbox (badness 1158) in paragraph at lines 82--82
+Underfull \hbox (badness 1158) in paragraph at lines 79--79
 \T5/cmr/m/n/12 nhi∂n, cßu trÛc mÈi
  []
 
 
-Underfull \hbox (badness 5022) in paragraph at lines 82--82
+Underfull \hbox (badness 5022) in paragraph at lines 79--79
 []|\T5/cmr/bx/n/12 Rßt cao: \T5/cmr/m/n/12 ^^^·i h‰i
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 82--82
+Underfull \hbox (badness 10000) in paragraph at lines 79--79
 \T5/cmr/m/n/12 qu£n l˛ giao ti∏p
  []
 
 
-Underfull \hbox (badness 1946) in paragraph at lines 82--82
+Underfull \hbox (badness 1946) in paragraph at lines 79--79
 \T5/cmr/m/n/12 li∂n d‡ch vˆ, cÏ s
  []
 
 
-Underfull \hbox (badness 7740) in paragraph at lines 82--82
+Underfull \hbox (badness 7740) in paragraph at lines 79--79
 \T5/cmr/m/n/12 h§ t¶ng ph˘c t§p
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 82--82
+Underfull \hbox (badness 10000) in paragraph at lines 79--79
 \T5/cmr/m/n/12 (service discovery,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 82--82
+Underfull \hbox (badness 10000) in paragraph at lines 79--79
 \T5/cmr/m/n/12 (nh˜ RabbitMQ,
  []
 
 
-Underfull \hbox (badness 3128) in paragraph at lines 82--82
+Underfull \hbox (badness 3128) in paragraph at lines 79--79
 \T5/cmr/m/n/12 b≠t ^^_¶u, nh˜ng ^^_Î
  []
 
 
-Underfull \hbox (badness 3029) in paragraph at lines 82--82
+Underfull \hbox (badness 3029) in paragraph at lines 79--79
 []|\T5/cmr/bx/n/12 TËt: \T5/cmr/m/n/12 C°c lÓp ^^_˜Òc
  []
 
 
-Underfull \hbox (badness 3657) in paragraph at lines 82--82
+Underfull \hbox (badness 3657) in paragraph at lines 79--79
 \T5/cmr/m/n/12 (vΩ dˆ: lÈi logic 
  []
 
 
-Underfull \hbox (badness 1642) in paragraph at lines 82--82
+Underfull \hbox (badness 1642) in paragraph at lines 79--79
 \T5/cmr/m/n/12 d‡ch vˆ review) m†
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 82--82
+Underfull \hbox (badness 10000) in paragraph at lines 79--79
 []|\T5/cmr/bx/n/12 Trung bºnh: \T5/cmr/m/n/12 Rßt
  []
 
 
-Underfull \hbox (badness 4441) in paragraph at lines 82--82
+Underfull \hbox (badness 4441) in paragraph at lines 79--79
 \T5/cmr/m/n/12 ho†n to†n ^^_Îc l™p
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 82--82
+Underfull \hbox (badness 10000) in paragraph at lines 79--79
 \T5/cmr/m/n/12 (decoupled). Nh˜ng
  []
 
 
-Underfull \hbox (badness 5652) in paragraph at lines 82--82
+Underfull \hbox (badness 5652) in paragraph at lines 79--79
 \T5/cmr/m/n/12 (scale) Frontend v†
  []
 
 
-Underfull \hbox (badness 5908) in paragraph at lines 82--82
+Underfull \hbox (badness 5908) in paragraph at lines 79--79
 []|\T5/cmr/bx/n/12 TËt: \T5/cmr/m/n/12 C‚ th∫ ki∫m
  []
 
 
-Underfull \hbox (badness 5563) in paragraph at lines 82--82
+Underfull \hbox (badness 5563) in paragraph at lines 79--79
 \T5/cmr/m/n/12 th˚ Backend (API)
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 82--82
+Underfull \hbox (badness 10000) in paragraph at lines 79--79
 \T5/cmr/m/n/12 Ki∫m th˚ logic 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 82--82
+Underfull \hbox (badness 10000) in paragraph at lines 79--79
 []|\T5/cmr/bx/n/12 Ph˘c t§p: \T5/cmr/m/n/12 C¶n
  []
 
 
-Underfull \hbox (badness 5091) in paragraph at lines 82--82
+Underfull \hbox (badness 5091) in paragraph at lines 79--79
 \T5/cmr/m/n/12 ki∫m th˚ tΩch hÒp
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 82--82
+Underfull \hbox (badness 10000) in paragraph at lines 79--79
 \T5/cmr/m/n/12 (integration testing)
  []
 
 
-Underfull \hbox (badness 1077) in paragraph at lines 82--82
+Underfull \hbox (badness 1077) in paragraph at lines 79--79
 \T5/cmr/m/n/12 dπ, nh˜ng ki∫m th˚
  []
 
 
-Underfull \hbox (badness 3128) in paragraph at lines 82--82
+Underfull \hbox (badness 3128) in paragraph at lines 79--79
 \T5/cmr/m/n/12 c°c th†nh ph¶n ^^_∫
  []
 
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
 ) (./Sections/6. System Analysis/8-sitemap.tex
-<Images/7. System Design/Sitemap.png, id=1289, 1363.0925pt x 1054.94125pt>
+<Images/7. System Design/Sitemap.png, id=1253, 1363.0925pt x 1054.94125pt>
 File: Images/7. System Design/Sitemap.png Graphic file (type png)
 <use Images/7. System Design/Sitemap.png>
 Package pdftex.def Info: Images/7. System Design/Sitemap.png  used on input line 5.
@@ -4234,13 +4189,7 @@ File: Images/hcmut.png Graphic file (type png)
 <use Images/hcmut.png>
 Package pdftex.def Info: Images/hcmut.png  used on input line 9.
 (pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
-[115]
-
-File: Images/hcmut.png Graphic file (type png)
-<use Images/hcmut.png>
-Package pdftex.def Info: Images/hcmut.png  used on input line 9.
-(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
-[116]
+[112]
 Overfull \hbox (10.97359pt too wide) in paragraph at lines 13--20
  [][] 
  []
@@ -4256,7 +4205,7 @@ File: Images/hcmut.png Graphic file (type png)
 <use Images/hcmut.png>
 Package pdftex.def Info: Images/hcmut.png  used on input line 35.
 (pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
-[117 <./Images/7. System Design/Sitemap.png>]
+[113 <./Images/7. System Design/Sitemap.png>]
 Overfull \hbox (10.97359pt too wide) in paragraph at lines 38--66
  [][] 
  []
@@ -4272,19 +4221,19 @@ File: Images/hcmut.png Graphic file (type png)
 <use Images/hcmut.png>
 Package pdftex.def Info: Images/hcmut.png  used on input line 88.
 (pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
-[118]) (./Sections/6. System Analysis/2-Technology solutions/Technology.tex (./Sections/6. System Analysis/2-Technology solutions/Frontend.tex
+[114]) (./Sections/6. System Analysis/2-Technology solutions/Technology.tex (./Sections/6. System Analysis/2-Technology solutions/Frontend.tex
 
 File: Images/hcmut.png Graphic file (type png)
 <use Images/hcmut.png>
 Package pdftex.def Info: Images/hcmut.png  used on input line 12.
 (pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
-[119]
+[115]
 
 File: Images/hcmut.png Graphic file (type png)
 <use Images/hcmut.png>
 Package pdftex.def Info: Images/hcmut.png  used on input line 17.
 (pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
-[120]
+[116]
 Underfull \hbox (badness 10000) in paragraph at lines 41--41
 []|\T5/cmr/m/n/10 Trung bºnh: Chø
  []
@@ -4520,7 +4469,7 @@ File: Images/hcmut.png Graphic file (type png)
 <use Images/hcmut.png>
 Package pdftex.def Info: Images/hcmut.png  used on input line 44.
 (pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
-[121
+[117
 
 
 ]
@@ -4529,7 +4478,7 @@ File: Images/hcmut.png Graphic file (type png)
 <use Images/hcmut.png>
 Package pdftex.def Info: Images/hcmut.png  used on input line 61.
 (pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
-[122
+[118
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 81--81
@@ -4612,7 +4561,7 @@ File: Images/hcmut.png Graphic file (type png)
 <use Images/hcmut.png>
 Package pdftex.def Info: Images/hcmut.png  used on input line 84.
 (pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
-[123
+[119
 
 
 ]) (./Sections/6. System Analysis/2-Technology solutions/Backend.tex
@@ -4621,7 +4570,7 @@ File: Images/hcmut.png Graphic file (type png)
 <use Images/hcmut.png>
 Package pdftex.def Info: Images/hcmut.png  used on input line 17.
 (pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
-[124
+[120
 
 ]
 Underfull \hbox (badness 1147) in paragraph at lines 39--39
@@ -4930,13 +4879,13 @@ File: Images/hcmut.png Graphic file (type png)
 <use Images/hcmut.png>
 Package pdftex.def Info: Images/hcmut.png  used on input line 42.
 (pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
-[125]) (./Sections/6. System Analysis/2-Technology solutions/Database.tex
+[121]) (./Sections/6. System Analysis/2-Technology solutions/Database.tex
 
 File: Images/hcmut.png Graphic file (type png)
 <use Images/hcmut.png>
 Package pdftex.def Info: Images/hcmut.png  used on input line 24.
 (pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
-[126
+[122
 
 
 
@@ -4946,7 +4895,7 @@ File: Images/hcmut.png Graphic file (type png)
 <use Images/hcmut.png>
 Package pdftex.def Info: Images/hcmut.png  used on input line 24.
 (pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
-[127]
+[123]
 Underfull \hbox (badness 5403) in paragraph at lines 46--46
 \T5/cmr/m/n/10 c‚ cßu trÛc, nh˜ng
  []
@@ -5137,7 +5086,7 @@ File: Images/hcmut.png Graphic file (type png)
 <use Images/hcmut.png>
 Package pdftex.def Info: Images/hcmut.png  used on input line 49.
 (pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
-[128
+[124
 
 
 ]
@@ -5146,7 +5095,7 @@ File: Images/hcmut.png Graphic file (type png)
 <use Images/hcmut.png>
 Package pdftex.def Info: Images/hcmut.png  used on input line 65.
 (pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
-[129
+[125
 
 ]
 Underfull \hbox (badness 1776) in paragraph at lines 83--83
@@ -5159,7 +5108,7 @@ File: Images/hcmut.png Graphic file (type png)
 <use Images/hcmut.png>
 Package pdftex.def Info: Images/hcmut.png  used on input line 86.
 (pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
-[130
+[126
 
 
 ]) (./Sections/6. System Analysis/2-Technology solutions/Other Tech.tex
@@ -5173,7 +5122,7 @@ File: Images/hcmut.png Graphic file (type png)
 <use Images/hcmut.png>
 Package pdftex.def Info: Images/hcmut.png  used on input line 24.
 (pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
-[131
+[127
 
 ]
 
@@ -5181,7 +5130,7 @@ File: Images/hcmut.png Graphic file (type png)
 <use Images/hcmut.png>
 Package pdftex.def Info: Images/hcmut.png  used on input line 47.
 (pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
-[132
+[128
 
 
 ])) (./Sections/6. System Analysis/3-System Design/system design.tex
@@ -5193,6 +5142,7 @@ Package hyperref Warning: bookmark level for unknown subsubsubsection defaults t
 Package hyperref Warning: Difference (3) between bookmark levels is greater 
 (hyperref)                than one, level fixed on input line 2.
 
+<Images/7. System Design/Ki·∫øn tr√∫c h·ªá th·ªëng.png, id=1374, 1853.92625pt x 2272.49pt>
 File: Images/7. System Design/Ki·∫øn tr√∫c h·ªá th·ªëng.png Graphic file (type png)
 <use Images/7. System Design/Ki·∫øn tr√∫c h·ªá th·ªëng.png>
 Package pdftex.def Info: Images/7. System Design/Ki·∫øn tr√∫c h·ªá th·ªëng.png  used on input line 6.
@@ -5203,7 +5153,7 @@ File: Images/hcmut.png Graphic file (type png)
 <use Images/hcmut.png>
 Package pdftex.def Info: Images/hcmut.png  used on input line 10.
 (pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
-[133
+[129
 
 ]
 Underfull \hbox (badness 1400) in paragraph at lines 13--14
@@ -5216,7 +5166,7 @@ File: Images/hcmut.png Graphic file (type png)
 <use Images/hcmut.png>
 Package pdftex.def Info: Images/hcmut.png  used on input line 16.
 (pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
-[134]
+[130 <./Images/7. System Design/Ki·∫øn tr√∫c h·ªá th·ªëng.png>]
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
 (hyperref)                than one, level fixed on input line 21.
@@ -5232,7 +5182,7 @@ File: Images/hcmut.png Graphic file (type png)
 <use Images/hcmut.png>
 Package pdftex.def Info: Images/hcmut.png  used on input line 45.
 (pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
-[135]
+[131]
 Underfull \hbox (badness 2717) in paragraph at lines 82--82
 []|\T5/cmr/bx/n/12 Ki∏n trÛc H˜Óng
  []
@@ -5381,7 +5331,7 @@ File: Images/hcmut.png Graphic file (type png)
 <use Images/hcmut.png>
 Package pdftex.def Info: Images/hcmut.png  used on input line 9.
 (pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
-[136]
+[132]
 Overfull \vbox (143.97743pt too high) has occurred while \output is active []
 
 
@@ -5390,7 +5340,7 @@ File: Images/hcmut.png Graphic file (type png)
 <use Images/hcmut.png>
 Package pdftex.def Info: Images/hcmut.png  used on input line 9.
 (pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
-[137]
+[133]
 Underfull \hbox (badness 1400) in paragraph at lines 12--13
 []\T5/cmr/bx/n/12 Presentation Layer: \T5/cmr/m/n/12 ti∏p nh™n, x°c th¸c v† ^^_i∑u h˜Óng c°c y∂u c¶u
  []
@@ -5415,25 +5365,25 @@ File: Images/hcmut.png Graphic file (type png)
 <use Images/hcmut.png>
 Package pdftex.def Info: Images/hcmut.png  used on input line 35.
 (pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
-[138])
+[134])
 
 File: Images/hcmut.png Graphic file (type png)
 <use Images/hcmut.png>
 Package pdftex.def Info: Images/hcmut.png  used on input line 382.
 (pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
-[139] (./Sections/7. System Implementation/system implementation.tex) (./Sections/8. System Evaluation/system evaluation.tex)
+[135] (./Sections/7. System Implementation/system implementation.tex) (./Sections/8. System Evaluation/system evaluation.tex)
 
 File: Images/hcmut.png Graphic file (type png)
 <use Images/hcmut.png>
 Package pdftex.def Info: Images/hcmut.png  used on input line 388.
 (pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
-[140] (./Sections/9. Conclusion/conclusion.tex)
+[136] (./Sections/9. Conclusion/conclusion.tex)
 
 File: Images/hcmut.png Graphic file (type png)
 <use Images/hcmut.png>
 Package pdftex.def Info: Images/hcmut.png  used on input line 391.
 (pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
-[141]
+[137]
 
 LaTeX Warning: Empty bibliography on input line 396.
 
@@ -5443,7 +5393,7 @@ File: Images/hcmut.png Graphic file (type png)
 <use Images/hcmut.png>
 Package pdftex.def Info: Images/hcmut.png  used on input line 402.
 (pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
-[142] 
+[138] 
 enddocument/afterlastpage (AED): lastpage setting LastPage.
 (./main.aux)
  ***********
@@ -5459,24 +5409,24 @@ LaTeX Font Warning: Size substitutions with differences
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 82A8B0199F2AA4E57CE18FAC8083F6B8;15036.
+(rerunfilecheck)             Checksum: 8B8D221BCEA04B7710344E818DA79980;14600.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 43432 strings out of 469216
- 854055 string characters out of 5462076
+ 43421 strings out of 469216
+ 853883 string characters out of 5462076
  1836735 words of memory out of 5000000
- 70645 multiletter control sequences out of 15000+600000
+ 70642 multiletter control sequences out of 15000+600000
  659668 words of font info for 113 fonts, out of 8000000 for 9000
  319 hyphenation exceptions out of 8191
  119i,25n,154p,1542b,5241s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/vntex/vnr/vnbx10.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/vntex/vnr/vnbx12.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/vntex/vnr/vnr10.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/vntex/vnr/vnr12.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/vntex/vnr/vnr17.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/vntex/vnr/vnr8.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/vntex/vnr/vnti10.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/vntex/vnr/vnti12.pfb>
-Output written on main.pdf (143 pages, 1924255 bytes).
+Output written on main.pdf (139 pages, 1919425 bytes).
 PDF statistics:
- 1612 PDF objects out of 1728 (max. 8388607)
- 1397 compressed objects within 14 object streams
- 399 named destinations out of 1000 (max. 500000)
- 757 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1572 PDF objects out of 1728 (max. 8388607)
+ 1361 compressed objects within 14 object streams
+ 391 named destinations out of 1000 (max. 500000)
+ 733 words of extra memory for PDF output out of 10000 (max. 10000000)
 

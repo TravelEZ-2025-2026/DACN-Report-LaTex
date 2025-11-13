@@ -1,0 +1,132 @@
+\babel@toc {vietnamese}{}\relax 
+\contentsline {section}{\numberline {1}Giới thiệu}{10}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Động cơ}{10}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}Mục tiêu}{12}{subsection.1.2}%
+\contentsline {subsection}{\numberline {1.3}Phạm vi}{12}{subsection.1.3}%
+\contentsline {subsubsection}{\numberline {1.3.1}Phạm vi chức năng}{12}{subsubsection.1.3.1}%
+\contentsline {subsubsection}{\numberline {1.3.2}Phạm vi Kỹ thuật}{12}{subsubsection.1.3.2}%
+\contentsline {subsection}{\numberline {1.4}Ý nghĩa của dự án}{13}{subsection.1.4}%
+\contentsline {subsubsection}{\numberline {1.4.1}Ý nghĩa thực tiễn}{13}{subsubsection.1.4.1}%
+\contentsline {subsubsection}{\numberline {1.4.2}Ý nghĩa khoa học}{13}{subsubsection.1.4.2}%
+\contentsline {subsection}{\numberline {1.5}Cấu trúc báo cáo}{14}{subsection.1.5}%
+\contentsline {section}{\numberline {2}Cơ sở lý thuyết}{15}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Tổng quan về Ngành Du lịch và Lữ hành}{15}{subsection.2.1}%
+\contentsline {subsubsection}{\numberline {2.1.1}Cấu trúc Ngành Du lịch và Lữ hành}{15}{subsubsection.2.1.1}%
+\contentsline {subsubsection}{\numberline {2.1.2}Các mô hình kinh doanh chủ đạo}{15}{subsubsection.2.1.2}%
+\contentsline {subsubsection}{\numberline {2.1.3}Khách hàng mục tiêu và Phân khúc}{16}{subsubsection.2.1.3}%
+\contentsline {subsubsection}{\numberline {2.1.4}Chuỗi cung ứng Dịch vụ Du lịch}{17}{subsubsection.2.1.4}%
+\contentsline {subsection}{\numberline {2.2}Hành trình Khách hàng (Customer Journey) trong Du lịch}{17}{subsection.2.2}%
+\contentsline {subsubsection}{\numberline {2.2.1}Định nghĩa}{17}{subsubsection.2.2.1}%
+\contentsline {subsubsection}{\numberline {2.2.2}Vai trò của Gợi ý Hành trình dựa trên AI}{18}{subsubsection.2.2.2}%
+\contentsline {subsection}{\numberline {2.3}Cơ sở Kỹ thuật và Công nghệ}{19}{subsection.2.3}%
+\contentsline {subsubsection}{\numberline {2.3.1}Hệ thống Gợi ý}{19}{subsubsection.2.3.1}%
+\contentsline {subsubsection}{\numberline {2.3.2}Trí tuệ Nhân tạo (AI) và Machine Learning (ML)}{20}{subsubsection.2.3.2}%
+\contentsline {subsubsection}{\numberline {2.3.3}Các Thuật ngữ Kỹ thuật Cốt lõi}{20}{subsubsection.2.3.3}%
+\contentsline {subsection}{\numberline {2.4}Cơ sở về Đánh giá và Cộng đồng Người dùng}{21}{subsection.2.4}%
+\contentsline {subsubsection}{\numberline {2.4.1}Cộng đồng Du lịch Trực tuyến và UGC (User-Generated Content)}{21}{subsubsection.2.4.1}%
+\contentsline {subsubsection}{\numberline {2.4.2}Xử lý và Khai thác Dữ liệu Cộng đồng}{21}{subsubsection.2.4.2}%
+\contentsline {section}{\numberline {3}Công trình liên quan}{23}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Các công trình khoa học liên quan}{23}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Các hệ thống/phần mềm hiện có}{24}{subsection.3.2}%
+\contentsline {subsubsection}{\numberline {3.2.1}Wanderlog}{24}{subsubsection.3.2.1}%
+\contentsline {subsubsection}{\numberline {3.2.2}Stippl}{24}{subsubsection.3.2.2}%
+\contentsline {subsubsection}{\numberline {3.2.3}GuideGeek}{24}{subsubsection.3.2.3}%
+\contentsline {subsubsection}{\numberline {3.2.4}Vietnam Travel (Du lịch Việt Nam)}{24}{subsubsection.3.2.4}%
+\contentsline {subsubsection}{\numberline {3.2.5}Travelviet}{25}{subsubsection.3.2.5}%
+\contentsline {subsubsection}{\numberline {3.2.6}My Travel Map / Gody}{25}{subsubsection.3.2.6}%
+\contentsline {subsubsection}{\numberline {3.2.7}TripHunter AI Chatbot}{25}{subsubsection.3.2.7}%
+\contentsline {subsection}{\numberline {3.3}So sánh với hệ thống của nhóm}{25}{subsection.3.3}%
+\contentsline {section}{\numberline {4}Hệ thống đề xuất}{28}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Mô tả hệ thống}{28}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Mô tả người dùng}{29}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Yêu cầu chức năng}{30}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Yêu cầu phi chức năng}{35}{subsection.4.4}%
+\contentsline {subsection}{\numberline {4.5}Yêu cầu dữ liệu}{36}{subsection.4.5}%
+\contentsline {subsubsection}{\numberline {4.5.1}Mô tả dữ liệu}{36}{subsubsection.4.5.1}%
+\contentsline {subsubsection}{\numberline {4.5.2}Yêu cầu về chất lượng dữ liệu}{40}{subsubsection.4.5.2}%
+\contentsline {section}{\numberline {5}Phân tích và Thiết kế}{41}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Phân tích}{41}{subsection.5.1}%
+\contentsline {subsubsection}{\numberline {5.1.1}Mô hình hoá quy trình nghiệp vụ}{41}{subsubsection.5.1.1}%
+\contentsline {subsubsection}{\numberline {5.1.2}Mô hình hoá tương tác}{41}{subsubsection.5.1.2}%
+\contentsline {subsection}{\numberline {5.2}Giải pháp công nghệ}{99}{subsection.5.2}%
+\contentsline {subsubsection}{\numberline {5.2.1}Front-end}{99}{subsubsection.5.2.1}%
+\contentsline {paragraph}{\numberline {5.2.1.1}NextJS}{99}{paragraph.5.2.1.1}%
+\contentsline {subparagraph}{Giới thiệu}{99}{subparagraph*.30}%
+\contentsline {subparagraph}{Ưu điểm}{99}{subparagraph*.31}%
+\contentsline {subparagraph}{So sánh NextJS và các công nghệ khác}{99}{subparagraph*.32}%
+\contentsline {paragraph}{\numberline {5.2.1.2}ShadCN/UI}{101}{paragraph.5.2.1.2}%
+\contentsline {subparagraph}{Giới thiệu}{101}{subparagraph*.34}%
+\contentsline {subparagraph}{Ưu điểm}{101}{subparagraph*.35}%
+\contentsline {subparagraph}{So sánh ShadCN/UI và các thư viện UI khác}{101}{subparagraph*.36}%
+\contentsline {subsubsection}{\numberline {5.2.2}Back-end}{103}{subsubsection.5.2.2}%
+\contentsline {paragraph}{\numberline {5.2.2.1}Spring Boot}{103}{paragraph.5.2.2.1}%
+\contentsline {subparagraph}{Giới thiệu}{103}{subparagraph*.38}%
+\contentsline {subparagraph}{Ưu điểm}{103}{subparagraph*.39}%
+\contentsline {subparagraph}{So sánh Spring Boot và các công nghệ khác}{103}{subparagraph*.40}%
+\contentsline {subsubsection}{\numberline {5.2.3}Database}{105}{subsubsection.5.2.3}%
+\contentsline {subsubsection}{\numberline {5.2.4}Công nghệ cơ sở dữ liệu}{105}{subsubsection.5.2.4}%
+\contentsline {paragraph}{\numberline {5.2.4.1}PostgreSQL}{105}{paragraph.5.2.4.1}%
+\contentsline {subparagraph}{Giới thiệu}{105}{subparagraph*.42}%
+\contentsline {subparagraph}{Ưu điểm}{105}{subparagraph*.43}%
+\contentsline {subparagraph}{So sánh PostgreSQL và các công nghệ khác}{106}{subparagraph*.44}%
+\contentsline {paragraph}{\numberline {5.2.4.2}Redis}{108}{paragraph.5.2.4.2}%
+\contentsline {subparagraph}{Giới thiệu}{108}{subparagraph*.46}%
+\contentsline {subparagraph}{Ưu điểm}{108}{subparagraph*.47}%
+\contentsline {subparagraph}{So sánh Redis và các công nghệ khác}{108}{subparagraph*.48}%
+\contentsline {subsubsection}{\numberline {5.2.5}Dịch vụ lưu trữ}{110}{subsubsection.5.2.5}%
+\contentsline {subsubsection}{\numberline {5.2.6}Công nghệ khác}{110}{subsubsection.5.2.6}%
+\contentsline {paragraph}{\numberline {5.2.6.1}Amazon S3}{110}{paragraph.5.2.6.1}%
+\contentsline {subparagraph}{Giới thiệu}{110}{subparagraph*.50}%
+\contentsline {subparagraph}{Ưu điểm}{110}{subparagraph*.51}%
+\contentsline {subparagraph}{So sánh Amazon S3 và các lựa chọn khác}{110}{subparagraph*.52}%
+\contentsline {subsection}{\numberline {5.3}Thiết kế}{112}{subsection.5.3}%
+\contentsline {subsubsection}{\numberline {5.3.1}Thiết kế hệ thống}{112}{subsubsection.5.3.1}%
+\contentsline {subsubsection}{\numberline {5.3.2}Mô hình kiến trúc}{114}{subsubsection.5.3.2}%
+\contentsline {subsubsection}{\numberline {5.3.3}Thiết kế cơ sở dữ liệu}{117}{subsubsection.5.3.3}%
+\contentsline {subsubsection}{\numberline {5.3.4}Thiết kế Sitemap}{117}{subsubsection.5.3.4}%
+\contentsline {subsubsection}{\numberline {5.3.5}Front-end}{119}{subsubsection.5.3.5}%
+\contentsline {paragraph}{\numberline {5.3.5.1}NextJS}{119}{paragraph.5.3.5.1}%
+\contentsline {subparagraph}{Giới thiệu}{119}{subparagraph*.61}%
+\contentsline {subparagraph}{Ưu điểm}{119}{subparagraph*.62}%
+\contentsline {subparagraph}{So sánh NextJS và các công nghệ khác}{120}{subparagraph*.63}%
+\contentsline {paragraph}{\numberline {5.3.5.2}ShadCN/UI}{122}{paragraph.5.3.5.2}%
+\contentsline {subparagraph}{Giới thiệu}{122}{subparagraph*.65}%
+\contentsline {subparagraph}{Ưu điểm}{122}{subparagraph*.66}%
+\contentsline {subparagraph}{So sánh ShadCN/UI và các thư viện UI khác}{122}{subparagraph*.67}%
+\contentsline {subsubsection}{\numberline {5.3.6}Back-end}{124}{subsubsection.5.3.6}%
+\contentsline {paragraph}{\numberline {5.3.6.1}Spring Boot}{124}{paragraph.5.3.6.1}%
+\contentsline {subparagraph}{Giới thiệu}{124}{subparagraph*.69}%
+\contentsline {subparagraph}{Ưu điểm}{124}{subparagraph*.70}%
+\contentsline {subparagraph}{So sánh Spring Boot và các công nghệ khác}{124}{subparagraph*.71}%
+\contentsline {subsubsection}{\numberline {5.3.7}Database}{126}{subsubsection.5.3.7}%
+\contentsline {subsubsection}{\numberline {5.3.8}Công nghệ cơ sở dữ liệu}{126}{subsubsection.5.3.8}%
+\contentsline {paragraph}{\numberline {5.3.8.1}PostgreSQL}{126}{paragraph.5.3.8.1}%
+\contentsline {subparagraph}{Giới thiệu}{126}{subparagraph*.73}%
+\contentsline {subparagraph}{Ưu điểm}{126}{subparagraph*.74}%
+\contentsline {subparagraph}{So sánh PostgreSQL và các công nghệ khác}{127}{subparagraph*.75}%
+\contentsline {paragraph}{\numberline {5.3.8.2}Redis}{129}{paragraph.5.3.8.2}%
+\contentsline {subparagraph}{Giới thiệu}{129}{subparagraph*.77}%
+\contentsline {subparagraph}{Ưu điểm}{129}{subparagraph*.78}%
+\contentsline {subparagraph}{So sánh Redis và các công nghệ khác}{129}{subparagraph*.79}%
+\contentsline {subsubsection}{\numberline {5.3.9}Dịch vụ lưu trữ}{131}{subsubsection.5.3.9}%
+\contentsline {subsubsection}{\numberline {5.3.10}Công nghệ khác}{131}{subsubsection.5.3.10}%
+\contentsline {paragraph}{\numberline {5.3.10.1}Amazon S3}{131}{paragraph.5.3.10.1}%
+\contentsline {subparagraph}{Giới thiệu}{131}{subparagraph*.81}%
+\contentsline {subparagraph}{Ưu điểm}{131}{subparagraph*.82}%
+\contentsline {subparagraph}{So sánh Amazon S3 và các lựa chọn khác}{131}{subparagraph*.83}%
+\contentsline {subsection}{\numberline {5.4}Thiết kế}{133}{subsection.5.4}%
+\contentsline {subsubsection}{\numberline {5.4.1}Thiết kế hệ thống}{133}{subsubsection.5.4.1}%
+\contentsline {subsubsubsection}{\numberline {5.4.1.a}Mô hình kiến trúc}{133}{subsubsubsection.5.4.1.1}%
+\contentsline {subsubsection}{\numberline {5.4.2}Thiết kế hệ thống}{133}{subsubsection.5.4.2}%
+\contentsline {subsubsection}{\numberline {5.4.3}Mô hình kiến trúc}{135}{subsubsection.5.4.3}%
+\contentsline {subsubsubsection}{\numberline {5.4.3.a}Thiết kế kiến trúc}{136}{subsubsubsection.5.4.3.1}%
+\contentsline {subsubsection}{\numberline {5.4.4}Thiết kế cơ sở dữ liệu}{139}{subsubsection.5.4.4}%
+\contentsline {subsubsection}{\numberline {5.4.5}Thiết kế Sitemap}{139}{subsubsection.5.4.5}%
+\contentsline {subsubsection}{\numberline {5.4.6}Thiết kế giao diện}{139}{subsubsection.5.4.6}%
+\contentsline {section}{\numberline {6}Đánh giá hệ thống}{140}{section.6}%
+\contentsline {section}{\numberline {7}Conclusion}{141}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Achievements}{141}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}Limitations}{141}{subsection.7.2}%
+\contentsline {subsection}{\numberline {7.3}Further improvements}{141}{subsection.7.3}%
+\contentsline {section}{References}{142}{subsection.7.3}%
+\contentsline {section}{Appendices}{142}{section*.89}%

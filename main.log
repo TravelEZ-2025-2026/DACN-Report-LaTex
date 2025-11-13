@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.10.23)  13 NOV 2025 10:37
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.10.23)  13 NOV 2025 10:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2422,4 +2422,3061 @@ Package pdftex.def Info: Images/hcmut.png  used on input line 92.
  [32]
 File: Images/hcmut.png Graphic file (type png)
 <use Images/hcmut.png>
-Package pdftex
+Package pdftex.def Info: Images/hcmut.png  used on input line 92.
+(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
+ [33]
+File: Images/hcmut.png Graphic file (type png)
+<use Images/hcmut.png>
+Package pdftex.def Info: Images/hcmut.png  used on input line 92.
+(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
+ [34]) (./Sections/5. Requirements Elicitation/3-non functional requirements.tex
+Underfull \hbox (badness 10000) in paragraph at lines 26--26
+[]|\T5/cmr/m/n/12 NFR-PERF-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 27--27
+[]|\T5/cmr/m/n/12 NFR-PERF-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 28--28
+[]|\T5/cmr/m/n/12 NFR-PERF-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 29--29
+[]|\T5/cmr/m/n/12 NFR-PERF-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 30--30
+[]|\T5/cmr/m/n/12 NFR-PERF-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 34--34
+[]|\T5/cmr/m/n/12 NFR-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 44--44
+[]|\T5/cmr/m/n/12 NFR-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 48--48
+[]|\T5/cmr/m/n/12 NFR-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 49--49
+[]|\T5/cmr/m/n/12 NFR-
+ []
+
+File: Images/hcmut.png Graphic file (type png)
+<use Images/hcmut.png>
+Package pdftex.def Info: Images/hcmut.png  used on input line 51.
+(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
+[35]) (./Sections/5. Requirements Elicitation/4-data requirements.tex
+
+File: Images/hcmut.png Graphic file (type png)
+<use Images/hcmut.png>
+Package pdftex.def Info: Images/hcmut.png  used on input line 8.
+(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
+[36]
+
+File: Images/hcmut.png Graphic file (type png)
+<use Images/hcmut.png>
+Package pdftex.def Info: Images/hcmut.png  used on input line 23.
+(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
+[37]
+
+File: Images/hcmut.png Graphic file (type png)
+<use Images/hcmut.png>
+Package pdftex.def Info: Images/hcmut.png  used on input line 27.
+(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
+[38]
+<Images/5 Há»‡ thá»‘ng Ä‘á» xuáº¥t/EERD.png, id=833, 2937.97626pt x 2761.31625pt>
+File: Images/5 Há»‡ thá»‘ng Ä‘á» xuáº¥t/EERD.png Graphic file (type png)
+<use Images/5 Há»‡ thá»‘ng Ä‘á» xuáº¥t/EERD.png>
+Package pdftex.def Info: Images/5 Há»‡ thá»‘ng Ä‘á» xuáº¥t/EERD.png  used on input line 30.
+(pdftex.def)             Requested size: 485.1222pt x 455.9346pt.
+
+
+LaTeX Warning: Float too large for page by 32.97115pt on input line 33.
+
+
+
+File: Images/hcmut.png Graphic file (type png)
+<use Images/hcmut.png>
+Package pdftex.def Info: Images/hcmut.png  used on input line 34.
+(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
+[39 <./Images/5 Há»‡ thá»‘ng Ä‘á» xuáº¥t/EERD.png>]
+Overfull \hbox (9.14717pt too wide) in alignment at lines 37--41
+ [] [] [] 
+ []
+
+
+Overfull \hbox (9.14717pt too wide) in alignment at lines 41--46
+ [] [] [] 
+ []
+
+
+Overfull \hbox (9.14717pt too wide) in alignment at lines 46--49
+ [] [] [] 
+ []
+
+
+Underfull \hbox (badness 4779) in paragraph at lines 51--52
+\T5/cmr/m/n/12 constraints vîi ON DELETE
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 55--55
+[]|\T5/cmr/bx/n/12 T½nh ch½nh
+ []
+
+
+Underfull \hbox (badness 1609) in paragraph at lines 55--56
+\T5/cmr/m/n/12 "B¡o c¡o nëi dung"cho ng÷íi
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 57--57
+[]|\T5/cmr/bx/n/12 T½nh nh§t
+ []
+
+
+Underfull \hbox (badness 2012) in paragraph at lines 57--58
+\T5/cmr/bx/n/12 Ùng döng: \T5/cmr/m/n/12 Quy ^^_ành chu©n
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 59--60
+[]|\T5/cmr/bx/n/12 CSDL: \T5/cmr/m/n/12 Sû döng UNIQUE
+ []
+
+
+Underfull \hbox (badness 6792) in paragraph at lines 61--62
+\T5/cmr/m/n/12 Cron Jobs ^^_º l m mîi dú
+ []
+
+
+Underfull \hbox (badness 1019) in paragraph at lines 61--62
+\T5/cmr/m/n/12 li»u crawl. Sû döng H ng ^^_ñi
+ []
+
+
+Overfull \hbox (9.14717pt too wide) in alignment at lines 49--63
+ [] [] [] 
+ []
+
+))
+
+File: Images/hcmut.png Graphic file (type png)
+<use Images/hcmut.png>
+Package pdftex.def Info: Images/hcmut.png  used on input line 379.
+(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
+[40
+
+
+] (./Sections/6. System Analysis/system analysis.tex (./Sections/6. System Analysis/1-Analysis/1-analysis.tex
+<Images/6. System analysis/0.png, id=846, 754.82pt x 654.445pt>
+File: Images/6. System analysis/0.png Graphic file (type png)
+<use Images/6. System analysis/0.png>
+Package pdftex.def Info: Images/6. System analysis/0.png  used on input line 9.
+(pdftex.def)             Requested size: 396.91325pt x 344.12802pt.
+<Images/6. System analysis/1.png, id=847, 586.19pt x 631.35875pt>
+File: Images/6. System analysis/1.png Graphic file (type png)
+<use Images/6. System analysis/1.png>
+Package pdftex.def Info: Images/6. System analysis/1.png  used on input line 20.
+(pdftex.def)             Requested size: 396.91325pt x 427.4975pt.
+ (./Sections/6. System Analysis/1-Analysis/use-case-diagram/1-module1.tex
+
+File: Images/hcmut.png Graphic file (type png)
+<use Images/hcmut.png>
+Package pdftex.def Info: Images/hcmut.png  used on input line 3.
+(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
+[41 <./Images/6. System analysis/0.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 15--15
+[]|\T5/cmr/bx/n/12 Luçng sü ki»n
+ []
+
+File: Images/hcmut.png Graphic file (type png)
+<use Images/hcmut.png>
+Package pdftex.def Info: Images/hcmut.png  used on input line 50.
+(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
+[42 <./Images/6. System analysis/1.png>]
+File: Images/hcmut.png Graphic file (type png)
+<use Images/hcmut.png>
+Package pdftex.def Info: Images/hcmut.png  used on input line 50.
+(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
+ [43]
+Underfull \hbox (badness 10000) in paragraph at lines 63--63
+[]|\T5/cmr/bx/n/12 Luçng sü ki»n
+ []
+
+File: Images/hcmut.png Graphic file (type png)
+<use Images/hcmut.png>
+Package pdftex.def Info: Images/hcmut.png  used on input line 86.
+(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
+[44]
+Underfull \hbox (badness 10000) in paragraph at lines 103--103
+[]|\T5/cmr/bx/n/12 Luçng sü ki»n
+ []
+
+File: Images/hcmut.png Graphic file (type png)
+<use Images/hcmut.png>
+Package pdftex.def Info: Images/hcmut.png  used on input line 124.
+(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
+[45]
+File: Images/hcmut.png Graphic file (type png)
+<use Images/hcmut.png>
+Package pdftex.def Info: Images/hcmut.png  used on input line 124.
+(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
+ [46]
+Underfull \hbox (badness 10000) in paragraph at lines 137--137
+[]|\T5/cmr/bx/n/12 Luçng sü ki»n
+ []
+
+File: Images/hcmut.png Graphic file (type png)
+<use Images/hcmut.png>
+Package pdftex.def Info: Images/hcmut.png  used on input line 162.
+(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
+[47]
+File: Images/hcmut.png Graphic file (type png)
+<use Images/hcmut.png>
+Package pdftex.def Info: Images/hcmut.png  used on input line 162.
+(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
+ [48]
+Underfull \hbox (badness 1748) in paragraph at lines 180--180
+\T5/cmr/m/n/12 khæng ^^_÷ñc l÷u, h»
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 181--181
+[]|\T5/cmr/bx/n/12 Luçng sü ki»n
+ []
+
+File: Images/hcmut.png Graphic file (type png)
+<use Images/hcmut.png>
+Package pdftex.def Info: Images/hcmut.png  used on input line 209.
+(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
+[49]
+File: Images/hcmut.png Graphic file (type png)
+<use Images/hcmut.png>
+Package pdftex.def Info: Images/hcmut.png  used on input line 209.
+(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
+ [50]
+Underfull \hbox (badness 10000) in paragraph at lines 226--226
+[]|\T5/cmr/bx/n/12 Luçng sü ki»n
+ []
+
+File: Images/hcmut.png Graphic file (type png)
+<use Images/hcmut.png>
+Package pdftex.def Info: Images/hcmut.png  used on input line 253.
+(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
+[51])
+<Images/6. System analysis/2.png, id=908, 589.20125pt x 576.1525pt>
+File: Images/6. System analysis/2.png Graphic file (type png)
+<use Images/6. System analysis/2.png>
+Package pdftex.def Info: Images/6. System analysis/2.png  used on input line 31.
+(pdftex.def)             Requested size: 396.91325pt x 388.13008pt.
+ (./Sections/6. System Analysis/1-Analysis/use-case-diagram/2-module2.tex
+
+File: Images/hcmut.png Graphic file (type png)
+<use Images/hcmut.png>
+Package pdftex.def Info: Images/hcmut.png  used on input line 3.
+(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
+[52]
+Underfull \hbox (badness 10000) in paragraph at lines 17--17
+[]|\T5/cmr/bx/n/12 Luçng sü ki»n
+ []
+
+File: Images/hcmut.png Graphic file (type png)
+<use Images/hcmut.png>
+Package pdftex.def Info: Images/hcmut.png  used on input line 39.
+(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
+[53 <./Images/6. System analysis/2.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 55--55
+[]|\T5/cmr/bx/n/12 Luçng sü ki»n
+ []
+
+File: Images/hcmut.png Graphic file (type png)
+<use Images/hcmut.png>
+Package pdftex.def Info: Images/hcmut.png  used on input line 74.
+(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
+[54]
+Underfull \hbox (badness 10000) in paragraph at lines 90--90
+[]|\T5/cmr/bx/n/12 Luçng sü ki»n
+ []
+
+File: Images/hcmut.png Graphic file (type png)
+<use Images/hcmut.png>
+Package pdftex.def Info: Images/hcmut.png  used on input line 114.
+(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
+[55]
+File: Images/hcmut.png Graphic file (type png)
+<use Images/hcmut.png>
+Package pdftex.def Info: Images/hcmut.png  used on input line 114.
+(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
+ [56]
+Underfull \hbox (badness 10000) in paragraph at lines 135--135
+[]|\T5/cmr/bx/n/12 Luçng sü ki»n
+ []
+
+File: Images/hcmut.png Graphic file (type png)
+<use Images/hcmut.png>
+Package pdftex.def Info: Images/hcmut.png  used on input line 168.
+(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
+[57]
+File: Images/hcmut.png Graphic file (type png)
+<use Images/hcmut.png>
+Package pdftex.def Info: Images/hcmut.png  used on input line 168.
+(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
+ [58])
+<Images/6. System analysis/3.png, id=946, 775.89874pt x 1079.03125pt>
+File: Images/6. System analysis/3.png Graphic file (type png)
+<use Images/6. System analysis/3.png>
+Package pdftex.def Info: Images/6. System analysis/3.png  used on input line 42.
+(pdftex.def)             Requested size: 396.91325pt x 551.99452pt.
+ (./Sections/6. System Analysis/1-Analysis/use-case-diagram/3-module3.tex
+Underfull \hbox (badness 10000) in paragraph at lines 12--12
+[]|\T5/cmr/bx/n/12 Luçng sü ki»n
+ []
+
+
+
+File: Images/hcmut.png Graphic file (type png)
+<use Images/hcmut.png>
+Package pdftex.def Info: Images/hcmut.png  used on input line 22.
+(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
+[59]
+
+File: Images/hcmut.png Graphic file (type png)
+<use Images/hcmut.png>
+Package pdftex.def Info: Images/hcmut.png  used on input line 23.
+(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
+[60 <./Images/6. System analysis/3.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 36--36
+[]|\T5/cmr/bx/n/12 Luçng sü ki»n
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 64--64
+[]|\T5/cmr/bx/n/12 Luçng sü ki»n
+ []
+
+
+
+File: Images/hcmut.png Graphic file (type png)
+<use Images/hcmut.png>
+Package pdftex.def Info: Images/hcmut.png  used on input line 86.
+(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
+[61]
+Underfull \hbox (badness 10000) in paragraph at lines 100--100
+[]|\T5/cmr/bx/n/12 Luçng sü ki»n
+ []
+
+
+
+File: Images/hcmut.png Graphic file (type png)
+<use Images/hcmut.png>
+Package pdftex.def Info: Images/hcmut.png  used on input line 122.
+(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
+[62]
+Underfull \hbox (badness 10000) in paragraph at lines 140--140
+[]|\T5/cmr/bx/n/12 Luçng sü ki»n
+ []
+
+
+
+File: Images/hcmut.png Graphic file (type png)
+<use Images/hcmut.png>
+Package pdftex.def Info: Images/hcmut.png  used on input line 156.
+(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
+[63]
+Underfull \hbox (badness 10000) in paragraph at lines 169--169
+[]|\T5/cmr/bx/n/12 Luçng sü ki»n
+ []
+
+)
+<Images/6. System analysis/4.png, id=974, 918.43124pt x 1134.2375pt>
+File: Images/6. System analysis/4.png Graphic file (type png)
+<use Images/6. System analysis/4.png>
+Package pdftex.def Info: Images/6. System analysis/4.png  used on input line 53.
+(pdftex.def)             Requested size: 396.91325pt x 490.18753pt.
+ (./Sections/6. System Analysis/1-Analysis/use-case-diagram/4-module4.tex
+
+File: Images/hcmut.png Graphic file (type png)
+<use Images/hcmut.png>
+Package pdftex.def Info: Images/hcmut.png  used on input line 3.
+(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
+[64]
+Underfull \hbox (badness 10000) in paragraph at lines 13--13
+[]|\T5/cmr/bx/n/12 Luçng sü ki»n
+ []
+
+File: Images/hcmut.png Graphic file (type png)
+<use Images/hcmut.png>
+Package pdftex.def Info: Images/hcmut.png  used on input line 35.
+(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
+[65 <./Images/6. System analysis/4.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 51--51
+[]|\T5/cmr/bx/n/12 Luçng sü ki»n
+ []
+
+File: Images/hcmut.png Graphic file (type png)
+<use Images/hcmut.png>
+Package pdftex.def Info: Images/hcmut.png  used on input line 94.
+(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
+[66]
+File: Images/hcmut.png Graphic file (type png)
+<use Images/hcmut.png>
+Package pdftex.def Info: Images/hcmut.png  used on input line 94.
+(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
+ [67]
+File: Images/hcmut.png Graphic file (type png)
+<use Images/hcmut.png>
+Package pdftex.def Info: Images/hcmut.png  used on input line 94.
+(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
+ [68]
+Underfull \hbox (badness 10000) in paragraph at lines 106--106
+[]|\T5/cmr/bx/n/12 Luçng sü ki»n
+ []
+
+File: Images/hcmut.png Graphic file (type png)
+<use Images/hcmut.png>
+Package pdftex.def Info: Images/hcmut.png  used on input line 127.
+(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
+[69]
+Underfull \hbox (badness 10000) in paragraph at lines 143--143
+[]|\T5/cmr/bx/n/12 Luçng sü ki»n
+ []
+
+File: Images/hcmut.png Graphic file (type png)
+<use Images/hcmut.png>
+Package pdftex.def Info: Images/hcmut.png  used on input line 189.
+(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
+[70]
+File: Images/hcmut.png Graphic file (type png)
+<use Images/hcmut.png>
+Package pdftex.def Info: Images/hcmut.png  used on input line 189.
+(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
+ [71]
+File: Images/hcmut.png Graphic file (type png)
+<use Images/hcmut.png>
+Package pdftex.def Info: Images/hcmut.png  used on input line 189.
+(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
+ [72]
+Underfull \hbox (badness 10000) in paragraph at lines 205--205
+[]|\T5/cmr/bx/n/12 Luçng sü ki»n
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 222--223
+[]|\T5/cmr/m/n/12 1b. Traveler nh§n v o nót/biºu t÷ñng
+ []
+
+
+Underfull \hbox (badness 1803) in paragraph at lines 228--229
+[]|\T5/cmr/m/n/12 2c. Traveler nh§n v o tòy chån ""Ch¿nh sûa""ho°c
+ []
+
+File: Images/hcmut.png Graphic file (type png)
+<use Images/hcmut.png>
+Package pdftex.def Info: Images/hcmut.png  used on input line 243.
+(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
+[73]
+File: Images/hcmut.png Graphic file (type png)
+<use Images/hcmut.png>
+Package pdftex.def Info: Images/hcmut.png  used on input line 243.
+(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
+ [74]
+File: Images/hcmut.png Graphic file (type png)
+<use Images/hcmut.png>
+Package pdftex.def Info: Images/hcmut.png  used on input line 243.
+(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
+ [75]
+Underfull \hbox (badness 10000) in paragraph at lines 263--263
+[]|\T5/cmr/bx/n/12 Luçng sü ki»n
+ []
+
+File: Images/hcmut.png Graphic file (type png)
+<use Images/hcmut.png>
+Package pdftex.def Info: Images/hcmut.png  used on input line 284.
+(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
+[76]
+Underfull \hbox (badness 10000) in paragraph at lines 300--300
+[]|\T5/cmr/bx/n/12 Luçng sü ki»n
+ []
+
+File: Images/hcmut.png Graphic file (type png)
+<use Images/hcmut.png>
+Package pdftex.def Info: Images/hcmut.png  used on input line 331.
+(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
+[77]
+File: Images/hcmut.png Graphic file (type png)
+<use Images/hcmut.png>
+Package pdftex.def Info: Images/hcmut.png  used on input line 331.
+(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
+ [78]
+Underfull \hbox (badness 10000) in paragraph at lines 351--351
+[]|\T5/cmr/bx/n/12 Luçng sü ki»n
+ []
+
+File: Images/hcmut.png Graphic file (type png)
+<use Images/hcmut.png>
+Package pdftex.def Info: Images/hcmut.png  used on input line 368.
+(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
+[79]
+Underfull \hbox (badness 10000) in paragraph at lines 384--384
+[]|\T5/cmr/bx/n/12 Luçng sü ki»n
+ []
+
+File: Images/hcmut.png Graphic file (type png)
+<use Images/hcmut.png>
+Package pdftex.def Info: Images/hcmut.png  used on input line 412.
+(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
+[80]
+File: Images/hcmut.png Graphic file (type png)
+<use Images/hcmut.png>
+Package pdftex.def Info: Images/hcmut.png  used on input line 412.
+(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
+ [81])
+<Images/6. System analysis/5.png, id=1070, 815.045pt x 933.4875pt>
+File: Images/6. System analysis/5.png Graphic file (type png)
+<use Images/6. System analysis/5.png>
+Package pdftex.def Info: Images/6. System analysis/5.png  used on input line 64.
+(pdftex.def)             Requested size: 396.91325pt x 454.5926pt.
+ (./Sections/6. System Analysis/1-Analysis/use-case-diagram/5-module5.tex
+
+File: Images/hcmut.png Graphic file (type png)
+<use Images/hcmut.png>
+Package pdftex.def Info: Images/hcmut.png  used on input line 3.
+(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
+[82]
+Underfull \hbox (badness 10000) in paragraph at lines 17--17
+[]|\T5/cmr/bx/n/12 Luçng sü ki»n
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 19--20
+[]|\T5/cmr/m/n/12 1. Admin truy cªp v o trang ""Qu£n lş B¡o
+ []
+
+File: Images/hcmut.png Graphic file (type png)
+<use Images/hcmut.png>
+Package pdftex.def Info: Images/hcmut.png  used on input line 53.
+(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
+[83 <./Images/6. System analysis/5.png>]
+File: Images/hcmut.png Graphic file (type png)
+<use Images/hcmut.png>
+Package pdftex.def Info: Images/hcmut.png  used on input line 53.
+(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
+ [84]
+Underfull \hbox (badness 10000) in paragraph at lines 73--73
+[]|\T5/cmr/bx/n/12 Luçng sü ki»n
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 77--78
+[]|\T5/cmr/m/n/12 3. H» thèng t¤o b£n ghi mîi trong b£ng
+ []
+
+File: Images/hcmut.png Graphic file (type png)
+<use Images/hcmut.png>
+Package pdftex.def Info: Images/hcmut.png  used on input line 91.
+(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
+[85]
+Underfull \hbox (badness 10000) in paragraph at lines 107--107
+[]|\T5/cmr/bx/n/12 Luçng sü ki»n
+ []
+
+
+Underfull \hbox (badness 1221) in paragraph at lines 114--115
+[]|\T5/cmr/m/n/12 6. Admin chån h nh ^^_ëng ""Duy»t""(Approve) ho°c
+ []
+
+File: Images/hcmut.png Graphic file (type png)
+<use Images/hcmut.png>
+Package pdftex.def Info: Images/hcmut.png  used on input line 146.
+(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
+[86]
+File: Images/hcmut.png Graphic file (type png)
+<use Images/hcmut.png>
+Package pdftex.def Info: Images/hcmut.png  used on input line 146.
+(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
+ [87]
+Underfull \hbox (badness 10000) in paragraph at lines 158--158
+[]|\T5/cmr/bx/n/12 Luçng sü ki»n
+ []
+
+
+
+File: Images/hcmut.png Graphic file (type png)
+<use Images/hcmut.png>
+Package pdftex.def Info: Images/hcmut.png  used on input line 195.
+(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
+[88]
+File: Images/hcmut.png Graphic file (type png)
+<use Images/hcmut.png>
+Package pdftex.def Info: Images/hcmut.png  used on input line 195.
+(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
+ [89])
+<Images/6. System analysis/6.png, id=1114, 685.56125pt x 350.30875pt>
+File: Images/6. System analysis/6.png Graphic file (type png)
+<use Images/6. System analysis/6.png>
+Package pdftex.def Info: Images/6. System analysis/6.png  used on input line 75.
+(pdftex.def)             Requested size: 396.91325pt x 202.82108pt.
+ (./Sections/6. System Analysis/1-Analysis/use-case-diagram/6-module6.tex
+Underfull \hbox (badness 10000) in paragraph at lines 13--13
+[]|\T5/cmr/bx/n/12 Luçng sü ki»n
+ []
+
+
+
+File: Images/hcmut.png Graphic file (type png)
+<use Images/hcmut.png>
+Package pdftex.def Info: Images/hcmut.png  used on input line 28.
+(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
+[90])
+<Images/6. System analysis/7.png, id=1121, 636.3775pt x 414.54875pt>
+File: Images/6. System analysis/7.png Graphic file (type png)
+<use Images/6. System analysis/7.png>
+Package pdftex.def Info: Images/6. System analysis/7.png  used on input line 86.
+(pdftex.def)             Requested size: 396.91325pt x 258.55466pt.
+ (./Sections/6. System Analysis/1-Analysis/use-case-diagram/7-module7.tex
+
+File: Images/hcmut.png Graphic file (type png)
+<use Images/hcmut.png>
+Package pdftex.def Info: Images/hcmut.png  used on input line 1.
+(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
+[91 <./Images/6. System analysis/6.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 14--14
+[]|\T5/cmr/bx/n/12 Luçng sü ki»n
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 44--44
+[]|\T5/cmr/bx/n/12 Luçng sü ki»n
+ []
+
+)
+
+File: Images/hcmut.png Graphic file (type png)
+<use Images/hcmut.png>
+Package pdftex.def Info: Images/hcmut.png  used on input line 91.
+(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
+[92 <./Images/6. System analysis/7.png>]
+<Images/6. System analysis/8.png, id=1134, 766.865pt x 880.28876pt>
+File: Images/6. System analysis/8.png Graphic file (type png)
+<use Images/6. System analysis/8.png>
+Package pdftex.def Info: Images/6. System analysis/8.png  used on input line 97.
+(pdftex.def)             Requested size: 396.91325pt x 455.63051pt.
+ (./Sections/6. System Analysis/1-Analysis/use-case-diagram/8-module8.tex
+
+File: Images/hcmut.png Graphic file (type png)
+<use Images/hcmut.png>
+Package pdftex.def Info: Images/hcmut.png  used on input line 32.
+(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
+[93])
+<Images/6. System analysis/9.png, id=1140, 781.92125pt x 420.57124pt>
+File: Images/6. System analysis/9.png Graphic file (type png)
+<use Images/6. System analysis/9.png>
+Package pdftex.def Info: Images/6. System analysis/9.png  used on input line 108.
+(pdftex.def)             Requested size: 396.91325pt x 213.48738pt.
+ (./Sections/6. System Analysis/1-Analysis/use-case-diagram/9-module9.tex
+Underfull \hbox (badness 10000) in paragraph at lines 16--16
+[]|\T5/cmr/bx/n/12 Luçng sü ki»n
+ []
+
+
+
+File: Images/hcmut.png Graphic file (type png)
+<use Images/hcmut.png>
+Package pdftex.def Info: Images/hcmut.png  used on input line 31.
+(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
+[94 <./Images/6. System analysis/8.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 45--45
+[]|\T5/cmr/bx/n/12 Luçng sü ki»n
+ []
+
+
+
+File: Images/hcmut.png Graphic file (type png)
+<use Images/hcmut.png>
+Package pdftex.def Info: Images/hcmut.png  used on input line 59.
+(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
+[95 <./Images/6. System analysis/9.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 72--72
+[]|\T5/cmr/bx/n/12 Luçng sü ki»n
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 100--100
+[]|\T5/cmr/bx/n/12 Luçng sü ki»n
+ []
+
+
+
+File: Images/hcmut.png Graphic file (type png)
+<use Images/hcmut.png>
+Package pdftex.def Info: Images/hcmut.png  used on input line 115.
+(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
+[96]
+Underfull \hbox (badness 10000) in paragraph at lines 129--129
+[]|\T5/cmr/bx/n/12 Luçng sü ki»n
+ []
+
+))
+
+File: Images/hcmut.png Graphic file (type png)
+<use Images/hcmut.png>
+Package pdftex.def Info: Images/hcmut.png  used on input line 4.
+(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
+[97]
+
+File: Images/hcmut.png Graphic file (type png)
+<use Images/hcmut.png>
+Package pdftex.def Info: Images/hcmut.png  used on input line 5.
+(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
+[98] (./Sections/6. System Analysis/2-frontend.tex
+
+File: Images/hcmut.png Graphic file (type png)
+<use Images/hcmut.png>
+Package pdftex.def Info: Images/hcmut.png  used on input line 17.
+(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
+[99]
+Underfull \hbox (badness 10000) in paragraph at lines 41--41
+[]|\T5/cmr/m/n/10 Trung b¼nh: Ch¿
+ []
+
+
+Underfull \hbox (badness 4886) in paragraph at lines 41--41
+\T5/cmr/m/n/10 client-side rendering,
+ []
+
+
+Underfull \hbox (badness 2903) in paragraph at lines 41--41
+\T5/cmr/m/n/10 c¦n c§u h¼nh th¶m
+ []
+
+
+Underfull \hbox (badness 4181) in paragraph at lines 41--41
+[]|\T5/cmr/m/n/10 Cao: Virtual DOM,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 41--41
+\T5/cmr/m/n/10 Nuxt.js hé trñ
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 41--41
+\T5/cmr/m/n/10 SSR/SSG, nh÷ng
+ []
+
+
+Underfull \hbox (badness 3954) in paragraph at lines 41--41
+\T5/cmr/m/n/10 c§u h¼nh phùc t¤p
+ []
+
+
+Underfull \hbox (badness 3343) in paragraph at lines 41--41
+[]|\T5/cmr/m/n/10 Trung b¼nh: Bundle
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 41--41
+\T5/cmr/m/n/10 size lîn, SSR c¦n
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 41--41
+\T5/cmr/m/n/10 Angular Universal,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 41--41
+[]|\T5/cmr/m/n/10 Cao: Compile-time,
+ []
+
+
+Underfull \hbox (badness 1454) in paragraph at lines 41--41
+\T5/cmr/m/n/10 t£i nhanh, SvelteKit
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 41--41
+\T5/cmr/m/n/10 hé trñ SSR/SSG
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 41--41
+[]|\T5/cmr/m/n/10 Cao: File-based
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 41--41
+\T5/cmr/m/n/10 React Router, khâ
+ []
+
+
+Underfull \hbox (badness 1137) in paragraph at lines 41--41
+[]|\T5/cmr/m/n/10 Cao: Directive-based,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 41--41
+[]|\T5/cmr/m/n/10 Cao: Full-featured,
+ []
+
+
+Underfull \hbox (badness 2564) in paragraph at lines 41--41
+\T5/cmr/m/n/10 nh÷ng h» sinh th¡i
+ []
+
+
+Underfull \hbox (badness 1701) in paragraph at lines 41--41
+\T5/cmr/m/n/10 nhä, thi¸u th÷ vi»n
+ []
+
+
+Underfull \hbox (badness 1616) in paragraph at lines 41--41
+[]|\T5/cmr/m/n/10 Cao: API routes v 
+ []
+
+
+Underfull \hbox (badness 1205) in paragraph at lines 41--41
+\T5/cmr/m/n/10 t¼m ki¸m nhanh, v 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 41--41
+[]|\T5/cmr/m/n/10 Trung b¼nh: C¦n
+ []
+
+
+Underfull \hbox (badness 1394) in paragraph at lines 41--41
+\T5/cmr/m/n/10 t«ng thíi gian ph¡t
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 41--41
+[]|\T5/cmr/m/n/10 Trung b¼nh:
+ []
+
+
+Underfull \hbox (badness 8000) in paragraph at lines 41--41
+\T5/cmr/m/n/10 Vuex/Pinia hé trñ,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 41--41
+\T5/cmr/m/n/10 nh÷ng Nuxt.js c¦n
+ []
+
+
+Underfull \hbox (badness 3058) in paragraph at lines 41--41
+\T5/cmr/m/n/10 c§u h¼nh th¶m cho
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 41--41
+[]|\T5/cmr/m/n/10 Trung b¼nh:
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 41--41
+\T5/cmr/m/n/10 HttpClient m¤nh,
+ []
+
+
+Underfull \hbox (badness 1584) in paragraph at lines 41--41
+\T5/cmr/m/n/10 hé trñ fetch, nh÷ng
+ []
+
+
+Underfull \hbox (badness 4144) in paragraph at lines 41--41
+\T5/cmr/m/n/10 cho nëi dung cëng
+ []
+
+
+Underfull \hbox (badness 6428) in paragraph at lines 41--41
+\T5/cmr/m/n/10 ^^_çng (b i chia s´,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 41--41
+[]|\T5/cmr/m/n/10 Th§p: Client-side
+ []
+
+
+Underfull \hbox (badness 4967) in paragraph at lines 41--41
+\T5/cmr/m/n/10 rendering khæng hé
+ []
+
+
+Underfull \hbox (badness 1270) in paragraph at lines 41--41
+[]|\T5/cmr/m/n/10 Cao: Nuxt.js hé trñ
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 41--41
+[]|\T5/cmr/m/n/10 Th§p: SSR c¦n
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 41--41
+\T5/cmr/m/n/10 Angular Universal,
+ []
+
+
+Underfull \hbox (badness 7030) in paragraph at lines 41--41
+\T5/cmr/m/n/10 câ nhi·u th÷ vi»n
+ []
+
+
+Underfull \hbox (badness 6412) in paragraph at lines 41--41
+[]|\T5/cmr/m/n/10 Cao: H» sinh th¡i
+ []
+
+
+Underfull \hbox (badness 6412) in paragraph at lines 41--41
+[]|\T5/cmr/m/n/10 Cao: H» sinh th¡i
+ []
+
+
+Underfull \hbox (badness 2150) in paragraph at lines 41--41
+[]|\T5/cmr/m/n/10 Th§p: H» sinh th¡i
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 41--41
+[]|\T5/cmr/m/n/10 Trung b¼nh: C¦n
+ []
+
+
+Underfull \hbox (badness 4144) in paragraph at lines 41--41
+\T5/cmr/m/n/10 h¼nh phùc t¤p cho
+ []
+
+
+Underfull \hbox (badness 2165) in paragraph at lines 41--41
+[]|\T5/cmr/m/n/10 Cao: Netlify hé trñ
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 41--41
+[]|\T5/cmr/m/n/10 Cao: SvelteKit d¹
+ []
+
+
+Underfull \hbox (badness 1112) in paragraph at lines 41--41
+\T5/cmr/m/n/10 triºn khai, nh÷ng ½t
+ []
+
+
+
+File: Images/hcmut.png Graphic file (type png)
+<use Images/hcmut.png>
+Package pdftex.def Info: Images/hcmut.png  used on input line 44.
+(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
+[100
+
+
+]
+
+File: Images/hcmut.png Graphic file (type png)
+<use Images/hcmut.png>
+Package pdftex.def Info: Images/hcmut.png  used on input line 61.
+(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
+[101
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 81--81
+[]|\T5/cmr/bx/n/10 C i ^^_°t qua
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 81--81
+\T5/cmr/bx/n/10 NPM/Yarn: \T5/cmr/m/n/10 Sû döng
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 81--81
+[]|\T5/cmr/bx/n/10 C i ^^_°t qua
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 81--81
+\T5/cmr/bx/n/10 NPM/Yarn: \T5/cmr/m/n/10 Sû döng
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 81--81
+[]|\T5/cmr/bx/n/10 C i ^^_°t qua
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 81--81
+\T5/cmr/bx/n/10 NPM/Yarn: \T5/cmr/m/n/10 Sû döng
+ []
+
+
+Underfull \hbox (badness 5607) in paragraph at lines 81--81
+[]|\T5/cmr/bx/n/10 Trung b¼nh: \T5/cmr/m/n/10 Khâ tòy
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 81--81
+[]|\T5/cmr/bx/n/10 Emotion / Styled-
+ []
+
+
+Underfull \hbox (badness 2726) in paragraph at lines 81--81
+[]|\T5/cmr/bx/n/10 Less / CSS-in-JS: \T5/cmr/m/n/10 Sû
+ []
+
+
+Underfull \hbox (badness 1917) in paragraph at lines 81--81
+\T5/cmr/m/n/10 döng bi¸n Less v  style
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 81--81
+[]|\T5/cmr/bx/n/10 Emotion / Styled-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 81--81
+\T5/cmr/bx/n/10 System: \T5/cmr/m/n/10 CSS-in-JS vîi
+ []
+
+
+Underfull \hbox (badness 4328) in paragraph at lines 81--81
+[]|\T5/cmr/bx/n/10 Tèi ÷u: \T5/cmr/m/n/10 Ch¿ bao gçm
+ []
+
+
+Underfull \hbox (badness 5119) in paragraph at lines 81--81
+[]|\T5/cmr/bx/n/10 R§t cao: \T5/cmr/m/n/10 K¸ thøa tø
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 81--81
+\T5/cmr/m/n/10 Radix UI, mët trong
+ []
+
+
+
+File: Images/hcmut.png Graphic file (type png)
+<use Images/hcmut.png>
+Package pdftex.def Info: Images/hcmut.png  used on input line 84.
+(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
+[102
+
+
+]) (./Sections/6. System Analysis/3-backend.tex
+
+File: Images/hcmut.png Graphic file (type png)
+<use Images/hcmut.png>
+Package pdftex.def Info: Images/hcmut.png  used on input line 17.
+(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
+[103
+
+]
+Underfull \hbox (badness 1147) in paragraph at lines 39--39
+[]|\T5/cmr/m/n/10 Cao: REST API d¹
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 39--39
+[]|\T5/cmr/m/n/10 Cao: Express nhµ,
+ []
+
+
+Underfull \hbox (badness 1694) in paragraph at lines 39--39
+\T5/cmr/m/n/10 API gñi ş v  cëng
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 39--39
+\T5/cmr/m/n/10 ^^_çng. Nh÷ng c¦n
+ []
+
+
+Underfull \hbox (badness 3364) in paragraph at lines 39--39
+\T5/cmr/m/n/10 th¶m th÷ vi»n cho
+ []
+
+
+Underfull \hbox (badness 3872) in paragraph at lines 39--39
+[]|\T5/cmr/m/n/10 Cao: Django REST
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 39--39
+[]|\T5/cmr/m/n/10 Cao: Convention-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 39--39
+\T5/cmr/m/n/10 over-configuration,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 39--39
+\T5/cmr/m/n/10 nh÷ng chªm hìn
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 39--39
+[]|\T5/cmr/m/n/10 Cao: Spring
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 39--39
+\T5/cmr/m/n/10 Batch (batch) v 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 39--39
+\T5/cmr/m/n/10 Spring Integration
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 39--39
+\T5/cmr/m/n/10 (streaming) hé trñ
+ []
+
+
+Underfull \hbox (badness 1028) in paragraph at lines 39--39
+\T5/cmr/m/n/10 ETL, chu©n hâa dú
+ []
+
+
+Underfull \hbox (badness 1107) in paragraph at lines 39--39
+\T5/cmr/m/n/10 li»u tø nguçn ngo i
+ []
+
+
+Underfull \hbox (badness 1264) in paragraph at lines 39--39
+\T5/cmr/m/n/10 Celery hé trñ ETL,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 39--39
+\T5/cmr/m/n/10 nh÷ng streaming
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 39--39
+\T5/cmr/m/n/10 k²m hìn Spring
+ []
+
+
+Underfull \hbox (badness 6001) in paragraph at lines 39--39
+[]|\T5/cmr/m/n/10 Trung b¼nh: Active
+ []
+
+
+Underfull \hbox (badness 3803) in paragraph at lines 39--39
+\T5/cmr/m/n/10 Record tèt cho dú
+ []
+
+
+Underfull \hbox (badness 5431) in paragraph at lines 39--39
+\T5/cmr/m/n/10 v  ETL c¦n th¶m
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 39--39
+[]|\T5/cmr/m/n/10 Trung b¼nh: C¦n
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 39--39
+\T5/cmr/m/n/10 t½ch hñp s®n
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 39--39
+\T5/cmr/m/n/10 OAuth2/JWT, b£o
+ []
+
+
+Underfull \hbox (badness 5417) in paragraph at lines 39--39
+\T5/cmr/m/n/10 c§u h¼nh b£o mªt
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 39--39
+[]|\T5/cmr/m/n/10 Cao: Django
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 39--39
+\T5/cmr/m/n/10 Authentication
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 39--39
+\T5/cmr/m/n/10 m¤nh, nh÷ng c§u
+ []
+
+
+Underfull \hbox (badness 7291) in paragraph at lines 39--39
+\T5/cmr/m/n/10 h¼nh OAuth2 phùc
+ []
+
+
+Underfull \hbox (badness 2310) in paragraph at lines 39--39
+[]|\T5/cmr/m/n/10 Cao: Devise hé trñ
+ []
+
+
+Underfull \hbox (badness 1092) in paragraph at lines 39--39
+\T5/cmr/m/n/10 Login), khæng m¤nh
+ []
+
+
+Underfull \hbox (badness 1616) in paragraph at lines 39--39
+\T5/cmr/m/n/10 API qu£n trà, kiºm
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 39--39
+\T5/cmr/m/n/10 t½ch hñp s®n nh÷
+ []
+
+
+Underfull \hbox (badness 1824) in paragraph at lines 39--39
+[]|\T5/cmr/m/n/10 Cao: Django Admin
+ []
+
+
+Underfull \hbox (badness 2556) in paragraph at lines 39--39
+\T5/cmr/m/n/10 m¤nh, hé trñ kiºm
+ []
+
+
+Underfull \hbox (badness 4967) in paragraph at lines 39--39
+\T5/cmr/m/n/10 duy»t, nh÷ng audit
+ []
+
+
+Underfull \hbox (badness 3019) in paragraph at lines 39--39
+\T5/cmr/m/n/10 trail c¦n th¶m th÷
+ []
+
+
+Underfull \hbox (badness 3354) in paragraph at lines 39--39
+\T5/cmr/m/n/10 trail phùc t¤p hìn
+ []
+
+
+Underfull \hbox (badness 2005) in paragraph at lines 39--39
+\T5/cmr/m/n/10 câ module s®n nh÷
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 39--39
+[]|\T5/cmr/m/n/10 Cao: Spring Boot
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 39--39
+\T5/cmr/m/n/10 Actuator cung c§p
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 39--39
+\T5/cmr/m/n/10 log, telemetry, v 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 39--39
+\T5/cmr/m/n/10 vi»n nh÷ Winston,
+ []
+
+
+Underfull \hbox (badness 2376) in paragraph at lines 39--39
+[]|\T5/cmr/m/n/10 Trung b¼nh: Django
+ []
+
+
+Underfull \hbox (badness 1565) in paragraph at lines 39--39
+\T5/cmr/m/n/10 Sentry, khæng m¤nh
+ []
+
+
+Underfull \hbox (badness 4303) in paragraph at lines 39--39
+[]|\T5/cmr/m/n/10 Th§p: C¦n tü x¥y
+ []
+
+
+Underfull \hbox (badness 1454) in paragraph at lines 39--39
+\T5/cmr/m/n/10 düng log, gi¡m s¡t,
+ []
+
+
+Underfull \hbox (badness 5592) in paragraph at lines 39--39
+[]|\T5/cmr/m/n/10 Cao: H» sinh th¡i
+ []
+
+
+Underfull \hbox (badness 1237) in paragraph at lines 39--39
+\T5/cmr/m/n/10 Java lîn, nhi·u th÷
+ []
+
+
+Underfull \hbox (badness 3312) in paragraph at lines 39--39
+\T5/cmr/m/n/10 vi»n (Spring Batch,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 39--39
+\T5/cmr/m/n/10 Security), t i li»u
+ []
+
+
+Underfull \hbox (badness 5592) in paragraph at lines 39--39
+[]|\T5/cmr/m/n/10 Cao: H» sinh th¡i
+ []
+
+
+Underfull \hbox (badness 6775) in paragraph at lines 39--39
+\T5/cmr/m/n/10 Node.js lîn, nh÷ng
+ []
+
+
+Underfull \hbox (badness 2293) in paragraph at lines 39--39
+\T5/cmr/m/n/10 th÷ vi»n ph¥n t¡n,
+ []
+
+
+Underfull \hbox (badness 5592) in paragraph at lines 39--39
+[]|\T5/cmr/m/n/10 Cao: H» sinh th¡i
+ []
+
+
+Underfull \hbox (badness 1406) in paragraph at lines 39--39
+\T5/cmr/m/n/10 th¡i Rails nhä hìn,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 39--39
+\T5/cmr/m/n/10 th¡i Python tèt,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 39--39
+\T5/cmr/m/n/10 nh÷ng Flask thi¸u
+ []
+
+
+Underfull \hbox (badness 1661) in paragraph at lines 39--39
+\T5/cmr/m/n/10 module t½ch hñp so
+ []
+
+
+LaTeX Warning: Float too large for page by 19.03613pt on input line 41.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+
+File: Images/hcmut.png Graphic file (type png)
+<use Images/hcmut.png>
+Package pdftex.def Info: Images/hcmut.png  used on input line 42.
+(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
+[104]) (./Sections/6. System Analysis/4-database.tex
+
+File: Images/hcmut.png Graphic file (type png)
+<use Images/hcmut.png>
+Package pdftex.def Info: Images/hcmut.png  used on input line 24.
+(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
+[105
+
+
+
+]
+
+File: Images/hcmut.png Graphic file (type png)
+<use Images/hcmut.png>
+Package pdftex.def Info: Images/hcmut.png  used on input line 24.
+(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
+[106]
+Underfull \hbox (badness 5403) in paragraph at lines 46--46
+\T5/cmr/m/n/10 câ c§u tróc, nh÷ng
+ []
+
+
+Underfull \hbox (badness 1158) in paragraph at lines 46--46
+\T5/cmr/m/n/10 JSON k²m linh ho¤t
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 46--46
+[]|\T5/cmr/bx/n/10 Cao\T5/cmr/m/n/10 : T÷ìng tü
+ []
+
+
+Underfull \hbox (badness 1478) in paragraph at lines 46--46
+\T5/cmr/m/n/10 lîn, nh÷ng phùc t¤p
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 46--46
+[]|\T5/cmr/bx/n/10 Cao\T5/cmr/m/n/10 : T÷ìng tü
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 46--46
+\T5/cmr/m/n/10 MySQL, nh÷ng
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 46--46
+\T5/cmr/m/n/10 full-text search
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 46--46
+\T5/cmr/m/n/10 khæng m¤nh b¬ng
+ []
+
+
+Underfull \hbox (badness 6094) in paragraph at lines 46--46
+[]|\T5/cmr/bx/n/10 Cao\T5/cmr/m/n/10 : ACID hé trñ
+ []
+
+
+Underfull \hbox (badness 8189) in paragraph at lines 46--46
+\T5/cmr/m/n/10 n¥ng cao k²m hìn
+ []
+
+
+Underfull \hbox (badness 1953) in paragraph at lines 46--46
+[]|\T5/cmr/bx/n/10 Trung b¼nh\T5/cmr/m/n/10 : Khæng
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 46--46
+[]|\T5/cmr/bx/n/10 Cao\T5/cmr/m/n/10 : ACID, nh÷ng
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 46--46
+[]|\T5/cmr/bx/n/10 Cao\T5/cmr/m/n/10 : T÷ìng tü
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 46--46
+\T5/cmr/m/n/10 MySQL, nh÷ng
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 46--46
+\T5/cmr/m/n/10 khæng m¤nh b¬ng
+ []
+
+
+Underfull \hbox (badness 2460) in paragraph at lines 46--46
+\T5/cmr/m/n/10 PostgreSQL cho giao
+ []
+
+
+Underfull \hbox (badness 2564) in paragraph at lines 46--46
+\T5/cmr/m/n/10 truy cªp tèt, nh÷ng
+ []
+
+
+Underfull \hbox (badness 1430) in paragraph at lines 46--46
+[]|\T5/cmr/bx/n/10 Th§p\T5/cmr/m/n/10 : B£o mªt giîi
+ []
+
+
+Underfull \hbox (badness 1917) in paragraph at lines 46--46
+\T5/cmr/m/n/10 h¤n, khæng phò hñp
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 46--46
+[]|\T5/cmr/bx/n/10 Cao\T5/cmr/m/n/10 : T÷ìng tü
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 46--46
+\T5/cmr/m/n/10 MySQL, nh÷ng
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 46--46
+\T5/cmr/m/n/10 c§u h¼nh b£o mªt
+ []
+
+
+Underfull \hbox (badness 1603) in paragraph at lines 46--46
+[]|\T5/cmr/bx/n/10 Cao\T5/cmr/m/n/10 : T½ch hñp ETL
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 46--46
+\T5/cmr/m/n/10 (Spring Batch), mğ
+ []
+
+
+Underfull \hbox (badness 1648) in paragraph at lines 46--46
+\T5/cmr/m/n/10 rëng d¹ cho dú li»u
+ []
+
+
+Underfull \hbox (badness 4168) in paragraph at lines 46--46
+[]|\T5/cmr/bx/n/10 Cao\T5/cmr/m/n/10 : T½ch hñp tèt,
+ []
+
+
+Underfull \hbox (badness 2875) in paragraph at lines 46--46
+\T5/cmr/m/n/10 lîn, nh÷ng t½ch hñp
+ []
+
+
+Underfull \hbox (badness 5681) in paragraph at lines 46--46
+\T5/cmr/m/n/10 ETL phùc t¤p hìn
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 46--46
+[]|\T5/cmr/bx/n/10 Cao\T5/cmr/m/n/10 : T÷ìng tü
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 46--46
+\T5/cmr/m/n/10 MySQL, nh÷ng mğ
+ []
+
+
+Underfull \hbox (badness 1325) in paragraph at lines 46--46
+\T5/cmr/m/n/10 rëng JSON k²m hìn
+ []
+
+
+Underfull \hbox (badness 8189) in paragraph at lines 46--46
+[]|\T5/cmr/bx/n/10 Cao\T5/cmr/m/n/10 : H» sinh th¡i
+ []
+
+
+Underfull \hbox (badness 1365) in paragraph at lines 46--46
+\T5/cmr/m/n/10 NoSQL m¤nh, nh÷ng
+ []
+
+
+Underfull \hbox (badness 2698) in paragraph at lines 46--46
+[]|\T5/cmr/bx/n/10 Th§p\T5/cmr/m/n/10 : H» sinh th¡i
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 46--46
+[]|\T5/cmr/bx/n/10 Cao\T5/cmr/m/n/10 : T÷ìng tü
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 46--46
+\T5/cmr/m/n/10 MySQL, nh÷ng
+ []
+
+
+Underfull \hbox (badness 4531) in paragraph at lines 46--46
+\T5/cmr/m/n/10 cëng ^^_çng nhä hìn
+ []
+
+
+
+File: Images/hcmut.png Graphic file (type png)
+<use Images/hcmut.png>
+Package pdftex.def Info: Images/hcmut.png  used on input line 49.
+(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
+[107
+
+
+]
+
+File: Images/hcmut.png Graphic file (type png)
+<use Images/hcmut.png>
+Package pdftex.def Info: Images/hcmut.png  used on input line 65.
+(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
+[108
+
+]
+Underfull \hbox (badness 1776) in paragraph at lines 83--83
+\T5/cmr/m/n/10 RAM r§t nhi·u, khæng phò hñp cho
+ []
+
+
+
+File: Images/hcmut.png Graphic file (type png)
+<use Images/hcmut.png>
+Package pdftex.def Info: Images/hcmut.png  used on input line 86.
+(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
+[109
+
+
+]) (./Sections/6. System Analysis/5-storage.tex
+Underfull \hbox (badness 10000) in paragraph at lines 7--8
+[]\T5/cmr/m/n/12 >>>>>>>> origin/main:Sections/6. System Analysis/2-Technology solutions/Other
+ []
+
+
+
+File: Images/hcmut.png Graphic file (type png)
+<use Images/hcmut.png>
+Package pdftex.def Info: Images/hcmut.png  used on input line 24.
+(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
+[110
+
+]
+
+File: Images/hcmut.png Graphic file (type png)
+<use Images/hcmut.png>
+Package pdftex.def Info: Images/hcmut.png  used on input line 47.
+(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
+[111
+
+
+]) (./Sections/6. System Analysis/6-architecture.tex
+<Images/7. System Design/Kiáº¿n trÃºc há»‡ thá»‘ng.png, id=1267, 1853.92625pt x 2272.49pt>
+File: Images/7. System Design/Kiáº¿n trÃºc há»‡ thá»‘ng.png Graphic file (type png)
+<use Images/7. System Design/Kiáº¿n trÃºc há»‡ thá»‘ng.png>
+Package pdftex.def Info: Images/7. System Design/Kiáº¿n trÃºc há»‡ thá»‘ng.png  used on input line 6.
+(pdftex.def)             Requested size: 396.91325pt x 486.49532pt.
+
+
+File: Images/hcmut.png Graphic file (type png)
+<use Images/hcmut.png>
+Package pdftex.def Info: Images/hcmut.png  used on input line 10.
+(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
+[112
+
+]
+Underfull \hbox (badness 1400) in paragraph at lines 13--14
+[]\T5/cmr/bx/n/12 Presentation Layer: \T5/cmr/m/n/12 ti¸p nhªn, x¡c thüc v  ^^_i·u h÷îng c¡c y¶u c¦u
+ []
+
+
+
+File: Images/hcmut.png Graphic file (type png)
+<use Images/hcmut.png>
+Package pdftex.def Info: Images/hcmut.png  used on input line 16.
+(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
+[113 <./Images/7. System Design/Kiáº¿n trÃºc há»‡ thá»‘ng.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 22--24
+[]\T5/cmr/m/n/12 ======== >>>>>>>> origin/main:Sections/6. System Analysis/3-System
+ []
+
+
+
+File: Images/hcmut.png Graphic file (type png)
+<use Images/hcmut.png>
+Package pdftex.def Info: Images/hcmut.png  used on input line 45.
+(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
+[114]
+Underfull \hbox (badness 2717) in paragraph at lines 82--82
+[]|\T5/cmr/bx/n/12 Ki¸n tróc H÷îng
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 82--82
+\T5/cmr/bx/n/12 sü ki»n (Event-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 82--82
+[]|\T5/cmr/bx/n/12 Ki¸n tróc ^^^ìn
+ []
+
+
+Underfull \hbox (badness 7030) in paragraph at lines 82--82
+\T5/cmr/m/n/12 (Frontend, Backend)
+ []
+
+
+Underfull \hbox (badness 1158) in paragraph at lines 82--82
+\T5/cmr/m/n/12 nhi¶n, c§u tróc méi
+ []
+
+
+Underfull \hbox (badness 5022) in paragraph at lines 82--82
+[]|\T5/cmr/bx/n/12 R§t cao: \T5/cmr/m/n/12 ^^^ái häi
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 82--82
+\T5/cmr/m/n/12 qu£n lş giao ti¸p
+ []
+
+
+Underfull \hbox (badness 1946) in paragraph at lines 82--82
+\T5/cmr/m/n/12 li¶n dàch vö, cì sğ
+ []
+
+
+Underfull \hbox (badness 7740) in paragraph at lines 82--82
+\T5/cmr/m/n/12 h¤ t¦ng phùc t¤p
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 82--82
+\T5/cmr/m/n/12 (service discovery,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 82--82
+\T5/cmr/m/n/12 (nh÷ RabbitMQ,
+ []
+
+
+Underfull \hbox (badness 3128) in paragraph at lines 82--82
+\T5/cmr/m/n/12 b­t ^^_¦u, nh÷ng ^^_ë
+ []
+
+
+Underfull \hbox (badness 3029) in paragraph at lines 82--82
+[]|\T5/cmr/bx/n/12 Tèt: \T5/cmr/m/n/12 C¡c lîp ^^_÷ñc
+ []
+
+
+Underfull \hbox (badness 3657) in paragraph at lines 82--82
+\T5/cmr/m/n/12 (v½ dö: léi logic ğ
+ []
+
+
+Underfull \hbox (badness 1642) in paragraph at lines 82--82
+\T5/cmr/m/n/12 dàch vö review) m 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 82--82
+[]|\T5/cmr/bx/n/12 Trung b¼nh: \T5/cmr/m/n/12 R§t
+ []
+
+
+Underfull \hbox (badness 4441) in paragraph at lines 82--82
+\T5/cmr/m/n/12 ho n to n ^^_ëc lªp
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 82--82
+\T5/cmr/m/n/12 (decoupled). Nh÷ng
+ []
+
+
+Underfull \hbox (badness 5652) in paragraph at lines 82--82
+\T5/cmr/m/n/12 (scale) Frontend v 
+ []
+
+
+Underfull \hbox (badness 5908) in paragraph at lines 82--82
+[]|\T5/cmr/bx/n/12 Tèt: \T5/cmr/m/n/12 Câ thº kiºm
+ []
+
+
+Underfull \hbox (badness 5563) in paragraph at lines 82--82
+\T5/cmr/m/n/12 thû Backend (API)
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 82--82
+\T5/cmr/m/n/12 Kiºm thû logic ğ
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 82--82
+[]|\T5/cmr/bx/n/12 Phùc t¤p: \T5/cmr/m/n/12 C¦n
+ []
+
+
+Underfull \hbox (badness 5091) in paragraph at lines 82--82
+\T5/cmr/m/n/12 kiºm thû t½ch hñp
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 82--82
+\T5/cmr/m/n/12 (integration testing)
+ []
+
+
+Underfull \hbox (badness 1077) in paragraph at lines 82--82
+\T5/cmr/m/n/12 d¹, nh÷ng kiºm thû
+ []
+
+
+Underfull \hbox (badness 3128) in paragraph at lines 82--82
+\T5/cmr/m/n/12 c¡c th nh ph¦n ^^_º
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+) (./Sections/6. System Analysis/8-sitemap.tex
+<Images/7. System Design/Sitemap.png, id=1289, 1363.0925pt x 1054.94125pt>
+File: Images/7. System Design/Sitemap.png Graphic file (type png)
+<use Images/7. System Design/Sitemap.png>
+Package pdftex.def Info: Images/7. System Design/Sitemap.png  used on input line 5.
+(pdftex.def)             Requested size: 441.01773pt x 341.32262pt.
+
+
+File: Images/hcmut.png Graphic file (type png)
+<use Images/hcmut.png>
+Package pdftex.def Info: Images/hcmut.png  used on input line 9.
+(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
+[115]
+
+File: Images/hcmut.png Graphic file (type png)
+<use Images/hcmut.png>
+Package pdftex.def Info: Images/hcmut.png  used on input line 9.
+(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
+[116]
+Overfull \hbox (10.97359pt too wide) in paragraph at lines 13--20
+ [][] 
+ []
+
+
+Overfull \hbox (10.97359pt too wide) in paragraph at lines 26--32
+ [][] 
+ []
+
+
+
+File: Images/hcmut.png Graphic file (type png)
+<use Images/hcmut.png>
+Package pdftex.def Info: Images/hcmut.png  used on input line 35.
+(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
+[117 <./Images/7. System Design/Sitemap.png>]
+Overfull \hbox (10.97359pt too wide) in paragraph at lines 38--66
+ [][] 
+ []
+
+
+Overfull \hbox (10.97359pt too wide) in paragraph at lines 72--85
+ [][] 
+ []
+
+
+
+File: Images/hcmut.png Graphic file (type png)
+<use Images/hcmut.png>
+Package pdftex.def Info: Images/hcmut.png  used on input line 88.
+(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
+[118]) (./Sections/6. System Analysis/2-Technology solutions/Technology.tex (./Sections/6. System Analysis/2-Technology solutions/Frontend.tex
+
+File: Images/hcmut.png Graphic file (type png)
+<use Images/hcmut.png>
+Package pdftex.def Info: Images/hcmut.png  used on input line 12.
+(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
+[119]
+
+File: Images/hcmut.png Graphic file (type png)
+<use Images/hcmut.png>
+Package pdftex.def Info: Images/hcmut.png  used on input line 17.
+(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
+[120]
+Underfull \hbox (badness 10000) in paragraph at lines 41--41
+[]|\T5/cmr/m/n/10 Trung b¼nh: Ch¿
+ []
+
+
+Underfull \hbox (badness 4886) in paragraph at lines 41--41
+\T5/cmr/m/n/10 client-side rendering,
+ []
+
+
+Underfull \hbox (badness 2903) in paragraph at lines 41--41
+\T5/cmr/m/n/10 c¦n c§u h¼nh th¶m
+ []
+
+
+Underfull \hbox (badness 4181) in paragraph at lines 41--41
+[]|\T5/cmr/m/n/10 Cao: Virtual DOM,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 41--41
+\T5/cmr/m/n/10 Nuxt.js hé trñ
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 41--41
+\T5/cmr/m/n/10 SSR/SSG, nh÷ng
+ []
+
+
+Underfull \hbox (badness 3954) in paragraph at lines 41--41
+\T5/cmr/m/n/10 c§u h¼nh phùc t¤p
+ []
+
+
+Underfull \hbox (badness 3343) in paragraph at lines 41--41
+[]|\T5/cmr/m/n/10 Trung b¼nh: Bundle
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 41--41
+\T5/cmr/m/n/10 size lîn, SSR c¦n
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 41--41
+\T5/cmr/m/n/10 Angular Universal,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 41--41
+[]|\T5/cmr/m/n/10 Cao: Compile-time,
+ []
+
+
+Underfull \hbox (badness 1454) in paragraph at lines 41--41
+\T5/cmr/m/n/10 t£i nhanh, SvelteKit
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 41--41
+\T5/cmr/m/n/10 hé trñ SSR/SSG
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 41--41
+[]|\T5/cmr/m/n/10 Cao: File-based
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 41--41
+\T5/cmr/m/n/10 React Router, khâ
+ []
+
+
+Underfull \hbox (badness 1137) in paragraph at lines 41--41
+[]|\T5/cmr/m/n/10 Cao: Directive-based,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 41--41
+[]|\T5/cmr/m/n/10 Cao: Full-featured,
+ []
+
+
+Underfull \hbox (badness 2564) in paragraph at lines 41--41
+\T5/cmr/m/n/10 nh÷ng h» sinh th¡i
+ []
+
+
+Underfull \hbox (badness 1701) in paragraph at lines 41--41
+\T5/cmr/m/n/10 nhä, thi¸u th÷ vi»n
+ []
+
+
+Underfull \hbox (badness 1616) in paragraph at lines 41--41
+[]|\T5/cmr/m/n/10 Cao: API routes v 
+ []
+
+
+Underfull \hbox (badness 1205) in paragraph at lines 41--41
+\T5/cmr/m/n/10 t¼m ki¸m nhanh, v 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 41--41
+[]|\T5/cmr/m/n/10 Trung b¼nh: C¦n
+ []
+
+
+Underfull \hbox (badness 1394) in paragraph at lines 41--41
+\T5/cmr/m/n/10 t«ng thíi gian ph¡t
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 41--41
+[]|\T5/cmr/m/n/10 Trung b¼nh:
+ []
+
+
+Underfull \hbox (badness 8000) in paragraph at lines 41--41
+\T5/cmr/m/n/10 Vuex/Pinia hé trñ,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 41--41
+\T5/cmr/m/n/10 nh÷ng Nuxt.js c¦n
+ []
+
+
+Underfull \hbox (badness 3058) in paragraph at lines 41--41
+\T5/cmr/m/n/10 c§u h¼nh th¶m cho
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 41--41
+[]|\T5/cmr/m/n/10 Trung b¼nh:
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 41--41
+\T5/cmr/m/n/10 HttpClient m¤nh,
+ []
+
+
+Underfull \hbox (badness 1584) in paragraph at lines 41--41
+\T5/cmr/m/n/10 hé trñ fetch, nh÷ng
+ []
+
+
+Underfull \hbox (badness 4144) in paragraph at lines 41--41
+\T5/cmr/m/n/10 cho nëi dung cëng
+ []
+
+
+Underfull \hbox (badness 6428) in paragraph at lines 41--41
+\T5/cmr/m/n/10 ^^_çng (b i chia s´,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 41--41
+[]|\T5/cmr/m/n/10 Th§p: Client-side
+ []
+
+
+Underfull \hbox (badness 4967) in paragraph at lines 41--41
+\T5/cmr/m/n/10 rendering khæng hé
+ []
+
+
+Underfull \hbox (badness 1270) in paragraph at lines 41--41
+[]|\T5/cmr/m/n/10 Cao: Nuxt.js hé trñ
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 41--41
+[]|\T5/cmr/m/n/10 Th§p: SSR c¦n
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 41--41
+\T5/cmr/m/n/10 Angular Universal,
+ []
+
+
+Underfull \hbox (badness 7030) in paragraph at lines 41--41
+\T5/cmr/m/n/10 câ nhi·u th÷ vi»n
+ []
+
+
+Underfull \hbox (badness 6412) in paragraph at lines 41--41
+[]|\T5/cmr/m/n/10 Cao: H» sinh th¡i
+ []
+
+
+Underfull \hbox (badness 6412) in paragraph at lines 41--41
+[]|\T5/cmr/m/n/10 Cao: H» sinh th¡i
+ []
+
+
+Underfull \hbox (badness 2150) in paragraph at lines 41--41
+[]|\T5/cmr/m/n/10 Th§p: H» sinh th¡i
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 41--41
+[]|\T5/cmr/m/n/10 Trung b¼nh: C¦n
+ []
+
+
+Underfull \hbox (badness 4144) in paragraph at lines 41--41
+\T5/cmr/m/n/10 h¼nh phùc t¤p cho
+ []
+
+
+Underfull \hbox (badness 2165) in paragraph at lines 41--41
+[]|\T5/cmr/m/n/10 Cao: Netlify hé trñ
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 41--41
+[]|\T5/cmr/m/n/10 Cao: SvelteKit d¹
+ []
+
+
+Underfull \hbox (badness 1112) in paragraph at lines 41--41
+\T5/cmr/m/n/10 triºn khai, nh÷ng ½t
+ []
+
+
+
+File: Images/hcmut.png Graphic file (type png)
+<use Images/hcmut.png>
+Package pdftex.def Info: Images/hcmut.png  used on input line 44.
+(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
+[121
+
+
+]
+
+File: Images/hcmut.png Graphic file (type png)
+<use Images/hcmut.png>
+Package pdftex.def Info: Images/hcmut.png  used on input line 61.
+(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
+[122
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 81--81
+[]|\T5/cmr/bx/n/10 C i ^^_°t qua
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 81--81
+\T5/cmr/bx/n/10 NPM/Yarn: \T5/cmr/m/n/10 Sû döng
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 81--81
+[]|\T5/cmr/bx/n/10 C i ^^_°t qua
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 81--81
+\T5/cmr/bx/n/10 NPM/Yarn: \T5/cmr/m/n/10 Sû döng
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 81--81
+[]|\T5/cmr/bx/n/10 C i ^^_°t qua
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 81--81
+\T5/cmr/bx/n/10 NPM/Yarn: \T5/cmr/m/n/10 Sû döng
+ []
+
+
+Underfull \hbox (badness 5607) in paragraph at lines 81--81
+[]|\T5/cmr/bx/n/10 Trung b¼nh: \T5/cmr/m/n/10 Khâ tòy
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 81--81
+[]|\T5/cmr/bx/n/10 Emotion / Styled-
+ []
+
+
+Underfull \hbox (badness 2726) in paragraph at lines 81--81
+[]|\T5/cmr/bx/n/10 Less / CSS-in-JS: \T5/cmr/m/n/10 Sû
+ []
+
+
+Underfull \hbox (badness 1917) in paragraph at lines 81--81
+\T5/cmr/m/n/10 döng bi¸n Less v  style
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 81--81
+[]|\T5/cmr/bx/n/10 Emotion / Styled-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 81--81
+\T5/cmr/bx/n/10 System: \T5/cmr/m/n/10 CSS-in-JS vîi
+ []
+
+
+Underfull \hbox (badness 4328) in paragraph at lines 81--81
+[]|\T5/cmr/bx/n/10 Tèi ÷u: \T5/cmr/m/n/10 Ch¿ bao gçm
+ []
+
+
+Underfull \hbox (badness 5119) in paragraph at lines 81--81
+[]|\T5/cmr/bx/n/10 R§t cao: \T5/cmr/m/n/10 K¸ thøa tø
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 81--81
+\T5/cmr/m/n/10 Radix UI, mët trong
+ []
+
+
+
+File: Images/hcmut.png Graphic file (type png)
+<use Images/hcmut.png>
+Package pdftex.def Info: Images/hcmut.png  used on input line 84.
+(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
+[123
+
+
+]) (./Sections/6. System Analysis/2-Technology solutions/Backend.tex
+
+File: Images/hcmut.png Graphic file (type png)
+<use Images/hcmut.png>
+Package pdftex.def Info: Images/hcmut.png  used on input line 17.
+(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
+[124
+
+]
+Underfull \hbox (badness 1147) in paragraph at lines 39--39
+[]|\T5/cmr/m/n/10 Cao: REST API d¹
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 39--39
+[]|\T5/cmr/m/n/10 Cao: Express nhµ,
+ []
+
+
+Underfull \hbox (badness 1694) in paragraph at lines 39--39
+\T5/cmr/m/n/10 API gñi ş v  cëng
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 39--39
+\T5/cmr/m/n/10 ^^_çng. Nh÷ng c¦n
+ []
+
+
+Underfull \hbox (badness 3364) in paragraph at lines 39--39
+\T5/cmr/m/n/10 th¶m th÷ vi»n cho
+ []
+
+
+Underfull \hbox (badness 3872) in paragraph at lines 39--39
+[]|\T5/cmr/m/n/10 Cao: Django REST
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 39--39
+[]|\T5/cmr/m/n/10 Cao: Convention-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 39--39
+\T5/cmr/m/n/10 over-configuration,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 39--39
+\T5/cmr/m/n/10 nh÷ng chªm hìn
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 39--39
+[]|\T5/cmr/m/n/10 Cao: Spring
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 39--39
+\T5/cmr/m/n/10 Batch (batch) v 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 39--39
+\T5/cmr/m/n/10 Spring Integration
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 39--39
+\T5/cmr/m/n/10 (streaming) hé trñ
+ []
+
+
+Underfull \hbox (badness 1028) in paragraph at lines 39--39
+\T5/cmr/m/n/10 ETL, chu©n hâa dú
+ []
+
+
+Underfull \hbox (badness 1107) in paragraph at lines 39--39
+\T5/cmr/m/n/10 li»u tø nguçn ngo i
+ []
+
+
+Underfull \hbox (badness 1264) in paragraph at lines 39--39
+\T5/cmr/m/n/10 Celery hé trñ ETL,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 39--39
+\T5/cmr/m/n/10 nh÷ng streaming
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 39--39
+\T5/cmr/m/n/10 k²m hìn Spring
+ []
+
+
+Underfull \hbox (badness 6001) in paragraph at lines 39--39
+[]|\T5/cmr/m/n/10 Trung b¼nh: Active
+ []
+
+
+Underfull \hbox (badness 3803) in paragraph at lines 39--39
+\T5/cmr/m/n/10 Record tèt cho dú
+ []
+
+
+Underfull \hbox (badness 5431) in paragraph at lines 39--39
+\T5/cmr/m/n/10 v  ETL c¦n th¶m
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 39--39
+[]|\T5/cmr/m/n/10 Trung b¼nh: C¦n
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 39--39
+\T5/cmr/m/n/10 t½ch hñp s®n
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 39--39
+\T5/cmr/m/n/10 OAuth2/JWT, b£o
+ []
+
+
+Underfull \hbox (badness 5417) in paragraph at lines 39--39
+\T5/cmr/m/n/10 c§u h¼nh b£o mªt
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 39--39
+[]|\T5/cmr/m/n/10 Cao: Django
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 39--39
+\T5/cmr/m/n/10 Authentication
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 39--39
+\T5/cmr/m/n/10 m¤nh, nh÷ng c§u
+ []
+
+
+Underfull \hbox (badness 7291) in paragraph at lines 39--39
+\T5/cmr/m/n/10 h¼nh OAuth2 phùc
+ []
+
+
+Underfull \hbox (badness 2310) in paragraph at lines 39--39
+[]|\T5/cmr/m/n/10 Cao: Devise hé trñ
+ []
+
+
+Underfull \hbox (badness 1092) in paragraph at lines 39--39
+\T5/cmr/m/n/10 Login), khæng m¤nh
+ []
+
+
+Underfull \hbox (badness 1616) in paragraph at lines 39--39
+\T5/cmr/m/n/10 API qu£n trà, kiºm
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 39--39
+\T5/cmr/m/n/10 t½ch hñp s®n nh÷
+ []
+
+
+Underfull \hbox (badness 1824) in paragraph at lines 39--39
+[]|\T5/cmr/m/n/10 Cao: Django Admin
+ []
+
+
+Underfull \hbox (badness 2556) in paragraph at lines 39--39
+\T5/cmr/m/n/10 m¤nh, hé trñ kiºm
+ []
+
+
+Underfull \hbox (badness 4967) in paragraph at lines 39--39
+\T5/cmr/m/n/10 duy»t, nh÷ng audit
+ []
+
+
+Underfull \hbox (badness 3019) in paragraph at lines 39--39
+\T5/cmr/m/n/10 trail c¦n th¶m th÷
+ []
+
+
+Underfull \hbox (badness 3354) in paragraph at lines 39--39
+\T5/cmr/m/n/10 trail phùc t¤p hìn
+ []
+
+
+Underfull \hbox (badness 2005) in paragraph at lines 39--39
+\T5/cmr/m/n/10 câ module s®n nh÷
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 39--39
+[]|\T5/cmr/m/n/10 Cao: Spring Boot
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 39--39
+\T5/cmr/m/n/10 Actuator cung c§p
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 39--39
+\T5/cmr/m/n/10 log, telemetry, v 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 39--39
+\T5/cmr/m/n/10 vi»n nh÷ Winston,
+ []
+
+
+Underfull \hbox (badness 2376) in paragraph at lines 39--39
+[]|\T5/cmr/m/n/10 Trung b¼nh: Django
+ []
+
+
+Underfull \hbox (badness 1565) in paragraph at lines 39--39
+\T5/cmr/m/n/10 Sentry, khæng m¤nh
+ []
+
+
+Underfull \hbox (badness 4303) in paragraph at lines 39--39
+[]|\T5/cmr/m/n/10 Th§p: C¦n tü x¥y
+ []
+
+
+Underfull \hbox (badness 1454) in paragraph at lines 39--39
+\T5/cmr/m/n/10 düng log, gi¡m s¡t,
+ []
+
+
+Underfull \hbox (badness 5592) in paragraph at lines 39--39
+[]|\T5/cmr/m/n/10 Cao: H» sinh th¡i
+ []
+
+
+Underfull \hbox (badness 1237) in paragraph at lines 39--39
+\T5/cmr/m/n/10 Java lîn, nhi·u th÷
+ []
+
+
+Underfull \hbox (badness 3312) in paragraph at lines 39--39
+\T5/cmr/m/n/10 vi»n (Spring Batch,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 39--39
+\T5/cmr/m/n/10 Security), t i li»u
+ []
+
+
+Underfull \hbox (badness 5592) in paragraph at lines 39--39
+[]|\T5/cmr/m/n/10 Cao: H» sinh th¡i
+ []
+
+
+Underfull \hbox (badness 6775) in paragraph at lines 39--39
+\T5/cmr/m/n/10 Node.js lîn, nh÷ng
+ []
+
+
+Underfull \hbox (badness 2293) in paragraph at lines 39--39
+\T5/cmr/m/n/10 th÷ vi»n ph¥n t¡n,
+ []
+
+
+Underfull \hbox (badness 5592) in paragraph at lines 39--39
+[]|\T5/cmr/m/n/10 Cao: H» sinh th¡i
+ []
+
+
+Underfull \hbox (badness 1406) in paragraph at lines 39--39
+\T5/cmr/m/n/10 th¡i Rails nhä hìn,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 39--39
+\T5/cmr/m/n/10 th¡i Python tèt,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 39--39
+\T5/cmr/m/n/10 nh÷ng Flask thi¸u
+ []
+
+
+Underfull \hbox (badness 1661) in paragraph at lines 39--39
+\T5/cmr/m/n/10 module t½ch hñp so
+ []
+
+
+LaTeX Warning: Float too large for page by 19.03613pt on input line 41.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+
+File: Images/hcmut.png Graphic file (type png)
+<use Images/hcmut.png>
+Package pdftex.def Info: Images/hcmut.png  used on input line 42.
+(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
+[125]) (./Sections/6. System Analysis/2-Technology solutions/Database.tex
+
+File: Images/hcmut.png Graphic file (type png)
+<use Images/hcmut.png>
+Package pdftex.def Info: Images/hcmut.png  used on input line 24.
+(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
+[126
+
+
+
+]
+
+File: Images/hcmut.png Graphic file (type png)
+<use Images/hcmut.png>
+Package pdftex.def Info: Images/hcmut.png  used on input line 24.
+(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
+[127]
+Underfull \hbox (badness 5403) in paragraph at lines 46--46
+\T5/cmr/m/n/10 câ c§u tróc, nh÷ng
+ []
+
+
+Underfull \hbox (badness 1158) in paragraph at lines 46--46
+\T5/cmr/m/n/10 JSON k²m linh ho¤t
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 46--46
+[]|\T5/cmr/bx/n/10 Cao\T5/cmr/m/n/10 : T÷ìng tü
+ []
+
+
+Underfull \hbox (badness 1478) in paragraph at lines 46--46
+\T5/cmr/m/n/10 lîn, nh÷ng phùc t¤p
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 46--46
+[]|\T5/cmr/bx/n/10 Cao\T5/cmr/m/n/10 : T÷ìng tü
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 46--46
+\T5/cmr/m/n/10 MySQL, nh÷ng
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 46--46
+\T5/cmr/m/n/10 full-text search
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 46--46
+\T5/cmr/m/n/10 khæng m¤nh b¬ng
+ []
+
+
+Underfull \hbox (badness 6094) in paragraph at lines 46--46
+[]|\T5/cmr/bx/n/10 Cao\T5/cmr/m/n/10 : ACID hé trñ
+ []
+
+
+Underfull \hbox (badness 8189) in paragraph at lines 46--46
+\T5/cmr/m/n/10 n¥ng cao k²m hìn
+ []
+
+
+Underfull \hbox (badness 1953) in paragraph at lines 46--46
+[]|\T5/cmr/bx/n/10 Trung b¼nh\T5/cmr/m/n/10 : Khæng
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 46--46
+[]|\T5/cmr/bx/n/10 Cao\T5/cmr/m/n/10 : ACID, nh÷ng
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 46--46
+[]|\T5/cmr/bx/n/10 Cao\T5/cmr/m/n/10 : T÷ìng tü
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 46--46
+\T5/cmr/m/n/10 MySQL, nh÷ng
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 46--46
+\T5/cmr/m/n/10 khæng m¤nh b¬ng
+ []
+
+
+Underfull \hbox (badness 2460) in paragraph at lines 46--46
+\T5/cmr/m/n/10 PostgreSQL cho giao
+ []
+
+
+Underfull \hbox (badness 2564) in paragraph at lines 46--46
+\T5/cmr/m/n/10 truy cªp tèt, nh÷ng
+ []
+
+
+Underfull \hbox (badness 1430) in paragraph at lines 46--46
+[]|\T5/cmr/bx/n/10 Th§p\T5/cmr/m/n/10 : B£o mªt giîi
+ []
+
+
+Underfull \hbox (badness 1917) in paragraph at lines 46--46
+\T5/cmr/m/n/10 h¤n, khæng phò hñp
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 46--46
+[]|\T5/cmr/bx/n/10 Cao\T5/cmr/m/n/10 : T÷ìng tü
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 46--46
+\T5/cmr/m/n/10 MySQL, nh÷ng
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 46--46
+\T5/cmr/m/n/10 c§u h¼nh b£o mªt
+ []
+
+
+Underfull \hbox (badness 1603) in paragraph at lines 46--46
+[]|\T5/cmr/bx/n/10 Cao\T5/cmr/m/n/10 : T½ch hñp ETL
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 46--46
+\T5/cmr/m/n/10 (Spring Batch), mğ
+ []
+
+
+Underfull \hbox (badness 1648) in paragraph at lines 46--46
+\T5/cmr/m/n/10 rëng d¹ cho dú li»u
+ []
+
+
+Underfull \hbox (badness 4168) in paragraph at lines 46--46
+[]|\T5/cmr/bx/n/10 Cao\T5/cmr/m/n/10 : T½ch hñp tèt,
+ []
+
+
+Underfull \hbox (badness 2875) in paragraph at lines 46--46
+\T5/cmr/m/n/10 lîn, nh÷ng t½ch hñp
+ []
+
+
+Underfull \hbox (badness 5681) in paragraph at lines 46--46
+\T5/cmr/m/n/10 ETL phùc t¤p hìn
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 46--46
+[]|\T5/cmr/bx/n/10 Cao\T5/cmr/m/n/10 : T÷ìng tü
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 46--46
+\T5/cmr/m/n/10 MySQL, nh÷ng mğ
+ []
+
+
+Underfull \hbox (badness 1325) in paragraph at lines 46--46
+\T5/cmr/m/n/10 rëng JSON k²m hìn
+ []
+
+
+Underfull \hbox (badness 8189) in paragraph at lines 46--46
+[]|\T5/cmr/bx/n/10 Cao\T5/cmr/m/n/10 : H» sinh th¡i
+ []
+
+
+Underfull \hbox (badness 1365) in paragraph at lines 46--46
+\T5/cmr/m/n/10 NoSQL m¤nh, nh÷ng
+ []
+
+
+Underfull \hbox (badness 2698) in paragraph at lines 46--46
+[]|\T5/cmr/bx/n/10 Th§p\T5/cmr/m/n/10 : H» sinh th¡i
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 46--46
+[]|\T5/cmr/bx/n/10 Cao\T5/cmr/m/n/10 : T÷ìng tü
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 46--46
+\T5/cmr/m/n/10 MySQL, nh÷ng
+ []
+
+
+Underfull \hbox (badness 4531) in paragraph at lines 46--46
+\T5/cmr/m/n/10 cëng ^^_çng nhä hìn
+ []
+
+
+
+File: Images/hcmut.png Graphic file (type png)
+<use Images/hcmut.png>
+Package pdftex.def Info: Images/hcmut.png  used on input line 49.
+(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
+[128
+
+
+]
+
+File: Images/hcmut.png Graphic file (type png)
+<use Images/hcmut.png>
+Package pdftex.def Info: Images/hcmut.png  used on input line 65.
+(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
+[129
+
+]
+Underfull \hbox (badness 1776) in paragraph at lines 83--83
+\T5/cmr/m/n/10 RAM r§t nhi·u, khæng phò hñp cho
+ []
+
+
+
+File: Images/hcmut.png Graphic file (type png)
+<use Images/hcmut.png>
+Package pdftex.def Info: Images/hcmut.png  used on input line 86.
+(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
+[130
+
+
+]) (./Sections/6. System Analysis/2-Technology solutions/Other Tech.tex
+Underfull \hbox (badness 10000) in paragraph at lines 7--8
+[]\T5/cmr/m/n/12 >>>>>>>> origin/main:Sections/6. System Analysis/2-Technology solutions/Other
+ []
+
+
+
+File: Images/hcmut.png Graphic file (type png)
+<use Images/hcmut.png>
+Package pdftex.def Info: Images/hcmut.png  used on input line 24.
+(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
+[131
+
+]
+
+File: Images/hcmut.png Graphic file (type png)
+<use Images/hcmut.png>
+Package pdftex.def Info: Images/hcmut.png  used on input line 47.
+(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
+[132
+
+
+])) (./Sections/6. System Analysis/3-System Design/system design.tex
+
+Package hyperref Warning: bookmark level for unknown subsubsubsection defaults to 0.
+
+(./Sections/6. System Analysis/3-System Design/System architecture/Model architecture.tex
+
+Package hyperref Warning: Difference (3) between bookmark levels is greater 
+(hyperref)                than one, level fixed on input line 2.
+
+File: Images/7. System Design/Kiáº¿n trÃºc há»‡ thá»‘ng.png Graphic file (type png)
+<use Images/7. System Design/Kiáº¿n trÃºc há»‡ thá»‘ng.png>
+Package pdftex.def Info: Images/7. System Design/Kiáº¿n trÃºc há»‡ thá»‘ng.png  used on input line 6.
+(pdftex.def)             Requested size: 396.91325pt x 486.49532pt.
+
+
+File: Images/hcmut.png Graphic file (type png)
+<use Images/hcmut.png>
+Package pdftex.def Info: Images/hcmut.png  used on input line 10.
+(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
+[133
+
+]
+Underfull \hbox (badness 1400) in paragraph at lines 13--14
+[]\T5/cmr/bx/n/12 Presentation Layer: \T5/cmr/m/n/12 ti¸p nhªn, x¡c thüc v  ^^_i·u h÷îng c¡c y¶u c¦u
+ []
+
+
+
+File: Images/hcmut.png Graphic file (type png)
+<use Images/hcmut.png>
+Package pdftex.def Info: Images/hcmut.png  used on input line 16.
+(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
+[134]
+
+Package hyperref Warning: Difference (2) between bookmark levels is greater 
+(hyperref)                than one, level fixed on input line 21.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 22--24
+[]\T5/cmr/m/n/12 ======== >>>>>>>> origin/main:Sections/6. System Analysis/3-System
+ []
+
+
+
+File: Images/hcmut.png Graphic file (type png)
+<use Images/hcmut.png>
+Package pdftex.def Info: Images/hcmut.png  used on input line 45.
+(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
+[135]
+Underfull \hbox (badness 2717) in paragraph at lines 82--82
+[]|\T5/cmr/bx/n/12 Ki¸n tróc H÷îng
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 82--82
+\T5/cmr/bx/n/12 sü ki»n (Event-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 82--82
+[]|\T5/cmr/bx/n/12 Ki¸n tróc ^^^ìn
+ []
+
+
+Underfull \hbox (badness 7030) in paragraph at lines 82--82
+\T5/cmr/m/n/12 (Frontend, Backend)
+ []
+
+
+Underfull \hbox (badness 1158) in paragraph at lines 82--82
+\T5/cmr/m/n/12 nhi¶n, c§u tróc méi
+ []
+
+
+Underfull \hbox (badness 5022) in paragraph at lines 82--82
+[]|\T5/cmr/bx/n/12 R§t cao: \T5/cmr/m/n/12 ^^^ái häi
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 82--82
+\T5/cmr/m/n/12 qu£n lş giao ti¸p
+ []
+
+
+Underfull \hbox (badness 1946) in paragraph at lines 82--82
+\T5/cmr/m/n/12 li¶n dàch vö, cì sğ
+ []
+
+
+Underfull \hbox (badness 7740) in paragraph at lines 82--82
+\T5/cmr/m/n/12 h¤ t¦ng phùc t¤p
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 82--82
+\T5/cmr/m/n/12 (service discovery,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 82--82
+\T5/cmr/m/n/12 (nh÷ RabbitMQ,
+ []
+
+
+Underfull \hbox (badness 3128) in paragraph at lines 82--82
+\T5/cmr/m/n/12 b­t ^^_¦u, nh÷ng ^^_ë
+ []
+
+
+Underfull \hbox (badness 3029) in paragraph at lines 82--82
+[]|\T5/cmr/bx/n/12 Tèt: \T5/cmr/m/n/12 C¡c lîp ^^_÷ñc
+ []
+
+
+Underfull \hbox (badness 3657) in paragraph at lines 82--82
+\T5/cmr/m/n/12 (v½ dö: léi logic ğ
+ []
+
+
+Underfull \hbox (badness 1642) in paragraph at lines 82--82
+\T5/cmr/m/n/12 dàch vö review) m 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 82--82
+[]|\T5/cmr/bx/n/12 Trung b¼nh: \T5/cmr/m/n/12 R§t
+ []
+
+
+Underfull \hbox (badness 4441) in paragraph at lines 82--82
+\T5/cmr/m/n/12 ho n to n ^^_ëc lªp
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 82--82
+\T5/cmr/m/n/12 (decoupled). Nh÷ng
+ []
+
+
+Underfull \hbox (badness 5652) in paragraph at lines 82--82
+\T5/cmr/m/n/12 (scale) Frontend v 
+ []
+
+
+Underfull \hbox (badness 5908) in paragraph at lines 82--82
+[]|\T5/cmr/bx/n/12 Tèt: \T5/cmr/m/n/12 Câ thº kiºm
+ []
+
+
+Underfull \hbox (badness 5563) in paragraph at lines 82--82
+\T5/cmr/m/n/12 thû Backend (API)
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 82--82
+\T5/cmr/m/n/12 Kiºm thû logic ğ
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 82--82
+[]|\T5/cmr/bx/n/12 Phùc t¤p: \T5/cmr/m/n/12 C¦n
+ []
+
+
+Underfull \hbox (badness 5091) in paragraph at lines 82--82
+\T5/cmr/m/n/12 kiºm thû t½ch hñp
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 82--82
+\T5/cmr/m/n/12 (integration testing)
+ []
+
+
+Underfull \hbox (badness 1077) in paragraph at lines 82--82
+\T5/cmr/m/n/12 d¹, nh÷ng kiºm thû
+ []
+
+
+Underfull \hbox (badness 3128) in paragraph at lines 82--82
+\T5/cmr/m/n/12 c¡c th nh ph¦n ^^_º
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+) (./Sections/6. System Analysis/3-System Design/System architecture/Design architecture.tex
+File: Images/7. System Design/Kiáº¿n trÃºc há»‡ thá»‘ng.png Graphic file (type png)
+<use Images/7. System Design/Kiáº¿n trÃºc há»‡ thá»‘ng.png>
+Package pdftex.def Info: Images/7. System Design/Kiáº¿n trÃºc há»‡ thá»‘ng.png  used on input line 5.
+(pdftex.def)             Requested size: 396.91325pt x 486.49532pt.
+
+
+File: Images/hcmut.png Graphic file (type png)
+<use Images/hcmut.png>
+Package pdftex.def Info: Images/hcmut.png  used on input line 9.
+(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
+[136]
+Overfull \vbox (143.97743pt too high) has occurred while \output is active []
+
+
+
+File: Images/hcmut.png Graphic file (type png)
+<use Images/hcmut.png>
+Package pdftex.def Info: Images/hcmut.png  used on input line 9.
+(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
+[137]
+Underfull \hbox (badness 1400) in paragraph at lines 12--13
+[]\T5/cmr/bx/n/12 Presentation Layer: \T5/cmr/m/n/12 ti¸p nhªn, x¡c thüc v  ^^_i·u h÷îng c¡c y¶u c¦u
+ []
+
+))
+
+Package hyperref Warning: Difference (3) between bookmark levels is greater 
+(hyperref)                than one, level fixed on input line 30.
+
+
+Package hyperref Warning: Difference (2) between bookmark levels is greater 
+(hyperref)                than one, level fixed on input line 33.
+
+(./Sections/6. System Analysis/5-Sitemap/sitemap.tex
+File: Images/7. System Design/Sitemap.png Graphic file (type png)
+<use Images/7. System Design/Sitemap.png>
+Package pdftex.def Info: Images/7. System Design/Sitemap.png  used on input line 3.
+(pdftex.def)             Requested size: 441.01773pt x 341.32262pt.
+)
+
+File: Images/hcmut.png Graphic file (type png)
+<use Images/hcmut.png>
+Package pdftex.def Info: Images/hcmut.png  used on input line 35.
+(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
+[138])
+
+File: Images/hcmut.png Graphic file (type png)
+<use Images/hcmut.png>
+Package pdftex.def Info: Images/hcmut.png  used on input line 382.
+(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
+[139] (./Sections/7. System Implementation/system implementation.tex) (./Sections/8. System Evaluation/system evaluation.tex)
+
+File: Images/hcmut.png Graphic file (type png)
+<use Images/hcmut.png>
+Package pdftex.def Info: Images/hcmut.png  used on input line 388.
+(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
+[140] (./Sections/9. Conclusion/conclusion.tex)
+
+File: Images/hcmut.png Graphic file (type png)
+<use Images/hcmut.png>
+Package pdftex.def Info: Images/hcmut.png  used on input line 391.
+(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
+[141]
+
+LaTeX Warning: Empty bibliography on input line 396.
+
+(./Sections/Appendices/appendices.tex)
+
+File: Images/hcmut.png Graphic file (type png)
+<use Images/hcmut.png>
+Package pdftex.def Info: Images/hcmut.png  used on input line 402.
+(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
+[142] 
+enddocument/afterlastpage (AED): lastpage setting LastPage.
+(./main.aux)
+ ***********
+LaTeX2e <2025-06-01> patch level 1
+L3 programming layer <2025-09-02>
+ ***********
+
+
+LaTeX Font Warning: Size substitutions with differences
+(Font)              up to 0.6pt have occurred.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: 82A8B0199F2AA4E57CE18FAC8083F6B8;15036.
+Package logreq Info: Writing requests to 'main.run.xml'.
+\openout1 = `main.run.xml'.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 43432 strings out of 469216
+ 854055 string characters out of 5462076
+ 1836735 words of memory out of 5000000
+ 70645 multiletter control sequences out of 15000+600000
+ 659668 words of font info for 113 fonts, out of 8000000 for 9000
+ 319 hyphenation exceptions out of 8191
+ 119i,25n,154p,1542b,5241s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/vntex/vnr/vnbx10.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/vntex/vnr/vnbx12.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/vntex/vnr/vnr10.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/vntex/vnr/vnr12.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/vntex/vnr/vnr17.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/vntex/vnr/vnr8.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/vntex/vnr/vnti10.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/vntex/vnr/vnti12.pfb>
+Output written on main.pdf (143 pages, 1924255 bytes).
+PDF statistics:
+ 1612 PDF objects out of 1728 (max. 8388607)
+ 1397 compressed objects within 14 object streams
+ 399 named destinations out of 1000 (max. 500000)
+ 757 words of extra memory for PDF output out of 10000 (max. 10000000)
+

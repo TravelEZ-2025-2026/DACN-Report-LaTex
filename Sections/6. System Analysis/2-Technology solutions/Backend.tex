@@ -1,0 +1,42 @@
+\subsubsection{Back-end}
+\paragraph{Spring Boot}
+
+\subparagraph{Giới thiệu}
+Spring Boot là một framework Java mã nguồn mở, được thiết kế để đơn giản hóa việc phát triển ứng dụng backend với các tính năng như cấu hình tự động, tích hợp REST API, và quản lý phụ thuộc. Trong hệ thống gợi ý hành trình du lịch thông minh, Spring Boot được sử dụng để xây dựng backend, xử lý các chức năng như tạo gợi ý hành trình, quản lý dữ liệu người dùng, tìm kiếm điểm đến, kiểm duyệt nội dung cộng đồng, và xử lý thông báo. Spring Boot cung cấp một nền tảng mạnh mẽ để triển khai logic nghiệp vụ, tích hợp dữ liệu từ các nguồn ngoài, và đảm bảo an toàn cho hệ thống.
+
+\subparagraph{Ưu điểm}
+\begin{itemize}
+    \item \textbf{Xử lý logic nghiệp vụ hiệu quả}: Spring Boot hỗ trợ phát triển các API REST nhanh chóng, giúp xử lý các yêu cầu như gợi ý hành trình, cập nhật chi phí tức thời, và quản lý bài chia sẻ cộng đồng.
+    \item \textbf{Tích hợp dữ liệu dễ dàng}: Spring Boot cung cấp các module như Spring Batch và Spring Integration để thu thập và xử lý dữ liệu từ nguồn ngoài (như review, thời tiết, sự kiện), hỗ trợ chuẩn hóa dữ liệu và cập nhật ngữ cảnh thời gian thực.
+    \item \textbf{Bảo mật mạnh mẽ}: Spring Security tích hợp sẵn giúp triển khai xác thực (OAuth2/JWT) và phân quyền, bảo vệ dữ liệu người dùng như hồ sơ sở thích và lịch sử hội thoại.
+    \item \textbf{Quản lý người dùng và nội dung}: Spring Boot hỗ trợ xây dựng các API quản trị để kiểm duyệt nội dung, khóa tài khoản, và theo dõi audit trail, đảm bảo hệ thống vận hành an toàn và minh bạch.
+    \item \textbf{Giám sát và bảo trì}: Spring Boot Actuator cung cấp các công cụ giám sát hiệu suất và log sự kiện, giúp theo dõi pipeline xử lý dữ liệu và hiệu quả mô hình gợi ý.
+\end{itemize}
+
+\subparagraph{So sánh Spring Boot và các công nghệ khác}
+\clearpage
+\begin{landscape}
+\begin{table}[h!]
+\centering
+\setlength{\tabcolsep}{4pt}
+\footnotesize
+\begin{tabularx}{\linewidth}{|l|X|X|X|X|X|}
+\hline
+\textbf{Tiêu chí} & \textbf{Spring Boot} & \textbf{Node.js (Express)} & \textbf{Django (Python)} & \textbf{Ruby on Rails} & \textbf{Flask (Python)} \\
+\hline
+\textbf{Xử lý logic nghiệp vụ} & Cao: REST API dễ cấu hình, Spring MVC mạnh mẽ, hỗ trợ gợi ý hành trình và cập nhật chi phí tức thời. & Cao: Express nhẹ, nhanh, phù hợp cho API gợi ý và cộng đồng. Nhưng cần thêm thư viện cho logic phức tạp. & Cao: Django REST Framework mạnh, hỗ trợ gợi ý và quản lý nội dung. Nhưng cần cấu hình thêm cho AI. & Cao: Convention-over-configuration, nhanh cho cộng đồng, nhưng chậm hơn Spring Boot cho API phức tạp. & Trung bình: Nhẹ, linh hoạt, nhưng cần xây dựng logic phức tạp từ đầu, không tối ưu như Spring Boot. \\
+\hline
+\textbf{Tích hợp dữ liệu} & Cao: Spring Batch (batch) và Spring Integration (streaming) hỗ trợ ETL, chuẩn hóa dữ liệu từ nguồn ngoài (review, thời tiết). & Trung bình: Cần thư viện bên ngoài (như Axios, node-cron) để xử lý ETL, phức tạp hơn Spring Boot. & Cao: Django ORM và Celery hỗ trợ ETL, nhưng streaming kém hơn Spring Integration. & Trung bình: Active Record tốt cho dữ liệu, nhưng streaming và ETL cần thêm gem, không tích hợp sẵn. & Trung bình: Cần thư viện như Flask-SQLAlchemy, Celery, phức tạp hơn Spring Batch cho ETL. \\
+\hline
+\textbf{Bảo mật} & Cao: Spring Security tích hợp sẵn OAuth2/JWT, bảo vệ hồ sơ người dùng và hội thoại. & Trung bình: Cần thư viện như Passport.js, cấu hình bảo mật phức tạp hơn Spring Security. & Cao: Django Authentication mạnh, nhưng cấu hình OAuth2 phức tạp hơn Spring Boot. & Cao: Devise hỗ trợ bảo mật tốt, nhưng tích hợp OAuth2 kém hơn Spring Security. & Trung bình: Cần thư viện bên ngoài (Flask-Login), không mạnh bằng Spring Security. \\
+\hline
+\textbf{Quản trị người dùng/ nội dung} & Cao: Spring MVC và Spring Security hỗ trợ API quản trị, kiểm duyệt nội dung, audit trail dễ dàng. & Trung bình: Cần xây dựng API quản trị từ đầu, không có module tích hợp sẵn như Spring Boot. & Cao: Django Admin mạnh, hỗ trợ kiểm duyệt, nhưng audit trail cần thêm thư viện. & Cao: Rails Admin tốt, nhưng tích hợp audit trail phức tạp hơn Spring Boot. & Thấp: Cần xây dựng quản trị từ đầu, không có module sẵn như Spring Boot. \\
+\hline
+\textbf{Giám sát và bảo trì} & Cao: Spring Boot Actuator cung cấp log, telemetry, và giám sát pipeline, dễ tích hợp với Grafana. & Trung bình: Cần thư viện như Winston, PM2, không tích hợp sẵn như Actuator. & Trung bình: Django cần thêm thư viện như Sentry, không mạnh bằng Actuator. & Trung bình: Cần gem như New Relic, phức tạp hơn Actuator. & Thấp: Cần tự xây dựng log, giám sát, không có công cụ tích hợp sẵn. \\
+\hline
+\textbf{Hệ sinh thái và cộng đồng} & Cao: Hệ sinh thái Java lớn, nhiều thư viện (Spring Batch, Security), tài liệu phong phú. & Cao: Hệ sinh thái Node.js lớn, nhưng thư viện phân tán, khó chọn hơn Spring Boot. & Cao: Hệ sinh thái Python mạnh, nhưng Django kém linh hoạt hơn Spring Boot cho API. & Trung bình: Hệ sinh thái Rails nhỏ hơn, tài liệu ít hơn Spring Boot. & Trung bình: Hệ sinh thái Python tốt, nhưng Flask thiếu module tích hợp so với Spring Boot. \\
+\hline
+\end{tabularx}
+\caption{So sánh Spring Boot và các công nghệ khác}
+\end{table}
+\end{landscape}

@@ -1,0 +1,40 @@
+\subsubsubsection{So sánh các kiến trúc hiện có}
+
+\clearpage
+\begin{landscape}
+\begin{table}[h!]
+\centering
+\setlength{\tabcolsep}{4pt}
+\footnotesize
+\begin{tabularx}{\linewidth}{|l|X|X|X|}
+\hline
+\textbf{Tiêu chí} & \textbf{Layered Architecture} & \textbf{Microservices Architecture} & \textbf{Event-Driven Architecture} \\
+\hline
+    \textbf{Độ phức tạp phát triển} & \textbf{Thấp.} Cấu trúc đơn giản, tuyến tính và quen thuộc. Toàn bộ mã nguồn nằm trong một dự án, dễ dàng điều hướng và phát triển ban đầu. & \textbf{Cao.} Là một hệ thống phân tán, đòi hỏi xử lý các vấn đề phức tạp như giao tiếp mạng giữa các dịch vụ, service discovery, và quản lý cấu hình phân tán. & \textbf{Rất cao.} Vừa là hệ thống phân tán, vừa hoạt động bất đồng bộ. Lập trình viên phải tư duy theo luồng sự kiện, xử lý các vấn đề như thứ tự sự kiện, xử lý trùng lặp.\\
+    \hline
+    \textbf{Khả năng mở rộng} & \textbf{Thấp đến trung bình.} Phải mở rộng toàn bộ ứng dụng theo chiều ngang. Kém hiệu quả khi chỉ một phần của hệ thống bị quá tải.& \textbf{Rất cao.} Cho phép mở rộng từng dịch vụ một cách độc lập và linh hoạt. Tối ưu hóa việc sử dụng tài nguyên phần cứng.& \textbf{Rất cao.} Các thành phần sản xuất và tiêu thụ sự kiện có thể được mở rộng độc lập. \\
+    \hline
+    \textbf{Khả năng bảo trì \& sửa đổi} & \textbf{Cao khi dự án nhỏ, thấp khi lớn dần.} Khi mã nguồn phình to, sự liên kết chặt chẽ giữa các module làm cho việc sửa đổi một nơi có thể gây lỗi ở nơi khác.& \textbf{Cao.} Các dịch vụ nhỏ, độc lập và có phạm vi rõ ràng nên rất dễ hiểu, dễ sửa đổi và nâng cấp mà không ảnh hưởng đến toàn bộ hệ thống. & \textbf{Trung bình đến cao.} Các khớp nối lỏng giúp việc sửa đổi các dịch vụ dễ dàng. Tuy nhiên, việc hiểu và theo dõi toàn bộ luồng nghiệp vụ qua các sự kiện sẽ phức tạp.\\
+    \hline
+    \textbf{Triển khai} & \textbf{Đơn giản.} Chỉ cần triển khai một đơn vị duy nhất. Quy trình CI/CD đơn giản.& \textbf{Phức tạp.} Phải triển khai và quản lý vòng đời của nhiều dịch vụ. Yêu cầu các công cụ điều phối như Kubernetes và một quy trình DevOps hoàn chỉnh. & \textbf{Phức tạp.} Tương tự Microservices, nhưng cần thêm việc triển khai và quản lý hệ thống message broker.\\
+    \hline
+    \textbf{Khả năng phục hồi \& Chịu lỗi} & \textbf{Thấp.} Lỗi nghiêm trọng ở một module có thể làm sập toàn bộ ứng dụng.& \textbf{Cao.} Lỗi ở một dịch vụ (không phải dịch vụ cốt lõi) sẽ không làm ảnh hưởng đến các dịch vụ khác. & \textbf{Cao.} Sự bất đồng bộ và khớp nối lỏng giúp hệ thống có khả năng phục hồi tốt. Nếu một dịch vụ tiêu thụ bị lỗi, sự kiện có thể được lưu lại và xử lý sau.\\
+    \hline
+    \textbf{Linh hoạt về công nghệ sử dụng} & \textbf{Thấp.} Toàn bộ ứng dụng thường bị ràng buộc vào một bộ công nghệ duy nhất đã được chọn từ đầu. & \textbf{Rất cao.} Mỗi dịch vụ có thể được xây dựng bằng một ngôn ngữ, framework, và cơ sở dữ liệu phù hợp nhất cho chức năng của nó. & \textbf{Rất cao.} Tương tự Microservices, các thành phần sản xuất và tiêu thụ sự kiện có thể được viết bằng các công nghệ khác nhau.\\
+    \hline
+    \textbf{Quản lý dữ liệu} & \textbf{Đơn giản.} Sử dụng một cơ sở dữ liệu duy nhất. Đảm bảo tính nhất quán dữ liệu thông qua các transaction ACID tương đối dễ dàng. & \textbf{Phức tạp.} Mỗi dịch vụ thường có cơ sở dữ liệu riêng. Đảm bảo tính nhất quán dữ liệu trên nhiều dịch vụ là một thách thức lớn.& \textbf{Phức tạp.} Tương tự microservices, việc quản lý trạng thái và đảm bảo tính nhất quán dữ liệu khi xử lý các sự kiện bất đồng bộ đòi hỏi các kỹ thuật nâng cao.\\
+    \hline
+\end{tabularx}
+\caption{So sánh các kiến trúc hiện có}
+\label{tab:architecture_comparison}
+\end{table}
+\end{landscape}
+
+Dựa trên bảng phân tích chi tiết theo từng tiêu chí và đối chiếu với bối cảnh cụ thể của dự án "Gợi ý hành trình du lịch dựa trên AI và đánh giá cộng đồng", nhóm quyết định lựa chọn \textbf{Layered Architecture} vì những lý do sau:
+\begin{itemize}
+    \item \textbf{Độ phức tạp phù hợp:} Với quy mô của một dự án luận văn tốt nghiệp, được phát triển bởi một đội ngũ có giới hạn, việc lựa chọn một kiến trúc có độ phức tạp thấp như Layered Architecture là tối ưu. Nó cho phép đội ngũ nhanh chóng bắt tay vào phát triển các tính năng cốt lõi mà không bị sa lầy vào các thách thức về hạ tầng và vận hành của hệ thống phân tán.
+    \item \textbf{Đáp ứng luồng nghiệp vụ chính:} Các chức năng chính của hệ thống (tìm kiếm, xem chi tiết, tạo lộ trình, …) về bản chất là các thao tác đồng bộ, có luồng dữ liệu rõ ràng. Layered Architecture với một cơ sở dữ liệu tập trung giúp việc quản lý dữ liệu và đảm bảo tính nhất quán trở nên đơn giản và hiệu quả.
+    \item \textbf{Sự cân bằng giữa các yếu tố:} Mặc dù Layered Architecture có những hạn chế về khả năng mở rộng và chịu lỗi so với các kiến trúc khác, nhưng những hạn chế này không phải là vấn đề nghiêm trọng ở quy mô hiện tại của dự án. Kiến trúc này vẫn cung cấp đủ sự phân tách rõ ràng để có thể bảo trì và sửa đổi một cách hiệu quả trong khuôn khổ dự án.
+    \item \textbf{Tránh sự phức tạp không cần thiết:} Việc áp dụng Microservices hay Event-Driven Architecture cho dự án này sẽ là một trường hợp "over-engineering". Lợi ích mà chúng mang lại không đủ để bù đắp cho chi phí về thời gian, công sức và độ phức tạp mà đội ngũ phải bỏ ra để quản lý chúng.
+\end{itemize}
+

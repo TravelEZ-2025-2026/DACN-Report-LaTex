@@ -1,0 +1,38 @@
+\subsubsection{Công nghệ crawling dữ liệu}
+
+\paragraph{Apify và Google Maps Scraper}
+Apify là một nền tảng thu thập dữ liệu web và tự động hóa hoạt động dựa trên kiến trúc Serverless. Thay vì phải thiết lập và duy trì hạ tầng phần cứng phức tạp, Apify cung cấp môi trường đám mây cho phép chạy các chương trình tự động hóa - được gọi là các "Actors". Điểm mạnh cốt lõi của Apify nằm ở khả năng cung cấp hệ sinh thái toàn diện bao gồm: kho lưu trữ dữ liệu đám mây, hệ thống lập lịch và đặc biệt là mạng lưới Proxy thông minh giúp ẩn danh tính và vượt qua các cơ chế chặn truy cập của các website lớn.\\
+Trong hệ sinh thái các Actor của Apify, chúng tôi sử dụng Google Maps Scraper - một công cụ chuyên biệt được phát triển để trích xuất dữ liệu từ Google Maps, đã được Apify cam kết chịu trách nhiệm.
+\begin{itemize}
+    \item \textbf{Cơ chế hoạt động}: Công cụ này không sử dụng các API trả phí giới hạn của Google. Thay vào đó, nó sử dụng công nghệ giả lập trình duyệt. Nó khởi tạo một trình duyệt ảo, truy cập trực tiếp vào giao diện người dùng của Google Maps, tải nội dung và trích xuất dữ liệu từ mã nguồn trang web.
+    \item \textbf{Khả năng trích xuất}:Công cụ có khả năng lấy được toàn bộ thông tin hiển thị công khai của địa điểm bao gồm: Tên doanh nghiệp, địa chỉ, tọa độ địa lý, số điện thoại, website, giờ mở cửa, và đặc biệt là dữ liệu chi tiết về đánh giá và điểm số xếp hạng.
+    \item \textbf{Tính xác thực}: Vì hoạt động dựa trên việc đọc trực tiếp giao diện hiển thị trên trình duyệt, dữ liệu thu được đảm bảo phản ánh chính xác thông tin hiện có trên Google Maps tại thời điểm thu thập.
+\end{itemize}
+\subparagraph{So sánh Apify platform và các lựa chọn khác}
+
+\clearpage
+\begin{landscape}
+\begin{table}[h!]
+\centering
+\setlength{\tabcolsep}{4pt}
+\footnotesize
+\begin{tabularx}{\linewidth}{|l|X|X|}
+\hline
+\textbf{Tiêu chí} & \textbf{Tự xây dụng công cụ crawling} & \textbf{Sử dụng Apify Platform (Google Maps Scraper)} \\
+\hline
+\textbf{Cơ chế chống chặn} & \textbf{Thấp.} Cần tự tích hợp Proxy xoay vòng, tự xử lý Captcha và Fingerprinting trình duyệt. & \textbf{Cao.} Tự động tích hợp sẵn Proxy dân cư và cơ chế giả lập hành vi người dùng để vượt qua tường lửa của Google. \\
+\hline
+\textbf{Bảo trì} & \textbf{Khó khăn.} Google Maps thường xuyên thay đổi tên class CSS và cấu trúc HTML. Mỗi lần thay đổi, code sẽ lỗi và cần viết lại. & \textbf{Dễ dàng.} Các Actor trên Apify được cộng đồng và nhà phát triển duy trì, cập nhật liên tục khi Google thay đổi cấu trúc, đảm bảo tính ổn định cao. \\
+\hline
+\hline
+\textbf{Hạ tầng yêu cầu} & \textbf{Không yêu cầu.} Hoạt động hoàn toàn trên đám mây của Apify. & \textbf{Yêu cầu hạ tầng riêng.} Cần phải có máy chủ để chạy crawler, và quan trọng hơn là một hệ thống proxy chất lượng cao để tránh bị chặn IP. \\
+\hline
+\textbf{Chất lượng dữ liệu} & \textbf{Rủi ro.} Code tự viết có thể gặp lỗi logic dẫn đến thiếu trường dữ liệu hoặc parse sai thông tin nếu không test kỹ.& \textbf{Chuẩn hóa.} Các bộ scraper uy tín trên Apify đã được kiểm thử trên diện rộng, dữ liệu đầu ra được chuẩn hóa giảm thiểu lỗi logic. \\
+\hline
+\textbf{Cam kết về tính toàn vẹn dữ liệu} & \textbf{Chủ quan.} Phụ thuộc hoàn toàn vào người viết code. Không có cơ chế kiểm toán hay bên thứ ba xác nhận quy trình xử lý dữ liệu đúng chuẩn. Dễ phát sinh nghi vấn về việc sửa đổi dữ liệu thủ công. & \textbf{Khách quan và Minh bạch.} Apify hoạt động dưới vai trò Data Processor tuân thủ \textbf{GDPR} và \textbf{DPA}. Có cam kết pháp lý không can thiệp nội dung dữ liệu. Quy trình có log rõ ràng để kiểm chứng nguồn gốc. \\
+\hline
+\end{tabularx}
+\caption{So sánh Apify platform và các lựa chọn khác}
+\end{table}
+\end{landscape}
+

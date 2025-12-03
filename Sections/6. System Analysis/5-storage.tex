@@ -1,41 +1,38 @@
 \subsubsection{Dịch vụ lưu trữ}
-
-\paragraph{Amazon S3}
-
-\subparagraph{Giới thiệu}
-Amazon S3 (Simple Storage Service) là một dịch vụ lưu trữ đối tượng (object storage) của AWS, được thiết kế để lưu trữ và truy xuất lượng lớn dữ liệu một cách an toàn và hiệu quả. Trong hệ thống TravelEZ, S3 được sử dụng chuyên biệt cho việc lưu trữ các file media \textbf{(hình ảnh, video)} mà người dùng tải lên khi viết review hoặc đăng bài blog. Việc tách biệt lưu trữ file ra khỏi máy chủ ứng dụng giúp giảm tải cho backend và dễ dàng mở rộng dung lượng lưu trữ trong tương lai.
-
-\subparagraph{Ưu điểm}
+\paragraph{Google cloud storage}
+\textbf{Google Cloud Storage (GCS)} là dịch vụ lưu trữ đối tượng (object storage) dành cho các doanh nghiệp và nhà phát triển, được cung cấp bởi Google Cloud Platform (GCP). Trong hệ thống TravelEZ, S3 được sử dụng chuyên biệt cho việc lưu trữ các file media \textbf{(hình ảnh, video)} mà người dùng tải lên khi viết review hoặc đăng bài blog. Việc tách biệt lưu trữ file ra khỏi máy chủ ứng dụng giúp giảm tải cho backend và dễ dàng mở rộng dung lượng lưu trữ trong tương lai.\\
+\textbf{Ưu điểm}
 \begin{itemize}
-    \item \textbf{Độ bền và tính sẵn sàng cao}: S3 được thiết kế với độ bền dữ liệu lên tới 99.999999999\%, đảm bảo hình ảnh và video của người dùng gần như không bao giờ bị mất.
-    \item \textbf{Khả năng mở rộng gần như vô hạn}: Bạn có thể lưu trữ bao nhiêu file tùy thích mà không cần lo lắng về việc hết dung lượng ổ đĩa trên máy chủ.
+    \item \textbf{Độ bền và tính sẵn sàng cao}: Google cam kết độ bền dữ liệu lên tới 99.999999999\%. Điều này đảm bảo dữ liệu quan trọng của đồ án (như review của người dùng) không bao giờ bị mất mát do lỗi phần cứng.
+    \item \textbf{Khả năng mở rộng lớn}: Bạn có thể lưu trữ bao nhiêu file tùy thích mà không cần lo lắng về việc hết dung lượng ổ đĩa trên máy chủ.
     \item \textbf{Chi phí hiệu quả}: Mô hình trả phí theo dung lượng sử dụng (pay-as-you-go) rất tiết kiệm, đặc biệt khi so sánh với chi phí nâng cấp ổ cứng cho máy chủ.
-    \item \textbf{Tối ưu tốc độ truy cập}: Dễ dàng tích hợp với mạng lưới phân phối nội dung (CDN) như Amazon CloudFront để tăng tốc độ tải hình ảnh/video cho người dùng trên toàn cầu.
+    \item \textbf{Tối ưu tốc độ truy cập}: Google sở hữu mạng lưới cáp quang riêng lớn nhất thế giới. Điều này giúp việc tải ảnh/video địa điểm du lịch nhanh chóng cho người dùng ở bất kỳ đâu, cải thiện trải nghiệm người dùng.
     \item \textbf{Giảm tải cho Backend}: Máy chủ Spring Boot sẽ không phải xử lý việc truyền tải các file tĩnh nặng, giúp tập trung tài nguyên cho việc xử lý logic nghiệp vụ.
 \end{itemize}
-
-\subparagraph{So sánh Amazon S3 và các lựa chọn khác}
+\textbf{So sánh Google Cloud Storage và các lựa chọn khác}
 \clearpage
 \begin{landscape}
-\begin{table}[h!]
-\centering
-\setlength{\tabcolsep}{4pt}
-\footnotesize
-\begin{tabularx}{\linewidth}{|l|X|X|X|}
-\hline
-\textbf{Tiêu chí} & \textbf{Amazon S3} & \textbf{Tự lưu trên server backend} & \textbf{Cloudinary} \\
-\hline
-\textbf{Khả năng mở rộng} & \textbf{Rất cao:} Gần như vô hạn. & \textbf{Thấp:} Phụ thuộc vào dung lượng ổ cứng của server. & \textbf{Rất cao:} Tương tự S3. \\
-\hline
-\textbf{Độ bền dữ liệu} & \textbf{Rất cao:} Tự động sao lưu, nhân bản trên nhiều nơi. & \textbf{Thấp:} Phải tự thiết lập cơ chế backup phức tạp. Nguy cơ mất dữ liệu cao nếu server gặp sự cố. & \textbf{Rất cao:} Tương tự S3. \\
-\hline
-\textbf{Hiệu suất} & \textbf{Cao:} Tối ưu cho việc lưu và đọc file. Dễ tích hợp CDN. & \textbf{Trung bình:} Bị ảnh hưởng bởi tải của server. Có thể gây nghẽn khi nhiều người truy cập file. & \textbf{Rất cao:} Tích hợp sẵn CDN và các công cụ tối ưu hình ảnh/video tự động. \\
-\hline
-\textbf{Chi phí} & \textbf{Linh hoạt:} Trả theo dung lượng sử dụng, chi phí thấp. & \textbf{Chi phí ẩn:} Tốn tài nguyên CPU, RAM và băng thông của server chính. Tốn chi phí nâng cấp ổ cứng. & \textbf{Cao hơn:} Thường đắt hơn S3 nhưng đi kèm nhiều tính năng xử lý media. \\
-\hline
-\textbf{Độ phức tạp} & \textbf{Thấp:} Chỉ cần gọi API để tải lên/tải xuống. & \textbf{Trung bình:} Phải tự quản lý cấu trúc thư mục, phân quyền file, và xử lý backup. & \textbf{Thấp:} Tương tự S3, API thân thiện. \\
-\hline
-\end{tabularx}
-\caption{So sánh Amazon S3 và các lựa chọn khác}
-\end{table}
+    \begin{table}[h!]
+        \centering
+        \setlength{\tabcolsep}{4pt}
+        \footnotesize
+        \begin{tabularx}{\linewidth}{|l|X|X|X|}
+            \hline
+            \textbf{Tiêu chí}         & \textbf{Google Cloud Storage (GCS)}                                                                                & \textbf{Amazon S3 (AWS)}                                               & \textbf{Lưu trữ cục bộ (Local Server)}                                           \\
+            \hline
+            \textbf{Loại hình}        & Object Storage (Cloud)                                                                                             & Object Storage (Cloud)                                                 & File System (Physical/VPS)                                                       \\
+            \hline
+            \textbf{Khả năng mở rộng} & Gần như vô hạn.                                                                                                    & Gần như vô hạn.                                                        & Phụ thuộc vào dung lượng ổ cứng của server.                                      \\
+            \hline
+            \textbf{Hiệu năng mạng}   & Rất cao nhờ mạng lưới cáp quang riêng của Google.                                                                  & Rất cao nhưng phụ thuộc nhiều vào public internet ở một số region.     & Phụ thuộc vào băng thông máy chủ vật lý, khó mở rộng.                            \\
+            \hline
+            \textbf{Hiệu suất}        & Tối ưu cho việc lưu và đọc file.                                                                                   & Tối ưu cho việc lưu và đọc file.                                       & Bị ảnh hưởng bởi tải của server. Có thể gây nghẽn khi nhiều người truy cập file. \\
+            \hline
+            \textbf{Chi phí}          & Cạnh tranh, có gói Free Tier hào phóng cho sinh viên/dev. Tính năng phân loại dữ liệu tự động giúp tiết kiệm tiền. & Phức tạp hơn trong cách tính phí (request, data transfer).             & Chi phí đầu tư ban đầu cao (mua ổ cứng), tốn chi phí bảo trì, điện năng.         \\
+            \hline
+            \textbf{Độ phức tạp}      & Giao diện và SDK thân thiện, dễ dùng cho lập trình viên mới tiếp cận Cloud.                                        & Nhiều tính năng nâng cao nhưng cấu hình có thể phức tạp với người mới. & Phải tự quản lý bảo mật, backup, mở rộng dung lượng (Rất tốn công sức).          \\
+            \hline
+        \end{tabularx}
+        \caption{So sánh Google Cloud Storage và các lựa chọn khác}
+    \end{table}
 \end{landscape}

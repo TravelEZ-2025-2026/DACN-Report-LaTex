@@ -1,0 +1,182 @@
+\begin{table}[H]
+\centering
+\renewcommand{\arraystretch}{1.2}
+\begin{tabular}{@{}p{4cm} p{11cm}@{}}
+\toprule
+\textbf{Use case ID}       & UC-M3-01 \\ \midrule
+\textbf{Tên Use case}      & Xem danh sách nội dung \\ \midrule
+\textbf{Các tác nhân}      & Traveler, Guest, Provider \\ \midrule
+\textbf{Mô tả}             & Cho phép người dùng xem danh sách bài viết hiển thị trên trang chủ hoặc bảng tin khám phá hoặc theo chủ đề. \\ \midrule
+\textbf{Tiền điều kiện}    & Hệ thống đã có sẵn dữ liệu nội dung. \\ \midrule
+\textbf{Hậu điều kiện}     & Danh sách nội dung được hiển thị theo bộ lọc mặc định hoặc tùy chọn người dùng. \\ \midrule
+\textbf{Luồng sự kiện chính} & 
+\begin{tabular}[t]{@{}p{10.5cm}@{}}
+1. Người dùng truy cập trang chủ hoặc bảng tin khám phá.\\
+2. Hệ thống hiển thị danh sách nội dung công khai theo thứ tự mặc định.
+\end{tabular} \\ \midrule
+\textbf{Luồng ngoại lệ} & 2a. Nếu hệ thống bị mất kết nối, màn hình hiển thị “Lỗi kết nối” \\ 
+\bottomrule
+\end{tabular}
+\caption{Mô tả Use Case: Xem danh sách nội dung}
+\label{usecase-3-01}
+\end{table}
+
+\begin{table}[H]
+\centering
+\renewcommand{\arraystretch}{1.2}
+\begin{tabular}{@{}p{4cm} p{11cm}@{}}
+\toprule
+\textbf{Use case ID}       & UC-M3-02 \\ \midrule
+\textbf{Tên Use case}      & Lọc và sắp xếp nội dung \\ \midrule
+\textbf{Các tác nhân}      & Traveler, Guest, Provider \\ \midrule
+\textbf{Mô tả}             & Người dùng sắp xếp danh sách theo tiêu chí như: độ phổ biến, đánh giá cao, hoặc lọc danh sách theo các tiêu chí như: xếp hạng theo đánh giá khách hàng, khu vực, các bộ lọc đặc biệt (phù hợp với gia đình, cho phép thú cưng, phù hợp với solo-trip,...) \\ \midrule
+\textbf{Trigger}    & Người dùng chọn mục “Sắp xếp theo…”, “Lọc nâng cao”. \\ \midrule
+\textbf{Tiền điều kiện}    & Hệ thống đã có sẵn dữ liệu nội dung. \\ \midrule
+\textbf{Hậu điều kiện}     & Hệ thống hiển thị danh sách kết quả tìm kiếm theo phân trang. \\ \midrule
+\textbf{Luồng sự kiện chính} & 
+\begin{tabular}[t]{@{}p{10.5cm}@{}}
+1. Người chọn các tiêu chí lọc, sắp xếp.\\
+2. Người dùng nhấn nút “Áp dụng”.\\
+3. Hệ thống truy vấn dữ liệu và hiển thị kết quả.
+\end{tabular} \\ \midrule
+\textbf{Luồng ngoại lệ} & \begin{tabular}[t]{@{}p{10.5cm}@{}}
+3a. Không tìm thấy kết quả → hệ thống hiển thị thông báo “Không tìm thấy nội dung phù hợp.”
+3b. Lỗi kết nối → hiển thị “Không thể tải dữ liệu, vui lòng thử lại.”
+\end{tabular} \\ 
+\bottomrule
+\end{tabular}
+\caption{Mô tả Use Case: Lọc và sắp xếp nội dung}
+\label{usecase-3-02}
+\end{table}
+
+
+\begin{table}[H]
+\centering
+\renewcommand{\arraystretch}{1.2}
+\begin{tabular}{@{}p{4cm} p{11cm}@{}}
+\toprule
+\textbf{Use case ID}       & UC-M3-04 \\ \midrule
+\textbf{Tên Use case}      & Tìm kiếm nội dung \\ \midrule
+\textbf{Các tác nhân}      & Traveler, Guest, Provider \\ \midrule
+\textbf{Mô tả}             & Cho phép người dùng tìm kiếm bài viết, địa điểm hoặc chủ đề theo từ khóa, danh mục. \\ \midrule
+\textbf{Tiền điều kiện}    & Người dùng có thể truy cập thanh tìm kiếm. \\ \midrule
+\textbf{Hậu điều kiện}     & Hệ thống hiển thị danh sách kết quả tìm kiếm theo phân trang. \\ \midrule
+\textbf{Luồng sự kiện chính} & 
+\begin{tabular}[t]{@{}p{10.5cm}@{}}
+1. Người nhập từ khóa tìm kiếm \\
+2. Người dùng nhấn nút tìm kiếm \\
+3. Hệ thống truy vấn dữ liệu và hiển thị kết quả.
+\end{tabular} \\ \midrule
+\textbf{Luồng ngoại lệ} &
+\begin{tabular}[t]{@{}p{10.5cm}@{}}
+3a. Không tìm thấy kết quả → hệ thống hiển thị thông báo “Không tìm thấy nội dung phù hợp với từ khóa.” \\
+3b. Lỗi kết nối → hiển thị “Không thể tải dữ liệu, vui lòng thử lại.”
+\end{tabular} \\ \midrule
+\textbf{Luồng thay thế} &
+\begin{tabular}[t]{@{}p{10.5cm}@{}}
+1. Người chọn danh mục/chủ đề gợi ý trên thanh công cụ tìm kiếm. \\
+2. Người dùng nhấn nút tìm kiếm. \\
+3. Hệ thống xử lý và hiển thị kết quả. \\
+\end{tabular} \\ 
+\bottomrule
+\end{tabular}
+\caption{Mô tả Use Case: Tìm kiếm nội dung}
+\label{usecase-3-04}
+\end{table}
+
+
+\begin{table}[H]
+\centering
+\renewcommand{\arraystretch}{1.2}
+\begin{tabular}{@{}p{4cm} p{11cm}@{}}
+\toprule
+\textbf{Use case ID}       & UC-M3-05 \\ \midrule
+\textbf{Tên Use case}      & Lưu địa điểm, bài viết \\ \midrule
+\textbf{Các tác nhân}      & Traveler \\ \midrule
+\textbf{Mô tả}             & Cho phép người dùng (Traveler) lưu lại bài viết hoặc địa điểm yêu thích để xem lại sau. \\ \midrule
+\textbf{Trigger}    & Người dùng nhấn biểu tượng “Lưu” trên bài viết hoặc địa điểm. \\ \midrule
+\textbf{Tiền điều kiện}    & Người dùng đã đăng nhập. \\ \midrule
+\textbf{Hậu điều kiện}     & Nội dung được thêm vào danh sách đã lưu. \\ \midrule
+\textbf{Luồng sự kiện chính} & 
+\begin{tabular}[t]{@{}p{10.5cm}@{}}
+1. Người dùng chọn biểu tượng “Lưu” tại bài viết hoặc địa điểm.\\
+2. Hệ thống hiển thị danh sách “Bộ sưu tập” của người dùng.\\
+3. Người dùng tuỳ chọn “Bộ sưu tập” để lưu bài viết/ địa điểm.\\
+4. Hệ thống ghi nhận và thêm nội dung vào danh sách đã lưu.
+\end{tabular} \\ \midrule
+\textbf{Luồng ngoại lệ} &
+\begin{tabular}[t]{@{}p{10.5cm}@{}}
+1a. Chưa đăng nhập → hiển thị “Vui lòng đăng nhập để sử dụng tính năng lưu.”
+\end{tabular} \\ \midrule
+\textbf{Luồng thay thế} &
+\begin{tabular}[t]{@{}p{10.5cm}@{}}
+3(a)1.  Người dùng chọn biểu tượng “+” để tạo “Bộ sưu tập”.  
+2. Hệ thống tự động lưu bài viết/ địa điểm vào bộ sưu tập vừa tạo
+3(b)1. Hệ thống tự động lưu bài viết/địa điểm vào danh mục mặc định “Tất cả bài viết”.
+\end{tabular} \\ 
+\bottomrule
+\end{tabular}
+\caption{Mô tả Use Case: Lưu địa điểm, bài viết}
+\label{usecase-3-05}
+\end{table}
+
+
+\begin{table}[H]
+\centering
+\renewcommand{\arraystretch}{1.2}
+\begin{tabular}{@{}p{4cm} p{11cm}@{}}
+\toprule
+\textbf{Use case ID}       & UC-M3-06 \\ \midrule
+\textbf{Tên Use case}      & Xem danh sách nội dung địa điểm, bài viết đã lưu \\ \midrule
+\textbf{Các tác nhân}      & Traveler \\ \midrule
+\textbf{Mô tả}             & Cho phép người dùng (Traveler) xem lại bài viết hoặc địa điểm yêu thích.\\ \midrule
+\textbf{Trigger}    & Người dùng chọn biểu tượng “Bộ sưu tập” trên trang cá nhân \\ \midrule
+\textbf{Tiền điều kiện}    & 
+\begin{tabular}[t]{@{}p{10.5cm}@{}}
+1. Người dùng đã đăng nhập.\\
+2. Người dùng đã lưu ít nhất một nội dung.
+\end{tabular} \\ \midrule
+\textbf{Hậu điều kiện}     & Danh sách nội dung được hiển thị theo thứ tự mặc định (mới nhất -> cũ nhất) \\ \midrule
+\textbf{Luồng sự kiện chính} & 
+\begin{tabular}[t]{@{}p{10.5cm}@{}}
+1. Người dùng chọn biểu tượng “Bộ sưu tập”.\\
+2. Hệ thống hiển thị các nội dung đã lưu theo các bộ sưu tập.\\
+3. Người dùng chọn xem “tất cả bài viết” hoặc “bộ sưu tập” cụ thể.\\
+4. Hệ thống hiển thị danh sách chi tiết.
+\end{tabular} \\ \midrule
+\textbf{Luồng ngoại lệ} &
+\begin{tabular}[t]{@{}p{10.5cm}@{}}
+2a. Danh sách trống → hiển thị “Bạn chưa lưu nội dung nào.”
+\end{tabular} \\
+\bottomrule
+\end{tabular}
+\caption{Mô tả Use Case: Xem danh sách nội dung địa điểm, bài viết đã lưu}
+\label{usecase-3-06}
+\end{table}
+
+\begin{table}[H]
+\centering
+\renewcommand{\arraystretch}{1.2}
+\begin{tabular}{@{}p{4cm} p{11cm}@{}}
+\toprule
+\textbf{Use case ID}       & UC-M3-10 \\ \midrule
+\textbf{Tên Use case}      & Theo dõi chủ đề hoặc địa điểm \\ \midrule
+\textbf{Các tác nhân}      & Traveler \\ \midrule
+\textbf{Mô tả}             & Cho phép người dùng theo dõi hoặc hủy theo dõi một chủ đề hoặc địa điểm.\\ \midrule
+\textbf{Trigger}    & Người dùng nhấn nút “Theo dõi”.\\ \midrule
+\textbf{Tiền điều kiện}    & Người dùng đã đăng nhập.\\ \midrule
+\textbf{Hậu điều kiện}     & Danh sách theo dõi được cập nhật \\ \midrule
+\textbf{Luồng sự kiện chính} & 
+\begin{tabular}[t]{@{}p{10.5cm}@{}}
+1. Người dùng chọn nút “Theo dõi” chủ đề hoặc địa điểm. \\
+2. Hệ thống ghi nhận hành động và cập nhật trạng thái theo dõi.
+\end{tabular} \\ \midrule
+\textbf{Luồng ngoại lệ} &
+\begin{tabular}[t]{@{}p{10.5cm}@{}}
+1a. Người dùng chưa đăng nhập → hiển thị “Vui lòng đăng nhập để theo dõi nội dung.
+\end{tabular} \\
+\bottomrule
+\end{tabular}
+\caption{Mô tả Use Case: Theo dõi chủ đề hoặc địa điểm}
+\label{usecase-3-10}
+\end{table}

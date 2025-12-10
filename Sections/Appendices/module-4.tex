@@ -1,0 +1,412 @@
+% --- //////////////////////////////////////////////////////////////// ---
+% MODULE 4
+\begin{longtable}{@{}p{4cm} p{11cm}@{}}
+\caption{Mô tả Use Case: Xem danh sách các review của mình}
+\label{usecase-4-01} \\
+\toprule
+\textbf{Use case ID}       & UC-M4-01 \\ \midrule
+\textbf{Tên Use case}      & Xem danh sách các review của mình \\ \midrule
+\textbf{Các tác nhân}      & Traveler \\ \midrule
+\textbf{Mô tả}             & Cho phép Traveler xem lại một danh sách tập trung tất cả các bài đánh giá (review) mà họ đã viết cho các địa điểm khác nhau. \\ \midrule
+\textbf{Tiền điều kiện}    & Traveler đã đăng nhập vào hệ thống. \\ \midrule
+\textbf{Hậu điều kiện}     & Traveler xem được danh sách các review của mình và có thể điều hướng đến từng review hoặc địa điểm tương ứng. \\ \midrule
+\textbf{Luồng sự kiện chính} & 
+\begin{tabular}[t]{@{}p{10.5cm}@{}}
+1. Traveler truy cập vào trang cá nhân và chọn mục ""Các review của tôi"".\\
+2. Hệ thống truy vấn cơ sở dữ liệu để lấy tất cả các review do Traveler này tạo.\\
+3. Hệ thống hiển thị một danh sách các review, mỗi mục trong danh sách bao gồm: tên địa điểm đã review, điểm đánh giá (số sao), một phần nội dung review và ngày đăng.\\
+4. Traveler có thể nhấn vào một review để xem chi tiết trang địa điểm tương ứng, nơi họ có thể thực hiện các hành động trong UC-M3-02 Quản lý Review (chỉnh sửa, xóa).
+\end{tabular} \\ \midrule
+\textbf{Luồng rẽ nhánh} &
+\begin{tabular}[t]{@{}p{10.5cm}@{}}
+\textbf{A1: Lọc hoặc sắp xếp danh sách:}\\
+1a. Traveler sử dụng công cụ lọc/sắp xếp có sẵn.\\
+2a. Traveler có thể sắp xếp danh sách theo tiêu chí như: mới nhất, cũ nhất, điểm đánh giá cao đến thấp (hoặc ngược lại).\\
+3a. Hệ thống tải lại danh sách theo tiêu chí đã chọn.
+\end{tabular} \\ \midrule
+\textbf{Luồng ngoại lệ} &
+\begin{tabular}[t]{@{}p{10.5cm}@{}}
+\textbf{E1: Người dùng chưa có review nào:}\\
+Luồng này xảy ra tại bước 2:\\
+2a. Hệ thống không tìm thấy review nào được tạo bởi Traveler.\\
+2b. Hệ thống hiển thị thông báo ""Bạn chưa có bài đánh giá nào"".
+\end{tabular} \\ 
+\bottomrule
+\end{longtable}
+
+\begin{longtable}{@{}p{4cm} p{11cm}@{}}
+\caption{Mô tả Use Case: Quản lý Review}
+\label{usecase-4-03} \\
+\toprule
+\textbf{Use case ID}       & UC-M4-03 \\ \midrule
+\textbf{Tên Use case}      & Quản lý Review \\ \midrule
+\textbf{Các tác nhân}      & Traveler \\ \midrule
+\textbf{Mô tả}             & Cho phép Traveler tạo một bài đánh giá (review) mới cho một địa điểm (POI), đính kèm media (tối đa 10 ảnh hoặc 1 video), cũng như chỉnh sửa hoặc xóa review của chính mình. \\ \midrule
+\textbf{Tiền điều kiện}    & 
+\begin{tabular}[t]{@{}p{10.5cm}@{}}
+1. Traveler đã đăng nhập vào hệ thống.\\
+2. Traveler đang ở trang chi tiết của một địa điểm (Point of Interest - POI) mà họ muốn review.
+\end{tabular} \\ \midrule
+\textbf{Hậu điều kiện}     & Một review mới được tạo / một review cũ được cập nhật hoặc xóa khỏi hệ thống. Điểm đánh giá trung bình của POI có thể được tính toán lại. \\ \midrule
+\textbf{Luồng sự kiện chính} & 
+\begin{tabular}[t]{@{}p{10.5cm}@{}}
+1. Trên trang chi tiết POI, Traveler nhấn vào nút ""Viết Review"".\\
+2. Hệ thống hiển thị một biểu mẫu (form) bao gồm các trường:\\
+– Chọn điểm đánh giá (Rating: 1-5 sao).\\
+– Ô nhập văn bản cho nội dung review.\\
+– Công cụ tải lên media (ảnh/video).\\
+3. Traveler chọn số sao, nhập nội dung và tùy chọn tải lên tối đa 10 ảnh hoặc 1 video.\\
+4. Traveler nhấn nút ""Đăng"" (Submit).\\
+5. Hệ thống kiểm tra tính hợp lệ của dữ liệu (ví dụ: bắt buộc phải có rating, nội dung không được để trống, media đúng định dạng và số lượng).\\
+6. Hệ thống lưu review mới vào cơ sở dữ liệu, liên kết nó với tài khoản của Traveler và POI tương ứng.\\
+7. Hệ thống hiển thị review mới của Traveler trong danh sách review của POI và thông báo đăng thành công.
+\end{tabular} \\ \midrule
+\textbf{Luồng rẽ nhánh} &
+\begin{tabular}[t]{@{}p{10.5cm}@{}}
+\textbf{A1: Chỉnh sửa một review đã có:}\\
+1a. Traveler tìm thấy review của chính mình trong danh sách và nhấn vào nút/biểu tượng ""Chỉnh sửa"".\\
+2a. Hệ thống hiển thị lại biểu mẫu ở bước 2 của luồng chính, nhưng đã điền sẵn nội dung cũ.\\
+3a. Traveler thay đổi nội dung (rating, văn bản, media).\\
+4a. Luồng hợp nhất và tiếp tục từ bước 4 của Luồng sự kiện chính.\\
+\textbf{A2: Xóa một review đã có:}\\
+1b. Traveler tìm thấy review của chính mình và nhấn vào nút/biểu tượng ""Xóa"".\\
+2b. Hệ thống hiển thị một hộp thoại yêu cầu xác nhận (ví dụ: ""Bạn có chắc chắn muốn xóa review này không?"").\\
+3b. Traveler xác nhận đồng ý.\\
+4b. Hệ thống xóa vĩnh viễn review khỏi cơ sở dữ liệu.\\
+5b. Hệ thống tải lại danh sách review và hiển thị thông báo ""Đã xóa review thành công"". Use case kết thúc.
+\end{tabular} \\ \midrule
+\textbf{Luồng ngoại lệ} &
+\begin{tabular}[t]{@{}p{10.5cm}@{}}
+\textbf{E1: Dữ liệu nhập không hợp lệ}\\
+Luồng này xảy ra tại bước 5 của Luồng sự kiện chính:\\
+5a. Hệ thống phát hiện lỗi (ví dụ: Traveler chưa chọn rating).\\
+5b. Hệ thống chặn việc đăng và hiển thị thông báo lỗi ngay cạnh trường nhập liệu không hợp lệ. Use case tạm dừng cho đến khi Traveler sửa lỗi.\\[3pt]
+\textbf{E2: Tải lên media thất bại}\\
+Luồng này xảy ra tại bước 3:\\
+3a. Quá trình tải media thất bại (do file quá lớn, sai định dạng, mất kết nối).\\
+3b. Hệ thống hiển thị thông báo lỗi về việc tải media, cho phép Traveler thử lại hoặc tiếp tục đăng review mà không có media đó.\\[3pt]
+\textbf{E3: Lỗi hệ thống khi đăng review}\\
+Luồng này xảy ra tại bước 6:\\
+6a. Hệ thống không thể lưu review vào cơ sở dữ liệu.\\
+6b. Hệ thống hiển thị thông báo lỗi chung (ví dụ: ""Đăng review thất bại, vui lòng thử lại.""). Dữ liệu Traveler đã nhập không bị mất để họ có thể thử lại. Use case kết thúc.
+\end{tabular} \\ 
+\bottomrule
+\end{longtable}
+
+\begin{longtable}{@{}p{4cm} p{11cm}@{}}
+\caption{Mô tả Use Case: Xem danh sách các bài blog của mình}
+\label{usecase-4-04} \\
+\toprule
+\textbf{Use case ID}       & UC-M4-04 \\ \midrule
+\textbf{Tên Use case}      & Xem danh sách các bài blog của mình \\ \midrule
+\textbf{Các tác nhân}      & Traveler \\ \midrule
+\textbf{Mô tả}             & Cho phép Traveler xem và quản lý tất cả các bài viết blog mà họ đã tạo, bao gồm cả các bài đã xuất bản và các bản nháp chưa hoàn thành. \\ \midrule
+\textbf{Tiền điều kiện}    & Traveler đã đăng nhập vào hệ thống. \\ \midrule
+\textbf{Hậu điều kiện}     & Traveler xem được danh sách các bài blog của mình và có thể thực hiện các thao tác quản lý. \\ \midrule
+\textbf{Luồng sự kiện chính} & 
+\begin{tabular}[t]{@{}p{10.5cm}@{}}
+1. Traveler truy cập vào trang cá nhân và chọn mục ""Các bài viết của tôi"".\\
+2. Hệ thống truy vấn cơ sở dữ liệu để lấy tất cả các bài viết do Traveler này tạo.\\
+3. Hệ thống hiển thị danh sách các bài viết, mỗi mục trong danh sách ghi rõ tiêu đề, ngày cập nhật cuối cùng và trạng thái (""Đã xuất bản"" hoặc ""Bản nháp"").\\
+4. Traveler có thể nhấn vào một bài viết để xem chi tiết hoặc thực hiện các hành động trong UC-M3-04 Quản lý Blog (chỉnh sửa, xóa).
+\end{tabular} \\ \midrule
+\textbf{Luồng rẽ nhánh} &
+\begin{tabular}[t]{@{}p{10.5cm}@{}}
+\textbf{A1: Lọc danh sách theo trạng thái:}\\
+1a. Traveler sử dụng bộ lọc để chọn xem.\\
+2a. Hệ thống tải lại danh sách bài viết theo trạng thái đã chọn.
+\end{tabular} \\ \midrule
+\textbf{Luồng ngoại lệ} &
+\begin{tabular}[t]{@{}p{10.5cm}@{}}
+\textbf{E1: Người dùng chưa có bài viết nào:}\\
+Luồng này xảy ra tại bước 2:\\
+2a. Hệ thống không tìm thấy bài viết nào được tạo bởi Traveler.\\
+2b. Hệ thống hiển thị thông báo ""Bạn chưa có bài viết nào"" và kèm một nút ""Viết bài mới"".
+\end{tabular} \\ 
+\bottomrule
+\end{longtable}
+
+\begin{longtable}{@{}p{4cm} p{11cm}@{}}
+\caption{Mô tả Use Case: Quản lý Blog}
+\label{usecase-4-06} \\
+\toprule
+\textbf{Use case ID}       & UC-M4-06 \\ \midrule
+\textbf{Tên Use case}      & Quản lý Blog \\ \midrule
+\textbf{Các tác nhân}      & Traveler \\ \midrule
+\textbf{Mô tả}             & Cho phép Traveler tạo một bài viết chia sẻ hành trình (dạng blog), lưu lại dưới dạng bản nháp để chỉnh sửa sau, xuất bản bài viết, cũng như cập nhật hoặc xóa bài viết của chính mình. \\ \midrule
+\textbf{Tiền điều kiện}    & 
+\begin{tabular}[t]{@{}p{10.5cm}@{}}
+1. Traveler đã đăng nhập vào hệ thống.\\
+2. Traveler đang ở trang tạo bài viết mới hoặc trang quản lý các bài viết của mình.
+\end{tabular} \\ \midrule
+\textbf{Hậu điều kiện}     & Một bài viết mới được tạo (dưới dạng nháp hoặc đã xuất bản) / một bài viết cũ được cập nhật hoặc xóa khỏi hệ thống. \\ \midrule
+\textbf{Luồng sự kiện chính} & 
+\begin{tabular}[t]{@{}p{10.5cm}@{}}
+1. Traveler truy cập vào chức năng ""Viết bài mới"".\\
+2. Hệ thống hiển thị một trình soạn thảo văn bản (rich-text editor) với các trường: ""Tiêu đề"", ""Nội dung"", và các công cụ định dạng, chèn media.\\
+3. Traveler nhập tiêu đề, soạn nội dung và chèn media (hình ảnh/video) vào bài viết.\\
+4. Traveler nhấn nút ""Xuất bản"" (Publish).\\
+5. Hệ thống kiểm tra tính hợp lệ của dữ liệu (ví dụ: tiêu đề và nội dung không được để trống).\\
+6. Hệ thống lưu bài viết vào cơ sở dữ liệu với trạng thái ""Đã xuất bản"".\\
+7. Hệ thống chuyển hướng Traveler đến trang xem bài viết vừa đăng và hiển thị thông báo ""Xuất bản thành công!""
+\end{tabular} \\ \midrule
+\textbf{Luồng rẽ nhánh} &
+\begin{tabular}[t]{@{}p{10.5cm}@{}}
+\textbf{A1: Lưu bài viết dưới dạng Nháp}\\
+Luồng này xảy ra tại bước 4 của Luồng sự kiện chính:\\
+4a. Thay vì ""Xuất bản"", Traveler nhấn nút ""Lưu nháp"" (Save Draft).\\
+5a. Hệ thống thực hiện kiểm tra dữ liệu tối thiểu để lưu nháp (ví dụ: chỉ cần có tiêu đề).\\
+6a. Hệ thống lưu bài viết vào cơ sở dữ liệu với trạng thái ""Bản nháp"".\\
+7a. Hệ thống thông báo ""Đã lưu nháp thành công!"" và có thể chuyển hướng Traveler về trang quản lý bài viết. Use case kết thúc.\\
+\textbf{A2: Chỉnh sửa một bài viết đã có (Nháp hoặc đã xuất bản)}\\
+1b. Traveler tìm đến bài viết của mình trong trang quản lý và nhấn ""Chỉnh sửa"".\\
+2b. Hệ thống hiển thị lại trình soạn thảo đã điền sẵn nội dung cũ.\\
+3b. Traveler thay đổi nội dung.\\
+4b. Luồng hợp nhất và tiếp tục từ bước 4 của Luồng sự kiện chính, Traveler có thể chọn ""Lưu nháp"" hoặc ""Xuất bản""/""Cập nhật"".\\
+\textbf{A3: Xóa một bài viết:}\\
+1c. Traveler tìm đến bài viết của mình và nhấn ""Xóa"".\\
+2c. Hệ thống hiển thị hộp thoại yêu cầu xác nhận.\\
+3c. Traveler xác nhận đồng ý.\\
+4c. Hệ thống xóa bài viết khỏi cơ sở dữ liệu.\\
+5c. Hệ thống tải lại danh sách bài viết và hiển thị thông báo ""Đã xóa bài viết thành công"". Use case kết thúc.
+\end{tabular} \\ \midrule
+\textbf{Luồng ngoại lệ} &
+\begin{tabular}[t]{@{}p{10.5cm}@{}}
+\textbf{E1: Dữ liệu không hợp lệ khi Xuất bản:}\\
+Luồng này xảy ra tại bước 5 của Luồng sự kiện chính:\\
+5a. Hệ thống phát hiện lỗi (ví dụ: Traveler chưa nhập tiêu đề).\\
+5b. Hệ thống chặn việc xuất bản và hiển thị thông báo lỗi ngay cạnh trường nhập liệu không hợp lệ.\\[3pt]
+\textbf{E2: Tải lên media thất bại:}\\
+Luồng này xảy ra tại bước 3:\\
+3a. Quá trình tải media thất bại (do file quá lớn, sai định dạng, mất kết nối).\\
+3b. Hệ thống hiển thị thông báo lỗi, cho phép Traveler thử lại hoặc tiếp tục soạn thảo.\\[3pt]
+\textbf{E3: Lỗi hệ thống khi lưu/xuất bản:}\\
+Luồng này xảy ra tại bước 6:\\
+6a. Hệ thống không thể lưu bài viết vào cơ sở dữ liệu.\\
+6b. Hệ thống hiển thị thông báo lỗi chung và giữ lại nội dung Traveler đã soạn để tránh mất dữ liệu. Use case kết thúc.
+\end{tabular} \\ 
+\bottomrule
+\end{longtable}
+
+\begin{longtable}{@{}p{4cm} p{11cm}@{}}
+\caption{Mô tả Use Case: Tương tác với nội dung}
+\label{usecase-4-07} \\
+\toprule
+\textbf{Use case ID}       & UC-M4-07 \\ \midrule
+\textbf{Tên Use case}      & Tương tác với nội dung \\ \midrule
+\textbf{Các tác nhân}      & Traveler \\ \midrule
+\textbf{Mô tả}             & Cho phép Traveler tương tác với một bài viết hoặc review thông qua các hành động: để lại bình luận, bày tỏ cảm xúc (react), hoặc lưu lại bài viết đó để xem sau. \\ \midrule
+\textbf{Tiền điều kiện}    & 
+\begin{tabular}[t]{@{}p{10.5cm}@{}}
+1. Traveler đã đăng nhập vào hệ thống.\\
+2. Traveler đang ở trang xem chi tiết một bài viết.
+\end{tabular} \\ \midrule
+\textbf{Hậu điều kiện}     & Tương tác của Traveler (bình luận, cảm xúc, lưu) được ghi nhận vào hệ thống và giao diện được cập nhật để phản ánh sự thay đổi đó. \\ \midrule
+\textbf{Luồng sự kiện chính} & 
+\begin{tabular}[t]{@{}p{10.5cm}@{}}
+1. Traveler kéo xuống phần bình luận của bài viết/review.\\
+2. Traveler nhập nội dung bình luận vào ô soạn thảo.\\
+3. Traveler nhấn nút ""Gửi"" (Post).\\
+4. Hệ thống kiểm tra tính hợp lệ của bình luận (ví dụ: không được để trống, không chứa từ khóa bị cấm).\\
+5. Hệ thống lưu bình luận vào cơ sở dữ liệu, liên kết nó với Traveler và nội dung đang xem.\\
+6. Hệ thống cập nhật lại danh sách bình luận ngay lập tức để hiển thị bình luận mới của Traveler.
+\end{tabular} \\ \midrule
+\textbf{Luồng rẽ nhánh} &
+\begin{tabular}[t]{@{}p{10.5cm}@{}}
+\textbf{A1: Bày tỏ cảm xúc (React) với nội dung:}\\
+1a. Traveler nhấn vào nút/biểu tượng cảm xúc (ví dụ: Thích, Tim, Haha).\\
+2a. Hệ thống ngay lập tức ghi nhận cảm xúc đó vào cơ sở dữ liệu.\\
+3a. Giao diện cập nhật lại trạng thái của nút bấm (ví dụ: chuyển sang màu xanh) và tăng tổng số lượt cảm xúc.\\
+4. (Sub-flow) Bỏ bày tỏ cảm xúc: Nếu Traveler nhấn lại vào nút đó, hệ thống sẽ xóa lượt cảm xúc và giao diện trở về trạng thái ban đầu.\\
+\textbf{A2: Lưu (Bookmark) nội dung để xem sau:}\\
+1b. Traveler nhấn vào nút/biểu tượng ""Lưu"" (Save/Bookmark).\\
+2b. Hệ thống thêm bài viết/review này vào danh sách ""Đã lưu"" của Traveler.\\
+3b. Giao diện cập nhật lại trạng thái của nút bấm (ví dụ: biểu tượng được tô đầy).\\
+4b. (Sub-flow) Bỏ lưu: Nếu Traveler nhấn lại vào nút đó, hệ thống sẽ xóa nội dung khỏi danh sách ""Đã lưu"" và giao diện trở về trạng thái ban đầu.\\
+\textbf{A3: Chỉnh sửa hoặc Xóa bình luận của chính mình}\\
+1c. Traveler tìm đến một bình luận do chính mình đã đăng.\\
+2c. Traveler nhấn vào tùy chọn ""Chỉnh sửa"" hoặc ""Xóa"".\\
+3c. Nếu ""Chỉnh sửa"", hệ thống cho phép sửa lại nội dung và lưu lại. Nếu ""Xóa"", hệ thống yêu cầu xác nhận và sau đó xóa bình luận.
+\end{tabular} \\ \midrule
+\textbf{Luồng ngoại lệ} &
+\begin{tabular}[t]{@{}p{10.5cm}@{}}
+\textbf{E1: Nội dung bình luận không hợp lệ:}\\
+Luồng này xảy ra tại bước 4 của Luồng sự kiện chính:\\
+4a. Hệ thống phát hiện bình luận vi phạm (trống, chứa spam,...).\\
+4b. Hệ thống chặn việc gửi và hiển thị thông báo lỗi (ví dụ: ""Bình luận không được để trống"").\\[3pt]
+\textbf{E2: Lỗi kết nối hoặc lỗi máy chủ:}\\
+Luồng này có thể xảy ra khi thực hiện bất kỳ tương tác nào (bình luận, thả cảm xúc, lưu):\\
+1a. Hệ thống không thể gửi dữ liệu tương tác lên máy chủ.\\
+2a. Hệ thống hiển thị thông báo lỗi (ví dụ: ""Tương tác thất bại, vui lòng thử lại"") và không thay đổi trạng thái giao diện.
+\end{tabular} \\ 
+\bottomrule
+\end{longtable}
+
+\begin{longtable}{@{}p{4cm} p{11cm}@{}}
+\caption{Mô tả Use Case: Tạo Group Chat}
+\label{usecase-4-10} \\
+\toprule
+\textbf{Use case ID}       & UC-M4-10 \\ \midrule
+\textbf{Tên Use case}      & Tạo Group Chat \\ \midrule
+\textbf{Các tác nhân}      & Traveler \\ \midrule
+\textbf{Mô tả}             & Cho phép Traveler (Người tạo) tạo một nhóm chat mới bằng cách chọn các thành viên từ danh sách bạn bè của mình. \\ \midrule
+\textbf{Tiền điều kiện}    & 
+\begin{tabular}[t]{@{}p{10.5cm}@{}}
+1. Traveler (Người tạo) đã đăng nhập.\\
+2. Traveler (Người tạo) có ít nhất một người bạn.
+\end{tabular} \\ \midrule
+\textbf{Hậu điều kiện}     & 
+\begin{tabular}[t]{@{}p{10.5cm}@{}}
+(Thành công): Group chat được tạo, các thành viên hợp lệ được thêm vào nhóm.\\
+(Thất bại): Group chat không được tạo.
+\end{tabular} \\ \midrule
+\textbf{Luồng sự kiện chính} & 
+\begin{tabular}[t]{@{}p{10.5cm}@{}}
+1. Traveler A chọn chức năng ""Tạo Group Chat"".\\
+2. Hệ thống hiển thị danh sách bạn bè của Traveler A.\\
+3. Traveler A chọn một hoặc nhiều bạn bè từ danh sách này để thêm vào nhóm.\\
+4. Traveler A đặt tên cho nhóm (ví dụ: ""Nhóm Du lịch Phú Quốc"").\\
+5. Traveler A nhấn ""Tạo nhóm"".\\
+6. Hệ thống tạo Group Chat mới với các thành viên đã chọn.\\
+7. Hệ thống hiển thị thông báo ""Tạo nhóm thành công"" và mở giao diện chat nhóm.
+\end{tabular} \\ \midrule
+\textbf{Luồng rẽ nhánh}    & (Không có) \\ \midrule
+\textbf{Luồng ngoại lệ} &
+\begin{tabular}[t]{@{}p{10.5cm}@{}}
+\textbf{E1: Không chọn thành viên:}\\
+Tại bước 5, Traveler nhấn ""Tạo nhóm"" nhưng chưa chọn bất kỳ người bạn nào.\\
+Hệ thống hiển thị thông báo ""Vui lòng chọn ít nhất hai thành viên cho nhóm.""\\[3pt]
+\textbf{E2: Lỗi hệ thống:}\\
+Tại bước 6, hệ thống không thể tạo nhóm do lỗi CSDL.\\
+Hệ thống hiển thị thông báo ""Đã xảy ra lỗi, không thể tạo nhóm. Vui lòng thử lại sau.""
+\end{tabular} \\ 
+\bottomrule
+\end{longtable}
+
+\begin{longtable}{@{}p{4cm} p{11cm}@{}}
+\caption{Mô tả Use Case: Gửi tin nhắn 1-1}
+\label{usecase-4-11-1} \\
+\toprule
+\textbf{Use case ID}       & UC-M4-11.1 \\ \midrule
+\textbf{Tên Use case}      & Gửi tin nhắn 1-1 \\ \midrule
+\textbf{Các tác nhân}      & Traveler \\ \midrule
+\textbf{Mô tả}             & Cho phép một Traveler (người gửi) gửi một tin nhắn riêng tư cho một Traveler khác (người nhận) trong hệ thống. Use case này bao gồm việc xem lại lịch sử trò chuyện và gửi tin nhắn mới. \\ \midrule
+\textbf{Tiền điều kiện}    & 
+\begin{tabular}[t]{@{}p{10.5cm}@{}}
+1. Traveler (người gửi) đã đăng nhập vào hệ thống.\\
+2. Traveler đã truy cập vào mục ""Tin nhắn"" hoặc trang cá nhân của người muốn gửi tin.
+\end{tabular} \\ \midrule
+\textbf{Hậu điều kiện}     & Tin nhắn được gửi thành công, hiển thị trong cuộc trò chuyện của cả người gửi và người nhận. \\ \midrule
+\textbf{Luồng sự kiện chính} & 
+\begin{tabular}[t]{@{}p{10.5cm}@{}}
+1. Traveler (Người gửi) mở cuộc trò chuyện với một Traveler khác (Người nhận).\\
+2. Hệ thống tải và hiển thị lịch sử tin nhắn trước đó giữa hai người (nếu có).\\
+3. Người gửi nhập nội dung tin nhắn vào ô soạn thảo.\\
+4. Người gửi nhấn nút ""Gửi"".\\
+5. Hệ thống kiểm tra tính hợp lệ của tin nhắn (ví dụ: không được để trống, không vi phạm bộ lọc từ khóa).\\
+6. Hệ thống lưu tin nhắn vào cơ sở dữ liệu.\\
+7. Hệ thống cập nhật giao diện trò chuyện của Người gửi ngay lập tức để hiển thị tin nhắn vừa gửi.\\
+8. Hệ thống gửi tin nhắn (và có thể kèm một thông báo ""có tin nhắn mới"") đến cho Người nhận.
+\end{tabular} \\ \midrule
+\textbf{Luồng rẽ nhánh} &
+\begin{tabular}[t]{@{}p{10.5cm}@{}}
+\textbf{A1: Bắt đầu một cuộc trò chuyện mới:}\\
+Luồng này xảy ra khi chưa có lịch sử trò chuyện giữa hai người:\\
+1a. Traveler (Người gửi) vào trang cá nhân của Traveler khác và nhấn nút ""Nhắn tin"".\\
+2a. Hệ thống mở một cửa sổ trò chuyện trống.\\
+3a. Luồng hợp nhất và tiếp tục từ bước 3 của Luồng sự kiện chính.
+\end{tabular} \\ \midrule
+\textbf{Luồng ngoại lệ} &
+\begin{tabular}[t]{@{}p{10.5cm}@{}}
+\textbf{E1: Lỗi kết nối hoặc lỗi máy chủ:}\\
+Luồng này xảy ra tại bước 6:\\
+6a. Hệ thống không thể gửi tin nhắn lên máy chủ.\\
+6b. Hệ thống hiển thị trạng thái ""Gửi thất bại"" bên cạnh tin nhắn đó và có thể cung cấp tùy chọn ""Thử lại"".\\[3pt]
+\textbf{E2: Người nhận đã chặn người gửi:}\\
+Luồng này xảy ra tại bước 4:\\
+4a. Hệ thống kiểm tra và phát hiện Người nhận đã chặn Người gửi.\\
+4b. Hệ thống chặn việc gửi và hiển thị thông báo ""Bạn không thể gửi tin nhắn cho người dùng này"". Use case kết thúc.
+\end{tabular} \\ 
+\bottomrule
+\end{longtable}
+
+\begin{longtable}{@{}p{4cm} p{11cm}@{}}
+\caption{Mô tả Use Case: Gửi tin nhắn Group}
+\label{usecase-4-11-2} \\
+\toprule
+\textbf{Use case ID}       & UC-M4-11.2 \\ \midrule
+\textbf{Tên Use case}      & Gửi tin nhắn Group \\ \midrule
+\textbf{Các tác nhân}      & Traveler \\ \midrule
+\textbf{Mô tả}             & Cho phép Traveler gửi tin nhắn vào một Group Chat mà họ là thành viên \\ \midrule
+\textbf{Tiền điều kiện}    & 
+\begin{tabular}[t]{@{}p{10.5cm}@{}}
+1. Traveler đã đăng nhập.\\
+2. Traveler là thành viên của Group Chat.
+\end{tabular} \\ \midrule
+\textbf{Hậu điều kiện}     & 
+\begin{tabular}[t]{@{}p{10.5cm}@{}}
+1. Tin nhắn được gửi thành công và lưu vào CSDL.\\
+2. Tất cả thành viên khác trong nhóm nhận được tin nhắn.
+\end{tabular} \\ \midrule
+\textbf{Luồng sự kiện chính} & 
+\begin{tabular}[t]{@{}p{10.5cm}@{}}
+1. Traveler A mở danh sách nhóm chat và chọn ""Nhóm Du lịch Phú Quốc"".\\
+2. Hệ thống kiểm tra Tiền điều kiện 2 (xác nhận Traveler A vẫn là thành viên).\\
+3. Hệ thống mở giao diện chat nhóm.\\
+4. Traveler A nhập nội dung tin nhắn và nhấn ""Gửi"".\\
+5. Hệ thống lưu tin nhắn vào CSDL, liên kết với ID của nhóm.\\
+6. Hệ thống đẩy tin nhắn (broadcast) đến tất cả thành viên khác của nhóm.
+\end{tabular} \\ \midrule
+\textbf{Luồng rẽ nhánh}    & (Không có) \\ \midrule
+\textbf{Luồng ngoại lệ} &
+\begin{tabular}[t]{@{}p{10.5cm}@{}}
+\textbf{E1: Bị xóa khỏi nhóm:}\\
+Tại bước 2, hệ thống phát hiện Traveler A không (hoặc không còn) là thành viên của nhóm.\\
+Hệ thống hiển thị thông báo ""Bạn không còn là thành viên của nhóm này."" Use case kết thúc.
+\end{tabular} \\ 
+\bottomrule
+\end{longtable}
+
+\begin{longtable}{@{}p{4cm} p{11cm}@{}}
+\caption{Mô tả Use Case: Báo cáo nội dung vi phạm}
+\label{usecase-4-12} \\
+\toprule
+\textbf{Use case ID}       & UC-M4-12 \\ \midrule
+\textbf{Tên Use case}      & Báo cáo nội dung vi phạm \\ \midrule
+\textbf{Các tác nhân}      & Traveler \\ \midrule
+\textbf{Mô tả}             & Cho phép Traveler gửi một báo cáo (report) về một nội dung (bài viết, review, bình luận) mà họ cho là vi phạm tiêu chuẩn cộng đồng. Báo cáo này sẽ được gửi đến đội ngũ quản trị viên (Moderator/Admin) để xem xét. \\ \midrule
+\textbf{Tiền điều kiện}    & 
+\begin{tabular}[t]{@{}p{10.5cm}@{}}
+1. Traveler đã đăng nhập vào hệ thống.\\
+2. Traveler đang xem một nội dung cụ thể (bài viết, review, bình luận).
+\end{tabular} \\ \midrule
+\textbf{Hậu điều kiện}     & Một báo cáo mới được tạo trong hàng đợi xử lý của quản trị viên, và Traveler nhận được thông báo xác nhận. \\ \midrule
+\textbf{Luồng sự kiện chính} & 
+\begin{tabular}[t]{@{}p{10.5cm}@{}}
+1. Traveler tìm thấy một nội dung mà họ cho là vi phạm.\\
+2. Traveler nhấn vào tùy chọn ""Báo cáo"" (thường nằm trong menu ""..."").\\
+3. Hệ thống hiển thị một biểu mẫu (form) với danh sách các lý do báo cáo (ví dụ: ""Spam"", ""Nội dung không phù hợp"", ""Thông tin sai sự thật"", ""Quấy rối"",...).\\
+4. Traveler chọn một hoặc nhiều lý do phù hợp. Hệ thống có thể cung cấp thêm một ô văn bản để Traveler mô tả chi tiết hơn.\\
+5. Traveler nhấn nút ""Gửi báo cáo"".\\
+6. Hệ thống kiểm tra tính hợp lệ (bắt buộc phải chọn ít nhất một lý do).\\
+7. Hệ thống tạo một bản ghi báo cáo mới trong cơ sở dữ liệu, bao gồm thông tin về người báo cáo, nội dung bị báo cáo, và lý do.\\
+8. Hệ thống hiển thị một thông báo xác nhận cho Traveler (ví dụ: ""Cảm ơn bạn đã báo cáo. Đội ngũ quản trị sẽ xem xét trường hợp này."").
+\end{tabular} \\ \midrule
+\textbf{Luồng rẽ nhánh}    & Không có \\ \midrule
+\textbf{Luồng ngoại lệ} &
+\begin{tabular}[t]{@{}p{10.5cm}@{}}
+\textbf{E1: Người dùng không chọn lý do báo cáo:}\\
+Luồng này xảy ra tại bước 6 của Luồng sự kiện chính:\\
+6a. Hệ thống phát hiện Traveler chưa chọn lý do nào.\\
+6b. Hệ thống chặn việc gửi và hiển thị thông báo lỗi: ""Vui lòng chọn ít nhất một lý do báo cáo.""\\[3pt]
+\textbf{E2: Lỗi kết nối hoặc lỗi máy chủ:}\\
+Luồng này xảy ra tại bước 7:\\
+7a. Hệ thống không thể lưu báo cáo vào cơ sở dữ liệu.\\
+7b. Hệ thống hiển thị thông báo lỗi chung: ""Gửi báo cáo thất bại, vui lòng thử lại sau."" Use case kết thúc.\\[3pt]
+\textbf{E3: Nội dung bị xóa trong khi đang báo cáo:}\\
+Luồng này xảy ra khi nội dung bị xóa bởi tác giả hoặc quản trị viên trong khoảng thời gian từ bước 2 đến bước 5:\\
+7c. Tại bước 7, hệ thống không tìm thấy nội dung được liên kết để tạo báo cáo.\\
+7d. Hệ thống hiển thị thông báo lỗi: ""Nội dung này không còn tồn tại."" Use case kết thúc.
+\end{tabular} \\ 
+\bottomrule
+\end{longtable}

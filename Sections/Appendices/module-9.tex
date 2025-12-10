@@ -1,0 +1,144 @@
+\begin{table}[H]
+\centering
+\renewcommand{\arraystretch}{1.2}
+\begin{tabular}{@{}p{4cm} p{11cm}@{}}
+\toprule
+\textbf{Use case ID}       & UC-M9-01 \\ \midrule
+\textbf{Tên Use case}      & Nhận thông báo về các địa điểm/ người dùng đã theo dõi \\ \midrule
+\textbf{Các tác nhân}      & Traveler \\ \midrule
+\textbf{Mô tả}             & Traveler nhận thông báo khi có cập nhật mới từ các mục mà người dùng đã theo dõi.\\ \midrule
+\textbf{Trigger}    & Người dùng chọn biểu tượng “Thông báo” trên thanh điều hướng.\\ \midrule
+\textbf{Tiền điều kiện}    & \begin{tabular}[t]{@{}p{10.5cm}@{}}
+1. Người dùng đã đăng nhập vào hệ thống \\
+2. Người dùng đã theo dõi ít nhất một đối tượng
+\end{tabular} \\ \midrule
+\textbf{Hậu điều kiện}     & Hệ thống hiển thị danh sách thông báo về chủ đề người dùng quan tâm \\ \midrule
+\textbf{Luồng sự kiện chính} & 
+\begin{tabular}[t]{@{}p{10.5cm}@{}}
+1. Hệ thống kiểm tra định kỳ hoặc nhận sự kiện mới (bài viết mới, địa điểm cập nhật, người dùng đăng bài).\\
+2. Hệ thống tạo nội dung thông báo tương ứng.\\
+3. Hệ thống gửi thông báo đến người dùng qua push notification.\\
+4. Người dùng xem thông báo trong trung tâm thông báo.
+\end{tabular} \\ \midrule
+\textbf{Luồng ngoại lệ} &
+\begin{tabular}[t]{@{}p{10.5cm}@{}}
+4a. Nếu có lỗi kết nối, hệ thống hiển thị thông báo “Lỗi kết nối”\\
+\end{tabular} \\
+\bottomrule
+\end{tabular}
+\caption{Mô tả Use Case: Nhận thông báo từ các nội dung theo dõi}
+\label{usecase-7-02}
+\end{table}
+
+\begin{table}[H]
+\centering
+\renewcommand{\arraystretch}{1.2}
+\begin{tabular}{@{}p{4cm} p{11cm}@{}}
+\toprule
+\textbf{Use case ID}       & UC-M9-02 \\ \midrule
+\textbf{Tên Use case}      & Xem nhật ký hoạt động của cá nhân \\ \midrule
+\textbf{Các tác nhân}      & Traveler, Provider \\ \midrule
+\textbf{Mô tả}             & Người dùng xem lại lịch sử hoạt động của cá nhân.\\ \midrule
+\textbf{Trigger}    & Người dùng chọn biểu tượng “Nhật ký hoạt động”.\\ \midrule
+\textbf{Tiền điều kiện}    & Người dùng đã đăng nhập vào hệ thống \\ \midrule
+\textbf{Hậu điều kiện}     & Hệ thống hiển thị danh sách hoạt động của người dùng \\ \midrule
+\textbf{Luồng sự kiện chính} & 
+\begin{tabular}[t]{@{}p{10.5cm}@{}}
+1. Hệ thống hiển thị danh sách hoạt động gần nhất theo ngày.\\
+2. Người dùng có thể lọc theo loại khoảng thời gian (1 ngày/tuần/tháng trước).
+\end{tabular} \\ \midrule
+\textbf{Luồng ngoại lệ} &
+\begin{tabular}[t]{@{}p{10.5cm}@{}}
+1a. Nếu có lỗi kết nối, hệ thống hiển thị thông báo “Lỗi kết nối”\\
+\end{tabular} \\
+\bottomrule
+\end{tabular}
+\caption{Mô tả Use Case: Xem nhật ký hoạt động của cá nhân}
+\label{usecase-9-02}
+\end{table}
+
+\begin{table}[H]
+\centering
+\renewcommand{\arraystretch}{1.2}
+\begin{tabular}{@{}p{4cm} p{11cm}@{}}
+\toprule
+\textbf{Use case ID}       & UC-M9-03 \\ \midrule
+\textbf{Tên Use case}      & Xem nhật ký hoạt động của người dùng \\ \midrule
+\textbf{Các tác nhân}      & System admin \\ \midrule
+\textbf{Mô tả}             & Quản trị viên xem lịch sử hoạt động của người dùng trong hệ thống\\ \midrule
+\textbf{Trigger}    & Quản trị viên chọn trang “Lịch sử hoạt động”.\\ \midrule
+\textbf{Tiền điều kiện}    & Người dùng đã đăng nhập vào hệ thống với vai trò là quản trị viên \\ \midrule
+\textbf{Hậu điều kiện}     & Hệ thống hiển thị danh sách hoạt động của người dùng \\ \midrule
+\textbf{Luồng sự kiện chính} & 
+\begin{tabular}[t]{@{}p{10.5cm}@{}}
+1. Hệ thống hiển thị danh sách hoạt động gần nhất theo ngày.\\
+2. Quản trị viên tiêu chí lọc (theo người dùng, loại hoạt động, ngày, trạng thái…).\\
+3. Hệ thống truy xuất và hiển thị kết quả..
+\end{tabular} \\ \midrule
+\textbf{Luồng ngoại lệ} &
+\begin{tabular}[t]{@{}p{10.5cm}@{}}
+1a. Nếu có lỗi kết nối, hệ thống hiển thị thông báo “Lỗi kết nối”\\
+\end{tabular} \\
+\bottomrule
+\end{tabular}
+\caption{Mô tả Use Case: Xem nhật ký hoạt động của người dùng}
+\label{usecase-9-03}
+\end{table}
+
+\begin{table}[H]
+\centering
+\renewcommand{\arraystretch}{1.2}
+\begin{tabular}{@{}p{4cm} p{11cm}@{}}
+\toprule
+\textbf{Use case ID}       & UC-M9-04 \\ \midrule
+\textbf{Tên Use case}      & Xem danh sách danh mục của hệ thống \\ \midrule
+\textbf{Các tác nhân}      & System admin \\ \midrule
+\textbf{Mô tả}             & Quản trị viên xem danh sách các danh mục (địa điểm, chủ đề, loại nội dung) hiện có trong hệ thống.\\ \midrule
+\textbf{Trigger}    & Quản trị viên chọn trang “Danh mục hệ thống”.\\ \midrule
+\textbf{Tiền điều kiện}    & Người dùng đã đăng nhập vào hệ thống với vai trò là quản trị viên \\ \midrule
+\textbf{Hậu điều kiện}     & Hệ thống hiển thị danh sách các nội dung \\ \midrule
+\textbf{Luồng sự kiện chính} & 
+\begin{tabular}[t]{@{}p{10.5cm}@{}}
+1. Hệ thống hiển thị danh sách các nội dung theo từng danh mục (tên, mô tả, trạng thái, ngày cập nhật).\\
+2. Quản trị viên có thể lọc hoặc sắp xếp danh sách (theo loại, trạng thái, thời gian).\\
+3. Hệ thống truy xuất và hiển thị kết quả.
+\end{tabular} \\ \midrule
+\textbf{Luồng ngoại lệ} &
+\begin{tabular}[t]{@{}p{10.5cm}@{}}
+1a. Nếu có lỗi kết nối, hệ thống hiển thị thông báo “Lỗi kết nối”\\
+\end{tabular} \\
+\bottomrule
+\end{tabular}
+\caption{Mô tả Use Case: Xem danh sách danh mục của hệ thống}
+\label{usecase-9-04}
+\end{table}
+
+\begin{table}[H]
+\centering
+\renewcommand{\arraystretch}{1.2}
+\begin{tabular}{@{}p{4cm} p{11cm}@{}}
+\toprule
+\textbf{Use case ID}       & UC-M9-05 \\ \midrule
+\textbf{Tên Use case}      & Thêm, cập nhật, xóa, sửa nội dung của danh mục \\ \midrule
+\textbf{Các tác nhân}      & System admin \\ \midrule
+\textbf{Mô tả}             & Quản trị viên quản lý nội dung trong các danh mục của hệ thống.\\ \midrule
+\textbf{Trigger}    & Quản trị viên chọn biểu tượng ứng với thao tác: thêm, sửa, hoặc xóa nội dung theo từng danh mục.
+\\ \midrule
+\textbf{Tiền điều kiện}    & Người dùng đã đăng nhập vào hệ thống với vai trò là quản trị viên \\ \midrule
+\textbf{Hậu điều kiện}     & Hệ thống hiển thị danh sách các nội dung đã được cập nhật. \\ \midrule
+\textbf{Luồng sự kiện chính} & 
+\begin{tabular}[t]{@{}p{10.5cm}@{}}
+1. Hệ thống hiển thị form nhập thông tin hoặc xác nhận thao tác.
+2. Quản trị viên nhập dữ liệu hợp lệ.
+3. Hệ thống kiểm tra dữ liệu và lưu thay đổi.
+4. Thông báo kết quả thao tác.
+\end{tabular} \\ \midrule
+\textbf{Luồng ngoại lệ} &
+\begin{tabular}[t]{@{}p{10.5cm}@{}}
+1a. Nếu có lỗi kết nối, hệ thống hiển thị thông báo “Lỗi kết nối”\\
+\end{tabular} \\
+\bottomrule
+\end{tabular}
+\caption{Mô tả Use Case: Quản lý nội dung của danh mục}
+\label{usecase-9-04}
+\end{table}

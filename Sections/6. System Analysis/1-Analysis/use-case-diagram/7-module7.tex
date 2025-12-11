@@ -5,7 +5,7 @@
 \textbf{Use case ID}       & UC-M7-02 \\ \midrule
 \textbf{Tên Use case}      & Gửi yêu cầu cải thiện lịch trình \\ \midrule
 \textbf{Các tác nhân}      & Provider \\ \midrule
-\textbf{Mô tả}             & Provider cung cấp lịch trình hiện tại và các tiêu chí mong muốn. Hệ thống AI phân tích, chỉ ra điểm yếu và tự động tái cấu trúc để tạo ra một phiên bản lịch trình mới tối ưu hơn.\\ \midrule
+\textbf{Mô tả}             & NCC cung cấp file lịch trình hiện tại (PDF/Excel) và các tiêu chí mong muốn. Hệ thống AI đọc dữ liệu trực tiếp, phân tích, chỉ ra điểm yếu và tự động tái cấu trúc để tạo ra một phiên bản lịch trình mới tối ưu hơn.\\ \midrule
 \textbf{Trigger}    & Người dùng đã đăng nhập vào hệ thống.\\ \midrule
 \textbf{Tiền điều kiện}    & Người dùng đã đăng nhập.\\ \midrule
 \textbf{Hậu điều kiện}     & Một phiên bản lịch trình mới được tạo ra và lưu vào danh sách đề xuất. \\ \midrule
@@ -13,9 +13,7 @@
 \begin{tabular}[t]{@{}p{10.5cm}@{}}
 1. Provider truy cập tab "Gợi ý".\\
 2. Provider nhấn "Tạo yêu cầu mới".\\
-3. Hệ thống hiển thị form nhập liệu, cho phép chọn nguồn dữ liệu:\\
-- Option A: Chọn một Tour/Lịch trình có sẵn trong kho dữ liệu của Provider.\\
-- Option B: Copy-paste văn bản lịch trình thô.\\
+3. Hệ thống hiển thị khu vực upload. NCC tải lên file lịch trình (chỉ chấp nhận định dạng .pdf, .doc, .xlsx).\\
 4. Provider thiết lập Mục tiêu cải thiện cụ thể:\\
 - Đối tượng khách.\\
 - Yếu tố ưu tiên.\\

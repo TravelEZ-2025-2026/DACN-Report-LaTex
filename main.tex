@@ -13,8 +13,8 @@
 \usepackage[a4paper,margin=2.5cm]{geometry}
 \usepackage{amssymb,epsfig,latexsym,array,hhline,fancyhdr}
 \usepackage{csquotes}
-\usepackage[style=apa, citestyle=numeric, backend=biber, sorting=none]{biblatex}
-\addbibresource{refs.bib}
+\usepackage[style=ieee, citestyle=numeric, backend=biber, sorting=none]{biblatex}
+\addbibresource{newrefs.bib}
 % \usepackage{apacite}
 \usepackage[toc,page]{appendix}
 \usepackage{pifont,amssymb}
@@ -228,7 +228,6 @@
 \setlength\LTcapwidth{\textwidth}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\usepackage{hyperref}
 \hypersetup{urlcolor=blue,linkcolor=black,citecolor=black,colorlinks=true}
 
 
@@ -395,6 +394,7 @@
 \addcontentsline{toc}{section}{References}
 % \bibliographystyle{apa}
 % \bibliography{refs.bib} % Entries are in the refs.bib file
+\nocite{*}
 \printbibliography
 
 \newpage

@@ -23,11 +23,10 @@
 \endlastfoot
 
 \multicolumn{4}{l}{\textbf{Hiệu năng (Performance)}}\\[2pt]
-NFR-PERF-01  & Thời gian trung bình hệ thống nhận và phản hồi của tất cả API giây. & Trung bình & Trung bình \\
-NFR-PERF-02  & Thời gian hệ thống xác nhận yêu cầu tạo lộ trình. & Trung bình & Trung bình  \\
-NFR-PERF-03  & Thời gian phản hồi cho các truy vấn tìm kiếm cơ bản phải.  & Trung bình & Trung bình \\
-NFR-PERF-05  & Thời gian hệ thống xử lý media (tính từ lúc server nhận đủ file cho đến khi lưu trữ thành công trên S3 và cập nhật database) cho một yêu cầu. & Trung bình & Trung bình\\
-NFR-PERF-06  & Hệ thống phải hỗ trợ dùng đồng thời mà không suy giảm hiệu năng đáng kể. & Trung bình & Trung bình \\
+NFR-PERF-01  & Thời gian trung bình hệ thống nhận và phản hồi của tất cả API không quá 5 giây. & Trung bình & Trung bình \\
+NFR-PERF-02  & Thời gian hệ thống xác nhận yêu cầu tạo lộ trình không quá 10 giây. & Trung bình & Trung bình  \\
+NFR-PERF-03  & Thời gian phản hồi cho các truy vấn tìm kiếm cơ bản không quá 5 giây.  & Trung bình & Trung bình \\
+NFR-PERF-04  & Hệ thống phải hỗ trợ dùng đồng thời mà không suy giảm hiệu năng đáng kể. & Trung bình & Trung bình \\
 
 \addlinespace
 \multicolumn{4}{l}{\textbf{Độ sẵn sàng (Availability)}}\\[2pt]
@@ -36,9 +35,9 @@ NFR-AVAIL-01 & Độ sẵn sàng của hệ thống (Uptime) phải đạt $\geq
 \addlinespace
 \multicolumn{4}{l}{\textbf{Bảo mật (Security)}}\\[2pt]
 NFR-SEC-01   & Tất cả các giao tiếp giữa client và server phải được mã hóa bằng HTTPS (TLS $\geq$ 1.3).  & Cao        & Cao   \\
-NFR-SEC-02   & Dữ liệu nhạy cảm (mật khẩu) phải được mã hóa (ví dụ: AES-256) khi lưu trữ. & Cao        & Cao      \\
+NFR-SEC-02   & Dữ liệu nhạy cảm (mật khẩu) phải được mã hóa khi lưu trữ. & Cao        & Cao      \\
 NFR-SEC-03   & Mật khẩu người dùng phải có độ phức tạp tối thiểu (ít nhất 8 ký tự, bao gồm chữ hoa, chữ thường, số và ký tự đặc biệt).   & Cao        & Cao      \\
-
+NFR-SEC-04   & Hệ thống phải tích hợp Google reCAPTCHA v2 tại các form (đăng nhập, đăng ký) để ngăn chặn bot và tấn công brute-force.   & Cao        & Cao      \\
 \addlinespace
 \multicolumn{4}{l}{\textbf{Khả năng bảo trì (Maintainability)}}\\[2pt]
 NFR-MAINT-01 & Nhật ký (log) về lỗi và các hoạt động quan trọng phải được lưu trữ.   & Cao        & Cao   \\

@@ -1,19 +1,28 @@
 \subsubsection{Back-end}
-\paragraph{Spring Boot}
+\subsubsubsection{Spring Boot}
 
-\subparagraph{Giới thiệu}
-Spring Boot là một framework Java mã nguồn mở, được thiết kế để đơn giản hóa việc phát triển ứng dụng backend với các tính năng như cấu hình tự động, tích hợp REST API, và quản lý phụ thuộc. Trong hệ thống gợi ý hành trình du lịch thông minh, Spring Boot được sử dụng để xây dựng backend, xử lý các chức năng như tạo gợi ý hành trình, quản lý dữ liệu người dùng, tìm kiếm điểm đến, kiểm duyệt nội dung cộng đồng, và xử lý thông báo. Spring Boot cung cấp một nền tảng mạnh mẽ để triển khai logic nghiệp vụ, tích hợp dữ liệu từ các nguồn ngoài, và đảm bảo an toàn cho hệ thống.
-
-\subparagraph{Ưu điểm}
+\subsubsubsubsection{Giới thiệu}
+Spring Boot là một framework Java mã nguồn mở, được phát triển từ hệ sinh thái Spring, thiết kế để đơn giản hóa quá trình phát triển ứng dụng thông qua cơ chế "Convention over Configuration" (Quy ước hơn cấu hình) \cite{walls2022}. Nó cung cấp các tính năng tự động cấu hình (auto-configuration), tích hợp sẵn server (embedded server), và quản lý phụ thuộc tối ưu, giúp giảm thiểu các thiết lập rườm rà ban đầu \cite{spring_boot_docs}.
+Trong ngữ cảnh của hệ thống gợi ý hành trình du lịch thông minh, Spring Boot đóng vai trò là xương sống (backbone) của phía server. Nó chịu trách nhiệm xử lý các luồng nghiệp vụ phức tạp bao gồm: tạo gợi ý hành trình dựa trên AI, quản lý định danh người dùng, tìm kiếm điểm đến và kiểm duyệt nội dung cộng đồng \cite{musib2020}. Nền tảng này đảm bảo khả năng mở rộng (scalability) và tính toàn vẹn dữ liệu khi tích hợp với các nguồn thông tin bên ngoài \cite{webb2020}.
+\subsubsubsubsection{Ưu điểm}
 \begin{itemize}
-    \item \textbf{Xử lý logic nghiệp vụ hiệu quả}: Spring Boot hỗ trợ phát triển các API REST nhanh chóng, giúp xử lý các yêu cầu như gợi ý hành trình, cập nhật chi phí tức thời, và quản lý bài chia sẻ cộng đồng.
-    \item \textbf{Tích hợp dữ liệu dễ dàng}: Spring Boot cung cấp các module như Spring Batch và Spring Integration để thu thập và xử lý dữ liệu từ nguồn ngoài (như review, thời tiết, sự kiện), hỗ trợ chuẩn hóa dữ liệu và cập nhật ngữ cảnh thời gian thực.
-    \item \textbf{Bảo mật mạnh mẽ}: Spring Security tích hợp sẵn giúp triển khai xác thực (OAuth2/JWT) và phân quyền, bảo vệ dữ liệu người dùng như hồ sơ sở thích và lịch sử hội thoại.
-    \item \textbf{Quản lý người dùng và nội dung}: Spring Boot hỗ trợ xây dựng các API quản trị để kiểm duyệt nội dung, khóa tài khoản, và theo dõi audit trail, đảm bảo hệ thống vận hành an toàn và minh bạch.
-    \item \textbf{Giám sát và bảo trì}: Spring Boot Actuator cung cấp các công cụ giám sát hiệu suất và log sự kiện, giúp theo dõi pipeline xử lý dữ liệu và hiệu quả mô hình gợi ý.
+    \item \textbf{Xử lý logic nghiệp vụ hiệu quả}: 
+    Spring Boot hỗ trợ phát triển các API REST nhanh chóng thông qua kiến trúc Spring MVC, giúp xử lý hiệu quả các yêu cầu phức tạp như gợi ý hành trình du lịch và cập nhật chi phí tức thời \cite{walls-2022}. Việc tách biệt rõ ràng giữa các lớp xử lý giúp mã nguồn dễ bảo trì và mở rộng \cite.
+    
+    \item \textbf{Tích hợp dữ liệu dễ dàng}: 
+    Các module chuyên biệt như \textit{Spring Batch} và \textit{Spring Integration} cung cấp khả năng thu thập và xử lý dữ liệu mạnh mẽ từ các nguồn bên ngoài (review, thời tiết, sự kiện). Hệ thống hỗ trợ cả xử lý theo lô (batch) và theo luồng (streaming), đảm bảo dữ liệu luôn được chuẩn hóa và cập nhật ngữ cảnh thời gian thực \cite{spring-batch-ref}.
+    
+    \item \textbf{Bảo mật mạnh mẽ}: 
+    Module \textit{Spring Security} tích hợp sẵn giúp triển khai xác thực đa lớp (OAuth2/JWT) và phân quyền chi tiết. Điều này đóng vai trò then chốt trong việc bảo vệ dữ liệu nhạy cảm của người dùng như hồ sơ sở thích du lịch và lịch sử hội thoại \cite{spring-security-ref}.
+    
+    \item \textbf{Quản lý người dùng và nội dung}: 
+    Spring Boot cung cấp nền tảng vững chắc để xây dựng các API quản trị, hỗ trợ các tác vụ kiểm duyệt nội dung cộng đồng, khóa tài khoản vi phạm và theo dõi vết (audit trail) hệ thống, đảm bảo tính minh bạch trong vận hành \cite{musib-2020}.
+    
+    \item \textbf{Giám sát và bảo trì}: 
+    Công cụ \textit{Spring Boot Actuator} được tích hợp sẵn cung cấp các chỉ số giám sát hiệu suất (metrics) và log sự kiện (health checks) mà không cần cấu hình phức tạp. Tính năng này giúp đội ngũ kỹ thuật dễ dàng theo dõi pipeline xử lý dữ liệu và hiệu quả của mô hình gợi ý trong thời gian thực \cite{webb-2020, spring-boot-ref}.
 \end{itemize}
 
-\subparagraph{So sánh Spring Boot và các công nghệ khác}
+\subsubsubsubsection{So sánh Spring Boot và các công nghệ khác}
 \clearpage
 \begin{landscape}
 \begin{table}[h!]

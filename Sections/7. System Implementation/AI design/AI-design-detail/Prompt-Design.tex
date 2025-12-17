@@ -1,0 +1,178 @@
+\subsubsubsection{Thiết kế Prompt chi tiết theo Module}
+
+Phần này trình bày thiết kế (design) cho các prompt, áp dụng kiến trúc Structured Prompting đã chọn ở phần trước. Các prompt này được thiết kế như các mẫu (template) động, tuân thủ cấu trúc 3 phần: [Vai trò], [Ngữ cảnh], và [Tác vụ \& Định dạng].
+
+\textit{Lưu ý:} Việc tinh chỉnh chi tiết từng câu chữ (Wording optimization) và đánh giá độ hiệu quả thực tế của prompt sẽ được thực hiện và tối ưu hóa trong giai đoạn phát triển kế tiếp của dự án.
+
+\subsubsubsubsection{Thiết kế Prompt cho Module 1: Gợi ý Lộ trình}
+
+\begin{itemize}
+    \item \textbf{Lựa chọn Model:} Gemini 2.5 Flash đối với tác vụ lập lịch trình, nhóm quyết định sử dụng phiên bản Gemini 2.5 Flash thay vì phiên bản Pro. Quyết định này dựa trên 2 yếu tố:
+
+    \begin{enumerate}[label=\arabic*., leftmargin=*]
+        \item \textbf{Tính kinh tế:} Tác vụ này yêu cầu xử lý ngữ cảnh lớn (500 POIs) và trả về định dạng JSON dài. Giá của bản Flash (\$0.00015/1k input) thấp hơn khoảng 8 lần so với bản Pro (\$0.00125/1k), giúp đảm bảo khả năng mở rộng khi lượng người dùng tăng.
+        \item \textbf{Tốc độ Phản hồi:} Bản Flash có độ trễ thấp hơn, phù hợp với trải nghiệm người dùng cuối (End-user UX) cần nhận kết quả nhanh chóng, trong khi bản Pro thiên về các tác vụ suy luận sâu và chậm hơn.
+    \end{enumerate}
+
+    \item \textbf{Cơ chế quản lý dữ liệu:} Để giải quyết bài toán ngữ cảnh lớn ($\sim$355.000 tokens) mà không làm tăng chi phí vận hành, nhóm áp dụng tính năng Explicit Context Caching.
+    \begin{itemize}
+        \item \textbf{Cơ chế:} Dữ liệu tĩnh (Danh sách 500 POIs, giờ mở cửa, vị trí) được cache một lần duy nhất trên server của Google.
+        \item \textbf{Vận hành:} Mỗi request của người dùng chỉ cần gửi tham chiếu đến cache\_name thay vì gửi lại toàn bộ dữ liệu, giúp giảm chi phí input token xuống mức tối thiểu.
+    \end{itemize}
+
+    \item \textbf{Cấu trúc Prompt:} Prompt được thiết kế theo kiến trúc Hybrid Structured đã lựa chọn, bao gồm 3 khối thành phần logic:
+    \begin{itemize}
+        \item \textbf{Block 1: Định danh \& Ràng buộc}
+        \begin{itemize}
+            \item \textit{Vai trò:} Định nghĩa AI là "Chuyên gia Lập kế hoạch Du lịch".
+            \item \textit{Luật cấm:} Thiết lập các hàng rào bảo vệ (Guardrails) như: \textit{"Cấm bịa đặt địa điểm (No Hallucination)"}, \textit{"Cấm xếp lịch vào giờ đóng cửa"}.
+        \end{itemize}
+        
+        \item \textbf{Block 2: Tiêm Ngữ cảnh}
+        \begin{itemize}
+            \item \textit{Static Context:} Trỏ đến Cache ID chứa dữ liệu POIs.
+            \item \textit{Dynamic Context:} Chứa thông tin người dùng (User Profile) và các yêu cầu cụ thể (Ngày đi, Sở thích, Ngân sách) được tiêm vào từ Backend tại thời điểm chạy (Runtime).
+        \end{itemize}
+        
+        \item \textbf{Block 3: Chỉ dẫn Tác vụ}
+        \begin{itemize}
+            \item \textit{Cơ chế Suy luận:} Sử dụng chỉ thị Implicit CoT (ví dụ: \textit{"Think silently about logistics..."}) để yêu cầu mô hình tính toán logic di chuyển ngầm trước khi ra quyết định.
+            \item \textit{Định dạng Đầu ra:} Ép buộc trả về dữ liệu theo JSON Schema (được định nghĩa bằng Class trong code) để đảm bảo tính tương thích tuyệt đối với hệ thống phần mềm.
+        \end{itemize}
+    \end{itemize}
+\end{itemize}
+
+\subsubsubsubsection{Thiết kế Prompt cho Module 5: Kiểm duyệt Nội dung}
+
+\begin{itemize}
+    \item \textbf{Lựa chọn Model:} Gemini 2.5 Pro khác với Module 1 ưu tiên tốc độ và giá, Module 5 ưu tiên độ chính xác và khả năng hiểu đa phương thức (Multimodal Understanding). Nhóm chọn phiên bản Pro vì:
+    \begin{enumerate}[label=\arabic*., leftmargin=*]
+        \item \textbf{Chất lượng Kiểm duyệt:} Việc phát hiện các vi phạm tinh vi trong video (ví dụ: bạo lực ẩn, ký hiệu thù ghét, nội dung nhạy cảm ngữ cảnh) đòi hỏi khả năng suy luận hình ảnh cao cấp mà bản Flash có thể bỏ sót.
+        
+        \item \textbf{Native Video:} Gemini 2.5 Pro hỗ trợ xử lý native video mượt mà với cửa sổ ngữ cảnh lớn, cho phép phân tích toàn bộ clip mà không cần cắt nhỏ thủ công.
+    \end{enumerate}
+
+    \item \textbf{Cơ chế Quản lý Dữ liệu.} Sử dụng cơ chế Native Multimodal Input (Đầu vào đa phương thức tự nhiên):
+    \begin{itemize}
+        \item \textbf{Cơ chế:} Thay vì sử dụng các thư viện bên thứ 3 (như FFmpeg) để tách video thành ảnh (gây tốn tài nguyên server), hệ thống gửi trực tiếp File URI (đã upload lên Google File API) vào prompt.
+        \item \textbf{Đồng bộ:} Dữ liệu hình ảnh/video được gửi kèm với tiêu đề/mô tả (Caption) của người dùng để AI đánh giá ngữ cảnh tổng thể.
+    \end{itemize}
+
+    \item \textbf{Cấu trúc Prompt.} Prompt được thiết kế theo kiến trúc Structured Classification (Phân loại có cấu trúc), tập trung vào việc đối chiếu nội dung với bộ quy tắc an toàn (Safety Policy):
+    \begin{itemize}
+        \item \textbf{Block 1: Định danh \& Chính sách}
+        \begin{itemize}
+            \item \textit{Vai trò:} Định nghĩa AI là "AI Trust \& Safety Officer" (Cán bộ An toàn \& Tin cậy).
+            \item \textit{Định nghĩa Chính sách:} Liệt kê rõ ràng các danh mục cấm như:
+            \begin{itemize}
+                \item Nội dung tình dục/Khỏa thân.
+                \item Ngôn từ thù ghét.
+                \item Bạo lực/Máu me.
+                \item Quảng cáo rác/Lừa đảo.
+            \end{itemize}
+        \end{itemize}
+        
+        \item \textbf{Block 2: Tiêm Ngữ cảnh Đa phương thức}
+        \begin{itemize}
+            \item \textit{Media Input:} [Video File / Image File].
+            \item \textit{Text Input:} Văn bản người dùng nhập kèm (Caption, Comments) để phát hiện vi phạm trong ngôn ngữ.
+        \end{itemize}
+        
+        \item \textbf{Block 3: Chỉ dẫn Phân loại \& Định dạng}
+        \begin{itemize}
+            \item \textit{Cơ chế Phân tích:} Yêu cầu mô hình quét toàn bộ nội dung media và text.
+            \item \textit{Định dạng Đầu ra:} Ép buộc trả về JSON với các trường quan trọng để Backend xử lý tự động:
+            \begin{itemize}
+                \item \texttt{decision}: \texttt{"APPROVED"} / \texttt{"FLAGGED"} / \texttt{"REJECTED"}.
+                \item \texttt{violation\_category}: Danh mục vi phạm cụ thể (nếu có).
+                \item \texttt{confidence\_score}: Độ tin cậy của phán đoán (0.0 - 1.0). Nếu điểm thấp (< 0.7), hệ thống sẽ chuyển cho người duyệt (Human-in-the-loop).
+            \end{itemize}
+        \end{itemize}
+    \end{itemize}
+\end{itemize}
+
+\subsubsubsubsection{Thiết kế Prompt cho Module 6: Khai phá Xu hướng}
+
+\begin{itemize} 
+    \item \textbf{Lựa chọn Model: Gemini 2.5 Flash.} Đối với tác vụ đọc hiểu và tổng hợp thông tin từ văn bản (Text Summarization \& Sentiment Analysis), nhóm ưu tiên sử dụng Gemini 2.5 Flash vì:
+    \begin{enumerate}[label=\arabic*., leftmargin=*]
+        \item \textbf{Tối ưu Chi phí cho Dữ liệu Lớn:} Để phân tích xu hướng, hệ thống cần xử lý hàng nghìn bài đánh giá (Reviews). Với mức giá input cực thấp (\$0.00015/1k tokens), Flash là lựa chọn kinh tế nhất để "đọc" khối lượng văn bản khổng lồ này mà không làm bùng nổ ngân sách.
+        
+        \item \textbf{Context Window Lớn:} Khả năng xử lý cửa sổ ngữ cảnh hơn 1 triệu tokens cho phép nạp hàng trăm bài review vào một lần gọi (Prompt) duy nhất, giúp AI có cái nhìn tổng quan toàn diện thay vì phân tích rời rạc.
+    \end{enumerate}
+
+    \item \textbf{Cơ chế quản lý dữ liệu.} Áp dụng kỹ thuật Batch Processing (Xử lý theo Lô) để tối ưu hóa hiệu suất:
+    \begin{itemize}
+        \item \textbf{Cơ chế Gom Lô:} Thay vì gọi API cho từng review riêng lẻ (kém hiệu quả), Backend sẽ gom nhóm khoảng 50-100 reviews thành một "văn bản lớn" (Corpus Chunk) và gửi trong một request duy nhất.
+        \item \textbf{Tổng hợp:} Kết quả phân tích từ các lô sẽ được backend tổng hợp lại để ra báo cáo xu hướng cuối cùng.
+    \end{itemize}
+
+    \item \textbf{Cấu trúc Prompt.} Prompt được thiết kế theo kiến trúc Structured Information Extraction (Trích xuất thông tin có cấu trúc), tập trung vào kỹ thuật Phân tích Cảm xúc theo Khía cạnh (Aspect-Based Sentiment Analysis - ABSA):
+    \begin{itemize}
+        \item \textbf{Block 1: Định danh}
+        \begin{itemize}
+            \item \textit{Vai trò:} Định nghĩa AI là "Chuyên gia Phân tích Dữ liệu Du lịch" (Travel Data Analyst).
+            \item \textit{Mục tiêu:} Phát hiện các mẫu hình lặp lại trong ý kiến khách hàng và xác định cảm xúc chủ đạo.
+        \end{itemize}
+        
+        \item \textbf{Block 2: Tiêm Ngữ cảnh Hàng loạt}
+        \begin{itemize}
+            \item \textit{Input Data:} Chứa danh sách văn bản thô của 50-100 bài review.
+        \end{itemize}
+        
+        \item \textbf{Block 3: Chỉ dẫn Phân tích \& Định dạng}
+        \begin{itemize}
+            \item \textit{Cơ chế Phân tích:} Yêu cầu mô hình thực hiện các tác vụ cụ thể:
+            \begin{enumerate}[label=\arabic*., leftmargin=*]
+                \item Trích xuất từ khóa nổi bật (Trending Keywords).
+                \item Phân loại cảm xúc theo khía cạnh (Ví dụ: Dịch vụ, Giá cả, Vệ sinh).
+                \item Tóm tắt các điểm đau chính.
+            \end{enumerate}
+            \item \textit{Định dạng Đầu ra:} Ép buộc trả về JSON để Backend dễ dàng thống kê (Visualize) lên Dashboard.
+        \end{itemize}
+    \end{itemize}
+\end{itemize}
+
+\subsubsubsubsection{Thiết kế Prompt cho Module 7: Gợi ý Cải thiện Lịch trình}
+
+\begin{itemize}
+    \item \textbf{Lựa chọn Model: Gemini 2.5 Flash.} Nhóm tiếp tục chọn Gemini 2.5 Flash cho tác vụ này vì:
+    \begin{enumerate}[label=\arabic*., leftmargin=*]
+        \item \textbf{Tốc độ Phản hồi:} Tính năng này thường được người dùng kích hoạt khi đang xem lịch trình (On-demand). Người dùng cần nhận được gợi ý sửa đổi ngay lập tức, không thể chờ đợi mô hình Pro suy luận chậm.
+        
+        \item \textbf{Khả năng So sánh:} Flash đủ mạnh để thực hiện tác vụ so sánh đối chiếu (Mapping \& Comparison) giữa "Lịch trình hiện tại" và "Dữ liệu xu hướng" mà không cần đến khả năng sáng tạo cao cấp của bản Pro.
+    \end{enumerate}
+
+    \item \textbf{Cơ chế quản lý dữ liệu.} Đây là module tổng hợp thông tin, backend sẽ "tiêm" (inject) đồng thời 3 nguồn dữ liệu vào ngữ cảnh để AI đối chiếu:
+    \begin{itemize}
+        \item \textbf{Source 1 - Lịch trình gốc:} JSON lịch trình hiện tại.
+        \item \textbf{Source 2 - Dữ liệu Thị trường:} Kết quả JSON từ Module 6. \textit{Ví dụ: Module 6 báo "Quán A đang bị chê phục vụ tệ", AI sẽ dùng thông tin này để cảnh báo.}
+        \item \textbf{Source 3 - Điều kiện Ngoại cảnh:} Dữ liệu thời tiết dự báo, mùa du lịch (Mùa mưa/Mùa khô) được lấy từ API thời tiết.
+    \end{itemize}
+
+    \item \textbf{Cấu trúc Prompt.} Prompt được thiết kế theo kiến trúc Comparative Audit (Kiểm toán so sánh), sử dụng kỹ thuật suy luận ngầm để tìm ra các điểm bất hợp lý (Gaps):
+    \begin{itemize}
+        \item \textbf{Block 1: Định danh \& Mục tiêu}
+        \begin{itemize}
+            \item \textit{Vai trò:} Định nghĩa AI là "Chuyên gia Tối ưu hóa Trải nghiệm Du lịch" (Experience Optimizer).
+            \item \textit{Nhiệm vụ:} Tìm ra các rủi ro (Risk) trong lịch trình và đề xuất phương án thay thế tốt hơn, nhưng \textbf{không được thay đổi cấu trúc cốt lõi} nếu không cần thiết.
+        \end{itemize}
+        
+        \item \textbf{Block 2: Tiêm Ngữ cảnh Đa chiều}
+        \begin{description}
+            \item[Current Itinerary:] \texttt{\{json\_data\}}
+            \item[Trend Warnings:] \texttt{\{bad\_reviews\_list\_from\_module\_6\}}
+            \item[Weather Forecast:] \texttt{\{weather\_data\}} (Ví dụ: "Ngày 2: Mưa to")
+        \end{description}
+        
+        \item \textbf{Block 3: Chỉ dẫn Tác vụ \& Định dạng}
+        \begin{itemize}
+            \item \textit{Cơ chế Suy luận Ngầm:} Chỉ thị \textit{"Cross-check silently"}. Yêu cầu AI so khớp từng hoạt động trong lịch trình với dữ liệu xu hướng và thời tiết.
+            \begin{itemize}
+                \item \textit{Logic:} Nếu [Hoạt động ngoài trời] AND [Dự báo mưa] $\rightarrow$ Đề xuất đổi sang Bảo tàng/Indoor.
+                \item \textit{Logic:} Nếu [Điểm đến A] AND [Trend xấu từ Module 6] $\rightarrow$ Đề xuất điểm B cùng loại (Alternative).
+            \end{itemize}
+            \item \textit{Định dạng Đầu ra (Schema Enforcement):} Trả về JSON danh sách các đề xuất cải tiến.
+        \end{itemize}
+    \end{itemize}
+\end{itemize}

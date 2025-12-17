@@ -1,6 +1,13 @@
 \subsubsection{Mô hình hoá quy trình nghiệp vụ}
 
 % --- QUY TRÌNH 1: TẠO LỘ TRÌNH MỚI ---
+\subsubsubsection{Quy trình gợi ý lộ trình cá nhân hóa}
+Quy trình này mô tả sự tương tác giữa Khách du lịch, hệ thống TravelEZ và hệ thống AI để tạo ra một lịch trình du lịch tối ưu.
+\begin{itemize}
+    \item \textbf{Bắt đầu:} Khách du lịch yêu cầu tạo lộ trình mới và cung cấp các thông tin mong muốn (điểm đến, phong cách, thời gian, chi phí,...).
+    \item \textbf{Xử lý:} Hệ thống TravelEZ kiểm tra tính hợp lệ của dữ liệu đầu vào. Nếu hợp lệ, hệ thống sẽ tổng hợp danh sách địa điểm và gửi yêu cầu (prompt) đến hệ thống AI.
+    \item \textbf{Phản hồi:} AI xử lý thông tin để đưa ra lộ trình phù hợp nhất. Kết quả từ AI sẽ được TravelEZ kiểm tra lại một lần nữa trước khi hiển thị chính thức cho người dùng. Trường hợp kết quả không đạt yêu cầu, hệ thống sẽ đính kèm thông tin lỗi và yêu cầu AI xử lý lại.
+\end{itemize}
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.9\textwidth]{Images/6. System analysis/act_m1_itinerary_recommendation.png}
@@ -9,6 +16,13 @@
 \end{figure}
 
 % --- QUY TRÌNH 2: Quy trình Kiểm duyệt Nội dung Tự động ---
+\subsubsubsection{Quy trình Kiểm duyệt Nội dung Tự động}
+Đây là quy trình quan trọng nhằm đảm bảo tính lành mạnh của cộng đồng du lịch thông qua hai lớp kiểm duyệt.
+\begin{itemize}
+    \item \textbf{Lớp 1 (Thời gian thực):} Ngay khi khách du lịch nhấn đăng bài, hệ thống sẽ quét nội dung dựa trên danh sách từ cấm. Nếu vi phạm, bài viết bị chặn ngay lập tức.
+    \item \textbf{Lớp 2 (Xử lý ngầm bằng AI):} Nếu vượt qua lớp 1, bài viết được đăng tạm thời. Song song đó, hệ thống đẩy ID bài viết vào hàng đợi để AI phân tích chuyên sâu (text và media).
+    \item \textbf{Kết quả:} Nếu AI đánh giá "An toàn", trạng thái bài viết chuyển thành VERIFIED. Nếu "Không an toàn", trạng thái chuyển thành FLAGGED\_BY\_AI, đồng thời tạo báo cáo vi phạm và thông báo cho quản trị viên xử lý.
+\end{itemize}
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.9\textwidth]{Images/6. System analysis/act_m5_content_moderation.png}
@@ -17,6 +31,13 @@
 \end{figure}
 
 % --- QUY TRÌNH 3: PHÂN TÍCH XU HƯỚNG THỊ TRƯỜNG ---
+\subsubsubsection{Quy trình Phân tích Xu hướng Thị trường}
+Quy trình này hỗ trợ nhà cung cấp dịch vụ nắm bắt nhu cầu thị trường thông qua dữ liệu trực quan.
+\begin{itemize}
+    \item \textbf{Truy xuất:} Nhà cung cấp truy cập menu phân tích, hệ thống TravelEZ sẽ tổng hợp dữ liệu từ nhật ký hệ thống \(log\) để hiển thị lên Dashboard tổng quan.
+    \item \textbf{Tương tác:} Người dùng có thể sử dụng các bộ lọc để tùy chỉnh tiêu chí phân tích. Mỗi khi áp dụng bộ lọc mới, hệ thống sẽ truy vấn lại dữ liệu để cập nhật Dashboard theo thời gian thực.
+    \item \textbf{Kết xuất:} Quy trình cho phép người dùng lựa chọn định dạng file và tải các báo cáo phân tích về thiết bị cá nhân để phục vụ mục đích lưu trữ hoặc báo cáo nội bộ.
+\end{itemize}
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.9\textwidth]{Images/6. System analysis/act_m6_market_trend_analysis.png}
@@ -25,6 +46,13 @@
 \end{figure}
 
 % --- QUY TRÌNH 4: PHÂN TÍCH LỊCH TRÌNH CẢI THIỆN ---
+\subsubsubsection{Quy trình Phân tích Lịch trình Cải thiện}
+Quy trình này cho phép nhà cung cấp dịch vụ tối ưu hóa các lịch trình sẵn có dựa trên phản hồi xã hội và công nghệ AI.
+\begin{itemize}
+    \item \textbf{Đầu vào:} Nhà cung cấp tạo yêu cầu mới, tải lên các file lịch trình hiện tại \(pdf, doc, xlsx\) và thiết lập mục tiêu cần cải thiện.
+    \item \textbf{Xử lý thông minh:} Hệ thống TravelEZ thu thập thêm dữ liệu thống kê từ mạng xã hội để làm giàu thông tin, sau đó gửi yêu cầu đến AI.
+    \item \textbf{Kiểm soát chất lượng:} AI thực hiện phân tích và trả về kết quả tối ưu hóa. TravelEZ đóng vai trò trung gian xác thực \(validate\) kết quả này. Nếu AI đưa ra phản hồi không phù hợp, hệ thống sẽ tự động yêu cầu điều chỉnh lại cho đến khi đạt tiêu chuẩn trước khi trả kết quả cuối cùng cho nhà cung cấp.
+\end{itemize}
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.9\textwidth]{Images/6. System analysis/act_m7_itinerary_optimization.png}

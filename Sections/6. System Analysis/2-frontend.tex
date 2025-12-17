@@ -1,84 +1,151 @@
 \subsubsection{Front-end}
-\paragraph{NextJS}
+\subsubsubsection{NextJS}
 
-\subparagraph{Giới thiệu}
-Next.js là một framework dựa trên React, cung cấp các tính năng như Server-Side Rendering (SSR), Static Site Generation (SSG), và API routes để xây dựng giao diện người dùng (UI) hiệu quả. Trong hệ thống gợi ý hành trình du lịch thông minh, Next.js được sử dụng để phát triển frontend, hỗ trợ các chức năng như nhập yêu cầu gợi ý hành trình, tùy chỉnh lộ trình, tìm kiếm điểm đến, chia sẻ nội dung cộng đồng, và quản lý thông báo,... . Next.js giúp tạo ra giao diện đáp ứng nhanh, tối ưu trải nghiệm người dùng, và hỗ trợ các tính năng cốt lõi của hệ thống.
+\subsubsubsubsection{Giới thiệu}
+Next.js là một framework mã nguồn mở dựa trên thư viện React, được thiết kế để tối ưu hóa hiệu suất ứng dụng web thông qua các kỹ thuật tiên tiến như Server-Side Rendering (SSR) và Static Site Generation (SSG) \cite{nextjs_docs}. 
 
-\subparagraph{Ưu điểm}
+Trong kiến trúc của hệ thống gợi ý hành trình du lịch thông minh, Next.js đóng vai trò nền tảng cho việc phát triển giao diện người dùng (Front-end). Framework này chịu trách nhiệm xử lý các luồng tương tác phức tạp bao gồm: tiếp nhận nhu cầu du lịch, tùy chỉnh lộ trình cá nhân hóa, hiển thị bản đồ trực quan, và quản lý các tương tác cộng đồng \cite{fabrizio2022}. Việc áp dụng Next.js đảm bảo hệ thống đạt được độ phản hồi nhanh (responsiveness) và duy trì trải nghiệm người dùng liền mạch \cite{nextjs_learn}.
+
+\subsubsubsubsection{Ưu điểm}
 \begin{itemize}
-    \item \textbf{Hiệu suất cao}: SSR và SSG đảm bảo thời gian tải trang nhanh, cải thiện trải nghiệm khi người dùng tìm kiếm điểm đến, xem gợi ý hành trình, hoặc khám phá nội dung cộng đồng.
-    \item \textbf{Xây dựng giao diện linh hoạt}: File-based routing giúp dễ dàng tạo các trang cho nhập liệu gợi ý, tùy chỉnh hành trình, hoặc hiển thị bảng xếp hạng điểm đến. Hệ sinh thái React phong phú (như React-Leaflet cho bản đồ, React-Markdown cho soạn thảo bài viết) hỗ trợ phát triển nhanh các tính năng chia sẻ cộng đồng và xem trước hành trình.
-    \item \textbf{Tương tác dữ liệu hiệu quả}: API routes và các thư viện như React Query hoặc SWR cho phép gọi dữ liệu từ backend (như gợi ý hành trình hoặc kết quả tìm kiếm) một cách mượt mà, hỗ trợ cập nhật chi phí tức thời và thông báo theo dõi.
-    \item \textbf{Hỗ trợ SEO}: SSR tối ưu hóa khả năng hiển thị nội dung cộng đồng (bài chia sẻ, đánh giá điểm đến) trên công cụ tìm kiếm, tăng khả năng tiếp cận người dùng.
-    \item \textbf{Quản lý lỗi và bảo mật cơ bản}: Next.js cung cấp cơ chế xử lý lỗi rõ ràng (như thông báo lỗi nhập liệu) và dễ tích hợp xác thực (OAuth2/JWT), bảo vệ dữ liệu người dùng như hồ sơ sở thích.
+    \item \textbf{Hiệu suất tải trang vượt trội}: 
+    Việc tích hợp sẵn SSR và SSG giúp giảm thiểu thời gian hiển thị nội dung đầu tiên (First Contentful Paint), đảm bảo trải nghiệm mượt mà ngay cả khi xử lý lượng dữ liệu lớn về địa điểm và hình ảnh gợi ý \cite{shah2023}.
+    
+    \item \textbf{Kiến trúc định tuyến linh hoạt (Routing)}: 
+    Cơ chế File-based Routing của Next.js cho phép xây dựng cấu trúc điều hướng trực quan, dễ dàng mở rộng các trang chức năng như chi tiết hành trình, bảng xếp hạng điểm đến, hoặc trang cá nhân người dùng mà không cần cấu hình phức tạp \cite{hansen2020}.
+    
+    \item \textbf{Tương tác dữ liệu và Hệ sinh thái}: 
+    Sự kết hợp giữa API Routes và các thư viện quản lý trạng thái server (như React Query/SWR) cho phép đồng bộ hóa dữ liệu hai chiều theo thời gian thực (ví dụ: cập nhật chi phí chuyến đi tức thời) \cite{thakur2023}. Hệ sinh thái phong phú hỗ trợ tích hợp nhanh các module như React-Leaflet (bản đồ) hay React-Markdown (soạn thảo) \cite{waqar2021}.
+    
+    \item \textbf{Tối ưu hóa công cụ tìm kiếm (SEO)}: 
+    Khả năng render HTML từ phía server (SSR) giải quyết triệt để hạn chế về SEO của các ứng dụng Client-side truyền thống, giúp nội dung chia sẻ từ cộng đồng dễ dàng được lập chỉ mục và tiếp cận người dùng tự nhiên \cite{kshirsagar2022}.
+    
+    \item \textbf{Bảo mật và Quản lý lỗi}: 
+    Next.js cung cấp các lớp middleware bảo mật để kiểm soát xác thực (OAuth2/JWT) và cơ chế xử lý lỗi biên (Error Boundaries), đảm bảo tính toàn vẹn cho dữ liệu hồ sơ và lịch sử hoạt động của người dùng \cite{fabrizio2022}.
 \end{itemize}
 
-\subparagraph{So sánh NextJS và các công nghệ khác}
+\subsubsubsubsection{So sánh NextJS và các công nghệ khác}
 \clearpage 
 \begin{landscape}
 \begin{table}[h!]
 \centering
-% --- CÁC THAY ĐỔI QUAN TRỌNG ---
-\setlength{\tabcolsep}{4pt} % Giảm khoảng cách giữa các cột (mặc định là 6pt)
-\footnotesize % Giảm cỡ chữ xuống một bậc (nhỏ hơn \small)
-% --- KẾT THÚC THAY ĐỔI ---
+\setlength{\tabcolsep}{4pt}
+\footnotesize
+\renewcommand{\arraystretch}{1.3}
 \begin{tabularx}{\linewidth}{|l|X|X|X|X|X|}
 \hline
-\textbf{Tiêu chí} & \textbf{Next.js} & \textbf{React (plain)} & \textbf{Vue.js} & \textbf{Angular} & \textbf{Svelte} \\
+\textbf{Tiêu chí} & \textbf{Next.js} & \textbf{React (Client-side)} & \textbf{Vue.js (Nuxt)} & \textbf{Angular} & \textbf{Svelte} \\
 \hline
-\textbf{Hiệu suất} & Cao: SSR và SSG tích hợp sẵn, đảm bảo tải nhanh cho tìm kiếm và gợi ý hành trình. & Trung bình: Chỉ client-side rendering, cần cấu hình thêm cho SSR/SSG. & Cao: Virtual DOM, Nuxt.js hỗ trợ SSR/SSG, nhưng cấu hình phức tạp hơn Next.js. & Trung bình: Bundle size lớn, SSR cần Angular Universal, tăng độ phức tạp. & Cao: Compile-time, tải nhanh, SvelteKit hỗ trợ SSR/SSG nhưng ít tối ưu hơn Next.js. \\
+\textbf{Hiệu suất} & 
+\textbf{Cao}: SSR/SSG tích hợp sẵn, tối ưu TTI và FCP cho ứng dụng dữ liệu lớn \cite{shah2023}. & 
+\textbf{Trung bình}: Render phía client, phụ thuộc vào tốc độ thiết bị người dùng \cite{shah2023}. & 
+\textbf{Cao}: Nuxt.js hỗ trợ SSR tốt, hiệu suất tương đương Next.js \cite{waqar2021}. & 
+\textbf{Trung bình}: Bundle size lớn, cần cấu hình Angular Universal phức tạp để tối ưu \cite{waqar2021}. & 
+\textbf{Cao}: Compile-time optimization giúp code nhẹ, nhưng SvelteKit hỗ trợ SSR chưa trưởng thành bằng Next.js. \\
 \hline
-\textbf{Khả năng phát triển giao diện} & Cao: File-based routing, dễ xây dựng UI cho tùy chỉnh hành trình, bản đồ (React-Leaflet), và soạn thảo (React-Markdown). & Trung bình: Cần thêm React Router, khó khăn hơn cho UI phức tạp như timeline hoặc cộng đồng. & Cao: Directive-based, Nuxt.js hỗ trợ routing, nhưng ít thư viện cho bản đồ hoặc editor. & Cao: Full-featured, mạnh về form và UI quản trị, nhưng học dốc hơn. & Trung bình: Dễ học, nhưng hệ sinh thái nhỏ, thiếu thư viện cho bản đồ. \\
+\textbf{Phát triển UI} & 
+\textbf{Cao}: File-based routing và hỗ trợ CSS module giúp cấu trúc dự án rõ ràng, dễ bảo trì \cite{fabrizio2022}. & 
+\textbf{Trung bình}: Cần cài đặt thêm React Router, quản lý cấu trúc thủ công dễ gây lộn xộn. & 
+\textbf{Cao}: Cú pháp template rõ ràng, Nuxt.js hỗ trợ routing tự động tốt \cite{waqar2021}. & 
+\textbf{Cao}: Hệ thống toàn diện (Full-featured) nhưng learning curve dốc. & 
+\textbf{Trung bình}: Dễ học nhưng hệ sinh thái component (ví dụ: Map) còn hạn chế. \\
 \hline
-\textbf{Tích hợp dữ liệu} & Cao: API routes và React Query/SWR hỗ trợ gọi dữ liệu gợi ý, tìm kiếm nhanh, và cập nhật chi phí tức thời. & Trung bình: Cần cấu hình fetch/axios, không có API routes, tăng thời gian phát triển. & Trung bình: Vuex/Pinia hỗ trợ, nhưng Nuxt.js cần cấu hình thêm cho API calls. & Trung bình: HttpClient mạnh, nhưng tích hợp API phức tạp hơn Next.js. & Trung bình: SvelteKit hỗ trợ fetch, nhưng thiếu thư viện cache như React Query. \\
+\textbf{Tích hợp dữ liệu} & 
+\textbf{Cao}: API Routes tích hợp sẵn, kết hợp tốt với SWR/React Query cho realtime data \cite{thakur2023}. & 
+\textbf{Trung bình}: Cần tự xây dựng lớp giao tiếp API (Axios/Fetch), không có backend-for-frontend sẵn. & 
+\textbf{Trung bình}: Vuex/Pinia mạnh mẽ, nhưng việc gọi API trong Nuxt cần cấu hình asyncData kỹ lưỡng. & 
+\textbf{Trung bình}: RxJS mạnh mẽ cho xử lý luồng dữ liệu nhưng phức tạp để làm chủ \cite{waqar2021}. & 
+\textbf{Trung bình}: SvelteKit load function tốt nhưng thiếu các thư viện caching mạnh như React Query. \\
 \hline
-\textbf{SEO} & Cao: SSR tối ưu SEO cho nội dung cộng đồng (bài chia sẻ, đánh giá). & Thấp: Client-side rendering không hỗ trợ SEO tốt, cần thêm server. & Cao: Nuxt.js hỗ trợ SSR, nhưng kém phổ biến hơn Next.js trong SEO. & Thấp: SSR cần Angular Universal, phức tạp hơn Next.js. & Cao: SvelteKit hỗ trợ SSR, nhưng hệ sinh thái nhỏ hạn chế tối ưu SEO. \\
+\textbf{SEO} & 
+\textbf{Tối ưu}: HTML có sẵn từ server, bot tìm kiếm lập chỉ mục chính xác ngay lập tức \cite{kshirsagar2022}. & 
+\textbf{Thấp}: Phụ thuộc vào khả năng chạy JS của bot, thường bị đánh giá thấp hơn \cite{kshirsagar2022}. & 
+\textbf{Cao}: Nuxt.js giải quyết tốt vấn đề SEO tương tự Next.js. & 
+\textbf{Thấp}: Cần cấu hình SSR rất phức tạp để đạt chuẩn SEO. & 
+\textbf{Cao}: SvelteKit hỗ trợ SSR tốt cho SEO nhưng cộng đồng SEO ít hơn Next.js. \\
 \hline
-\textbf{Hệ sinh thái và cộng đồng} & Cao: Dựa trên React, có nhiều thư viện (React-Leaflet, React-Markdown) và tài liệu phong phú. & Cao: Hệ sinh thái lớn, nhưng thiếu tính năng tích hợp sẵn như Next.js. & Trung bình: Hệ sinh thái nhỏ hơn React, ít thư viện cho bản đồ hoặc editor. & Cao: Hệ sinh thái mạnh, nhưng phức tạp hơn, ít phù hợp với dự án nhanh. & Thấp: Hệ sinh thái nhỏ, khó tìm thư viện cho các tính năng như bản đồ. \\
-\hline
-\textbf{Dễ triển khai} & Cao: Vercel miễn phí, triển khai dễ với SSG cho bảng xếp hạng và SSR cho thông báo. & Trung bình: Cần server riêng hoặc cấu hình phức tạp cho SSR. & Cao: Netlify hỗ trợ Nuxt.js, nhưng Vercel của Next.js đơn giản hơn. & Thấp: Cần cấu hình server hoặc CLI phức tạp, không tối ưu như Next.js. & Cao: SvelteKit dễ triển khai, nhưng ít nền tảng hỗ trợ như Vercel. \\
+\textbf{Hệ sinh thái} & 
+\textbf{Rất lớn}: Thừa hưởng toàn bộ thư viện React và sự hỗ trợ từ Vercel \cite{nextjs_docs}. & 
+\textbf{Rất lớn}: Cộng đồng lớn nhất thế giới, tài liệu phong phú \cite{waqar2021}. & 
+\textbf{Trung bình}: Cộng đồng nhỏ hơn React, ít sự lựa chọn cho các bài toán ngách. & 
+\textbf{Lớn}: Tập trung vào khối doanh nghiệp (Enterprise), ít thư viện "mì ăn liền". & 
+\textbf{Thấp}: Cộng đồng đang phát triển, khó tìm giải pháp cho các vấn đề phức tạp. \\
 \hline
 \end{tabularx}
-\caption{So sánh NextJS và các công nghệ khác}
+\caption{So sánh Next.js và các công nghệ Frontend khác \cite{waqar2021, shah2023}}
 \end{table}
 \end{landscape}
 
-\paragraph{ShadCN/UI}
+\subsubsubsection{ShadCN/UI Library}
 
-\subparagraph{Giới thiệu}
-ShadCN/UI không phải là một thư viện component thông thường, mà là một \textbf{bộ sưu tập các component UI có thể tái sử dụng}, được xây dựng trên nền tảng Radix UI (cho logic và khả năng tiếp cận) và Tailwind CSS (cho styling). Trong hệ thống TravelEZ, ShadCN/UI được sử dụng để xây dựng các thành phần giao diện một cách nhanh chóng và nhất quán, từ các nút bấm (Button), form nhập liệu (Input), hộp thoại (Dialog), đến các menu thả xuống (Dropdown Menu). Điểm đặc biệt là thay vì cài đặt một gói thư viện, nhà phát triển sẽ sao chép mã nguồn của từng component vào dự án, cho phép tùy chỉnh tối đa về giao diện và hành vi để phù hợp với phong cách của thương hiệu.
+\subsubsubsubsection{Giới thiệu}
+ShadCN/UI đại diện cho một sự chuyển dịch mô hình (paradigm shift) trong phát triển giao diện người dùng hiện đại: chuyển từ việc phụ thuộc vào các thư viện đóng gói sẵn (package-based) sang mô hình sở hữu mã nguồn (ownership-based) \cite{shadcn_docs}. Đây không phải là một thư viện component truyền thống, mà là bộ sưu tập các thành phần giao diện tái sử dụng, được xây dựng trên nền tảng **Radix UI** (đảm bảo logic và khả năng tiếp cận) và **Tailwind CSS** (cho styling linh hoạt).
 
-\subparagraph{Ưu điểm}
+Trong hệ thống TravelEZ, ShadCN/UI được sử dụng làm nền tảng cốt lõi để xây dựng tính nhất quán cho toàn bộ giao diện, từ các thành phần nguyên tử (atoms) như Button, Input đến các tổ hợp phức tạp (molecules) như Dialog hay Dropdown Menu. Đặc biệt, phiên bản 2025 của hệ thống đã tận dụng tối đa khả năng tương thích với **Tailwind CSS v4.0**, giúp tối ưu hóa hiệu suất render styling \cite{tailwind_v4}.
+
+\subsubsubsubsection{Ưu điểm kỹ thuật}
 \begin{itemize}
-    \item \textbf{Tùy biến tối đa:} Vì bạn sở hữu hoàn toàn mã nguồn của component, bạn có thể chỉnh sửa mọi thứ từ màu sắc, kích thước, hiệu ứng đến logic hoạt động mà không bị giới hạn bởi API của thư viện.
-    \item \textbf{Nhất quán và Dễ bảo trì:} Việc sử dụng Tailwind CSS giúp đảm bảo giao diện nhất quán trên toàn bộ ứng dụng. Quản lý các component ngay trong codebase cũng giúp việc cập nhật và sửa lỗi dễ dàng hơn.
-    \item \textbf{Khả năng tiếp cận cao (Accessibility):} Được xây dựng trên Radix UI, các component của ShadCN/UI tuân thủ các tiêu chuẩn về khả năng tiếp cận (WAI-ARIA), đảm bảo trải nghiệm tốt cho mọi người dùng, kể cả người dùng khuyết tật.
-    \item \textbf{Tăng tốc độ phát triển:} Cung cấp sẵn các khối UI phức tạp nhưng phổ biến (như Lịch chọn ngày - Date Picker, Hộp thoại xác nhận - Alert Dialog) giúp tiết kiệm rất nhiều thời gian so với việc phải xây dựng từ đầu.
-    \item \textbf{Kích thước Bundle tối ưu:} Vì bạn chỉ lấy những component mình cần, ứng dụng cuối cùng sẽ không chứa những đoạn code không sử dụng, giúp trang web nhẹ hơn.
+    \item \textbf{Quyền kiểm soát mã nguồn tuyệt đối (Ownership)}: 
+    Thay vì bị giới hạn bởi API của bên thứ ba, đội ngũ phát triển có toàn quyền truy cập và chỉnh sửa mã nguồn của từng component. Điều này cho phép tùy biến sâu về giao diện và hành vi để phù hợp tuyệt đối với nhận diện thương hiệu của TravelEZ \cite{fabrizio2025}.
+
+    \item \textbf{Khả năng tiếp cận tiêu chuẩn (Accessibility)}: 
+    Được xây dựng trên các primitives của Radix UI, mọi thành phần giao diện đều tuân thủ nghiêm ngặt chuẩn WAI-ARIA. Điều này đảm bảo hệ thống thân thiện với mọi đối tượng người dùng, bao gồm cả người khuyết tật sử dụng trình đọc màn hình (screen readers) \cite{radix_accessibility}.
+
+    \item \textbf{Hiệu suất và Tối ưu hóa Bundle}: 
+    Phương pháp "copy-paste" giúp loại bỏ hoàn toàn mã thừa (dead code). Ứng dụng chỉ chứa mã nguồn của những component thực sự được sử dụng, giúp giảm đáng kể kích thước bundle cuối cùng so với việc import toàn bộ một thư viện UI đồ sộ \cite{kitemetric2025}.
+
+    \item \textbf{Tính nhất quán và Bảo trì}: 
+    Việc sử dụng Tailwind CSS kết hợp với biến CSS (CSS variables) giúp duy trì sự đồng bộ về thiết kế (design tokens) trên toàn hệ thống. Hơn nữa, việc quản lý component trực tiếp trong codebase giúp quy trình bảo trì và nâng cấp trở nên minh bạch và dễ kiểm soát \cite{shadcn_docs}.
+    
+    \item \textbf{Tăng tốc độ phát triển}: 
+    Hệ sinh thái ShadCN cung cấp sẵn các component phức tạp như Date Picker, Combobox hay Data Table, giúp giảm thiểu thời gian phát triển các chức năng UI phổ biến mà không cần hy sinh chất lượng mã nguồn \cite{ui_comparison_2025}.
 \end{itemize}
 
-\subparagraph{So sánh ShadCN/UI và các thư viện UI khác}
+\subsubsubsubsection{So sánh ShadCN/UI và các thư viện UI khác}
+Bảng so sánh dưới đây phân tích sự khác biệt giữa ShadCN/UI và các đối thủ cạnh tranh chính như Material-UI (MUI), Ant Design dựa trên các tiêu chí về khả năng tùy biến và hiệu suất \cite{kitemetric2025, ui_comparison_2025}.
+
 \clearpage
 \begin{landscape}
 \begin{table}[h!]
 \centering
 \setlength{\tabcolsep}{4pt} 
 \footnotesize 
+\renewcommand{\arraystretch}{1.4}
 \begin{tabularx}{\linewidth}{|l|X|X|X|X|}
 \hline
 \textbf{Tiêu chí} & \textbf{ShadCN/UI} & \textbf{Material-UI (MUI)} & \textbf{Ant Design} & \textbf{Chakra UI} \\
 \hline
-\textbf{Phương pháp sử dụng} & \textbf{Sao chép mã nguồn:} Bạn là chủ sở hữu code. & \textbf{Cài đặt qua NPM/Yarn:} Sử dụng như một dependency. & \textbf{Cài đặt qua NPM/Yarn:} Sử dụng như một dependency. & \textbf{Cài đặt qua NPM/Yarn:} Sử dụng như một dependency. \\
+\textbf{Phương pháp triển khai} & 
+\textbf{Ownership}: Sao chép mã nguồn vào dự án, toàn quyền kiểm soát \cite{shadcn_docs}. & 
+\textbf{Dependency}: Cài đặt qua NPM, phụ thuộc vào phiên bản thư viện. & 
+\textbf{Dependency}: Cài đặt qua NPM, khó tách rời logic mặc định. & 
+\textbf{Dependency}: Cài đặt qua NPM, phụ thuộc vào Emotion engine. \\
 \hline
-\textbf{Khả năng tùy biến} & \textbf{Rất cao:} Toàn quyền chỉnh sửa mã nguồn. & \textbf{Cao:} Tùy biến qua props và `sx` prop, nhưng vẫn bị giới hạn bởi API. & \textbf{Trung bình:} Khó tùy biến sâu về giao diện để thoát khỏi "phong cách Ant Design". & \textbf{Cao:} Tùy biến dễ dàng qua props dựa trên style-props. \\
+\textbf{Khả năng tùy biến} & 
+\textbf{Rất cao}: Chỉnh sửa trực tiếp logic và style tại mã nguồn gốc \cite{fabrizio2025}. & 
+\textbf{Cao}: Tùy biến qua props/theme, nhưng bị giới hạn bởi kiến trúc nội tại. & 
+\textbf{Trung bình}: Khó thoát khỏi "phong cách Ant Design" mặc định, override CSS phức tạp. & 
+\textbf{Cao}: Dễ dàng qua style props nhưng hiệu suất giảm khi style phức tạp. \\
 \hline
-\textbf{Nền tảng Styling} & \textbf{Tailwind CSS:} Sử dụng các class tiện ích. & \textbf{Emotion / Styled-Components:} CSS-in-JS. & \textbf{Less / CSS-in-JS:} Sử dụng biến Less và style object. & \textbf{Emotion / Styled-System:} CSS-in-JS với style-props. \\
+\textbf{Công nghệ Styling} & 
+\textbf{Tailwind CSS}: Utility-first, tối ưu cho Tailwind v4.0 mới nhất \cite{tailwind_v4}. & 
+\textbf{CSS-in-JS}: Emotion/Styled-components, gây tải runtime lớn hơn. & 
+\textbf{Less/CSS-in-JS}: Hệ thống style cũ, tích hợp với stack hiện đại khó khăn hơn. & 
+\textbf{CSS-in-JS}: Styled-system, tiện lợi nhưng bundle size lớn. \\
 \hline
-\textbf{Kích thước Bundle} & \textbf{Tối ưu:} Chỉ bao gồm những gì bạn sử dụng. & \textbf{Lớn hơn:} Cần cấu hình tree-shaking để tối ưu. & \textbf{Lớn:} Tương tự MUI. & \textbf{Lớn hơn:} Tương tự MUI. \\
+\textbf{Kích thước Bundle} & 
+\textbf{Tối ưu}: Zero-runtime overhead, chỉ đóng gói code thực dùng \cite{kitemetric2025}. & 
+\textbf{Lớn}: Cần cấu hình Tree-shaking kỹ lưỡng, vẫn tồn tại overhead của engine style. & 
+\textbf{Rất lớn}: Thường import nhiều code không dùng đến nếu không cấu hình kỹ. & 
+\textbf{Lớn}: Chứa cả engine xử lý style runtime. \\
 \hline
-\textbf{Khả năng tiếp cận (Accessibility)} & \textbf{Rất cao:} Kế thừa từ Radix UI, một trong những thư viện tốt nhất về accessibility. & \textbf{Tốt:} Tuân thủ tốt các tiêu chuẩn. & \textbf{Tốt:} Tuân thủ tốt các tiêu chuẩn. & \textbf{Tốt:} Tuân thủ tốt các tiêu chuẩn. \\
+\textbf{Khả năng tiếp cận} & 
+\textbf{Xuất sắc}: Kế thừa trọn vẹn từ Radix Primitives (WAI-ARIA chuẩn) \cite{radix_accessibility}. & 
+\textbf{Tốt}: Tuân thủ chuẩn, nhưng đôi khi behavior phức tạp gây lỗi nhỏ. & 
+\textbf{Khá}: Tốt cho nội bộ doanh nghiệp, chưa tối ưu cho public user khuyết tật. & 
+\textbf{Tốt}: Chú trọng accessibility, nhưng phụ thuộc vào implement của dev. \\
 \hline
 \end{tabularx}
-\caption{So sánh ShadCN/UI và các thư viện UI khác}
+\caption{So sánh ShadCN/UI với các thư viện UI truyền thống \cite{ui_comparison_2025, kitemetric2025}}
 \end{table}
 \end{landscape}

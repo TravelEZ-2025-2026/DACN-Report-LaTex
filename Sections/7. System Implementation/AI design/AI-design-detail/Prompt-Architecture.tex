@@ -1,0 +1,101 @@
+\subsubsubsection{Lựa chọn Kiến trúc Prompt (Prompt Architecture)}
+
+\subsubsubsubsection{Định nghĩa bài toán thiết kế trong bối cảnh AaaS:}
+
+Trong bối cảnh phát triển phần mềm tích hợp LLM, Prompt Engineering đã chuyển dịch từ các thực hành theo kinh nghiệm sang các phương pháp hệ thống hóa. Để đảm bảo độ tin cậy của hệ thống TravelEZ, việc thiết kế Prompt không chỉ đơn thuần là viết câu lệnh, mà là bài toán kiểm soát các Mô thức Lỗi (Failure Modes).
+
+\subsubsubsubsection{Xây dựng tiêu chí đánh giá kỹ thuật Prompt:}
+
+Dựa trên khung phân loại lỗi do Tian et al. (2025) đề xuất và được tổng hợp trong báo cáo khảo sát tháng 11/2025 \cite{tian2025llm}, nhóm xác định 3 thách thức kỹ thuật lớn nhất tương ứng với 3 tiêu chí đánh giá:
+
+\begin{enumerate}[label=\alph*., leftmargin=*]
+    \item \textbf{Thách thức về đặc tả và ý định:} Các yêu cầu lập lịch trình du lịch thường phức tạp về logic không gian và thời gian. Nếu prompt không rõ ràng, mô hình dễ mắc lỗi "Chỉ dẫn mơ hồ" (Ambiguous Instructions) hoặc "Ràng buộc thiếu đặc tả" (Underspecified Constraints).
+    
+    \textbf{Tiêu chí 1:} Kỹ thuật được chọn phải có khả năng diễn giải chính xác các ý định phức tạp và tuân thủ chặt chẽ logic nghiệp vụ.
+    
+    \item \textbf{Thách thức về độ tin cậy nội dung:} Mô hình ngôn ngữ có xu hướng sinh ra "Ảo giác" (Hallucination) hoặc sử dụng thông tin sai lệch khi không được kiểm soát. Đối với ứng dụng du lịch, việc bịa đặt địa điểm không tồn tại là lỗi nghiêm trọng thuộc nhóm "Input \& Content Defects".
+    
+    \textbf{Tiêu chí 2:} Kỹ thuật phải tối đa hóa độ trung thực (Fidelity), đảm bảo đầu ra bám sát dữ liệu POIs được cung cấp.
+    
+    \item \textbf{Thách thức về hiệu suất vận hành:} Các kỹ thuật prompt quá dài hoặc cơ chế suy luận phức tạp có thể gây ra lỗi "Prompt quá khổ" (Excessive Prompt Length) hoặc "Đầu ra không giới hạn" (Unbounded Output), dẫn đến độ trễ cao và chi phí vận hành lớn.
+    
+    \textbf{Tiêu chí 3:} Kỹ thuật phải tối ưu hóa số lượng token (đặc biệt là token đầu ra đắt đỏ) để đảm bảo tính kinh tế.
+\end{enumerate}
+
+\subsubsubsubsection{Khảo sát các kỹ thuật Prompting:}
+
+Dựa trên tài liệu khảo sát, nhóm thực hiện xem xét 4 kỹ thuật phổ biến nhất hiện nay để tìm ra ứng viên phù hợp:
+
+\begin{itemize}
+    \item \textbf{Zero-shot Prompting:} Ra lệnh trực tiếp cho mô hình thực hiện tác vụ mà không cung cấp ví dụ mẫu. Kỹ thuật này dựa hoàn toàn vào tri thức huấn luyện trước của mô hình.
+    
+    \item \textbf{Few-shot Prompting:} Cung cấp một tập hợp các ví dụ (Input-Output pairs) trong ngữ cảnh để định hướng mô hình (In-context learning).
+    
+    \item \textbf{Chain-of-Thought (CoT) Prompting:} Yêu cầu mô hình hiển thị quá trình suy luận từng bước (step-by-step reasoning) trước khi đưa ra câu trả lời cuối cùng, giúp giải quyết các bài toán logic phức tạp.
+    
+    \item \textbf{Structured Prompting:} Sử dụng các khuôn mẫu định sẵn và các ràng buộc về định dạng (như JSON Schema) để hướng dẫn mô hình tuân thủ quy tắc dữ liệu, giảm thiểu lỗi sai cấu trúc.
+\end{itemize}
+
+\subsubsubsubsection{Đánh giá và luận giải chi tiết:}
+
+Để đảm bảo tính khách quan và nhất quán, nhóm thiết lập thang đo chuẩn hóa (Rubric) gồm 4 mức độ như sau:
+
+\textbf{Tiêu chí 1 - Xử lý logic:}
+\begin{itemize}
+    \item \textit{Thấp:} Thường xuyên đưa ra lộ trình bất khả thi hoặc sai lệch hoàn toàn yêu cầu.
+    \item \textit{Trung bình:} Hiểu được yêu cầu cơ bản nhưng thất bại khi xử lý các ràng buộc chồng chéo.
+    \item \textit{Khá:} Xử lý tốt logic thông thường, đôi khi gặp khó khăn với các ràng buộc phức tạp.
+    \item \textit{Cao:} Khả năng suy luận sâu, xử lý tốt các bài toán đa bước (multi-step) về không gian/thời gian.
+\end{itemize}
+
+\textbf{Tiêu chí 2 - Độ tin cậy:}
+\begin{itemize}
+    \item \textit{Thấp:} Thường xuyên gặp lỗi ảo giác (Hallucination) hoặc sai định dạng JSON.
+    \item \textit{Trung bình:} Định dạng đúng nhưng nội dung có thể chứa thông tin chưa chính xác.
+    \item \textit{Khá:} Tuân thủ định dạng tốt, giảm thiểu được ảo giác nhờ cơ chế bắt chước hoặc suy luận.
+    \item \textit{Cao:} Tuân thủ tuyệt đối định dạng (Schema) và kiểm soát chặt chẽ nguồn dữ liệu đầu vào.
+\end{itemize}
+
+\textbf{Tiêu chí 3 - Hiệu suất:}
+\begin{itemize}
+    \item \textit{Thấp:} Tốn rất nhiều token (đặc biệt là token đầu ra đắt đỏ) và phản hồi chậm.
+    \item \textit{Trung bình:} Tiêu tốn tài nguyên ở mức đáng kể (do input dài).
+    \item \textit{Khá:} Tối ưu hóa tốt, prompt gọn gàng.
+    \item \textit{Cao:} Tiết kiệm nhất, tốc độ phản hồi nhanh nhất.
+\end{itemize}
+
+{\small
+\begin{table}[htp]
+\centering
+\begin{tabular}{|p{4cm}|p{3.2cm}|p{3.2cm}|p{3.2cm}|}
+\hline
+\textbf{Kỹ thuật} & \textbf{Tiêu chí 1: Xử lý Logic} & \textbf{Tiêu chí 2: Độ Tin cậy} & \textbf{Tiêu chí 3: Hiệu suất} \\ \hline
+Zero-shot & THẤP & THẤP & CAO \\ \hline
+Few-shot & TRUNG BÌNH & KHÁ & TRUNG BÌNH \\ \hline
+Chain-of-Thought & CAO & KHÁ & THẤP \\ \hline
+Structured Prompting & KHÁ & CAO & KHÁ \\ \hline
+\end{tabular}
+\caption{Đánh giá các kỹ thuật Prompting theo tiêu chí}\label{tab:prompting-evaluation}
+\end{table}
+}
+\textbf{Luận giải chi tiết:}
+\begin{itemize}
+    \item \textbf{Zero-shot (Thấp - Thấp - Cao):} Đạt mức cao về hiệu suất vì prompt ngắn nhất, không tốn token ví dụ. Tuy nhiên, logic chỉ ở mức thấp do thiếu hướng dẫn, dễ dẫn đến lỗi "Ambiguous Instructions".
+    \item \textbf{Few-shot (Trung bình - Khá - Trung bình):} Đạt mức khá về độ tin cậy nhờ khả năng bắt chước mẫu (Pattern recognition), giúp giảm sai sót định dạng. Hiệu suất chỉ ở mức trung bình vì phải nạp thêm nhiều token ví dụ vào đầu vào (Input cost).
+    \item \textbf{Chain-of-Thought (Cao - Khá - Thấp):} Đạt mức cao về logic nhờ khả năng suy luận từng bước (Step-by-step), giải quyết tốt các bài toán khó. Tuy nhiên, hiệu suất ở mức thấp vì mô hình phải sinh ra lượng lớn văn bản suy luận. Với giá token đầu ra của Gemini 2.5 Flash (\$0.0006) đắt gấp 4 lần đầu vào, đây là phương án tốn kém nhất.
+    \item \textbf{Structured Prompting (Khá - Cao - Khá):} Đạt mức cao về độ tin cậy nhờ các khuôn mẫu (Templates) và ràng buộc Schema chặt chẽ, loại bỏ lỗi cấu trúc. Logic ở mức khá, tốt hơn Zero-shot nhưng chưa đạt độ sâu suy luận như CoT. Hiệu suất ở mức khá vì prompt đi thẳng vào vấn đề, không lan man như CoT và không dài dòng như Few-shot.
+\end{itemize}
+
+\subsubsubsubsection{Kết luận và kiến trúc đề xuất:}
+
+Dựa trên phân tích đánh đổi, nhóm nhận thấy không có một kỹ thuật đơn lẻ nào đáp ứng trọn vẹn cả 3 tiêu chí. Do đó, nhóm quyết định xây dựng kiến trúc \textbf{Hybrid Structured Prompting} (Lai ghép có cấu trúc).
+
+Kiến trúc này được thiết kế để tận dụng nền tảng vững chắc của Structured Prompting và bổ sung sức mạnh suy luận của CoT theo cách tối ưu nhất:
+
+\begin{itemize}
+    \item \textbf{Lớp 1: Suy luận ngầm - Giải quyết tiêu chí 1 \& 3:} Thay vì yêu cầu AI phải xuất ra toàn bộ quá trình suy nghĩ (gây tốn chi phí cho phần Output), nhóm đã lựa chọn sử dụng chỉ thị "Suy nghĩ trong im lặng" hoặc "Lập kế hoạch tổng quát rồi xuất ra dưới dạng JSON". Điều này giúp kích hoạt khả năng suy luận logic của CoT nhưng loại bỏ gánh nặng chi phí của việc sinh văn bản thừa.
+    \item \textbf{Lớp 2: Ràng buộc cấu trúc - Giải quyết tiêu chí 2:} Sử dụng định dạng JSON Schema nghiêm ngặt để ngăn chặn lỗi sai định dạng (Undefined Output Format). Kết hợp với các "Luật cấm" (Negative Constraints) để giảm thiểu ảo giác.
+    \item \textbf{Lớp 3: Kiểm soát đầu ra:} Để khắc phục tính ngẫu nhiên của mô hình, hệ thống tích hợp bộ Validation ngay sau bước nhận kết quả để phát hiện các lỗi logic hoặc ảo giác còn sót lại.
+\end{itemize}
+
+\textbf{Kết luận:} Kiến trúc Hybrid là lựa chọn tối ưu nhất, cân bằng giữa khả năng xử lý nghiệp vụ phức tạp và hiệu quả kinh tế khi triển khai thực tế.

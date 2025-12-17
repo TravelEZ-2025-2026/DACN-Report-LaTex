@@ -1,20 +1,24 @@
 % --- //////////////////////////////////////////////////////////////// ---
 % MODULE 2
-\begin{longtable}{@{}p{4cm} p{11cm}@{}}
+\begin{longtable}{|p{4cm}|p{11cm}|}
 \caption{Mô tả Use Case: Chia sẻ Lộ trình}
 \label{usecase-2-01} \\
-\toprule
-\textbf{Use case ID}       & UC-M2-01 \\ \midrule
-\textbf{Tên Use case}      & Chia sẻ Lộ trình \\ \midrule
-\textbf{Các tác nhân}      & Traveler \\ \midrule
-\textbf{Mô tả}             & Người dùng chia sẻ quyền truy cập lộ trình của mình cho một hoặc nhiều người dùng khác thông qua email hoặc tên đăng nhập. \\ \midrule
+\hline
+\endfirsthead
+\caption[]{Mô tả Use Case: Chia sẻ Lộ trình} \\
+\hline
+\endhead
+\textbf{Use case ID}       & UC-M2-01 \\ \hline
+\textbf{Tên Use case}      & Chia sẻ Lộ trình \\ \hline
+\textbf{Các tác nhân}      & Traveler \\ \hline
+\textbf{Mô tả}             & Người dùng chia sẻ quyền truy cập lộ trình của mình cho một hoặc nhiều người dùng khác thông qua email hoặc tên đăng nhập. \\ \hline
 \textbf{Tiền điều kiện}    & 
 \begin{tabular}[t]{@{}p{10.5cm}@{}}
 1. Traveler là chủ sở hữu của lộ trình\\
 2. Lộ trình tồn tại và đang ở trạng thái kích hoạt (Active).\\
 3. Email hoặc Username của người được chia sẻ tồn tại trong hệ thống.    
-\end{tabular} \\ \midrule
-\textbf{Hậu điều kiện}     & Người được chia sẻ nhận được thông báo và có quyền xem lộ trình đó trong danh sách của họ. \\ \midrule
+\end{tabular} \\ \hline
+\textbf{Hậu điều kiện}     & Người được chia sẻ nhận được thông báo và có quyền xem lộ trình đó trong danh sách của họ. \\ \hline
 \textbf{Luồng sự kiện chính} & 
 \begin{tabular}[t]{@{}p{10.5cm}@{}}
 1. Tại màn hình chi tiết lộ trình, Owner nhấn nút "Chia sẻ". \\
@@ -24,7 +28,7 @@
 5. Hệ thống kiểm tra sự tồn tại của tài khoản người nhận: \\
 - Nếu tồn tại: Gửi thông báo đến người nhận và cấp quyền truy cập. \\
 6. Hệ thống hiển thị thông báo "Đã chia sẻ thành công".    
-\end{tabular} \\ \midrule
+\end{tabular} \\ \hline
 \textbf{Luồng ngoại lệ} &
 \begin{tabular}[t]{@{}p{10.5cm}@{}}
 \textbf{E1: Không tìm thấy tài khoản người dùng:}\\
@@ -32,30 +36,34 @@ Traveler nhập một tên tài khoản không tồn tại trong hệ thống. H
 \textbf{E1: Người nhận đã được chia sẻ trước đó:}\\
 Hệ thống thông báo: "Người dùng này đã có trong danh sách chia sẻ."
 \end{tabular} \\ 
-\bottomrule
+\hline
 \end{longtable}
 
-\begin{longtable}{@{}p{4cm} p{11cm}@{}}
+\begin{longtable}{|p{4cm}|p{11cm}|}
 \caption{Mô tả Use Case: Xem Lộ trình được chia sẻ}
 \label{usecase-2-02} \\
-\toprule
-\textbf{Use case ID}       & UC-M2-02 \\ \midrule
-\textbf{Tên Use case}      & Xem Lộ trình được chia sẻ \\ \midrule
-\textbf{Các tác nhân}      & Traveler \\ \midrule
-\textbf{Mô tả}             & Người dùng xem danh sách các lộ trình mà người khác đã chia sẻ với mình. \\ \midrule
+\hline
+\endfirsthead
+\caption[]{Mô tả Use Case: Xem Lộ trình được chia sẻ} \\
+\hline
+\endhead
+\textbf{Use case ID}       & UC-M2-02 \\ \hline
+\textbf{Tên Use case}      & Xem Lộ trình được chia sẻ \\ \hline
+\textbf{Các tác nhân}      & Traveler \\ \hline
+\textbf{Mô tả}             & Người dùng xem danh sách các lộ trình mà người khác đã chia sẻ với mình. \\ \hline
 \textbf{Tiền điều kiện}    & 
 \begin{tabular}[t]{@{}p{10.5cm}@{}}
 1. Traveler đã đăng nhập vào hệ thống.\\
 2. Có ít nhất một Traveler khác đã chia sẻ lộ trình cho họ.
-\end{tabular} \\ \midrule
-\textbf{Hậu điều kiện}     & Danh sách hiển thị đầy đủ các lộ trình được chia sẻ. \\ \midrule
+\end{tabular} \\ \hline
+\textbf{Hậu điều kiện}     & Danh sách hiển thị đầy đủ các lộ trình được chia sẻ. \\ \hline
 \textbf{Luồng sự kiện chính} &
 \begin{tabular}[t]{@{}p{10.5cm}@{}}
 1. Người dùng truy cập vào mục "Chuyến đi".\\
 2. Người dùng chọn tab (hoặc bộ lọc) "Được chia sẻ với tôi".\\
 3. Hệ thống truy vấn CSDL và hiển thị danh sách các lộ trình, bao gồm thông tin tóm tắt: Tên chuyến đi, Người chia sẻ, Ngày khởi hành.\\
 4. Người dùng nhìn thấy danh sách.
-\end{tabular} \\ \midrule
+\end{tabular} \\ \hline
 \textbf{Luồng ngoại lệ} &
 \begin{tabular}[t]{@{}p{10.5cm}@{}}
 \textbf{E1: Người chia sẻ đã thu hồi quyền truy cập:}\\
@@ -65,23 +73,27 @@ Lộ trình mà người dùng muốn xem đã bị người tạo ra xóa vĩnh
 \textbf{E1: Danh sách rỗng:}\\
 Hệ thống hiển thị thông báo/hình ảnh minh họa: "Chưa có ai chia sẻ lộ trình với bạn."
 \end{tabular} \\
-\bottomrule
+\hline
 \end{longtable}
 
-\begin{longtable}{@{}p{4cm} p{11cm}@{}}
+\begin{longtable}{|p{4cm}|p{11cm}|}
 \caption{Mô tả Use Case: Hủy Lộ trình}
 \label{usecase-2-04} \\
-\toprule
-\textbf{Use case ID}       & UC-M2-04 \\ \midrule
-\textbf{Tên Use case}      & Hủy Lộ trình \\ \midrule
-\textbf{Các tác nhân}      & Traveler \\ \midrule
-\textbf{Mô tả}             & Người dùng đánh dấu hủy một chuyến đi đã lên kế hoạch (do bận việc, thay đổi kế hoạch). Dữ liệu chuyến đi vẫn được giữ lại để tham khảo nhưng trạng thái chuyển thành "Đã hủy". \\ \midrule
+\hline
+\endfirsthead
+\caption[]{Mô tả Use Case: Hủy Lộ trình} \\
+\hline
+\endhead
+\textbf{Use case ID}       & UC-M2-04 \\ \hline
+\textbf{Tên Use case}      & Hủy Lộ trình \\ \hline
+\textbf{Các tác nhân}      & Traveler \\ \hline
+\textbf{Mô tả}             & Người dùng đánh dấu hủy một chuyến đi đã lên kế hoạch (do bận việc, thay đổi kế hoạch). Dữ liệu chuyến đi vẫn được giữ lại để tham khảo nhưng trạng thái chuyển thành "Đã hủy". \\ \hline
 \textbf{Tiền điều kiện}    & 
 \begin{tabular}[t]{@{}p{10.5cm}@{}}
 1. Traveler đã đăng nhập.\\
 2. Traveler có một lộ trình đang ở trạng thái "Sắp đi" \space hoặc "Đang tiến hành".
-\end{tabular} \\ \midrule
-\textbf{Hậu điều kiện}     & Trạng thái của lộ trình được chuyển thành "Đã hủy". Lý do hủy (nếu có) được ghi nhận.\\ \midrule
+\end{tabular} \\ \hline
+\textbf{Hậu điều kiện}     & Trạng thái của lộ trình được chuyển thành "Đã hủy". Lý do hủy (nếu có) được ghi nhận.\\ \hline
 \textbf{Luồng sự kiện chính} &
 \begin{tabular}[t]{@{}p{10.5cm}@{}}
 1. Tại màn hình chi tiết hoặc danh sách, Owner chọn chức năng "Hủy chuyến đi".\\
@@ -90,46 +102,50 @@ Hệ thống hiển thị thông báo/hình ảnh minh họa: "Chưa có ai chia
 4. Hệ thống cập nhật trạng thái lộ trình.\\
 5. Hệ thống hiển thị thông báo thành công.\\
 6. Lộ trình được di chuyển sang mục Lịch sử \space hoặc tab "Đã hủy".
-\end{tabular} \\ \midrule
+\end{tabular} \\ \hline
 \textbf{Luồng ngoại lệ} &
 \begin{tabular}[t]{@{}p{10.5cm}@{}}
 \textbf{E1: Lỗi kết nối hoặc lỗi máy chủ:}\\
 Hệ thống không thể cập nhật trạng thái do lỗi. Hệ thống sẽ hiển thị thông báo "Hủy thất bại, vui lòng thử lại."
 \end{tabular} \\
-\bottomrule
+\hline
 \end{longtable}
 
-\begin{longtable}{@{}p{4cm} p{11cm}@{}}
-\caption{Mô tả Use Case: Tích hợp Lộ trình với Google Calendar}
-\label{usecase-2-06} \\
-\toprule
-\textbf{Use case ID}       & UC-M2-06 \\ \midrule
-\textbf{Tên Use case}      & Tích hợp Lộ trình với Google Calendar \\ \midrule
-\textbf{Các tác nhân}      & Traveler (Primary), Google Calendar (Secondary) \\ \midrule
-\textbf{Mô tả}             & Xuất các hoạt động trong lộ trình thành các Sự kiện trên Google Calendar. Tính năng này chỉ khả dụng cho người dùng đăng nhập hệ thống bằng tài khoản Google. \\ \midrule
-\textbf{Tiền điều kiện}    & 
-\begin{tabular}[t]{@{}p{10.5cm}@{}}
-1. Lộ trình đã được thiết lập thời gian cụ thể (Ngày/Giờ) cho các địa điểm.\\
-2. Người dùng hiện tại đã đăng nhập vào TravelEZ thông qua phương thức Google OAuth.
-\end{tabular} \\ \midrule
-\textbf{Hậu điều kiện}     & Các sự kiện xuất hiện trên ứng dụng Lịch của Google. \\ \midrule
-\textbf{Luồng sự kiện chính} &
-\begin{tabular}[t]{@{}p{10.5cm}@{}}
-1. Tại màn hình chi tiết lộ trình, Owner nhấn nút "Đồng bộ Lịch".\\
-2. Hệ thống kiểm tra phương thức đăng nhập của phiên làm việc hiện tại.\\
-3. (Nếu là tài khoản Google) Hệ thống kiểm tra quyền truy cập Lịch:\\
-- Nếu chưa có quyền: Hiển thị hộp thoại của Google yêu cầu cấp quyền ghi vào Lịch.\\
-- Nếu đã có quyền: Bỏ qua bước 4.\\
-4. Owner nhấn "Cho phép" \space (Allow) trên hộp thoại của Google.\\
-5. Hệ thống trích xuất dữ liệu lộ trình và gửi yêu cầu API tạo sự kiện tới Google Calendar.\\
-6. Hệ thống nhận phản hồi thành công và hiển thị thông báo: "Đã đồng bộ thành công sang Google Calendar."    
-\end{tabular} \\ \midrule
-\textbf{Luồng ngoại lệ} &
-\begin{tabular}[t]{@{}p{10.5cm}@{}}
-\textbf{E1: Tài khoản không phải Google:}\\
-Tại bước 2, hệ thống phát hiện người dùng đăng nhập bằng Email thường hoặc Facebook. Hệ thống hiển thị thông báo lỗi: "Tính năng này chỉ hỗ trợ cho tài khoản đăng nhập bằng Google. Vui lòng liên kết tài khoản hoặc đăng nhập lại bằng Google."\\
-\textbf{E2: Người dùng từ chối cấp quyền:}\\
-Tại bước 4, Owner nhấn "Từ chối". Hệ thống hủy thao tác và thông báo: "Đồng bộ thất bại do bạn chưa cấp quyền truy cập Lịch."
-\end{tabular} \\
-\bottomrule
-\end{longtable}
+% \begin{longtable}{|p{4cm}|p{11cm}|}
+% \caption{Mô tả Use Case: Tích hợp Lộ trình với Google Calendar}
+% \label{usecase-2-06} \\
+% \hline
+% \endfirsthead
+% \caption[]{Mô tả Use Case: Tích hợp Lộ trình với Google Calendar} \\
+% \hline
+% \endhead
+% \textbf{Use case ID}       & UC-M2-06 \\ \hline
+% \textbf{Tên Use case}      & Tích hợp Lộ trình với Google Calendar \\ \hline
+% \textbf{Các tác nhân}      & Traveler (Primary), Google Calendar (Secondary) \\ \hline
+% \textbf{Mô tả}             & Xuất các hoạt động trong lộ trình thành các Sự kiện trên Google Calendar. Tính năng này chỉ khả dụng cho người dùng đăng nhập hệ thống bằng tài khoản Google. \\ \hline
+% \textbf{Tiền điều kiện}    & 
+% \begin{tabular}[t]{@{}p{10.5cm}@{}}
+% 1. Lộ trình đã được thiết lập thời gian cụ thể (Ngày/Giờ) cho các địa điểm.\\
+% 2. Người dùng hiện tại đã đăng nhập vào TravelEZ thông qua phương thức Google OAuth.
+% \end{tabular} \\ \hline
+% \textbf{Hậu điều kiện}     & Các sự kiện xuất hiện trên ứng dụng Lịch của Google. \\ \hline
+% \textbf{Luồng sự kiện chính} &
+% \begin{tabular}[t]{@{}p{10.5cm}@{}}
+% 1. Tại màn hình chi tiết lộ trình, Owner nhấn nút "Đồng bộ Lịch".\\
+% 2. Hệ thống kiểm tra phương thức đăng nhập của phiên làm việc hiện tại.\\
+% 3. (Nếu là tài khoản Google) Hệ thống kiểm tra quyền truy cập Lịch:\\
+% - Nếu chưa có quyền: Hiển thị hộp thoại của Google yêu cầu cấp quyền ghi vào Lịch.\\
+% - Nếu đã có quyền: Bỏ qua bước 4.\\
+% 4. Owner nhấn "Cho phép" \space (Allow) trên hộp thoại của Google.\\
+% 5. Hệ thống trích xuất dữ liệu lộ trình và gửi yêu cầu API tạo sự kiện tới Google Calendar.\\
+% 6. Hệ thống nhận phản hồi thành công và hiển thị thông báo: "Đã đồng bộ thành công sang Google Calendar."    
+% \end{tabular} \\ \hline
+% \textbf{Luồng ngoại lệ} &
+% \begin{tabular}[t]{@{}p{10.5cm}@{}}
+% \textbf{E1: Tài khoản không phải Google:}\\
+% Tại bước 2, hệ thống phát hiện người dùng đăng nhập bằng Email thường hoặc Facebook. Hệ thống hiển thị thông báo lỗi: "Tính năng này chỉ hỗ trợ cho tài khoản đăng nhập bằng Google. Vui lòng liên kết tài khoản hoặc đăng nhập lại bằng Google."\\
+% \textbf{E2: Người dùng từ chối cấp quyền:}\\
+% Tại bước 4, Owner nhấn "Từ chối". Hệ thống hủy thao tác và thông báo: "Đồng bộ thất bại do bạn chưa cấp quyền truy cập Lịch."
+% \end{tabular} \\
+% \hline
+% \end{longtable}

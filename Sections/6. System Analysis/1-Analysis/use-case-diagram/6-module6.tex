@@ -1,17 +1,18 @@
-\begin{table}[H]
+\begin{longtable}{|p{4cm}|p{11cm}|}
 \caption{Mô tả Use Case: Xem dashboard xu hướng thị trường}
-\label{usecase-6-01}
-\centering
-\renewcommand{\arraystretch}{1.2}
-\begin{tabular}{@{}p{4cm} p{11cm}@{}}
-\toprule
-\textbf{Use case ID}       & UC-M6-01 \\ \midrule
-\textbf{Tên Use case}      & Xem dashboard xu hướng thị trường \\ \midrule
-\textbf{Các tác nhân}      & Provider, Admin \\ \midrule
-\textbf{Mô tả}             & Cung cấp cho Provider, Admin các thông tin về các địa điểm hot được người dùng quan tâm và tìm kiếm.\\ \midrule
-\textbf{Trigger}    & Người dùng chọn tab "Phân tích" \space trên thanh điều hướng.\\ \midrule
-\textbf{Tiền điều kiện}    & Người dùng đã đăng nhập.\\ \midrule
-\textbf{Hậu điều kiện}     & Hệ thống hiển thị biểu đồ và danh sách về xu hướng chung. \\ \midrule
+\label{usecase-6-01} \\
+\hline
+\endfirsthead
+\caption[]{Mô tả Use Case: Xem dashboard xu hướng thị trường} \\
+\hline
+\endhead
+\textbf{Use case ID}       & UC-M6-01 \\ \hline
+\textbf{Tên Use case}      & Xem dashboard xu hướng thị trường \\ \hline
+\textbf{Các tác nhân}      & Provider, Admin \\ \hline
+\textbf{Mô tả}             & Cung cấp cho Provider, Admin các thông tin về các địa điểm hot được người dùng quan tâm và tìm kiếm.\\ \hline
+\textbf{Trigger}    & Người dùng chọn tab "Phân tích" \space trên thanh điều hướng.\\ \hline
+\textbf{Tiền điều kiện}    & Người dùng đã đăng nhập.\\ \hline
+\textbf{Hậu điều kiện}     & Hệ thống hiển thị biểu đồ và danh sách về xu hướng chung. \\ \hline
 \textbf{Luồng sự kiện chính} & 
 \begin{tabular}[t]{@{}p{10.5cm}@{}}
 1. Người dùng chọn menu "Phân tích" \space hoặc "Xu hướng thị trường".
@@ -20,67 +21,66 @@
 - Top điểm đến: Biểu đồ cột/tròn các địa điểm được đánh giá cao nhất.\\
 - Dịch vụ yêu thích: Tỷ lệ phần trăm các loại tour/khách sạn. \\
 4. Người dùng xem tổng quan dữ liệu.    
-\end{tabular} \\ \midrule
+\end{tabular} \\ \hline
 \textbf{Luồng ngoại lệ} & Nếu hệ thống mất kết nối $\rightarrow$ Hiển thị thông báo "Lỗi kết nối" \\
-\bottomrule
-\end{tabular}
-\end{table}
+\hline
+\end{longtable}
 
-\begin{table}[H]
-\caption{Mô tả Use Case: Filter dữ liệu}
-\label{usecase-6-02}
-\centering
-\renewcommand{\arraystretch}{1.2}
-\begin{tabular}{@{}p{4cm} p{11cm}@{}}
-\toprule
-\textbf{Use case ID}       & UC-M6-02 \\ \midrule
-\textbf{Tên Use case}      & Filter dữ liệu\\ \midrule
-\textbf{Các tác nhân}      & Provider, Admin \\ \midrule
-\textbf{Mô tả}             & Cho phép lọc các chỉ số trên dashboard theo tiêu chí cụ thể.\\ \midrule
-\textbf{Tiền điều kiện}    & Người dùng đang xem Dashboard (UC-M6-01).\\ \midrule
-\textbf{Hậu điều kiện}     & Dashboard cập nhật hiển thị theo bộ lọc mới. \\ \midrule
-\textbf{Luồng sự kiện chính} & 
-\begin{tabular}[t]{@{}p{10.5cm}@{}}
-1. Trên giao diện Dashboard, Người dùng nhấn vào nút "Bộ lọc".\\
-2. Hệ thống hiển thị các tiêu chí lọc: \\
-- Khoảng thời gian.\\
-- Khu vực.\\
-- Danh mục\\
-3. Người dùng chọn các giá trị mong muốn và nhấn "Áp dụng".\\
-4. Hệ thống truy vấn lại dữ liệu theo tham số mới.\\
-5. Hệ thống làm mới các biểu đồ để phản ánh dữ liệu đã lọc.    
-\end{tabular} \\ \midrule
-\textbf{Luồng ngoại lệ} & 
-\begin{tabular}[t]{@{}p{10.5cm}@{}}
-\textbf{E1: Không có dữ liệu}\\
-Bộ lọc quá chi tiết dẫn đến kết quả rỗng $\rightarrow$ Hệ thống báo "Không tìm thấy dữ liệu phù hợp với bộ lọc này".
-\end{tabular} \\
-\bottomrule
-\end{tabular}
-\end{table}
+% \begin{longtable}{|p{4cm}|p{11cm}|}
+% \caption{Mô tả Use Case: Filter dữ liệu}
+% \label{usecase-6-02} \\
+% \hline
+% \endfirsthead
+% \caption[]{Mô tả Use Case: Filter dữ liệu} \\
+% \hline
+% \endhead
+% \textbf{Use case ID}       & UC-M6-02 \\ \hline
+% \textbf{Tên Use case}      & Filter dữ liệu\\ \hline
+% \textbf{Các tác nhân}      & Provider, Admin \\ \hline
+% \textbf{Mô tả}             & Cho phép lọc các chỉ số trên dashboard theo tiêu chí cụ thể.\\ \hline
+% \textbf{Tiền điều kiện}    & Người dùng đang xem Dashboard (UC-M6-01).\\ \hline
+% \textbf{Hậu điều kiện}     & Dashboard cập nhật hiển thị theo bộ lọc mới. \\ \hline
+% \textbf{Luồng sự kiện chính} & 
+% \begin{tabular}[t]{@{}p{10.5cm}@{}}
+% 1. Trên giao diện Dashboard, Người dùng nhấn vào nút "Bộ lọc".\\
+% 2. Hệ thống hiển thị các tiêu chí lọc: \\
+% - Khoảng thời gian.\\
+% - Khu vực.\\
+% - Danh mục\\
+% 3. Người dùng chọn các giá trị mong muốn và nhấn "Áp dụng".\\
+% 4. Hệ thống truy vấn lại dữ liệu theo tham số mới.\\
+% 5. Hệ thống làm mới các biểu đồ để phản ánh dữ liệu đã lọc.    
+% \end{tabular} \\ \hline
+% \textbf{Luồng ngoại lệ} & 
+% \begin{tabular}[t]{@{}p{10.5cm}@{}}
+% \textbf{E1: Không có dữ liệu}\\
+% Bộ lọc quá chi tiết dẫn đến kết quả rỗng $\rightarrow$ Hệ thống báo "Không tìm thấy dữ liệu phù hợp với bộ lọc này".
+% \end{tabular} \\
+% \hline
+% \end{longtable}
 
-\begin{table}[H]        
-\caption{Mô tả Use Case: Xuất dữ liệu}
-\label{usecase-6-03}
-\centering
-\renewcommand{\arraystretch}{1.2}
-\begin{tabular}{@{}p{4cm} p{11cm}@{}}
-\toprule
-\textbf{Use case ID}       & UC-M6-03 \\ \midrule
-\textbf{Tên Use case}      & Xuất dữ liệu\\ \midrule
-\textbf{Các tác nhân}      & Provider, Admin \\ \midrule
-\textbf{Mô tả}             & Tải xuống các số liệu thống kê dưới dạng file (Excel, PDF) để lưu trữ hoặc làm báo cáo.\\ \midrule
-\textbf{Tiền điều kiện}    & Người dùng đang xem Dashboard và có thể áp dụng bộ lọc từ UC-M6-02.\\ \midrule
-\textbf{Hậu điều kiện}     & File báo cáo được tải xuống. \\ \midrule
-\textbf{Luồng sự kiện chính} & 
-\begin{tabular}[t]{@{}p{10.5cm}@{}}
-1. Người dùng nhấn nút "Xuất báo cáo" \space trên góc màn hình.\\
-2. Hệ thống yêu cầu chọn định dạng file (Excel cho dữ liệu thô, PDF cho biểu đồ).\\
-3. Người dùng chọn định dạng và nhấn "Tải xuống".\\
-4. Hệ thống tổng hợp dữ liệu hiện tại (đang hiển thị trên màn hình).\\
-5. Hệ thống tạo file và gửi luồng dữ liệu xuống trình duyệt của Người dùng.\\
-6. Người dùng nhận file thành công.    
-\end{tabular} \\ 
-\bottomrule
-\end{tabular}
-\end{table}
+% \begin{longtable}{|p{4cm}|p{11cm}|}        
+% \caption{Mô tả Use Case: Xuất dữ liệu}
+% \label{usecase-6-03} \\
+% \hline
+% \endfirsthead
+% \caption[]{Mô tả Use Case: Xuất dữ liệu} \\
+% \hline
+% \endhead
+% \textbf{Use case ID}       & UC-M6-03 \\ \hline
+% \textbf{Tên Use case}      & Xuất dữ liệu\\ \hline
+% \textbf{Các tác nhân}      & Provider, Admin \\ \hline
+% \textbf{Mô tả}             & Tải xuống các số liệu thống kê dưới dạng file (Excel, PDF) để lưu trữ hoặc làm báo cáo.\\ \hline
+% \textbf{Tiền điều kiện}    & Người dùng đang xem Dashboard và có thể áp dụng bộ lọc từ UC-M6-02.\\ \hline
+% \textbf{Hậu điều kiện}     & File báo cáo được tải xuống. \\ \hline
+% \textbf{Luồng sự kiện chính} & 
+% \begin{tabular}[t]{@{}p{10.5cm}@{}}
+% 1. Người dùng nhấn nút "Xuất báo cáo" \space trên góc màn hình.\\
+% 2. Hệ thống yêu cầu chọn định dạng file (Excel cho dữ liệu thô, PDF cho biểu đồ).\\
+% 3. Người dùng chọn định dạng và nhấn "Tải xuống".\\
+% 4. Hệ thống tổng hợp dữ liệu hiện tại (đang hiển thị trên màn hình).\\
+% 5. Hệ thống tạo file và gửi luồng dữ liệu xuống trình duyệt của Người dùng.\\
+% 6. Người dùng nhận file thành công.    
+% \end{tabular} \\ 
+% \hline
+% \end{longtable}

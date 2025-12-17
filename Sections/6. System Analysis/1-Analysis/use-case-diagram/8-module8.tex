@@ -1,162 +1,190 @@
-\begin{longtable}{@{}p{4cm} p{11cm}@{}}
-\caption{Mô tả Use Case: Đăng ký tài khoản}
-\label{usecase-8-01} \\
-\toprule
-\textbf{Use case ID}       & UC-M8-01 \\ \midrule
-\textbf{Tên Use case}      & Đăng ký tài khoản \\ \midrule
-\textbf{Các tác nhân}      & Guest \\ \midrule
-\textbf{Mô tả}             & Tạo tài khoản mới cho người dùng.\\ \midrule
-\textbf{Tiền điều kiện}    & Người dùng chưa đăng nhập\\ \midrule
-\textbf{Hậu điều kiện}     & Tài khoản mới được thêm vào hệ thống \\ \midrule
-\textbf{Trigger}    & Người dùng bấm "Đăng ký". \\ \midrule
-\textbf{Luồng sự kiện chính} & 
-\begin{tabular}[t]{@{}p{10.5cm}@{}}
-1. Người dùng nhấn nút "Đăng ký".\\
-2. Hệ thống hiển thị trang có form đăng ký tài khoản.\\
-3. Người dùng nhập thông tin để đăng ký tài khoản.\\
-4. Hệ thống kiểm tra định dạng và trùng lặp.\\
-5. Hệ thống tạo tài khoản.\\
-6. Hệ thống chuyển sang trang đăng nhập.
-\end{tabular} \\ \midrule
-\textbf{Luồng ngoại lệ} &
-\begin{tabular}[t]{@{}p{10.5cm}@{}}
-\textbf{E1: Lỗi từ người dùng}\\
-Báo lỗi "Thông tin không hợp lệ". \\
-\textbf{E2: Lỗi từ hệ thống}\\
-Báo lỗi "Lỗi hệ thống". 
-\end{tabular} \\
-\bottomrule
-\end{longtable}
+% \begin{longtable}{|p{4cm}|p{11cm}|}
+% \caption{Mô tả Use Case: Đăng ký tài khoản}
+% \label{usecase-8-01} \\
+% \hline
+% \endfirsthead
+% \caption[]{Mô tả Use Case: Đăng ký tài khoản} \\
+% \hline
+% \endhead
+% \textbf{Use case ID}       & UC-M8-01 \\ \hline
+% \textbf{Tên Use case}      & Đăng ký tài khoản \\ \hline
+% \textbf{Các tác nhân}      & Guest \\ \hline
+% \textbf{Mô tả}             & Tạo tài khoản mới cho người dùng.\\ \hline
+% \textbf{Tiền điều kiện}    & Người dùng chưa đăng nhập\\ \hline
+% \textbf{Hậu điều kiện}     & Tài khoản mới được thêm vào hệ thống \\ \hline
+% \textbf{Trigger}    & Người dùng bấm "Đăng ký". \\ \hline
+% \textbf{Luồng sự kiện chính} & 
+% \begin{tabular}[t]{@{}p{10.5cm}@{}}
+% 1. Người dùng nhấn nút "Đăng ký".\\
+% 2. Hệ thống hiển thị trang có form đăng ký tài khoản.\\
+% 3. Người dùng nhập thông tin để đăng ký tài khoản.\\
+% 4. Hệ thống kiểm tra định dạng và trùng lặp.\\
+% 5. Hệ thống tạo tài khoản.\\
+% 6. Hệ thống chuyển sang trang đăng nhập.
+% \end{tabular} \\ \hline
+% \textbf{Luồng ngoại lệ} &
+% \begin{tabular}[t]{@{}p{10.5cm}@{}}
+% \textbf{E1: Lỗi từ người dùng}\\
+% Báo lỗi "Thông tin không hợp lệ". \\
+% \textbf{E2: Lỗi từ hệ thống}\\
+% Báo lỗi "Lỗi hệ thống". 
+% \end{tabular} \\
+% \hline
+% \end{longtable}
 
-\begin{longtable}{@{}p{4cm} p{11cm}@{}}
-\caption{Mô tả Use Case: Đăng nhập bằng tài khoản Google}
-\label{usecase-8-03} \\
-\toprule
-\textbf{Use case ID}       & UC-M8-02 \\ \midrule
-\textbf{Tên Use case}      & Đăng nhập bằng tài khoản Google \\ \midrule
-\textbf{Các tác nhân}      & Guest \\ \midrule
-\textbf{Mô tả}             & Cho phép người dùng đăng nhập vào hệ thống qua tài khoản Google. \\ \midrule
-\textbf{Tiền điều kiện}    & Trình duyệt không bị chặn cookie cần thiết. \\ \midrule
-\textbf{Hậu điều kiện}     & Người dùng đăng nhập thành công vào hệ thống.\\ \midrule
-\textbf{Trigger}    & Người dùng bấm "Đăng nhập bằng Google". \\ \midrule
-\textbf{Luồng sự kiện chính} & 
-\begin{tabular}[t]{@{}p{10.5cm}@{}}
-1. Chọn phương thức đăng nhập bằng Google . 
-2. Hệ thống điều hướng sang trang đăng nhập với Google
-3. Người dùng chọn account muốn đăng nhập
-4. Hệ thống xác thực
-5. Hệ thống tạo session/JWT và chuyển vào ứng dụng.
-6. Hệ thống chuyển sang trang chính.
-\end{tabular} \\ \midrule
-\textbf{Luồng rẽ nhánh} &
-\begin{tabular}[t]{@{}p{10.5cm}@{}}
-\textbf{A1: Tài khoản google đã tồn tại trong hệ thống}\\
-1. Người dùng đăng nhập thành công.\\
-\textbf{A2: Tài khoản google không tồn tại trong hệ thống}\\
-1. Tài khoản mới được tạo và lưu vào hệ thống.\\
-2. Người dùng đăng nhập thành công.\\
-\end{tabular} \\
-\bottomrule
-\end{longtable}
+% \begin{longtable}{|p{4cm}|p{11cm}|}
+% \caption{Mô tả Use Case: Đăng nhập bằng tài khoản Google}
+% \label{usecase-8-03} \\
+% \hline
+% \endfirsthead
+% \caption[]{Mô tả Use Case: Đăng nhập bằng tài khoản Google} \\
+% \hline
+% \endhead
+% \textbf{Use case ID}       & UC-M8-02 \\ \hline
+% \textbf{Tên Use case}      & Đăng nhập bằng tài khoản Google \\ \hline
+% \textbf{Các tác nhân}      & Guest \\ \hline
+% \textbf{Mô tả}             & Cho phép người dùng đăng nhập vào hệ thống qua tài khoản Google. \\ \hline
+% \textbf{Tiền điều kiện}    & Trình duyệt không bị chặn cookie cần thiết. \\ \hline
+% \textbf{Hậu điều kiện}     & Người dùng đăng nhập thành công vào hệ thống.\\ \hline
+% \textbf{Trigger}    & Người dùng bấm "Đăng nhập bằng Google". \\ \hline
+% \textbf{Luồng sự kiện chính} & 
+% \begin{tabular}[t]{@{}p{10.5cm}@{}}
+% 1. Chọn phương thức đăng nhập bằng Google . 
+% 2. Hệ thống điều hướng sang trang đăng nhập với Google
+% 3. Người dùng chọn account muốn đăng nhập
+% 4. Hệ thống xác thực
+% 5. Hệ thống tạo session/JWT và chuyển vào ứng dụng.
+% 6. Hệ thống chuyển sang trang chính.
+% \end{tabular} \\ \hline
+% \textbf{Luồng rẽ nhánh} &
+% \begin{tabular}[t]{@{}p{10.5cm}@{}}
+% \textbf{A1: Tài khoản google đã tồn tại trong hệ thống}\\
+% 1. Người dùng đăng nhập thành công.\\
+% \textbf{A2: Tài khoản google không tồn tại trong hệ thống}\\
+% 1. Tài khoản mới được tạo và lưu vào hệ thống.\\
+% 2. Người dùng đăng nhập thành công.\\
+% \end{tabular} \\
+% \hline
+% \end{longtable}
 
-\begin{longtable}{@{}p{4cm} p{11cm}@{}}
-\caption{Mô tả Use Case: Đăng nhập bằng username, password}
-\label{usecase-8-04} \\
-\toprule
-\textbf{Use case ID}       & UC-M8-03 \\ \midrule
-\textbf{Tên Use case}      & Đăng nhập bằng username, password \\ \midrule
-\textbf{Các tác nhân}      & Guest \\ \midrule
-\textbf{Mô tả}             & Cho phép người dùng đăng nhập vào hệ thống qua tài khoản username và password. \\ \midrule
-\textbf{Tiền điều kiện}    & Người dùng đã có tài khoản trong hệ thống. \\ \midrule
-\textbf{Hậu điều kiện}     & Người dùng đăng nhập thành công vào hệ thống.\\ \midrule
-\textbf{Trigger}    & Người dùng bấm "Đăng nhập bằng username, password". \\ \midrule
-\textbf{Luồng sự kiện chính} & 
-\begin{tabular}[t]{@{}p{10.5cm}@{}}
-1. Chọn phương thức đăng nhập bằng username, password . 
-2. Hệ thống hiển thị form đăng nhập
-3. Người dùng điền username và password
-4. Hệ thống xác thực tài khoản
-5. Hệ thống tạo session/JWT và chuyển vào ứng dụng.
-6. Hệ thống chuyển sang trang chính.
-\end{tabular} \\ \midrule
-\textbf{Luồng ngoại lệ} &
-\begin{tabular}[t]{@{}p{10.5cm}@{}}
-\textbf{E1: Lỗi từ người dùng}\\
-Báo lỗi "Tài khoản hoặc mật khẩu không đúng". \\
-\textbf{E2: Lỗi từ hệ thống}\\
-Báo lỗi "Lỗi hệ thống". 
-\end{tabular} \\
-\bottomrule
-\end{longtable}
+% \begin{longtable}{|p{4cm}|p{11cm}|}
+% \caption{Mô tả Use Case: Đăng nhập bằng username, password}
+% \label{usecase-8-04} \\
+% \hline
+% \endfirsthead
+% \caption[]{Mô tả Use Case: Đăng nhập bằng username, password} \\
+% \hline
+% \endhead
+% \textbf{Use case ID}       & UC-M8-03 \\ \hline
+% \textbf{Tên Use case}      & Đăng nhập bằng username, password \\ \hline
+% \textbf{Các tác nhân}      & Guest \\ \hline
+% \textbf{Mô tả}             & Cho phép người dùng đăng nhập vào hệ thống qua tài khoản username và password. \\ \hline
+% \textbf{Tiền điều kiện}    & Người dùng đã có tài khoản trong hệ thống. \\ \hline
+% \textbf{Hậu điều kiện}     & Người dùng đăng nhập thành công vào hệ thống.\\ \hline
+% \textbf{Trigger}    & Người dùng bấm "Đăng nhập bằng username, password". \\ \hline
+% \textbf{Luồng sự kiện chính} & 
+% \begin{tabular}[t]{@{}p{10.5cm}@{}}
+% 1. Chọn phương thức đăng nhập bằng username, password . 
+% 2. Hệ thống hiển thị form đăng nhập
+% 3. Người dùng điền username và password
+% 4. Hệ thống xác thực tài khoản
+% 5. Hệ thống tạo session/JWT và chuyển vào ứng dụng.
+% 6. Hệ thống chuyển sang trang chính.
+% \end{tabular} \\ \hline
+% \textbf{Luồng ngoại lệ} &
+% \begin{tabular}[t]{@{}p{10.5cm}@{}}
+% \textbf{E1: Lỗi từ người dùng}\\
+% Báo lỗi "Tài khoản hoặc mật khẩu không đúng". \\
+% \textbf{E2: Lỗi từ hệ thống}\\
+% Báo lỗi "Lỗi hệ thống". 
+% \end{tabular} \\
+% \hline
+% \end{longtable}
 
-\begin{longtable}{@{}p{4cm} p{11cm}@{}}
-\caption{Mô tả Use Case: Đăng xuất}
-\label{usecase-8-05} \\
-\toprule
-\textbf{Use case ID}       & UC-M8-05 \\ \midrule
-\textbf{Tên Use case}      & Đăng xuất \\ \midrule
-\textbf{Các tác nhân}      & Traveler, Provider, Admin \\ \midrule
-\textbf{Mô tả}             & Cho phép người dùng đăng xuất khỏi hệ thống. \\ \midrule
-\textbf{Tiền điều kiện}    & Người dùng đã đăng nhập vào hệ thống. \\ \midrule
-\textbf{Hậu điều kiện}     & Người dùng đăng xuất khỏi hệ thống thành công. \\ \midrule
-\textbf{Trigger}    & Người dùng bấm "Đăng xuất". \\ \midrule
-\textbf{Luồng sự kiện chính} & 
-\begin{tabular}[t]{@{}p{10.5cm}@{}}
-1. Người dùng bấm "Đăng xuất".
-2. Hệ thống hủy session, clear cookie.
-3. Điều hướng về trang chính.
-\end{tabular} \\
-\bottomrule
-\end{longtable}
+% \begin{longtable}{|p{4cm}|p{11cm}|}
+% \caption{Mô tả Use Case: Đăng xuất}
+% \label{usecase-8-05} \\
+% \hline
+% \endfirsthead
+% \caption[]{Mô tả Use Case: Đăng xuất} \\
+% \hline
+% \endhead
+% \textbf{Use case ID}       & UC-M8-05 \\ \hline
+% \textbf{Tên Use case}      & Đăng xuất \\ \hline
+% \textbf{Các tác nhân}      & Traveler, Provider, Admin \\ \hline
+% \textbf{Mô tả}             & Cho phép người dùng đăng xuất khỏi hệ thống. \\ \hline
+% \textbf{Tiền điều kiện}    & Người dùng đã đăng nhập vào hệ thống. \\ \hline
+% \textbf{Hậu điều kiện}     & Người dùng đăng xuất khỏi hệ thống thành công. \\ \hline
+% \textbf{Trigger}    & Người dùng bấm "Đăng xuất". \\ \hline
+% \textbf{Luồng sự kiện chính} & 
+% \begin{tabular}[t]{@{}p{10.5cm}@{}}
+% 1. Người dùng bấm "Đăng xuất".
+% 2. Hệ thống hủy session, clear cookie.
+% 3. Điều hướng về trang chính.
+% \end{tabular} \\
+% \hline
+% \end{longtable}
 
-\begin{longtable}{@{}p{4cm} p{11cm}@{}}
+\begin{longtable}{|p{4cm}|p{11cm}|}
 \caption{Mô tả Use Case: Xem chi tiết thông tin cá nhân}
 \label{usecase-8-11} \\
-\toprule
-\textbf{Use case ID}       & UC-M8-11 \\ \midrule
-\textbf{Tên Use case}      & Xem chi tiết thông tin cá nhân \\ \midrule
-\textbf{Các tác nhân}      & Traveler, Provider, Admin \\ \midrule
-\textbf{Mô tả}             & Xem thông tin hồ sơ cá nhân. \\ \midrule
-\textbf{Tiền điều kiện}    & Người dùng đã đăng nhập vào hệ thống. \\ \midrule
-\textbf{Hậu điều kiện}     & Hiển thị thông tin hồ sơ cá nhân. \\ \midrule
-\textbf{Trigger}    & Mở trang "Thông tin của tôi". \\ \midrule
+\hline
+\endfirsthead
+\caption[]{Mô tả Use Case: Xem chi tiết thông tin cá nhân} \\
+\hline
+\endhead
+\textbf{Use case ID}       & UC-M8-11 \\ \hline
+\textbf{Tên Use case}      & Xem chi tiết thông tin cá nhân \\ \hline
+\textbf{Các tác nhân}      & Traveler, Provider, Admin \\ \hline
+\textbf{Mô tả}             & Xem thông tin hồ sơ cá nhân. \\ \hline
+\textbf{Tiền điều kiện}    & Người dùng đã đăng nhập vào hệ thống. \\ \hline
+\textbf{Hậu điều kiện}     & Hiển thị thông tin hồ sơ cá nhân. \\ \hline
+\textbf{Trigger}    & Mở trang "Thông tin của tôi". \\ \hline
 \textbf{Luồng sự kiện chính} & 
 \begin{tabular}[t]{@{}p{10.5cm}@{}}
 1. Người dùng truy cập trang "Thông tin của tôi. 
 2. Hệ thống hiển thị thông tin của người dùng. \\
 \end{tabular} \\
-\bottomrule
+\hline
 \end{longtable}
 
-\begin{longtable}{@{}p{4cm} p{11cm}@{}}
+\begin{longtable}{|p{4cm}|p{11cm}|}
 \caption{Mô tả Use Case: Xem danh sách người dùng}
 \label{usecase-8-14} \\
-\toprule
-\textbf{Use case ID}       & UC-M8-14 \\ \midrule
-\textbf{Tên Use case}      & Xem danh sách người dùng \\ \midrule
-\textbf{Các tác nhân}      & Admin \\ \midrule
-\textbf{Mô tả}             & Xem danh sách toàn bộ người dùng.\\ \midrule
-\textbf{Tiền điều kiện}    & Admin đã đăng nhập vào hệ thống. \\ \midrule
-\textbf{Hậu điều kiện}     & Hiển thị danh sách toàn bộ người dùng. \\ \midrule
+\hline
+\endfirsthead
+\caption[]{Mô tả Use Case: Xem danh sách người dùng} \\
+\hline
+\endhead
+\textbf{Use case ID}       & UC-M8-14 \\ \hline
+\textbf{Tên Use case}      & Xem danh sách người dùng \\ \hline
+\textbf{Các tác nhân}      & Admin \\ \hline
+\textbf{Mô tả}             & Xem danh sách toàn bộ người dùng.\\ \hline
+\textbf{Tiền điều kiện}    & Admin đã đăng nhập vào hệ thống. \\ \hline
+\textbf{Hậu điều kiện}     & Hiển thị danh sách toàn bộ người dùng. \\ \hline
 \textbf{Luồng sự kiện chính} & 
 \begin{tabular}[t]{@{}p{10.5cm}@{}}
 1. Admin truy cập trang "Danh sách người dùng". \\
 2. Hệ thống hiển thị danh sách người dùng. \\
 3. Admin có thể chọn lọc theo vai trò, trạng thái, thời điểm tạo, sắp xếp.
 \end{tabular} \\
-\bottomrule
+\hline
 \end{longtable}
 
-\begin{longtable}{@{}p{4cm} p{11cm}@{}}
+\begin{longtable}{|p{4cm}|p{11cm}|}
 \caption{Mô tả Use Case: Xem danh sách tài khoản vi phạm}
 \label{usecase-8-07} \\
-\toprule
-\textbf{Use case ID}       & UC-M8-07 \\ \midrule
-\textbf{Tên Use case}      & Xem danh sách tài khoản vi phạm \\ \midrule
-\textbf{Các tác nhân}      & Admin \\ \midrule
-\textbf{Mô tả}             & Xem danh sách các tài khoản bị báo cáo vi phạm quy định.\\ \midrule
-\textbf{Tiền điều kiện}    & Admin đã đăng nhập vào hệ thống. \\ \midrule
-\textbf{Hậu điều kiện}     & Hiển thị danh sách tài khoản vi phạm \\ \midrule
+\hline
+\endfirsthead
+\caption[]{Mô tả Use Case: Xem danh sách tài khoản vi phạm} \\
+\hline
+\endhead
+\textbf{Use case ID}       & UC-M8-07 \\ \hline
+\textbf{Tên Use case}      & Xem danh sách tài khoản vi phạm \\ \hline
+\textbf{Các tác nhân}      & Admin \\ \hline
+\textbf{Mô tả}             & Xem danh sách các tài khoản bị báo cáo vi phạm quy định.\\ \hline
+\textbf{Tiền điều kiện}    & Admin đã đăng nhập vào hệ thống. \\ \hline
+\textbf{Hậu điều kiện}     & Hiển thị danh sách tài khoản vi phạm \\ \hline
 \textbf{Luồng sự kiện chính} & 
 \begin{tabular}[t]{@{}p{10.5cm}@{}}
 1. Admin truy cập trang "Tài khoản vi phạm". \\
@@ -164,26 +192,30 @@ Báo lỗi "Lỗi hệ thống".
 3. (Tùy chọn) Lọc theo mức độ, thời gian, loại vi phạm. \\
 4. Chọn một tài khoản để xem chi tiết hoặc thực hiện thao tác (khóa/mở tài khoản). \\
 \end{tabular} \\
-\bottomrule
+\hline
 \end{longtable}
 
-\begin{longtable}{@{}p{4cm} p{11cm}@{}}
+\begin{longtable}{|p{4cm}|p{11cm}|}
 \caption{Mô tả Use Case: Khóa/Mở tài khoản}
 \label{usecase-8-07} \\
-\toprule
-\textbf{Use case ID}       & UC-M8-07 \\ \midrule
-\textbf{Tên Use case}      & Khóa/Mở tài khoản \\ \midrule
-\textbf{Các tác nhân}      & Admin \\ \midrule
-\textbf{Mô tả}             & Khóa/Mở tài khoản.\\ \midrule
-\textbf{Tiền điều kiện}    & Xác định được tài khoản mục tiêu; trạng thái hiện tại cho phép thao tác (đang mở → khóa; đang khóa → mở).\\ \midrule
-\textbf{Hậu điều kiện}     & Trạng thái tài khoản được cập nhật (khóa/mở) thành công. Thông báo cho người dùng. \\ \midrule
+\hline
+\endfirsthead
+\caption[]{Mô tả Use Case: Khóa/Mở tài khoản} \\
+\hline
+\endhead
+\textbf{Use case ID}       & UC-M8-07 \\ \hline
+\textbf{Tên Use case}      & Khóa/Mở tài khoản \\ \hline
+\textbf{Các tác nhân}      & Admin \\ \hline
+\textbf{Mô tả}             & Khóa/Mở tài khoản.\\ \hline
+\textbf{Tiền điều kiện}    & Xác định được tài khoản mục tiêu; trạng thái hiện tại cho phép thao tác khóa/mở tài khoản.\\ \hline
+\textbf{Hậu điều kiện}     & Trạng thái tài khoản được cập nhật thành công. Thông báo cho người dùng. \\ \hline
 \textbf{Luồng sự kiện chính} & 
 \begin{tabular}[t]{@{}p{10.5cm}@{}}
-1. Admin chọn tài khoản và hành động khóa hoặc mở.\\
+1. Admin chọn tài khoản và hành động khóa/mở tài khoản.\\
 2. Nhập lý do.\\
 3. Xác nhận thao tác.\\
 4. Hệ thống cập nhật trạng thái.\\
 5. Thông báo cho người dùng.
 \end{tabular} \\
-\bottomrule
+\hline
 \end{longtable}

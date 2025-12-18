@@ -1,0 +1,834 @@
+Để đảm bảo chất lượng phần mềm và tối ưu hóa số lượng kịch bản kiểm thử, nhóm thực hiện đã áp dụng các kỹ thuật kiểm thử hộp đen (Black-box testing) sau:
+\begin{itemize}
+    \item Use-case testing: Dựa trên các kịch bản sử dụng thực tế để xây dựng các test case, đảm bảo các chức năng chính của hệ thống hoạt động đúng như mong đợi trong các tình huống thực tế.
+    \item Equivalence Partitioning - ECP: Giúp giảm số lượng test case cần thiết bằng cách chia dữ liệu đầu vào thành các lớp tương đương. Nếu một giá trị trong lớp hoạt động đúng, các giá trị khác trong cùng lớp cũng được giả định là đúng.
+    \item Boundary Value Analysis - BVA: Tập trung vào việc kiểm thử các giá trị ở ranh giới của các lớp tương đương, vì lỗi thường xảy ra ở các điểm này.
+\end{itemize}
+
+Dưới đây là bảng trích dẫn các test case điển hình cho Module 1 (Lập kế hoạch thông minh) và Module 2 (Quản lý và Chia sẻ lộ trình).
+
+% \begin{landscape} 
+
+% % Bảng cho Module 1
+% \begin{longtable}{|p{2.5cm}|p{4.0cm}|p{6.5cm}|p{4.5cm}|p{4.5cm}|}
+% \caption{Danh sách Test Case tiêu biểu - Module 1: Lập kế hoạch AI} \label{tab:tc_module1} \\
+% \hline
+% \textbf{ID} & \textbf{Tên Test Case} & \textbf{Các bước thực hiện} & \textbf{Dữ liệu kiểm thử} & \textbf{Kết quả mong đợi} \\
+% \hline
+% \endfirsthead
+% \multicolumn{5}{c}%
+% {{\bfseries \tablename\ \thetable{} -- tiếp theo từ trang trước}} \\
+% \hline
+% \textbf{ID} & \textbf{Tên Test Case} & \textbf{Các bước thực hiện} & \textbf{Dữ liệu kiểm thử} & \textbf{Kết quả mong đợi} \\
+% \hline
+% \endhead
+% \hline \multicolumn{5}{|r|}{{Tiếp tục ở trang sau}} \\ \hline
+% \endfoot
+% \hline
+% \endlastfoot
+
+% % --- LUỒNG CHÍNH (MAIN FLOW) ---
+% TC\_M1\_01 & Tạo lộ trình thành công (Full Option) & 
+% 1. Đăng nhập. \newline 
+% 2. Nhấn ``Tạo lộ trình mới''. \newline 
+% 3. Nhập đầy đủ các trường bắt buộc và tùy chọn (Ngân sách, Sở thích). \newline 
+% 4. Nhấn ``Lập kế hoạch''. & 
+% - Điểm đến: Đà Lạt \newline 
+% - Ngày: 01/12 - 03/12 \newline 
+% - Ngân sách: Trung bình \newline 
+% - Sở thích: Cà phê, Check-in & 
+% Hệ thống hiển thị bản lộ trình nháp (Timeline view) với các địa điểm phù hợp tiêu chí đã chọn. \\
+% \hline
+
+% TC\_M1\_08 & Đề xuất dịch vụ thành công & 
+% 1. Mở chi tiết lộ trình. \newline 
+% 2. Chọn địa điểm ``Địa đạo Củ Chi''. \newline 
+% 3. Nhấn ``Gợi ý dịch vụ/Tour''. & 
+% - Địa điểm: Củ Chi (Tags: Di tích, Xa trung tâm) & 
+% Hệ thống hiển thị danh sách Tour trọn gói hoặc vé tham quan tương ứng từ đối tác. \\
+% \hline
+
+% TC\_M1\_13 & Lưu lộ trình MỚI thành công & 
+% 1. Nhấn ``Lưu lộ trình'' (Lộ trình chưa từng lưu). \newline 
+% 2. Nhập tên chuyến đi hợp lệ. \newline 
+% 3. Nhấn Xác nhận. & 
+% - Tên: ``Hè Nha Trang 2025'' & 
+% Hệ thống thông báo ``Đã lưu thành công'' và dữ liệu được ghi vào CSDL. \\
+% \hline
+
+% TC\_M1\_14 & Lưu đè lộ trình CŨ thành công & 
+% 1. Mở lộ trình đã lưu. \newline 
+% 2. Chỉnh sửa nội dung. \newline 
+% 3. Nhấn ``Lưu lộ trình''. & 
+% N/A & 
+% Hệ thống lưu trực tiếp các thay đổi vào CSDL, không hiển thị popup nhập tên. \\
+% \hline
+
+% TC\_M1\_16 & Xóa lộ trình thành công & 
+% 1. Tại danh sách lộ trình, chọn 1 dòng. \newline 
+% 2. Nhấn icon Thùng rác. \newline 
+% 3. Popup hiện ra, nhấn ``Đồng ý''. & 
+% N/A & 
+% Lộ trình biến mất khỏi danh sách hiển thị và bị xóa khỏi CSDL. Thông báo thành công. \\
+% \hline
+
+% % --- LUỒNG THAY THẾ (ALTERNATIVE FLOW) ---
+% TC\_M1\_02 & Tạo lộ trình giá trị mặc định & 
+% 1. Nhấn ``Tạo lộ trình mới''. \newline 
+% 2. Chỉ nhập Điểm đến, Thời gian. \newline 
+% 3. Bỏ qua Ngân sách, Sở thích. \newline 
+% 4. Nhấn ``Lập kế hoạch''. & 
+% - Điểm đến: TP.HCM \newline 
+% - Ngày: 2 ngày & 
+% Hệ thống tự động áp dụng giá trị mặc định (Ngân sách TB, Sở thích phổ thông) và tạo lộ trình thành công. \\
+% \hline
+
+% TC\_M1\_03 & Tạo lộ trình bằng Nhân bản (Clone) & 
+% 1. Vào ``Lịch sử chuyến đi''. \newline 
+% 2. Chọn lộ trình cũ, nhấn ``Tạo chuyến đi từ lộ trình này''. \newline 
+% 3. Nhập Ngày khởi hành mới. \newline 
+% 4. Nhấn ``Xác nhận''. & 
+% - Ngày cũ: 01/01/2023 \newline 
+% - Ngày mới: 10/12/2025 & 
+% Hệ thống sao chép danh sách địa điểm. Ngày giờ các hoạt động được tính toán lại theo ngày khởi hành mới. \\
+% \hline
+
+% TC\_M1\_11 & Tối ưu hóa có sử dụng tính năng ``Khóa'' & 
+% 1. Chọn ``Tối ưu hóa bằng AI''. \newline 
+% 2. Chọn ``Khóa'' (Pin) địa điểm B. \newline 
+% 3. Chọn tùy chọn ``Tối ưu đường đi''. \newline 
+% 4. Nhấn Áp dụng. & 
+% - Địa điểm B: Quán ăn ngon (đã Pin) & 
+% Hệ thống trả về lộ trình mới: Địa điểm B vẫn giữ nguyên vị trí/khung giờ, các địa điểm khác được sắp xếp lại. \\
+% \hline
+
+% TC\_M1\_12 & Thay thế địa điểm (Smart Swap) & 
+% 1. Chọn địa điểm C (không thích). \newline 
+% 2. Nhấn ``Gợi ý thay thế''. \newline 
+% 3. Chọn địa điểm D từ danh sách gợi ý. & 
+% - Địa điểm C: Bảo tàng \newline 
+% - Địa điểm D: Triển lãm tranh & 
+% Địa điểm D thay thế vị trí của C trong lộ trình, thời gian và chi phí toàn chuyến được cập nhật lại. \\
+% \hline
+
+% TC\_M1\_17 & Hủy thao tác xóa lộ trình & 
+% 1. Tại danh sách lộ trình, chọn 1 dòng. \newline 
+% 2. Nhấn icon Thùng rác. \newline 
+% 3. Popup hiện ra, nhấn ``Hủy''. & 
+% N/A & 
+% Hộp thoại đóng lại, lộ trình vẫn còn nguyên trong danh sách. \\
+% \hline
+
+% TC\_M1\_06 & AI Check Thời tiết (Tích hợp API) & 
+% 1. Tạo lộ trình mới. \newline 
+% 2. Hệ thống tự động gọi API thời tiết cho các ngày đã chọn. & 
+% - Mock API Response: \{ ``forecast'': ``Heavy Rain'' \} & 
+% Hiển thị cảnh báo (Alert) trên timeline: ``Dự báo có mưa lớn, hãy chuẩn bị phương án trong nhà.'' \\
+% \hline
+
+% % --- TEST CASE BỔ SUNG (MỚI) ---
+% TC\_M1\_18 & Đổi tên lộ trình (Rename) & 
+% 1. Mở chi tiết lộ trình. \newline 
+% 2. Nhấn vào tiêu đề lộ trình. \newline 
+% 3. Nhập tên mới và nhấn Enter (hoặc click ra ngoài). & 
+% - Tên cũ: ``Hè Nha Trang'' \newline
+% - Tên mới: ``Summer Trip 2025'' & 
+% Tên lộ trình được cập nhật thành công trên giao diện và CSDL mà không cần tải lại trang. \\
+% \hline
+
+% TC\_M1\_19 & Xuất lộ trình ra file (Export) & 
+% 1. Mở chi tiết lộ trình. \newline 
+% 2. Nhấn nút ``Chia sẻ/Xuất''. \newline 
+% 3. Chọn định dạng PDF. & 
+% - Định dạng: PDF & 
+% Hệ thống tải xuống file PDF chứa thông tin chi tiết lịch trình, bản đồ và danh sách chi phí dự kiến. \\
+% \hline
+
+% % --- LUỒNG NGOẠI LỆ (EXCEPTION FLOW) ---
+% TC\_M1\_04 & Kiểm tra lỗi logic thời gian & 
+% 1. Tại form tạo lộ trình. \newline 
+% 2. Nhập Ngày bắt đầu $>$ Ngày kết thúc. \newline 
+% 3. Nhấn ``Lập kế hoạch''. & 
+% - Start: 05/12/2025 \newline 
+% - End: 01/12/2025 & 
+% Hệ thống hiển thị thông báo lỗi đỏ ngay tại trường nhập liệu: ``Ngày kết thúc không thể trước ngày bắt đầu''. \\
+% \hline
+
+% TC\_M1\_20 & Kiểm tra dữ liệu bắt buộc (Trống) & 
+% 1. Nhấn ``Tạo lộ trình mới''. \newline 
+% 2. Bỏ trống trường ``Điểm đến''. \newline 
+% 3. Nhấn ``Lập kế hoạch''. & 
+% - Điểm đến: [Trống] \newline
+% - Ngày: Hợp lệ & 
+% Nút ``Lập kế hoạch'' bị vô hiệu hóa (disabled) hoặc hiển thị thông báo lỗi ``Vui lòng nhập điểm đến''. \\
+% \hline
+
+% TC\_M1\_05 & AI không tìm thấy lộ trình & 
+% 1. Nhập tiêu chí mâu thuẫn (Ngân sách thấp cho nơi sang trọng). \newline 
+% 2. Nhấn ``Lập kế hoạch''. & 
+% - Ngân sách: 50k VND \newline 
+% - Điểm đến: Resort 5 sao & 
+% Hệ thống thông báo: ``Không thể tạo lộ trình phù hợp. Vui lòng nới lỏng yêu cầu về ngân sách hoặc địa điểm''. \\
+% \hline
+
+% TC\_M1\_07 & API Thời tiết lỗi/Mất mạng & 
+% 1. Tạo lộ trình mới. \newline 
+% 2. Giả lập mất kết nối Internet hoặc API thời tiết chết. & 
+% - Kết nối: Timeout & 
+% Lộ trình vẫn được tạo thành công nhưng không có thẻ cảnh báo thời tiết. Hệ thống không được crash. \\
+% \hline
+
+% TC\_M1\_09 & Đề xuất dịch vụ (Không dữ liệu) & 
+% 1. Chọn một địa điểm chưa có đối tác liên kết. \newline 
+% 2. Nhấn ``Gợi ý dịch vụ''. & 
+% - Địa điểm: Công viên ghế đá tự phát & 
+% Hệ thống thông báo (Toast/Popup): ``Hiện chưa có dịch vụ liên kết cho địa điểm này''. \\
+% \hline
+
+% TC\_M1\_10 & Cảnh báo xung đột giờ mở cửa & 
+% 1. Kéo địa điểm A sang khung giờ 18:00. \newline 
+% 2. Địa điểm A đóng cửa lúc 17:00. & 
+% - Địa điểm A: Bảo tàng (Mở 8:00 - 17:00) & 
+% Hệ thống hiển thị cờ cảnh báo đỏ (Warning flag): ``Địa điểm này đóng cửa lúc 17:00'' nhưng vẫn cho phép lưu nếu người dùng muốn. \\
+% \hline
+
+% TC\_M1\_15 & Lỗi trùng tên khi lưu mới & 
+% 1. Nhấn ``Lưu lộ trình''. \newline 
+% 2. Nhập tên đã tồn tại trong danh sách của tôi. \newline 
+% 3. Nhấn Xác nhận. & 
+% - Tên: ``Hè Nha Trang 2025'' (đã có) & 
+% Hệ thống báo lỗi: ``Tên lộ trình đã tồn tại, vui lòng chọn tên khác'' và không cho phép lưu. \\
+% \hline
+% % \begin{longtable}{|p{2.0cm}|p{3.5cm}|p{6.0cm}|p{4.5cm}|p{4.5cm}|}
+% % \caption{Danh sách Test Case chi tiết - Module 1: Lập kế hoạch AI} \label{tab:tc_module1} \\
+% % \hline
+% % \textbf{ID} & \textbf{Tên Test Case} & \textbf{Các bước thực hiện} & \textbf{Dữ liệu kiểm thử} & \textbf{Kết quả mong đợi} \\
+% % \hline
+% % \endfirsthead
+% % \multicolumn{5}{c}%
+% % {{\bfseries \tablename\ \thetable{} -- tiếp theo từ trang trước}} \\
+% % \hline
+% % \textbf{ID} & \textbf{Tên Test Case} & \textbf{Các bước thực hiện} & \textbf{Dữ liệu kiểm thử} & \textbf{Kết quả mong đợi} \\
+% % \hline
+% % \endhead
+% % \hline \multicolumn{5}{|r|}{{Tiếp tục ở trang sau}} \\ \hline
+% % \endfoot
+% % \hline
+% % \endlastfoot
+
+% % % --- LUỒNG CHÍNH (MAIN FLOW) ---
+% % TC\_M1\_01 & Tạo lộ trình thành công (Full Option) & 
+% % 1. Đăng nhập. \newline 
+% % 2. Nhấn ``Tạo lộ trình mới''. \newline 
+% % 3. Nhập đầy đủ các trường bắt buộc và tùy chọn (Ngân sách, Sở thích). \newline 
+% % 4. Nhấn ``Lập kế hoạch''. & 
+% % - Điểm đến: Đà Lạt \newline 
+% % - Ngày: 01/12 - 03/12 \newline 
+% % - Ngân sách: Trung bình \newline 
+% % - Sở thích: Cà phê, Check-in & 
+% % Hệ thống hiển thị bản lộ trình nháp (Timeline view) với các địa điểm phù hợp tiêu chí đã chọn. \\
+% % \hline
+
+% % TC\_M1\_08 & Đề xuất dịch vụ thành công & 
+% % 1. Mở chi tiết lộ trình. \newline 
+% % 2. Chọn địa điểm ``Địa đạo Củ Chi''. \newline 
+% % 3. Nhấn ``Gợi ý dịch vụ/Tour''. & 
+% % - Địa điểm: Củ Chi (Tags: Di tích, Xa trung tâm) & 
+% % Hệ thống hiển thị danh sách Tour trọn gói hoặc vé tham quan tương ứng từ đối tác. \\
+% % \hline
+
+% % TC\_M1\_13 & Lưu lộ trình MỚI thành công & 
+% % 1. Nhấn ``Lưu lộ trình'' (Lộ trình chưa từng lưu). \newline 
+% % 2. Nhập tên chuyến đi hợp lệ. \newline 
+% % 3. Nhấn Xác nhận. & 
+% % - Tên: ``Hè Nha Trang 2025'' & 
+% % Hệ thống thông báo ``Đã lưu thành công'' và dữ liệu được ghi vào CSDL. \\
+% % \hline
+
+% % TC\_M1\_14 & Lưu đè lộ trình CŨ thành công & 
+% % 1. Mở lộ trình đã lưu. \newline 
+% % 2. Chỉnh sửa nội dung. \newline 
+% % 3. Nhấn ``Lưu lộ trình''. & 
+% % N/A & 
+% % Hệ thống lưu trực tiếp các thay đổi vào CSDL, không hiển thị popup nhập tên. \\
+% % \hline
+
+% % TC\_M1\_16 & Xóa lộ trình thành công & 
+% % 1. Tại danh sách lộ trình, chọn 1 dòng. \newline 
+% % 2. Nhấn icon Thùng rác. \newline 
+% % 3. Popup hiện ra, nhấn ``Đồng ý''. & 
+% % N/A & 
+% % Lộ trình biến mất khỏi danh sách hiển thị và bị xóa khỏi CSDL. Thông báo thành công. \\
+% % \hline
+
+% % % --- LUỒNG THAY THẾ (ALTERNATIVE FLOW) ---
+% % TC\_M1\_02 & Tạo lộ trình giá trị mặc định & 
+% % 1. Nhấn ``Tạo lộ trình mới''. \newline 
+% % 2. Chỉ nhập Điểm đến, Thời gian. \newline 
+% % 3. Bỏ qua Ngân sách, Sở thích. \newline 
+% % 4. Nhấn ``Lập kế hoạch''. & 
+% % - Điểm đến: TP.HCM \newline 
+% % - Ngày: 2 ngày & 
+% % Hệ thống tự động áp dụng giá trị mặc định (Ngân sách TB, Sở thích phổ thông) và tạo lộ trình thành công. \\
+% % \hline
+
+% % TC\_M1\_03 & Tạo lộ trình bằng Nhân bản (Clone) & 
+% % 1. Vào ``Lịch sử chuyến đi''. \newline 
+% % 2. Chọn lộ trình cũ, nhấn ``Tạo chuyến đi từ lộ trình này''. \newline 
+% % 3. Nhập Ngày khởi hành mới. \newline 
+% % 4. Nhấn ``Xác nhận''. & 
+% % - Ngày cũ: 01/01/2023 \newline 
+% % - Ngày mới: 10/12/2025 & 
+% % Hệ thống sao chép danh sách địa điểm. Ngày giờ các hoạt động được tính toán lại theo ngày khởi hành mới. \\
+% % \hline
+
+% % TC\_M1\_11 & Tối ưu hóa có sử dụng tính năng ``Khóa'' & 
+% % 1. Chọn ``Tối ưu hóa bằng AI''. \newline 
+% % 2. Chọn ``Khóa'' (Pin) địa điểm B. \newline 
+% % 3. Chọn tùy chọn ``Tối ưu đường đi''. \newline 
+% % 4. Nhấn Áp dụng. & 
+% % - Địa điểm B: Quán ăn ngon (đã Pin) & 
+% % Hệ thống trả về lộ trình mới: Địa điểm B vẫn giữ nguyên vị trí/khung giờ, các địa điểm khác được sắp xếp lại. \\
+% % \hline
+
+% % TC\_M1\_12 & Thay thế địa điểm (Smart Swap) & 
+% % 1. Chọn địa điểm C (không thích). \newline 
+% % 2. Nhấn ``Gợi ý thay thế''. \newline 
+% % 3. Chọn địa điểm D từ danh sách gợi ý. & 
+% % - Địa điểm C: Bảo tàng \newline 
+% % - Địa điểm D: Triển lãm tranh & 
+% % Địa điểm D thay thế vị trí của C trong lộ trình, thời gian và chi phí toàn chuyến được cập nhật lại. \\
+% % \hline
+
+% % TC\_M1\_17 & Hủy thao tác xóa lộ trình & 
+% % 1. Tại danh sách lộ trình, chọn 1 dòng. \newline 
+% % 2. Nhấn icon Thùng rác. \newline 
+% % 3. Popup hiện ra, nhấn ``Hủy''. & 
+% % N/A & 
+% % Hộp thoại đóng lại, lộ trình vẫn còn nguyên trong danh sách. \\
+% % \hline
+
+% % TC\_M1\_06 & AI Check Thời tiết (Tích hợp API) & 
+% % 1. Tạo lộ trình mới. \newline 
+% % 2. Hệ thống tự động gọi API thời tiết cho các ngày đã chọn. & 
+% % - Mock API Response: \{ ``forecast'': ``Heavy Rain'' \} & 
+% % Hiển thị cảnh báo (Alert) trên timeline: ``Dự báo có mưa lớn, hãy chuẩn bị phương án trong nhà.'' \\
+% % \hline
+
+% % % --- TEST CASE BỔ SUNG (MỚI) ---
+% % TC\_M1\_18 & Đổi tên lộ trình (Rename) & 
+% % 1. Mở chi tiết lộ trình. \newline 
+% % 2. Nhấn vào tiêu đề lộ trình. \newline 
+% % 3. Nhập tên mới và nhấn Enter (hoặc click ra ngoài). & 
+% % - Tên cũ: ``Hè Nha Trang'' \newline
+% % - Tên mới: ``Summer Trip 2025'' & 
+% % Tên lộ trình được cập nhật thành công trên giao diện và CSDL mà không cần tải lại trang. \\
+% % \hline
+
+% % TC\_M1\_19 & Xuất lộ trình ra file (Export) & 
+% % 1. Mở chi tiết lộ trình. \newline 
+% % 2. Nhấn nút ``Chia sẻ/Xuất''. \newline 
+% % 3. Chọn định dạng PDF. & 
+% % - Định dạng: PDF & 
+% % Hệ thống tải xuống file PDF chứa thông tin chi tiết lịch trình, bản đồ và danh sách chi phí dự kiến. \\
+% % \hline
+
+% % % --- LUỒNG NGOẠI LỆ (EXCEPTION FLOW) ---
+% % TC\_M1\_04 & Kiểm tra lỗi logic thời gian & 
+% % 1. Tại form tạo lộ trình. \newline 
+% % 2. Nhập Ngày bắt đầu $>$ Ngày kết thúc. \newline 
+% % 3. Nhấn ``Lập kế hoạch''. & 
+% % - Start: 05/12/2025 \newline 
+% % - End: 01/12/2025 & 
+% % Hệ thống hiển thị thông báo lỗi đỏ ngay tại trường nhập liệu: ``Ngày kết thúc không thể trước ngày bắt đầu''. \\
+% % \hline
+
+% % TC\_M1\_20 & Kiểm tra dữ liệu bắt buộc (Trống) & 
+% % 1. Nhấn ``Tạo lộ trình mới''. \newline 
+% % 2. Bỏ trống trường ``Điểm đến''. \newline 
+% % 3. Nhấn ``Lập kế hoạch''. & 
+% % - Điểm đến: [Trống] \newline
+% % - Ngày: Hợp lệ & 
+% % Nút ``Lập kế hoạch'' bị vô hiệu hóa (disabled) hoặc hiển thị thông báo lỗi ``Vui lòng nhập điểm đến''. \\
+% % \hline
+
+% % TC\_M1\_05 & AI không tìm thấy lộ trình & 
+% % 1. Nhập tiêu chí mâu thuẫn (Ngân sách thấp cho nơi sang trọng). \newline 
+% % 2. Nhấn ``Lập kế hoạch''. & 
+% % - Ngân sách: 50k VND \newline 
+% % - Điểm đến: Resort 5 sao & 
+% % Hệ thống thông báo: ``Không thể tạo lộ trình phù hợp. Vui lòng nới lỏng yêu cầu về ngân sách hoặc địa điểm''. \\
+% % \hline
+
+% % TC\_M1\_07 & API Thời tiết lỗi/Mất mạng & 
+% % 1. Tạo lộ trình mới. \newline 
+% % 2. Giả lập mất kết nối Internet hoặc API thời tiết chết. & 
+% % - Kết nối: Timeout & 
+% % Lộ trình vẫn được tạo thành công nhưng không có thẻ cảnh báo thời tiết. Hệ thống không được crash. \\
+% % \hline
+
+% % TC\_M1\_09 & Đề xuất dịch vụ (Không dữ liệu) & 
+% % 1. Chọn một địa điểm chưa có đối tác liên kết. \newline 
+% % 2. Nhấn ``Gợi ý dịch vụ''. & 
+% % - Địa điểm: Công viên ghế đá tự phát & 
+% % Hệ thống thông báo (Toast/Popup): ``Hiện chưa có dịch vụ liên kết cho địa điểm này''. \\
+% % \hline
+
+% % TC\_M1\_10 & Cảnh báo xung đột giờ mở cửa & 
+% % 1. Kéo địa điểm A sang khung giờ 18:00. \newline 
+% % 2. Địa điểm A đóng cửa lúc 17:00. & 
+% % - Địa điểm A: Bảo tàng (Mở 8:00 - 17:00) & 
+% % Hệ thống hiển thị cờ cảnh báo đỏ (Warning flag): ``Địa điểm này đóng cửa lúc 17:00'' nhưng vẫn cho phép lưu nếu người dùng muốn. \\
+% % \hline
+
+% % TC\_M1\_15 & Lỗi trùng tên khi lưu mới & 
+% % 1. Nhấn ``Lưu lộ trình''. \newline 
+% % 2. Nhập tên đã tồn tại trong danh sách của tôi. \newline 
+% % 3. Nhấn Xác nhận. & 
+% % - Tên: ``Hè Nha Trang 2025'' (đã có) & 
+% % Hệ thống báo lỗi: ``Tên lộ trình đã tồn tại, vui lòng chọn tên khác'' và không cho phép lưu. \\
+% % \hline
+% % \end{longtable}
+
+% \vspace{0.5cm} % Khoảng cách giữa 2 bảng
+
+% \begin{longtable}{|p{2.5cm}|p{4.0cm}|p{6.5cm}|p{4.5cm}|p{4.5cm}|}
+% \caption{Danh sách Test Case tiêu biểu - Module 2: Quản lý và Chia sẻ} \label{tab:tc_mod2} \\
+% \hline
+% \textbf{ID} & \textbf{Tên Test Case} & \textbf{Các bước thực hiện} & \textbf{Dữ liệu kiểm thử} & \textbf{Kết quả mong đợi} \\
+% \hline
+% \endfirsthead
+% \multicolumn{5}{c}%
+% {{\bfseries \tablename\ \thetable{} -- tiếp theo từ trang trước}} \\
+% \hline
+% \textbf{ID} & \textbf{Tên Test Case} & \textbf{Các bước thực hiện} & \textbf{Dữ liệu kiểm thử} & \textbf{Kết quả mong đợi} \\
+% \hline
+% \endhead
+% \hline \multicolumn{5}{|r|}{{Tiếp tục ở trang sau}} \\ \hline
+% \endfoot
+% \hline
+% \endlastfoot
+
+% % NỘI DUNG MODULE 2
+% TC\_M2\_01 & Chia sẻ lộ trình thành công & 
+% 1. Mở lộ trình (Role: Owner). \newline 
+% 2. Nhấn nút ``Chia sẻ''. \newline 
+% 3. Nhập email người nhận. \newline 
+% 4. Nhấn ``Gửi lời mời''. & 
+% - Email: friend@travelez.com (User đã tồn tại). & 
+% Hệ thống thông báo thành công. Lộ trình xuất hiện trong danh sách ``Được chia sẻ'' của người nhận. \\
+% \hline
+
+% TC\_M2\_04 & Cảnh báo hủy chuyến đang đi & 
+% 1. Mở lộ trình đang diễn ra. \newline 
+% 2. Nhấn nút ``Hủy chuyến đi''. \newline 
+% 3. Quan sát phản hồi. & 
+% - Ngày đi: Hôm qua \newline 
+% - Ngày về: Ngày mai (Trạng thái: Ongoing) & 
+% Hệ thống hiển thị cảnh báo đặc biệt: ``Chuyến đi đang diễn ra. Bạn có chắc muốn kết thúc sớm?'' trước khi thực hiện hủy. \\
+% \hline
+
+% TC\_M2\_05 & Đồng bộ Google Calendar & 
+% 1. Đăng nhập bằng Google. \newline 
+% 2. Nhấn ``Đồng bộ Lịch''. \newline 
+% 3. Cấp quyền (Allow) trên popup. & 
+% - Login: Google OAuth \newline 
+% - Data: Lộ trình đầy đủ ngày giờ. & 
+% Hệ thống gọi API Google thành công. Các sự kiện du lịch hiển thị chính xác trên Google Calendar của user. \\
+
+% \end{longtable}
+% \vspace{0.5cm} % Khoảng cách giữa 2 bảng
+
+% % Bảng cho Module 3
+% \begin{longtable}{|p{2.5cm}|p{4.0cm}|p{6.5cm}|p{4.5cm}|p{4.5cm}|}
+% \caption{Danh sách Test Case tiêu biểu - Module 3: Tìm kiếm} \label{tab:tc_module3} \\
+% \hline
+% \textbf{ID} & \textbf{Tên Test Case} & \textbf{Các bước thực hiện} & \textbf{Dữ liệu kiểm thử} & \textbf{Kết quả mong đợi} \\
+% \hline
+% \endfirsthead
+% \multicolumn{5}{c}%
+% {{\bfseries \tablename\ \thetable{} -- tiếp theo từ trang trước}} \\
+% \hline
+% \textbf{ID} & \textbf{Tên Test Case} & \textbf{Các bước thực hiện} & \textbf{Dữ liệu kiểm thử} & \textbf{Kết quả mong đợi} \\
+% \hline
+% \endhead
+% \hline \multicolumn{5}{|r|}{{Tiếp tục ở trang sau}} \\ \hline
+% \endfoot
+% \hline
+% \endlastfoot
+
+% % Dữ liệu Module 3
+% TC\_M3\_02 & Tìm kiếm gần đúng (Partial Match) & 
+% 1. Nhập một phần tên hoặc từ khóa liên quan. \newline 
+% 2. Nhấn Search. & 
+% - Keyword: ``Bà Nà'' \newline 
+% - DB: Có ``Bà Nà Hills'', ``Bà Nà By Night''. & 
+% Danh sách kết quả trả về bao gồm cả ``Bà Nà Hills'' và các địa điểm có chứa chữ ``Bà Nà''. \\
+% \hline
+
+% TC\_M3\_04 & Tìm kiếm với ký tự đặc biệt (Security) & 
+% 1. Nhập các ký tự đặc biệt hoặc script. \newline 
+% 2. Nhấn Search. & 
+% - Keyword: \texttt{<script>alert(1)</script>} hoặc \texttt{' OR 1=1 --} & 
+% Hệ thống xử lý an toàn (Sanitize input), coi đó là văn bản thường. Không thực thi mã lệnh. \\
+% \hline
+
+% TC\_M3\_06 & Lọc theo Mức giá (Boundary Value) & 
+% 1. Chọn bộ lọc giá. \newline 
+% 2. Kéo thanh trượt hoặc nhập khoảng giá: 100k - 500k. & 
+% - DB: Item A (50k), Item B (100k), Item C (400k), D (500k), E (600k). & 
+% Kết quả hiển thị: Item B, C, D. \newline 
+% Loại bỏ: Item A (dưới biên) và Item E (trên biên). \\
+% \hline
+% \end{longtable}
+% \vspace{0.5cm} % Khoảng cách giữa 2 bảng
+
+% \begin{longtable}{|p{2.5cm}|p{4.0cm}|p{6.5cm}|p{4.5cm}|p{4.5cm}|}
+% \caption{Danh sách Test Case tiêu biểu - Module 4: Cộng đồng} \label{tab:tc_mod4} \\
+% \toprule
+% \textbf{ID} & \textbf{Tên Test Case} & \textbf{Các bước thực hiện} & \textbf{Dữ liệu kiểm thử} & \textbf{Kết quả mong đợi} \\
+% \midrule
+% \endfirsthead
+
+% \multicolumn{5}{c}{{\itshape \tablename\ \thetable{} -- tiếp theo từ trang trước}} \\
+% \toprule
+% \textbf{ID} & \textbf{Tên Test Case} & \textbf{Các bước thực hiện} & \textbf{Dữ liệu kiểm thử} & \textbf{Kết quả mong đợi} \\
+% \midrule
+% \endhead
+
+% \midrule \multicolumn{5}{r}{{\itshape Tiếp tục ở trang sau...}} \\
+% \endfoot
+
+% \bottomrule
+% \endlastfoot
+
+% % NỘI DUNG MODULE 4
+% TC\_M4\_01 & Viết Review thành công & 
+% 1. Nhấn ``Viết Review''. \newline 
+% 2. Chọn số sao và nhập nội dung. \newline 
+% 3. Nhấn ``Đăng''. & 
+% - Rating: 5 sao \newline 
+% - Content: ``Tuyệt vời!'' & 
+% Thông báo ``Đánh giá thành công''. Review hiển thị ngay lập tức lên đầu danh sách đánh giá. \\
+% \hline
+
+% TC\_M4\_17 & Tạo Group Chat & 
+% 1. Chọn chức năng ``Tạo nhóm''. \newline 
+% 2. Chọn 2 người bạn. \newline 
+% 3. Nhập tên nhóm và tạo. & 
+% - Members: User B, User C \newline 
+% - Name: ``Team đi Đà Lạt'' & 
+% Nhóm chat mới được tạo với 3 thành viên (A, B, C). Cửa sổ chat hiển thị đúng tên nhóm. \\
+% \hline
+
+% TC\_M4\_19 & Báo cáo bài viết (Spam) & 
+% 1. Chọn menu ``...'' tại bài viết. \newline 
+% 2. Chọn ``Báo cáo''. \newline 
+% 3. Chọn lý do ``Spam'' $\rightarrow$ Gửi. & 
+% - Lý do: Spam quảng cáo & 
+% Thông báo ``Đã gửi báo cáo''. Nội dung bị ẩn ngay lập tức khỏi màn hình người dùng để đảm bảo trải nghiệm. \\
+
+% \end{longtable}
+
+% \end{landscape}
+\begin{landscape}
+% Thiết lập font nhỏ hơn 1 chút để bảng gọn
+\small 
+\begin{longtable}{|p{2.5cm}|p{4.0cm}|p{6.5cm}|p{4.5cm}|p{4.5cm}|}
+
+% --- PHẦN 1: TIÊU ĐỀ CHO TRANG ĐẦU TIÊN ---
+\caption{Danh sách Test Case chi tiết - Module 1: Lập kế hoạch AI} \label{tab:tc_module1} \\
+\hline
+\textbf{ID} & \textbf{Tên Test Case} & \textbf{Các bước thực hiện} & \textbf{Dữ liệu kiểm thử} & \textbf{Kết quả mong đợi} \\
+\hline
+\endfirsthead
+
+% --- PHẦN 2: TIÊU ĐỀ CHO CÁC TRANG TIẾP THEO ---
+\multicolumn{5}{c}{{\bfseries \tablename\ thetable{}: Danh sách Test Case chi tiết - Module 1: Lập kế hoạch AI}} \\
+\hline
+\textbf{ID} & \textbf{Tên Test Case} & \textbf{Các bước thực hiện} & \textbf{Dữ liệu kiểm thử} & \textbf{Kết quả mong đợi} \\
+\hline
+\endhead
+
+\hline
+\endlastfoot
+
+% ================= NỘI DUNG BẢNG =================
+
+% --- LUỒNG CHÍNH ---
+TC\_M1\_01 & Tạo lộ trình thành công (Full Option) & 
+1. Đăng nhập. \newline 
+2. Nhấn ``Tạo lộ trình mới''. \newline 
+3. Nhập đầy đủ các trường bắt buộc và tùy chọn (Ngân sách, Sở thích). \newline 
+4. Nhấn ``Lập kế hoạch''. & 
+- Điểm đến: Đà Lạt \newline 
+- Ngày: 01/12 - 03/12 \newline 
+- Ngân sách: Trung bình \newline 
+- Sở thích: Cà phê, Check-in & 
+Hệ thống hiển thị bản lộ trình nháp (Timeline view) với các địa điểm phù hợp tiêu chí đã chọn. \\
+\hline
+
+TC\_M1\_08 & Đề xuất dịch vụ thành công & 
+1. Mở chi tiết lộ trình. \newline 
+2. Chọn địa điểm ``Địa đạo Củ Chi''. \newline 
+3. Nhấn ``Gợi ý dịch vụ/Tour''. & 
+- Địa điểm: Củ Chi (Tags: Di tích, Xa trung tâm) & 
+Hệ thống hiển thị danh sách Tour trọn gói hoặc vé tham quan tương ứng từ đối tác. \\
+\hline
+
+TC\_M1\_13 & Lưu lộ trình MỚI thành công & 
+1. Nhấn ``Lưu lộ trình'' (Lộ trình chưa từng lưu). \newline 
+2. Nhập tên chuyến đi hợp lệ. \newline 
+3. Nhấn Xác nhận. & 
+- Tên: ``Hè Nha Trang 2025'' & 
+Hệ thống thông báo ``Đã lưu thành công'' và dữ liệu được ghi vào CSDL. \\
+\hline
+
+TC\_M1\_14 & Lưu đè lộ trình CŨ thành công & 
+1. Mở lộ trình đã lưu. \newline 
+2. Chỉnh sửa nội dung. \newline 
+3. Nhấn ``Lưu lộ trình''. & 
+N/A & 
+Hệ thống lưu trực tiếp các thay đổi vào CSDL, không hiển thị popup nhập tên. \\
+\hline
+
+TC\_M1\_16 & Xóa lộ trình thành công & 
+1. Tại danh sách lộ trình, chọn 1 dòng. \newline 
+2. Nhấn icon Thùng rác. \newline 
+3. Popup hiện ra, nhấn ``Đồng ý''. & 
+N/A & 
+Lộ trình biến mất khỏi danh sách hiển thị và bị xóa khỏi CSDL. Thông báo thành công. \\
+\hline
+
+% --- LUỒNG THAY THẾ ---
+TC\_M1\_02 & Tạo lộ trình giá trị mặc định & 
+1. Nhấn ``Tạo lộ trình mới''. \newline 
+2. Chỉ nhập Điểm đến, Thời gian. \newline 
+3. Bỏ qua Ngân sách, Sở thích. \newline 
+4. Nhấn ``Lập kế hoạch''. & 
+- Điểm đến: TP.HCM \newline 
+- Ngày: 2 ngày & 
+Hệ thống tự động áp dụng giá trị mặc định (Ngân sách TB, Sở thích phổ thông) và tạo lộ trình thành công. \\
+\hline
+
+TC\_M1\_03 & Tạo lộ trình bằng Nhân bản (Clone) & 
+1. Vào ``Lịch sử chuyến đi''. \newline 
+2. Chọn lộ trình cũ, nhấn ``Tạo chuyến đi từ lộ trình này''. \newline 
+3. Nhập Ngày khởi hành mới. \newline 
+4. Nhấn ``Xác nhận''. & 
+- Ngày cũ: 01/01/2023 \newline 
+- Ngày mới: 10/12/2025 & 
+Hệ thống sao chép danh sách địa điểm. Ngày giờ các hoạt động được tính toán lại theo ngày khởi hành mới. \\
+\hline
+
+TC\_M1\_11 & Tối ưu hóa có sử dụng tính năng ``Khóa'' & 
+1. Chọn ``Tối ưu hóa bằng AI''. \newline 
+2. Chọn ``Khóa'' (Pin) địa điểm B. \newline 
+3. Chọn tùy chọn ``Tối ưu đường đi''. \newline 
+4. Nhấn Áp dụng. & 
+- Địa điểm B: Quán ăn ngon (đã Pin) & 
+Hệ thống trả về lộ trình mới: Địa điểm B vẫn giữ nguyên vị trí/khung giờ, các địa điểm khác được sắp xếp lại. \\
+\hline
+
+TC\_M1\_12 & Thay thế địa điểm (Smart Swap) & 
+1. Chọn địa điểm C (không thích). \newline 
+2. Nhấn ``Gợi ý thay thế''. \newline 
+3. Chọn địa điểm D từ danh sách gợi ý. & 
+- Địa điểm C: Bảo tàng \newline 
+- Địa điểm D: Triển lãm tranh & 
+Địa điểm D thay thế vị trí của C trong lộ trình, thời gian và chi phí toàn chuyến được cập nhật lại. \\
+\hline
+
+TC\_M1\_17 & Hủy thao tác xóa lộ trình & 
+1. Tại danh sách lộ trình, chọn 1 dòng. \newline 
+2. Nhấn icon Thùng rác. \newline 
+3. Popup hiện ra, nhấn ``Hủy''. & 
+N/A & 
+Hộp thoại đóng lại, lộ trình vẫn còn nguyên trong danh sách. \\
+\hline
+
+TC\_M1\_06 & AI Check Thời tiết (Tích hợp API) & 
+1. Tạo lộ trình mới. \newline 
+2. Hệ thống tự động gọi API thời tiết cho các ngày đã chọn. & 
+- Mock API Response: \{ ``forecast'': ``Heavy Rain'' \} & 
+Hiển thị cảnh báo (Alert) trên timeline: ``Dự báo có mưa lớn, hãy chuẩn bị phương án trong nhà.'' \\
+\hline
+
+% --- TEST CASE BỔ SUNG ---
+TC\_M1\_18 & Đổi tên lộ trình (Rename) & 
+1. Mở chi tiết lộ trình. \newline 
+2. Nhấn vào tiêu đề lộ trình. \newline 
+3. Nhập tên mới và nhấn Enter (hoặc click ra ngoài). & 
+- Tên cũ: ``Hè Nha Trang'' \newline
+- Tên mới: ``Summer Trip 2025'' & 
+Tên lộ trình được cập nhật thành công trên giao diện và CSDL mà không cần tải lại trang. \\
+\hline
+
+TC\_M1\_19 & Xuất lộ trình ra file (Export) & 
+1. Mở chi tiết lộ trình. \newline 
+2. Nhấn nút ``Chia sẻ/Xuất''. \newline 
+3. Chọn định dạng PDF. & 
+- Định dạng: PDF & 
+Hệ thống tải xuống file PDF chứa thông tin chi tiết lịch trình, bản đồ và danh sách chi phí dự kiến. \\
+\hline
+
+% --- LUỒNG NGOẠI LỆ ---
+TC\_M1\_04 & Kiểm tra lỗi logic thời gian & 
+1. Tại form tạo lộ trình. \newline 
+2. Nhập Ngày bắt đầu $>$ Ngày kết thúc. \newline 
+3. Nhấn ``Lập kế hoạch''. & 
+- Start: 05/12/2025 \newline 
+- End: 01/12/2025 & 
+Hệ thống hiển thị thông báo lỗi đỏ ngay tại trường nhập liệu: ``Ngày kết thúc không thể trước ngày bắt đầu''. \\
+\hline
+
+TC\_M1\_20 & Kiểm tra dữ liệu bắt buộc (Trống) & 
+1. Nhấn ``Tạo lộ trình mới''. \newline 
+2. Bỏ trống trường ``Điểm đến''. \newline 
+3. Nhấn ``Lập kế hoạch''. & 
+- Điểm đến: [Trống] \newline
+- Ngày: Hợp lệ & 
+Nút ``Lập kế hoạch'' bị vô hiệu hóa (disabled) hoặc hiển thị thông báo lỗi ``Vui lòng nhập điểm đến''. \\
+\hline
+
+TC\_M1\_05 & AI không tìm thấy lộ trình & 
+1. Nhập tiêu chí mâu thuẫn (Ngân sách thấp cho nơi sang trọng). \newline 
+2. Nhấn ``Lập kế hoạch''. & 
+- Ngân sách: 50k VND \newline 
+- Điểm đến: Resort 5 sao & 
+Hệ thống thông báo: ``Không thể tạo lộ trình phù hợp. Vui lòng nới lỏng yêu cầu về ngân sách hoặc địa điểm''. \\
+\hline
+
+TC\_M1\_07 & API Thời tiết lỗi/Mất mạng & 
+1. Tạo lộ trình mới. \newline 
+2. Giả lập mất kết nối Internet hoặc API thời tiết chết. & 
+- Kết nối: Timeout & 
+Lộ trình vẫn được tạo thành công nhưng không có thẻ cảnh báo thời tiết. Hệ thống không được crash. \\
+\hline
+
+TC\_M1\_09 & Đề xuất dịch vụ (Không dữ liệu) & 
+1. Chọn một địa điểm chưa có đối tác liên kết. \newline 
+2. Nhấn ``Gợi ý dịch vụ''. & 
+- Địa điểm: Công viên ghế đá tự phát & 
+Hệ thống thông báo (Toast/Popup): ``Hiện chưa có dịch vụ liên kết cho địa điểm này''. \\
+\hline
+
+TC\_M1\_10 & Cảnh báo xung đột giờ mở cửa & 
+1. Kéo địa điểm A sang khung giờ 18:00. \newline 
+2. Địa điểm A đóng cửa lúc 17:00. & 
+- Địa điểm A: Bảo tàng (Mở 8:00 - 17:00) & 
+Hệ thống hiển thị cờ cảnh báo đỏ (Warning flag): ``Địa điểm này đóng cửa lúc 17:00'' nhưng vẫn cho phép lưu nếu người dùng muốn. \\
+\hline
+
+TC\_M1\_15 & Lỗi trùng tên khi lưu mới & 
+1. Nhấn ``Lưu lộ trình''. \newline 
+2. Nhập tên đã tồn tại trong danh sách của tôi. \newline 
+3. Nhấn Xác nhận. & 
+- Tên: ``Hè Nha Trang 2025'' (đã có) & 
+Hệ thống báo lỗi: ``Tên lộ trình đã tồn tại, vui lòng chọn tên khác'' và không cho phép lưu. \\
+\hline
+
+\end{longtable}
+
+\begin{longtable}{|p{2.5cm}|p{4.0cm}|p{6.5cm}|p{4.5cm}|p{4.5cm}|}
+
+% --- PHẦN 1: TIÊU ĐỀ TRANG ĐẦU ---
+\caption{Danh sách Test Case chi tiết - Module 2: Quản lý Lộ trình cá nhân} \label{tab:tc_module2} \\
+\hline
+\textbf{ID} & \textbf{Tên Test Case} & \textbf{Các bước thực hiện} & \textbf{Dữ liệu kiểm thử} & \textbf{Kết quả mong đợi} \\
+\hline
+\endfirsthead
+
+% --- PHẦN 2: TIÊU ĐỀ CÁC TRANG SAU ---
+\multicolumn{5}{c}{{\bfseries \tablename\ \thetable{}: Danh sách Test Case - Module 2 Quản lý Lộ trình cá nhân}} \\
+\hline
+\textbf{ID} & \textbf{Tên Test Case} & \textbf{Các bước thực hiện} & \textbf{Dữ liệu kiểm thử} & \textbf{Kết quả mong đợi} \\
+\hline
+\endhead
+
+% --- PHẦN 3: KẾT THÚC BẢNG ---
+\hline
+\endlastfoot
+
+% ================= NỘI DUNG TEST CASE MODULE 2 =================
+
+% --- LUỒNG CHÍNH (MAIN FLOW) ---
+TC\_M2\_01 & Xem danh sách lộ trình (My Trips) & 
+1. Đăng nhập hệ thống. \newline 
+2. Truy cập menu ``Chuyến đi của tôi''. & 
+- Tài khoản: User đã có 5 lộ trình đã lưu. & 
+Hiển thị danh sách các lộ trình dưới dạng thẻ (Card) bao gồm: Ảnh bìa, Tên chuyến, Thời gian, Trạng thái (Sắp đi/Đã qua). \\
+\hline
+
+TC\_M2\_02 & Xem chi tiết một lộ trình & 
+1. Tại màn hình danh sách. \newline 
+2. Nhấn vào thẻ lộ trình ``Đà Lạt 2025''. & 
+- Lộ trình: Đà Lạt (Public) & 
+Chuyển hướng đến trang chi tiết lộ trình với đầy đủ timeline, bản đồ và tổng chi phí dự kiến. \\
+\hline
+
+TC\_M2\_03 & Tìm kiếm lộ trình thành công & 
+1. Nhập từ khóa vào ô tìm kiếm. \newline 
+2. Nhấn Enter. & 
+- Keyword: ``Hà Nội'' \newline
+- Data: Có 2 lộ trình khớp tên. & 
+Danh sách lọc lại, chỉ hiển thị 2 lộ trình có tên chứa từ khóa ``Hà Nội''. \\
+\hline
+
+% --- LUỒNG THAY THẾ (ALTERNATIVE FLOW) ---
+TC\_M2\_04 & Lọc lộ trình theo trạng thái & 
+1. Nhấn vào bộ lọc (Filter). \newline 
+2. Chọn trạng thái ``Đã kết thúc''. & 
+- Trạng thái: Past Trips & 
+Chỉ hiển thị các chuyến đi có ngày kết thúc nhỏ hơn ngày hiện tại. \\
+\hline
+
+TC\_M2\_05 & Xóa nhiều lộ trình cùng lúc (Bulk Delete) & 
+1. Nhấn nút ``Chọn nhiều''. \newline 
+2. Tích chọn 3 lộ trình. \newline 
+3. Nhấn icon Thùng rác $\to$ Xác nhận. & 
+- Số lượng: 3 items & 
+3 lộ trình đã chọn biến mất khỏi danh sách. Hệ thống thông báo ``Đã xóa 3 mục thành công''. \\
+\hline
+
+TC\_M2\_06 & Chia sẻ lộ trình cho bạn bè & 
+1. Tại thẻ lộ trình, nhấn icon ``Chia sẻ''. \newline 
+2. Nhập email người nhận. \newline 
+3. Nhấn ``Gửi lời mời''. & 
+- Email: friend@gmail.com \newline
+- Quyền: Xem (View only) & 
+Hệ thống gửi email mời tham gia/xem lộ trình đến địa chỉ đích. Thông báo ``Đã gửi lời mời''. \\
+\hline
+
+TC\_M2\_07 & Nhân bản lộ trình (Duplicate) & 
+1. Nhấn menu ``Khác'' (3 chấm) trên thẻ lộ trình. \newline 
+2. Chọn ``Nhân bản''. & 
+- Lộ trình gốc: ``Quy Nhơn'' & 
+Tạo ra một bản sao mới có tên ``Copy of Quy Nhơn'' nằm trên cùng danh sách. \\
+\hline
+
+% --- LUỒNG NGOẠI LỆ (EXCEPTION FLOW) ---
+TC\_M2\_08 & Tìm kiếm không có kết quả & 
+1. Nhập từ khóa không tồn tại. \newline 
+2. Nhấn Enter. & 
+- Keyword: ``@\#\$\%'' & 
+Hiển thị thông báo/hình ảnh minh họa: ``Không tìm thấy lộ trình nào phù hợp với từ khóa của bạn''. \\
+\hline
+
+TC\_M2\_09 & Xóa lộ trình khi mất kết nối mạng & 
+1. Chọn xóa lộ trình. \newline 
+2. Ngắt kết nối Internet ngay lúc nhấn xác nhận. & 
+- Mạng: Disconnected & 
+Hệ thống hiển thị lỗi: ``Kết nối không ổn định, vui lòng thử lại sau''. Lộ trình chưa bị xóa. \\
+\hline
+
+TC\_M2\_10 & Danh sách lộ trình trống (User mới) & 
+1. Đăng nhập bằng tài khoản mới tạo. \newline 
+2. Vào ``Chuyến đi của tôi''. & 
+- User: New account & 
+Hiển thị màn hình chào mừng (Empty State) với nút kêu gọi hành động: ``Bạn chưa có chuyến đi nào? Tạo ngay!''. \\
+\hline
+
+\end{longtable}
+
+\end{landscape}

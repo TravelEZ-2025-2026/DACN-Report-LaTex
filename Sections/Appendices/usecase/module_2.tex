@@ -1,0 +1,40 @@
+\subsubsection{Module 2: Quản lý lộ trình}
+
+\begin{longtable}{|p{4cm}|p{11cm}|}
+\caption{Mô tả Use Case: Tích hợp Lộ trình với Google Calendar}
+\label{usecase-2-06} \\
+\hline
+\endfirsthead
+\caption[]{Mô tả Use Case: Tích hợp Lộ trình với Google Calendar} \\
+\hline
+\endhead
+\textbf{Use case ID}       & UC-M2-06 \\ \hline
+\textbf{Tên Use case}      & Tích hợp Lộ trình với Google Calendar \\ \hline
+\textbf{Các tác nhân}      & Traveler (Primary), Google Calendar (Secondary) \\ \hline
+\textbf{Mô tả}             & Xuất các hoạt động trong lộ trình thành các Sự kiện trên Google Calendar. Tính năng này chỉ khả dụng cho người dùng đăng nhập hệ thống bằng tài khoản Google. \\ \hline
+\textbf{Tiền điều kiện}    & 
+\begin{tabular}[t]{@{}p{10.5cm}@{}}
+1. Lộ trình đã được thiết lập thời gian cụ thể (Ngày/Giờ) cho các địa điểm.\\
+2. Người dùng hiện tại đã đăng nhập vào TravelEZ thông qua phương thức Google OAuth.
+\end{tabular} \\ \hline
+\textbf{Hậu điều kiện}     & Các sự kiện xuất hiện trên ứng dụng Lịch của Google. \\ \hline
+\textbf{Luồng sự kiện chính} &
+\begin{tabular}[t]{@{}p{10.5cm}@{}}
+1. Tại màn hình chi tiết lộ trình, Owner nhấn nút "Đồng bộ Lịch".\\
+2. Hệ thống kiểm tra phương thức đăng nhập của phiên làm việc hiện tại.\\
+3. (Nếu là tài khoản Google) Hệ thống kiểm tra quyền truy cập Lịch:\\
+- Nếu chưa có quyền: Hiển thị hộp thoại của Google yêu cầu cấp quyền ghi vào Lịch.\\
+- Nếu đã có quyền: Bỏ qua bước 4.\\
+4. Owner nhấn "Cho phép" \space (Allow) trên hộp thoại của Google.\\
+5. Hệ thống trích xuất dữ liệu lộ trình và gửi yêu cầu API tạo sự kiện tới Google Calendar.\\
+6. Hệ thống nhận phản hồi thành công và hiển thị thông báo: "Đã đồng bộ thành công sang Google Calendar."    
+\end{tabular} \\ \hline
+\textbf{Luồng ngoại lệ} &
+\begin{tabular}[t]{@{}p{10.5cm}@{}}
+\textbf{E1: Tài khoản không phải Google:}\\
+Tại bước 2, hệ thống phát hiện người dùng đăng nhập bằng Email thường hoặc Facebook. Hệ thống hiển thị thông báo lỗi: "Tính năng này chỉ hỗ trợ cho tài khoản đăng nhập bằng Google. Vui lòng liên kết tài khoản hoặc đăng nhập lại bằng Google."\\
+\textbf{E2: Người dùng từ chối cấp quyền:}\\
+Tại bước 4, Owner nhấn "Từ chối". Hệ thống hủy thao tác và thông báo: "Đồng bộ thất bại do bạn chưa cấp quyền truy cập Lịch."
+\end{tabular} \\
+\hline
+\end{longtable}

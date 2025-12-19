@@ -1,0 +1,57 @@
+\subsubsection{Module 7: Gợi ý cải thiện lịch trình}
+
+\begin{longtable}{|p{4cm}|p{11cm}|}
+\caption{Mô tả Use Case: Xem chi tiết nội dung yêu cầu}
+\label{usecase-7-04} \\
+\hline
+\endfirsthead
+\caption[]{Mô tả Use Case: Xem chi tiết nội dung yêu cầu} \\
+\hline
+\endhead
+\textbf{Use case ID}       & UC-M7-04 \\ \hline
+\textbf{Tên Use case}      & Xem chi tiết nội dung yêu cầu \\ \hline
+\textbf{Các tác nhân}      & Provider \\ \hline
+\textbf{Mô tả}             & Xem lại toàn bộ nội dung input và output của một yêu cầu trong quá khứ.\\ \hline
+\textbf{Tiền điều kiện}    & Provider đang ở màn hình lịch sử yêu cầu (UC-M7-03).\\ \hline
+\textbf{Hậu điều kiện}     & Nội dung chi tiết được hiển thị. \\ \hline
+\textbf{Luồng sự kiện chính} & 
+\begin{tabular}[t]{@{}p{10.5cm}@{}}
+1. Từ danh sách lịch sử, Provider nhấn vào một dòng yêu cầu cụ thể.\\
+2. Hệ thống tải dữ liệu chi tiết của phiên tư vấn đó.\\
+3. Hệ thống hiển thị giao diện chia đôi hoặc trên dưới:\\
+- Yêu cầu gốc: Lộ trình và mục tiêu Provider đã nhập.\\
+- Kết quả AI: Các gợi ý đã được tạo ra lúc đó.\\
+4. Provider có thể tham khảo lại hoặc sao chép nội dung gợi ý.
+\end{tabular} \\
+\hline
+\end{longtable}
+
+\begin{longtable}{|p{4cm}|p{11cm}|}
+\caption{Mô tả Use Case: Xóa yêu cầu}
+\label{usecase-7-05} \\
+\hline
+\endfirsthead
+\caption[]{Mô tả Use Case: Xóa yêu cầu} \\
+\hline
+\endhead
+\textbf{Use case ID}       & UC-M7-04 \\ \hline
+\textbf{Tên Use case}      & Xóa yêu cầu \\ \hline
+\textbf{Các tác nhân}      & Provider \\ \hline
+\textbf{Mô tả}             & Xóa bỏ một bản ghi lịch sử tư vấn không còn cần thiết.\\ \hline
+\textbf{Tiền điều kiện}    & Provider đang ở màn hình lịch sử yêu cầu (UC-M7-03).\\ \hline
+\textbf{Hậu điều kiện}     & Bản ghi bị xóa khỏi CSDL. \\ \hline
+\textbf{Luồng sự kiện chính} & 
+\begin{tabular}[t]{@{}p{10.5cm}@{}}
+1. Tại dòng yêu cầu muốn xóa, Provider nhấn nút "Xóa".\\
+2. Hệ thống hiển thị popup xác nhận: "Bạn có chắc chắn muốn xóa lịch sử tư vấn này không?".\\
+3. Provider nhấn "Xác nhận xóa".\\
+4. Hệ thống thực hiện xóa bản ghi trong CSDL.\\
+5. Hệ thống tải lại danh sách lịch sử mới và thông báo "Đã xóa thành công".
+\end{tabular} \\ \hline
+\textbf{Luồng rẽ nhánh} &
+\begin{tabular}[t]{@{}p{10.5cm}@{}}
+\textbf{A1: Hủy xóa:}\\
+Tại bước 3, Provider nhấn "Hủy" $\rightarrow$ Popup đóng lại, không có gì thay đổi.
+\end{tabular} \\
+\hline
+\end{longtable}

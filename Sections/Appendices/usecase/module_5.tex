@@ -1,0 +1,112 @@
+\subsubsection{Module 5: Quản lý nội dung}
+
+\begin{longtable}{|p{4cm}|p{11cm}|}
+\caption{Mô tả Use Case: Xem chi tiết nội dung bị báo cáo}
+\label{usecase-5-02} \\
+\hline
+\endfirsthead
+\caption[]{Mô tả Use Case: Xem chi tiết nội dung bị báo cáo} \\
+\hline
+\endhead
+\textbf{Use case ID}       & UC-M5-02 \\ \hline
+\textbf{Tên Use case}      & Xem chi tiết nội dung bị báo cáo \\ \hline
+\textbf{Các tác nhân}      & Admin \\ \hline
+\textbf{Mô tả}             & Hiển thị toàn bộ ngữ cảnh của nội dung bị user báo cáo để Admin đánh giá tính chính xác của báo cáo. \\ \hline
+\textbf{Tiền điều kiện}    & Admin đang xem danh sách báo cáo (UC-M5-01). \\ \hline
+\textbf{Hậu điều kiện}     & Báo cáo được giải quyết.\\ \hline
+\textbf{Luồng sự kiện chính} & 
+\begin{tabular}[t]{@{}p{10.5cm}@{}}
+1. Hệ thống tải dữ liệu chi tiết của báo cáo được chọn từ UC-M5-01.\\
+2. Hệ thống hiển thị giao diện chi tiết gồm 3 phần:\\
+- Nội dung gốc đầy đủ.\\
+- Thông tin báo cáo.\\
+3. Admin đánh giá nội dung dựa trên quy định cộng đồng.\\
+4. Hệ thống cung cấp 2 nhóm hành động:\\
+- Nhóm 1: "Không vi phạm / Bỏ qua".\\
+- Nhóm 2: "Xử lý vi phạm".\\
+5. [Điểm mở rộng] Nếu Admin chọn nhóm "Xử lý vi phạm", hệ thống kích hoạt UC-M5-03.\\
+6. Sau khi UC-M5-03 hoàn tất, hệ thống quay lại danh sách báo cáo (UC-M5-01).
+\end{tabular} \\ \hline
+\textbf{Luồng rẽ nhánh}    & 
+\begin{tabular}[t]{@{}p{10.5cm}@{}}
+\textbf{A1: Quyết định bỏ qua}\\
+1. Tại bước 4, Admin nhận thấy báo cáo sai, chọn nút "Bỏ qua".\\
+2. Hệ thống cập nhật trạng thái báo cáo thành "Đã từ chối".\\
+3. Hệ thống quay về danh sách.
+\end{tabular} \\
+\hline
+\end{longtable}
+
+\begin{longtable}{|p{4cm}|p{11cm}|}
+\caption{Mô tả Use Case: Ghi lại lịch sử vi phạm}
+\label{usecase-5-04} \\
+\hline
+\endfirsthead
+\caption[]{Mô tả Use Case: Ghi lại lịch sử vi phạm} \\
+\hline
+\endhead
+\textbf{Use case ID}       & UC-M5-04 \\ \hline
+\textbf{Tên Use case}      & Ghi lại lịch sử vi phạm \\ \hline
+\textbf{Các tác nhân}      & Không có Primary Actor - Included Use Case \\ \hline
+\textbf{Mô tả}             & Sub-use case bắt buộc, được \texttt{<<include>>} bởi các Use Case xử lý nội dung vi phạm. Tự động tạo bản ghi vi phạm liên kết với người dùng để Module 8 sử dụng. \\ \hline
+\textbf{Tiền điều kiện}    & 
+\begin{tabular}[t]{@{}p{10.5cm}@{}}
+1. Use Case cha đã được kích hoạt và xác nhận.\\
+2. Hệ thống đã xác định được ID người dùng vi phạm.    
+\end{tabular} \\ \hline
+\textbf{Hậu điều kiện}     & 
+\begin{tabular}[t]{@{}p{10.5cm}@{}}
+1. (Thành công): Bản ghi \texttt{VIOLATION\_RECORDS} mới được tạo trong CSDL.\\
+2. (Thất bại): Lỗi được ghi nhận, Use Case cha bị dừng và thông báo lỗi.
+\end{tabular} \\ \hline
+\textbf{Luồng sự kiện chính} & 
+\begin{tabular}[t]{@{}p{10.5cm}@{}}
+1. Use Case được gọi bởi Use Case cha.\\
+2. Hệ thống thu thập thông tin: \texttt{user\_id}, \texttt{content\_id}, \texttt{reason}, \texttt{admin\_id}.\\
+3. Hệ thống tạo bản ghi mới trong bảng \texttt{VIOLATION\_RECORDS}.\\
+4. Use Case kết thúc thành công, trả quyền kiểm soát về Use Case cha.    
+\end{tabular} \\ \hline
+\textbf{Luồng ngoại lệ} &
+\begin{tabular}[t]{@{}p{10.5cm}@{}}
+\textbf{E1: Không tìm thấy User ID}\\
+1a. Tại bước 2, hệ thống không xác định được user\_id.\\
+1b. Use Case thất bại. Use Case cha bị dừng và hiển thị lỗi: "Không thể xử lý vi phạm, không tìm thấy tác giả."\\
+\textbf{E2: Lỗi hệ thống}\\
+2a. Tại bước 3, hệ thống gặp lỗi khi tạo bản ghi.\\
+2b. Use Case thất bại. Use Case cha bị dừng và hiển thị lỗi: "Ghi nhận lịch sử vi phạm thất bại. Đã xảy ra lỗi hệ thống."
+\end{tabular} \\ 
+\hline
+\end{longtable}
+
+\begin{longtable}{|p{4cm}|p{11cm}|}
+\caption{Mô tả Use Case: Xem chi tiết nội dung bị gắn cờ}
+\label{usecase-5-06} \\
+\hline
+\endfirsthead
+\caption[]{Mô tả Use Case: Xem chi tiết nội dung bị gắn cờ} \\
+\hline
+\endhead
+\textbf{Use case ID}       & UC-M5-06 \\ \hline
+\textbf{Tên Use case}      & Xem chi tiết nội dung bị gắn cờ \\ \hline
+\textbf{Các tác nhân}      & Admin\\ \hline
+\textbf{Mô tả}             & Hiển thị nội dung bị hệ thống tự động nghi ngờ vi phạm. Hệ thống cần làm nổi bật từ khóa hoặc yếu tố gây vi phạm. \\ \hline
+\textbf{Tiền điều kiện}    & Admin đang xem danh sách gắn cờ tự động (UC-M5-05). \\ \hline
+\textbf{Hậu điều kiện}     & Nội dung được duyệt hoặc chuyển sang xử lý phạt. \\ \hline
+\textbf{Luồng sự kiện chính} & 
+\begin{tabular}[t]{@{}p{10.5cm}@{}}
+1. Admin chọn một nội dung từ danh sách gắn cờ.\\
+2. Hệ thống hiển thị chi tiết:\\
+- Nội dung gốc với từ khóa vi phạm được làm nổi bật.\\
+- Lý do hệ thống gắn cờ.\\
+3. Admin đánh giá.\\
+4. Hệ thống hiển thị tùy chọn: "Không vi phạm" \space hoặc "Xác nhận vi phạm".    
+\end{tabular} \\ \hline
+\textbf{Luồng rẽ nhánh} &
+\begin{tabular}[t]{@{}p{10.5cm}@{}}
+\textbf{A1: Xác nhận vi phạm}\\
+1. Admin nhấn "Xử lý" \space $\rightarrow$ Kích hoạt UC-M5-03.\\
+\textbf{A2: Không vi phạm}\\
+1. Admin nhấn "Cho phép hiển thị" \space $\rightarrow$ Hệ thống gỡ cờ, nội dung được public, xóa khỏi hàng đợi.
+\end{tabular} \\
+\hline
+\end{longtable}

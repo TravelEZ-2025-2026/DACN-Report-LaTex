@@ -1,0 +1,85 @@
+\subsubsection{Module 4: Xây dựng cộng đồng và nội dung}
+
+\begin{longtable}{|p{4cm}|p{11cm}|}
+\caption{Mô tả Use Case: Tạo Group Chat}
+\label{usecase-4-10} \\
+\hline
+\endfirsthead
+\caption[]{Mô tả Use Case: Tạo Group Chat} \\
+\hline
+\endhead
+\textbf{Use case ID}       & UC-M4-10 \\ \hline
+\textbf{Tên Use case}      & Tạo Group Chat \\ \hline
+\textbf{Các tác nhân}      & Traveler \\ \hline
+\textbf{Mô tả}             & Cho phép Traveler tạo một nhóm chat mới bằng cách chọn các thành viên từ danh sách bạn bè của mình. \\ \hline
+\textbf{Tiền điều kiện}    & 
+\begin{tabular}[t]{@{}p{10.5cm}@{}}
+1. Traveler đã đăng nhập.\\
+2. Traveler có ít nhất một người bạn.
+\end{tabular} \\ \hline
+\textbf{Hậu điều kiện}     & 
+\begin{tabular}[t]{@{}p{10.5cm}@{}}
+(Thành công): Group chat được tạo, các thành viên hợp lệ được thêm vào nhóm.\\
+(Thất bại): Group chat không được tạo.
+\end{tabular} \\ \hline
+\textbf{Luồng sự kiện chính} & 
+\begin{tabular}[t]{@{}p{10.5cm}@{}}
+1. Traveler A chọn chức năng "Tạo Group Chat".\\
+2. Hệ thống hiển thị danh sách bạn bè của Traveler A.\\
+3. Traveler A chọn một hoặc nhiều bạn bè từ danh sách này để thêm vào nhóm.\\
+4. Traveler A đặt tên cho nhóm.\\
+5. Traveler A nhấn "Tạo nhóm".\\
+6. Hệ thống tạo Group Chat mới với các thành viên đã chọn.\\
+7. Hệ thống hiển thị thông báo "Tạo nhóm thành công" \space và mở giao diện chat nhóm.
+\end{tabular} \\ \hline
+\textbf{Luồng ngoại lệ} &
+\begin{tabular}[t]{@{}p{10.5cm}@{}}
+\textbf{E1: Không chọn thành viên}\\
+Tại bước 5, Traveler nhấn "Tạo nhóm" \space nhưng chưa chọn bất kỳ người bạn nào.\\
+Hệ thống hiển thị thông báo "Vui lòng chọn ít nhất hai thành viên cho nhóm."\\
+\textbf{E2: Lỗi hệ thống}\\
+Tại bước 6, hệ thống không thể tạo nhóm do lỗi hệ thống.\\
+Hệ thống hiển thị thông báo "Đã xảy ra lỗi, không thể tạo nhóm. Vui lòng thử lại sau."
+\end{tabular} \\ 
+\hline
+\end{longtable}
+
+\begin{longtable}{|p{4cm}|p{11cm}|}
+\caption{Mô tả Use Case: Gửi tin nhắn Group}
+\label{usecase-4-11-2} \\
+\hline
+\endfirsthead
+\caption[]{Mô tả Use Case: Gửi tin nhắn Group} \\
+\hline
+\endhead
+\textbf{Use case ID}       & UC-M4-11.2 \\ \hline
+\textbf{Tên Use case}      & Gửi tin nhắn Group \\ \hline
+\textbf{Các tác nhân}      & Traveler \\ \hline
+\textbf{Mô tả}             & Cho phép Traveler gửi tin nhắn vào một Group Chat mà họ là thành viên \\ \hline
+\textbf{Tiền điều kiện}    & 
+\begin{tabular}[t]{@{}p{10.5cm}@{}}
+1. Traveler đã đăng nhập.\\
+2. Traveler là thành viên của Group Chat.
+\end{tabular} \\ \hline
+\textbf{Hậu điều kiện}     & 
+\begin{tabular}[t]{@{}p{10.5cm}@{}}
+1. Tin nhắn được gửi thành công và lưu vào CSDL.\\
+2. Tất cả thành viên khác trong nhóm nhận được tin nhắn.
+\end{tabular} \\ \hline
+\textbf{Luồng sự kiện chính} & 
+\begin{tabular}[t]{@{}p{10.5cm}@{}}
+1. Traveler A mở danh sách nhóm chat và chọn nhóm.\\
+2. Hệ thống kiểm tra tiền điều kiện 2 (xác nhận Traveler A vẫn là thành viên).\\
+3. Hệ thống mở giao diện chat nhóm.\\
+4. Traveler A nhập nội dung tin nhắn và nhấn "Gửi".\\
+5. Hệ thống lưu tin nhắn vào CSDL.\\
+6. Hệ thống đẩy tin nhắn đến tất cả thành viên khác của nhóm.
+\end{tabular} \\ \hline
+\textbf{Luồng ngoại lệ} &
+\begin{tabular}[t]{@{}p{10.5cm}@{}}
+\textbf{E1: Bị xóa khỏi nhóm}\\
+Tại bước 2, hệ thống phát hiện Traveler A không còn là thành viên của nhóm.\\
+Hệ thống hiển thị thông báo "Bạn không còn là thành viên của nhóm này."
+\end{tabular} \\ 
+\hline
+\end{longtable}

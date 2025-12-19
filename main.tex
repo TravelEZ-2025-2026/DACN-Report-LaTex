@@ -13,8 +13,13 @@
 \usepackage[a4paper,margin=2.5cm]{geometry}
 \usepackage{amssymb,epsfig,latexsym,array,hhline,fancyhdr}
 \usepackage{csquotes}
+\DeclareQuoteAlias{american}{vietnamese}
 \usepackage[style=ieee, citestyle=numeric, backend=biber, sorting=none]{biblatex}
 \addbibresource{newrefs.bib}
+\DeclareFieldFormat{urldate}{%
+  truy cập lần cuối: %
+  \ifnum\thefield{urlday}<10 0\fi\thefield{urlday}/\ifnum\thefield{urlmonth}<10 0\fi\thefield{urlmonth}/\thefield{urlyear}%
+}
 % \usepackage{apacite}
 \usepackage[toc,page]{appendix}
 \usepackage{pifont,amssymb}
@@ -83,7 +88,7 @@
 % \usepackage[backend=biber,style=authoryear]{biblatex}
 \usepackage{rotating}
 \usepackage{graphics}
-\usepackage{geometry}
+% \usepackage{geometry}
 \usepackage{setspace}
 \usepackage{epsfig}
 \usepackage{tikz}

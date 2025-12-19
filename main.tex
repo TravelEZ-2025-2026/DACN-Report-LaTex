@@ -16,6 +16,7 @@
 \DeclareQuoteAlias{american}{vietnamese}
 \usepackage[style=ieee, citestyle=numeric, backend=biber, sorting=none]{biblatex}
 \addbibresource{newrefs.bib}
+\DeclareFieldFormat{url}{Available: \url{#1}}
 \DeclareFieldFormat{urldate}{%
   truy cập lần cuối: %
   \ifnum\thefield{urlday}<10 0\fi\thefield{urlday}/\ifnum\thefield{urlmonth}<10 0\fi\thefield{urlmonth}/\thefield{urlyear}%
@@ -425,11 +426,11 @@ Du lịch là một lĩnh vực quan trọng trong việc quảng bá đất nư
 
 \newpage
 % \section*{References}
-\addcontentsline{toc}{section}{References}
+% \addcontentsline{toc}{section}{References}
 % \bibliographystyle{apa}
 % \bibliography{refs.bib} % Entries are in the refs.bib file
 \nocite{*}
-\printbibliography
+\printbibliography[heading=bibintoc, title={Tài liệu tham khảo}]
 
 \newpage
 % \addcontentsline{toc}{section}{Appendix}

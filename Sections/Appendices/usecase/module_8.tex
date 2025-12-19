@@ -1,0 +1,128 @@
+\subsubsection{Module 8: Quản trị người dùng}
+
+\begin{longtable}{|p{4cm}|p{11cm}|}
+\caption{Mô tả Use Case: Đăng ký tài khoản}
+\label{usecase-8-01} \\
+\hline
+\endfirsthead
+\caption[]{Mô tả Use Case: Đăng ký tài khoản} \\
+\hline
+\endhead
+\textbf{Use case ID}       & UC-M8-01 \\ \hline
+\textbf{Tên Use case}      & Đăng ký tài khoản \\ \hline
+\textbf{Các tác nhân}      & Guest \\ \hline
+\textbf{Mô tả}             & Tạo tài khoản mới cho người dùng.\\ \hline
+\textbf{Tiền điều kiện}    & Người dùng chưa đăng nhập\\ \hline
+\textbf{Hậu điều kiện}     & Tài khoản mới được thêm vào hệ thống \\ \hline
+\textbf{Trigger}    & Người dùng bấm "Đăng ký". \\ \hline
+\textbf{Luồng sự kiện chính} & 
+\begin{tabular}[t]{@{}p{10.5cm}@{}}
+1. Người dùng nhấn nút "Đăng ký".\\
+2. Hệ thống hiển thị trang có form đăng ký tài khoản.\\
+3. Người dùng nhập thông tin để đăng ký tài khoản.\\
+4. Hệ thống kiểm tra định dạng và trùng lặp.\\
+5. Hệ thống tạo tài khoản.\\
+6. Hệ thống chuyển sang trang đăng nhập.
+\end{tabular} \\ \hline
+\textbf{Luồng ngoại lệ} &
+\begin{tabular}[t]{@{}p{10.5cm}@{}}
+\textbf{E1: Lỗi từ người dùng}\\
+Báo lỗi "Thông tin không hợp lệ". \\
+\textbf{E2: Lỗi từ hệ thống}\\
+Báo lỗi "Lỗi hệ thống". 
+\end{tabular} \\
+\hline
+\end{longtable}
+
+\begin{longtable}{|p{4cm}|p{11cm}|}
+\caption{Mô tả Use Case: Đăng nhập bằng tài khoản Google}
+\label{usecase-8-03} \\
+\hline
+\endfirsthead
+\caption[]{Mô tả Use Case: Đăng nhập bằng tài khoản Google} \\
+\hline
+\endhead
+\textbf{Use case ID}       & UC-M8-02 \\ \hline
+\textbf{Tên Use case}      & Đăng nhập bằng tài khoản Google \\ \hline
+\textbf{Các tác nhân}      & Guest \\ \hline
+\textbf{Mô tả}             & Cho phép người dùng đăng nhập vào hệ thống qua tài khoản Google. \\ \hline
+\textbf{Tiền điều kiện}    & Trình duyệt không bị chặn cookie cần thiết. \\ \hline
+\textbf{Hậu điều kiện}     & Người dùng đăng nhập thành công vào hệ thống.\\ \hline
+\textbf{Trigger}    & Người dùng bấm "Đăng nhập bằng Google". \\ \hline
+\textbf{Luồng sự kiện chính} & 
+\begin{tabular}[t]{@{}p{10.5cm}@{}}
+1. Chọn phương thức đăng nhập bằng Google . 
+2. Hệ thống điều hướng sang trang đăng nhập với Google
+3. Người dùng chọn account muốn đăng nhập
+4. Hệ thống xác thực
+5. Hệ thống tạo session/JWT và chuyển vào ứng dụng.
+6. Hệ thống chuyển sang trang chính.
+\end{tabular} \\ \hline
+\textbf{Luồng rẽ nhánh} &
+\begin{tabular}[t]{@{}p{10.5cm}@{}}
+\textbf{A1: Tài khoản google đã tồn tại trong hệ thống}\\
+1. Người dùng đăng nhập thành công.\\
+\textbf{A2: Tài khoản google không tồn tại trong hệ thống}\\
+1. Tài khoản mới được tạo và lưu vào hệ thống.\\
+2. Người dùng đăng nhập thành công.\\
+\end{tabular} \\
+\hline
+\end{longtable}
+
+\begin{longtable}{|p{4cm}|p{11cm}|}
+\caption{Mô tả Use Case: Đăng nhập bằng username, password}
+\label{usecase-8-04} \\
+\hline
+\endfirsthead
+\caption[]{Mô tả Use Case: Đăng nhập bằng username, password} \\
+\hline
+\endhead
+\textbf{Use case ID}       & UC-M8-03 \\ \hline
+\textbf{Tên Use case}      & Đăng nhập bằng username, password \\ \hline
+\textbf{Các tác nhân}      & Guest \\ \hline
+\textbf{Mô tả}             & Cho phép người dùng đăng nhập vào hệ thống qua tài khoản username và password. \\ \hline
+\textbf{Tiền điều kiện}    & Người dùng đã có tài khoản trong hệ thống. \\ \hline
+\textbf{Hậu điều kiện}     & Người dùng đăng nhập thành công vào hệ thống.\\ \hline
+\textbf{Trigger}    & Người dùng bấm "Đăng nhập bằng username, password". \\ \hline
+\textbf{Luồng sự kiện chính} & 
+\begin{tabular}[t]{@{}p{10.5cm}@{}}
+1. Chọn phương thức đăng nhập bằng username, password . 
+2. Hệ thống hiển thị form đăng nhập
+3. Người dùng điền username và password
+4. Hệ thống xác thực tài khoản
+5. Hệ thống tạo session/JWT và chuyển vào ứng dụng.
+6. Hệ thống chuyển sang trang chính.
+\end{tabular} \\ \hline
+\textbf{Luồng ngoại lệ} &
+\begin{tabular}[t]{@{}p{10.5cm}@{}}
+\textbf{E1: Lỗi từ người dùng}\\
+Báo lỗi "Tài khoản hoặc mật khẩu không đúng". \\
+\textbf{E2: Lỗi từ hệ thống}\\
+Báo lỗi "Lỗi hệ thống". 
+\end{tabular} \\
+\hline
+\end{longtable}
+
+\begin{longtable}{|p{4cm}|p{11cm}|}
+\caption{Mô tả Use Case: Đăng xuất}
+\label{usecase-8-05} \\
+\hline
+\endfirsthead
+\caption[]{Mô tả Use Case: Đăng xuất} \\
+\hline
+\endhead
+\textbf{Use case ID}       & UC-M8-05 \\ \hline
+\textbf{Tên Use case}      & Đăng xuất \\ \hline
+\textbf{Các tác nhân}      & Traveler, Provider, Admin \\ \hline
+\textbf{Mô tả}             & Cho phép người dùng đăng xuất khỏi hệ thống. \\ \hline
+\textbf{Tiền điều kiện}    & Người dùng đã đăng nhập vào hệ thống. \\ \hline
+\textbf{Hậu điều kiện}     & Người dùng đăng xuất khỏi hệ thống thành công. \\ \hline
+\textbf{Trigger}    & Người dùng bấm "Đăng xuất". \\ \hline
+\textbf{Luồng sự kiện chính} & 
+\begin{tabular}[t]{@{}p{10.5cm}@{}}
+1. Người dùng bấm "Đăng xuất".
+2. Hệ thống hủy session, clear cookie.
+3. Điều hướng về trang chính.
+\end{tabular} \\
+\hline
+\end{longtable}

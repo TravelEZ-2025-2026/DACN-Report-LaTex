@@ -1,0 +1,29 @@
+\subsubsection{Module 3: Tìm kiếm và khám phá nội dung}
+
+\begin{longtable}{|p{4cm}|p{11cm}|}
+\caption{Mô tả Use Case: Lọc và sắp xếp nội dung}
+\label{usecase-3-02}\\
+\hline
+\endfirsthead
+\caption[]{Mô tả Use Case: Lọc và sắp xếp nội dung} \\
+\hline
+\endhead
+\textbf{Use case ID}       & UC-M3-02 \\ \hline
+\textbf{Tên Use case}      & Lọc và sắp xếp nội dung \\ \hline
+\textbf{Các tác nhân}      & Traveler, Guest, Provider \\ \hline
+\textbf{Mô tả}             & Người dùng sắp xếp danh sách theo tiêu chí như: độ phổ biến, đánh giá cao, hoặc lọc danh sách theo các tiêu chí như: xếp hạng theo đánh giá khách hàng, khu vực, các bộ lọc đặc biệt (phù hợp với gia đình, cho phép thú cưng, phù hợp với solo-trip,...) \\ \hline
+\textbf{Trigger}    & Người dùng chọn mục "Sắp xếp theo…", "Lọc nâng cao". \\ \hline
+\textbf{Tiền điều kiện}    & Hệ thống đã có sẵn dữ liệu nội dung. \\ \hline
+\textbf{Hậu điều kiện}     & Hệ thống hiển thị danh sách kết quả tìm kiếm theo phân trang. \\ \hline
+\textbf{Luồng sự kiện chính} & 
+\begin{tabular}[t]{@{}p{10.5cm}@{}}
+1. Người chọn các tiêu chí lọc, sắp xếp.\\
+2. Người dùng nhấn nút "Áp dụng".\\
+3. Hệ thống truy vấn dữ liệu và hiển thị kết quả.
+\end{tabular} \\ \hline
+\textbf{Luồng ngoại lệ} & \begin{tabular}[t]{@{}p{10.5cm}@{}}
+3a. Không tìm thấy kết quả → hệ thống hiển thị thông báo "Không tìm thấy nội dung phù hợp."\\
+3b. Lỗi kết nối → hiển thị "Không thể tải dữ liệu, vui lòng thử lại."
+\end{tabular} \\ 
+\hline
+\end{longtable}

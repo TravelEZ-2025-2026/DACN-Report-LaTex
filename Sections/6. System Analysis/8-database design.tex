@@ -1,4 +1,32 @@
-\subsubsection{Thiết kế mô hình vật lý}
+\subsubsection{Thiết kế cơ sở dữ liệu}
+\subsubsubsection{Thiết kế ý niệm}
+Mục tiêu chính của phần này là xây dựng một mô hình dữ liệu trừu tượng, độc lập với các hệ quản trị cơ sở dữ liệu (DBMS) cụ thể, nhằm phản ánh chính xác các đối tượng dữ liệu và mối quan hệ giữa chúng trong hệ thống. Nhóm sử dụng mô hình Thực thể kết hợp mở rộng (EERD - Enhanced Entity-Relationship Diagram) để trực quan hóa cấu trúc thông tin, đảm bảo tính toàn vẹn và đáp ứng đầy đủ các chức năng cốt lõi của ứng dụng
+
+\begin{landscape}
+\begin{figure}[htp]
+    \centering
+    \includegraphics[width=1.1\textwidth]{Images/5. Recommend system/EERD.png}
+    \caption{Thiết kế EERD của hệ thống}
+    \label{fig:eerd} 
+\end{figure}  
+\end{landscape}
+
+\subsubsubsection{Thiết kế mô hình luận lý}
+Sau khi đã xác định được các thực thể và mối quan hệ ở mức ý niệm, giai đoạn thiết kế luận lý tập trung vào việc chuyển đổi sơ đồ EERD thành một lược đồ cơ sở dữ liệu cụ thể, phù hợp với mô hình dữ liệu đã chọn cho TravelEZ.
+
+Trong phần này, nhóm thực hiện việc ánh xạ các thực thể thành các bảng, xác định rõ các khóa chính, khóa ngoại và các ràng buộc dữ liệu. Mục tiêu là tạo ra một cấu trúc lưu trữ tối ưu, đảm bảo tính nhất quán của dữ liệu và tuân thủ các quy tắc chuẩn hóa để giảm thiểu dư thừa dữ liệu trong quá trình vận hành hệ thống gợi ý du lịch.
+
+\begin{landscape}
+\begin{figure}[htp]
+    \centering
+    \includegraphics[width=1.5\textwidth]{Images/7. System Design/EERD-mapping.png}
+    \caption{Mô hình ánh xạ EERD sang lược đồ cơ sở dữ liệu}
+    \label{fig:eerd-mapping} 
+\end{figure}  
+\end{landscape}
+
+
+\subsubsubsection{Thiết kế mô hình vật lý}
 Dưới đây là chi tiết thiết kế vật lý một số bảng quan trọng trong hệ thống. Mỗi bảng thể hiện rõ các thuộc tính, kiểu dữ liệu cụ thể, các ràng buộc và khóa ngoại (nếu có).
 
 {\small

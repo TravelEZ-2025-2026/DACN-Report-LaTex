@@ -1,10 +1,10 @@
-\subsubsection{Thiết kế Prompt chi tiết theo Module}
+\subsubsubsection{Thiết kế Prompt chi tiết theo Module}
 
 Phần này trình bày thiết kế (design) cho các prompt, áp dụng kiến trúc Structured Prompting đã chọn ở phần trước. Các prompt này được thiết kế như các mẫu (template) động, tuân thủ cấu trúc 3 phần: [Vai trò], [Ngữ cảnh], và [Tác vụ \& Định dạng].
 
 \textit{Lưu ý:} Việc tinh chỉnh chi tiết từng câu chữ (Wording optimization) và đánh giá độ hiệu quả thực tế của prompt sẽ được thực hiện và tối ưu hóa trong giai đoạn phát triển kế tiếp của dự án.
 
-\subsubsubsection{Thiết kế Prompt cho Module 1: Gợi ý Lộ trình}
+\subsubsubsubsection{Thiết kế Prompt cho Module 1: Gợi ý Lộ trình}
 
 \begin{itemize}
     \item \textbf{Lựa chọn Model:} Gemini 2.5 Flash đối với tác vụ lập lịch trình, nhóm quyết định sử dụng phiên bản Gemini 2.5 Flash thay vì phiên bản Pro. Quyết định này dựa trên 2 yếu tố:
@@ -91,7 +91,7 @@ Phần này trình bày thiết kế (design) cho các prompt, áp dụng kiến
     \end{itemize}
 \end{itemize}
 
-\subsubsubsection{Thiết kế Prompt cho Module 6: Khai phá Xu hướng}
+\subsubsubsubsection{Thiết kế Prompt cho Module 6: Khai phá Xu hướng}
 
 \begin{itemize} 
     \item \textbf{Lựa chọn Model: Gemini 2.5 Flash.} Đối với tác vụ đọc hiểu và tổng hợp thông tin từ văn bản (Text Summarization \& Sentiment Analysis), nhóm ưu tiên sử dụng Gemini 2.5 Flash vì:
@@ -133,7 +133,7 @@ Phần này trình bày thiết kế (design) cho các prompt, áp dụng kiến
     \end{itemize}
 \end{itemize}
 
-\subsubsubsection{Thiết kế Prompt cho Module 7: Gợi ý Cải thiện Lịch trình}
+\subsubsubsubsection{Thiết kế Prompt cho Module 7: Gợi ý Cải thiện Lịch trình}
 
 \begin{itemize}
     \item \textbf{Lựa chọn Model: Gemini 2.5 Flash.} Nhóm tiếp tục chọn Gemini 2.5 Flash cho tác vụ này vì:

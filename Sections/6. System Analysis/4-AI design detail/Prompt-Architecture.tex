@@ -1,10 +1,10 @@
-\subsubsection{Lựa chọn Kiến trúc Prompt (Prompt Architecture)}
+\subsubsubsection{Lựa chọn Kiến trúc Prompt (Prompt Architecture)}
 
-\subsubsubsection{Định nghĩa bài toán thiết kế trong bối cảnh AaaS}
+\subsubsubsubsection{Định nghĩa bài toán thiết kế trong bối cảnh AaaS}
 
 Trong bối cảnh phát triển phần mềm tích hợp LLM, Prompt Engineering đã chuyển dịch từ các thực hành theo kinh nghiệm sang các phương pháp hệ thống hóa. Để đảm bảo độ tin cậy của hệ thống TravelEZ, việc thiết kế Prompt không chỉ đơn thuần là viết câu lệnh, mà là bài toán kiểm soát các Mô thức Lỗi (Failure Modes).
 
-\subsubsubsection{Xây dựng tiêu chí đánh giá kỹ thuật Prompt}
+\subsubsubsubsection{Xây dựng tiêu chí đánh giá kỹ thuật Prompt}
 
 Dựa trên khung phân loại lỗi do Tian et al. (2025) đề xuất và được tổng hợp trong báo cáo khảo sát tháng 11/2025 \cite{tian2025llm}, nhóm xác định 3 thách thức kỹ thuật lớn nhất tương ứng với 3 tiêu chí đánh giá:
 
@@ -22,7 +22,7 @@ Dựa trên khung phân loại lỗi do Tian et al. (2025) đề xuất và đư
     \textbf{Tiêu chí 3:} Kỹ thuật phải tối ưu hóa số lượng token (đặc biệt là token đầu ra đắt đỏ) để đảm bảo tính kinh tế.
 \end{enumerate}
 
-\subsubsubsection{Khảo sát các kỹ thuật Prompting}
+\subsubsubsubsection{Khảo sát các kỹ thuật Prompting}
 
 Dựa trên tài liệu khảo sát, nhóm thực hiện xem xét 4 kỹ thuật phổ biến nhất hiện nay để tìm ra ứng viên phù hợp:
 
@@ -36,7 +36,7 @@ Dựa trên tài liệu khảo sát, nhóm thực hiện xem xét 4 kỹ thuật
     \item \textbf{Structured Prompting:} Sử dụng các khuôn mẫu định sẵn và các ràng buộc về định dạng (như JSON Schema) để hướng dẫn mô hình tuân thủ quy tắc dữ liệu, giảm thiểu lỗi sai cấu trúc.
 \end{itemize}
 
-\subsubsubsection{Đánh giá và luận giải chi tiết}
+\subsubsubsubsection{Đánh giá và luận giải chi tiết}
 
 Để đảm bảo tính khách quan và nhất quán, nhóm thiết lập thang đo chuẩn hóa (Rubric) gồm 4 mức độ như sau:
 
@@ -86,7 +86,7 @@ Structured Prompting & KHÁ & CAO & KHÁ \\ \hline
     \item \textbf{Structured Prompting (Khá - Cao - Khá):} Đạt mức cao về độ tin cậy nhờ các khuôn mẫu (Templates) và ràng buộc Schema chặt chẽ, loại bỏ lỗi cấu trúc. Logic ở mức khá, tốt hơn Zero-shot nhưng chưa đạt độ sâu suy luận như CoT. Hiệu suất ở mức khá vì prompt đi thẳng vào vấn đề, không lan man như CoT và không dài dòng như Few-shot.
 \end{itemize}
 
-\subsubsubsection{Kết luận và kiến trúc đề xuất}
+\subsubsubsubsection{Kết luận và kiến trúc đề xuất}
 
 Dựa trên phân tích đánh đổi, nhóm nhận thấy không có một kỹ thuật đơn lẻ nào đáp ứng trọn vẹn cả 3 tiêu chí. Do đó, nhóm quyết định xây dựng kiến trúc \textbf{Hybrid Structured Prompting} (Lai ghép có cấu trúc).
 

@@ -1,0 +1,73 @@
+\subsection{Đánh giá hiệu quả các kỹ thuật Prompt}
+\subsubsection{Thiết lập thực nghiệm}
+
+Để đánh giá năng lực suy luận và mức độ tuân thủ yêu cầu của các kỹ thuật Prompt, thực nghiệm được tiến hành với các tham số cố định sau:
+\begin{itemize}
+    \item \textbf{Mô hình kiểm thử:} Gemini 2.5 Flash Lite.
+    \item \textbf{Bài toán:} Lập lịch trình du lịch cá nhân hóa (2 ngày tại TP.HCM).
+    \item \textbf{Dữ liệu đầu vào (Input):}
+    \begin{itemize}
+        \item Tập dữ liệu POI (Points of Interest): giới hạn gồm ID, tọa độ và giờ hoạt động.
+        \item Yêu cầu người dùng: Cặp đôi, sở thích văn hóa/ẩm thực.
+        \item Ràng buộc khó: "Hạn chế di chuyển và hoạt động ngoài trời vào giờ trưa nắng".
+    \end{itemize}
+    \item \textbf{Quy trình:} Thực hiện 3 lần chạy độc lập (3 trials) cho mỗi kỹ thuật để ghi nhận độ trễ trung bình và phân tích tính ổn định của nội dung.
+\end{itemize}
+
+\subsubsection{Kết quả đối sánh định lượng}
+Bảng dưới đây tổng hợp các chỉ số hiệu năng chính dựa trên dữ liệu log thực tế:
+
+\begin{table}[h!]
+    \centering
+    \resizebox{\textwidth}{!}{%
+    \begin{tabular}{|l|c|c|c|c|c|}
+    \hline
+    \textbf{Tiêu chí Đánh giá} & \textbf{Zero-shot} & \textbf{Structure} & \textbf{Few-shot} & \textbf{CoT} & \textbf{Hybrid (Winner)} \\ \hline
+    Thời gian phản hồi (Avg Latency) & $\sim$11.63s & $\sim$12.07s & $\sim$11.06s & $\sim$10.80s & $\sim$12.39s \\ \hline
+    Khả năng xử lý Ràng buộc (Logic) & Thấp & Trung bình & Trung bình & Khá & Cao \\ \hline
+    Độ sâu \& Giá trị lời khuyên & Thấp & Trung bình & Khá & Khá & Cao \\ \hline
+    Tính ổn định nội dung & Thấp & Cao & Cao & Khá & Cao \\ \hline
+    Độ chính xác Địa lý & Thấp & Thấp & Trung bình & Khá & Cao \\ \hline
+    \end{tabular}%
+    }
+    
+    \caption{Bảng so sánh hiệu năng các kỹ thuật Prompt}
+    \label{tab:prompt-comparison}
+
+    \vspace{0.5em}
+    \begin{flushleft}
+        \textbf{Ghi chú:}
+        \begin{itemize}
+            \item \textit{Logic:} Khả năng tuân thủ yêu cầu tránh nắng và giờ đóng/mở cửa.
+            \item \textit{Avg Latency:} Thời gian trung bình tính trên 3 lần chạy thử nghiệm.
+        \end{itemize}
+    \end{flushleft}
+    
+\end{table}
+
+\subsubsection{Phân tích định tính}
+Dựa trên dữ liệu đầu ra chi tiết, thực nghiệm ghi nhận những khác biệt cốt lõi về chất lượng suy luận giữa các nhóm kỹ thuật:
+
+\subsubsubsection{Năng lực giải quyết ràng buộc phức tạp}
+Sự khác biệt rõ rệt nhất nằm ở khả năng xử lý yêu cầu "tránh nắng trưa".
+\begin{itemize}
+    \item \textbf{Nhóm Baseline (Zero-shot \& Structure):} Bộc lộ hạn chế lớn về tư duy ngữ cảnh. Cả hai kỹ thuật thường xuyên sắp xếp các địa điểm ngoài trời (như Đường Ẩm Thực Hồ Thị Kỷ hoặc Chợ Xóm Chiếu) vào khung giờ nắng gắt (12:00 - 13:30). Điều này cho thấy mô hình chỉ tập trung lấp đầy khung thời gian mà thiếu bước suy xét về tính chất địa điểm.
+    \item \textbf{Kỹ thuật Hybrid (Structured + CoT):} Thể hiện khả năng vượt trội nhờ cơ chế suy luận từng bước (Chain of Thought). Trong cả 3 lần chạy, mô hình đều điều hướng chính xác người dùng vào các địa điểm trong nhà có máy lạnh (như Cafe, Nhà hàng, TTTM) trong khung giờ 11:00 - 14:00, đảm bảo tuân thủ tuyệt đối ràng buộc về sức khỏe và trải nghiệm.
+\end{itemize}
+
+\subsubsubsection{Kiểm soát ảo giác địa lý}
+\begin{itemize}
+    \item \textbf{Kỹ thuật Structure:} Mặc dù tổ chức thông tin tốt, nhưng gặp lỗi nghiêm trọng về logic không gian. Cụ thể, mô hình đã đề xuất lịch trình di chuyển từ Quận 1 xuống Cần Giờ (khoảng cách $>$50km) và quay lại trong cùng một buổi chiều, một phương án bất khả thi trong thực tế.
+    \item \textbf{Kỹ thuật CoT và Hybrid:} Nhờ quy trình suy luận bao gồm bước "gom cụm địa lý" (clustering), lịch trình được thiết kế tập trung theo khu vực, giảm thiểu thời gian di chuyển vô ích giữa các điểm đến.
+\end{itemize}
+
+\subsubsubsection{Tính linh hoạt và cá nhân hóa}
+\begin{itemize}
+    \item \textbf{Kỹ thuật Few-shot:} Có xu hướng "quá khớp" với dữ liệu mẫu. Các lời khuyên và cách đặt tiêu đề chuyến đi thường sao chép phong cách của ví dụ được cung cấp, thiếu sự linh hoạt cho các ngữ cảnh mới.
+    \item \textbf{Kỹ thuật Hybrid:} Cung cấp các lời khuyên mang tính hành động cao và phù hợp với từng địa điểm cụ thể (ví dụ: gợi ý góc chụp ảnh cụ thể tại Dinh Độc Lập), thay vì các mô tả chung chung như Zero-shot.
+\end{itemize}
+
+\subsubsection{Đánh giá hiệu quả}
+Kết quả thực nghiệm cho thấy sự đánh đổi giữa Thời gian xử lý và Chất lượng suy luận là hoàn toàn xứng đáng trong bối cảnh các mô hình ngôn ngữ lớn hiện nay.
+
+Mặc dù kỹ thuật Hybrid có độ trễ cao nhất ($\sim$12.39s), nhưng mức chênh lệch là không đáng kể so với giá trị vượt trội mà nó mang lại: loại bỏ hoàn toàn các lỗi logic hành vi và ảo giác địa lý. Do đó, \textbf{Hybrid Prompting} (kết hợp Cấu trúc và Tư duy chuỗi) được xác định là phương pháp tối ưu nhất để triển khai các tác vụ lập kế hoạch phức tạp đòi hỏi độ chính xác cao.

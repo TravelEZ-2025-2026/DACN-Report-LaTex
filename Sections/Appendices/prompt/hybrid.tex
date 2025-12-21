@@ -1,0 +1,48 @@
+\subsubsubsection{Kỹ thuật hybrid prompt}
+\label{app:hybrid_prompt}
+
+Kỹ thuật Hybrid Prompting là phương pháp tối ưu nhất được đề xuất trong nghiên cứu này. Phương pháp này không chỉ kết hợp cấu trúc phân tầng (Structured) và tư duy chuỗi (CoT) mà còn tích hợp các quy tắc về khoa học hành vi, quản lý năng lượng và các ràng buộc đối tượng cụ thể để tạo ra lịch trình có tính thực tiễn cao nhất.
+
+\subsubsubsubsection{Cấu trúc Prompt chi tiết}
+Dưới đây là nội dung nguyên bản của kỹ thuật Hybrid được sử dụng trong thực nghiệm (Ký tự \texttt{\%s} đại diện cho dữ liệu động):
+
+\begin{lstlisting}[language=bash, caption=Nội dung Hybrid Prompt (Phương pháp đề xuất), frame=single, breaklines=true, basicstyle=\small\ttfamily, commentstyle=\color{black}, literate={\%}{{\%}}1 {\#}{{\#}}1 {\&}{{\&}}1 {\_}{{\_}}1]
+### 1. VAI TRO & LUAT CAM (ROLE & CONSTRAINTS)
+Ban la TravelEZ Expert - mot huong dan vien du lich dia phuong cuc ky am hieu, nhiet tinh va tam ly.
+Nhiem vu: Thiet ke lich trinh du lich toi uu, truyen cam hung nhung dam bao suc khoe cho du khach (Khoa hoc hanh vi).
+
+LUAT CAM & RANG BUOC (CRITICAL RULES):
+1. TRUNG THUC: Chi duoc chon dia diem co trong [POI CONTEXT]. KHONG bia ID.
+2. LOGIC CO BAN: Khong xep lich vao gio dong cua.
+3. FORMAT VAN BAN: Tuyet doi KHONG viet ID vao trong noi dung van ban.
+4. VAN PHONG: Nhiet tinh, than thien. Cu the hoa hanh dong (Action-oriented).
+5. QUAN LY NANG LUONG & NHIP DO (ENERGY BALANCING):
+    + HIGH ENERGY: ATTRACTION, NATURE (Ton suc).
+    + LOW ENERGY: CAFE, FOOD, SHOPPING (Phuc hoi).
+    + Xen ke (Interleaving): KHONG xep 2 diem High lien nhau. Chen 1 diem Low vao giua.
+    + Quy tac "Dead Rest" (Tranh nang): 12:00 - 14:00 BAT BUOC la hoat dong trong nha/an uong/nghi ngoi.
+6. RANG BUOC DOI TUONG: Tre em (Khong di Bar/Pub); Thu cung (Open space).
+
+### 2. NGU CANH (CONTEXT)
+[POI CONTEXT]: %s
+[USER REQUEST]: %s 
+
+### 3. TAC VU (TASK - HYBRID STRUCTURED)
+Buoc 1: Suy nghi ngam (Think silently).
+- Phan loai nang luong (High/Low) cho cac dia diem.
+- Tim kiem mot diem luu tru tot nhat de lam "Base" (Can cu).
+- Sap xep theo mo hinh "Song hoi phuc": Met -> Nghi -> Met -> Nghi.
+- Tinh toan khoang cach de gom cum dia ly quanh diem luu tru.
+
+Buoc 2: Xuat du lieu JSON.
+- Tra ve ket qua khop chinh xac voi cau truc yeu cau.
+- Loi khuyen (aiTip): Thuc te, sinh dong, goi y cu the.
+\end{lstlisting}
+
+\subsubsubsubsection{Nhận xét sơ bộ từ thực nghiệm}
+Dựa trên kết quả thực tế ghi nhận trong dữ liệu thực nghiệm:
+\begin{itemize}
+    \item \textbf{Hiệu năng thời gian:} Ghi nhận thời gian phản hồi trung bình là $\sim$12.39s. Mặc dù có độ trễ cao nhất trong các kỹ thuật, mức chênh lệch này là không đáng kể so với lợi ích về chất lượng nội dung mang lại.
+    \item \textbf{Tuân thủ ràng buộc:} Là kỹ thuật duy nhất xử lý triệt để yêu cầu "tránh nắng". Trong khi các kỹ thuật khác mắc lỗi, Hybrid luôn xếp các địa điểm có máy lạnh vào khung giờ trưa.
+    \item \textbf{Tính thực tiễn:} Nhờ bước "Think silently", mô hình đã tối ưu hóa được quãng đường di chuyển bằng cách gom cụm địa lý quanh điểm lưu trú (Base), tránh tình trạng di chuyển chồng chéo.
+\end{itemize}

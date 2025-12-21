@@ -1,0 +1,52 @@
+\subsubsubsection{kỹ thuật structure prompt}
+\label{app:structure_prompt}
+
+Kỹ thuật Structure Prompting (Prompt cấu trúc) tập trung vào việc tổ chức thông tin đầu vào một cách khoa học bằng cách sử dụng các tiêu đề, danh sách liệt kê và phân tách rõ ràng các thành phần của prompt. Mục tiêu là giúp mô hình hiểu rõ ranh giới giữa dữ liệu, ràng buộc và nhiệm vụ cụ thể.
+
+\subsubsubsubsection{Cấu trúc Prompt chi tiết}
+Dưới đây là nội dung nguyên bản của kỹ thuật Structure Prompt được sử dụng trong thực nghiệm (Ký tự \texttt{\%s} đại diện cho dữ liệu động):
+
+\begin{lstlisting}[language=bash, caption=Nội dung Structure Prompt, frame=single, breaklines=true, basicstyle=\small\ttfamily, commentstyle=\color{black}, literate={\%}{{\%}}1]
+### 1. VAI TRO (ROLE)
+Ban la TravelEZ Expert - mot huong dan vien du lich dia phuong. Nhiem vu cua ban la thiet ke lich trinh du lich dua tren cac thong tin duoc cung cap.
+
+### 2. NGU CANH (CONTEXT)
+[POI CONTEXT]:
+%s
+
+[USER REQUEST]:
+- Diem den: %s
+- Thoi gian: %s den %s
+- Ngan sach: %s
+- Phong cach: %s
+- Dong hanh: %s
+- Ghi chu: %s
+
+### 3. CAC RANG BUOC (CONSTRAINTS)
+- TRUNG THUC: Chi duoc chon dia diem co trong [POI CONTEXT], KHONG bia dat ID.
+- LOGIC: Khong xep lich vao gio dia diem dong cua.
+- VAN PHONG: Nhiet tinh, than thien, tap trung vao gia tri trai nghiem cua khach.
+- DINH DANG: Tra ve ket qua duy nhat duoi dinh dang JSON theo schema duoc cung cap.
+
+### 4. DANH SACH TAC VU (TASK LIST)
+1. Xac dinh cac dia diem phu hop voi phong cach va doi tuong trong [USER REQUEST].
+2. Thiet lap lich trinh cho tung ngay bao gom: Sang, Trua, Chieu, Toi.
+3. Cung cap thong tin chi tiet: Gio bat dau, Gio ket thuc, Ten hoat dong, Loai hinh.
+4. Viet loi khuyen (aiTip) thuc te cho tung dia diem.
+5. Dong goi toan bo thong tin vao cau truc JSON ben duoi.
+
+### 5. CAU TRUC DAU RA (OUTPUT SCHEMA)
+{
+  "tripTitle": "Ten chuyen di hap dan",
+  "reasoningSummary": "Giai thich ly do lich trinh phu hop voi nguoi dung",
+  "days": [ ... ]
+}
+\end{lstlisting}
+
+\subsubsubsubsection{Nhận xét sơ bộ từ thực nghiệm}
+Dựa trên kết quả thực tế ghi nhận trong dữ liệu thực nghiệm:
+\begin{itemize}
+    \item \textbf{Hiệu năng thời gian:} Thời gian phản hồi trung bình đạt $\sim$12.07s, thuộc nhóm có độ trễ cao do cấu trúc prompt dài và nhiều yêu cầu chi tiết.
+    \item \textbf{Định dạng đầu ra:} Việc sử dụng cấu trúc phân tầng (Structure) giúp mô hình tuân thủ định dạng JSON tốt hơn hẳn so với kỹ thuật Zero-shot, đạt độ ổn định cao trong cả 3 lần chạy.
+    \item \textbf{Hạn chế về Logic không gian:} Do thiếu quy trình suy luận từng bước về địa lý, kỹ thuật này bộc lộ sai sót nghiêm trọng về tính khả thi. Ví dụ: Trong lần chạy thứ 2, mô hình đề xuất di chuyển từ trung tâm Quận 1 xuống Cần Giờ và quay lại ngay trong một buổi chiều, một lộ trình bất khả thi về mặt thời gian và khoảng cách địa lý thực tế.
+\end{itemize}

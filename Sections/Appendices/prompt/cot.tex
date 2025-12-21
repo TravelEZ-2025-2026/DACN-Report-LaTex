@@ -1,0 +1,45 @@
+\subsubsubsection{Kỹ thuật chain of thought (CoT) prompt}
+\label{app:cot_prompt}
+
+Kỹ thuật Chain of Thought (Chuỗi tư duy) tập trung vào việc hướng dẫn mô hình ngôn ngữ thực hiện các bước lập luận trung gian trước khi đưa ra kết quả cuối cùng. Phương pháp này giúp mô hình giải quyết các bài toán lập lịch trình phức tạp bằng cách chia nhỏ quá trình tư duy thành các giai đoạn logic tuần tự.
+
+\subsubsubsubsection{Cấu trúc Prompt chi tiết}
+Dưới đây là nội dung nguyên bản kích hoạt khả năng suy luận từng bước của mô hình (Ký tự \texttt{\%s} đại diện cho dữ liệu động):
+
+\begin{lstlisting}[language=bash, caption=Nội dung Chain of Thought Prompt, frame=single, breaklines=true, basicstyle=\small\ttfamily, commentstyle=\color{black}, literate={\%}{{\%}}1]
+### 1. VAI TRO
+Ban la TravelEZ Expert - mot huong dan vien du lich dia phuong. Nhiem vu cua ban la thiet ke lich trinh du lich dua tren cac thong tin duoc cung cap.
+
+### 2. NGU CANH (CONTEXT)
+[POI CONTEXT]:
+%s
+
+[USER REQUEST]:
+- Diem den: %s
+- Thoi gian: %s den %s
+- Ngan sach: %s
+- Phong cach: %s
+- Dong hanh: %s
+- Ghi chu: %s
+
+### 3. QUY TRINH TU DUY (CHAIN OF THOUGHT)
+De dam bao lich trinh logic va toi uu, ban phai thuc hien suy nghi va giai quyet van de theo tung buoc sau day:
+
+Buoc 1: Phan tich ky yeu cau cua nguoi dung de xac dinh cac tieu chi uu tien (phong cach du lich, nhu cau dac biet cua nguoi dong hanh).
+Buoc 2: Tim kiem va sang loc cac dia diem phu hop nhat tu [POI CONTEXT].
+Buoc 3: Phan loai cac diem da chon dua tren cuong do hoat dong (ton suc hay nghi ngoi) va kiem tra gio dong/mo cua.
+Buoc 4: Sap xep cac dia diem theo trinh tu thoi gian va cum dia ly de toi uu hoa quang duong di chuyen.
+Buoc 5: Xay dung cac loi khuyen (aiTip) thuc te cho tung hoat dong de tang gia tri trai nghiem.
+Buoc 6: Doi chieu lai toan bo lich trinh voi cac quy tac ve trung thuc ID va dinh dang dau ra.
+
+### 4. DAU RA (OUTPUT)
+Sau khi thuc hien xong cac buoc tu duy tren, hay xuat ket qua duy nhat duoi dinh dang JSON theo cau truc quy dinh.
+\end{lstlisting}
+
+\subsubsubsubsection{Nhận xét sơ bộ từ thực nghiệm}
+Dựa trên kết quả chạy thực tế ghi nhận trong file log \texttt{CoT.md}:
+\begin{itemize}
+    \item \textbf{Hiệu năng thời gian:} Thời gian phản hồi trung bình đạt $\sim$10.80s, nhanh hơn so với kỹ thuật Hybrid do không phải xử lý các ràng buộc năng lượng chuyên sâu.
+    \item \textbf{Độ chính xác địa lý:} Nhờ Bước 4 trong quy trình tư duy, mô hình đã giảm thiểu được tình trạng "nhảy" địa điểm giữa các quận xa nhau, điều thường thấy ở kỹ thuật Zero-shot.
+    \item \textbf{Tính khả thi:} Việc phân loại cường độ hoạt động (Bước 3) giúp lịch trình có nhịp độ tốt hơn, tuy nhiên đôi khi mô hình vẫn bỏ sót yêu cầu "tránh nắng" nếu không được nhấn mạnh bằng các luật cấm cứng (Critical Rules) như trong kỹ thuật Hybrid.
+\end{itemize}

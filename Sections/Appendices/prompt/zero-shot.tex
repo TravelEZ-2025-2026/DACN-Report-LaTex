@@ -1,0 +1,63 @@
+\subsubsubsection{Kỹ thuật zero-shot prompt}
+\label{app:zero_shot_prompt}
+
+Kỹ thuật Zero-shot là phương pháp prompt cơ bản nhất được sử dụng trong thực hành thực nghiệm để thiết lập mốc so sánh tiêu chuẩn (baseline). Phương pháp này cung cấp trực tiếp vai trò của mô hình, ngữ cảnh dữ liệu và yêu cầu định dạng đầu ra mà không đi kèm ví dụ mẫu hay các chỉ dẫn suy luận trung gian.
+
+\subsubsubsubsection{Cấu trúc Prompt chi tiết}
+Dưới đây là nội dung nguyên bản được gửi đến mô hình Gemini 1.5 Flash (Ký tự \texttt{\%s} đại diện cho dữ liệu động được truyền vào tại thời điểm thực thi):
+
+\begin{lstlisting}[language=bash, caption=Nội dung Zero-shot Prompt (Baseline), frame=single, breaklines=true, basicstyle=\small\ttfamily, commentstyle=\color{black}, literate={\%}{{\%}}1]
+### 1. VAI TRO
+[cite_start]Ban la TravelEZ Expert - mot huong dan vien du lich dia phuong[cite: 38]. 
+[cite_start]Nhiem vu cua ban la thiet ke lich trinh du lich dua tren cac thong tin duoc cung cap[cite: 39].
+
+### 2. NGU CANH (CONTEXT)
+[POI CONTEXT]:
+%s
+
+[USER REQUEST]:
+- Diem den: %s
+- Thoi gian: %s den %s
+- Ngan sach: %s
+- Phong cach: %s
+- Dong hanh: %s
+- [cite_start]Ghi chu: %s [cite: 40]
+
+### 3. QUY TAC BAT BUOC
+1. [cite_start]TRUNG THUC: Chi duoc chon dia diem co trong [POI CONTEXT], KHONG bia dat ID[cite: 40].
+2. [cite_start]LOGIC: Khong xep lich vao gio dia diem dong cua[cite: 41].
+3. [cite_start]FORMAT: Tra ve ket qua duy nhat duoi dinh dang JSON theo dung cau truc ben duoi[cite: 42].
+
+### 4. TAC VU (TASK)
+[cite_start]Hay tao lich trinh du lich theo cau truc JSON sau[cite: 43]:
+{
+  "tripTitle": "Ten chuyen di",
+  "reasoningSummary": "Giai thich ngan gon ly do lich trinh phu hop",
+  "days": [
+    {
+      "dayIndex": 1,
+      "date": "YYYY-MM-DD",
+      "theme": "Chu de ngay",
+      "activities": [
+        {
+          "id": <ID_INTEGER_FROM_CONTEXT>,
+          "startTime": "HH:MM",
+          "endTime": "HH:MM",
+          "locationName": "Ten dia diem chinh xac",
+          "activityName": "Ten hoat dong",
+          "activityType": "...",
+          [cite_start]"aiTip": "Loi khuyen thuc te (2-3 cau)" [cite: 44]
+        }
+      ]
+    }
+  ]
+}
+\end{lstlisting}
+
+\subsubsubsubsection{Nhận xét sơ bộ từ thực nghiệm}
+Dựa trên kết quả thực tế, kỹ thuật Zero-shot bộc lộ các đặc điểm sau:
+\begin{itemize}
+    \item \textbf{Hiệu năng thời gian:} Ghi nhận thời gian phản hồi trung bình là $\sim$11.63s.
+    \item \textbf{Ưu điểm:} Đảm bảo 100\% cấu trúc định dạng JSON theo yêu cầu mà không cần chỉ dẫn phức tạp.
+    \item \textbf{Hạn chế về Logic:} Mô hình thường xuyên vi phạm các ràng buộc thực tế như xếp lịch đi bộ ngoài trời tại "Đường Ẩm Thực Hồ Thị Kỷ" vào lúc 13:30 (khung giờ nắng gắt tại TP.HCM). Ngoài ra, các lời khuyên (aiTip) có xu hướng chung chung, thiếu tính cá nhân hóa sâu sắc.
+\end{itemize}

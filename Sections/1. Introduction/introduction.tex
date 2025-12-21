@@ -28,24 +28,49 @@ Từ những phân tích trên, có thể thấy một nhu cầu cấp thiết v
 \subsection{Phạm vi}
 Để đảm bảo dự án khả thi và tập trung vào việc giải quyết các mục tiêu cốt lõi trong khung thời gian và nguồn lực hạn chế, phạm vi của đề tài được xác định như sau
 \subsubsection{Phạm vi chức năng}
-Hệ thống tập trung vào việc xây dựng các chức năng chính sau:
+\subsubsection{Phạm vi Chức năng}
+Hệ thống TravelEZ được xây dựng nhằm phục vụ ba đối tượng chính: Khách du lịch (Traveler), Nhà cung cấp dịch vụ địa phương (SMEs) và Quản trị viên hệ thống. Các nhóm chức năng chính bao gồm:
+
 \begin{itemize}
-    \item Cá nhân hóa gợi ý: Gợi ý hành trình du lịch cá nhân dựa trên địa điểm du khách quan tâm, đề xuất các hoạt động giải trí phù hợp với sở thích, ngân sách và lịch sử tương tác của người dùng.
-    
+    \item Quản lý tài khoản và hồ sơ cá nhân hóa:
+    \begin{itemize}
+        \item Đăng ký/Đăng nhập đa phương thức (Email, Google, Facebook).
+        \item Quản lý hồ sơ cá nhân (Profile): Cập nhật thông tin cơ bản và đặc biệt là khảo sát sở thích du lịch (loại hình ưa thích, ngân sách, mức độ mạo hiểm, ẩm thực...) để làm đầu vào cho thuật toán gợi ý.
+    \end{itemize}
+
+    \item Lập kế hoạch du lịch thông minh:
+    \begin{itemize}
+        \item Tạo lịch trình tự động: Người dùng nhập điểm đến, thời gian, ngân sách và sở thích; hệ thống AI sẽ đề xuất lịch trình chi tiết từng ngày (ngày đi đâu, ăn gì, ở đâu).
+        \item Tùy chỉnh lịch trình: Giao diện trực quan cho phép người dùng thêm, xóa, đổi thứ tự địa điểm (drag-and-drop) và tối ưu hóa lại cung đường di chuyển trên bản đồ.
+        \item Quản lý chuyến đi: Lưu trữ lịch sử chuyến đi, chia sẻ lịch trình với bạn bè hoặc cộng đồng.
+    \end{itemize}
+
+    \item Hệ thống tìm kiếm và khám phá:
+    \begin{itemize}
+        \item Tìm kiếm thông minh theo từ khóa, danh mục (khách sạn, nhà hàng, điểm tham quan) hoặc theo khu vực địa lý.
+        \item Bộ lọc nâng cao theo giá cả, đánh giá, khoảng cách và tiện ích đi kèm.
+        \item Hiển thị thông tin chi tiết địa điểm, hình ảnh trực quan và bản đồ tích hợp.
+    \end{itemize}
+
+    \item Cộng đồng và đánh giá:
+    \begin{itemize}
+        \item Cho phép người dùng viết đánh giá, chấm điểm và đăng tải hình ảnh thực tế tại các địa điểm đã trải nghiệm.
+        \item Tương tác với cộng đồng: Bình luận, yêu thích và báo cáo các đánh giá vi phạm.
+    \end{itemize}
 \end{itemize}
 
 \subsubsection{Phạm vi Kỹ thuật}
-Các giới hạn và lựa chọn về mặt công nghệ được xác định như sau:
+Các giới hạn và lựa chọn về mặt công nghệ cho hệ thống TravelEZ được xác định như sau:
 \begin{itemize}
     \item Kiến trúc hệ thống:Dự kiến xây dựng theo kiến trúc ứng dụng kiến trúc Client-Server cơ bản để đơn giản hóa việc phát triển và triển khai trong giai đoạn đầu.
     \item Công nghệ phát triển:
         \begin{itemize}
-            \item Frontend (Giao diện người dùng): 
-            \item Backend (Xử lý logic):
-            \item Cơ sở dữ liệu:
+            \item Frontend (Giao diện người dùng): Sử dụng Framework Next.js (React) để tối ưu hóa SEO và trải nghiệm người dùng (UX). Giao diện được thiết kế tương thích đa thiết bị với sự hỗ trợ của TailwindCSS và ShadcnUI.
+            \item Backend (Xử lý logic): Xây dựng trên nền tảng Java Spring Boot - một framework mạnh mẽ, ổn định, phù hợp với mô hình doanh nghiệp và xử lý nghiệp vụ phức tạp.
+            \item Cơ sở dữ liệu: Sử dụng PostgreSQL (RDBMS) để lưu trữ dữ liệu có cấu trúc (người dùng, địa điểm, lịch trình) và đảm bảo tính toàn vẹn dữ liệu.
         \end{itemize}
-    \item Nền tảng triển khai
-    \item Bảo mật
+    \item Nền tảng triển khai: Trong giai đoạn hiện tại, hệ thống tập trung phát triển nền tảng Web Application hoạt động tốt trên cả máy tính và trình duyệt di động. 
+    \item Bảo mật: Áp dụng các biện pháp bảo mật cơ bản như mã hóa mật khẩu, bảo vệ chống lại các lỗ hổng web phổ biến, phân quyền dựa trên vai trò. Không bao gồm các biện pháp kiểm thử xâm nhập (penetration testing) chuyên sâu.
 \end{itemize}
 
 \subsection{Ý nghĩa của dự án}

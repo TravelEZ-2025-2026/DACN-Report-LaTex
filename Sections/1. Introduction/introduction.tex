@@ -1,54 +1,76 @@
 \section{Giới thiệu}
 \subsection{Động cơ}
-Du lịch là một trong những ngành kinh tế phát triển nhanh chóng nhất trên thế giới. Du lịch cũng là một ngành công nghiệp kiếm có được ngoại hối mà không cần xuất khẩu của cải, hàng hóa của quốc gia \cite{vietnamtourism_export}. Trên Diễn đàn kinh tế thế giới, các sáng kiến Chuyển đổi số trong du lịch dự kiến sẽ đóng góp tới 305 tỷ USD lợi nhuận trong năm 2025. Sự phát triển của công nghệ đã cung cấp những công cụ ứng dụng và nền tảng công nghệ trong việc mang lại các trải nghiệm du lịch mới mẻ, hấp dẫn và tiện lợi với khách du lịch.
+Du lịch từ lâu đã khẳng định vị thế là một trong những ngành kinh tế mũi nhọn toàn cầu. Đặc biệt, đây được mệnh danh là ngành công nghiệp ``xuất khẩu tại chỗ'', mang lại nguồn thu ngoại tệ lớn mà không làm thâm hụt tài nguyên quốc gia \cite{vietnamtourism_export}. Trong bối cảnh Cách mạng công nghiệp 4.0, sự giao thoa giữa du lịch và công nghệ đang tạo ra những giá trị đột phá. Theo Diễn đàn Kinh tế Thế giới (WEF), các sáng kiến chuyển đổi số trong du lịch dự kiến sẽ đóng góp tới 305 tỷ USD giá trị cho ngành vào năm 2025, mở ra kỷ nguyên của các trải nghiệm du lịch thông minh, tiện lợi và hấp dẫn \cite{wef_digital}.
 
-Nhận định này được đưa ra trên cơ sở hai nghiên cứu năm 2024 của booking.vn gồm: Nghiên cứu Xu hướng du lịch và Dự đoán du lịch \cite{qdnd_genz}. Theo đó, 51\% số khách du lịch thuộc thế hệ Gen Z Việt Nam tham gia khảo sát cho biết họ cảm thấy rất thoải mái khi dựa vào công nghệ nhằm tạo ra những trải nghiệm du lịch khó quên. 50\% chia sẻ rằng, họ tin tưởng AI trong việc đề xuất những địa điểm du lịch ít xô bồ và không nhiều người biết đến. 67\% sẽ sử dụng công nghệ lập kế hoạch du lịch bằng AI để lên lịch trình cho chuyến đi của mình. 57\% thể hiện sự quan tâm đến các tiện ích và dịch vụ ứng dụng công nghệ hiện đại...
+Tại Việt Nam, du lịch đang chứng kiến tốc độ phục hồi và tăng trưởng ấn tượng. Theo số liệu từ Cục Du lịch Quốc gia Việt Nam, chỉ trong 6 tháng đầu năm 2025, ngành du lịch đã ghi nhận mức tăng trưởng mạnh nhất thế giới, với lượng khách quốc tế trong 8 tháng đầu năm đạt gần 14 triệu người, tăng 22\% so với cùng kỳ năm trước \cite{vnexpress_growth}. Để bắt kịp đà tăng trưởng này, Chính phủ và Bộ Văn hóa, Thể thao và Du lịch đã ban hành nhiều chương trình thúc đẩy chuyển đổi số, hướng tới việc xây dựng hệ sinh thái du lịch thông minh và phát triển bền vững. Mục tiêu cốt lõi là hoàn thiện các nền tảng số để hỗ trợ công tác quản lý và nâng cao trải nghiệm cho du khách.
 
-61\% khách du lịch Gen Z tại Việt Nam cho biết, yếu tố chính thúc đẩy họ đi du lịch là để thư giãn. 29\% mong muốn kết nối sâu hơn với bản thân. Điều này lý giải sự lên ngôi của các loại hình du lịch tập trung vào sức khỏe, với xu hướng tìm đến những điểm đến cung cấp dịch vụ như yoga, thiền định và liệu trình trị liệu spa...
+Tuy nhiên, động lực lớn nhất thúc đẩy sự thay đổi không chỉ đến từ chính sách vĩ mô mà xuất phát từ chính hành vi của du khách, đặc biệt là sự trỗi dậy của thế hệ Gen Z (những người sinh từ 1997-2012). Các nghiên cứu năm 2024 cho thấy một sự dịch chuyển rõ rệt trong tư duy du lịch của thế hệ này: họ không chỉ đi để khám phá mà còn để kết nối sâu hơn với bản thân và tìm kiếm sự thư giãn. Điều này lý giải sự lên ngôi của các loại hình du lịch chữa lành kết hợp yoga, thiền định \cite{qdnd_genz}.
 
-Theo Tổ chức Du lịch Liên Hợp Quốc, du lịch Việt Nam có tốc độ "tăng trưởng mạnh nhất thế giới" trong 6 tháng đầu năm 2025 \cite{vnexpress_growth}. Theo số liệu thống kê từ Cục Du lịch Quốc gia Việt Nam đón gần 11 triệu lượt, tăng 17\% so với cùng kỳ 2024 và gấp 1,3 lần so với cùng kỳ 2019. Tám tháng đầu năm, khách quốc tế đến Việt Nam đạt gần 14 triệu người, tăng gần 22\% so với cùng kỳ năm trước. Cùng với sự phát triển bùng nổ này, Bộ VHTTDL ban hành Chương trình đẩy mạnh chuyển đổi số du lịch thông minh trong lĩnh vực du lịch \cite{vietnamtourism_digital}. Chương trình hướng tới ứng dụng khoa học công nghệ trong thúc đẩy phát triển du lịch trở thành ngành kinh tế mũi nhọn, đảm bảo phát triển bền vững và hội nhập quốc tế, đóng góp vào quá trình phát triển Chính phủ số, kinh tế số và xã hội số. Mục tiêu đề ra là phát triển và hoàn thiện các nền tảng số hỗ trợ công tác quản lý nhà nước, phục vụ khách du lịch, phát triển hệ thống dữ liệu làm nền tảng cho xây dựng mô hình du lịch thông minh.
+Đáng chú ý, Gen Z là thế hệ đặt niềm tin lớn vào công nghệ. Theo khảo sát, 67\% du khách Gen Z sẵn sàng sử dụng AI để lên lịch trình chuyến đi và 50\% tin tưởng vào các đề xuất của AI để tìm kiếm những địa điểm ít người biết (hidden gems), tránh xa sự xô bồ của các điểm đến truyền thống \cite{booking_genz_2024}. Như ông Varun Grover (Giám đốc Booking.com Việt Nam) nhận định: ``Đối với thế hệ này, du lịch... là cách họ thể hiện bản sắc cá nhân với sự hỗ trợ của trí tuệ nhân tạo (AI)''.
 
-Theo thông tin từ Viện Nghiên cứu phát triển du lịch (Cục Du lịch quốc gia Việt Nam), hiện nay, du lịch giới trẻ đang bùng nổ và là một ngách đầy triển vọng phát triển của ngành du lịch \cite{qdnd_genz}. Nhiều báo cáo và dữ liệu khẳng định đây là thế hệ giàu tiềm năng du lịch, họ đi du lịch để được trải nghiệm khám phá và thử thách bản thân, bên cạnh đó là tìm kiếm sự thư giãn và kết nối cá nhân. 
+Mặc dù nhu cầu là rất lớn, nhưng hạ tầng du lịch số hiện tại của Việt Nam vẫn tồn tại những ``điểm nghẽn'' khiến trải nghiệm của du khách chưa trọn vẹn:
 
-Đặc biệt, xu hướng du lịch tự túc của giới trẻ và thế hệ Z ngày càng phổ biến, đi cùng nhu cầu trải nghiệm mới mẻ, cá nhân hóa và tiết kiệm chi phí. Cùng có nhận định này với đối tượng cụ thể hơn là Gen Z (những người sinh ra từ năm 1997 đến năm 2012), ông Varun Grover, Giám đốc Quốc gia của booking.com tại Việt Nam cho biết: “Sở thích du lịch của Gen Z tại Việt Nam mang đến một cái nhìn thú vị về tương lai của ngành du lịch. Tại đó, công nghệ, giá trị và sự gắn kết trong mối quan hệ có mối liên hệ mật thiết với nhau. Đối với thế hệ này, du lịch không chỉ dừng lại ở việc khám phá những vùng đất mới mà còn là cách họ thể hiện bản sắc cá nhân với sự hỗ trợ của trí tuệ nhân tạo (AI) và các công cụ kỹ thuật số giúp tối ưu hóa trải nghiệm cá nhân hóa. Dù thế hệ này đang tìm kiếm những trải nghiệm chân thực, cân bằng giữa du lịch cá nhân và kết nối gia đình hay theo đuổi những giá trị độc đáo, Gen Z đang định hình một bức tranh du lịch mang tính cá nhân hóa và sống động hơn bao giờ hết” \cite{qdnd_genz}.
+\begin{itemize}
+    \item Quá tải và phân mảnh thông tin: Du khách hiện phải đối mặt với ``ma trận'' thông tin phân tán rải rác trên mạng xã hội, OTA và blog cá nhân. Việc thiếu một nền tảng tập trung và thiếu cấu trúc dữ liệu khiến việc lập kế hoạch trở nên tốn thời gian và gây mệt mỏi.
+    
+    \item Khủng hoảng niềm tin: Vấn nạn đánh giá giả (fake reviews) và các hoạt động quảng cáo trá hình (seeding) đang làm xói mòn lòng tin của người dùng. Du khách ngày càng khó phân biệt đâu là trải nghiệm thực tế, đâu là nội dung quảng cáo, dẫn đến rủi ro thất vọng khi trải nghiệm thực tế không như kỳ vọng.
+    
+    \item Sự rời rạc trong công cụ: Hiện chưa có một quy trình liền mạch. Người dùng phải dùng TikTok để tìm cảm hứng, dùng Excel để lên lịch, dùng Booking để đặt phòng và Google Maps để di chuyển. Sự thiếu liên kết này làm giảm đáng kể sự thuận tiện.
+    
+    \item Bất cập đối với doanh nghiệp vừa và nhỏ: Các đơn vị kinh doanh bản địa (homestay, quán ăn địa phương) - linh hồn của du lịch trải nghiệm - lại là nhóm yếu thế nhất về công nghệ. Họ thiếu công cụ để phân tích dữ liệu, quản lý đặt chỗ và chứng minh uy tín dịch vụ trước các đối thủ lớn.
+\end{itemize}
 
-Sự phát triển bùng nổ của ngành du lịch Việt Nam đi kèm với nhiều thách thức trong việc chuyển đổi số mà chưa có các biện pháp giải quyết những khó khăn, thách thức trong nhu cầu cải thiện hạ tầng và dịch vụ để thu hút và phát huy tiềm năng của tệp khách hàng này.
-
-Thứ nhất, sự quá tải và phân mảnh thông tin khiến du khách gặp khó khăn khi lập kế hoạch. Thông tin du lịch hiện nay được phân tán trên nhiều kênh như mạng xã hội, OTA (Online Travel Agency) hay các blog du lịch, nhưng thường thiếu cấu trúc, khó xác thực và ít được cá nhân hóa.
-
-Thứ hai, khủng hoảng niềm tin từ đánh giá giả và quảng cáo trá hình (“seeding”) đang làm xói mòn trải nghiệm của du khách. Không ít trường hợp du khách thất vọng khi thực tế khác xa so với thông tin quảng bá, gây lãng phí thời gian và chi phí.
-
-Thứ ba, các ứng dụng hiện tại chủ yếu giải quyết từng khâu: đặt phòng (Booking, Agoda), tìm địa điểm ăn uống (Foody), hoặc truyền cảm hứng (TikTok, Instagram). Người dùng chưa có công cụ liền mạch để đi từ khâu tìm cảm hứng → lập lịch trình tối ưu → đặt dịch vụ → chia sẻ trải nghiệm.
-
-Thứ tư, Doanh nghiệp lữ hành, dịch vụ nhà hàng, khách sạn, vận tải du lịch gặp nhiều hạn chế trong việc quảng bá dịch vụ, quản lý booking và tiếp nhận phản hồi khách hàng. Các homestay, quán cà phê, hay nhà hàng địa phương thiếu công cụ phân tích dữ liệu và xác thực thông tin, dẫn đến khó cạnh tranh với các tập đoàn lớn.
-
-Với mục tiêu góp phần vào sự tăng trưởng và chuyển đổi số trong ngành du lịch,
-Từ những vấn đề trên, xuất hiện nhu cầu cấp thiết về một hệ thống du lịch thông minh, cá nhân hóa trải nghiệm cho du khách, đồng thời hỗ trợ Doanh nghiệp lữ hành, dịch vụ nhà hàng, khách sạn, vận tải quản lý và phát triển bền vững.
+Từ những phân tích trên, có thể thấy một nhu cầu cấp thiết về một giải pháp công nghệ toàn diện hơn. Đó không chỉ là một công cụ đặt phòng hay bản đồ số đơn thuần, mà phải là một Hệ thống du lịch thông minh có khả năng thấu hiểu hành vi người dùng qua AI để cá nhân hóa gợi ý, đồng thời giải quyết bài toán niềm tin thông qua cơ chế đánh giá cộng đồng minh bạch. Đây chính là động lực thôi thúc chúng tôi thực hiện đề tài này, nhằm góp phần lấp đầy khoảng trống công nghệ và nâng cao năng lực cạnh tranh cho du lịch Việt Nam trong kỷ nguyên số.
 
 \subsection{Mục tiêu}
-Đề tài hướng đến xây dựng \textbf{Hệ thống Gợi ý hành trình du lịch thông minh dựa trên AI}, ứng dụng trong bối cảnh ngành du lịch Việt Nam đang bùng nổ và chuyển dịch mạnh mẽ sang mô hình du lịch thông minh. Hệ thống phát triển Recommendation Engine dựa trên ML/DL, ứng dụng NLP tiếng Việt để xử lý review và phản hồi được thiết kế để vượt qua hạn chế của các công cụ hiện tại trong việc lập kế hoạch du lịch như tương thích với sở thích cá nhân và ngân sách, hạn chế các địa điểm có đánh giá ảo. Hệ thống hứa hẹn sẽ có giao diện thân thiện, cho phép người dùng lên lịch trình, tuỳ chỉnh theo yêu cầu để từ đó đưa ra lịch trình phù hợp nhất với bản thân. Người dùng còn được đánh giá dịch vụ đã trải nghiệm và chia sẻ lịch trình, trải nghiệm của bản thân trên diễn đàn chung của hệ thống. Song song, hệ thống còn cung cấp công cụ hỗ trợ các doanh nghiệp quản lý đơn hàng, quản lý dịch vụ.
+Đề tài hướng đến xây dựng Hệ thống Gợi ý hành trình du lịch thông minh dựa trên AI, ứng dụng trong bối cảnh ngành du lịch Việt Nam đang bùng nổ và chuyển dịch mạnh mẽ sang mô hình du lịch thông minh. Hệ thống phát triển Recommendation Engine dựa trên ML/DL, ứng dụng NLP tiếng Việt để xử lý review và phản hồi được thiết kế để vượt qua hạn chế của các công cụ hiện tại trong việc lập kế hoạch du lịch như tương thích với sở thích cá nhân và ngân sách, hạn chế các địa điểm có đánh giá ảo. Hệ thống hứa hẹn sẽ có giao diện thân thiện, cho phép người dùng lên lịch trình, tuỳ chỉnh theo yêu cầu để từ đó đưa ra lịch trình phù hợp nhất với bản thân. Người dùng còn được đánh giá dịch vụ đã trải nghiệm và chia sẻ lịch trình, trải nghiệm của bản thân trên diễn đàn chung của hệ thống. Song song, hệ thống còn cung cấp công cụ hỗ trợ các doanh nghiệp quản lý đơn hàng, quản lý dịch vụ.
 
 \subsection{Phạm vi}
 Để đảm bảo dự án khả thi và tập trung vào việc giải quyết các mục tiêu cốt lõi trong khung thời gian và nguồn lực hạn chế, phạm vi của đề tài được xác định như sau
 \subsubsection{Phạm vi chức năng}
-Hệ thống tập trung vào việc xây dựng các chức năng chính sau:
+\subsubsection{Phạm vi Chức năng}
+Hệ thống TravelEZ được xây dựng nhằm phục vụ ba đối tượng chính: Khách du lịch (Traveler), Nhà cung cấp dịch vụ địa phương (SMEs) và Quản trị viên hệ thống. Các nhóm chức năng chính bao gồm:
+
 \begin{itemize}
-    \item \textbf{Cá nhân hóa gợi ý:} Gợi ý hành trình du lịch cá nhân dựa trên địa điểm du khách quan tâm, đề xuất các hoạt động giải trí phù hợp với sở thích, ngân sách và lịch sử tương tác của người dùng.
-    
+    \item Quản lý tài khoản và hồ sơ cá nhân hóa:
+    \begin{itemize}
+        \item Đăng ký/Đăng nhập đa phương thức (Email, Google, Facebook).
+        \item Quản lý hồ sơ cá nhân (Profile): Cập nhật thông tin cơ bản và đặc biệt là khảo sát sở thích du lịch (loại hình ưa thích, ngân sách, mức độ mạo hiểm, ẩm thực...) để làm đầu vào cho thuật toán gợi ý.
+    \end{itemize}
+
+    \item Lập kế hoạch du lịch thông minh:
+    \begin{itemize}
+        \item Tạo lịch trình tự động: Người dùng nhập điểm đến, thời gian, ngân sách và sở thích; hệ thống AI sẽ đề xuất lịch trình chi tiết từng ngày (ngày đi đâu, ăn gì, ở đâu).
+        \item Tùy chỉnh lịch trình: Giao diện trực quan cho phép người dùng thêm, xóa, đổi thứ tự địa điểm (drag-and-drop) và tối ưu hóa lại cung đường di chuyển trên bản đồ.
+        \item Quản lý chuyến đi: Lưu trữ lịch sử chuyến đi, chia sẻ lịch trình với bạn bè hoặc cộng đồng.
+    \end{itemize}
+
+    \item Hệ thống tìm kiếm và khám phá:
+    \begin{itemize}
+        \item Tìm kiếm thông minh theo từ khóa, danh mục (khách sạn, nhà hàng, điểm tham quan) hoặc theo khu vực địa lý.
+        \item Bộ lọc nâng cao theo giá cả, đánh giá, khoảng cách và tiện ích đi kèm.
+        \item Hiển thị thông tin chi tiết địa điểm, hình ảnh trực quan và bản đồ tích hợp.
+    \end{itemize}
+
+    \item Cộng đồng và đánh giá:
+    \begin{itemize}
+        \item Cho phép người dùng viết đánh giá, chấm điểm và đăng tải hình ảnh thực tế tại các địa điểm đã trải nghiệm.
+        \item Tương tác với cộng đồng: Bình luận, yêu thích và báo cáo các đánh giá vi phạm.
+    \end{itemize}
 \end{itemize}
 
 \subsubsection{Phạm vi Kỹ thuật}
-Các giới hạn và lựa chọn về mặt công nghệ được xác định như sau:
+Các giới hạn và lựa chọn về mặt công nghệ cho hệ thống TravelEZ được xác định như sau:
 \begin{itemize}
-    \item \textbf{Kiến trúc hệ thống}:Dự kiến xây dựng theo kiến trúc ứng dụng kiến trúc Client-Server cơ bản để đơn giản hóa việc phát triển và triển khai trong giai đoạn đầu.
-    \item \textbf{Công nghệ phát triển}:
+    \item Kiến trúc hệ thống:Dự kiến xây dựng theo kiến trúc ứng dụng kiến trúc Client-Server cơ bản để đơn giản hóa việc phát triển và triển khai trong giai đoạn đầu.
+    \item Công nghệ phát triển:
         \begin{itemize}
-            \item Frontend (Giao diện người dùng): 
-            \item Backend (Xử lý logic):
-            \item Cơ sở dữ liệu:
+            \item Frontend (Giao diện người dùng): Sử dụng Framework Next.js (React) để tối ưu hóa SEO và trải nghiệm người dùng (UX). Giao diện được thiết kế tương thích đa thiết bị với sự hỗ trợ của TailwindCSS và ShadcnUI.
+            \item Backend (Xử lý logic): Xây dựng trên nền tảng Java Spring Boot - một framework mạnh mẽ, ổn định, phù hợp với mô hình doanh nghiệp và xử lý nghiệp vụ phức tạp.
+            \item Cơ sở dữ liệu: Sử dụng PostgreSQL (RDBMS) để lưu trữ dữ liệu có cấu trúc (người dùng, địa điểm, lịch trình) và đảm bảo tính toàn vẹn dữ liệu.
         \end{itemize}
-    \item \textbf{Nền tảng triển khai}:
-    \item \textbf{Bảo mật}:
+    \item Nền tảng triển khai: Trong giai đoạn hiện tại, hệ thống tập trung phát triển nền tảng Web Application hoạt động tốt trên cả máy tính và trình duyệt di động. 
+    \item Bảo mật: Áp dụng các biện pháp bảo mật cơ bản như mã hóa mật khẩu, bảo vệ chống lại các lỗ hổng web phổ biến, phân quyền dựa trên vai trò. Không bao gồm các biện pháp kiểm thử xâm nhập (penetration testing) chuyên sâu.
 \end{itemize}
 
 \subsection{Ý nghĩa của dự án}
@@ -77,9 +99,3 @@ Không chỉ dừng lại ở ứng dụng thực tiễn, đề tài còn mang g
 \textbf{Chương 7 - Đánh giá}: Đánh giá toàn diện các kết quả đạt được, đối chiếu với các yêu cầu chức năng và phi chức năng đã đề ra ban đầu.
 
 \textbf{Chương 8 – Tổng kết}: Tóm tắt lại toàn bộ quá trình thực hiện đồ án, nêu bật những đóng góp chính, đồng thời đề xuất những hướng phát triển trong tương lai.
-
-% [1]https://vietnamtourism.gov.vn/post/42949
-% [2]https://vnexpress.net/du-lich-viet-nam-tang-truong-manh-nhat-the-gioi-4938099.html
-% [3]https://vietnamtourism.gov.vn/post/63900
-% [4]https://www.qdnd.vn/du-lich/cac-van-de/nhin-nhan-tuong-lai-du-lich-viet-qua-so-thich-cua-gioi-tre-802302
-% [5]https://www.qdnd.vn/du-lich/cac-van-de/nhin-nhan-tuong-lai-du-lich-viet-qua-so-thich-cua-gioi-tre-802302

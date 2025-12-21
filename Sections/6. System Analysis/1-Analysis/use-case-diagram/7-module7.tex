@@ -1,125 +1,125 @@
-\begin{longtable}{|p{4cm}|p{11cm}|}
-\caption{Mô tả Use Case: Gửi yêu cầu cải thiện lịch trình}
-\label{usecase-7-02} \\
-\hline
-\endfirsthead
-\caption[]{Mô tả Use Case: Gửi yêu cầu cải thiện lịch trình} \\
-\hline
-\endhead
-\textbf{Use case ID}       & UC-M7-02 \\ \hline
-\textbf{Tên Use case}      & Gửi yêu cầu cải thiện lịch trình \\ \hline
-\textbf{Các tác nhân}      & Provider \\ \hline
-\textbf{Mô tả}             & Provider cung cấp thông tin lịch trình hiện tại và các tiêu chí mong muốn. Hệ thống AI đọc dữ liệu trực tiếp, phân tích, chỉ ra điểm yếu và tự động tái cấu trúc để tạo ra một phiên bản lịch trình mới tối ưu hơn.\\ \hline
-\textbf{Trigger}    & Người dùng đã đăng nhập vào hệ thống.\\ \hline
-\textbf{Tiền điều kiện}    & Người dùng đã đăng nhập.\\ \hline
-\textbf{Hậu điều kiện}     & Một phiên bản lịch trình mới được tạo ra và lưu vào danh sách đề xuất. \\ \hline
-\textbf{Luồng sự kiện chính} & 
-\begin{tabular}[t]{@{}p{10.5cm}@{}}
-1. Provider truy cập tab "Gợi ý".\\
-2. Provider nhấn "Tạo yêu cầu mới".\\
-3. Provider nhập thông tin lịch trình hiện tại và các tiêu chí mong muốn\\
-4. Provider nhấn nút "Phân tích \& Tối ưu hóa".\\
-5. Hệ thống gửi dữ liệu đến Module AI để xử lý.\\
-6. Hệ thống trả về kết quả gồm 2 phần:\\
-- Phần phân tích: Báo cáo điểm mạnh/điểm yếu của lịch trình cũ.\\
-- Phần giải pháp: Hiển thị lịch trình mới đã được sắp xếp lại, thay thế các điểm chưa hợp lý bằng các gợi ý tốt hơn.\\
-7. Provider xem xét và có thể chọn "Lưu bản nháp" \space hoặc "Áp dụng ngay".
-\end{tabular} \\ \hline
-\textbf{Luồng rẽ nhánh} &
-\begin{tabular}[t]{@{}p{10.5cm}@{}}
-\textbf{A1: So sánh trực quan}\\
-1. Tại bước 6, Provider chọn chế độ "So sánh".\\
-2. Hệ thống hiển thị giao diện chia đôi màn hình: bên trái là lịch trình gốc, bên phải là lịch trình gợi ý.\\
-3. Các thay đổi được làm nổi bật bằng màu khác biệt để dễ nhận biết.\\
-\textbf{A2: Chỉnh sửa lại gợi ý}\\
-1. Provider thấy gợi ý của AI tốt nhưng muốn sửa lại một điểm nhỏ.\\
-2. Provider nhấn "Chỉnh sửa kết quả" \space trực tiếp trên giao diện gợi ý.\\
-3. Hệ thống cho phép sửa đổi thủ công trước khi lưu.
-\end{tabular} \\ \hline
-\textbf{Luồng ngoại lệ} &
-\begin{tabular}[t]{@{}p{10.5cm}@{}}
-\textbf{E1: Không tìm thấy giải pháp tối ưu}\\
-AI nhận thấy các ràng buộc của Provider mâu thuẫn. Hệ thống thông báo: "Không thể tạo lịch trình đáp ứng đủ tất cả tiêu chí."
-\end{tabular} \\
-\hline
-\end{longtable}
-
-\begin{longtable}{|p{4cm}|p{11cm}|}
-\caption{Mô tả Use Case: Xem lịch sử yêu cầu}
-\label{usecase-7-03} \\
-\hline
-\endfirsthead
-\caption[]{Mô tả Use Case: Xem lịch sử yêu cầu} \\
-\hline
-\endhead
-\textbf{Use case ID}       & UC-M7-03 \\ \hline
-\textbf{Tên Use case}      & Xem lịch sử yêu cầu \\ \hline
-\textbf{Các tác nhân}      & Provider \\ \hline
-\textbf{Mô tả}             & Xem lại danh sách các lần đã nhờ AI tư vấn trước đó.\\ \hline
-\textbf{Tiền điều kiện}    & Provider đã đăng nhập.\\ \hline
-\textbf{Hậu điều kiện}     & Danh sách lịch sử yêu cầu được hiển thị. \\ \hline
-\textbf{Luồng sự kiện chính} & 
-\begin{tabular}[t]{@{}p{10.5cm}@{}}
-1. Provider chọn mục "Lịch sử tư vấn".\\
-2. Hệ thống lấy danh sách các yêu cầu thuộc về Provider này.\\
-3. Hệ thống hiển thị danh sách các yêu cầu.\\
-4. Provider có thể thực hiện các hành động mở rộng (Xem chi tiết, Xóa) từ danh sách này.\\
-\end{tabular} \\
-\hline
-\end{longtable}
-
 % \begin{longtable}{|p{4cm}|p{11cm}|}
-% \caption{Mô tả Use Case: Xem chi tiết nội dung yêu cầu}
-% \label{usecase-7-04} \\
+% \caption{Mô tả Use Case: Gửi yêu cầu cải thiện lịch trình}
+% \label{usecase-7-02} \\
 % \hline
 % \endfirsthead
-% \caption[]{Mô tả Use Case: Xem chi tiết nội dung yêu cầu} \\
+% \caption[]{Mô tả Use Case: Gửi yêu cầu cải thiện lịch trình} \\
 % \hline
 % \endhead
-% \textbf{Use case ID}       & UC-M7-04 \\ \hline
-% \textbf{Tên Use case}      & Xem chi tiết nội dung yêu cầu \\ \hline
+% \textbf{Use case ID}       & UC-M7-02 \\ \hline
+% \textbf{Tên Use case}      & Gửi yêu cầu cải thiện lịch trình \\ \hline
 % \textbf{Các tác nhân}      & Provider \\ \hline
-% \textbf{Mô tả}             & Xem lại toàn bộ nội dung input và output của một yêu cầu trong quá khứ.\\ \hline
-% \textbf{Tiền điều kiện}    & Provider đang ở màn hình lịch sử yêu cầu (UC-M7-03).\\ \hline
-% \textbf{Hậu điều kiện}     & Nội dung chi tiết được hiển thị. \\ \hline
+% \textbf{Mô tả}             & Provider cung cấp thông tin lịch trình hiện tại và các tiêu chí mong muốn. Hệ thống AI đọc dữ liệu trực tiếp, phân tích, chỉ ra điểm yếu và tự động tái cấu trúc để tạo ra một phiên bản lịch trình mới tối ưu hơn.\\ \hline
+% \textbf{Trigger}    & Người dùng đã đăng nhập vào hệ thống.\\ \hline
+% \textbf{Tiền điều kiện}    & Người dùng đã đăng nhập.\\ \hline
+% \textbf{Hậu điều kiện}     & Một phiên bản lịch trình mới được tạo ra và lưu vào danh sách đề xuất. \\ \hline
 % \textbf{Luồng sự kiện chính} & 
 % \begin{tabular}[t]{@{}p{10.5cm}@{}}
-% 1. Từ danh sách lịch sử, Provider nhấn vào một dòng yêu cầu cụ thể.\\
-% 2. Hệ thống tải dữ liệu chi tiết của phiên tư vấn đó.\\
-% 3. Hệ thống hiển thị giao diện chia đôi hoặc trên dưới:\\
-% - Yêu cầu gốc: Lộ trình và mục tiêu Provider đã nhập.\\
-% - Kết quả AI: Các gợi ý đã được tạo ra lúc đó.\\
-% 4. Provider có thể tham khảo lại hoặc sao chép nội dung gợi ý.
-% \end{tabular} \\
-% \hline
-% \end{longtable}
-
-% \begin{longtable}{|p{4cm}|p{11cm}|}
-% \caption{Mô tả Use Case: Xóa yêu cầu}
-% \label{usecase-7-05} \\
-% \hline
-% \endfirsthead
-% \caption[]{Mô tả Use Case: Xóa yêu cầu} \\
-% \hline
-% \endhead
-% \textbf{Use case ID}       & UC-M7-04 \\ \hline
-% \textbf{Tên Use case}      & Xóa yêu cầu \\ \hline
-% \textbf{Các tác nhân}      & Provider \\ \hline
-% \textbf{Mô tả}             & Xóa bỏ một bản ghi lịch sử tư vấn không còn cần thiết.\\ \hline
-% \textbf{Tiền điều kiện}    & Provider đang ở màn hình lịch sử yêu cầu (UC-M7-03).\\ \hline
-% \textbf{Hậu điều kiện}     & Bản ghi bị xóa khỏi CSDL. \\ \hline
-% \textbf{Luồng sự kiện chính} & 
-% \begin{tabular}[t]{@{}p{10.5cm}@{}}
-% 1. Tại dòng yêu cầu muốn xóa, Provider nhấn nút "Xóa".\\
-% 2. Hệ thống hiển thị popup xác nhận: "Bạn có chắc chắn muốn xóa lịch sử tư vấn này không?".\\
-% 3. Provider nhấn "Xác nhận xóa".\\
-% 4. Hệ thống thực hiện xóa bản ghi trong CSDL.\\
-% 5. Hệ thống tải lại danh sách lịch sử mới và thông báo "Đã xóa thành công".
+% 1. Provider truy cập tab "Gợi ý".\\
+% 2. Provider nhấn "Tạo yêu cầu mới".\\
+% 3. Provider nhập thông tin lịch trình hiện tại và các tiêu chí mong muốn\\
+% 4. Provider nhấn nút "Phân tích \& Tối ưu hóa".\\
+% 5. Hệ thống gửi dữ liệu đến Module AI để xử lý.\\
+% 6. Hệ thống trả về kết quả gồm 2 phần:\\
+% - Phần phân tích: Báo cáo điểm mạnh/điểm yếu của lịch trình cũ.\\
+% - Phần giải pháp: Hiển thị lịch trình mới đã được sắp xếp lại, thay thế các điểm chưa hợp lý bằng các gợi ý tốt hơn.\\
+% 7. Provider xem xét và có thể chọn "Lưu bản nháp" \space hoặc "Áp dụng ngay".
 % \end{tabular} \\ \hline
 % \textbf{Luồng rẽ nhánh} &
 % \begin{tabular}[t]{@{}p{10.5cm}@{}}
-% \textbf{A1: Hủy xóa:}\\
-% Tại bước 3, Provider nhấn "Hủy" $\rightarrow$ Popup đóng lại, không có gì thay đổi.
+% \textbf{A1: So sánh trực quan}\\
+% 1. Tại bước 6, Provider chọn chế độ "So sánh".\\
+% 2. Hệ thống hiển thị giao diện chia đôi màn hình: bên trái là lịch trình gốc, bên phải là lịch trình gợi ý.\\
+% 3. Các thay đổi được làm nổi bật bằng màu khác biệt để dễ nhận biết.\\
+% \textbf{A2: Chỉnh sửa lại gợi ý}\\
+% 1. Provider thấy gợi ý của AI tốt nhưng muốn sửa lại một điểm nhỏ.\\
+% 2. Provider nhấn "Chỉnh sửa kết quả" \space trực tiếp trên giao diện gợi ý.\\
+% 3. Hệ thống cho phép sửa đổi thủ công trước khi lưu.
+% \end{tabular} \\ \hline
+% \textbf{Luồng ngoại lệ} &
+% \begin{tabular}[t]{@{}p{10.5cm}@{}}
+% \textbf{E1: Không tìm thấy giải pháp tối ưu}\\
+% AI nhận thấy các ràng buộc của Provider mâu thuẫn. Hệ thống thông báo: "Không thể tạo lịch trình đáp ứng đủ tất cả tiêu chí."
 % \end{tabular} \\
 % \hline
 % \end{longtable}
+
+% \begin{longtable}{|p{4cm}|p{11cm}|}
+% \caption{Mô tả Use Case: Xem lịch sử yêu cầu}
+% \label{usecase-7-03} \\
+% \hline
+% \endfirsthead
+% \caption[]{Mô tả Use Case: Xem lịch sử yêu cầu} \\
+% \hline
+% \endhead
+% \textbf{Use case ID}       & UC-M7-03 \\ \hline
+% \textbf{Tên Use case}      & Xem lịch sử yêu cầu \\ \hline
+% \textbf{Các tác nhân}      & Provider \\ \hline
+% \textbf{Mô tả}             & Xem lại danh sách các lần đã nhờ AI tư vấn trước đó.\\ \hline
+% \textbf{Tiền điều kiện}    & Provider đã đăng nhập.\\ \hline
+% \textbf{Hậu điều kiện}     & Danh sách lịch sử yêu cầu được hiển thị. \\ \hline
+% \textbf{Luồng sự kiện chính} & 
+% \begin{tabular}[t]{@{}p{10.5cm}@{}}
+% 1. Provider chọn mục "Lịch sử tư vấn".\\
+% 2. Hệ thống lấy danh sách các yêu cầu thuộc về Provider này.\\
+% 3. Hệ thống hiển thị danh sách các yêu cầu.\\
+% 4. Provider có thể thực hiện các hành động mở rộng (Xem chi tiết, Xóa) từ danh sách này.\\
+% \end{tabular} \\
+% \hline
+% \end{longtable}
+
+% % \begin{longtable}{|p{4cm}|p{11cm}|}
+% % \caption{Mô tả Use Case: Xem chi tiết nội dung yêu cầu}
+% % \label{usecase-7-04} \\
+% % \hline
+% % \endfirsthead
+% % \caption[]{Mô tả Use Case: Xem chi tiết nội dung yêu cầu} \\
+% % \hline
+% % \endhead
+% % \textbf{Use case ID}       & UC-M7-04 \\ \hline
+% % \textbf{Tên Use case}      & Xem chi tiết nội dung yêu cầu \\ \hline
+% % \textbf{Các tác nhân}      & Provider \\ \hline
+% % \textbf{Mô tả}             & Xem lại toàn bộ nội dung input và output của một yêu cầu trong quá khứ.\\ \hline
+% % \textbf{Tiền điều kiện}    & Provider đang ở màn hình lịch sử yêu cầu (UC-M7-03).\\ \hline
+% % \textbf{Hậu điều kiện}     & Nội dung chi tiết được hiển thị. \\ \hline
+% % \textbf{Luồng sự kiện chính} & 
+% % \begin{tabular}[t]{@{}p{10.5cm}@{}}
+% % 1. Từ danh sách lịch sử, Provider nhấn vào một dòng yêu cầu cụ thể.\\
+% % 2. Hệ thống tải dữ liệu chi tiết của phiên tư vấn đó.\\
+% % 3. Hệ thống hiển thị giao diện chia đôi hoặc trên dưới:\\
+% % - Yêu cầu gốc: Lộ trình và mục tiêu Provider đã nhập.\\
+% % - Kết quả AI: Các gợi ý đã được tạo ra lúc đó.\\
+% % 4. Provider có thể tham khảo lại hoặc sao chép nội dung gợi ý.
+% % \end{tabular} \\
+% % \hline
+% % \end{longtable}
+
+% % \begin{longtable}{|p{4cm}|p{11cm}|}
+% % \caption{Mô tả Use Case: Xóa yêu cầu}
+% % \label{usecase-7-05} \\
+% % \hline
+% % \endfirsthead
+% % \caption[]{Mô tả Use Case: Xóa yêu cầu} \\
+% % \hline
+% % \endhead
+% % \textbf{Use case ID}       & UC-M7-04 \\ \hline
+% % \textbf{Tên Use case}      & Xóa yêu cầu \\ \hline
+% % \textbf{Các tác nhân}      & Provider \\ \hline
+% % \textbf{Mô tả}             & Xóa bỏ một bản ghi lịch sử tư vấn không còn cần thiết.\\ \hline
+% % \textbf{Tiền điều kiện}    & Provider đang ở màn hình lịch sử yêu cầu (UC-M7-03).\\ \hline
+% % \textbf{Hậu điều kiện}     & Bản ghi bị xóa khỏi CSDL. \\ \hline
+% % \textbf{Luồng sự kiện chính} & 
+% % \begin{tabular}[t]{@{}p{10.5cm}@{}}
+% % 1. Tại dòng yêu cầu muốn xóa, Provider nhấn nút "Xóa".\\
+% % 2. Hệ thống hiển thị popup xác nhận: "Bạn có chắc chắn muốn xóa lịch sử tư vấn này không?".\\
+% % 3. Provider nhấn "Xác nhận xóa".\\
+% % 4. Hệ thống thực hiện xóa bản ghi trong CSDL.\\
+% % 5. Hệ thống tải lại danh sách lịch sử mới và thông báo "Đã xóa thành công".
+% % \end{tabular} \\ \hline
+% % \textbf{Luồng rẽ nhánh} &
+% % \begin{tabular}[t]{@{}p{10.5cm}@{}}
+% % \textbf{A1: Hủy xóa:}\\
+% % Tại bước 3, Provider nhấn "Hủy" $\rightarrow$ Popup đóng lại, không có gì thay đổi.
+% % \end{tabular} \\
+% % \hline
+% % \end{longtable}

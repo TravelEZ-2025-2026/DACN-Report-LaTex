@@ -70,6 +70,13 @@ Quy trình này cho phép nhà cung cấp dịch vụ tối ưu hóa các lịch
     \caption{Use case diagram cho tổng quan hệ thống}
     \label{fig:use_case_tong_quan}
 \end{figure}
+Dựa trên Hình \ref{fig:use_case_tong_quan}, sơ đồ mô tả các tương tác chính giữa các tác nhân và hệ thống, xác định rõ phạm vi chức năng của ứng dụng. Hệ thống được thiết kế xoay quanh ba nhóm đối tượng chính:
+
+\begin{itemize}
+    \item \textbf{Khách du lịch:} Là nhóm người dùng cuối, thực hiện các chức năng về tìm kiếm, khám phá nội dung, xây dựng cộng đồng và quản lý hành trình cá nhân.
+    \item \textbf{Nhà cung cấp dịch vụ:} Tập trung vào việc khai thác dữ liệu, xem phân tích xu hướng thị trường và đề xuất cải thiện lịch trình để tối ưu hóa dịch vụ.
+    \item \textbf{Quản trị viên hệ thống:} Đóng vai trò kiểm soát toàn bộ hệ thống, từ quản lý người dùng, kiểm duyệt nội dung đến quản trị kỹ thuật vận hành.
+\end{itemize}
 
 % --- 2. MODULE 1: GỢI Ý LỘ TRÌNH ---
 \subsubsubsection{Module 1: Gợi ý lộ trình}
@@ -81,6 +88,12 @@ Quy trình này cho phép nhà cung cấp dịch vụ tối ưu hóa các lịch
     \label{fig:use_case_module_1}
 \end{figure}
 \input{Sections/6. System Analysis/1-Analysis/use-case-diagram/1-module1.tex}
+\textbf{Module 1: Gợi ý lộ trình} (Hình \ref{fig:use_case_module_1}) cung cấp các chức năng cho phép khách du lịch tương tác và thiết lập lộ trình du lịch. Các đặc điểm chính của module bao gồm:
+
+\begin{itemize}
+    \item \textbf{Quản lý lộ trình:} Người dùng có quyền thực hiện các thao tác cơ bản trên dữ liệu lộ trình cá nhân, bao gồm: tạo mới, điều chỉnh lộ trình, lưu trữ và xóa bỏ.
+    \item \textbf{Mở rộng dịch vụ:} Chức năng đề xuất dịch vụ và tour tham khảo được thiết kế dưới dạng quan hệ $<<extend>>$ từ Use Case tạo lộ trình. Tính năng này hỗ trợ bổ sung thông tin từ hệ thống để tối ưu hóa kế hoạch cho người dùng.
+\end{itemize}
 
 
 % --- 3. MODULE 2: QUẢN LÝ LỘ TRÌNH ---
@@ -93,6 +106,12 @@ Quy trình này cho phép nhà cung cấp dịch vụ tối ưu hóa các lịch
     \label{fig:use_case_module_2}
 \end{figure}
 \input{Sections/6. System Analysis/1-Analysis/use-case-diagram/2-module2.tex}
+\textbf{Module 2: Quản lý lộ trình} (Hình \ref{fig:use_case_module_2}) tập trung vào các tính năng tương tác và đồng bộ dữ liệu lộ trình cho khách du lịch. Các chức năng trọng tâm bao gồm:
+
+\begin{itemize}
+    \item \textbf{Tương tác và Chia sẻ:} Cho phép người dùng chia sẻ lộ trình cá nhân và tiếp nhận các danh sách lộ trình được chia sẻ từ người dùng khác. Chức năng xem chi tiết lộ trình được thiết lập dưới dạng quan hệ $<<extend>>$ để hỗ trợ truy xuất thông tin chuyên sâu.
+    \item \textbf{Đồng bộ hệ thống:} Cung cấp khả năng hủy lộ trình và tích hợp dữ liệu với Google Calendar, giúp tối ưu hóa việc quản lý thời gian trên các nền tảng ngoại vi.
+\end{itemize}
 
 
 % --- 4. MODULE 3: TÌM KIẾM VÀ KHÁM PHÁ NỘI DUNG ---
@@ -105,6 +124,7 @@ Quy trình này cho phép nhà cung cấp dịch vụ tối ưu hóa các lịch
     \label{fig:use_case_module_3}
 \end{figure}
 \input{Sections/6. System Analysis/1-Analysis/use-case-diagram/3-module3.tex}
+\textbf{Module 3: Tìm kiếm và khám phá nội dung} (Hình \ref{fig:use_case_module_3}) cung cấp hệ thống chức năng giúp người dùng khai thác kho dữ liệu du lịch. Module cho phép khách hàng thực hiện các tác vụ tra cứu, lọc và sắp xếp nội dung theo nhu cầu cá nhân. Bên cạnh đó, các tính năng quản lý bộ sưu tập và theo dõi chủ đề/địa điểm được thiết lập nhằm tăng cường khả năng lưu trữ thông tin dài hạn. Các quan hệ $<<extend>>$ được sử dụng để tối ưu hóa việc xem chi tiết và tùy chỉnh nội dung hiển thị mà không làm gián đoạn luồng trải nghiệm chính.
 
 
 % --- 5. MODULE 4: XÂY DỰNG CỘNG ĐỒNG VÀ NỘI DUNG ---
@@ -117,6 +137,7 @@ Quy trình này cho phép nhà cung cấp dịch vụ tối ưu hóa các lịch
     \label{fig:use_case_module_4}
 \end{figure}
 \input{Sections/6. System Analysis/1-Analysis/use-case-diagram/4-module4.tex}
+\textbf{Module 4: Xây dựng cộng đồng và nội dung} (Hình \ref{fig:use_case_module_4}) thiết lập các công cụ tương tác xã hội giữa những người dùng trên hệ thống. Trọng tâm của module là khả năng quản lý nội dung cá nhân thông qua việc tạo, chỉnh sửa và điều phối các bài đánh giá (review) hoặc bài viết (blog). Bên cạnh đó, hệ thống hỗ trợ các tính năng kết nối cộng đồng như theo dõi, kết bạn, và trao đổi thông tin trực tiếp qua hệ thống tin nhắn (cá nhân và nhóm). Các cơ chế báo cáo nội dung vi phạm cũng được tích hợp nhằm duy trì chất lượng dữ liệu và môi trường tương tác an toàn.
 
 
 % --- 6. MODULE 5: QUẢN LÝ NỘI DUNG ---
@@ -129,6 +150,7 @@ Quy trình này cho phép nhà cung cấp dịch vụ tối ưu hóa các lịch
     \label{fig:use_case_module_5}
 \end{figure}
 \input{Sections/6. System Analysis/1-Analysis/use-case-diagram/5-module5.tex}
+\textbf{Module 5: Quản lý nội dung} (Hình \ref{fig:use_case_module_5}) thiết lập quy trình kiểm soát thông tin dành cho \textbf{Quản trị viên hệ thống}. Module tập trung vào cơ chế xử lý các vi phạm nội dung dựa trên báo cáo từ người dùng hoặc hệ thống tự động gắn cờ. Các chức năng chính bao gồm việc thẩm định chi tiết vi phạm, thực hiện các thao tác quản trị như ẩn hoặc xóa nội dung, và ghi lại lịch sử vi phạm để theo dõi hành vi người dùng. Ngoài ra, module còn cung cấp bộ công cụ quản lý bộ lọc từ khóa (thêm, sửa, xóa) nhằm chủ động ngăn chặn các nội dung không phù hợp ngay từ giai đoạn khởi tạo.
 
 
 % --- 7. MODULE 6: PHÂN TÍCH DỮ LIỆU VÀ XU HƯỚNG THỊ TRƯỜNG ---
@@ -141,6 +163,7 @@ Quy trình này cho phép nhà cung cấp dịch vụ tối ưu hóa các lịch
     \label{fig:use_case_module_6}
 \end{figure}
 \input{Sections/6. System Analysis/1-Analysis/use-case-diagram/6-module6.tex}
+\textbf{Module 6: Phân tích dữ liệu và xu hướng thị trường} (Hình \ref{fig:use_case_module_6}) cung cấp công cụ khai thác thông tin chiến lược dành cho \textbf{Nhà cung cấp dịch vụ} và \textbf{Quản trị viên hệ thống}. Chức năng cốt lõi tập trung vào việc hiển thị bảng điều khiển (Dashboard) tổng quan về xu hướng thị trường, bao gồm các điểm đến phổ biến và chủ đề đang được quan tâm. Để hỗ trợ việc khai thác sâu, hệ thống tích hợp các quan hệ $<<extend>>$ cho phép lọc dữ liệu theo tiêu chí cụ thể và xuất báo cáo định dạng số liệu. Điều này giúp các bên liên quan đưa ra quyết định dựa trên dữ liệu thực tế nhằm tối ưu hóa hoạt động kinh doanh và quản lý.
 
 
 % --- 8. MODULE 7: GỢI Ý CẢI THIỆN LỊCH TRÌNH ---
@@ -153,6 +176,7 @@ Quy trình này cho phép nhà cung cấp dịch vụ tối ưu hóa các lịch
     \label{fig:use_case_module_7}
 \end{figure}
 \input{Sections/6. System Analysis/1-Analysis/use-case-diagram/7-module7.tex}
+\textbf{Module 7: Gợi ý cải thiện lịch trình} (Hình \ref{fig:use_case_module_7}) thiết lập kênh tương tác chuyên sâu giữa \textbf{Nhà cung cấp dịch vụ} và hệ thống quản trị. Module cho phép nhà cung cấp chủ động gửi các yêu cầu đề xuất nhằm tối ưu hóa hoặc bổ sung các dịch vụ mới vào các lịch trình sẵn có trên nền tảng. Chức năng quản lý yêu cầu được tích hợp thông qua việc xem lịch sử, cho phép truy xuất chi tiết nội dung hoặc thực hiện thao tác xóa khi cần thiết dựa trên các quan hệ $<<extend>>$. Quy trình này không chỉ nâng cao chất lượng dữ liệu lộ trình mà còn tạo điều kiện cho các đơn vị cung ứng tiếp cận khách hàng mục tiêu một cách hiệu quả.
 
 
 % --- 9. MODULE 8: QUẢN TRỊ NGƯỜI DÙNG ---
@@ -165,6 +189,13 @@ Quy trình này cho phép nhà cung cấp dịch vụ tối ưu hóa các lịch
     \label{fig:use_case_module_8}
 \end{figure}
 \input{Sections/6. System Analysis/1-Analysis/use-case-diagram/8-module8.tex}
+\textbf{Module 8: Quản trị người dùng} (Hình \ref{fig:use_case_module_8}) thiết lập nền tảng định danh và phân quyền cho toàn bộ hệ thống. Các nhóm chức năng chính bao gồm:
+
+\begin{itemize}
+    \item \textbf{Người dùng chung:} Thực hiện các tác vụ cơ bản về tài khoản như đăng ký, đăng nhập (Google/mật khẩu), đăng xuất và khôi phục mật khẩu.
+    \item \textbf{Người dùng đã xác thực:} Quản lý hồ sơ cá nhân thông qua việc xem và cập nhật thông tin chi tiết, đồng thời nhận thông báo về trạng thái tài khoản.
+    \item \textbf{Quản trị viên (Admin/Super Admin):} Thực hiện các nghiệp vụ quản lý cấp cao bao gồm: tìm kiếm người dùng, xử lý tài khoản vi phạm (khóa/mở khóa) và phân quyền hệ thống.
+\end{itemize}
 
 
 % --- 10. MODULE 9: QUẢN TRỊ HỆ THỐNG ---
@@ -177,3 +208,4 @@ Quy trình này cho phép nhà cung cấp dịch vụ tối ưu hóa các lịch
     \label{fig:use_case_module_9}
 \end{figure}
 \input{Sections/6. System Analysis/1-Analysis/use-case-diagram/9-module9.tex}
+\textbf{Module 9: Quản trị hệ thống} (Hình \ref{fig:use_case_module_9}) đảm nhiệm vai trò duy trì tính ổn định của dữ liệu và luồng thông tin giữa các thực thể. \textbf{Quản trị viên hệ thống} thực hiện các tác vụ then chốt như quản lý danh mục hệ thống (địa điểm, chủ đề) thông qua các chức năng thêm, xóa, sửa và xem chi tiết nội dung. Đối với các tác nhân người dùng như \textbf{Khách du lịch} và \textbf{Nhà cung cấp}, module cung cấp cơ chế tự động hóa việc nhận thông báo về biến động dữ liệu đã theo dõi và ghi nhận nhật ký hoạt động cá nhân. Các quan hệ $<<extend>>$ được thiết lập nhằm hỗ trợ truy xuất chi tiết nhật ký và nội dung danh mục theo nhu cầu quản lý.

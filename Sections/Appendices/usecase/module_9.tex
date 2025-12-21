@@ -1,6 +1,34 @@
 \subsubsection{Module 9: Quản trị hệ thống}
 
 \begin{longtable}{|p{4cm}|p{11cm}|}
+\caption{Mô tả Use Case: Nhận thông báo từ các nội dung theo dõi}
+\label{usecase-9-01} \\
+\hline
+\endfirsthead
+\caption[]{Mô tả Use Case: Nhận thông báo từ các nội dung theo dõi} \\
+\hline
+\endhead
+\textbf{Use case ID}       & UC-M9-01 \\ \hline
+\textbf{Tên Use case}      & Nhận thông báo về các địa điểm, bài viết người dùng đã theo dõi \\ \hline
+\textbf{Các tác nhân}      & Traveler \\ \hline
+\textbf{Mô tả}             & Nhận thông báo khi có cập nhật mới từ các mục mà người dùng đã theo dõi.\\ \hline
+\textbf{Tiền điều kiện}    &
+\begin{tabular}[t]{@{}p{10.5cm}@{}}
+    1. Người dùng đã đăng nhập vào hệ thống.\\
+    2. Người dùng đã theo dõi ít nhất một đối tượng.
+    \end{tabular} \\ \hline
+\textbf{Hậu điều kiện}     & Hiển thị danh sách thông báo về các nội dung người dùng đã theo dõi. \\ \hline
+\textbf{Luồng sự kiện chính} & 
+\begin{tabular}[t]{@{}p{10.5cm}@{}}
+1. Hệ thống kiểm tra định kỳ hoặc nhận sự kiện mới (bài viết mới, địa điểm cập nhật, người dùng đăng bài).\\
+2. Hệ thống tạo nội dung thông báo tương ứng.\\
+3. Hệ thống gửi thông báo đến người dùng.\\
+4. Người dùng xem thông báo trong trung tâm thông báo.
+\end{tabular} \\
+\hline
+\end{longtable}
+
+\begin{longtable}{|p{4cm}|p{11cm}|}
 \caption{Mô tả Use Case: Xem nhật ký hoạt động của cá nhân}
 \label{usecase-9-02} \\
 \hline
@@ -43,6 +71,55 @@
 2. Nhập tiêu chí lọc.\\
 3. Hệ thống truy xuất và hiển thị kết quả.\\
 4. Quản trị viên có thể xem chi tiết hoạt động của người dùng.
+\end{tabular} \\
+\hline
+\end{longtable}
+
+\begin{longtable}{|p{4cm}|p{11cm}|}
+\caption{Mô tả Use Case: Xem danh sách danh mục của hệ thống (Địa điểm, chủ đề)}
+\label{usecase-9-04} \\
+\hline
+\endfirsthead
+\caption[]{Mô tả Use Case: Xem danh sách danh mục của hệ thống (Địa điểm, chủ đề)} \\
+\hline
+\endhead
+\textbf{Use case ID}       & UC-M9-04 \\ \hline
+\textbf{Tên Use case}      & Xem danh sách danh mục của hệ thống (Địa điểm, chủ đề) \\ \hline
+\textbf{Các tác nhân}      & Admin \\ \hline
+\textbf{Mô tả}             & Quản trị viên xem danh sách danh mục của hệ thống (Địa điểm, chủ đề).\\ \hline
+\textbf{Tiền điều kiện}    & Quản trị viên đã đăng nhập vào hệ thống. \\ \hline
+\textbf{Hậu điều kiện}     & Hiển thị danh sách danh mục của hệ thống (Địa điểm, chủ đề). \\ \hline
+\textbf{Luồng sự kiện chính} & 
+\begin{tabular}[t]{@{}p{10.5cm}@{}}
+1. Mở phần "Danh mục hệ thống".\\
+2. Hệ thống hiển thị danh sách các nội dung theo từng danh mục.\\
+3. Có thể lọc hoặc sắp xếp danh sách.\\
+4. Chọn danh mục để xem chi tiết hoặc chuyển sang thao tác khác (thêm, xóa, sửa).
+\end{tabular} \\
+\hline
+\end{longtable}
+
+\begin{longtable}{|p{4cm}|p{11cm}|}
+\caption{Mô tả Use Case: Thêm, xóa, sửa nội dung của danh mục}
+\label{usecase-9-05} \\
+\hline
+\endfirsthead
+\caption[]{Mô tả Use Case: Thêm, xóa, sửa nội dung của danh mục} \\
+\hline
+\endhead
+\textbf{Use case ID}       & UC-M9-05 \\ \hline
+\textbf{Tên Use case}      & Thêm, xóa, sửa nội dung của danh mục \\ \hline
+\textbf{Các tác nhân}      & Admin \\ \hline
+\textbf{Mô tả}             & Quản trị viên thêm, xóa, sửa nội dung của danh mục.\\ \hline
+\textbf{Tiền điều kiện}    & Quản trị viên đã đăng nhập vào hệ thống. \\ \hline
+\textbf{Hậu điều kiện}     & Nội dung của danh mục được thêm, xóa, sửa thành công. \\ \hline
+\textbf{Luồng sự kiện chính} & 
+\begin{tabular}[t]{@{}p{10.5cm}@{}}
+1. Quản trị viên chọn thao tác: thêm, sửa, hoặc xóa nội dung theo từng danh mục.\\
+2. Hệ thống hiển thị form nhập thông tin hoặc xác nhận thao tác.\\
+3. Quản trị viên nhập dữ liệu hợp lệ (tên, mô tả, hình ảnh, trạng thái…).\\
+4. Hệ thống kiểm tra dữ liệu và lưu thay đổi.\\
+5. Thông báo kết quả thao tác.    
 \end{tabular} \\
 \hline
 \end{longtable}

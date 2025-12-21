@@ -1,232 +1,232 @@
-% --- //////////////////////////////////////////////////////////////// ---
-% MODULE 1
-
-\renewcommand{\arraystretch}{1.2}
-\begin{longtable}{|p{4cm}|p{11cm}|}
-\caption{Mô tả Use Case: Tạo lộ trình}
-\label{usecase-1-01} \\
-\hline
-\endfirsthead
-\caption[]{Mô tả Use Case: Tạo lộ trình} \\
-\hline
-\endhead
-\textbf{Use case ID}       & UC-M1-01 \\ \hline
-\textbf{Tên Use case}      & Tạo lộ trình \\ \hline
-\textbf{Các tác nhân}      & Traveler \\ \hline
-\textbf{Mô tả}             & Traveler nhập các thông tin mong muốn cho chuyến đi (địa điểm, thời gian, ngân sách, sở thích...). Hệ thống AI tiếp nhận, phân tích và tự động tạo ra một bản lộ trình du lịch chi tiết phù hợp nhất. \\ \hline
-\textbf{Tiền điều kiện}    & Traveler đã đăng nhập và đang ở màn hình "Tạo lộ trình" \space (Dashboard hoặc Home). \\ \hline
-\textbf{Hậu điều kiện}     & Một bản nháp lộ trình hoàn chỉnh được hiển thị trên màn hình, bao gồm danh sách địa điểm và thời gian cụ thể.\\ \hline
-\textbf{Luồng sự kiện chính} & 
-\begin{tabular}[t]{@{}p{10.5cm}@{}}
-1. Traveler nhấn nút "Tạo lộ trình mới" \space trên giao diện.\\
-2. Hệ thống hiển thị biểu mẫu yêu cầu nhập thông tin đầu vào.\\
-3. Traveler cung cấp các thông tin:\\
-- Điểm đến\\
-- Ngày bắt đầu và Ngày kết thúc (hoặc số ngày dự kiến)\\
-- Số lượng người tham gia (Solo, Couple, Family, Group).\\
-- Ngân sách dự kiến (Tiết kiệm, Trung bình, Sang trọng).\\
-- Sở thích/Mong muốn (Văn hóa, Ẩm thực, Mạo hiểm, Nghỉ dưỡng...).\\
-- Các lưu ý đặc biệt (Có trẻ em, Thú cưng, Cần hỗ trợ xe lăn...).\\
-4. Traveler nhấn nút "Lập kế hoạch".\\
-5. Hệ thống kiểm tra tính hợp lệ của dữ liệu đầu vào.\\
-6. Hệ thống gửi dữ liệu đến Module AI xử lý.\\
-7. AI truy xuất cơ sở dữ liệu địa điểm, tính toán khoảng cách, thời gian mở cửa và chi phí để sắp xếp lịch trình.\\
-8. Hệ thống hiển thị bản lộ trình nháp (Timeline view) cho Traveler xem.
-\end{tabular} \\ \hline
-\textbf{Luồng rẽ nhánh A} &
-\begin{tabular}[t]{@{}p{10.5cm}@{}}
-\textbf{A1: Traveler bỏ qua các bước tùy chọn:}\\
-Tại bước 4, Traveler không chọn ngân sách hoặc sở thích. Hệ thống sẽ sử dụng giá trị mặc định (Ví dụ: Ngân sách trung bình, Sở thích phổ thông) để tạo lộ trình.\\
-\textbf{A2: Hủy tạo lộ trình:}\\
-Tại bất kỳ bước nào trước bước 4, Traveler nhấn "Hủy". Hệ thống quay lại màn hình chính.
-\end{tabular} \\ \hline
-\textbf{Luồng rẽ nhánh B: Tạo từ lộ trình có sẵn } &
-\begin{tabular}[t]{@{}p{10.5cm}@{}}
-1. Traveler đang xem danh sách lộ trình đã đi (Lịch sử) hoặc lộ trình được chia sẻ từ bạn bè/cộng đồng.\\
-2. Traveler chọn một lộ trình ưng ý và nhấn nút "Tạo chuyến đi từ lộ trình này" \space (hoặc "Nhân bản").\\
-3. Hệ thống hiển thị hộp thoại yêu cầu cập nhật thông tin cơ bản:\\
-- Thời gian khởi hành mới \\
-- Tên chuyến đi mới (Mặc định là "Copy of [Tên lộ trình cũ]").\\
-4. Traveler nhập ngày mới và nhấn "Xác nhận".\\
-5. Hệ thống thực hiện sao chép toàn bộ danh sách địa điểm và thứ tự tham quan sang một bản ghi mới.\\
-- Lưu ý: Hệ thống tự động kiểm tra địa điểm (lịch hoạt động) và tính toán lại ngày/giờ cụ thể dựa trên ngày khởi hành mới.\\
-6. Hệ thống chuyển hướng Traveler đến màn hình chi tiết lộ trình mới tạo để tiếp tục chỉnh sửa (kết nối sang UC-M1-04).
-\end{tabular} \\ \hline
-\textbf{Luồng ngoại lệ} &
-\begin{tabular}[t]{@{}p{10.5cm}@{}}
-\textbf{E1: Dữ liệu nhập không hợp lệ:}\\
-Tại bước 5, hệ thống phát hiện Ngày kết thúc nhỏ hơn Ngày bắt đầu hoặc Địa điểm không tồn tại. Hệ thống hiển thị thông báo lỗi ngay tại trường nhập liệu và yêu cầu nhập lại.\\
-\textbf{E2: Không tìm thấy lộ trình phù hợp:}\\
-Tại bước 8, AI không tìm thấy đủ địa điểm thỏa mãn các ràng buộc quá khắt khe của Traveler (ví dụ: Ngân sách quá thấp cho địa điểm sang trọng). Hệ thống hiển thị thông báo: "Không thể tạo lộ trình với các tiêu chí hiện tại. Vui lòng nới lỏng các yêu cầu về ngân sách hoặc thời gian."\\
-\textbf{E3: Lỗi kết nối Server:}\\
-Hệ thống thông báo "Đã xảy ra lỗi kết nối, vui lòng thử lại sau."\\
-\textbf{E4: Lộ trình gốc bị lỗi/xóa:}\\
-Khi nhấn "Nhân bản", hệ thống phát hiện lộ trình gốc đã bị xóa hoặc không còn quyền truy cập. Hiển thị thông báo: "Không thể sao chép lộ trình này."
-\end{tabular} \\ 
-\hline
-\end{longtable}
+% % --- //////////////////////////////////////////////////////////////// ---
+% % MODULE 1
 
 % \renewcommand{\arraystretch}{1.2}
 % \begin{longtable}{|p{4cm}|p{11cm}|}
-% \caption{Mô tả Use Case: Đề xuất Dịch vụ \& Tour tham khảo}
-% \label{usecase-1-03} \\
+% \caption{Mô tả Use Case: Tạo lộ trình}
+% \label{usecase-1-01} \\
 % \hline
 % \endfirsthead
-% \caption[]{Mô tả Use Case: Đề xuất Dịch vụ \& Tour tham khảo} \\
+% \caption[]{Mô tả Use Case: Tạo lộ trình} \\
 % \hline
 % \endhead
-% \textbf{Use case ID}       & UC-M1-03 \\ \hline
-% \textbf{Tên Use case}      & Đề xuất Dịch vụ \& Tour tham khảo \\ \hline
+% \textbf{Use case ID}       & UC-M1-01 \\ \hline
+% \textbf{Tên Use case}      & Tạo lộ trình \\ \hline
 % \textbf{Các tác nhân}      & Traveler \\ \hline
-% \textbf{Mô tả}             & Dựa trên địa điểm hoặc khu vực mà Traveler đang xem trong lộ trình, hệ thống phân tích và đề xuất các dịch vụ thương mại phù hợp (Tour trọn gói, vé tham quan, hoặc phương tiện di chuyển du lịch) giúp người dùng dễ dàng đặt chỗ. \\ \hline
-% \textbf{Tiền điều kiện}    & Traveler đã đăng nhập vào hệ thống và đang xem một lộ trình chi tiết có chứa các địa điểm hoặc hoạt động cụ thể.\\ \hline
-% \textbf{Hậu điều kiện}     & Hệ thống đề xuất các dịch vụ phù hợp với địa điểm \\ \hline
-% \textbf{Luồng sự kiện chính} &
+% \textbf{Mô tả}             & Traveler nhập các thông tin mong muốn cho chuyến đi (địa điểm, thời gian, ngân sách, sở thích...). Hệ thống AI tiếp nhận, phân tích và tự động tạo ra một bản lộ trình du lịch chi tiết phù hợp nhất. \\ \hline
+% \textbf{Tiền điều kiện}    & Traveler đã đăng nhập và đang ở màn hình "Tạo lộ trình" \space (Dashboard hoặc Home). \\ \hline
+% \textbf{Hậu điều kiện}     & Một bản nháp lộ trình hoàn chỉnh được hiển thị trên màn hình, bao gồm danh sách địa điểm và thời gian cụ thể.\\ \hline
+% \textbf{Luồng sự kiện chính} & 
 % \begin{tabular}[t]{@{}p{10.5cm}@{}}
-% 1. Traveler chọn một địa điểm hoặc một khu vực trong lộ trình chi tiết.\\
-% 2. Traveler nhấn nút "Gợi ý dịch vụ/Tour".\\
-% 3. Hệ thống nhận diện Loại địa điểm và Tags của địa điểm được chọn.\\
-% 4. Hệ thống áp dụng Quy tắc gợi ý (Recommendation Rules) để lọc các dịch vụ liên kết trong CSDL:\\
-% - Kiểm tra xem địa điểm có yêu cầu vé vào cửa không.\\
-% - Kiểm tra xem địa điểm có nằm xa trung tâm và thường cần tour dẫn đường không.\\
-% - Kiểm tra xem địa điểm có phải là một thành phố lớn phù hợp với City Tour không.\\
-% 5. Hệ thống truy xuất danh sách dịch vụ của các đối tác trong CSDL phân loại rõ ràng (Vé, Tour ngày, Di chuyển).\\
-% 6. Hệ thống hiển thị danh sách đề xuất dạng thẻ kèm giá.
+% 1. Traveler nhấn nút "Tạo lộ trình mới" \space trên giao diện.\\
+% 2. Hệ thống hiển thị biểu mẫu yêu cầu nhập thông tin đầu vào.\\
+% 3. Traveler cung cấp các thông tin:\\
+% - Điểm đến\\
+% - Ngày bắt đầu và Ngày kết thúc (hoặc số ngày dự kiến)\\
+% - Số lượng người tham gia (Solo, Couple, Family, Group).\\
+% - Ngân sách dự kiến (Tiết kiệm, Trung bình, Sang trọng).\\
+% - Sở thích/Mong muốn (Văn hóa, Ẩm thực, Mạo hiểm, Nghỉ dưỡng...).\\
+% - Các lưu ý đặc biệt (Có trẻ em, Thú cưng, Cần hỗ trợ xe lăn...).\\
+% 4. Traveler nhấn nút "Lập kế hoạch".\\
+% 5. Hệ thống kiểm tra tính hợp lệ của dữ liệu đầu vào.\\
+% 6. Hệ thống gửi dữ liệu đến Module AI xử lý.\\
+% 7. AI truy xuất cơ sở dữ liệu địa điểm, tính toán khoảng cách, thời gian mở cửa và chi phí để sắp xếp lịch trình.\\
+% 8. Hệ thống hiển thị bản lộ trình nháp (Timeline view) cho Traveler xem.
+% \end{tabular} \\ \hline
+% \textbf{Luồng rẽ nhánh A} &
+% \begin{tabular}[t]{@{}p{10.5cm}@{}}
+% \textbf{A1: Traveler bỏ qua các bước tùy chọn:}\\
+% Tại bước 4, Traveler không chọn ngân sách hoặc sở thích. Hệ thống sẽ sử dụng giá trị mặc định (Ví dụ: Ngân sách trung bình, Sở thích phổ thông) để tạo lộ trình.\\
+% \textbf{A2: Hủy tạo lộ trình:}\\
+% Tại bất kỳ bước nào trước bước 4, Traveler nhấn "Hủy". Hệ thống quay lại màn hình chính.
+% \end{tabular} \\ \hline
+% \textbf{Luồng rẽ nhánh B: Tạo từ lộ trình có sẵn } &
+% \begin{tabular}[t]{@{}p{10.5cm}@{}}
+% 1. Traveler đang xem danh sách lộ trình đã đi (Lịch sử) hoặc lộ trình được chia sẻ từ bạn bè/cộng đồng.\\
+% 2. Traveler chọn một lộ trình ưng ý và nhấn nút "Tạo chuyến đi từ lộ trình này" \space (hoặc "Nhân bản").\\
+% 3. Hệ thống hiển thị hộp thoại yêu cầu cập nhật thông tin cơ bản:\\
+% - Thời gian khởi hành mới \\
+% - Tên chuyến đi mới (Mặc định là "Copy of [Tên lộ trình cũ]").\\
+% 4. Traveler nhập ngày mới và nhấn "Xác nhận".\\
+% 5. Hệ thống thực hiện sao chép toàn bộ danh sách địa điểm và thứ tự tham quan sang một bản ghi mới.\\
+% - Lưu ý: Hệ thống tự động kiểm tra địa điểm (lịch hoạt động) và tính toán lại ngày/giờ cụ thể dựa trên ngày khởi hành mới.\\
+% 6. Hệ thống chuyển hướng Traveler đến màn hình chi tiết lộ trình mới tạo để tiếp tục chỉnh sửa (kết nối sang UC-M1-04).
 % \end{tabular} \\ \hline
 % \textbf{Luồng ngoại lệ} &
 % \begin{tabular}[t]{@{}p{10.5cm}@{}}
-% \textbf{E1: Không tìm thấy thông tin:}\\
-% Tại bước 5 hoặc 6, hệ thống không tìm thấy thông tin dịch vụ liên quan nào trong CSDL, Hệ thống hiển thị thông báo "Không tìm thấy thông tin dịch vụ cho mục này."
-% \end{tabular} \\
+% \textbf{E1: Dữ liệu nhập không hợp lệ:}\\
+% Tại bước 5, hệ thống phát hiện Ngày kết thúc nhỏ hơn Ngày bắt đầu hoặc Địa điểm không tồn tại. Hệ thống hiển thị thông báo lỗi ngay tại trường nhập liệu và yêu cầu nhập lại.\\
+% \textbf{E2: Không tìm thấy lộ trình phù hợp:}\\
+% Tại bước 8, AI không tìm thấy đủ địa điểm thỏa mãn các ràng buộc quá khắt khe của Traveler (ví dụ: Ngân sách quá thấp cho địa điểm sang trọng). Hệ thống hiển thị thông báo: "Không thể tạo lộ trình với các tiêu chí hiện tại. Vui lòng nới lỏng các yêu cầu về ngân sách hoặc thời gian."\\
+% \textbf{E3: Lỗi kết nối Server:}\\
+% Hệ thống thông báo "Đã xảy ra lỗi kết nối, vui lòng thử lại sau."\\
+% \textbf{E4: Lộ trình gốc bị lỗi/xóa:}\\
+% Khi nhấn "Nhân bản", hệ thống phát hiện lộ trình gốc đã bị xóa hoặc không còn quyền truy cập. Hiển thị thông báo: "Không thể sao chép lộ trình này."
+% \end{tabular} \\ 
 % \hline
 % \end{longtable}
 
-% \renewcommand{\arraystretch}{1.2}
-% \begin{longtable}{|p{4cm}|p{11cm}|}
-% \caption{Mô tả Use Case: Điều chỉnh lộ trình}
-% \label{usecase-1-04} \\
-% \hline
-% \endfirsthead
-% \caption[]{Mô tả Use Case: Điều chỉnh lộ trình} \\
-% \hline
-% \endhead
-% \textbf{Use case ID}       & UC-M1-04 \\ \hline
-% \textbf{Tên Use case}      & Điều chỉnh lộ trình \\ \hline
-% \textbf{Các tác nhân}      & Traveler \\ \hline
-% \textbf{Mô tả}             & Traveler thực hiện tinh chỉnh lộ trình theo ý muốn cá nhân hoặc đưa ra yêu cầu để AI tái cấu trúc lại một phần hoặc toàn bộ lộ trình dựa trên ngữ cảnh mới.\\ \hline
-% \textbf{Tiền điều kiện}    & 
-% \begin{tabular}[t]{@{}p{10.5cm}@{}}
-% 1. Traveler đang xem chi tiết một bản lộ trình (nháp hoặc đã lưu).\\
-% 2. Lộ trình đang ở trạng thái có thể chỉnh sửa (không phải lộ trình của người khác chia sẻ dạng view-only).
-% \end{tabular} \\ \hline
-% \textbf{Hậu điều kiện}     & Lộ trình được cập nhật với thứ tự, thời gian và địa điểm mới hợp lý. Dữ liệu được lưu lại. \\ \hline
-% \textbf{Luồng sự kiện chính} &
-% \begin{tabular}[t]{@{}p{10.5cm}@{}}
-% 1. Traveler chọn một hoạt động/địa điểm trong lộ trình.\\
-% 2. Traveler thực hiện thao tác chỉnh sửa thủ công:
-% - Kéo thả (Drag \& drop) để đổi thứ tự tham quan.\\
-% - Thay đổi thời gian bắt đầu/kết thúc thủ công.\\
-% - Xóa một địa điểm khỏi lịch trình.\\
-% 3. Hệ thống tự động tính toán lại thời gian di chuyển giữa các điểm liền kề.\\
-% 4. Hệ thống kiểm tra xung đột logic cơ bản (ví dụ: trùng giờ, điểm đến đóng cửa vào giờ mới chọn).\\
-% 5. Nếu có xung đột, hệ thống hiển thị cảnh báo (Warning flag) nhưng vẫn cho phép Traveler giữ nguyên nếu muốn.\\
-% 6. Traveler nhấn "Lưu thay đổi".
-% \end{tabular} \\ \hline
-% \textbf{Luồng rẽ nhánh A: AI sửa đổi theo yêu cầu }    & 
-% \begin{tabular}[t]{@{}p{10.5cm}@{}}
-% 1. Traveler xem lộ trình, xác định các điểm "cứng" \space (Check-in khách sạn, Giờ bay, Bữa tối đặt bàn).\\
-% 2. Traveler nhấn icon Pin (Ghim) vào các điểm đó.\\
-% 3. Traveler nhấn "Tối ưu đường đi".\\
-% 4. Hệ thống hiển thị các tùy chọn sửa đổi:\\
-% - Tối ưu đường đi: Giữ nguyên địa điểm, chỉ sắp xếp lại thứ tự cho thuận tiện nhất.\\
-% - Thay đổi nhịp độ: "Lịch trình quá dày, hãy làm giãn ra" \space hoặc "Thêm địa điểm vào chỗ trống".\\
-% - Thay đổi chủ đề: "Đổi ngày 2 sang food tour thay vì tham quan bảo tàng".\\
-% 5. Hệ thống tính toán và sắp xếp lại thứ tự các điểm chưa ghim.
-% \end{tabular} \\ \hline
-% \textbf{Luồng rẽ nhánh B: Thay thế một địa điểm cụ thể}    & 
-% \begin{tabular}[t]{@{}p{10.5cm}@{}}
-% 1. Traveler không thích một địa điểm cụ thể.\\
-% 2. Traveler chọn địa điểm đó và nhấn "Gợi ý thay thế".\\
-% 3. Hệ thống tìm kiếm các địa điểm lân cận có cùng tính chất hoặc phù hợp với sở thích của Traveler.\\
-% 4. Hệ thống hiển thị danh sách 3-5 địa điểm thay thế.\\
-% 5. Traveler chọn 1 địa điểm mới.\\
-% 6. Hệ thống thế chỗ địa điểm cũ bằng địa điểm mới và cập nhật lại thời gian/chi phí.    
-% \end{tabular} \\ \hline
-% \textbf{Luồng ngoại lệ} &
-% \begin{tabular}[t]{@{}p{10.5cm}@{}}
-% \textbf{E1: Yêu cầu AI bất khả thi:}\\
-% Traveler yêu cầu "Thêm 5 địa điểm" \space vào một ngày đã kín lịch. AI thông báo: "Không đủ thời gian để thêm địa điểm. Bạn có muốn mở rộng chuyến đi thêm 1 ngày không?"\\
-% \textbf{E2: Xung đột giờ mở cửa:}\\
-% Khi kéo thả thủ công, Traveler đặt một địa điểm vào khung giờ nó đóng cửa. Hệ thống hiện cảnh báo đỏ: "Địa điểm này đóng cửa lúc 17:00."
-% \end{tabular} \\
-% \hline
-% \end{longtable}
+% % \renewcommand{\arraystretch}{1.2}
+% % \begin{longtable}{|p{4cm}|p{11cm}|}
+% % \caption{Mô tả Use Case: Đề xuất Dịch vụ \& Tour tham khảo}
+% % \label{usecase-1-03} \\
+% % \hline
+% % \endfirsthead
+% % \caption[]{Mô tả Use Case: Đề xuất Dịch vụ \& Tour tham khảo} \\
+% % \hline
+% % \endhead
+% % \textbf{Use case ID}       & UC-M1-03 \\ \hline
+% % \textbf{Tên Use case}      & Đề xuất Dịch vụ \& Tour tham khảo \\ \hline
+% % \textbf{Các tác nhân}      & Traveler \\ \hline
+% % \textbf{Mô tả}             & Dựa trên địa điểm hoặc khu vực mà Traveler đang xem trong lộ trình, hệ thống phân tích và đề xuất các dịch vụ thương mại phù hợp (Tour trọn gói, vé tham quan, hoặc phương tiện di chuyển du lịch) giúp người dùng dễ dàng đặt chỗ. \\ \hline
+% % \textbf{Tiền điều kiện}    & Traveler đã đăng nhập vào hệ thống và đang xem một lộ trình chi tiết có chứa các địa điểm hoặc hoạt động cụ thể.\\ \hline
+% % \textbf{Hậu điều kiện}     & Hệ thống đề xuất các dịch vụ phù hợp với địa điểm \\ \hline
+% % \textbf{Luồng sự kiện chính} &
+% % \begin{tabular}[t]{@{}p{10.5cm}@{}}
+% % 1. Traveler chọn một địa điểm hoặc một khu vực trong lộ trình chi tiết.\\
+% % 2. Traveler nhấn nút "Gợi ý dịch vụ/Tour".\\
+% % 3. Hệ thống nhận diện Loại địa điểm và Tags của địa điểm được chọn.\\
+% % 4. Hệ thống áp dụng Quy tắc gợi ý (Recommendation Rules) để lọc các dịch vụ liên kết trong CSDL:\\
+% % - Kiểm tra xem địa điểm có yêu cầu vé vào cửa không.\\
+% % - Kiểm tra xem địa điểm có nằm xa trung tâm và thường cần tour dẫn đường không.\\
+% % - Kiểm tra xem địa điểm có phải là một thành phố lớn phù hợp với City Tour không.\\
+% % 5. Hệ thống truy xuất danh sách dịch vụ của các đối tác trong CSDL phân loại rõ ràng (Vé, Tour ngày, Di chuyển).\\
+% % 6. Hệ thống hiển thị danh sách đề xuất dạng thẻ kèm giá.
+% % \end{tabular} \\ \hline
+% % \textbf{Luồng ngoại lệ} &
+% % \begin{tabular}[t]{@{}p{10.5cm}@{}}
+% % \textbf{E1: Không tìm thấy thông tin:}\\
+% % Tại bước 5 hoặc 6, hệ thống không tìm thấy thông tin dịch vụ liên quan nào trong CSDL, Hệ thống hiển thị thông báo "Không tìm thấy thông tin dịch vụ cho mục này."
+% % \end{tabular} \\
+% % \hline
+% % \end{longtable}
 
-% \renewcommand{\arraystretch}{1.2}
-% \begin{longtable}{|p{4cm}|p{11cm}|}
-% \caption{Mô tả Use Case: Lưu Lộ trình}
-% \label{usecase-1-05} \\
-% \hline
-% \endfirsthead
-% \caption[]{Mô tả Use Case: Lưu Lộ trình} \\
-% \hline
-% \endhead
-% \textbf{Use case ID}       & UC-M1-05 \\ \hline
-% \textbf{Tên Use case}      & Lưu Lộ trình \\ \hline
-% \textbf{Các tác nhân}      & Traveler \\ \hline
-% \textbf{Mô tả}             & Lưu trạng thái hiện tại của lộ trình vào tài khoản cá nhân để truy cập sau.\\ \hline
-% \textbf{Tiền điều kiện}    & Traveler đã đăng nhập và đang có một lộ trình trên màn hình. \\ \hline
-% \textbf{Hậu điều kiện}     & Dữ liệu lộ trình được ghi vào CSDL. \\ \hline
-% \textbf{Luồng sự kiện chính} &
-% \begin{tabular}[t]{@{}p{10.5cm}@{}}
-% 1. Traveler nhấn nút "Lưu lộ trình".\\
-% 2. Hệ thống kiểm tra trạng thái lộ trình:\\
-% - Trường hợp A (Lộ trình mới): Hệ thống hiển thị Popup yêu cầu nhập "Tên chuyến đi".\\
-% - Trường hợp B (Lộ trình đã tồn tại): Hệ thống bỏ qua bước 3.\\
-% 3. (Nếu là mới) Traveler nhập tên và nhấn "Xác nhận".\\
-% 4. Hệ thống thu thập toàn bộ dữ liệu (JSON/XML cấu trúc chuyến đi).\\
-% 5. Hệ thống lưu vào cơ sở dữ liệu.\\
-% 6. Hệ thống thông báo "Đã lưu thành công".
-% \end{tabular} \\ \hline
-% \textbf{Luồng ngoại lệ} &
-% \begin{tabular}[t]{@{}p{10.5cm}@{}}
-% \textbf{E1: Trùng tên (Khi lưu mới):}\\
-% Traveler nhập tên đã có trong danh sách của mình. Hệ thống báo lỗi và yêu cầu chọn tên khác.\\
-% \textbf{E2: Lỗi hệ thống:}\\
-% Lưu thất bại do lỗi CSDL. Thông báo lỗi và giữ nguyên màn hình để Traveler thử lại.
-% \end{tabular} \\
-% \hline
-% \end{longtable}
+% % \renewcommand{\arraystretch}{1.2}
+% % \begin{longtable}{|p{4cm}|p{11cm}|}
+% % \caption{Mô tả Use Case: Điều chỉnh lộ trình}
+% % \label{usecase-1-04} \\
+% % \hline
+% % \endfirsthead
+% % \caption[]{Mô tả Use Case: Điều chỉnh lộ trình} \\
+% % \hline
+% % \endhead
+% % \textbf{Use case ID}       & UC-M1-04 \\ \hline
+% % \textbf{Tên Use case}      & Điều chỉnh lộ trình \\ \hline
+% % \textbf{Các tác nhân}      & Traveler \\ \hline
+% % \textbf{Mô tả}             & Traveler thực hiện tinh chỉnh lộ trình theo ý muốn cá nhân hoặc đưa ra yêu cầu để AI tái cấu trúc lại một phần hoặc toàn bộ lộ trình dựa trên ngữ cảnh mới.\\ \hline
+% % \textbf{Tiền điều kiện}    & 
+% % \begin{tabular}[t]{@{}p{10.5cm}@{}}
+% % 1. Traveler đang xem chi tiết một bản lộ trình (nháp hoặc đã lưu).\\
+% % 2. Lộ trình đang ở trạng thái có thể chỉnh sửa (không phải lộ trình của người khác chia sẻ dạng view-only).
+% % \end{tabular} \\ \hline
+% % \textbf{Hậu điều kiện}     & Lộ trình được cập nhật với thứ tự, thời gian và địa điểm mới hợp lý. Dữ liệu được lưu lại. \\ \hline
+% % \textbf{Luồng sự kiện chính} &
+% % \begin{tabular}[t]{@{}p{10.5cm}@{}}
+% % 1. Traveler chọn một hoạt động/địa điểm trong lộ trình.\\
+% % 2. Traveler thực hiện thao tác chỉnh sửa thủ công:
+% % - Kéo thả (Drag \& drop) để đổi thứ tự tham quan.\\
+% % - Thay đổi thời gian bắt đầu/kết thúc thủ công.\\
+% % - Xóa một địa điểm khỏi lịch trình.\\
+% % 3. Hệ thống tự động tính toán lại thời gian di chuyển giữa các điểm liền kề.\\
+% % 4. Hệ thống kiểm tra xung đột logic cơ bản (ví dụ: trùng giờ, điểm đến đóng cửa vào giờ mới chọn).\\
+% % 5. Nếu có xung đột, hệ thống hiển thị cảnh báo (Warning flag) nhưng vẫn cho phép Traveler giữ nguyên nếu muốn.\\
+% % 6. Traveler nhấn "Lưu thay đổi".
+% % \end{tabular} \\ \hline
+% % \textbf{Luồng rẽ nhánh A: AI sửa đổi theo yêu cầu }    & 
+% % \begin{tabular}[t]{@{}p{10.5cm}@{}}
+% % 1. Traveler xem lộ trình, xác định các điểm "cứng" \space (Check-in khách sạn, Giờ bay, Bữa tối đặt bàn).\\
+% % 2. Traveler nhấn icon Pin (Ghim) vào các điểm đó.\\
+% % 3. Traveler nhấn "Tối ưu đường đi".\\
+% % 4. Hệ thống hiển thị các tùy chọn sửa đổi:\\
+% % - Tối ưu đường đi: Giữ nguyên địa điểm, chỉ sắp xếp lại thứ tự cho thuận tiện nhất.\\
+% % - Thay đổi nhịp độ: "Lịch trình quá dày, hãy làm giãn ra" \space hoặc "Thêm địa điểm vào chỗ trống".\\
+% % - Thay đổi chủ đề: "Đổi ngày 2 sang food tour thay vì tham quan bảo tàng".\\
+% % 5. Hệ thống tính toán và sắp xếp lại thứ tự các điểm chưa ghim.
+% % \end{tabular} \\ \hline
+% % \textbf{Luồng rẽ nhánh B: Thay thế một địa điểm cụ thể}    & 
+% % \begin{tabular}[t]{@{}p{10.5cm}@{}}
+% % 1. Traveler không thích một địa điểm cụ thể.\\
+% % 2. Traveler chọn địa điểm đó và nhấn "Gợi ý thay thế".\\
+% % 3. Hệ thống tìm kiếm các địa điểm lân cận có cùng tính chất hoặc phù hợp với sở thích của Traveler.\\
+% % 4. Hệ thống hiển thị danh sách 3-5 địa điểm thay thế.\\
+% % 5. Traveler chọn 1 địa điểm mới.\\
+% % 6. Hệ thống thế chỗ địa điểm cũ bằng địa điểm mới và cập nhật lại thời gian/chi phí.    
+% % \end{tabular} \\ \hline
+% % \textbf{Luồng ngoại lệ} &
+% % \begin{tabular}[t]{@{}p{10.5cm}@{}}
+% % \textbf{E1: Yêu cầu AI bất khả thi:}\\
+% % Traveler yêu cầu "Thêm 5 địa điểm" \space vào một ngày đã kín lịch. AI thông báo: "Không đủ thời gian để thêm địa điểm. Bạn có muốn mở rộng chuyến đi thêm 1 ngày không?"\\
+% % \textbf{E2: Xung đột giờ mở cửa:}\\
+% % Khi kéo thả thủ công, Traveler đặt một địa điểm vào khung giờ nó đóng cửa. Hệ thống hiện cảnh báo đỏ: "Địa điểm này đóng cửa lúc 17:00."
+% % \end{tabular} \\
+% % \hline
+% % \end{longtable}
 
-% \renewcommand{\arraystretch}{1.2}
-% \begin{longtable}{|p{4cm}|p{11cm}|}
-% \caption{Mô tả Use Case: Xóa Lộ trình}
-% \label{usecase-1-06} \\
-% \hline
-% \endfirsthead
-% \caption[]{Mô tả Use Case: Xóa Lộ trình} \\
-% \hline
-% \endhead
-% \textbf{Use case ID}       & UC-M1-06 \\ \hline
-% \textbf{Tên Use case}      & Xóa Lộ trình \\ \hline
-% \textbf{Các tác nhân}      & Traveler \\ \hline
-% \textbf{Mô tả}             & Xóa vĩnh viễn một lộ trình đã lưu khỏi tài khoản. \\ \hline
-% \textbf{Tiền điều kiện}    & Traveler đang ở màn hình danh sách lộ trình ("Chuyến đi của tôi"). \\ \hline
-% \textbf{Hậu điều kiện}     & Lộ trình bị loại bỏ khỏi CSDL và không còn hiển thị trong danh sách. \\ \hline
-% \textbf{Luồng sự kiện chính} &
-% \begin{tabular}[t]{@{}p{10.5cm}@{}}
-% 1. Traveler chọn lộ trình muốn xóa từ danh sách.\\
-% 2. Traveler nhấn nút "Xóa" \space (icon thùng rác).\\
-% 3. Hệ thống hiển thị hộp thoại xác nhận: "Bạn có chắc chắn muốn xóa lộ trình này? Hành động này không thể hoàn tác."\\
-% 4. Traveler nhấn "Đồng ý" \space (Confirm).\\
-% 5. Hệ thống gửi lệnh xóa xuống CSDL.\\
-% 6. Hệ thống cập nhật lại danh sách hiển thị (biến mất dòng tương ứng).\\
-% 7. Hệ thống thông báo "Đã xóa thành công".    
-% \end{tabular} \\ \hline
-% \textbf{Luồng rẽ nhánh}    & 
-% \begin{tabular}[t]{@{}p{10.5cm}@{}}
-% \textbf{A1: Hủy xóa:}\\
-% Tại bước 3, Traveler nhấn "Hủy". Hộp thoại đóng lại, không có gì thay đổi.
-% \end{tabular} \\
-% \hline
-% \end{longtable}
+% % \renewcommand{\arraystretch}{1.2}
+% % \begin{longtable}{|p{4cm}|p{11cm}|}
+% % \caption{Mô tả Use Case: Lưu Lộ trình}
+% % \label{usecase-1-05} \\
+% % \hline
+% % \endfirsthead
+% % \caption[]{Mô tả Use Case: Lưu Lộ trình} \\
+% % \hline
+% % \endhead
+% % \textbf{Use case ID}       & UC-M1-05 \\ \hline
+% % \textbf{Tên Use case}      & Lưu Lộ trình \\ \hline
+% % \textbf{Các tác nhân}      & Traveler \\ \hline
+% % \textbf{Mô tả}             & Lưu trạng thái hiện tại của lộ trình vào tài khoản cá nhân để truy cập sau.\\ \hline
+% % \textbf{Tiền điều kiện}    & Traveler đã đăng nhập và đang có một lộ trình trên màn hình. \\ \hline
+% % \textbf{Hậu điều kiện}     & Dữ liệu lộ trình được ghi vào CSDL. \\ \hline
+% % \textbf{Luồng sự kiện chính} &
+% % \begin{tabular}[t]{@{}p{10.5cm}@{}}
+% % 1. Traveler nhấn nút "Lưu lộ trình".\\
+% % 2. Hệ thống kiểm tra trạng thái lộ trình:\\
+% % - Trường hợp A (Lộ trình mới): Hệ thống hiển thị Popup yêu cầu nhập "Tên chuyến đi".\\
+% % - Trường hợp B (Lộ trình đã tồn tại): Hệ thống bỏ qua bước 3.\\
+% % 3. (Nếu là mới) Traveler nhập tên và nhấn "Xác nhận".\\
+% % 4. Hệ thống thu thập toàn bộ dữ liệu (JSON/XML cấu trúc chuyến đi).\\
+% % 5. Hệ thống lưu vào cơ sở dữ liệu.\\
+% % 6. Hệ thống thông báo "Đã lưu thành công".
+% % \end{tabular} \\ \hline
+% % \textbf{Luồng ngoại lệ} &
+% % \begin{tabular}[t]{@{}p{10.5cm}@{}}
+% % \textbf{E1: Trùng tên (Khi lưu mới):}\\
+% % Traveler nhập tên đã có trong danh sách của mình. Hệ thống báo lỗi và yêu cầu chọn tên khác.\\
+% % \textbf{E2: Lỗi hệ thống:}\\
+% % Lưu thất bại do lỗi CSDL. Thông báo lỗi và giữ nguyên màn hình để Traveler thử lại.
+% % \end{tabular} \\
+% % \hline
+% % \end{longtable}
+
+% % \renewcommand{\arraystretch}{1.2}
+% % \begin{longtable}{|p{4cm}|p{11cm}|}
+% % \caption{Mô tả Use Case: Xóa Lộ trình}
+% % \label{usecase-1-06} \\
+% % \hline
+% % \endfirsthead
+% % \caption[]{Mô tả Use Case: Xóa Lộ trình} \\
+% % \hline
+% % \endhead
+% % \textbf{Use case ID}       & UC-M1-06 \\ \hline
+% % \textbf{Tên Use case}      & Xóa Lộ trình \\ \hline
+% % \textbf{Các tác nhân}      & Traveler \\ \hline
+% % \textbf{Mô tả}             & Xóa vĩnh viễn một lộ trình đã lưu khỏi tài khoản. \\ \hline
+% % \textbf{Tiền điều kiện}    & Traveler đang ở màn hình danh sách lộ trình ("Chuyến đi của tôi"). \\ \hline
+% % \textbf{Hậu điều kiện}     & Lộ trình bị loại bỏ khỏi CSDL và không còn hiển thị trong danh sách. \\ \hline
+% % \textbf{Luồng sự kiện chính} &
+% % \begin{tabular}[t]{@{}p{10.5cm}@{}}
+% % 1. Traveler chọn lộ trình muốn xóa từ danh sách.\\
+% % 2. Traveler nhấn nút "Xóa" \space (icon thùng rác).\\
+% % 3. Hệ thống hiển thị hộp thoại xác nhận: "Bạn có chắc chắn muốn xóa lộ trình này? Hành động này không thể hoàn tác."\\
+% % 4. Traveler nhấn "Đồng ý" \space (Confirm).\\
+% % 5. Hệ thống gửi lệnh xóa xuống CSDL.\\
+% % 6. Hệ thống cập nhật lại danh sách hiển thị (biến mất dòng tương ứng).\\
+% % 7. Hệ thống thông báo "Đã xóa thành công".    
+% % \end{tabular} \\ \hline
+% % \textbf{Luồng rẽ nhánh}    & 
+% % \begin{tabular}[t]{@{}p{10.5cm}@{}}
+% % \textbf{A1: Hủy xóa:}\\
+% % Tại bước 3, Traveler nhấn "Hủy". Hộp thoại đóng lại, không có gì thay đổi.
+% % \end{tabular} \\
+% % \hline
+% % \end{longtable}

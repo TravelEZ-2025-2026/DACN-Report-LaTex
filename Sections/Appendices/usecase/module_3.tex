@@ -1,5 +1,29 @@
 \subsubsection{Module 3: Tìm kiếm và khám phá nội dung}
 
+\renewcommand{\arraystretch}{1.2}
+\begin{longtable}{|p{4cm}|p{11cm}|}
+\caption{Mô tả Use Case: Xem danh sách nội dung}
+\label{usecase-3-01}\\
+\hline
+\endfirsthead
+\caption[]{Mô tả Use Case: Xem danh sách nội dung} \\
+\hline
+\endhead
+\textbf{Use case ID}       & UC-M3-01 \\ \hline
+\textbf{Tên Use case}      & Xem danh sách nội dung \\ \hline
+\textbf{Các tác nhân}      & Traveler, Guest, Provider \\ \hline
+\textbf{Mô tả}             & Cho phép người dùng xem danh sách bài viết hiển thị trên trang chủ hoặc bảng tin khám phá hoặc theo chủ đề. \\ \hline
+\textbf{Tiền điều kiện}    & Hệ thống đã có sẵn dữ liệu nội dung. \\ \hline
+\textbf{Hậu điều kiện}     & Danh sách nội dung được hiển thị theo bộ lọc mặc định hoặc tùy chọn người dùng. \\ \hline
+\textbf{Luồng sự kiện chính} & 
+\begin{tabular}[t]{@{}p{10.5cm}@{}}
+1. Người dùng truy cập trang chủ hoặc bảng tin khám phá.\\
+2. Hệ thống hiển thị danh sách nội dung công khai theo thứ tự mặc định.
+\end{tabular} \\ \hline
+\textbf{Luồng ngoại lệ} & 2a. Nếu hệ thống bị mất kết nối, màn hình hiển thị “Lỗi kết nối” \\ 
+\hline
+\end{longtable}
+
 \begin{longtable}{|p{4cm}|p{11cm}|}
 \caption{Mô tả Use Case: Lọc và sắp xếp nội dung}
 \label{usecase-3-02}\\

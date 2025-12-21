@@ -1,6 +1,34 @@
 \subsubsection{Module 6: Phân tích dữ liệu và xu hướng thị trường}
 
 \begin{longtable}{|p{4cm}|p{11cm}|}
+\caption{Mô tả Use Case: Xem dashboard xu hướng thị trường}
+\label{usecase-6-01} \\
+\hline
+\endfirsthead
+\caption[]{Mô tả Use Case: Xem dashboard xu hướng thị trường} \\
+\hline
+\endhead
+\textbf{Use case ID}       & UC-M6-01 \\ \hline
+\textbf{Tên Use case}      & Xem dashboard xu hướng thị trường \\ \hline
+\textbf{Các tác nhân}      & Provider, Admin \\ \hline
+\textbf{Mô tả}             & Cung cấp cho Provider, Admin các thông tin về các địa điểm hot được người dùng quan tâm và tìm kiếm.\\ \hline
+\textbf{Trigger}    & Người dùng chọn tab "Phân tích" \space trên thanh điều hướng.\\ \hline
+\textbf{Tiền điều kiện}    & Người dùng đã đăng nhập.\\ \hline
+\textbf{Hậu điều kiện}     & Hệ thống hiển thị biểu đồ và danh sách về xu hướng chung. \\ \hline
+\textbf{Luồng sự kiện chính} & 
+\begin{tabular}[t]{@{}p{10.5cm}@{}}
+1. Người dùng chọn menu "Phân tích" \space hoặc "Xu hướng thị trường".
+2. Hệ thống truy xuất dữ liệu tổng hợp từ log tìm kiếm và đặt chỗ của người dùng.\\
+3. Hệ thống hiển thị Dashboard, bao gồm: \\
+- Top điểm đến: Biểu đồ cột/tròn các địa điểm được đánh giá cao nhất.\\
+- Dịch vụ yêu thích: Tỷ lệ phần trăm các loại tour/khách sạn. \\
+4. Người dùng xem tổng quan dữ liệu.    
+\end{tabular} \\ \hline
+\textbf{Luồng ngoại lệ} & Nếu hệ thống mất kết nối $\rightarrow$ Hiển thị thông báo "Lỗi kết nối" \\
+\hline
+\end{longtable}
+
+\begin{longtable}{|p{4cm}|p{11cm}|}
 \caption{Mô tả Use Case: Filter dữ liệu}
 \label{usecase-6-02} \\
 \hline

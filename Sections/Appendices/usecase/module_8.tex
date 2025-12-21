@@ -126,3 +126,98 @@ Báo lỗi "Lỗi hệ thống".
 \end{tabular} \\
 \hline
 \end{longtable}
+
+\begin{longtable}{|p{4cm}|p{11cm}|}
+\caption{Mô tả Use Case: Xem chi tiết thông tin cá nhân}
+\label{usecase-8-11} \\
+\hline
+\endfirsthead
+\caption[]{Mô tả Use Case: Xem chi tiết thông tin cá nhân} \\
+\hline
+\endhead
+\textbf{Use case ID}       & UC-M8-11 \\ \hline
+\textbf{Tên Use case}      & Xem chi tiết thông tin cá nhân \\ \hline
+\textbf{Các tác nhân}      & Traveler, Provider, Admin \\ \hline
+\textbf{Mô tả}             & Xem thông tin hồ sơ cá nhân. \\ \hline
+\textbf{Tiền điều kiện}    & Người dùng đã đăng nhập vào hệ thống. \\ \hline
+\textbf{Hậu điều kiện}     & Hiển thị thông tin hồ sơ cá nhân. \\ \hline
+\textbf{Trigger}    & Mở trang "Thông tin của tôi". \\ \hline
+\textbf{Luồng sự kiện chính} & 
+\begin{tabular}[t]{@{}p{10.5cm}@{}}
+1. Người dùng truy cập trang "Thông tin của tôi. 
+2. Hệ thống hiển thị thông tin của người dùng. \\
+\end{tabular} \\
+\hline
+\end{longtable}
+
+\begin{longtable}{|p{4cm}|p{11cm}|}
+\caption{Mô tả Use Case: Xem danh sách người dùng}
+\label{usecase-8-14} \\
+\hline
+\endfirsthead
+\caption[]{Mô tả Use Case: Xem danh sách người dùng} \\
+\hline
+\endhead
+\textbf{Use case ID}       & UC-M8-14 \\ \hline
+\textbf{Tên Use case}      & Xem danh sách người dùng \\ \hline
+\textbf{Các tác nhân}      & Admin \\ \hline
+\textbf{Mô tả}             & Xem danh sách toàn bộ người dùng.\\ \hline
+\textbf{Tiền điều kiện}    & Admin đã đăng nhập vào hệ thống. \\ \hline
+\textbf{Hậu điều kiện}     & Hiển thị danh sách toàn bộ người dùng. \\ \hline
+\textbf{Luồng sự kiện chính} & 
+\begin{tabular}[t]{@{}p{10.5cm}@{}}
+1. Admin truy cập trang "Danh sách người dùng". \\
+2. Hệ thống hiển thị danh sách người dùng. \\
+3. Admin có thể chọn lọc theo vai trò, trạng thái, thời điểm tạo, sắp xếp.
+\end{tabular} \\
+\hline
+\end{longtable}
+
+\begin{longtable}{|p{4cm}|p{11cm}|}
+\caption{Mô tả Use Case: Xem danh sách tài khoản vi phạm}
+\label{usecase-8-07} \\
+\hline
+\endfirsthead
+\caption[]{Mô tả Use Case: Xem danh sách tài khoản vi phạm} \\
+\hline
+\endhead
+\textbf{Use case ID}       & UC-M8-07 \\ \hline
+\textbf{Tên Use case}      & Xem danh sách tài khoản vi phạm \\ \hline
+\textbf{Các tác nhân}      & Admin \\ \hline
+\textbf{Mô tả}             & Xem danh sách các tài khoản bị báo cáo vi phạm quy định.\\ \hline
+\textbf{Tiền điều kiện}    & Admin đã đăng nhập vào hệ thống. \\ \hline
+\textbf{Hậu điều kiện}     & Hiển thị danh sách tài khoản vi phạm \\ \hline
+\textbf{Luồng sự kiện chính} & 
+\begin{tabular}[t]{@{}p{10.5cm}@{}}
+1. Admin truy cập trang "Tài khoản vi phạm". \\
+2. Hệ thống hiển thị danh sách các tài khoản vi phạm. \\
+3. (Tùy chọn) Lọc theo mức độ, thời gian, loại vi phạm. \\
+4. Chọn một tài khoản để xem chi tiết hoặc thực hiện thao tác (khóa/mở tài khoản). \\
+\end{tabular} \\
+\hline
+\end{longtable}
+
+\begin{longtable}{|p{4cm}|p{11cm}|}
+\caption{Mô tả Use Case: Khóa/Mở tài khoản}
+\label{usecase-8-09} \\
+\hline
+\endfirsthead
+\caption[]{Mô tả Use Case: Khóa/Mở tài khoản} \\
+\hline
+\endhead
+\textbf{Use case ID}       & UC-M8-09 \\ \hline
+\textbf{Tên Use case}      & Khóa/Mở tài khoản \\ \hline
+\textbf{Các tác nhân}      & Admin \\ \hline
+\textbf{Mô tả}             & Khóa/Mở tài khoản.\\ \hline
+\textbf{Tiền điều kiện}    & Xác định được tài khoản mục tiêu; trạng thái hiện tại cho phép thao tác khóa/mở tài khoản.\\ \hline
+\textbf{Hậu điều kiện}     & Trạng thái tài khoản được cập nhật thành công. Thông báo cho người dùng. \\ \hline
+\textbf{Luồng sự kiện chính} & 
+\begin{tabular}[t]{@{}p{10.5cm}@{}}
+1. Admin chọn tài khoản và hành động khóa/mở tài khoản.\\
+2. Nhập lý do.\\
+3. Xác nhận thao tác.\\
+4. Hệ thống cập nhật trạng thái.\\
+5. Thông báo cho người dùng.
+\end{tabular} \\
+\hline
+\end{longtable}

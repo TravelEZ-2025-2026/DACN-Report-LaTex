@@ -1,6 +1,117 @@
 \subsubsection{Module 2: Quản lý lộ trình}
 
 \begin{longtable}{|p{4cm}|p{11cm}|}
+\caption{Mô tả Use Case: Chia sẻ Lộ trình}
+\label{usecase-2-01} \\
+\hline
+\endfirsthead
+\caption[]{Mô tả Use Case: Chia sẻ Lộ trình} \\
+\hline
+\endhead
+\textbf{Use case ID}       & UC-M2-01 \\ \hline
+\textbf{Tên Use case}      & Chia sẻ Lộ trình \\ \hline
+\textbf{Các tác nhân}      & Traveler \\ \hline
+\textbf{Mô tả}             & Người dùng chia sẻ quyền truy cập lộ trình của mình cho một hoặc nhiều người dùng khác thông qua email hoặc tên đăng nhập. \\ \hline
+\textbf{Tiền điều kiện}    & 
+\begin{tabular}[t]{@{}p{10.5cm}@{}}
+1. Traveler là chủ sở hữu của lộ trình\\
+2. Lộ trình tồn tại và đang ở trạng thái kích hoạt (Active).\\
+3. Email hoặc Username của người được chia sẻ tồn tại trong hệ thống.    
+\end{tabular} \\ \hline
+\textbf{Hậu điều kiện}     & Người được chia sẻ nhận được thông báo và có quyền xem lộ trình đó trong danh sách của họ. \\ \hline
+\textbf{Luồng sự kiện chính} & 
+\begin{tabular}[t]{@{}p{10.5cm}@{}}
+1. Tại màn hình chi tiết lộ trình, Owner nhấn nút "Chia sẻ". \\
+2. Hệ thống hiển thị Popup yêu cầu nhập thông tin người nhận. \\
+3. Traveler nhập Email (hoặc Username) của người muốn chia sẻ. \\
+4. Traveler nhấn nút "Gửi lời mời". \\
+5. Hệ thống kiểm tra sự tồn tại của tài khoản người nhận: \\
+- Nếu tồn tại: Gửi thông báo đến người nhận và cấp quyền truy cập. \\
+6. Hệ thống hiển thị thông báo "Đã chia sẻ thành công".    
+\end{tabular} \\ \hline
+\textbf{Luồng ngoại lệ} &
+\begin{tabular}[t]{@{}p{10.5cm}@{}}
+\textbf{E1: Không tìm thấy tài khoản người dùng:}\\
+Traveler nhập một tên tài khoản không tồn tại trong hệ thống. Hệ thống sẽ hiển thị thông báo "Không tìm thấy người dùng này."\\
+\textbf{E1: Người nhận đã được chia sẻ trước đó:}\\
+Hệ thống thông báo: "Người dùng này đã có trong danh sách chia sẻ."
+\end{tabular} \\ 
+\hline
+\end{longtable}
+
+\begin{longtable}{|p{4cm}|p{11cm}|}
+\caption{Mô tả Use Case: Xem Lộ trình được chia sẻ}
+\label{usecase-2-02} \\
+\hline
+\endfirsthead
+\caption[]{Mô tả Use Case: Xem Lộ trình được chia sẻ} \\
+\hline
+\endhead
+\textbf{Use case ID}       & UC-M2-02 \\ \hline
+\textbf{Tên Use case}      & Xem Lộ trình được chia sẻ \\ \hline
+\textbf{Các tác nhân}      & Traveler \\ \hline
+\textbf{Mô tả}             & Người dùng xem danh sách các lộ trình mà người khác đã chia sẻ với mình. \\ \hline
+\textbf{Tiền điều kiện}    & 
+\begin{tabular}[t]{@{}p{10.5cm}@{}}
+1. Traveler đã đăng nhập vào hệ thống.\\
+2. Có ít nhất một Traveler khác đã chia sẻ lộ trình cho họ.
+\end{tabular} \\ \hline
+\textbf{Hậu điều kiện}     & Danh sách hiển thị đầy đủ các lộ trình được chia sẻ. \\ \hline
+\textbf{Luồng sự kiện chính} &
+\begin{tabular}[t]{@{}p{10.5cm}@{}}
+1. Người dùng truy cập vào mục "Chuyến đi".\\
+2. Người dùng chọn tab (hoặc bộ lọc) "Được chia sẻ với tôi".\\
+3. Hệ thống truy vấn CSDL và hiển thị danh sách các lộ trình, bao gồm thông tin tóm tắt: Tên chuyến đi, Người chia sẻ, Ngày khởi hành.\\
+4. Người dùng nhìn thấy danh sách.
+\end{tabular} \\ \hline
+\textbf{Luồng ngoại lệ} &
+\begin{tabular}[t]{@{}p{10.5cm}@{}}
+\textbf{E1: Người chia sẻ đã thu hồi quyền truy cập:}\\
+Traveler nhấn vào một lộ trình nhưng người chia sẻ đã hủy quyền truy cập trước đó. Hệ thống sẽ hiển thị thông báo "Bạn không còn quyền truy cập vào lộ trình này."\\
+\textbf{E2: Lộ trình gốc đã bị xóa:}\\
+Lộ trình mà người dùng muốn xem đã bị người tạo ra xóa vĩnh viễn. Hệ thống sẽ hiển thị thông báo "Lộ trình này không còn tồn tại.\\
+\textbf{E1: Danh sách rỗng:}\\
+Hệ thống hiển thị thông báo/hình ảnh minh họa: "Chưa có ai chia sẻ lộ trình với bạn."
+\end{tabular} \\
+\hline
+\end{longtable}
+
+\begin{longtable}{|p{4cm}|p{11cm}|}
+\caption{Mô tả Use Case: Hủy Lộ trình}
+\label{usecase-2-04} \\
+\hline
+\endfirsthead
+\caption[]{Mô tả Use Case: Hủy Lộ trình} \\
+\hline
+\endhead
+\textbf{Use case ID}       & UC-M2-04 \\ \hline
+\textbf{Tên Use case}      & Hủy Lộ trình \\ \hline
+\textbf{Các tác nhân}      & Traveler \\ \hline
+\textbf{Mô tả}             & Người dùng đánh dấu hủy một chuyến đi đã lên kế hoạch (do bận việc, thay đổi kế hoạch). Dữ liệu chuyến đi vẫn được giữ lại để tham khảo nhưng trạng thái chuyển thành "Đã hủy". \\ \hline
+\textbf{Tiền điều kiện}    & 
+\begin{tabular}[t]{@{}p{10.5cm}@{}}
+1. Traveler đã đăng nhập.\\
+2. Traveler có một lộ trình đang ở trạng thái "Sắp đi" \space hoặc "Đang tiến hành".
+\end{tabular} \\ \hline
+\textbf{Hậu điều kiện}     & Trạng thái của lộ trình được chuyển thành "Đã hủy". Lý do hủy (nếu có) được ghi nhận.\\ \hline
+\textbf{Luồng sự kiện chính} &
+\begin{tabular}[t]{@{}p{10.5cm}@{}}
+1. Tại màn hình chi tiết hoặc danh sách, Owner chọn chức năng "Hủy chuyến đi".\\
+2. Hệ thống hiển thị hộp thoại xác nhận: "Bạn có chắc chắn muốn hủy chuyến đi này? Trạng thái sẽ chuyển thành Đã hủy."\\
+3. Owner nhấn nút "Đồng ý hủy".\\
+4. Hệ thống cập nhật trạng thái lộ trình.\\
+5. Hệ thống hiển thị thông báo thành công.\\
+6. Lộ trình được di chuyển sang mục Lịch sử \space hoặc tab "Đã hủy".
+\end{tabular} \\ \hline
+\textbf{Luồng ngoại lệ} &
+\begin{tabular}[t]{@{}p{10.5cm}@{}}
+\textbf{E1: Lỗi kết nối hoặc lỗi máy chủ:}\\
+Hệ thống không thể cập nhật trạng thái do lỗi. Hệ thống sẽ hiển thị thông báo "Hủy thất bại, vui lòng thử lại."
+\end{tabular} \\
+\hline
+\end{longtable}
+
+\begin{longtable}{|p{4cm}|p{11cm}|}
 \caption{Mô tả Use Case: Tích hợp Lộ trình với Google Calendar}
 \label{usecase-2-06} \\
 \hline

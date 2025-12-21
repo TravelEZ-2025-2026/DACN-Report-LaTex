@@ -1,10 +1,16 @@
+\newpage
+\phantomsection
 \section*{Phụ lục}
-
 \addcontentsline{toc}{section}{Phụ lục}
 
 \setcounter{subsection}{0}
 \renewcommand{\thesubsection}{\Alph{subsection}}
 \renewcommand{\thesubsubsection}{\arabic{subsubsection}}
+
+\makeatletter
+\renewcommand{\theHsubsection}{appendix.\thesubsection}
+\makeatother
+% -------------------------------------------------------------
 
 \input{Sections/Appendices/1-usecase.tex}
 \input{Sections/Appendices/2-promptEvaluation.tex}

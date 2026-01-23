@@ -1,6 +1,6 @@
 \subsubsubsection{Kiến trúc chi tiết của hệ thống}
 
-Hệ thống được thiết kế theo mô hình \textbf{Layered Architecture}. Luồng xử lý chính của hệ thống tuân theo quy tắc phụ thuộc chặt chẽ: một lớp ở trên chỉ có thể giao tiếp với lớp ngay bên dưới nó. Dữ liệu yêu cầu sẽ đi từ lớp trên cùng (Presentation Layer) xuống các lớp dưới để xử lý và truy xuất dữ liệu, sau đó dữ liệu phản hồi sẽ được trả ngược lên trên.
+Toàn bộ hệ thống được thiết kế theo mô hình \textbf{Client - Server}. Hệ thống backend được thiết kế theo mô hình \textbf{Layered Architecture}. Luồng xử lý chính của hệ thống tuân theo quy tắc phụ thuộc chặt chẽ: một lớp ở trên chỉ có thể giao tiếp với lớp ngay bên dưới nó. Dữ liệu yêu cầu sẽ đi từ lớp trên cùng (Presentation Layer) xuống các lớp dưới để xử lý và truy xuất dữ liệu, sau đó dữ liệu phản hồi sẽ được trả ngược lên trên.
 \begin{landscape}
     \begin{figure}[htp]
         \centering
@@ -9,9 +9,9 @@ Hệ thống được thiết kế theo mô hình \textbf{Layered Architecture}.
         \label{fig:system_architecture}
     \end{figure}
 \end{landscape}
-Các tầng trong kiến trúc hệ thống:
+Các tầng trong kiến trúc hệ thống backend:
 \begin{itemize}
-    \item \textbf{User interface}: Đây là tầng trên cùng của kiến trúc, chịu trách nhiệm tương tác trực tiếp với người dùng cuối.
+    % \item \textbf{User interface}: Đây là tầng trên cùng của kiến trúc, chịu trách nhiệm tương tác trực tiếp với người dùng cuối.
     \item \textbf{Application Layer}: Đây là lõi của hệ thống, chứa toàn bộ logic nghiệp vụ và điều phối hoạt động giữa các tầng khác. Tầng này được chia nhỏ thành 3 lớp con:
           \begin{itemize}
               \item \textbf{Presentation layer}: Là cửa ngõ giao tiếp của backend, tiếp nhận các yêu cầu từ Tầng Giao diện người dùng. Lớp này xác thực, phân quyền, và kiểm tra tính hợp lệ của dữ liệu đầu vào trước khi chuyển đến Service layer. Lớp này hiển thị tài nguyên của hệ thống ra bên ngoài dưới dạng các API.

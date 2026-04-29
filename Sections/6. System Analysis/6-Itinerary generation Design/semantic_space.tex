@@ -1,0 +1,28 @@
+\subsubsubsection{Xây dựng dữ liệu ngữ nghĩa và không gian dùng chung}
+
+\textbf{Cấu trúc hóa dữ liệu ngữ nghĩa địa điểm:}\\
+Thay vì sử dụng các mô tả thô từ cơ sở dữ liệu, hệ thống ứng dụng mô hình ngôn ngữ lớn (LLM) dạng instruct để đóng vai trò trích xuất dữ liệu. LLM đọc các đánh giá thực tế của người dùng và tổng hợp thông tin theo năm trường ngữ nghĩa có cấu trúc:
+\begin{itemize}
+    \item \textbf{Category \& Entity (Phân loại \& thực thể):} Định danh rõ loại hình (Ví dụ: nhà hàng, quán cafe, điểm tham quan).
+    \item \textbf{Vibe (Không khí):} Các đặc tính như yên tĩnh, lãng mạn, nhộn nhịp, v.v.
+    \item \textbf{Scenario (Ngữ cảnh sử dụng):} Các tình huống như hẹn hò, làm việc, họp mặt gia đình, v.v.
+    \item \textbf{Audience (Đối tượng phù hợp):} Sinh viên, cặp đôi, gia đình có trẻ nhỏ, v.v.
+    \item \textbf{Highlights \& Amenities (Điểm nổi bật \& tiện ích):} Bãi đỗ xe, nhạc sống, tầm nhìn hoàng hôn, v.v.
+\end{itemize}
+Năm trường này được ghép nối thành một văn bản ngữ nghĩa duy nhất (\textit{semantic\_text}) cho mỗi điểm đến (POI). Cách biểu diễn này đảm bảo rằng văn bản đại diện chứa các từ khóa mô tả đặc trưng mà người dùng thường sử dụng khi tìm kiếm địa điểm du lịch. \textit{semantic\_text} sau đó được truyền qua mô hình embedding để tạo vector POI. Các vector này được lưu trữ trong PostgreSQL với phần mở rộng \texttt{pgvector}.
+
+\textbf{Hồ sơ hóa sở thích người dùng bằng vector:}\\
+Mục đích của việc xây dựng \textit{semantic\_text} không chỉ phục vụ truy xuất ngữ nghĩa một lần mà còn để biểu diễn sở thích người dùng dưới dạng vector tiềm ẩn. Trong hệ thống, người dùng và POI được ánh xạ vào cùng một không gian vector. 
+
+Ban đầu, vector sở thích của người dùng chưa được xác định. Thông qua các phản hồi ngầm từ các tương tác xã hội trong hệ thống (như like, comment, share bài viết check-in tại một địa điểm), vector của POI tương ứng được sử dụng để cập nhật vector người dùng. Công thức cập nhật sử dụng trung bình động hàm mũ (Exponential Moving Average):
+\begin{equation}
+    V_{user}^{(t)} = \alpha \cdot V_{poi} + (1 - \alpha) \cdot V_{user}^{(t-1)}
+\end{equation}
+Trong đó, $\alpha$ là hệ số suy giảm (decay factor), giúp cân bằng giữa sở thích lịch sử và sở thích mới phát sinh.
+
+\textbf{Lợi ích của kiến trúc không gian vector dùng chung:}\\
+Việc biểu diễn POI qua 5 trường cấu trúc mang lại hai lợi thế chính cho pipeline sinh lịch trình:
+\begin{itemize}
+    \item \textit{Khớp nối ý định:} Khi người dùng nhập yêu cầu dạng tự do (ví dụ: "địa điểm lãng mạn cho hai người"), hệ thống truy vấn trực tiếp vào không gian vector để lấy các POI có Audience tương ứng với "couple" và Vibe tương ứng với "romantic".
+    \item \textit{Cập nhật thích nghi theo thời gian:} Khi người dùng tương tác nhiều với các địa điểm có đặc trưng nhất định, vector sở thích của họ dịch chuyển dần về phía cụm vector của các địa điểm đó. Ở giai đoạn sinh lịch trình, hệ thống sẽ lấy các POI nằm gần vector người dùng nhất làm ngữ cảnh đầu vào, nhờ đó kết quả đầu ra tự động phù hợp với gu cá nhân mà không yêu cầu khai báo lại từ đầu.
+\end{itemize}

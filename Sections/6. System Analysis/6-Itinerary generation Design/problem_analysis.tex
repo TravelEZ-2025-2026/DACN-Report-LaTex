@@ -1,0 +1,26 @@
+\subsubsubsection{Phân tích bài toán và định hướng thiết kế}
+
+\textbf{Đặc thù của bài toán lập lịch trình du lịch:}\\
+Bài toán xây dựng lịch trình du lịch cá nhân hóa là một biến thể của bài toán định tuyến, nhưng có thêm các yếu tố liên quan đến sở thích và trải nghiệm người dùng. Lịch trình cần thỏa mãn đồng thời hai nhóm ràng buộc:
+\begin{itemize}
+    \item \textbf{Ràng buộc cứng:} Các điều kiện vật lý và logic không thể vi phạm, bao gồm: tổng ngân sách, khung giờ hoạt động của địa điểm (operating hours), và thời gian di chuyển giữa các điểm đến.
+    \item \textbf{Ràng buộc mềm:} Các yếu tố định tính ảnh hưởng đến trải nghiệm người dùng, bao gồm: nhịp độ chuyến đi (pacing), sự đa dạng về loại hình hoạt động (tránh lặp lại thể loại), và sự phù hợp về phong cách (vibe matching) giữa địa điểm với nhu cầu.
+\end{itemize}
+
+\textbf{Hạn chế của các công cụ tối ưu hóa truyền thống:}\\
+Trong quá trình khảo sát, nhóm đã xem xét ứng dụng các bộ giải tối ưu hóa tổ hợp như Google OR-Tools – một công cụ phổ biến cho các bài toán định tuyến (TSP, VRP). Tuy nhiên, phương pháp này bộc lộ hai hạn chế chính khi áp dụng vào bài toán du lịch:
+\begin{itemize}
+    \item \textit{Khó mô hình hóa ràng buộc mềm:} Việc biểu diễn các tiêu chí định tính (ví dụ: mức độ phù hợp về phong cách, sự thoải mái về nhịp độ,...) dưới dạng hàm mục tiêu toán học là phức tạp và thiếu chính xác. Rất khó để định lượng bằng các trọng số hình phạt cho việc "mất đi sự lãng mạn" hay "nhịp độ chuyến đi quá dồn dập".
+    \item \textit{Tính cứng nhắc khi xử lý đầu vào ngôn ngữ tự nhiên:} Dữ liệu đầu vào của người dùng là ngôn ngữ tự nhiên, mang tính chủ quan và đa dạng. Để sử dụng OR-Tools, cần xây dựng nhiều quy tắc chuyển đổi thủ công, làm giảm khả năng mở rộng và cá nhân hóa.
+\end{itemize}
+
+Từ những phân tích trên, nhóm kết luận rằng: Các công cụ tối ưu hóa truyền thống tuy đảm bảo tuyệt đối về ràng buộc cứng nhưng lại không hiệu quả trước ràng buộc mềm. Tuy nhiên, nếu chỉ sử dụng mô hình ngôn ngữ lớn (LLM) đơn thuần, hệ thống sẽ làm rất tốt ràng buộc mềm nhưng có nguy cơ vi phạm ràng buộc cứng do hiện tượng ảo giác (hallucination).
+
+\textbf{Định hướng thiết kế:}\\
+Để giải quyết bài toán đa mục tiêu này, nhóm đề xuất định hướng thiết kế lai, tách bạch vai trò xử lý của hệ thống thành một luồng công việc bao gồm ba thành phần cốt lõi:
+\begin{enumerate}
+    \item \textbf{Động cơ sáng tạo (Generator - LLM):} Đảm nhận việc thỏa mãn các ràng buộc mềm. Dựa trên dữ liệu ngữ nghĩa được truy xuất, LLM tạo ra bản nháp lịch trình, ưu tiên sự đa dạng, phong cách và nhịp độ phù hợp.
+    \item \textbf{Động cơ kiểm duyệt (Evaluator - Deterministic Algorithms):} Đảm bảo tuân thủ các ràng buộc cứng. Hệ thống sử dụng các thuật toán tất định và công cụ định tuyến (ví dụ: OSRM) để kiểm tra bản nháp về thời gian di chuyển, giờ mở cửa, ngân sách và phát hiện vi phạm ràng buộc cứng.
+    \item \textbf{Vòng lặp tự sửa lỗi (Self-Correction Loop):} Thay vì can thiệp thủ công, hệ thống tự động chuyển đổi các lỗi logic thành phản hồi dạng ngôn ngữ tự nhiên, gửi lại LLM để điều chỉnh lịch trình. Quá trình lặp lại cho đến khi tất cả ràng buộc được thỏa mãn.
+\end{enumerate}
+Kiến trúc này cho phép hệ thống vừa tận dụng khả năng suy luận ngữ nghĩa của LLM cho các ràng buộc mềm, vừa đảm bảo độ chính xác về mặt thời gian và không gian nhờ các thuật toán tất định.

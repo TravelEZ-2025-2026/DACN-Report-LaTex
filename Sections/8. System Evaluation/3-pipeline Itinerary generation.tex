@@ -1,0 +1,53 @@
+\subsection{Đánh giá hiệu quả luồng sinh lộ trình}
+Phần này trình bày kết quả đối chiếu hiệu năng giữa phương pháp sử dụng mô hình ngôn ngữ lớn thuần túy và Kiến trúc luồng 6 giai đoạn được đề xuất trong đồ án. Mục tiêu là đánh giá mức độ cải thiện về tính khả thi vật lý (ràng buộc cứng) và chất lượng trải nghiệm (ràng buộc mềm) trên cùng một tập mẫu thực nghiệm.
+
+\subsubsection{Phạm vi thực nghiệm}
+Thực nghiệm được tiến hành đối soát trên tập dữ liệu gồm \textbf{35 kịch bản} du lịch đa dạng, bao phủ các nhu cầu về ngân sách, độ dài chuyến đi và yêu cầu đặc biệt. Phạm vi đánh giá được chia thành hai nhóm chính:
+
+\begin{itemize}
+    \item \textbf{Đánh giá ràng buộc cứng:} Đo lường tính khả thi vật lý thông qua việc đối chiếu với cơ sở dữ liệu và API định tuyến OSRM. 
+    \begin{itemize}
+        \item \textit{Đối với LLM thuần:} Kiểm tra hệ thống trên 856 địa điểm (POI), đối chiếu 643 khung giờ hoạt động và tính toán cho 750 chặng di chuyển.
+        \item \textit{Đối với Pipeline:} Kiểm tra trên 512 địa điểm, đối chiếu 380 khung giờ hoạt động và tính toán 402 chặng di chuyển (bao gồm 382 lần gọi OSRM API và 20 lần truy xuất từ bộ nhớ đệm).
+    \end{itemize}
+    
+    \item \textbf{Đánh giá ràng buộc mềm:} Sử dụng phương pháp \textit{LLM-as-a-Judge} với 3 mô hình độc lập: \textbf{Grok 4, Deepseek-R1, và GPT-5.3}. Các mô hình chấm điểm dựa trên thang điểm 15 với 3 tiêu chí cốt lõi: (1) Độ khớp chân dung người dùng, (2) Tính hợp lý thời điểm và (3) Nhịp độ di chuyển.
+\end{itemize}
+
+\subsubsection{Kết quả đánh giá ràng buộc cứng}
+Việc chuẩn hóa tập thực nghiệm về 35 kịch bản cho phép đưa ra cái nhìn trực diện về hiệu quả của kiến trúc pipeline so với baseline. Kết quả chi tiết được tổng hợp trong Bảng \ref{tab:hard_constraints_comparison}.
+
+\begin{table}[htbp]
+\centering
+\caption{So sánh hiệu suất giữa Pure LLM và Pipeline ($n=35$)}
+\label{tab:hard_constraints_comparison}
+\begin{tabular}{|l|c|c|}
+\hline
+\textbf{Tiêu chí đánh giá} & \textbf{Pure LLM (Baseline)} & \textbf{Pipeline (Đề xuất)} \\ \hline
+Tỉ lệ vượt qua ngân sách & 100\% & 100\% \\ \hline
+Tỉ lệ logic di chuyển & 20,00\% & 100\% \\ \hline
+Tỉ lệ giờ hoạt động & 77,14\% & 91,43\% \\ \hline
+\textbf{Tỉ lệ đạt chuẩn hoàn hảo} & 20,00\% & 91,43\% \\ \hline
+Thời gian thực thi trung bình & 30 -- 75 giây & 42 -- 142 giây \\ \hline
+\end{tabular}
+\end{table}
+
+\begin{itemize}
+    \item \textbf{Ràng buộc logic di chuyển:} LLM thuần thường gặp lỗi phi logic thời gian do không tính toán thời gian đi đường. Trong kiến trúc pipeline, vấn đề này được giải quyết thông qua việc kết hợp thuật toán định tuyến thực tế (OSRM) và bước hiệu chỉnh LLM dựa trên phản hồi dữ liệu. Thực nghiệm cho thấy, chỉ với một bước gọi hiệu chỉnh duy nhất, LLM đã có thể nhận diện thông tin từ OSRM để tự động chèn các khoảng đệm (buffer) thời gian và sắp xếp lại trình tự một cách tối ưu, đạt tỉ lệ hợp lệ tuyệt đối 100\%. Điều này chứng minh hiệu quả rất cao của cơ chế phản hồi được thiết lập.
+    \item \textbf{Ràng buộc giờ hoạt động:} Pipeline cải thiện đáng kể độ chính xác (tăng từ 77,14\% lên 91,43\%), giảm thiểu các sai sót về thời gian đóng/mở cửa của địa điểm nhờ dữ liệu metadata chính xác.
+    \item \textbf{Tỉ lệ đạt chuẩn hoàn hảo:} Pipeline đạt mức \textbf{91,43\%}, cho thấy khả năng tạo ra lộ trình thực thi được ngay trong thực tế, vượt trội hoàn toàn so với phương pháp Baseline.
+\end{itemize}
+
+\subsubsection{Kết quả đánh giá ràng buộc mềm}
+Lộ trình từ Pipeline nhận được phản hồi tích cực về khả năng thấu hiểu ngữ cảnh. Điểm trung bình có sự phân hóa theo độ khắt khe của mô hình: \textbf{Grok 4} (~11,59/15), \textbf{GPT-5.3} (~10,03/15) và \textbf{Deepseek-R1} (~9,43/15).
+
+\paragraph{Các kịch bản tiêu biểu:}
+\begin{description}
+    \item[Case 12 (Người ăn chay):] Đạt điểm gần tối đa (13,8/15) nhờ khả năng lọc địa điểm thuần chay chính xác và thiết lập nhịp độ tham quan phù hợp.
+    \item[Case 18 (Kỷ niệm tiệc cưới):] Nhận điểm đánh giá cao về tính sang trọng, đáp ứng đúng kỳ vọng của phân khúc khách hàng cao cấp.
+\end{description}
+
+\paragraph{Các hạn chế ghi nhận:} Hệ thống bộc lộ một số giới hạn về quy định đặc thù tại POI (ví dụ: cấm thú cưng tại Bảo tàng) hoặc các yếu tố ngoại cảnh như mức độ tiếng ồn tại các khu vực du lịch trung tâm.
+
+\subsubsection{Tổng kết đánh giá}
+Thông qua việc đối soát thực nghiệm, kiến trúc Pipeline 6 giai đoạn đã chứng minh được tính hiệu quả. Việc tích hợp định tuyến thực tế kết hợp với cơ chế hiệu chỉnh tập trung giúp tối ưu hóa cả về độ chính xác lẫn hiệu suất thực thi; đặc biệt là khả năng đạt được tính khả thi tuyệt đối về logic di chuyển ngay từ lần hiệu chỉnh đầu tiên. Tỉ lệ lộ trình hoàn hảo tăng gấp \textbf{4,5 lần} so với phương pháp baseline, khẳng định hiệu quả của kiến trúc lai trong bài toán gợi ý hành trình.

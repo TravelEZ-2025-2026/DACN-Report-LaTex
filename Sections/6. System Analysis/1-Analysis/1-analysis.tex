@@ -5,8 +5,8 @@
 Quy trình này mô tả sự tương tác giữa Khách du lịch, hệ thống TravelEZ và hệ thống AI để tạo ra một lịch trình du lịch tối ưu.
 \begin{itemize}
     \item \textbf{Bắt đầu:} Khách du lịch yêu cầu tạo lộ trình mới và cung cấp các thông tin mong muốn (điểm đến, phong cách, thời gian, chi phí,...).
-    \item \textbf{Xử lý:} Hệ thống TravelEZ kiểm tra tính hợp lệ của dữ liệu đầu vào. Nếu hợp lệ, hệ thống sẽ tổng hợp danh sách địa điểm và gửi yêu cầu (prompt) đến hệ thống AI.
-    \item \textbf{Phản hồi:} AI xử lý thông tin để đưa ra lộ trình phù hợp nhất. Kết quả từ AI sẽ được TravelEZ kiểm tra lại một lần nữa trước khi hiển thị chính thức cho người dùng. Trường hợp kết quả không đạt yêu cầu, hệ thống sẽ đính kèm thông tin lỗi và yêu cầu AI xử lý lại.
+    \item \textbf{Xử lý:} Hệ thống AI tiếp nhận và trích xuất ý định từ yêu cầu của người dùng. Dựa trên các ý định này, hệ thống TravelEZ thực hiện tìm kiếm vector để chọn ra các địa điểm (POI) phù hợp. Sau đó, hệ thống tạo prompt chứa ngữ cảnh và danh sách POI ứng viên để gửi request đến AI.
+    \item \textbf{Phản hồi:} AI xử lý thông tin để sinh ra lộ trình phù hợp. Hệ thống TravelEZ tiến hành kiểm tra (validate) kết quả này; nếu không hợp lệ, hệ thống sẽ đính kèm thông tin lỗi vào prompt và yêu cầu AI xử lý lại. Nếu hợp lệ, lộ trình đề xuất sẽ được hiển thị cho khách du lịch.
 \end{itemize}
 \begin{figure}[H]
     \centering

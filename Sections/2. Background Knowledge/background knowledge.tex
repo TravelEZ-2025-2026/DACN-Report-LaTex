@@ -95,15 +95,35 @@ AI/ML là công nghệ lõi cho phép hệ thống "học" từ dữ liệu đ�
     \item Xây dựng thuật toán tối ưu hóa: Giải quyết các bài toán tối ưu hóa tổ hợp phức tạp. Ví dụ kinh điển là Bài toán Người bán hàng du lịch (Traveling Salesman Problem - TSP): cho một danh sách các thành phố (điểm tham quan) và khoảng cách giữa chúng, tìm chu trình ngắn nhất đi qua mỗi thành phố đúng một lần và quay về điểm xuất phát. Trong gợi ý hành trình, TSP được dùng để tối ưu hóa lộ trình di chuyển giữa các điểm đến trong một ngày, giúp tiết kiệm thời gian và chi phí.
 \end{itemize}
 
+\subsubsection{Biểu diễn ngữ nghĩa và Không gian Vector}
+Để hệ thống có thể hiểu được các yêu cầu mang tính cảm xúc và trừu tượng của người dùng (ví dụ: phong cách, "vibe" của chuyến đi), dữ liệu cần được chuyển đổi sang các định dạng mà máy tính có thể tính toán được.
+
+\begin{itemize}
+    \item \textbf{Không gian vector và kỹ thuật nhúng (Embedding):} Trong xử lý ngôn ngữ tự nhiên (NLP) hiện đại, thay vì so khớp từ khóa chính xác (keyword matching), văn bản được mã hóa thành các vector số thực nhiều chiều \cite{pennington-2014}. Mỗi chiều trong không gian vector đại diện cho một đặc trưng ngữ nghĩa tiềm ẩn. Để tối ưu hóa độ chính xác của vector và ngăn chặn hiện tượng trôi dạt ngữ nghĩa (semantic drift) trong hệ thống gợi ý, việc sử dụng các thẻ mô tả có cấu trúc thay vì ngôn ngữ tự nhiên thuần túy thường mang lại hiệu suất truy xuất ổn định hơn.
+    \item \textbf{Đo lường độ tương đồng:} Khi các thực thể (như yêu cầu của người dùng và các điểm đến - POI) được ánh xạ vào cùng một không gian vector, mức độ liên quan giữa chúng được tính toán bằng các phép đo khoảng cách hình học, điển hình là độ tương đồng Cosine. Nhờ đó, hệ thống có thể truy xuất các địa điểm có ngữ nghĩa gần gũi nhất với mong muốn của người dùng.
+\end{itemize}
+
+\subsubsection{Kiến trúc Retrieval-Augmented Generation (RAG)}
+Đây là kiến trúc cốt lõi giúp khắc phục các nhược điểm của việc ứng dụng trực tiếp các mô hình ngôn ngữ lớn (LLM) vào các hệ thống đòi hỏi tính chính xác cao về dữ liệu thực tế.
+
+\begin{itemize}
+    \item \textbf{Giới hạn của LLM truyền thống:} Các mô hình LLM sở hữu khả năng hiểu và sinh ngôn ngữ tự nhiên vượt trội. Tuy nhiên, kiến thức của chúng bị giới hạn trong bộ nhớ tham số (các trọng số tĩnh sau huấn luyện). Điều này dẫn đến việc mô hình không nắm bắt được dữ liệu cục bộ, dữ liệu thời gian thực và thường gây ra hiện tượng ảo giác (hallucination) – sinh ra thông tin sai lệch nhưng trình bày một cách tự tin.
+    \item \textbf{Nguyên lý RAG:} Kiến trúc RAG ra đời nhằm cung cấp một bộ nhớ ngoài tinh gọn, có thể truy xuất linh hoạt dựa trên không gian vector \cite{lewis-2020, gao-2023}. RAG đóng vai trò như một lớp bộ nhớ đệm thông minh, giúp LLM tập trung vào nhiệm vụ suy luận và định dạng kết quả thay vì gánh vác việc ghi nhớ thông tin rời rạc. Toàn bộ quá trình hoạt động gồm hai giai đoạn chính:
+    \begin{itemize}
+        \item \textit{Giai đoạn truy xuất (Retrieval):} Dựa trên độ tương đồng vector, hệ thống tìm kiếm trong cơ sở dữ liệu bên ngoài để lấy ra các đoạn thông tin, dữ liệu địa điểm (POI) liên quan sát nhất với truy vấn của người dùng.
+        \item \textit{Giai đoạn sinh văn bản (Generation):} Các tập dữ liệu vừa được truy xuất sẽ được tiêm vào ngữ cảnh của LLM. Mô hình sẽ dựa trên nền tảng dữ liệu thực tế này để tổng hợp, sắp xếp và sinh ra câu trả lời hoặc kịch bản hành trình cuối cùng, đảm bảo tính chính xác và không bịa đặt thông tin.
+    \end{itemize}
+\end{itemize}
+
 \subsubsection{Các thuật ngữ kỹ thuật cốt lõi}
-Hành trình Du lịch Tối ưu (Optimal Itinerary/Path): Là một lịch trình di chuyển và tham quan được xây dựng để tối đa hóa hoặc tối thiểu hóa một hoặc nhiều hàm mục tiêu. Các tiêu chí đánh giá sự tối ưu bao gồm:
+Hành trình du lịch tối ưu (Optimal Itinerary/Path): Là một lịch trình di chuyển và tham quan được xây dựng để tối đa hóa hoặc tối thiểu hóa một hoặc nhiều hàm mục tiêu. Các tiêu chí đánh giá sự tối ưu bao gồm:
 \begin{itemize}
     \item Thời gian: Tổng thời gian di chuyển và tham quan ngắn nhất.
     \item Chi phí: Tổng chi phí di chuyển, vé vào cửa, và các chi phí liên quan là thấp nhất.
-    \item Sự hài lòng (Satisfaction): Mức độ phù hợp của các điểm đến trong hành trình với sở thích của người dùng, dựa trên điểm đánh giá của cộng đồng và độ phổ biến.
+    \item Sự hài lòng: Mức độ phù hợp của các điểm đến trong hành trình với sở thích của người dùng, dựa trên điểm đánh giá của cộng đồng và độ phổ biến.
 \end{itemize}
 
-Chất lượng gợi ý (Recommendation Quality): Được đo lường bằng các chỉ số sau:
+Chất lượng gợi ý: Được đo lường bằng các chỉ số sau:
 \begin{itemize}
     \item Độ chính xác (Precision): Tỷ lệ các mục được gợi ý mà người dùng thực sự quan tâm (TP: True Positive, FP: False Positive).
     \item Độ phủ (Recall/Sensitivity): Tỷ lệ các mục mà người dùng quan tâm được hệ thống gợi ý thành công (FN: False Negative).

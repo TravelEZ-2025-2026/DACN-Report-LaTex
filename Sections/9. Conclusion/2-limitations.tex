@@ -1,7 +1,9 @@
 \subsection{Hạn chế}
 Mặc dù đã hoàn thành các mục tiêu cơ bản, hệ thống vẫn còn tồn tại một số hạn chế nhất định:
 \begin{itemize} 
-    \item \textbf{Phạm vi dữ liệu địa lý:} Hiện tại, dữ liệu hệ thống chỉ mới tập trung thu thập tại khu vực Thành phố Hồ Chí Minh (449 địa điểm). Các địa điểm du lịch ở các tỉnh thành khác chưa được bao phủ, làm giảm tính đa dạng của các gợi ý hành trình liên tỉnh.
-    \item \textbf{Tính cập nhật của dữ liệu:} Dữ liệu về địa điểm (giờ mở cửa, các thông tin khác) là dữ liệu tĩnh được crawl tại một thời điểm nhất định. Hệ thống chưa có cơ chế cập nhật thời gian thựcđể phản ánh các thay đổi đột xuất từ phía địa điểm kinh doanh.
+    \item \textbf{Phạm vi dữ liệu địa lý:} Hiện tại, dữ liệu hệ thống chỉ mới tập trung thu thập tại khu vực Thành phố Hồ Chí Minh (586 địa điểm). Các địa điểm du lịch ở các tỉnh thành khác chưa được bao phủ, làm giảm tính đa dạng của các gợi ý hành trình liên tỉnh.
+    \item \textbf{Tính cập nhật của dữ liệu:} Dữ liệu về địa điểm (giờ mở cửa, các thông tin khác) là dữ liệu tĩnh được crawl tại một thời điểm nhất định. Hệ thống chưa có cơ chế cập nhật thời gian thực để phản ánh các thay đổi đột xuất từ phía địa điểm kinh doanh.
     \item \textbf{Xử lý đa phương tiện:} Hệ thống hiện chỉ hỗ trợ tải lên và lưu trữ hình ảnh với dung lượng giới hạn để tối ưu hóa hiệu năng và chi phí. Chưa hỗ trợ định dạng video và cơ chế xử lý cho các tệp tin kích thước lớn.
+    \item \textbf{Giới hạn trong tối ưu hóa lộ trình dài ngày:} Luồng sinh lộ trình hiện tại bộc lộ hạn chế khi xử lý các yêu cầu chuyến đi kéo dài (ví dụ: hành trình tính theo tuần hoặc tháng). Khi độ dài chuyến đi tăng lên, không gian tìm kiếm và số lượng biến số mở rộng theo cấp số nhân. Điều này khiến mô hình AI và các thuật toán kiểm định gặp khó khăn trong việc duy trì độ chính xác, dẫn đến giảm hiệu quả trong việc sắp xếp và thỏa mãn đồng thời các đa ràng buộc phức tạp xuyên suốt toàn bộ hành trình.
+    \item \textbf{Mức độ hoàn thiện phân hệ nhà cung cấp (Provider):} Hệ thống hiện đang tập trung chủ yếu vào trải nghiệm của người dùng cuối (khách du lịch). Các module chức năng dành riêng cho nhà cung cấp dịch vụ (như quản lý dịch vụ, bảng điều khiển phân tích xu hướng thị trường, hay công cụ AI hỗ trợ cải thiện lịch trình) vẫn đang trong giai đoạn phát triển sơ khởi và chưa được tích hợp hoàn chỉnh.
 \end{itemize}

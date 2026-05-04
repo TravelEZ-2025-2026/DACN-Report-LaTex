@@ -1,7 +1,9 @@
 \subsection{Kết quả đạt được}
-Trong giai đoạn đầu tiên của đồ án, nhóm đã hoàn thành các mục tiêu cơ bản sau:
+Trong quá trình hoàn thiện đồ án, nhóm đã hoàn thành các mục tiêu cơ bản sau:
 \begin{itemize}
     \item \textbf{Xây dựng hạ tầng và kiến trúc:} Thiết lập source code Backend theo kiến trúc Modular Monolith với Spring Boot. Cấu hình cơ sở dữ liệu PostgreSQL và tích hợp các dịch vụ hạ tầng quan trọng: Google Cloud Storage, Google reCAPTCHA v2.
-    \item \textbf{Thu thập và chuẩn hóa dữ liệu:} Xây dựng quy trình crawl và import dữ liệu địa điểm thực tế tại Thành phố Hồ Chí Minh. Kết quả đã xây dựng được kho dữ liệu gồm 449 địa điểm và 8.959 đánh giá kèm hình ảnh để phục vụ cho hệ thống.
+    \item \textbf{Thu thập và chuẩn hóa dữ liệu:} Xây dựng quy trình thu thập (crawl) và nhập dữ liệu địa điểm thực tế tại Thành phố Hồ Chí Minh. Kết quả đã xây dựng được kho dữ liệu lớn gồm \textbf{586 địa điểm} và \textbf{18.665 đánh giá (review)} kèm hình ảnh đa phương tiện.
+    \item \textbf{Xây dựng không gian ngữ nghĩa:} Ứng dụng thành công Mô hình ngôn ngữ lớn (LLM) để đọc, phân tích và trích xuất dữ liệu từ tập review của từng địa điểm. Từ đó, hệ thống xây dựng thành công văn bản ngữ nghĩa (\textit{semantic text}) chuẩn hóa, làm nền tảng cho việc nhúng vector (embedding) phục vụ bài toán cá nhân hóa trải nghiệm người dùng.
+    \item \textbf{Phát triển luồng sinh lộ trình tối ưu:} Thiết kế và triển khai thành công kiến trúc lai (hybrid) sinh lộ trình du lịch. Hệ thống đã được kiểm chứng khả năng tạo ra các lịch trình cá nhân hóa, thỏa mãn đồng thời các \textbf{ràng buộc cứng} (thời gian di chuyển vật lý, giờ hoạt động, ngân sách) và \textbf{ràng buộc mềm} (phong cách, nhịp độ chuyến đi, sở thích cá nhân).
     \item \textbf{Thiết kế API:} Thiết kế OpenAPI cho các chức năng cốt lõi của hệ thống.
 \end{itemize}

@@ -1,5 +1,4 @@
-Trên cơ sở phân tích và đánh giá các giải pháp hỗ trợ du lịch hiện có ở Chương 4, chương này đề xuất Hệ thống Gợi ý Hành trình Du lịch Thông minh TravelEZ nhằm giải quyết các hạn chế đã được chỉ ra. Hệ thống được cấu thành từ các nhóm chức năng chính, mỗi nhóm đảm nhiệm một vai trò chuyên biệt để hiện thực hóa mục tiêu xây dựng một nền tảng du lịch toàn diện — từ việc tạo ra các gợi ý cá nhân hóa sâu sắc, thúc đẩy tương tác cộng đồng, cho đến việc cung cấp công cụ hỗ trợ cho các nhà cung cấp dịch vụ.
-
+Trên cơ sở phân tích và đánh giá các giải pháp hỗ trợ du lịch hiện có ở Chương 3, chương này đề xuất Hệ thống Gợi ý Hành trình Du lịch Thông minh TravelEZ nhằm giải quyết các hạn chế đã được chỉ ra.
 Hệ thống bao gồm 9 module chính sau:
 
 % --- HÌNH ẢNH TỔNG QUAN ĐƯỢC ĐẶT NGAY TRƯỚC DANH SÁCH MODULE ---
@@ -12,21 +11,21 @@ Hệ thống bao gồm 9 module chính sau:
 
 % --- MÔ TẢ CHI TIẾT CÁC MODULE (ĐÃ CẬP NHẬT 9 MODULE) ---
 \begin{enumerate}
-    \item \textbf{MD-01 Gợi ý lộ trình:} Tiếp nhận yêu cầu (điểm đến, thời gian, ngân sách, sở thích) để AI tạo lộ trình. Người dùng có thể tạo lộ trình mới (rỗng/sao chép), điều chỉnh (thêm/xoá/sắp xếp), yêu cầu gợi ý dịch vụ liên quan, lưu trữ và xoá các lộ trình. (Tương ứng FR1.x)
+    \item \textbf{MD-01 Gợi ý lộ trình:} Tiếp nhận yêu cầu (điểm đến, thời gian, ngân sách, sở thích) để AI tạo lộ trình. Người dùng có thể tạo lộ trình mới (rỗng/sao chép), điều chỉnh (thêm/xoá/sắp xếp), yêu cầu gợi ý dịch vụ liên quan, lưu trữ và xoá các lộ trình.
 
-    \item \textbf{MD-02 Quản lý lộ trình:} Cho phép người dùng chia sẻ lộ trình (quyền chỉ xem), xem danh sách các lộ trình được chia sẻ, huỷ lộ trình "Đang tiến hành" và tích hợp kế hoạch với Google Calendar. (Tương ứng FR2.x)
+    \item \textbf{MD-02 Quản lý lộ trình:} Cho phép người dùng chia sẻ lộ trình (quyền chỉ xem), xem danh sách các lộ trình được chia sẻ, huỷ lộ trình "Đang tiến hành" và tích hợp kế hoạch với Google Calendar.
 
-    \item \textbf{MD-03 Tìm kiếm và khám phá nội dung:} Cung cấp chức năng tìm kiếm (từ khoá, danh mục), lọc/sắp xếp kết quả, xem chi tiết địa điểm (POI), xem các gợi ý (nổi bật, thịnh hành), lưu (bookmark) nội dung và theo dõi chủ đề. (Tương ứng FR3.x)
+    \item \textbf{MD-03 Tìm kiếm và khám phá nội dung:} Cung cấp chức năng tìm kiếm (từ khoá, danh mục), lọc/sắp xếp kết quả, xem chi tiết địa điểm (POI), xem các gợi ý (nổi bật, thịnh hành), lưu (bookmark) nội dung và theo dõi chủ đề.
 
-    \item \textbf{MD-04 Xây dựng cộng đồng và nội dung:} Cho phép người dùng tạo/sửa/xoá các bài viết (blog) và đánh giá (review). Hỗ trợ các tương tác xã hội như bình luận, thả cảm xúc, báo cáo vi phạm và nhắn tin (cá nhân và nhóm). (Tương ứng FR4.x)
+    \item \textbf{MD-04 Xây dựng cộng đồng và nội dung:} Cho phép người dùng tạo/sửa/xoá các bài viết (blog) và đánh giá (review). Hỗ trợ các tương tác xã hội như bình luận, thả cảm xúc, báo cáo vi phạm và nhắn tin (cá nhân và nhóm).
     
-    \item \textbf{MD-05 Quản lý nội dung:} Cung cấp giao diện cho quản trị viên xem xét, xử lý các nội dung vi phạm (ẩn/xoá) do người dùng báo cáo hoặc hệ thống tự động gắn cờ. Khi một nội dung bị xử lý, hệ thống sẽ tự động \textbf{ghi lại lịch sử vi phạm} của người dùng liên quan. (Tương ứng FR5.x)
+    \item \textbf{MD-05 Quản lý nội dung:} Cung cấp giao diện cho quản trị viên xem xét, xử lý các nội dung vi phạm (ẩn/xoá) do người dùng báo cáo hoặc hệ thống tự động gắn cờ. Khi một nội dung bị xử lý, hệ thống sẽ tự động \textbf{ghi lại lịch sử vi phạm} của người dùng liên quan.
 
-    \item \textbf{MD-06 Phân tích dữ liệu và xu hướng thị trường:} Cung cấp dashboard cho Nhà cung cấp dịch vụ (Provider) xem các thống kê và trực quan hóa dữ liệu về xu hướng thị trường (ví dụ: điểm đến, dịch vụ phổ biến). (Tương ứng FR6.x)
+    \item \textbf{MD-06 Phân tích dữ liệu và xu hướng thị trường:} Cung cấp dashboard cho Nhà cung cấp dịch vụ (Provider) xem các thống kê và trực quan hóa dữ liệu về xu hướng thị trường (ví dụ: điểm đến, dịch vụ phổ biến).
 
-    \item \textbf{MD-07 Gợi ý cải thiện lịch trình:} Cho phép Nhà cung cấp dịch vụ (Provider) gửi một lộ trình du lịch hiện có. AI sẽ phân tích lộ trình này dựa trên dữ liệu xu hướng (từ Module 6, ví dụ: địa điểm, dịch vụ phổ biến, sự kiện, tệp khách hàng) và gợi ý một lịch trình cụ thể đã được tối ưu để họ xem xét, tham khảo. (Tương ứng FR7.x)
+    \item \textbf{MD-07 Gợi ý cải thiện lịch trình:} Cho phép Nhà cung cấp dịch vụ (Provider) gửi một lộ trình du lịch hiện có. AI sẽ phân tích lộ trình này dựa trên dữ liệu xu hướng (từ Module 6, ví dụ: địa điểm, dịch vụ phổ biến, sự kiện, tệp khách hàng) và gợi ý một lịch trình cụ thể đã được tối ưu để họ xem xét, tham khảo.
 
-    \item \textbf{MD-08 Quản trị người dùng:} Xử lý xác thực (đăng ký, đăng nhập, đăng xuất, quên mật khẩu) và quản lý hồ sơ người dùng. Cung cấp cho Admin chức năng quản lý tài khoản: tìm kiếm người dùng, xem lịch sử vi phạm (từ Module 5), và \textbf{xử lý các tài khoản vi phạm} (khoá/mở tài khoản). Super Admin có thêm chức năng phân quyền. (Tương ứng FR8.x)
+    \item \textbf{MD-08 Quản trị người dùng:} Xử lý xác thực (đăng ký, đăng nhập, đăng xuất, quên mật khẩu) và quản lý hồ sơ người dùng. Cung cấp cho Admin chức năng quản lý tài khoản: tìm kiếm người dùng, xem lịch sử vi phạm (từ Module 5), và \textbf{xử lý các tài khoản vi phạm} (khoá/mở tài khoản). Super Admin có thêm chức năng phân quyền.
     
-    \item \textbf{MD-09 Quản trị hệ thống:} Cho phép quản trị viên hệ thống thực hiện các thao tác CRUD (Thêm, Sửa, Xoá, Xem) đối với các danh mục dữ liệu gốc (master data) của hệ thống. Đây là các dữ liệu nền tảng dùng chung cho toàn bộ ứng dụng, ví dụ: quản lý danh sách địa điểm (POI), danh mục các chủ đề du lịch, và các tags nội dung. (Tương ứng FR9.x)
+    \item \textbf{MD-09 Quản trị hệ thống:} Cho phép quản trị viên hệ thống thực hiện các thao tác CRUD (Thêm, Sửa, Xoá, Xem) đối với các danh mục dữ liệu gốc (master data) của hệ thống. Đây là các dữ liệu nền tảng dùng chung cho toàn bộ ứng dụng, ví dụ: quản lý danh sách địa điểm (POI), danh mục các chủ đề du lịch, và các tags nội dung.
 \end{enumerate}

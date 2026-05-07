@@ -1,8 +1,30 @@
 \subsection{Đánh giá hiệu quả luồng sinh lộ trình}
 Phần này trình bày kết quả đối chiếu hiệu năng giữa phương pháp sử dụng mô hình ngôn ngữ lớn thuần túy và Kiến trúc luồng 6 giai đoạn được đề xuất trong đồ án. Mục tiêu là đánh giá mức độ cải thiện về tính khả thi vật lý (ràng buộc cứng) và chất lượng trải nghiệm (ràng buộc mềm) trên cùng một tập mẫu thực nghiệm.
 
-\subsubsection{Phạm vi thực nghiệm}
-Thực nghiệm được tiến hành đối soát trên tập dữ liệu gồm \textbf{35 kịch bản} du lịch đa dạng, bao phủ các nhu cầu về ngân sách, độ dài chuyến đi và yêu cầu đặc biệt. Phạm vi đánh giá được chia thành hai nhóm chính:
+\subsubsection{Thiết lập và phạm vi thực nghiệm}
+
+\textbf{Định nghĩa và cấu hình các mô hình thực nghiệm} 
+
+Để đảm bảo tính minh bạch và khách quan trong việc đánh giá hiệu năng, thực nghiệm được thiết lập để đối chiếu giữa hai phương pháp sinh lộ trình trên cùng một nền tảng mô hình ngôn ngữ lớn (Gemini 2.5 Flash) và cùng sử dụng chung cơ sở dữ liệu.
+
+\begin{enumerate}
+    \item Phương pháp LLM thuần có tăng cường truy xuất (Pure LLM / Baseline):
+    
+    \textbf{Cấu hình:} Phương pháp này đại diện cho cách tiếp cận RAG cơ bản. Mô hình LLM được cung cấp đầy đủ ngữ cảnh đầu vào bao gồm các thiết lập của người dùng và danh sách các địa điểm ứng viên tiềm năng (được truy xuất từ cơ sở dữ liệu vector).
+    
+    \textbf{Ngữ cảnh thực thi:} Về bản chất hệ thống, phương pháp này chỉ thực thi đến giai đoạn 3 (khởi tạo bản nháp) trong kiến trúc đề xuất. Sau khi nhận được danh sách POI ứng viên và ngữ cảnh, LLM sẽ suy luận và sinh ra bản lộ trình cuối cùng chỉ trong một lượt chạy duy nhất. Kết quả này được trả thẳng cho người dùng mà không trải qua bất kỳ bước kiểm định thuật toán học hay vòng lặp tự sửa lỗi nào.
+    
+    \item Mô hình luồng đề xuất (TravelEZ Pipeline 6 giai đoạn):
+    
+    \textbf{Cấu hình:} Đây là kiến trúc hoàn chỉnh được nhóm nghiên cứu thiết kế, sử dụng cùng cấu hình RAG ở giai đoạn đầu như phương pháp Baseline nhưng được bổ sung thêm các lớp kiểm soát bằng thuật toán tất định.
+    
+    \textbf{Ngữ cảnh thực thi:} Phương pháp này vận hành trọn vẹn toàn bộ 6 giai đoạn. Điểm khác biệt cốt lõi là sau khi LLM sinh ra bản nháp ở giai đoạn 3, kết quả không được trả về ngay mà bắt buộc phải đi qua giai đoạn 4 để kiểm tra các ràng buộc vật lý (tích hợp API OSRM tính toán logistics, đối chiếu giờ mở cửa). Nếu phát hiện vi phạm, hệ thống sẽ kích hoạt giai đoạn 5, gửi lại bản nháp kèm mã lỗi và yêu cầu LLM thực thi sửa lỗi.
+\end{enumerate}
+
+\vspace{0.5cm}
+\textbf{Phạm vi thực nghiệm} 
+
+Thực nghiệm được tiến hành đối soát trên tập dữ liệu gồm 35 kịch bản du lịch đa dạng, bao phủ các nhu cầu về ngân sách, độ dài chuyến đi và yêu cầu đặc biệt. Phạm vi đánh giá được chia thành hai nhóm chính:
 
 \begin{itemize}
     \item \textbf{Đánh giá ràng buộc cứng:} Đo lường tính khả thi vật lý thông qua việc đối chiếu với cơ sở dữ liệu và API định tuyến OSRM. 

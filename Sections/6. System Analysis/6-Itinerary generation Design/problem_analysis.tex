@@ -1,11 +1,15 @@
 \subsubsubsection{Phân tích bài toán và định hướng thiết kế}
 
 \textbf{Đặc thù của bài toán lập lịch trình du lịch:}\\
-Bài toán xây dựng lịch trình du lịch cá nhân hóa là một biến thể của bài toán định tuyến, nhưng có thêm các yếu tố liên quan đến sở thích và trải nghiệm người dùng. Lịch trình cần thỏa mãn đồng thời hai nhóm ràng buộc:
+Bài toán xây dựng lịch trình du lịch cá nhân hóa là một biến thể phức tạp của bài toán định tuyến đa mục tiêu, được mở rộng thêm các yếu tố về sở thích và trải nghiệm người dùng. Về mặt hình thức, bài toán này được xác định thông qua ba thành phần cốt lõi: không gian dữ liệu đầu vào (Input), hệ thống các ràng buộc (Constraint) và kết quả đầu ra kỳ vọng (Output). \\
+Đối với dữ liệu đầu vào, không gian tham số được cấu thành từ hai nhóm thông tin chính. Nhóm thứ nhất là các thiết lập chủ quan từ phía người dùng, bao gồm điểm đến, thời lượng chuyến đi, ngân sách dự kiến, phong cách du lịch, đối tượng đồng hành và các yêu cầu đặc thù khác. Nhóm thứ hai là dữ liệu ngữ cảnh không gian, bao gồm danh sách các địa điểm ứng viên tiềm năng được trích xuất từ cơ sở dữ liệu, đi kèm với siêu dữ liệu chi tiết như tọa độ địa lý, khung giờ hoạt động, chi phí tham khảo và các đặc trưng ngữ nghĩa. \\
+Dựa trên không gian đầu vào đó, thuật toán phải thỏa mãn một hệ thống ràng buộc chặt chẽ, được phân rã thành hai cấp độ:
 \begin{itemize}
     \item \textbf{Ràng buộc cứng:} Các điều kiện vật lý và logic không thể vi phạm, bao gồm: tổng ngân sách, khung giờ hoạt động của địa điểm (operating hours), và thời gian di chuyển giữa các điểm đến.
     \item \textbf{Ràng buộc mềm:} Các yếu tố định tính ảnh hưởng đến trải nghiệm người dùng, bao gồm: nhịp độ chuyến đi (pacing), sự đa dạng về loại hình hoạt động (tránh lặp lại thể loại), và sự phù hợp về phong cách (vibe matching) giữa địa điểm với nhu cầu.
 \end{itemize}
+
+Kết quả đầu ra của bài toán là một bản lịch trình du lịch cá nhân hóa hoàn chỉnh, đảm bảo tính khả thi tuyệt đối trong thực tế. Cụ thể, lộ trình được phân bổ liền mạch theo từng ngày và từng khung giờ, cung cấp chính xác các thông tin về thời gian di chuyển giữa các điểm đến. Hơn thế nữa, kết quả này còn đi kèm với một bảng dự toán chi phí tổng thể và các lời khuyên, hướng dẫn (AI tips) được tinh chỉnh riêng cho từng hoạt động nhằm tối ưu hóa toàn diện trải nghiệm của du khách.
 
 \textbf{Hạn chế của các công cụ tối ưu hóa truyền thống:}\\
 Trong quá trình khảo sát, nhóm đã xem xét ứng dụng các bộ giải tối ưu hóa tổ hợp như Google OR-Tools – một công cụ phổ biến cho các bài toán định tuyến (TSP, VRP). Tuy nhiên, phương pháp này bộc lộ hai hạn chế chính khi áp dụng vào bài toán du lịch:

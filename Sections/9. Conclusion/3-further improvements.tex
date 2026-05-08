@@ -1,11 +1,12 @@
 \subsection{Hướng phát triển}
-Giai đoạn tiếp theo, nhóm sẽ tập trung vào các mục tiêu sau:
+Dựa trên những kết quả đã đạt được và các hạn chế đã xác định, nhóm đề xuất một số hướng phát triển tiếp theo để hoàn thiện và nâng cao chất lượng hệ thống:
 \begin{itemize}
-    \item \textbf{Phát triển các chức năng của hệ thống:} Xây dựng API và giao diện người dùng cho các module: gợi ý lộ trình, quản lý lộ trình, tìm kiếm và khám phá nội dung, xây dựng cộng đồng và nội dung, phân tích dữ liệu và xu hướng thị trường, gợi ý cải thiện lịch trình, quản trị người dùng, quản trị hệ thống.
-    \item \textbf{Mở rộng phạm vi dữ liệu địa lý:} Thêm các địa điểm du lịch ở các tỉnh thành khác vào hệ thống để tăng tính đa dạng của các gợi ý hành trình liên tỉnh.
-    \item \textbf{Mở rộng tính năng xử lý đa phương tiện:} Thêm cơ chế tải lên phân mảnh cho các tệp tin kích thước lớn và hỗ trợ định dạng video.
-    \item \textbf{Huấn luyện vi chỉnh mô hình chuyên biệt (Fine-tuning):} Tiến hành tinh chỉnh các mô hình ngôn ngữ mã nguồn mở nhằm xây dựng một mô hình nội bộ chuyên trách cho bài toán du lịch. Giải pháp này hướng tới việc tối ưu hóa chi phí vận hành dài hạn, đảm bảo quyền kiểm soát dữ liệu và giảm thiểu sự phụ thuộc vào các dịch vụ API cung cấp từ bên thứ ba.
-    \item \textbf{Ứng dụng học tăng cường trong cá nhân hóa:} Nghiên cứu tích hợp các thuật toán học tăng cường để tối ưu hóa động tham số suy giảm $\alpha$ (decay factor) trong quá trình ánh xạ không gian vector. Việc hệ thống có khả năng tự động điều chỉnh tham số này dựa trên phản hồi thực tế của người dùng sẽ giúp cập nhật trọng số sở thích chính xác hơn, từ đó nâng cao chất lượng cá nhân hóa trong luồng sinh lộ trình.
-    \item \textbf{Kiểm thử và tích hợp hệ thống:} Thực hiện kiểm thử để đảm bảo tính đúng đắn của luồng dữ liệu giữa các module, phân tích hiệu năng API, thời gian phản hồi.
-    \item \textbf{Thiết lập quy trình CI/CD:} Xây dựng quy trình tích hợp và triển khai bằng Docker và GitHub Actions nhằm tự động hóa các bước build, test và deploy, giúp tối ưu hóa thời gian phát triển và vận hành.Toàn bộ tài liệu hướng dẫn triển khaivà sử dụng sẽ được cung cấp cho người dùng.
+    \item Hệ thống cần cung cấp thêm chức năng cho người quản trị để dễ dàng quản lý và cập nhật dữ liệu địa điểm, bao gồm khả năng thêm, sửa, xóa địa điểm và thông tin liên quan một cách trực quan và hiệu quả.
+    \item Cần mở rộng phạm vi dữ liệu địa lý để bao phủ thêm nhiều tỉnh thành khác, từ đó tăng tính đa dạng và phong phú của các gợi ý hành trình liên tỉnh, đáp ứng nhu cầu của nhiều nhóm người dùng hơn.
+    \item Cần xây dựng cơ chế cập nhật dữ liệu thời gian thực để đảm bảo rằng thông tin về địa điểm luôn chính xác và kịp thời, phản ánh các thay đổi đột xuất từ phía địa điểm kinh doanh như giờ mở cửa, sự kiện đặc biệt, hay các thay đổi về dịch vụ.
+    \item Hỗ trợ xử lý đa phương tiện nâng cao, bao gồm khả năng tải lên và lưu trữ video, cũng như các tệp tin có kích thước lớn hơn, để cung cấp trải nghiệm người dùng phong phú hơn và tận dụng tối đa các nội dung đa phương tiện liên quan đến địa điểm.
+    \item Cải thiện luồng sinh lộ trình để xử lý tốt hơn các yêu cầu chuyến đi kéo dài, bằng cách tối ưu hóa thuật toán và mô hình AI để duy trì độ chính xác và hiệu quả khi không gian tìm kiếm mở rộng theo cấp số nhân.
+    \item Hoàn thiện phân hệ nhà cung cấp (Provider) để cung cấp các công cụ quản lý dịch vụ, bảng điều khiển phân tích xu hướng thị trường, và các công cụ AI hỗ trợ cải thiện lịch trình, từ đó tạo ra một hệ sinh thái hoàn chỉnh cho cả người dùng cuối và nhà cung cấp dịch vụ.
 \end{itemize}
+
+Cuối cùng, qua 2 giai đoạn đồ án, nhóm đã phát triển một hệ thống gợi ý hành trình du lịch dựa trên AI với kiến trúc lai, kết hợp giữa mô hình ngôn ngữ lớn và thuật toán định tuyến thực tế. Hệ thống đã được đánh giá kỹ lưỡng về cả ràng buộc chức năng và phi chức năng, chứng minh hiệu quả vượt trội so với phương pháp baseline. Tuy nhiên, hệ thống vẫn còn một số hạn chế cần được khắc phục và cải thiện trong tương lai để đáp ứng tốt hơn nhu cầu của người dùng và thị trường du lịch ngày càng phát triển.

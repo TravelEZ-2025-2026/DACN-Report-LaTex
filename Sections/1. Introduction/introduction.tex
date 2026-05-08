@@ -80,8 +80,6 @@ Các giới hạn và lựa chọn về mặt công nghệ cho hệ thống Trav
 \subsubsection{Ý nghĩa khoa học}
 Về mặt khoa học, đồ án trình bày một phương pháp tiếp cận khả thi trong việc giải quyết bài toán tối ưu hóa lịch trình du lịch cá nhân bằng trí tuệ nhân tạo. Cụ thể, đồ án đã đề xuất và hiện thực hóa kiến trúc luồng xử lý gồm 6 giai đoạn, thông qua việc kết hợp giữa mô hình ngôn ngữ lớn (LLM) và thuật toán định tuyến tất định (OSRM). Việc thiết kế kiến trúc lai này góp phần hạn chế tình trạng ảo giác dữ liệu thường gặp ở các mô hình AI tạo sinh khi phải xử lý các ràng buộc phức tạp về không gian và thời gian. \\
 Trong kiến trúc này, LLM được vận dụng để thấu hiểu ngữ cảnh nhằm xử lý các ràng buộc mềm (sở thích, phong cách, nhịp độ), trong khi thuật toán tất định đóng vai trò kiểm duyệt để đảm bảo tính hợp lý của các ràng buộc cứng (khoảng cách vật lý, thời gian di chuyển, giờ mở cửa). Cùng với đó, việc tích hợp kỹ thuật truy xuất tăng cường (RAG), phương pháp cấu trúc hóa câu lệnh kết hợp và cơ chế vòng lặp tự hiệu chỉnh đã tạo nên một bộ khung luận lý tương đối hoàn chỉnh. Kết quả của đồ án góp phần giải quyết bài toán gợi ý hành trình du lịch, đồng thời cung cấp một mô hình tham khảo hữu ích cho quá trình nghiên cứu và xây dựng các ứng dụng AI trong thực tiễn.
-Về mặt khoa học, đồ án trình bày một phương pháp tiếp cận khả thi trong việc giải quyết bài toán tối ưu hóa lịch trình du lịch cá nhân bằng trí tuệ nhân tạo. Cụ thể, đồ án đã đề xuất và hiện thực hóa kiến trúc luồng xử lý gồm 6 giai đoạn, thông qua việc kết hợp giữa mô hình ngôn ngữ lớn (LLM) và thuật toán định tuyến tất định (OSRM). Việc thiết kế kiến trúc lai này góp phần hạn chế tình trạng ảo giác dữ liệu thường gặp ở các mô hình AI tạo sinh khi phải xử lý các ràng buộc phức tạp về không gian và thời gian. \\
-Trong kiến trúc này, LLM được vận dụng để thấu hiểu ngữ cảnh nhằm xử lý các ràng buộc mềm (sở thích, phong cách, nhịp độ), trong khi thuật toán tất định đóng vai trò kiểm duyệt để đảm bảo tính hợp lý của các ràng buộc cứng (khoảng cách vật lý, thời gian di chuyển, giờ mở cửa). Cùng với đó, việc tích hợp kỹ thuật truy xuất tăng cường (RAG), phương pháp cấu trúc hóa câu lệnh kết hợp và cơ chế vòng lặp tự hiệu chỉnh đã tạo nên một bộ khung luận lý tương đối hoàn chỉnh. Kết quả của đồ án góp phần giải quyết bài toán gợi ý hành trình du lịch, đồng thời cung cấp một mô hình tham khảo hữu ích cho quá trình nghiên cứu và xây dựng các ứng dụng AI trong thực tiễn.
 
 \subsection{Cấu trúc báo cáo}
 Để trình bày một cách hệ thống và khoa học các kết quả nghiên cứu và phát triển, báo cáo đồ án được tổ chức thành 8 chương chính:
@@ -90,13 +88,13 @@ Trong kiến trúc này, LLM được vận dụng để thấu hiểu ngữ c�
 
 \textbf{Chương 2 - Cơ sở lý thuyết}: Cung cấp nền tảng kiến thức về nghiệp vụ du lịch và các công nghệ, kỹ thuật được sử dụng để phát triển hệ thống.
 
-\textbf{Chương 3 - Các hệ thống liên quan}: Khảo sát, phân tích và so sánh các giải pháp gợi ý hành trình du lịch hiện có trên thị trường, nhằm rút ra các bài học kinh nghiệm và xác định điểm mới của hệ thống.
+\textbf{Chương 3 - Các công trình liên quan}: Khảo sát, phân tích và so sánh các giải pháp gợi ý hành trình du lịch hiện có trên thị trường, nhằm rút ra các bài học kinh nghiệm và xác định điểm mới của hệ thống.
 
 \textbf{Chương 4 - Hệ thống đề xuất}: Mô tả tổng quan về hệ thống TravelEZ, định nghĩa các nhóm người dùng và liệt kê chi tiết các yêu cầu chức năng, phi chức năng, yêu cầu dữ liệu.
 
-\textbf{Chương 5 - Phân tích và Thiết kế}: Trình bày chi tiết phân tích hệ thống, kiến trúc tổng thể, thiết kế cơ sở dữ liệu, sitemap, thiết kế giao diện người dùng (UI/UX) và luồng sinh lộ trình dựa trên AI.
+\textbf{Chương 5 - Phân tích và thiết kế}: Trình bày chi tiết phân tích hệ thống, kiến trúc tổng thể, thiết kế cơ sở dữ liệu, sitemap, thiết kế giao diện người dùng (UI/UX) và luồng sinh lộ trình dựa trên AI.
 
-\textbf{Chương 6 - Hiện thực}: Mô tả quá trình hiện thực hóa các thiết kế, cấu trúc mã nguồn, và trình bày quy trình kiểm thử (testcase) nhằm đảm bảo chất lượng phần mềm.
+\textbf{Chương 6 - Hiện thực và kiểm thử}: Mô tả quá trình hiện thực hóa các thiết kế, cấu trúc mã nguồn, và trình bày quy trình kiểm thử (testcase) nhằm đảm bảo chất lượng phần mềm.
 
 \textbf{Chương 7 - Đánh giá}: Đánh giá toàn diện các kết quả đạt được, đối chiếu với các yêu cầu chức năng và phi chức năng đã đề ra ban đầu.
 

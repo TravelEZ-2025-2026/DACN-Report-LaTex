@@ -1,0 +1,75 @@
+\subsubsection{Testcase module 8: Quản trị người dùng}
+
+\hypertarget{target:tc_m8}{}
+\begin{landscape}
+\small 
+\begin{longtable}{|p{2.2cm}|p{2.2cm}|p{4cm}|p{4.5cm}|p{6cm}|p{2cm}|}
+    
+    % --- PHẦN 1: TIÊU ĐỀ CHO TRANG ĐẦU TIÊN ---
+\caption{Danh sách Test Case chi tiết - Module 8: Quản trị người dùng} \label{tab:tc_module8} \\
+\hline
+\textbf{ID} & \textbf{ Use case} & \textbf{Tên Test case} & \textbf{Dữ liệu kiểm thử} & \textbf{Kết quả mong đợi} & \textbf{Kết quả } \\
+\hline
+\endfirsthead
+
+% --- PHẦN 2: TIÊU ĐỀ CHO CÁC TRANG TIẾP THEO ---
+\multicolumn{6}{c}{{\bfseries \tablename\ thetable{}: Danh sách Test Case chi tiết - Module 8: Quản trị người dùng}} \\
+\hline
+\textbf{ID} & \textbf{ Use case} & \textbf{Tên Test case} & \textbf{Dữ liệu kiểm thử} & \textbf{Kết quả mong đợi} & \textbf{Kết quả } \\
+\hline
+\endhead
+
+\hline
+\endlastfoot
+
+% ================= NỘI DUNG BẢNG =================
+
+% --- LUỒNG CHÍNH ---
+TC-M8-01 & UC-M8-01 & Đăng ký tài khoản thành công & 
+- Email: newuser@test.com \newline 
+- Pass: 12345678 & 
+Hệ thống thông báo đăng ký thành công & Đạt\\
+\hline
+
+TC-M8-02 & UC-M8-01 & Đăng ký tài khoản thất bại (email đã tồn tại) & 
+- Email: existinguser@test.com \newline 
+- Pass: 12345678 & 
+Hệ thống hiển thị thông báo "Email already exists" & Đạt \\
+\hline
+
+TC-M8-03 & UC-M8-01 & Đăng ký tài khoản thất bại (mật khẩu không hợp lệ) & 
+- Email: newuser@test.com \newline 
+- Pass: 123 & 
+Hệ thống hiển thị thông báo "Password is too short" & Đạt \\
+\hline
+
+TC-M8-04 & UC-M8-02 & Đăng nhập tài khoản thành công & 
+- Email: existinguser@test.com \newline 
+- Pass: 12345678 & 
+Hệ thống thông báo đăng nhập thành công & Đạt \\
+\hline
+
+TC-M8-05 & UC-M8-02 & Đăng nhập tài khoản thất bại (sai thông tin) & 
+- Email: existinguser@test.com \newline 
+- Pass: wrongpassword & 
+Hệ thống hiển thị thông báo "Invalid email or password" & Đạt \\
+\hline
+
+TC-M8-06 & UC-M8-03 & Đăng xuất & N/A & 
+Hệ thống thông báo đăng xuất thành công & Đạt \\
+\hline
+
+TC-M8-07 & UC-M8-06 & Người dùng xem thông tin cá nhân & 
+User ID: 101 & 
+Hệ thống hiển thị thông tin người dùng & Đạt \\
+\hline
+
+TC-M8-08 & UC-M8-07 & Người dùng cập nhật thông tin cá nhân & 
+- userid = 101 \newline
+- Email: updateduser@test.com & 
+Hệ thống cập nhật thông tin người dùng thành công & Đạt \\
+\hline
+
+
+\end{longtable}
+\end{landscape}

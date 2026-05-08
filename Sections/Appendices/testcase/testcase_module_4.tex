@@ -1,0 +1,92 @@
+\subsubsection{Testcase module 4: Xây dựng cộng đồng và nội dung}
+
+\hypertarget{target:tc_m4}{}
+\begin{landscape}
+\small 
+\begin{longtable}{|p{2.2cm}|p{2.2cm}|p{4cm}|p{4.5cm}|p{6cm}|p{2cm}|}
+    
+    % --- PHẦN 1: TIÊU ĐỀ CHO TRANG ĐẦU TIÊN ---
+\caption{Danh sách Test Case chi tiết - Module 4: Xây dựng cộng đồng và nội dung} \label{tab:tc_module4} \\
+\hline
+\textbf{ID} & \textbf{ Use case} & \textbf{Tên Test case} & \textbf{Dữ liệu kiểm thử} & \textbf{Kết quả mong đợi} & \textbf{Kết quả } \\
+\hline
+\endfirsthead
+
+% --- PHẦN 2: TIÊU ĐỀ CHO CÁC TRANG TIẾP THEO ---
+\multicolumn{6}{c}{{\bfseries \tablename\ thetable{}: Danh sách Test Case chi tiết - Module 4: Xây dựng cộng đồng và nội dung}} \\
+\hline
+\textbf{ID} & \textbf{ Use case} & \textbf{Tên Test case} & \textbf{Dữ liệu kiểm thử} & \textbf{Kết quả mong đợi} & \textbf{Kết quả } \\
+\hline
+\endhead
+
+\hline
+\endlastfoot
+
+% ================= NỘI DUNG BẢNG =================
+
+% --- LUỒNG CHÍNH ---
+TC-M4-01 & UC-M4-01 & Tạo review thành công & 
+- Đánh giá: 5 sao \newline 
+- Bình luận: "Địa điểm rất tốt!"
+- Điều kiện: Người dùng đã đăng nhập & 
+Hệ thống tạo review thành công & Đạt\\
+\hline
+
+TC-M4-02 & UC-M4-01 & Tạo review thiếu thông tin & 
+- Đánh giá: 5 sao \newline 
+- Bình luận: ""
+- Điều kiện: Người dùng đã đăng nhập & 
+Hệ thống vô hiệu hoá nút "Submit" & Đạt \\
+\hline
+
+TC-M4-03 & UC-M4-01 & Tạo review có kèm hình ảnh & 
+- Đánh giá: 5 sao \newline 
+- Bình luận: "Địa điểm rất tốt!"
+- Hình ảnh: "image.jpg"
+- Điều kiện: Người dùng đã đăng nhập & 
+Hệ thống tạo review thành công & Đạt\\
+\hline
+
+TC-M4-04 & UC-M4-01 & Xoá review & 
+reviewid = 101 & 
+Hệ thống xóa review thành công & Đạt \\
+\hline
+
+TC-M4-05 & UC-M4-02 & Tạo bài viết thành công & 
+- Tiêu đề: "Bài viết mới" \newline 
+- Nội dung: "Nội dung bài viết" & 
+Hệ thống tạo bài viết thành công & Đạt \\
+\hline
+
+TC-M4-06 & UC-M4-02 & Tạo bài viết thiếu thông tin & 
+- Tiêu đề: "" \newline 
+- Nội dung: "Nội dung bài viết" & 
+Hệ thống vô hiệu hoá nút "Submit" & Đạt \\
+\hline
+
+TC-M4-07 & UC-M4-02 & Tạo bài viết có kèm hình ảnh & 
+- Tiêu đề: "Bài viết mới" \newline 
+- Nội dung: "Nội dung bài viết" 
+- Hình ảnh: "image.jpg" & 
+Hệ thống tạo bài viết thành công & Đạt \\
+\hline
+
+TC-M4-08 & UC-M4-03 & Chỉnh sửa bài viết & 
+- postid = 101 \newline
+- Nội dung: "Nội dung bài viết được chỉnh sửa" & 
+Hệ thống cập nhật bài viết thành công & Đạt \\
+\hline
+
+TC-M4-09 & UC-M4-03 & Xoá bài viết & 
+- postid = 101 & 
+Hệ thống xóa bài viết thành công & Đạt \\
+\hline
+
+TC-M4-10 & UC-M4-04 & Xoá bài viết & 
+- postid = 101 & 
+Hệ thống xóa bài viết thành công & Đạt \\
+\hline
+
+
+\end{longtable}
+\end{landscape}

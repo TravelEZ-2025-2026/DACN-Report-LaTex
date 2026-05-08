@@ -1,0 +1,70 @@
+\subsubsection{Testcase module 3: Tìm kiếm và khám phá nội dung}
+
+\hypertarget{target:tc_m3}{}
+\begin{landscape}
+\small 
+\begin{longtable}{|p{2.2cm}|p{2.2cm}|p{4cm}|p{4.5cm}|p{6cm}|p{2cm}|}
+    
+    % --- PHẦN 1: TIÊU ĐỀ CHO TRANG ĐẦU TIÊN ---
+\caption{Danh sách Test Case chi tiết - Module 3: Tìm kiếm và khám phá nội dung} \label{tab:tc_module3} \\
+\hline
+\textbf{ID} & \textbf{ Use case} & \textbf{Tên Test case} & \textbf{Dữ liệu kiểm thử} & \textbf{Kết quả mong đợi} & \textbf{Kết quả } \\
+\hline
+\endfirsthead
+
+% --- PHẦN 2: TIÊU ĐỀ CHO CÁC TRANG TIẾP THEO ---
+\multicolumn{6}{c}{{\bfseries \tablename\ thetable{}: Danh sách Test Case chi tiết - Module 3: Tìm kiếm và khám phá nội dung}} \\
+\hline
+\textbf{ID} & \textbf{ Use case} & \textbf{Tên Test case} & \textbf{Dữ liệu kiểm thử} & \textbf{Kết quả mong đợi} & \textbf{Kết quả } \\
+\hline
+\endhead
+
+\hline
+\endlastfoot
+
+% ================= NỘI DUNG BẢNG =================
+
+% --- LUỒNG CHÍNH ---
+TC-M3-01 & UC-M3-01 & Tìm kiếm nội dung thành công & 
+Từ khóa: "Thành phố Hồ Chí Minh" & 
+Hệ thống hiển thị danh sách các địa điểm phù hợp & Đạt\\
+\hline
+
+TC-M3-02 & UC-M3-01 & Tìm kiếm với từ khóa không tồn tại & 
+Từ khóa: "địa điểm không tồn tại" & 
+Hệ thống thông báo: "Not found" & Đạt \\
+\hline
+
+TC-M3-03 & UC-M3-01 & Tìm kiếm với từ khóa trống & 
+Từ khóa: "" & 
+Hệ thống không thực hiện tìm kiếm & Đạt\\
+\hline
+
+TC-M3-04 & UC-M3-01 & Tìm kiếm với từ khóa quá ngắn & 
+Từ khóa: "đà" & 
+Hệ thống thông báo lỗi: "Từ khóa tìm kiếm quá ngắn" & Đạt \\
+\hline
+
+TC-M3-05 & UC-M3-01 & Tìm kiếm với từ khóa gợi ý & 
+Từ khóa: "local cuisine" & 
+Hệ thống hiển thị các địa điểm phù hợp với từ khóa gợi ý. & Đạt \\
+\hline
+
+TC-M3-06 & UC-M3-02 & Xem chi tiết địa điểm & 
+placeid = 101 & 
+Hệ thống hiển thị thông tin chi tiết của địa điểm. & Đạt \\
+\hline
+
+TC-M3-07 & UC-M3-03 & Xem danh sách bình luận về địa điểm & 
+placeid = 101 & 
+Hệ thống hiển thị danh sách bình luận về địa điểm. & Đạt \\
+\hline
+
+TC-M3-08 & UC-M3-03 & Xem danh sách bình luận về địa điểm với các tuỳ chọn & 
+placeid = 101 và các tuỳ chọn lọc & 
+Hệ thống hiển thị danh sách bình luận về địa điểm theo các tuỳ chọn đã chọn. & Đạt \\
+\hline
+
+
+\end{longtable}
+\end{landscape}

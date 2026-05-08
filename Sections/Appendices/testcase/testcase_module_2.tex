@@ -1,107 +1,65 @@
-\subsubsection{Testcase Module 2: Quản lý Lộ trình cá nhân}
+\subsubsection{Testcase module 2: Quản lý lộ trình du lịch}
 
 \hypertarget{target:tc_m2}{}
 \begin{landscape}
 \small 
-\begin{longtable}{|p{2.5cm}|p{4.0cm}|p{6.5cm}|p{4.5cm}|p{4.5cm}|}
+\begin{longtable}{|p{2.2cm}|p{2.2cm}|p{4cm}|p{4.5cm}|p{6cm}|p{2cm}|}
     
-    % --- PHẦN 1: TIÊU ĐỀ TRANG ĐẦU ---
-\caption{Danh sách Test Case chi tiết - Module 2: Quản lý Lộ trình cá nhân} \label{tab:tc_module2} \\
+    % --- PHẦN 1: TIÊU ĐỀ CHO TRANG ĐẦU TIÊN ---
+\caption{Danh sách Test Case chi tiết - Module 2: Quản lý lộ trình du lịch} \label{tab:tc_module2} \\
 \hline
-\textbf{ID} & \textbf{Tên Test Case} & \textbf{Các bước thực hiện} & \textbf{Dữ liệu kiểm thử} & \textbf{Kết quả mong đợi} \\
+\textbf{ID} & \textbf{ Use case} & \textbf{Tên Test case} & \textbf{Dữ liệu kiểm thử} & \textbf{Kết quả mong đợi} & \textbf{Kết quả } \\
 \hline
 \endfirsthead
 
-% --- PHẦN 2: TIÊU ĐỀ CÁC TRANG SAU ---
-\multicolumn{5}{c}{{\bfseries \tablename\ \thetable{}: Danh sách Test Case - Module 2 Quản lý Lộ trình cá nhân}} \\
+% --- PHẦN 2: TIÊU ĐỀ CHO CÁC TRANG TIẾP THEO ---
+\multicolumn{6}{c}{{\bfseries \tablename\ thetable{}: Danh sách Test Case chi tiết - Module 2: Quản lý lộ trình du lịch}} \\
 \hline
-\textbf{ID} & \textbf{Tên Test Case} & \textbf{Các bước thực hiện} & \textbf{Dữ liệu kiểm thử} & \textbf{Kết quả mong đợi} \\
+\textbf{ID} & \textbf{ Use case} & \textbf{Tên Test case} & \textbf{Dữ liệu kiểm thử} & \textbf{Kết quả mong đợi} & \textbf{Kết quả } \\
 \hline
 \endhead
 
-% --- PHẦN 3: KẾT THÚC BẢNG ---
 \hline
 \endlastfoot
 
-% ================= NỘI DUNG TEST CASE MODULE 2 =================
+% ================= NỘI DUNG BẢNG =================
 
-% --- LUỒNG CHÍNH (MAIN FLOW) ---
-TC\_M2\_01 & Xem danh sách lộ trình (My Trips) & 
-1. Đăng nhập hệ thống. \newline 
-2. Truy cập menu ``Chuyến đi của tôi''. & 
-- Tài khoản: User đã có 5 lộ trình đã lưu. & 
-Hiển thị danh sách các lộ trình dưới dạng thẻ (Card) bao gồm: Ảnh bìa, Tên chuyến, Thời gian, Trạng thái (Sắp đi/Đã qua). \\
+% --- LUỒNG CHÍNH ---
+TC-M2-01 & UC-M2-01 & Chia sẻ thành công cho người dùng hợp lệ & 
+Email người nhận: friend@travelez.com  & 
+Hệ thống thông báo thành công & Đạt\\
 \hline
 
-TC\_M2\_02 & Xem chi tiết một lộ trình & 
-1. Tại màn hình danh sách. \newline 
-2. Nhấn vào thẻ lộ trình ``Đà Lạt 2025''. & 
-- Lộ trình: Đà Lạt (Public) & 
-Chuyển hướng đến trang chi tiết lộ trình với đầy đủ timeline, bản đồ và tổng chi phí dự kiến. \\
+TC-M2-02 & UC-M2-01 & Chia sẻ với người dùng không hợp lệ & 
+Email người nhận: invalid-email & 
+Hệ thống thông báo lỗi: "Invalid email address" & Đạt \\
 \hline
 
-TC\_M2\_03 & Tìm kiếm lộ trình thành công & 
-1. Nhập từ khóa vào ô tìm kiếm. \newline 
-2. Nhấn Enter. & 
-- Keyword: ``Hà Nội'' \newline
-- Data: Có 2 lộ trình khớp tên. & 
-Danh sách lọc lại, chỉ hiển thị 2 lộ trình có tên chứa từ khóa ``Hà Nội''. \\
+TC-M2-03 & UC-M2-01 & Chia sẻ với email trùng lặp & 
+Email người nhận: friend@travelez.com  & 
+Hệ thống thông báo lỗi: "Email address already exists" & Đạt\\
 \hline
 
-% --- LUỒNG THAY THẾ (ALTERNATIVE FLOW) ---
-TC\_M2\_04 & Lọc lộ trình theo trạng thái & 
-1. Nhấn vào bộ lọc (Filter). \newline 
-2. Chọn trạng thái ``Đã kết thúc''. & 
-- Trạng thái: Past Trips & 
-Chỉ hiển thị các chuyến đi có ngày kết thúc nhỏ hơn ngày hiện tại. \\
+TC-M2-04 & UC-M2-01 & Chia sẻ với email rỗng & 
+N/A & 
+Hệ thống thông báo lỗi: "Email address is required" & Đạt \\
 \hline
 
-TC\_M2\_05 & Xóa nhiều lộ trình cùng lúc (Bulk Delete) & 
-1. Nhấn nút ``Chọn nhiều''. \newline 
-2. Tích chọn 3 lộ trình. \newline 
-3. Nhấn icon Thùng rác $\to$ Xác nhận. & 
-- Số lượng: 3 items & 
-3 lộ trình đã chọn biến mất khỏi danh sách. Hệ thống thông báo ``Đã xóa 3 mục thành công''. \\
+TC-M2-05 & UC-M2-01 & Chia sẻ với email không tồn tại & 
+Email người nhận: non-existent@travelez.com  & 
+Hệ thống thông báo lỗi: "Email address not found" & Đạt \\
 \hline
 
-TC\_M2\_06 & Chia sẻ lộ trình cho bạn bè & 
-1. Tại thẻ lộ trình, nhấn icon ``Chia sẻ''. \newline 
-2. Nhập email người nhận. \newline 
-3. Nhấn ``Gửi lời mời''. & 
-- Email: friend@gmail.com \newline
-- Quyền: Xem (View only) & 
-Hệ thống gửi email mời tham gia/xem lộ trình đến địa chỉ đích. Thông báo ``Đã gửi lời mời''. \\
+TC-M2-06 & UC-M2-02 & Xem danh sách được chia sẻ & 
+N/A & 
+Hệ thống hiển thị danh sách các lộ trình đã được chia sẻ với người dùng. & Đạt \\
 \hline
 
-TC\_M2\_07 & Nhân bản lộ trình (Duplicate) & 
-1. Nhấn menu ``Khác'' (3 chấm) trên thẻ lộ trình. \newline 
-2. Chọn ``Nhân bản''. & 
-- Lộ trình gốc: ``Quy Nhơn'' & 
-Tạo ra một bản sao mới có tên ``Copy of Quy Nhơn'' nằm trên cùng danh sách. \\
+TC-M2-07 & UC-M2-03 & Xem chi tiết lộ trình được chia sẻ & 
+N/A & 
+Hệ thống hiển thị thông tin chi tiết của lộ trình đã được chia sẻ. & Đạt \\
 \hline
 
-% --- LUỒNG NGOẠI LỆ (EXCEPTION FLOW) ---
-TC\_M2\_08 & Tìm kiếm không có kết quả & 
-1. Nhập từ khóa không tồn tại. \newline 
-2. Nhấn Enter. & 
-- Keyword: ``@\#\$\%'' & 
-Hiển thị thông báo/hình ảnh minh họa: ``Không tìm thấy lộ trình nào phù hợp với từ khóa của bạn''. \\
-\hline
-
-TC\_M2\_09 & Xóa lộ trình khi mất kết nối mạng & 
-1. Chọn xóa lộ trình. \newline 
-2. Ngắt kết nối Internet ngay lúc nhấn xác nhận. & 
-- Mạng: Disconnected & 
-Hệ thống hiển thị lỗi: ``Kết nối không ổn định, vui lòng thử lại sau''. Lộ trình chưa bị xóa. \\
-\hline
-
-TC\_M2\_10 & Danh sách lộ trình trống (User mới) & 
-1. Đăng nhập bằng tài khoản mới tạo. \newline 
-2. Vào ``Chuyến đi của tôi''. & 
-- User: New account & 
-Hiển thị màn hình chào mừng (Empty State) với nút kêu gọi hành động: ``Bạn chưa có chuyến đi nào? Tạo ngay!''. \\
-\hline
 
 \end{longtable}
-
 \end{landscape}

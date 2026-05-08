@@ -1,0 +1,73 @@
+\subsubsection{Testcase module 5: Quản lý nội dung}
+
+\hypertarget{target:tc_m5}{}
+\begin{landscape}
+\small 
+\begin{longtable}{|p{2.2cm}|p{2.2cm}|p{4cm}|p{4.5cm}|p{6cm}|p{2cm}|}
+    
+    % --- PHẦN 1: TIÊU ĐỀ CHO TRANG ĐẦU TIÊN ---
+\caption{Danh sách Test Case chi tiết - Module 4: Xây dựng cộng đồng và nội dung} \label{tab:tc_module5} \\
+\hline
+\textbf{ID} & \textbf{ Use case} & \textbf{Tên Test case} & \textbf{Dữ liệu kiểm thử} & \textbf{Kết quả mong đợi} & \textbf{Kết quả } \\
+\hline
+\endfirsthead
+
+% --- PHẦN 2: TIÊU ĐỀ CHO CÁC TRANG TIẾP THEO ---
+\multicolumn{6}{c}{{\bfseries \tablename\ thetable{}: Danh sách Test Case chi tiết - Module 4: Xây dựng cộng đồng và nội dung}} \\
+\hline
+\textbf{ID} & \textbf{ Use case} & \textbf{Tên Test case} & \textbf{Dữ liệu kiểm thử} & \textbf{Kết quả mong đợi} & \textbf{Kết quả } \\
+\hline
+\endhead
+
+\hline
+\endlastfoot
+
+% ================= NỘI DUNG BẢNG =================
+
+% --- LUỒNG CHÍNH ---
+TC-M5-01 & UC-M5-01 & Xem danh sách báo cáo vi phạm (có dữ liệu) & 
+N/A & 
+Hệ thống hiển thị danh sách bài viết bị người dùng báo cáo vi phạm & Đạt\\
+\hline
+
+TC-M5-02 & UC-M5-01 & Xem danh sách báo cáo vi phạm (dữ liệu rỗng) & N/A & 
+Hệ thống hiển thị thông báo "" & Đạt \\
+\hline
+
+TC-M5-03 & UC-M5-02 & Xem chi tiết một báo cáo & report id 101 & 
+Hệ thống hiển thị nội dung bị báo cáo, lý do báo cáo vi phạm từ người dùng & Đạt\\
+\hline
+
+TC-M5-04 & UC-M5-03 & Xử lý báo cáo vi phạm & 
+Action: Delete    & 
+Hệ thống xóa bài viết vi phạm thành công, cập nhật trạng thái report & Đạt \\
+\hline
+
+TC-M5-05 & UC-M5-03 & Xử lý báo cáo vi phạm & 
+Action: Ignore & 
+Hệ thống cập nhật trạng thái report & Đạt \\
+\hline
+
+TC-M5-06 & UC-M5-02 & Xử lý báo cáo vi phạm thât bại & Action: Delete & 
+Hệ thống thông báo lỗi: "Failed to delete post" & Đạt \\
+\hline
+
+TC-M5-07 & UC-M5-07 & Thêm từ khoá mới (hợp lệ) & 
+Keyword: "scam" & 
+Hệ thống thêm từ khoá thành công & Đạt \\
+\hline
+
+TC-M5-08 & UC-M5-07 & Chỉnh sửa từ khoá & 
+- keywordid = 101 \newline
+- Keyword: "scam" & 
+Hệ thống cập nhật từ khoá thành công & Đạt \\
+\hline
+
+TC-M5-09 & UC-M5-07 & Xoá từ khoá & 
+- keywordid = 101 & 
+Hệ thống xóa từ khoá thành công & Đạt \\
+\hline
+
+
+\end{longtable}
+\end{landscape}

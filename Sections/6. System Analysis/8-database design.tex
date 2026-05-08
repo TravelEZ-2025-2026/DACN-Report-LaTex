@@ -136,3 +136,28 @@ Dưới đây là chi tiết thiết kế vật lý một số bảng quan trọ
 
 \end{longtable}
 }
+
+\subsubsubsection{Truy vấn với Index}
+Nhóm đã phân tích các luồng nghiệp vụ chính và xác định các cột thường xuyên được sử dụng trong các mệnh đề WHERE, JOIN và ORDER BY để tạo các chỉ mục phù hợp. Bảng dưới đây trình bày một số index tiêu biểu đã được triển khai và vai trò của chúng trong hệ thống.
+\begin{longtable}{|p{7cm}|p{7cm}|}
+    \caption{Mô tả một số Index tiêu biểu trong thiết kế vật lý}\\
+    \hline
+    \textbf{Tên Index} & \textbf{Mục đích \& Tác động} \\
+    \hline
+    \endfirsthead
+    
+    \caption{Mô tả một số Index tiêu biểu trong thiết kế vật lý}\\
+    \hline
+    \textbf{Tên Index} & \textbf{Mục đích \& Tác động} \\ \hline
+    \endhead
+    \hline
+    \endlastfoot
+
+    \textbf{idx\_users\_fullname\_lower} & Tăng tốc độ tìm kiếm thông tin người dùng qua họ tên. Đây là thao tác thường xuyên khi người dùng tìm kiếm bạn bè hoặc chuyên gia trên thanh công cụ tìm kiếm của hệ thống. \\ \hline
+    \textbf{idx\_posts\_status\_created} & Phục vụ truy vấn lấy danh sách bài đăng trên trang chủ (Newsfeed). Index composite này giúp hệ thống lọc nhanh các bài viết ở trạng thái PUBLISHED và sắp xếp theo thời gian mới nhất một cách tối ưu. \\ \hline
+    \textbf{idx\_poi\_place\_type\_status} & Tối ưu hóa các truy vấn tìm kiếm, lọc địa điểm tham quan (POI) theo khu vực (place\_id), loại hình (poi\_type) và trạng thái. Rất quan trọng cho tính năng bản đồ, khám phá và gợi ý điểm đến. \\ \hline
+    \textbf{idx\_itinerary\_traveler\_status} & Tối ưu hóa việc truy xuất danh sách lịch trình chuyến đi của một du khách (traveler\_id) theo trạng thái (đang lên kế hoạch, đang đi, đã hoàn thành). Giúp trang quản lý chuyến đi cá nhân tải dữ liệu nhanh chóng. \\ \hline  
+    \textbf{idx\_comment\_post\_created} & Hỗ trợ truy vấn tải danh sách bình luận của một bài đăng cụ thể. Tránh việc hệ thống phải quét toàn bộ bảng comment, đồng thời hỗ trợ sắp xếp thứ tự bình luận theo thời gian một cách mượt mà. \\ \hline
+    \textbf{idx\_follow\_following\_id} & Phục vụ truy vấn lấy danh sách "Người theo dõi" (Followers) của một cá nhân. Do khóa chính (follower\_id, following\_id) chỉ hỗ trợ tốt chiều tìm "Đang theo dõi", index này bắt buộc phải có để tối ưu chiều ngược lại. \\ \hline
+    \textbf{idx\_message\_conv\_created} & Tăng tốc các truy vấn tải lịch sử tin nhắn trong một hộp thoại cụ thể, thường xuyên dùng kết hợp với ORDER BY trong màn hình chat để luôn hiển thị các tin nhắn mới nhất lên trước. \\ \hline
+\end{longtable}

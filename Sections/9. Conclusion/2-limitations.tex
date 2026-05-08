@@ -1,9 +1,18 @@
 \subsection{Hạn chế}
 Mặc dù đã hoàn thành các mục tiêu cơ bản, hệ thống vẫn còn tồn tại một số hạn chế nhất định:
 \begin{itemize} 
-    \item \textbf{Phạm vi dữ liệu địa lý:} Hiện tại, dữ liệu hệ thống chỉ mới tập trung thu thập tại khu vực Thành phố Hồ Chí Minh (586 địa điểm). Các địa điểm du lịch ở các tỉnh thành khác chưa được bao phủ, làm giảm tính đa dạng của các gợi ý hành trình liên tỉnh.
-    \item \textbf{Tính cập nhật của dữ liệu:} Dữ liệu về địa điểm (giờ mở cửa, các thông tin khác) là dữ liệu tĩnh được crawl tại một thời điểm nhất định. Hệ thống chưa có cơ chế cập nhật thời gian thực để phản ánh các thay đổi đột xuất từ phía địa điểm kinh doanh.
-    \item \textbf{Xử lý đa phương tiện:} Hệ thống hiện chỉ hỗ trợ tải lên và lưu trữ hình ảnh với dung lượng giới hạn để tối ưu hóa hiệu năng và chi phí. Chưa hỗ trợ định dạng video và cơ chế xử lý cho các tệp tin kích thước lớn.
-    \item \textbf{Giới hạn trong tối ưu hóa lộ trình dài ngày:} Luồng sinh lộ trình hiện tại bộc lộ hạn chế khi xử lý các yêu cầu chuyến đi kéo dài (ví dụ: hành trình tính theo tuần hoặc tháng). Khi độ dài chuyến đi tăng lên, không gian tìm kiếm và số lượng biến số mở rộng theo cấp số nhân. Điều này khiến mô hình AI và các thuật toán kiểm định gặp khó khăn trong việc duy trì độ chính xác, dẫn đến giảm hiệu quả trong việc sắp xếp và thỏa mãn đồng thời các đa ràng buộc phức tạp xuyên suốt toàn bộ hành trình.
-    \item \textbf{Mức độ hoàn thiện phân hệ nhà cung cấp (Provider):} Hệ thống hiện đang tập trung chủ yếu vào trải nghiệm của người dùng cuối (khách du lịch). Các module chức năng dành riêng cho nhà cung cấp dịch vụ (như quản lý dịch vụ, bảng điều khiển phân tích xu hướng thị trường, hay công cụ AI hỗ trợ cải thiện lịch trình) vẫn đang trong giai đoạn phát triển sơ khởi và chưa được tích hợp hoàn chỉnh.
+    \item Phạm vi dữ liệu địa lý: Hiện tại, dữ liệu hệ thống chỉ mới tập trung thu thập tại khu vực Thành phố Hồ Chí Minh. Các địa điểm du lịch ở các tỉnh thành khác chưa được bao phủ, làm giảm tính đa dạng của các gợi ý hành trình liên tỉnh.
+    \item Tính cập nhật của dữ liệu: Dữ liệu về địa điểm (giờ mở cửa, các thông tin khác) là dữ liệu tĩnh được crawl tại một thời điểm nhất định. Hệ thống chưa có cơ chế cập nhật thời gian thực để phản ánh các thay đổi đột xuất từ phía địa điểm kinh doanh.
+    \item Một số tính năng đề xuất trong kế hoạch ban đầu vẫn chưa được triển khai. Ngoài ra, một số tính năng đã triển khai vẫn đang trong giai đoạn hoàn thiện và chưa được tích hợp đầy đủ vào hệ thống.
+    \item Cần tiến hành thêm kiểm thử để đánh giá và đánh giá kỹ lưỡng chức năng cũng như khả năng chịu lỗi của hệ thống, đặc biệt là khi hệ thống được đưa vào sử dụng trong điều kiện thực tế.
 \end{itemize}
+
+Về mặt yêu cầu phi chức năng, hệ thống hiện tại vẫn chưa được tối ưu hóa hoàn toàn về hiệu năng và khả năng mở rộng. 
+\begin{itemize}
+    \item Cần tiến hành kiểm tra các yêu cầu chức năng kỹ lưỡng hơn để xác minh các ràng buộc đầu vào và xử lý ngoại lệ nhằm đảm bảo tính mạnh mẽ và độ tin cậy của hệ thống.
+    \item Việc kiểm tra tính khả dụng cần được thực hiện trên hệ thống thực tế và máy chủ đã triển khai để đánh giá khả năng duy trì truy cập và hoạt động của hệ thống trong các điều kiện khác nhau, đảm bảo người dùng có thể truy cập hệ thống một cách đáng tin cậy khi cần thiết.
+    \item Kiểm tra bảo mật là điều cần thiết để xác định và khắc phục mọi lỗ hổng hoặc điểm yếu trong hệ thống, bảo vệ dữ liệu nhạy cảm, thông tin người dùng và hệ thống khỏi sự truy cập trái phép hoặc các cuộc tấn công độc hại.
+    \item Cần cải thiện khả năng sử dụng ở nhiều chức năng khác nhau để mang lại trải nghiệm người dùng tốt hơn, chẳng hạn như cung cấp nhiều tùy chọn kiểm soát và tùy chỉnh hơn cho các bảng quản lý dữ liệu, xử lý lỗi trực quan và thân thiện hơn với người dùng, và quy trình tốt hơn để nhập và quản lý các đối tượng dữ liệu khác nhau từ các phần khác nhau của hệ thống.
+\end{itemize}
+
+Về hiệu năng, giao diện người dùng có thời gian phản hồi nhanh và nhạy nhờ kiến trúc Single Page Application (SPA), thời gian tải và truy vấn của hệ thống được Google Lighthouse đánh giá là chấp nhận được. Tuy nhiên, cần cải thiện phần back-end và cơ sở dữ liệu để xử lý tốt hơn lượng dữ liệu lớn trong các tình huống thực tế. Việc cập nhật cơ sở dữ liệu và thiết kế cũng có thể được xem xét để cải thiện cả hiệu năng và khả năng mở rộng.

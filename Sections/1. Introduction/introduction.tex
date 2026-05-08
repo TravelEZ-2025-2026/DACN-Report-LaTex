@@ -8,22 +8,22 @@ Tuy nhiên, động lực lớn nhất thúc đẩy sự thay đổi không ch�
 
 Đáng chú ý, Gen Z là thế hệ đặt niềm tin lớn vào công nghệ. Theo khảo sát, 67\% du khách Gen Z sẵn sàng sử dụng AI để lên lịch trình chuyến đi và 50\% tin tưởng vào các đề xuất của AI để tìm kiếm những địa điểm ít người biết (hidden gems), tránh xa sự xô bồ của các điểm đến truyền thống \cite{booking_genz_2024}. Như ông Varun Grover (Giám đốc Booking.com Việt Nam) nhận định: ``Đối với thế hệ này, du lịch... là cách họ thể hiện bản sắc cá nhân với sự hỗ trợ của trí tuệ nhân tạo (AI)''.
 
-Mặc dù nhu cầu là rất lớn, nhưng hạ tầng du lịch số hiện tại của Việt Nam vẫn tồn tại những ``điểm nghẽn'' khiến trải nghiệm của du khách chưa trọn vẹn:
+Mặc dù nhu cầu là rất lớn, nhưng hạ tầng du lịch số hiện tại của Việt Nam vẫn tồn tại những vấn đề khiến trải nghiệm của du khách chưa trọn vẹn:
 
 \begin{itemize}
-    \item Quá tải và phân mảnh thông tin: Du khách hiện phải đối mặt với ``ma trận'' thông tin phân tán rải rác trên mạng xã hội, OTA và blog cá nhân. Việc thiếu một nền tảng tập trung và thiếu cấu trúc dữ liệu khiến việc lập kế hoạch trở nên tốn thời gian và gây mệt mỏi.
+    \item Quá tải và phân mảnh thông tin: Du khách hiện phải đối mặt với lượng thông tin phân tán rải rác trên mạng xã hội, OTA và blog cá nhân. Việc thiếu một nền tảng tập trung và thiếu cấu trúc dữ liệu khiến việc lập kế hoạch trở nên tốn thời gian và gây mệt mỏi.
     
-    \item Khủng hoảng niềm tin: Vấn nạn đánh giá giả (fake reviews) và các hoạt động quảng cáo trá hình (seeding) đang làm xói mòn lòng tin của người dùng. Du khách ngày càng khó phân biệt đâu là trải nghiệm thực tế, đâu là nội dung quảng cáo, dẫn đến rủi ro thất vọng khi trải nghiệm thực tế không như kỳ vọng.
+    \item Khủng hoảng niềm tin: Vấn nạn đánh giá giả và các hoạt động quảng cáo trá hình (seeding) đang làm xói mòn lòng tin của người dùng. Du khách ngày càng khó phân biệt đâu là trải nghiệm thực tế, đâu là nội dung quảng cáo, dẫn đến rủi ro thất vọng khi trải nghiệm thực tế không như kỳ vọng.
     
     \item Sự rời rạc trong công cụ: Hiện chưa có một quy trình liền mạch. Người dùng phải dùng TikTok để tìm cảm hứng, dùng Excel để lên lịch, dùng Booking để đặt phòng và Google Maps để di chuyển. Sự thiếu liên kết này làm giảm đáng kể sự thuận tiện.
     
     \item Bất cập đối với doanh nghiệp vừa và nhỏ: Các đơn vị kinh doanh bản địa (homestay, quán ăn địa phương) - linh hồn của du lịch trải nghiệm - lại là nhóm yếu thế nhất về công nghệ. Họ thiếu công cụ để phân tích dữ liệu, quản lý đặt chỗ và chứng minh uy tín dịch vụ trước các đối thủ lớn.
 \end{itemize}
 
-Từ những phân tích trên, có thể thấy một nhu cầu cấp thiết về một giải pháp công nghệ toàn diện hơn. Đó không chỉ là một công cụ đặt phòng hay bản đồ số đơn thuần, mà phải là một Hệ thống du lịch thông minh có khả năng thấu hiểu hành vi người dùng qua AI để cá nhân hóa gợi ý, đồng thời giải quyết bài toán niềm tin thông qua cơ chế đánh giá cộng đồng minh bạch. Đây chính là động lực thôi thúc chúng tôi thực hiện đề tài này, nhằm góp phần lấp đầy khoảng trống công nghệ và nâng cao năng lực cạnh tranh cho du lịch Việt Nam trong kỷ nguyên số.
+Từ những phân tích trên, có thể thấy một nhu cầu cấp thiết về một giải pháp công nghệ toàn diện hơn. Đó không chỉ là một công cụ đặt phòng hay bản đồ số đơn thuần, mà phải là một Hệ thống du lịch thông minh có khả năng thấu hiểu hành vi người dùng qua AI để cá nhân hóa gợi ý, đồng thời giải quyết bài toán niềm tin thông qua cơ chế đánh giá cộng đồng minh bạch. Đây chính là động lực thôi thúc chúng tôi thực hiện đề tài này, nhằm góp phần phát triển công nghệ và nâng cao năng lực cạnh tranh cho du lịch Việt Nam trong kỷ nguyên số.
 
 \subsection{Mục tiêu}
-Đề tài hướng đến xây dựng Hệ thống Gợi ý hành trình du lịch thông minh dựa trên AI, ứng dụng trong bối cảnh ngành du lịch Việt Nam đang bùng nổ và chuyển dịch mạnh mẽ sang mô hình du lịch thông minh. Hệ thống phát triển Recommendation Engine dựa trên ML/DL, ứng dụng NLP tiếng Việt để xử lý review và phản hồi được thiết kế để vượt qua hạn chế của các công cụ hiện tại trong việc lập kế hoạch du lịch như tương thích với sở thích cá nhân và ngân sách, hạn chế các địa điểm có đánh giá ảo. Hệ thống hứa hẹn sẽ có giao diện thân thiện, cho phép người dùng lên lịch trình, tuỳ chỉnh theo yêu cầu để từ đó đưa ra lịch trình phù hợp nhất với bản thân. Người dùng còn được đánh giá dịch vụ đã trải nghiệm và chia sẻ lịch trình, trải nghiệm của bản thân trên diễn đàn chung của hệ thống. Song song, hệ thống còn cung cấp công cụ hỗ trợ các doanh nghiệp quản lý đơn hàng, quản lý dịch vụ.
+Đề tài hướng đến xây dựng Hệ thống Gợi ý hành trình du lịch thông minh dựa trên AI, ứng dụng trong bối cảnh ngành du lịch Việt Nam đang bùng nổ và chuyển dịch mạnh mẽ sang mô hình du lịch thông minh. Hệ thống phát triển Recommendation Engine dựa trên ML/DL, ứng dụng NLP tiếng Việt để xử lý review và phản hồi được thiết kế để vượt qua hạn chế của các công cụ hiện tại trong việc lập kế hoạch du lịch như tương thích với sở thích cá nhân và ngân sách, hạn chế các địa điểm có đánh giá ảo. Hệ thống xây dựng giao diện thân thiện, cho phép người dùng lên lịch trình, tuỳ chỉnh theo yêu cầu để từ đó đưa ra lịch trình phù hợp nhất với bản thân. Người dùng được đánh giá dịch vụ đã trải nghiệm và chia sẻ lịch trình, trải nghiệm của bản thân trên diễn đàn chung của hệ thống.
 
 \subsection{Phạm vi}
 Để đảm bảo dự án khả thi và tập trung vào việc giải quyết các mục tiêu cốt lõi trong khung thời gian và nguồn lực hạn chế, phạm vi của đề tài được xác định như sau
@@ -61,7 +61,7 @@ Hệ thống TravelEZ được xây dựng nhằm phục vụ ba đối tượng
 \subsubsection{Phạm vi kỹ thuật}
 Các giới hạn và lựa chọn về mặt công nghệ cho hệ thống TravelEZ được xác định như sau:
 \begin{itemize}
-    \item Kiến trúc hệ thống:Dự kiến xây dựng theo kiến trúc ứng dụng kiến trúc Client-Server cơ bản để đơn giản hóa việc phát triển và triển khai trong giai đoạn đầu.
+    \item Kiến trúc hệ thống: Dự kiến xây dựng theo kiến trúc ứng dụng kiến trúc Client-Server cơ bản để đơn giản hóa việc phát triển và triển khai trong giai đoạn đầu.
     \item Công nghệ phát triển:
         \begin{itemize}
             \item Frontend (Giao diện người dùng): Sử dụng Framework Next.js (React) để tối ưu hóa SEO và trải nghiệm người dùng (UX). Giao diện được thiết kế tương thích đa thiết bị với sự hỗ trợ của TailwindCSS và ShadcnUI.
@@ -75,10 +75,10 @@ Các giới hạn và lựa chọn về mặt công nghệ cho hệ thống Trav
 \subsection{Ý nghĩa của dự án}
 
 \subsubsection{Ý nghĩa thực tiễn}
-Đề tài “Phát triển hệ thống gợi ý hành trình du lịch dựa trên AI và đánh giá cộng đồng” mang lại nhiều giá trị thiết thực đối với du khách, doanh nghiệp và toàn ngành du lịch Việt Nam. Trước hết, hệ thống giúp tiết kiệm thời gian và chi phí cho du khách thông qua việc tự động hóa quá trình tìm kiếm, lên lịch trình và đánh giá chất lượng dịch vụ, từ đó giảm thiểu rủi ro khi tiếp cận các thông tin sai lệch hoặc dịch vụ kém chất lượng. Bên cạnh đó, hệ thống góp phần thúc đẩy quá trình chuyển đổi số cho các doanh nghiệp du lịch vừa và nhỏ (Doanh nghiệp lữ hành, dịch vụ nhà hàng, khách sạn, vận tải). Doanh nghiệp lữ hành, dịch vụ nhà hàng, khách sạn, vận tải có thể chủ động tiếp cận khách hàng, quản lý hoạt động kinh doanh hiệu quả hơn và gia tăng năng lực cạnh tranh. Cuối cùng, đề tài còn có ý nghĩa đối với toàn ngành khi tạo ra một mô hình du lịch thông minh kết hợp giữa công nghệ AI và đánh giá cộng đồng. Mô hình này hướng đến một môi trường du lịch minh bạch, cạnh tranh lành mạnh, trong đó chất lượng dịch vụ và trải nghiệm thực tế trở thành yếu tố quyết định.
+Đề tài “Phát triển hệ thống gợi ý hành trình du lịch dựa trên AI và đánh giá cộng đồng” mang lại nhiều giá trị thiết thực đối với du khách, doanh nghiệp và toàn ngành du lịch Việt Nam. Trước hết, hệ thống giúp tiết kiệm thời gian và chi phí cho du khách thông qua việc tự động hóa quá trình tìm kiếm, lên lịch trình và đánh giá chất lượng dịch vụ, từ đó giảm thiểu rủi ro khi tiếp cận các thông tin sai lệch hoặc dịch vụ kém chất lượng. Doanh nghiệp lữ hành, dịch vụ nhà hàng, khách sạn, vận tải có thể chủ động cải thiện dịch vụ, quản lý hoạt động kinh doanh hiệu quả hơn và gia tăng năng lực cạnh tranh thông qua phản hồi của du khách. Cuối cùng, đề tài còn có ý nghĩa đối với toàn ngành khi tạo ra một mô hình du lịch thông minh kết hợp giữa công nghệ AI và đánh giá cộng đồng. Mô hình này hướng đến một môi trường du lịch minh bạch, cạnh tranh lành mạnh, trong đó chất lượng dịch vụ và trải nghiệm thực tế trở thành yếu tố quyết định.
 
 \subsubsection{Ý nghĩa khoa học}
-Không chỉ dừng lại ở ứng dụng thực tiễn, đề tài còn mang giá trị khoa học quan trọng. Thứ nhất, đây là cơ hội để ứng dụng và tùy chỉnh các thuật toán trí tuệ nhân tạo vào một bài toán đặc thù: gợi ý hành trình du lịch trong bối cảnh văn hóa và dữ liệu Việt Nam. Các mô hình học máy như Collaborative Filtering, Content-Based Filtering hay Hybrid Models, cùng với các kỹ thuật học sâu (Deep Learning), có thể được kiểm nghiệm và so sánh để lựa chọn giải pháp tối ưu. Thứ hai, đề tài mở ra hướng nghiên cứu về xử lý ngôn ngữ tự nhiên (NLP) tiếng Việt thông qua việc phân tích đánh giá, bình luận và phản hồi của du khách. Việc trích xuất cảm xúc (Sentiment Analysis) và phát hiện đánh giá giả trong ngữ cảnh tiếng Việt là một thách thức, đồng thời là đóng góp khoa học có giá trị. Thứ ba, hệ thống cho phép xây dựng một bộ dữ liệu về du lịch Việt Nam bao gồm sở thích, hành trình và đánh giá của du khách. Bộ dữ liệu này không chỉ phục vụ cho việc cải tiến hệ thống mà còn có thể trở thành nguồn dữ liệu quý cho các nghiên cứu chuyên sâu về hành vi người tiêu dùng và du lịch thông minh trong tương lai.
+Đề tài mang giá trị khoa học quan trọng. Thứ nhất, đây là cơ hội để ứng dụng và tùy chỉnh các thuật toán trí tuệ nhân tạo vào một bài toán đặc thù: gợi ý hành trình du lịch trong bối cảnh văn hóa và dữ liệu Việt Nam. Các mô hình học máy như Collaborative Filtering, Content-Based Filtering hay Hybrid Models, cùng với các kỹ thuật học sâu (Deep Learning), có thể được kiểm nghiệm và so sánh để lựa chọn giải pháp tối ưu. Thứ hai, đề tài mở ra hướng nghiên cứu về xử lý ngôn ngữ tự nhiên (NLP) tiếng Việt thông qua việc phân tích đánh giá, bình luận và phản hồi của du khách. Việc trích xuất cảm xúc (Sentiment Analysis) và phát hiện đánh giá giả trong ngữ cảnh tiếng Việt là một thách thức, đồng thời là đóng góp khoa học có giá trị. Thứ ba, hệ thống cho phép xây dựng một bộ dữ liệu về du lịch Việt Nam bao gồm sở thích, hành trình và đánh giá của du khách. Bộ dữ liệu này không chỉ phục vụ cho việc cải tiến hệ thống mà còn có thể trở thành nguồn dữ liệu quý cho các nghiên cứu chuyên sâu về hành vi người tiêu dùng và du lịch thông minh trong tương lai.
 
 \subsection{Cấu trúc báo cáo}
 Để trình bày một cách hệ thống và khoa học các kết quả nghiên cứu và phát triển, báo cáo đồ án được tổ chức thành 8 chương chính:
@@ -93,7 +93,7 @@ Không chỉ dừng lại ở ứng dụng thực tiễn, đề tài còn mang g
 
 \textbf{Chương 5 - Phân tích và Thiết kế}: Trình bày chi tiết phân tích hệ thống, kiến trúc tổng thể, thiết kế cơ sở dữ liệu, sitemap, thiết kế giao diện người dùng (UI/UX) và luồng sinh lộ trình dựa trên AI.
 
-\textbf{Chương 6 - Hiện thực \& Kiểm thử}: Mô tả quá trình hiện thực hóa các thiết kế, cấu trúc mã nguồn, và trình bày quy trình kiểm thử (testcase) nhằm đảm bảo chất lượng phần mềm.
+\textbf{Chương 6 - Hiện thực}: Mô tả quá trình hiện thực hóa các thiết kế, cấu trúc mã nguồn, và trình bày quy trình kiểm thử (testcase) nhằm đảm bảo chất lượng phần mềm.
 
 \textbf{Chương 7 - Đánh giá}: Đánh giá toàn diện các kết quả đạt được, đối chiếu với các yêu cầu chức năng và phi chức năng đã đề ra ban đầu.
 

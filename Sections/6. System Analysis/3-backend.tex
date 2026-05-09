@@ -6,20 +6,20 @@ Spring Boot là một framework Java mã nguồn mở, được phát triển t�
 Trong ngữ cảnh của hệ thống gợi ý hành trình du lịch thông minh, Spring Boot đóng vai trò là xương sống (backbone) của phía server. Nó chịu trách nhiệm xử lý các luồng nghiệp vụ phức tạp bao gồm: tạo gợi ý hành trình dựa trên AI, quản lý định danh người dùng, tìm kiếm điểm đến và kiểm duyệt nội dung cộng đồng \cite{musib-2020}. Nền tảng này đảm bảo khả năng mở rộng (scalability) và tính toàn vẹn dữ liệu khi tích hợp với các nguồn thông tin bên ngoài \cite{webb-2020}.
 \subsubsubsubsection{Ưu điểm}
 \begin{itemize}
-    \item \textbf{Xử lý logic nghiệp vụ hiệu quả}: 
+    \item Xử lý logic nghiệp vụ hiệu quả: 
     Spring Boot hỗ trợ phát triển các API REST nhanh chóng thông qua kiến trúc Spring MVC, giúp xử lý hiệu quả các yêu cầu phức tạp như gợi ý hành trình du lịch và cập nhật chi phí tức thời \cite{walls-2022}. Việc tách biệt rõ ràng giữa các lớp xử lý giúp mã nguồn dễ bảo trì và mở rộng.
     
-    \item \textbf{Tích hợp dữ liệu dễ dàng}: 
-    Các module chuyên biệt như \textit{Spring Batch} và \textit{Spring Integration} cung cấp khả năng thu thập và xử lý dữ liệu mạnh mẽ từ các nguồn bên ngoài (review, thời tiết, sự kiện). Hệ thống hỗ trợ cả xử lý theo lô (batch) và theo luồng (streaming), đảm bảo dữ liệu luôn được chuẩn hóa và cập nhật ngữ cảnh thời gian thực \cite{spring-batch-ref}.
+    \item Tích hợp dữ liệu dễ dàng: 
+    Các module chuyên biệt như Spring Batch và Spring Integration cung cấp khả năng thu thập và xử lý dữ liệu mạnh mẽ từ các nguồn bên ngoài (review, thời tiết, sự kiện). Hệ thống hỗ trợ cả xử lý theo lô (batch) và theo luồng (streaming), đảm bảo dữ liệu luôn được chuẩn hóa và cập nhật ngữ cảnh thời gian thực \cite{spring-batch-ref}.
     
-    \item \textbf{Bảo mật mạnh mẽ}: 
-    Module \textit{Spring Security} tích hợp sẵn giúp triển khai xác thực đa lớp (OAuth2/JWT) và phân quyền chi tiết. Điều này đóng vai trò then chốt trong việc bảo vệ dữ liệu nhạy cảm của người dùng như hồ sơ sở thích du lịch và lịch sử hội thoại \cite{spring-security-ref}.
+    \item Bảo mật mạnh mẽ: 
+    Module Spring Security tích hợp sẵn giúp triển khai xác thực đa lớp (OAuth2/JWT) và phân quyền chi tiết. Điều này đóng vai trò then chốt trong việc bảo vệ dữ liệu nhạy cảm của người dùng như hồ sơ sở thích du lịch và lịch sử hội thoại \cite{spring-security-ref}.
     
-    \item \textbf{Quản lý người dùng và nội dung}: 
+    \item Quản lý người dùng và nội dung: 
     Spring Boot cung cấp nền tảng vững chắc để xây dựng các API quản trị, hỗ trợ các tác vụ kiểm duyệt nội dung cộng đồng, khóa tài khoản vi phạm và theo dõi vết (audit trail) hệ thống, đảm bảo tính minh bạch trong vận hành \cite{musib-2020}.
     
-    \item \textbf{Giám sát và bảo trì}: 
-    Công cụ \textit{Spring Boot Actuator} được tích hợp sẵn cung cấp các chỉ số giám sát hiệu suất (metrics) và log sự kiện (health checks) mà không cần cấu hình phức tạp. Tính năng này giúp đội ngũ kỹ thuật dễ dàng theo dõi pipeline xử lý dữ liệu và hiệu quả của mô hình gợi ý trong thời gian thực \cite{webb-2020, spring-boot-ref}.
+    \item Giám sát và bảo trì: 
+    Công cụ Spring Boot Actuator được tích hợp sẵn cung cấp các chỉ số giám sát hiệu suất (metrics) và log sự kiện (health checks) mà không cần cấu hình phức tạp. Tính năng này giúp đội ngũ kỹ thuật dễ dàng theo dõi pipeline xử lý dữ liệu và hiệu quả của mô hình gợi ý trong thời gian thực \cite{webb-2020, spring-boot-ref}.
 \end{itemize}
 
 \subsubsubsubsection{So sánh Spring Boot và các công nghệ khác}

@@ -4,9 +4,9 @@
 \subsubsubsection{Quy trình gợi ý lộ trình cá nhân hóa}
 Quy trình này mô tả sự tương tác giữa Khách du lịch, hệ thống TravelEZ và hệ thống AI để tạo ra một lịch trình du lịch tối ưu.
 \begin{itemize}
-    \item \textbf{Bắt đầu:} Khách du lịch yêu cầu tạo lộ trình mới và cung cấp các thông tin mong muốn (điểm đến, phong cách, thời gian, chi phí,...).
-    \item \textbf{Xử lý:} Hệ thống AI tiếp nhận và trích xuất ý định từ yêu cầu của người dùng. Dựa trên các ý định này, hệ thống TravelEZ thực hiện tìm kiếm vector để chọn ra các địa điểm (POI) phù hợp. Sau đó, hệ thống tạo prompt chứa ngữ cảnh và danh sách POI ứng viên để gửi request đến AI.
-    \item \textbf{Phản hồi:} AI xử lý thông tin để sinh ra lộ trình phù hợp. Hệ thống TravelEZ tiến hành kiểm tra (validate) kết quả này; nếu không hợp lệ, hệ thống sẽ đính kèm thông tin lỗi vào prompt và yêu cầu AI xử lý lại. Nếu hợp lệ, lộ trình đề xuất sẽ được hiển thị cho khách du lịch.
+    \item Bắt đầu: Khách du lịch yêu cầu tạo lộ trình mới và cung cấp các thông tin mong muốn (điểm đến, phong cách, thời gian, chi phí,...).
+    \item Xử lý: Hệ thống AI tiếp nhận và trích xuất ý định từ yêu cầu của người dùng. Dựa trên các ý định này, hệ thống TravelEZ thực hiện tìm kiếm vector để chọn ra các địa điểm (POI) phù hợp. Sau đó, hệ thống tạo prompt chứa ngữ cảnh và danh sách POI ứng viên để gửi request đến AI.
+    \item Phản hồi: AI xử lý thông tin để sinh ra lộ trình phù hợp. Hệ thống TravelEZ tiến hành kiểm tra (validate) kết quả này; nếu không hợp lệ, hệ thống sẽ đính kèm thông tin lỗi vào prompt và yêu cầu AI xử lý lại. Nếu hợp lệ, lộ trình đề xuất sẽ được hiển thị cho khách du lịch.
 \end{itemize}
 \begin{figure}[H]
     \centering
@@ -19,9 +19,9 @@ Quy trình này mô tả sự tương tác giữa Khách du lịch, hệ thống
 \subsubsubsection{Quy trình Kiểm duyệt Nội dung Tự động}
 Đây là quy trình quan trọng nhằm đảm bảo tính lành mạnh của cộng đồng du lịch thông qua hai lớp kiểm duyệt.
 \begin{itemize}
-    \item \textbf{Lớp 1 (Thời gian thực):} Ngay khi khách du lịch nhấn đăng bài, hệ thống sẽ quét nội dung dựa trên danh sách từ cấm. Nếu vi phạm, bài viết bị chặn ngay lập tức.
-    \item \textbf{Lớp 2 (Xử lý ngầm bằng AI):} Nếu vượt qua lớp 1, bài viết được đăng tạm thời. Song song đó, hệ thống đẩy ID bài viết vào hàng đợi để AI phân tích chuyên sâu (text và media).
-    \item \textbf{Kết quả:} Nếu AI đánh giá "An toàn", trạng thái bài viết chuyển thành VERIFIED. Nếu "Không an toàn", trạng thái chuyển thành FLAGGED\_BY\_AI, đồng thời tạo báo cáo vi phạm và thông báo cho quản trị viên xử lý.
+    \item Lớp 1 (Thời gian thực): Ngay khi khách du lịch nhấn đăng bài, hệ thống sẽ quét nội dung dựa trên danh sách từ cấm. Nếu vi phạm, bài viết bị chặn ngay lập tức.
+    \item Lớp 2 (Xử lý ngầm bằng AI): Nếu vượt qua lớp 1, bài viết được đăng tạm thời. Song song đó, hệ thống đẩy ID bài viết vào hàng đợi để AI phân tích chuyên sâu (text và media).
+    \item Kết quả: Nếu AI đánh giá "An toàn", trạng thái bài viết chuyển thành VERIFIED. Nếu "Không an toàn", trạng thái chuyển thành FLAGGED\_BY\_AI, đồng thời tạo báo cáo vi phạm và thông báo cho quản trị viên xử lý.
 \end{itemize}
 \begin{figure}[H]
     \centering
@@ -34,9 +34,9 @@ Quy trình này mô tả sự tương tác giữa Khách du lịch, hệ thống
 \subsubsubsection{Quy trình Phân tích Xu hướng Thị trường}
 Quy trình này hỗ trợ nhà cung cấp dịch vụ nắm bắt nhu cầu thị trường thông qua dữ liệu trực quan.
 \begin{itemize}
-    \item \textbf{Truy xuất:} Nhà cung cấp truy cập menu phân tích, hệ thống TravelEZ sẽ tổng hợp dữ liệu từ nhật ký hệ thống \(log\) để hiển thị lên Dashboard tổng quan.
-    \item \textbf{Tương tác:} Người dùng có thể sử dụng các bộ lọc để tùy chỉnh tiêu chí phân tích. Mỗi khi áp dụng bộ lọc mới, hệ thống sẽ truy vấn lại dữ liệu để cập nhật Dashboard theo thời gian thực.
-    \item \textbf{Kết xuất:} Quy trình cho phép người dùng lựa chọn định dạng file và tải các báo cáo phân tích về thiết bị cá nhân để phục vụ mục đích lưu trữ hoặc báo cáo nội bộ.
+    \item Truy xuất: Nhà cung cấp truy cập menu phân tích, hệ thống TravelEZ sẽ tổng hợp dữ liệu từ nhật ký hệ thống \(log\) để hiển thị lên Dashboard tổng quan.
+    \item Tương tác: Người dùng có thể sử dụng các bộ lọc để tùy chỉnh tiêu chí phân tích. Mỗi khi áp dụng bộ lọc mới, hệ thống sẽ truy vấn lại dữ liệu để cập nhật Dashboard theo thời gian thực.
+    \item Kết xuất: Quy trình cho phép người dùng lựa chọn định dạng file và tải các báo cáo phân tích về thiết bị cá nhân để phục vụ mục đích lưu trữ hoặc báo cáo nội bộ.
 \end{itemize}
 \begin{figure}[H]
     \centering
@@ -49,9 +49,9 @@ Quy trình này hỗ trợ nhà cung cấp dịch vụ nắm bắt nhu cầu th�
 \subsubsubsection{Quy trình Phân tích Lịch trình Cải thiện}
 Quy trình này cho phép nhà cung cấp dịch vụ tối ưu hóa các lịch trình sẵn có dựa trên phản hồi xã hội và công nghệ AI.
 \begin{itemize}
-    \item \textbf{Đầu vào:} Nhà cung cấp tạo yêu cầu mới, tải lên các file lịch trình hiện tại \(pdf, doc, xlsx\) và thiết lập mục tiêu cần cải thiện.
-    \item \textbf{Xử lý thông minh:} Hệ thống TravelEZ thu thập thêm dữ liệu thống kê từ mạng xã hội để làm giàu thông tin, sau đó gửi yêu cầu đến AI.
-    \item \textbf{Kiểm soát chất lượng:} AI thực hiện phân tích và trả về kết quả tối ưu hóa. TravelEZ đóng vai trò trung gian xác thực \(validate\) kết quả này. Nếu AI đưa ra phản hồi không phù hợp, hệ thống sẽ tự động yêu cầu điều chỉnh lại cho đến khi đạt tiêu chuẩn trước khi trả kết quả cuối cùng cho nhà cung cấp.
+    \item Đầu vào: Nhà cung cấp tạo yêu cầu mới, tải lên các file lịch trình hiện tại \(pdf, doc, xlsx\) và thiết lập mục tiêu cần cải thiện.
+    \item Xử lý thông minh: Hệ thống TravelEZ thu thập thêm dữ liệu thống kê từ mạng xã hội để làm giàu thông tin, sau đó gửi yêu cầu đến AI.
+    \item Kiểm soát chất lượng: AI thực hiện phân tích và trả về kết quả tối ưu hóa. TravelEZ đóng vai trò trung gian xác thực \(validate\) kết quả này. Nếu AI đưa ra phản hồi không phù hợp, hệ thống sẽ tự động yêu cầu điều chỉnh lại cho đến khi đạt tiêu chuẩn trước khi trả kết quả cuối cùng cho nhà cung cấp.
 \end{itemize}
 \begin{figure}[H]
     \centering
@@ -73,9 +73,9 @@ Quy trình này cho phép nhà cung cấp dịch vụ tối ưu hóa các lịch
 Dựa trên Hình \ref{fig:use_case_tong_quan}, sơ đồ mô tả các tương tác chính giữa các tác nhân và hệ thống, xác định rõ phạm vi chức năng của ứng dụng. Hệ thống được thiết kế xoay quanh ba nhóm đối tượng chính:
 
 \begin{itemize}
-    \item \textbf{Khách du lịch:} Là nhóm người dùng cuối, thực hiện các chức năng về tìm kiếm, khám phá nội dung, xây dựng cộng đồng và quản lý hành trình cá nhân.
-    \item \textbf{Nhà cung cấp dịch vụ:} Tập trung vào việc khai thác dữ liệu, xem phân tích xu hướng thị trường và đề xuất cải thiện lịch trình để tối ưu hóa dịch vụ.
-    \item \textbf{Quản trị viên hệ thống:} Đóng vai trò kiểm soát toàn bộ hệ thống, từ quản lý người dùng, kiểm duyệt nội dung đến quản trị kỹ thuật vận hành.
+    \item Khách du lịch: Là nhóm người dùng cuối, thực hiện các chức năng về tìm kiếm, khám phá nội dung, xây dựng cộng đồng và quản lý hành trình cá nhân.
+    \item Nhà cung cấp dịch vụ: Tập trung vào việc khai thác dữ liệu, xem phân tích xu hướng thị trường và đề xuất cải thiện lịch trình để tối ưu hóa dịch vụ.
+    \item Quản trị viên hệ thống: Đóng vai trò kiểm soát toàn bộ hệ thống, từ quản lý người dùng, kiểm duyệt nội dung đến quản trị kỹ thuật vận hành.
 \end{itemize}
 
 % --- 2. MODULE 1: GỢI Ý LỘ TRÌNH ---
@@ -91,8 +91,8 @@ Dựa trên Hình \ref{fig:use_case_tong_quan}, sơ đồ mô tả các tương 
 \textbf{Module 1: Gợi ý lộ trình} (Hình \ref{fig:use_case_module_1}) cung cấp các chức năng cho phép khách du lịch tương tác và thiết lập lộ trình du lịch. Các đặc điểm chính của module bao gồm:
 
 \begin{itemize}
-    \item \textbf{Quản lý lộ trình:} Người dùng có quyền thực hiện các thao tác cơ bản trên dữ liệu lộ trình cá nhân, bao gồm: tạo mới, điều chỉnh lộ trình, lưu trữ và xóa bỏ.
-    \item \textbf{Mở rộng dịch vụ:} Chức năng đề xuất dịch vụ và tour tham khảo được thiết kế dưới dạng quan hệ $<<extend>>$ từ Use Case tạo lộ trình. Tính năng này hỗ trợ bổ sung thông tin từ hệ thống để tối ưu hóa kế hoạch cho người dùng.
+    \item Quản lý lộ trình: Người dùng có quyền thực hiện các thao tác cơ bản trên dữ liệu lộ trình cá nhân, bao gồm: tạo mới, điều chỉnh lộ trình, lưu trữ và xóa bỏ.
+    \item Mở rộng dịch vụ: Chức năng đề xuất dịch vụ và tour tham khảo được thiết kế dưới dạng quan hệ $<<extend>>$ từ Use Case tạo lộ trình. Tính năng này hỗ trợ bổ sung thông tin từ hệ thống để tối ưu hóa kế hoạch cho người dùng.
 \end{itemize}
 
 
@@ -109,8 +109,8 @@ Dựa trên Hình \ref{fig:use_case_tong_quan}, sơ đồ mô tả các tương 
 \textbf{Module 2: Quản lý lộ trình} (Hình \ref{fig:use_case_module_2}) tập trung vào các tính năng tương tác và đồng bộ dữ liệu lộ trình cho khách du lịch. Các chức năng trọng tâm bao gồm:
 
 \begin{itemize}
-    \item \textbf{Tương tác và Chia sẻ:} Cho phép người dùng chia sẻ lộ trình cá nhân và tiếp nhận các danh sách lộ trình được chia sẻ từ người dùng khác. Chức năng xem chi tiết lộ trình được thiết lập dưới dạng quan hệ $<<extend>>$ để hỗ trợ truy xuất thông tin chuyên sâu.
-    \item \textbf{Đồng bộ hệ thống:} Cung cấp khả năng hủy lộ trình và tích hợp dữ liệu với Google Calendar, giúp tối ưu hóa việc quản lý thời gian trên các nền tảng ngoại vi.
+    \item Tương tác và Chia sẻ: Cho phép người dùng chia sẻ lộ trình cá nhân và tiếp nhận các danh sách lộ trình được chia sẻ từ người dùng khác. Chức năng xem chi tiết lộ trình được thiết lập dưới dạng quan hệ $<<extend>>$ để hỗ trợ truy xuất thông tin chuyên sâu.
+    \item Đồng bộ hệ thống: Cung cấp khả năng hủy lộ trình và tích hợp dữ liệu với Google Calendar, giúp tối ưu hóa việc quản lý thời gian trên các nền tảng ngoại vi.
 \end{itemize}
 
 
@@ -150,7 +150,7 @@ Dựa trên Hình \ref{fig:use_case_tong_quan}, sơ đồ mô tả các tương 
     \label{fig:use_case_module_5}
 \end{figure}
 \input{Sections/6. System Analysis/1-Analysis/use-case-diagram/5-module5.tex}
-\textbf{Module 5: Quản lý nội dung} (Hình \ref{fig:use_case_module_5}) thiết lập quy trình kiểm soát thông tin dành cho \textbf{Quản trị viên hệ thống}. Module tập trung vào cơ chế xử lý các vi phạm nội dung dựa trên báo cáo từ người dùng hoặc hệ thống tự động gắn cờ. Các chức năng chính bao gồm việc thẩm định chi tiết vi phạm, thực hiện các thao tác quản trị như ẩn hoặc xóa nội dung, và ghi lại lịch sử vi phạm để theo dõi hành vi người dùng. Ngoài ra, module còn cung cấp bộ công cụ quản lý bộ lọc từ khóa (thêm, sửa, xóa) nhằm chủ động ngăn chặn các nội dung không phù hợp ngay từ giai đoạn khởi tạo.
+\textbf{Module 5: Quản lý nội dung} (Hình \ref{fig:use_case_module_5}) thiết lập quy trình kiểm soát thông tin dành cho Quản trị viên hệ thống. Module tập trung vào cơ chế xử lý các vi phạm nội dung dựa trên báo cáo từ người dùng hoặc hệ thống tự động gắn cờ. Các chức năng chính bao gồm việc thẩm định chi tiết vi phạm, thực hiện các thao tác quản trị như ẩn hoặc xóa nội dung, và ghi lại lịch sử vi phạm để theo dõi hành vi người dùng. Ngoài ra, module còn cung cấp bộ công cụ quản lý bộ lọc từ khóa (thêm, sửa, xóa) nhằm chủ động ngăn chặn các nội dung không phù hợp ngay từ giai đoạn khởi tạo.
 
 
 % --- 7. MODULE 6: PHÂN TÍCH DỮ LIỆU VÀ XU HƯỚNG THỊ TRƯỜNG ---
@@ -163,7 +163,7 @@ Dựa trên Hình \ref{fig:use_case_tong_quan}, sơ đồ mô tả các tương 
     \label{fig:use_case_module_6}
 \end{figure}
 \input{Sections/6. System Analysis/1-Analysis/use-case-diagram/6-module6.tex}
-\textbf{Module 6: Phân tích dữ liệu và xu hướng thị trường} (Hình \ref{fig:use_case_module_6}) cung cấp công cụ khai thác thông tin chiến lược dành cho \textbf{Nhà cung cấp dịch vụ} và \textbf{Quản trị viên hệ thống}. Chức năng cốt lõi tập trung vào việc hiển thị bảng điều khiển (Dashboard) tổng quan về xu hướng thị trường, bao gồm các điểm đến phổ biến và chủ đề đang được quan tâm. Để hỗ trợ việc khai thác sâu, hệ thống tích hợp các quan hệ $<<extend>>$ cho phép lọc dữ liệu theo tiêu chí cụ thể và xuất báo cáo định dạng số liệu. Điều này giúp các bên liên quan đưa ra quyết định dựa trên dữ liệu thực tế nhằm tối ưu hóa hoạt động kinh doanh và quản lý.
+\textbf{Module 6: Phân tích dữ liệu và xu hướng thị trường} (Hình \ref{fig:use_case_module_6}) cung cấp công cụ khai thác thông tin chiến lược dành cho Nhà cung cấp dịch vụ và Quản trị viên hệ thống. Chức năng cốt lõi tập trung vào việc hiển thị bảng điều khiển (Dashboard) tổng quan về xu hướng thị trường, bao gồm các điểm đến phổ biến và chủ đề đang được quan tâm. Để hỗ trợ việc khai thác sâu, hệ thống tích hợp các quan hệ $<<extend>>$ cho phép lọc dữ liệu theo tiêu chí cụ thể và xuất báo cáo định dạng số liệu. Điều này giúp các bên liên quan đưa ra quyết định dựa trên dữ liệu thực tế nhằm tối ưu hóa hoạt động kinh doanh và quản lý.
 
 
 % --- 8. MODULE 7: GỢI Ý CẢI THIỆN LỊCH TRÌNH ---
@@ -176,7 +176,7 @@ Dựa trên Hình \ref{fig:use_case_tong_quan}, sơ đồ mô tả các tương 
     \label{fig:use_case_module_7}
 \end{figure}
 \input{Sections/6. System Analysis/1-Analysis/use-case-diagram/7-module7.tex}
-\textbf{Module 7: Gợi ý cải thiện lịch trình} (Hình \ref{fig:use_case_module_7}) thiết lập kênh tương tác chuyên sâu giữa \textbf{Nhà cung cấp dịch vụ} và hệ thống quản trị. Module cho phép nhà cung cấp chủ động gửi các yêu cầu đề xuất nhằm tối ưu hóa hoặc bổ sung các dịch vụ mới vào các lịch trình sẵn có trên nền tảng. Chức năng quản lý yêu cầu được tích hợp thông qua việc xem lịch sử, cho phép truy xuất chi tiết nội dung hoặc thực hiện thao tác xóa khi cần thiết dựa trên các quan hệ $<<extend>>$. Quy trình này không chỉ nâng cao chất lượng dữ liệu lộ trình mà còn tạo điều kiện cho các đơn vị cung ứng tiếp cận khách hàng mục tiêu một cách hiệu quả.
+\textbf{Module 7: Gợi ý cải thiện lịch trình} (Hình \ref{fig:use_case_module_7}) thiết lập kênh tương tác chuyên sâu giữa nhà cung cấp dịch vụ và hệ thống quản trị. Module cho phép nhà cung cấp chủ động gửi các yêu cầu đề xuất nhằm tối ưu hóa hoặc bổ sung các dịch vụ mới vào các lịch trình sẵn có trên nền tảng. Chức năng quản lý yêu cầu được tích hợp thông qua việc xem lịch sử, cho phép truy xuất chi tiết nội dung hoặc thực hiện thao tác xóa khi cần thiết dựa trên các quan hệ $<<extend>>$. Quy trình này không chỉ nâng cao chất lượng dữ liệu lộ trình mà còn tạo điều kiện cho các đơn vị cung ứng tiếp cận khách hàng mục tiêu một cách hiệu quả.
 
 
 % --- 9. MODULE 8: QUẢN TRỊ NGƯỜI DÙNG ---
@@ -192,9 +192,9 @@ Dựa trên Hình \ref{fig:use_case_tong_quan}, sơ đồ mô tả các tương 
 \textbf{Module 8: Quản trị người dùng} (Hình \ref{fig:use_case_module_8}) thiết lập nền tảng định danh và phân quyền cho toàn bộ hệ thống. Các nhóm chức năng chính bao gồm:
 
 \begin{itemize}
-    \item \textbf{Người dùng chung:} Thực hiện các tác vụ cơ bản về tài khoản như đăng ký, đăng nhập (Google/mật khẩu), đăng xuất và khôi phục mật khẩu.
-    \item \textbf{Người dùng đã xác thực:} Quản lý hồ sơ cá nhân thông qua việc xem và cập nhật thông tin chi tiết, đồng thời nhận thông báo về trạng thái tài khoản.
-    \item \textbf{Quản trị viên (Admin/Super Admin):} Thực hiện các nghiệp vụ quản lý cấp cao bao gồm: tìm kiếm người dùng, xử lý tài khoản vi phạm (khóa/mở khóa) và phân quyền hệ thống.
+    \item Người dùng chung: Thực hiện các tác vụ cơ bản về tài khoản như đăng ký, đăng nhập (Google/mật khẩu), đăng xuất và khôi phục mật khẩu.
+    \item Người dùng đã xác thực: Quản lý hồ sơ cá nhân thông qua việc xem và cập nhật thông tin chi tiết, đồng thời nhận thông báo về trạng thái tài khoản.
+    \item Quản trị viên (Admin/Super Admin): Thực hiện các nghiệp vụ quản lý cấp cao bao gồm: tìm kiếm người dùng, xử lý tài khoản vi phạm (khóa/mở khóa) và phân quyền hệ thống.
 \end{itemize}
 
 
@@ -208,4 +208,4 @@ Dựa trên Hình \ref{fig:use_case_tong_quan}, sơ đồ mô tả các tương 
     \label{fig:use_case_module_9}
 \end{figure}
 \input{Sections/6. System Analysis/1-Analysis/use-case-diagram/9-module9.tex}
-\textbf{Module 9: Quản trị hệ thống} (Hình \ref{fig:use_case_module_9}) đảm nhiệm vai trò duy trì tính ổn định của dữ liệu và luồng thông tin giữa các thực thể. \textbf{Quản trị viên hệ thống} thực hiện các tác vụ then chốt như quản lý danh mục hệ thống (địa điểm, chủ đề) thông qua các chức năng thêm, xóa, sửa và xem chi tiết nội dung. Đối với các tác nhân người dùng như \textbf{Khách du lịch} và \textbf{Nhà cung cấp}, module cung cấp cơ chế tự động hóa việc nhận thông báo về biến động dữ liệu đã theo dõi và ghi nhận nhật ký hoạt động cá nhân. Các quan hệ $<<extend>>$ được thiết lập nhằm hỗ trợ truy xuất chi tiết nhật ký và nội dung danh mục theo nhu cầu quản lý.
+\textbf{Module 9: Quản trị hệ thống} (Hình \ref{fig:use_case_module_9}) đảm nhiệm vai trò duy trì tính ổn định của dữ liệu và luồng thông tin giữa các thực thể. Quản trị viên hệ thống thực hiện các tác vụ then chốt như quản lý danh mục hệ thống (địa điểm, chủ đề) thông qua các chức năng thêm, xóa, sửa và xem chi tiết nội dung. Đối với các tác nhân người dùng như khách du lịch và nhà cung cấp, module cung cấp cơ chế tự động hóa việc nhận thông báo về biến động dữ liệu đã theo dõi và ghi nhận nhật ký hoạt động cá nhân. Các quan hệ $<<extend>>$ được thiết lập nhằm hỗ trợ truy xuất chi tiết nhật ký và nội dung danh mục theo nhu cầu quản lý.

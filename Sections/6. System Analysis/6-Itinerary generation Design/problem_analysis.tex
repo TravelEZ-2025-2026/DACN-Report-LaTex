@@ -1,30 +1,30 @@
 \subsubsubsection{Phân tích bài toán và định hướng thiết kế}
 
-\textbf{Đặc thù của bài toán lập lịch trình du lịch:}\\
+\textbf{Đặc thù của bài toán lập lịch trình du lịch:}
 Bài toán xây dựng lịch trình du lịch cá nhân hóa là một biến thể phức tạp của bài toán định tuyến đa mục tiêu, được mở rộng thêm các yếu tố về sở thích và trải nghiệm người dùng. Về mặt hình thức, bài toán này được xác định thông qua ba thành phần cốt lõi: không gian dữ liệu đầu vào (Input), hệ thống các ràng buộc (Constraint) và kết quả đầu ra kỳ vọng (Output). \\
 Đối với dữ liệu đầu vào, không gian tham số được cấu thành từ hai nhóm thông tin chính. Nhóm thứ nhất là các thiết lập chủ quan từ phía người dùng, bao gồm điểm đến, thời lượng chuyến đi, ngân sách dự kiến, phong cách du lịch, đối tượng đồng hành và các yêu cầu đặc thù khác. Nhóm thứ hai là dữ liệu ngữ cảnh không gian, bao gồm danh sách các địa điểm ứng viên tiềm năng được trích xuất từ cơ sở dữ liệu, đi kèm với siêu dữ liệu chi tiết như tọa độ địa lý, khung giờ hoạt động, chi phí tham khảo và các đặc trưng ngữ nghĩa. \\
 Dựa trên không gian đầu vào đó, thuật toán phải thỏa mãn một hệ thống ràng buộc chặt chẽ, được phân rã thành hai cấp độ:
 \begin{itemize}
-    \item \textbf{Ràng buộc cứng:} Các điều kiện vật lý và logic không thể vi phạm, bao gồm: tổng ngân sách, khung giờ hoạt động của địa điểm (operating hours), và thời gian di chuyển giữa các điểm đến.
-    \item \textbf{Ràng buộc mềm:} Các yếu tố định tính ảnh hưởng đến trải nghiệm người dùng, bao gồm: nhịp độ chuyến đi (pacing), sự đa dạng về loại hình hoạt động (tránh lặp lại thể loại), và sự phù hợp về phong cách (vibe matching) giữa địa điểm với nhu cầu.
+    \item Ràng buộc cứng: Các điều kiện vật lý và logic không thể vi phạm, bao gồm: tổng ngân sách, khung giờ hoạt động của địa điểm (operating hours), và thời gian di chuyển giữa các điểm đến.
+    \item Ràng buộc mềm: Các yếu tố định tính ảnh hưởng đến trải nghiệm người dùng, bao gồm: nhịp độ chuyến đi (pacing), sự đa dạng về loại hình hoạt động (tránh lặp lại thể loại), và sự phù hợp về phong cách (vibe matching) giữa địa điểm với nhu cầu.
 \end{itemize}
 
 Kết quả đầu ra của bài toán là một bản lịch trình du lịch cá nhân hóa hoàn chỉnh, đảm bảo tính khả thi tuyệt đối trong thực tế. Cụ thể, lộ trình được phân bổ liền mạch theo từng ngày và từng khung giờ, cung cấp chính xác các thông tin về thời gian di chuyển giữa các điểm đến. Hơn thế nữa, kết quả này còn đi kèm với một bảng dự toán chi phí tổng thể và các lời khuyên, hướng dẫn (AI tips) được tinh chỉnh riêng cho từng hoạt động nhằm tối ưu hóa toàn diện trải nghiệm của du khách.
 
-\textbf{Hạn chế của các công cụ tối ưu hóa truyền thống:}\\
+\textbf{Hạn chế của các công cụ tối ưu hóa truyền thống:}
 Trong quá trình khảo sát, nhóm đã xem xét ứng dụng các bộ giải tối ưu hóa tổ hợp như Google OR-Tools – một công cụ phổ biến cho các bài toán định tuyến (TSP, VRP). Tuy nhiên, phương pháp này bộc lộ hai hạn chế chính khi áp dụng vào bài toán du lịch:
 \begin{itemize}
-    \item \textit{Khó mô hình hóa ràng buộc mềm:} Việc biểu diễn các tiêu chí định tính (ví dụ: mức độ phù hợp về phong cách, sự thoải mái về nhịp độ,...) dưới dạng hàm mục tiêu toán học là phức tạp và thiếu chính xác. Rất khó để định lượng bằng các trọng số hình phạt cho việc "mất đi sự lãng mạn" hay "nhịp độ chuyến đi quá dồn dập".
-    \item \textit{Tính cứng nhắc khi xử lý đầu vào ngôn ngữ tự nhiên:} Dữ liệu đầu vào của người dùng là ngôn ngữ tự nhiên, mang tính chủ quan và đa dạng. Để sử dụng OR-Tools, cần xây dựng nhiều quy tắc chuyển đổi thủ công, làm giảm khả năng mở rộng và cá nhân hóa.
+    \item Khó mô hình hóa ràng buộc mềm: Việc biểu diễn các tiêu chí định tính (ví dụ: mức độ phù hợp về phong cách, sự thoải mái về nhịp độ,...) dưới dạng hàm mục tiêu toán học là phức tạp và thiếu chính xác. Rất khó để định lượng bằng các trọng số hình phạt cho việc "mất đi sự lãng mạn" hay "nhịp độ chuyến đi quá dồn dập".
+    \item Tính cứng nhắc khi xử lý đầu vào ngôn ngữ tự nhiên: Dữ liệu đầu vào của người dùng là ngôn ngữ tự nhiên, mang tính chủ quan và đa dạng. Để sử dụng OR-Tools, cần xây dựng nhiều quy tắc chuyển đổi thủ công, làm giảm khả năng mở rộng và cá nhân hóa.
 \end{itemize}
 
 Từ những phân tích trên, nhóm kết luận rằng: Các công cụ tối ưu hóa truyền thống tuy đảm bảo tuyệt đối về ràng buộc cứng nhưng lại không hiệu quả trước ràng buộc mềm. Tuy nhiên, nếu chỉ sử dụng mô hình ngôn ngữ lớn (LLM) đơn thuần, hệ thống sẽ làm rất tốt ràng buộc mềm nhưng có nguy cơ vi phạm ràng buộc cứng do hiện tượng ảo giác (hallucination).
 
-\textbf{Định hướng thiết kế:}\\
+\textbf{Định hướng thiết kế:}
 Để giải quyết bài toán đa mục tiêu này, nhóm đề xuất định hướng thiết kế lai, tách bạch vai trò xử lý của hệ thống thành một luồng công việc bao gồm ba thành phần cốt lõi:
 \begin{enumerate}
-    \item \textbf{Động cơ sáng tạo (Generator - LLM):} Đảm nhận việc thỏa mãn các ràng buộc mềm. Dựa trên dữ liệu ngữ nghĩa được truy xuất, LLM tạo ra bản nháp lịch trình, ưu tiên sự đa dạng, phong cách và nhịp độ phù hợp.
-    \item \textbf{Động cơ kiểm duyệt (Evaluator - Deterministic Algorithms):} Đảm bảo tuân thủ các ràng buộc cứng. Hệ thống sử dụng các thuật toán tất định và công cụ định tuyến (ví dụ: OSRM) để kiểm tra bản nháp về thời gian di chuyển, giờ mở cửa, ngân sách và phát hiện vi phạm ràng buộc cứng.
-    \item \textbf{Vòng lặp tự sửa lỗi (Self-Correction Loop):} Thay vì can thiệp thủ công, hệ thống tự động chuyển đổi các lỗi logic thành phản hồi dạng ngôn ngữ tự nhiên, gửi lại LLM để điều chỉnh lịch trình. Quá trình lặp lại cho đến khi tất cả ràng buộc được thỏa mãn.
+    \item Động cơ sáng tạo (Generator - LLM): Đảm nhận việc thỏa mãn các ràng buộc mềm. Dựa trên dữ liệu ngữ nghĩa được truy xuất, LLM tạo ra bản nháp lịch trình, ưu tiên sự đa dạng, phong cách và nhịp độ phù hợp.
+    \item Động cơ kiểm duyệt (Evaluator - Deterministic Algorithms): Đảm bảo tuân thủ các ràng buộc cứng. Hệ thống sử dụng các thuật toán tất định và công cụ định tuyến (ví dụ: OSRM) để kiểm tra bản nháp về thời gian di chuyển, giờ mở cửa, ngân sách và phát hiện vi phạm ràng buộc cứng.
+    \item Vòng lặp tự sửa lỗi (Self-Correction Loop): Thay vì can thiệp thủ công, hệ thống tự động chuyển đổi các lỗi logic thành phản hồi dạng ngôn ngữ tự nhiên, gửi lại LLM để điều chỉnh lịch trình. Quá trình lặp lại cho đến khi tất cả ràng buộc được thỏa mãn.
 \end{enumerate}
 Kiến trúc này cho phép hệ thống vừa tận dụng khả năng suy luận ngữ nghĩa của LLM cho các ràng buộc mềm, vừa đảm bảo độ chính xác về mặt thời gian và không gian nhờ các thuật toán tất định.

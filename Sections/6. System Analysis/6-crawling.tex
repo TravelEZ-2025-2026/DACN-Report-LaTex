@@ -4,9 +4,9 @@
 Apify là một nền tảng thu thập dữ liệu web và tự động hóa hoạt động dựa trên kiến trúc Serverless. Thay vì phải thiết lập và duy trì hạ tầng phần cứng phức tạp, Apify cung cấp môi trường đám mây cho phép chạy các chương trình tự động hóa - được gọi là các "Actors". Điểm mạnh cốt lõi của Apify nằm ở khả năng cung cấp hệ sinh thái toàn diện bao gồm: kho lưu trữ dữ liệu đám mây, hệ thống lập lịch và đặc biệt là mạng lưới Proxy thông minh giúp ẩn danh tính và vượt qua các cơ chế chặn truy cập của các website lớn.\\
 Trong hệ sinh thái các Actor của Apify, chúng tôi sử dụng Google Maps Scraper - một công cụ chuyên biệt được phát triển để trích xuất dữ liệu từ Google Maps, đã được Apify cam kết chịu trách nhiệm.
 \begin{itemize}
-    \item \textbf{Cơ chế hoạt động}: Công cụ này không sử dụng các API trả phí giới hạn của Google. Thay vào đó, nó sử dụng công nghệ giả lập trình duyệt. Nó khởi tạo một trình duyệt ảo, truy cập trực tiếp vào giao diện người dùng của Google Maps, tải nội dung và trích xuất dữ liệu từ mã nguồn trang web.
-    \item \textbf{Khả năng trích xuất}:Công cụ có khả năng lấy được toàn bộ thông tin hiển thị công khai của địa điểm bao gồm: Tên doanh nghiệp, địa chỉ, tọa độ địa lý, số điện thoại, website, giờ mở cửa, và đặc biệt là dữ liệu chi tiết về đánh giá và điểm số xếp hạng.
-    \item \textbf{Tính xác thực}: Vì hoạt động dựa trên việc đọc trực tiếp giao diện hiển thị trên trình duyệt, dữ liệu thu được đảm bảo phản ánh chính xác thông tin hiện có trên Google Maps tại thời điểm thu thập.
+    \item Cơ chế hoạt động: Công cụ này không sử dụng các API trả phí giới hạn của Google. Thay vào đó, nó sử dụng công nghệ giả lập trình duyệt. Nó khởi tạo một trình duyệt ảo, truy cập trực tiếp vào giao diện người dùng của Google Maps, tải nội dung và trích xuất dữ liệu từ mã nguồn trang web.
+    \item Khả năng trích xuất:Công cụ có khả năng lấy được toàn bộ thông tin hiển thị công khai của địa điểm bao gồm: Tên doanh nghiệp, địa chỉ, tọa độ địa lý, số điện thoại, website, giờ mở cửa, và đặc biệt là dữ liệu chi tiết về đánh giá và điểm số xếp hạng.
+    \item Tính xác thực: Vì hoạt động dựa trên việc đọc trực tiếp giao diện hiển thị trên trình duyệt, dữ liệu thu được đảm bảo phản ánh chính xác thông tin hiện có trên Google Maps tại thời điểm thu thập.
 \end{itemize}
 \subsubsubsubsection{So sánh Apify platform và các lựa chọn khác}
 

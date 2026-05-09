@@ -1,6 +1,7 @@
 \subsubsubsection{Kiến trúc chi tiết của hệ thống}
 
-Toàn bộ hệ thống được thiết kế theo mô hình \textbf{Client - Server}. Hệ thống backend được thiết kế theo mô hình \textbf{Layered Architecture}. Luồng xử lý chính của hệ thống tuân theo quy tắc phụ thuộc chặt chẽ: một lớp ở trên chỉ có thể giao tiếp với lớp ngay bên dưới nó. Dữ liệu yêu cầu sẽ đi từ lớp trên cùng (Presentation Layer) xuống các lớp dưới để xử lý và truy xuất dữ liệu, sau đó dữ liệu phản hồi sẽ được trả ngược lên trên.
+Toàn bộ hệ thống được thiết kế theo mô hình \textbf{Client -- Server}. Hệ thống backend được xây dựng theo kiến trúc \textbf{Modular Monolith} -- toàn bộ ứng dụng được triển khai như một đơn vị duy nhất, nhưng mã nguồn bên trong được tổ chức theo từng \textbf{domain/tính năng} (feature module). Mỗi module bên trong tuân theo cấu trúc phân lớp cục bộ \textbf{Controller $\rightarrow$ Service $\rightarrow$ Repository}, đảm bảo sự tách biệt trách nhiệm trong phạm vi module đó.
+
 \begin{landscape}
     \begin{figure}[htp]
         \centering
@@ -9,26 +10,49 @@ Toàn bộ hệ thống được thiết kế theo mô hình \textbf{Client - Se
         \label{fig:system_architecture}
     \end{figure}
 \end{landscape}
-Các tầng trong kiến trúc hệ thống backend:
+
+Các thành phần chính trong kiến trúc hệ thống:
 \begin{itemize}
-    % \item \textbf{User interface}: Đây là tầng trên cùng của kiến trúc, chịu trách nhiệm tương tác trực tiếp với người dùng cuối.
-    \item \textbf{Application Layer}: Đây là lõi của hệ thống, chứa toàn bộ logic nghiệp vụ và điều phối hoạt động giữa các tầng khác. Tầng này được chia nhỏ thành 3 lớp con:
+    \item \textbf{Frontend}: Được xây dựng bằng Next.js, sử dụng thư viện UI và SockJS-client. Giao tiếp với backend thông qua hai kênh: \textbf{HTTP/REST} cho các thao tác nghiệp vụ thông thường và \textbf{WebSocket/STOMP} cho các tính năng thời gian thực (nhắn tin, thông báo).
+
+    \item \textbf{Backend Application}: Ứng dụng Spring Boot duy nhất, bảo vệ bởi Spring Security, bao gồm hai nhóm module chính:
           \begin{itemize}
-              \item \textbf{Presentation layer}: Là cửa ngõ giao tiếp của backend, tiếp nhận các yêu cầu từ Tầng Giao diện người dùng. Lớp này xác thực, phân quyền, và kiểm tra tính hợp lệ của dữ liệu đầu vào trước khi chuyển đến Service layer. Lớp này hiển thị tài nguyên của hệ thống ra bên ngoài dưới dạng các API.
-              \item \textbf{Service layer}: Thực thi toàn bộ logic nghiệp vụ của ứng dụng. Đây là nơi các quy trình phức tạp được xử lý. Lớp này điều phối các hoạt động giữa tầng \textbf{Data access layer} và các dịch vụ khác.
+              \item \textbf{Feature Modules} -- Các module nghiệp vụ, mỗi module gồm ba lớp con \textit{Controller}, \textit{Service}, và \textit{Repository}:
                     \begin{itemize}
-                        \item \textbf{Authentication Service}: Xác thực và phân quyền người dùng.
-                        \item \textbf{Notification Service}: Gửi thông báo cho người dùng.
-                        \item \textbf{Itinerary Service}: Quản lý lộ trình du lịch.
-                        \item \textbf{Planner Service}: Xử lý lập kế hoạch du lịch bằng AI.
-                        \item \textbf{Community Service}: Quản lý nội dung cộng đồng.
-                        \item \textbf{User Service}: Quản trị người dùng.
-                        \item \textbf{Point of Interest Service}: Quản lý điểm đến du lịch.
-                        \item \textbf{System Service}: Quản trị hệ thống.
+                        \item \textbf{POI module}: Quản lý điểm tham quan du lịch (Point of Interest), bao gồm thông tin địa điểm, đánh giá và tìm kiếm ngữ nghĩa bằng vector embedding.
+                        \item \textbf{Itinerary manage module}: Quản lý lộ trình du lịch -- cho phép người dùng lưu trữ, chỉnh sửa và theo dõi các hành trình đã lập kế hoạch.
+                        \item \textbf{Itinerary planning module}: Điều phối luồng lập kế hoạch lộ trình có sự hỗ trợ của AI, phối hợp với Infrastructure service để gọi Gemini AI API.
+                        \item \textbf{User manage module}: Chức năng quản trị người dùng dành cho Admin (xem, khóa, phân quyền tài khoản).
+                        \item \textbf{Posts module}: Quản lý bài đăng cộng đồng, bình luận và lượt tương tác.
+                        \item \textbf{User module}: Quản lý thông tin cá nhân, theo dõi và tương tác giữa người dùng.
+                        \item \textbf{Chat module}: Quản lý tin nhắn trực tiếp và nhóm chat theo thời gian thực. Sử dụng WebSocket để gửi tin nhắn đến client.
+                        \item \textbf{Notification module}: Tạo và gửi thông báo đến người dùng khi có các sự kiện liên quan (tin nhắn mới, lượt tương tác).
+                        \item \textbf{Media module}: Quản lý tệp đính kèm -- điều phối việc upload/xóa file thông qua Infrastructure service.
+                        \item \textbf{Report module}: Tiếp nhận và quản lý báo cáo vi phạm nội dung từ người dùng.
                     \end{itemize}
-              \item \textbf{Data access layer}: Cung cấp một lớp trừu tượng để giao tiếp với Data Layer. Nó chịu trách nhiệm thực hiện các thao tác CRUD trên cơ sở dữ liệu và che giấu sự phức tạp của các câu lệnh truy vấn SQL.
+
+              \item \textbf{Infrastructure Module} -- Module hạ tầng dùng chung, cung cấp các dịch vụ kỹ thuật nền tảng cho các Feature Module sử dụng:
+                    \begin{itemize}
+                        \item \textbf{AiService}: Giao tiếp với Gemini AI API để sinh gợi ý lộ trình du lịch từ ngữ cảnh và sở thích người dùng.
+                        \item \textbf{CloudService}: Xử lý việc upload và xóa file lên Google Cloud Storage.
+                        \item \textbf{MapService}: Tích hợp Google Maps API để tra cứu thông tin địa điểm và toạ độ.
+                        \item \textbf{AuthService}: Xử lý xác thực OAuth2 với Google và quản lý JWT token.
+                        \item \textbf{SocketService}: Cung cấp interface thống nhất để các Feature Module gửi tin nhắn WebSocket đến client thông qua \texttt{SimpMessagingTemplate}.
+                    \end{itemize}
           \end{itemize}
-    \item \textbf{Data layer}: Tầng này chịu trách nhiệm lưu trữ và quản lý toàn bộ dữ liệu của hệ thống một cách bền vững.
-    \item \textbf{External Service}: Tầng này bao gồm các dịch vụ của bên thứ ba được tích hợp để mở rộng và nâng cao chức năng cho hệ thống.
-    \item \textbf{Crawling data Service}: Thu thập dữ liệu từ các nguồn ngoài. Tầng này chịu trách nhiệm thu thập dữ liệu từ các nguồn ngoài và lưu trữ vào cơ sở dữ liệu.
+
+    \item \textbf{Spring WebSocket (STOMP Endpoint /ws)}: Điểm kết nối WebSocket giữa frontend và backend. Sử dụng giao thức STOMP trên nền SockJS. Spring WebSocket hoạt động như một cổng trung gian -- nhận SUBSCRIBE/SEND frame từ client và chuyển tiếp (relay) sang RabbitMQ.
+
+    \item \textbf{Message Broker -- RabbitMQ}: Đóng vai trò \textbf{STOMP Broker Relay}, quản lý việc phân phối tin nhắn đến đúng subscriber. Khi backend gọi \texttt{SocketService} để gửi thông báo, Spring WebSocket chuyển tiếp message vào RabbitMQ; RabbitMQ xác định các client đang subscribe topic tương ứng và gửi ngược message về Spring WebSocket, từ đó truyền đến frontend qua kết nối WebSocket hiện có.
+
+    \item \textbf{Database}: Sử dụng \textbf{PostgreSQL} với extension \textbf{pgvector} -- cho phép lưu trữ và tìm kiếm vector embedding (768 chiều, HNSW index, cosine similarity) phục vụ chức năng tìm kiếm ngữ nghĩa điểm tham quan.
+
+    \item \textbf{External Services}: Các dịch vụ bên thứ ba được tích hợp thông qua Infrastructure module:
+          \begin{itemize}
+              \item \textbf{Gemini AI API}: Sinh nội dung lộ trình du lịch bằng AI.
+              \item \textbf{Google Cloud Storage}: Lưu trữ ảnh và tệp đính kèm của người dùng.
+              \item \textbf{Google APIs (Auth \& Maps)}: Xác thực OAuth2 và tra cứu thông tin địa điểm.
+          \end{itemize}
+
+    \item \textbf{Crawling Data Service}: Dịch vụ độc lập có nhiệm vụ thu thập dữ liệu điểm tham quan từ nền tảng Apify, sau đó ghi dữ liệu vào cơ sở dữ liệu PostgreSQL để bổ sung nguồn POI cho hệ thống.
 \end{itemize}

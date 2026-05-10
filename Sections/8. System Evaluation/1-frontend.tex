@@ -1,6 +1,6 @@
 \subsection{Đánh giá yêu cầu phi chức năng}
 \subsubsection{Đánh giá hiệu năng}
-Nhóm đã hoàn thành việc xây dựng giao diện người dùng (Frontend) cho toàn bộ các chức năng của hệ thống. Giao diện được thiết kế với mục tiêu thân thiện, dễ sử dụng và tương thích trên nhiều thiết bị khác nhau. 
+Nhóm đã hoàn thành việc xây dựng giao diện người dùng (Frontend) cho toàn bộ các chức năng của hệ thống. Giao diện được thiết kế với mục tiêu thân thiện, dễ sử dụng và tương thích trên nhiều thiết bị khác nhau.
 
 Quá trình kiểm thử và đánh giá được thực hiện trực tiếp trên môi trường phát triển bằng các công cụ tiêu chuẩn công nghiệp: Google Lighthouse và Chrome DevTools. Để có cái nhìn khách quan về hiệu năng ứng dụng, nhóm thực hiện đo lường trên trang đại diện quan trọng nhất là Trang chủ (Home Page) - điểm tiếp cận đầu tiên của người dùng.
 
@@ -21,20 +21,20 @@ Lighthouse là công cụ tự động của Google giúp đánh giá hiệu nă
 \end{figure}
 
 \begin{table}[!h]
-\centering
-\begin{tabular}{|l|l|l|l|l|}
-\hline
-Màn hình                   & Performance & Accessibility & Best Practices & SEO \\ \hline
-Trang chủ                  & 90          & 96            & 77             & 100 \\ \hline
-Khám phá                   & 93          & 90            & 100            & 100 \\ \hline
-Chi tiết lịch trình        & 88          & 87            & 100            & 100 \\ \hline
-Cộng đồng                  & 90          & 91            & 80             & 100 \\ \hline
-Đăng tải review            & 100         & 96            & 100            & 100 \\ \hline
-Chi tiết thành phố du lịch & 99          & 86            & 77             & 100 \\ \hline
-Chi tiết điểm đến          & 93          & 92            & 80             & 100 \\ \hline
-\end{tabular}
-\caption{Kết quả đánh giá Lighhouse cho các màn hình}
-\label{tab:lighthouse}
+    \centering
+    \begin{tabular}{|l|l|l|l|l|}
+        \hline
+        Màn hình                   & Performance & Accessibility & Best Practices & SEO \\ \hline
+        Trang chủ                  & 90          & 96            & 77             & 100 \\ \hline
+        Khám phá                   & 93          & 90            & 100            & 100 \\ \hline
+        Chi tiết lịch trình        & 88          & 87            & 100            & 100 \\ \hline
+        Cộng đồng                  & 90          & 91            & 80             & 100 \\ \hline
+        Đăng tải review            & 100         & 96            & 100            & 100 \\ \hline
+        Chi tiết thành phố du lịch & 99          & 86            & 77             & 100 \\ \hline
+        Chi tiết điểm đến          & 93          & 92            & 80             & 100 \\ \hline
+    \end{tabular}
+    \caption{Kết quả đánh giá Lighhouse cho các màn hình}
+    \label{tab:lighthouse}
 \end{table}
 
 \subsubsection{Đánh giá tính tương thích}
@@ -43,8 +43,8 @@ Kiểm thử khả năng tương thích đa nền tảng của hệ thống tậ
 \begin{figure}[h!]
     \centering
     \includegraphics[width=13 cm]{Images/8. Implement/compability-test.png}
-        \caption{Kết quả kiểm thử tính tương thích trên nhiều trình duyệt}
-        \label{fig:compatibility-test}
+    \caption{Kết quả kiểm thử tính tương thích trên nhiều trình duyệt}
+    \label{fig:compatibility-test}
 \end{figure}
 
 Để kiểm tra tính tương thích trên nhiều thiết bị, mỗi bài kiểm tra chức năng được lặp lại trên các thiết bị khác nhau, sử dụng các trình duyệt khác nhau.
@@ -60,10 +60,10 @@ Kiểm thử khả năng tương thích đa nền tảng của hệ thống tậ
 Kết quả kiểm thử cho thấy rằng ứng dụng của chúng tôi có tính tương thích cao, hoạt động ổn định và cung cấp trải nghiệm người dùng nhất quán trên tất cả các nền tảng và trình duyệt được kiểm tra. Điều này đảm bảo rằng người dùng có thể truy cập và sử dụng hệ thống một cách dễ dàng bất kể họ đang sử dụng thiết bị hoặc trình duyệt nào.
 
 \subsubsection{Đánh giá bảo mật}
-Đánh giá bảo mật của hệ thống tập trung vào việc xác định và khắc phục các lỗ hổng bảo mật tiềm ẩn, bảo vệ dữ liệu người dùng và đảm bảo rằng hệ thống có khả năng chống lại các cuộc tấn công độc hại. Nhóm đã thực hiện một số biện pháp bảo mật cơ bản như mã hóa dữ liệu, sử dụng HTTPS và triển khai các biện pháp xác thực và phân quyền người dùng. Tuy nhiên, do thời gian và phạm vi của dự án, nhóm chưa thực hiện kiểm tra bảo mật một cách toàn diện, bao gồm việc sử dụng các công cụ quét lỗ hổng và thực hiện các bài kiểm tra xâm nhập (penetration testing). Đây là một hạn chế quan trọng cần được khắc phục trong tương lai để đảm bảo rằng hệ thống có thể bảo vệ dữ liệu người dùng một cách hiệu quả và chống lại các mối đe dọa bảo mật ngày càng tinh vi. 
+Đánh giá bảo mật của hệ thống tập trung vào việc xác định và khắc phục các lỗ hổng bảo mật tiềm ẩn, bảo vệ dữ liệu người dùng và đảm bảo rằng hệ thống có khả năng chống lại các cuộc tấn công độc hại. Nhóm đã thực hiện một số biện pháp bảo mật cơ bản như mã hóa dữ liệu, sử dụng HTTPS và triển khai các biện pháp xác thực và phân quyền người dùng. Tuy nhiên, do thời gian và phạm vi của dự án, nhóm chưa thực hiện kiểm tra bảo mật một cách toàn diện, bao gồm việc sử dụng các công cụ quét lỗ hổng và thực hiện các bài kiểm tra xâm nhập (penetration testing). Đây là một hạn chế quan trọng cần được khắc phục trong tương lai để đảm bảo rằng hệ thống có thể bảo vệ dữ liệu người dùng một cách hiệu quả và chống lại các mối đe dọa bảo mật ngày càng tinh vi.
 
-
-
+\subsubsection{Đánh giá tính sắn sàng của hệ thống}
+\input{Sections/8. System Evaluation/5-Availability.tex}
 
 
 

@@ -30,7 +30,8 @@ Trong phần này, nhóm thực hiện việc ánh xạ các thực thể thành
 Dưới đây là chi tiết thiết kế vật lý một số bảng quan trọng trong hệ thống. Mỗi bảng thể hiện rõ các thuộc tính, kiểu dữ liệu cụ thể, các ràng buộc và khóa ngoại (nếu có).
 
 {\small
-\begin{longtable}{|p{2.5cm}|p{3.2cm}|p{4.5cm}|p{4.3cm}|}
+\renewcommand{\arraystretch}{1.3} % Tăng khoảng cách dòng để bảng thoáng và dễ đọc hơn
+\begin{longtable}{|p{2.5cm}|p{3.8cm}|p{3.8cm}|p{4.2cm}|}
 \caption{Thiết kế vật lý cơ sở dữ liệu}\label{tab:physical-data}\\
 \hline
 \textbf{Tên bảng} & \textbf{Tên thuộc tính} & \textbf{Kiểu dữ liệu} & \textbf{Ràng buộc} \\ \hline
@@ -42,97 +43,151 @@ Dưới đây là chi tiết thiết kế vật lý một số bảng quan trọ
 \textbf{Tên bảng} & \textbf{Tên thuộc tính} & \textbf{Kiểu dữ liệu} & \textbf{Ràng buộc} \\ \hline
 \endhead
 
-\hline \multicolumn{4}{r}{\textit{}} \\
+\hline \multicolumn{4}{r}{\textit{Tiếp tục trang sau}} \\
 \endfoot
 
 \hline
 \endlastfoot
 
-\multirow{6}{2.5cm}{\textbf{user}} 
+% ==================== USER ====================
+\textbf{user} 
     & id & BIGINT & PK, NOT NULL \\ \cline{2-4} 
     & username & VARCHAR(100) & NOT NULL, UNIQUE \\ \cline{2-4} 
     & password & VARCHAR(255) & NOT NULL \\ \cline{2-4} 
-    & status & ENUM('active', 'inactive') & NOT NULL, DEFAULT 'active' \\ \cline{2-4} 
-    & email & VARCHAR(255) & NOT NULL, UNIQUE \\ \cline{2-4} 
-    & avatar & VARCHAR(255) & \\ \hline
+    & email & VARCHAR(100) & NOT NULL, UNIQUE \\ \cline{2-4} 
+    & full\_name & VARCHAR(100) & \\ \cline{2-4}
+    & gender & ENUM & \\ \cline{2-4}
+    & dob & DATE & \\ \cline{2-4}
+    & role & ENUM & \\ \cline{2-4}
+    & status & ENUM & NOT NULL, DEFAULT 'ACTIVE' \\ \cline{2-4} 
+    & avatar\_id & BIGINT & FK \\ \cline{2-4}
+    & cover\_id & BIGINT & FK \\ \cline{2-4}
+    & auth\_provider & ENUM & DEFAULT 'LOCAL' \\ \cline{2-4}
+    & google\_id & VARCHAR(255) & UNIQUE \\ \cline{2-4}
+    & follower\_count & BIGINT & NOT NULL, DEFAULT 0 \\ \cline{2-4}
+    & following\_count & BIGINT & NOT NULL, DEFAULT 0 \\ \cline{2-4}
+    & created\_at & TIMESTAMPTZ & NOT NULL, DEFAULT NOW() \\ \cline{2-4}
+    & updated\_at & TIMESTAMPTZ & \\ \hline
 
-\multirow{3}{2.5cm}{\textbf{admin}} 
-    & id & BIGINT & PK, NOT NULL \\ \cline{2-4} 
+% ==================== ADMIN ====================
+\textbf{admin} 
+    & id & BIGINT & PK, FK, NOT NULL \\ \cline{2-4} 
     & employee\_id & BIGINT & NOT NULL, UNIQUE \\ \cline{2-4} 
     & full\_name & VARCHAR(255) & NOT NULL \\ \hline
 
-\multirow{4}{2.5cm}{\textbf{provider}} 
-    & id & BIGINT & PK, NOT NULL \\ \cline{2-4} 
-    & business\_name & VARCHAR(255) & NOT NULL \\ \cline{2-4} 
-    & phone\_number & VARCHAR(20) & \\ \cline{2-4} 
-    & address & VARCHAR(255) & \\ \hline
+% ==================== PROVIDER ====================
+\textbf{provider} 
+    & id & BIGINT & PK, FK, NOT NULL \\ \cline{2-4} 
+    & business\_name & VARCHAR(100) & NOT NULL \\ \cline{2-4} 
+    & phone\_number & VARCHAR(10) & UNIQUE \\ \cline{2-4} 
+    & address & TEXT & \\ \hline
 
-\multirow{3}{2.5cm}{\textbf{traveler}} 
-    & id & BIGINT & PK, NOT NULL \\ \cline{2-4} 
+% ==================== TRAVELER ====================
+\textbf{traveler} 
+    & id & BIGINT & PK, FK, NOT NULL \\ \cline{2-4} 
     & dob & DATE & \\ \cline{2-4} 
     & gender & VARCHAR(10) & \\ \hline
 
-\multirow{10}{2.5cm}{\textbf{itinerary}} 
+% ==================== ITINERARY ====================
+\textbf{itinerary} 
     & id & BIGINT & PK, NOT NULL \\ \cline{2-4} 
     & title & VARCHAR(255) & NOT NULL \\ \cline{2-4} 
-    & type & VARCHAR(255) & NOT NULL \\ \cline{2-4} 
+    & type & VARCHAR(255) & \\ \cline{2-4} 
     & start\_date & DATE & NOT NULL \\ \cline{2-4} 
     & end\_date & DATE & NOT NULL \\ \cline{2-4} 
-    & budget & DECIMAL(12, 2) & NULL \\ \cline{2-4} 
-    & objectives & TEXT & NULL \\ \cline{2-4} 
-    & status & ENUM('planning', 'ongoing', 'completed', 'cancelled') & NOT NULL, DEFAULT 'planning' \\ \cline{2-4} 
-    & traveler\_id & BIGINT & NOT NULL, FK REFERENCES traveler(id) \\ \cline{2-4} 
-    & base\_itinerary\_id & BIGINT & NULL, FK REFERENCES itinerary(id) \\ \hline
+    & budget & NUMERIC(12, 2) & \\ \cline{2-4} 
+    & objectives & TEXT & \\ \cline{2-4} 
+    & styles & JSONB & \\ \cline{2-4}
+    & destination\_cities & JSONB & \\ \cline{2-4}
+    & user\_notes & TEXT & \\ \cline{2-4}
+    & has\_kids & BOOLEAN & \\ \cline{2-4}
+    & has\_pets & BOOLEAN & \\ \cline{2-4}
+    & companion & VARCHAR(255) & \\ \cline{2-4}
+    & status & ENUM & NOT NULL, DEFAULT 'PLANNING' \\ \cline{2-4} 
+    & estimated\_total\_price & NUMERIC(12, 2) & \\ \cline{2-4}
+    & estimated\_currency & VARCHAR(10) & \\ \cline{2-4}
+    & traveler\_id & BIGINT & NOT NULL, FK \\ \cline{2-4} 
+    & base\_itinerary\_id & BIGINT & FK \\ \cline{2-4}
+    & created\_at & TIMESTAMP & NOT NULL, DEFAULT NOW() \\ \cline{2-4}
+    & updated\_at & TIMESTAMP & \\ \hline
 
-\multirow{11}{2.5cm}{\textbf{itinerary\_\newline activity}} 
+% ==================== ITINERARY_ACTIVITY ====================
+\textbf{itinerary\_\newline activity} 
     & id & BIGINT & PK, NOT NULL \\ \cline{2-4} 
     & description & TEXT & \\ \cline{2-4} 
     & start\_time & TIME & \\ \cline{2-4} 
+    & end\_time & TIME & \\ \cline{2-4}
     & time\_of\_day & VARCHAR(50) & \\ \cline{2-4} 
-    & type & VARCHAR(50) & \\ \cline{2-4} 
+    & type & ENUM & \\ \cline{2-4} 
     & travel\_duration\_\newline to\_reach & INT & \\ \cline{2-4} 
-    & activity\_cost & DECIMAL(10, 2) & \\ \cline{2-4} 
-    & transportation\_cost & DECIMAL(10, 2) & \\ \cline{2-4} 
+    & activity\_cost & NUMERIC(10, 2) & \\ \cline{2-4} 
+    & transportation\_cost & NUMERIC(10, 2) & \\ \cline{2-4} 
     & note & TEXT & \\ \cline{2-4} 
-    & itinerary\_id & BIGINT & NOT NULL, FK REFERENCES itinerary(id) \\ \cline{2-4} 
+    & itinerary\_id & BIGINT & NOT NULL, FK \\ \cline{2-4} 
+    & poi\_id & BIGINT & FK \\ \cline{2-4}
     & itinerary\_date & DATE & NOT NULL \\ \hline
 
-\multirow{8}{2.5cm}{\textbf{place}} 
+% ==================== PLACE ====================
+\textbf{place} 
     & id & BIGINT & PK, NOT NULL \\ \cline{2-4} 
+    & name & VARCHAR(255) & NOT NULL, UNIQUE \\ \cline{2-4} 
+    & codename & VARCHAR(50) & \\ \cline{2-4} 
+    & city\_code & VARCHAR(50) & \\ \cline{2-4} 
     & country & VARCHAR(100) & \\ \cline{2-4} 
-    & name & VARCHAR(255) & NOT NULL \\ \cline{2-4} 
+    & country\_code & VARCHAR(10) & \\ \cline{2-4}
     & region & VARCHAR(100) & \\ \cline{2-4} 
     & latitude & DECIMAL(10, 8) & \\ \cline{2-4} 
-    & longtitude & DECIMAL(11, 8) & \\ \cline{2-4} 
-    & google\_place\_id & VARCHAR(255) & NULL, UNIQUE \\ \cline{2-4} 
-    & city\_code & VARCHAR(50) & \\ \hline
+    & longitude & DECIMAL(11, 8) & \\ \cline{2-4} 
+    & google\_place\_id & VARCHAR(255) & \\ \hline
 
-\multirow{13}{2.5cm}{\textbf{place\_of\_\newline interest}} 
+% ==================== PLACE_OF_INTEREST ====================
+\textbf{place\_of\_\newline interest} 
     & id & BIGINT & PK, NOT NULL \\ \cline{2-4} 
     & name & VARCHAR(255) & NOT NULL \\ \cline{2-4} 
-    & address & VARCHAR(255) & \\ \cline{2-4} 
-    & status & ENUM('operational', 'temporarily\_closed', 'permanently\_closed') & NOT NULL, DEFAULT 'operational' \\ \cline{2-4} 
+    & poi\_type & ENUM & \\ \cline{2-4}
+    & poi\_type\_detail & TEXT & \\ \cline{2-4}
+    & address & TEXT & \\ \cline{2-4} 
+    & phone\_number & VARCHAR(20) & \\ \cline{2-4}
+    & website & TEXT & \\ \cline{2-4} 
     & latitude & DECIMAL(10, 8) & \\ \cline{2-4} 
-    & longtitude & DECIMAL(11, 8) & \\ \cline{2-4} 
-    & website & VARCHAR(255) & \\ \cline{2-4} 
+    & longitude & DECIMAL(11, 8) & \\ \cline{2-4} 
+    & rating & DECIMAL(3, 2) & \\ \cline{2-4}
+    & review\_count & INT & \\ \cline{2-4}
+    & status & ENUM & NOT NULL, DEFAULT 'OPERATIONAL' \\ \cline{2-4} 
+    & system\_status & ENUM & NOT NULL, DEFAULT 'ACTIVE' \\ \cline{2-4}
     & description & TEXT & \\ \cline{2-4} 
-    & google\_place\_type & VARCHAR(100) & \\ \cline{2-4} 
-    & opening\_hour & TEXT & \\ \cline{2-4} 
-    & place\_id & BIGINT & NOT NULL, FK REFERENCES place(id) \\ \cline{2-4} 
-    & operator\_id & BIGINT & NULL, FK REFERENCES operator(id) \\ \cline{2-4} 
-    & google\_place\_id & VARCHAR(255) & NULL, UNIQUE \\ \hline
+    & opening\_hour & JSONB & \\ \cline{2-4} 
+    & reviews\_distribution & JSONB & \\ \cline{2-4}
+    & price\_min & BIGINT & \\ \cline{2-4}
+    & price\_max & BIGINT & \\ \cline{2-4}
+    & semantic\_text & TEXT & \\ \cline{2-4}
+    & gemini\_vector & vector(768) & \\ \cline{2-4}
+    & place\_id & BIGINT & FK \\ \cline{2-4} 
+    & ward\_id & BIGINT & FK \\ \cline{2-4}
+    & operator\_id & BIGINT & FK \\ \cline{2-4} 
+    & google\_place\_id & VARCHAR(255) & UNIQUE \\ \cline{2-4}
+    & google\_maps\_url & TEXT & \\ \cline{2-4}
+    & created\_at & TIMESTAMP & NOT NULL, DEFAULT NOW() \\ \cline{2-4}
+    & updated\_at & TIMESTAMP & \\ \cline{2-4}
+    & deleted\_at & TIMESTAMP & \\ \hline
 
-\multirow{10}{2.5cm}{\textbf{blog\_post}} 
+% ==================== BLOG_POST (POSTS) ====================
+\textbf{blog\_post\newline (posts)} 
     & id & BIGINT & PK, NOT NULL \\ \cline{2-4} 
-    & title & VARCHAR(255) & NOT NULL \\ \cline{2-4} 
-    & content & LONGTEXT & \\ \cline{2-4} 
-    & status & ENUM('draft', 'published', 'archived') & NOT NULL, DEFAULT 'draft' \\ \cline{2-4} 
-    & privacy & ENUM('public', 'friends\_only', 'private') & NOT NULL, DEFAULT 'public' \\ \cline{2-4} 
-    & created\_at & TIMESTAMP & NOT NULL, DEFAULT CURRENT\_TIMESTAMP \\ \cline{2-4} 
-    & deleted\_at & TIMESTAMP & \\ \cline{2-4} 
+    & user\_id & BIGINT & FK \\ \cline{2-4}
+    & title & VARCHAR(255) & \\ \cline{2-4} 
+    & content & TEXT & \\ \cline{2-4} 
+    & topic\_tag & VARCHAR(255) & \\ \cline{2-4}
+    & poi\_id & BIGINT & FK \\ \cline{2-4}
+    & folder\_id & UUID & NOT NULL \\ \cline{2-4}
+    & status & ENUM & NOT NULL, DEFAULT 'PUBLISHED' \\ \cline{2-4} 
+    & privacy & ENUM & DEFAULT 'public' \\ \cline{2-4} 
+    & itinerary\_id & BIGINT & FK \\ \cline{2-4} 
+    & traveler\_id & BIGINT & FK \\ \cline{2-4}
+    & published\_at & TIMESTAMP & \\ \cline{2-4}
+    & created\_at & TIMESTAMP & NOT NULL, DEFAULT NOW() \\ \cline{2-4} 
     & updated\_at & TIMESTAMP & \\ \cline{2-4} 
-    & itinerary\_id & BIGINT & NULL, FK REFERENCES itinerary(id) \\ \cline{2-4} 
-    & traveler\_id & BIGINT & NOT NULL, FK REFERENCES traveler(id) \\ \hline
+    & deleted\_at & TIMESTAMP & \\ \hline
 
 \end{longtable}
 }

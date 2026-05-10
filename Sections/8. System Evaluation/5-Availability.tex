@@ -1,4 +1,5 @@
-Để kiểm thử tính sẵn sàng của hệ thống, nhóm sử dụng công cụ k6 – một công cụ mã nguồn mở cho phép mô phỏng nhiều người dùng đồng thời truy cập vào hệ thống.
+\subsubsection{Đánh giá hiệu năng của hệ thống}
+Để kiểm thử hiệu năng của hệ thống, nhóm sử dụng công cụ k6 – một công cụ mã nguồn mở cho phép mô phỏng nhiều người dùng đồng thời truy cập vào hệ thống.
 \subsubsubsection{Cấu hình kiểm thử}
 Kịch bản kiểm thử được thiết lập theo mô hình tăng tải tuần tự:
 
@@ -41,7 +42,7 @@ Trong đó:
 \begin{figure}[H]
     \centering
     \includegraphics[width=\linewidth]{Images/8. Implement/backend/availability_evaluation.png}
-    \caption{Kết quả kiểm thử tính sẵn sàng của hệ thống}
+    \caption{Kết quả kiểm thử hiệu năng của hệ thống}
     \label{fig:availability-test}
 \end{figure}
 \subsubsubsection{Phân tích}
@@ -65,4 +66,4 @@ Trong đó:
 \end{itemize}
 
 \subsubsubsection{Kết luận}
-Kết quả kiểm thử cho thấy hệ thống đáp ứng tốt yêu cầu phi chức năng về tính sẵn sàng: cả hai ngưỡng kiểm thử đều đạt, tỉ lệ lỗi chỉ 0.79\% và thời gian phản hồi ở phân vị thứ 95 là 442ms – thấp hơn nhiều so với ngưỡng 2 giây. Phần lớn request hoàn thành dưới 300ms, đảm bảo trải nghiệm người dùng mượt mà khi có 100 người dùng đồng thời. Tuy nhiên, một số request ngoại lệ có thể kéo dài tới 31 giây, do đó cần tiếp tục tối ưu các API phức tạp và thao tác cơ sở dữ liệu ở phía backend để loại bỏ hoàn toàn các trường hợp chậm trễ này.
+Kết quả kiểm thử cho thấy hệ thống đáp ứng tốt yêu cầu phi chức năng về hiệu năng: cả hai ngưỡng kiểm thử đều đạt, tỉ lệ lỗi chỉ 0.79\% và thời gian phản hồi ở phân vị thứ 95 là 442ms – thấp hơn nhiều so với ngưỡng 5 giây. Phần lớn request hoàn thành dưới 300ms, đảm bảo trải nghiệm người dùng mượt mà khi có 100 người dùng đồng thời. Tuy nhiên, một số request ngoại lệ có thể kéo dài tới 31 giây, do đó cần tiếp tục tối ưu các API phức tạp và thao tác cơ sở dữ liệu ở phía backend để loại bỏ hoàn toàn các trường hợp chậm trễ này.

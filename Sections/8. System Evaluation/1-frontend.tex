@@ -23,10 +23,34 @@ Lighthouse là công cụ tự động của Google giúp đánh giá hiệu nă
     \end{minipage}\hfill
 \end{figure}
 
-\subsubsection{Đánh giá tính tương thích}
-Kiểm thử khả năng tương thích đa nền tảng của hệ thống tập trung vào hai yếu tố chính: tính độc lập nền tảng và khả năng tương thích trình duyệt. Nhóm kiểm tra xem ứng dụng web của mình có hoạt động tốt trên nhiều nền tảng khác nhau như Windows, macOS và Linux hay không. Chúng tôi cũng đảm bảo rằng nó hoạt động đúng cách trên các trình duyệt web khác nhau như Chrome, Firefox và Safari. 
+\begin{table}[!h]
+\centering
+\begin{tabular}{|l|l|l|l|l|}
+\hline
+Màn hình                   & Performance & Accessibility & Best Practices & SEO \\ \hline
+Trang chủ                  & 90          & 96            & 77             & 100 \\ \hline
+Khám phá                   & 93          & 90            & 100            & 100 \\ \hline
+Chi tiết lịch trình        & 88          & 87            & 100            & 100 \\ \hline
+Cộng đồng                  & 90          & 91            & 80             & 100 \\ \hline
+Đăng tải review            & 100         & 96            & 100            & 100 \\ \hline
+Chi tiết thành phố du lịch & 99          & 86            & 77             & 100 \\ \hline
+Chi tiết điểm đến          & 93          & 92            & 80             & 100 \\ \hline
+\end{tabular}
+\caption{Kết quả đánh giá Lighhouse cho các màn hình}
+\label{tab:lighthouse}
+\end{table}
 
-Để kiểm tra tính tương thích trên nhiều thiết bị, mỗi bài kiểm tra chức năng được lặp lại trên các thiết bị khác nhau, sử dụng các trình duyệt khác nhau và chạy trên các hệ điều hành khác nhau.
+\subsubsection{Đánh giá tính tương thích}
+Kiểm thử khả năng tương thích đa nền tảng của hệ thống tập trung vào hai yếu tố chính: tính độc lập nền tảng và khả năng tương thích trình duyệt. Nhóm tiến hành kiểm thử trên các trình duyệt phổ biến như Google Chrome, Mozilla Firefox và Safari để đảm bảo rằng ứng dụng hoạt động ổn định và cung cấp trải nghiệm người dùng nhất quán trên tất cả các nền tảng.
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=13 cm]{Images/8. Implement/compability-test.png}
+        \caption{Kết quả kiểm thử tính tương thích trên nhiều trình duyệt}
+        \label{fig:compatibility-test}
+\end{figure}
+
+Để kiểm tra tính tương thích trên nhiều thiết bị, mỗi bài kiểm tra chức năng được lặp lại trên các thiết bị khác nhau, sử dụng các trình duyệt khác nhau.
 
 Kết quả kiểm thử cho thấy rằng ứng dụng của chúng tôi có tính tương thích cao, hoạt động ổn định và cung cấp trải nghiệm người dùng nhất quán trên tất cả các nền tảng và trình duyệt được kiểm tra. Điều này đảm bảo rằng người dùng có thể truy cập và sử dụng hệ thống một cách dễ dàng bất kể họ đang sử dụng thiết bị hoặc trình duyệt nào.
 

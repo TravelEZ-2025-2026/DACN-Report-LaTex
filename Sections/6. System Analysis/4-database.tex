@@ -3,31 +3,29 @@
 \subsubsubsection{PostgreSQL Database}
 
 \subsubsubsubsection{Giới thiệu}
-PostgreSQL là hệ quản trị cơ sở dữ liệu quan hệ đối tượng (ORDBMS) mã nguồn mở tiên tiến nhất hiện nay, nổi bật với khả năng xử lý linh hoạt cả dữ liệu có cấu trúc (SQL) và bán cấu trúc (JSONB) trong cùng một hệ thống \cite{postgres18_docs}. 
+PostgreSQL là hệ quản trị cơ sở dữ liệu quan hệ đối tượng (ORDBMS) mã nguồn mở tiên tiến nhất hiện nay, nổi bật với khả năng xử lý linh hoạt cả dữ liệu có cấu trúc (SQL) và bán cấu trúc (JSONB) trong cùng một hệ thống \cite{schonig2024}. 
 
-Trong hệ thống gợi ý hành trình du lịch thông minh, PostgreSQL đóng vai trò là "kho chứa sự thật" (single source of truth). Nó không chỉ lưu trữ các thông tin cốt lõi như hồ sơ người dùng, lịch sử tương tác, và nội dung cộng đồng, mà còn đảm bảo tính toàn vẹn của dữ liệu giao dịch phức tạp (ACID). Đặc biệt, với các cập nhật mới nhất trong năm 2025, hệ thống tận dụng tính năng UUIDv7 để tối ưu hóa hiệu suất đánh chỉ mục theo thời gian và cơ chế I/O không đồng bộ (AIO) để tăng tốc độ truy xuất dữ liệu lớn \cite{schonig2024}.
+Trong hệ thống gợi ý hành trình du lịch thông minh, PostgreSQL đóng vai trò là "kho chứa sự thật" (single source of truth). Nó không chỉ lưu trữ các thông tin cốt lõi như hồ sơ người dùng, lịch sử tương tác, và nội dung cộng đồng, mà còn đảm bảo tính toàn vẹn của dữ liệu giao dịch phức tạp thông qua kiến trúc Multi-Version Concurrency Control (MVCC) và Write-Ahead Logging (WAL) \cite{postgres17_manual}. Đặc biệt, với các bản cập nhật mới nhất, hệ thống tận dụng tính năng UUIDv7 để tối ưu hóa hiệu suất đánh chỉ mục theo thời gian và cơ chế I/O không đồng bộ (Asynchronous I/O) để tăng tốc độ truy xuất dữ liệu lớn \cite{postgres18_docs}.
 
 \subsubsubsubsection{Ưu điểm kỹ thuật}
 \begin{itemize}
     \item Mô hình lai linh hoạt (Hybrid Data Model): 
-    Khả năng hỗ trợ kiểu dữ liệu JSONB cho phép hệ thống lưu trữ các thuộc tính động của điểm đến du lịch (như review, metadata hình ảnh) mà không cần thay đổi schema, đồng thời vẫn giữ được khả năng truy vấn SQL mạnh mẽ \cite{chan2025}.
+    Khả năng hỗ trợ kiểu dữ liệu JSONB cho phép hệ thống lưu trữ các thuộc tính động của điểm đến du lịch (như review, metadata hình ảnh) mà không cần thay đổi schema, đồng thời vẫn giữ được khả năng truy vấn SQL mạnh mẽ và an toàn \cite{schonig2024}.
 
     \item Hiệu suất truy vấn phức tạp: 
-    PostgreSQL vượt trội trong việc xử lý các truy vấn JOIN phức tạp, Full-Text Search đa ngôn ngữ, và các phép toán địa lý (PostGIS). Điều này là nền tảng cho các tính năng tìm kiếm điểm đến thông minh và gợi ý lộ trình tối ưu \cite{uddin2024}.
+    Nghiên cứu thực nghiệm định lượng cho thấy PostgreSQL vượt trội trong việc xử lý các truy vấn phức tạp trên tập dữ liệu lớn (nhanh gấp khoảng 13 lần so với MySQL ở các truy vấn SELECT đa bảng), duy trì hiệu suất ổn định nhờ kiến trúc MVCC \cite{uddin2024_benchmark}.
 
     \item Độ tin cậy và Toàn vẹn dữ liệu (ACID): 
-    Cơ chế Multi-Version Concurrency Control (MVCC) và Write-Ahead Logging (WAL) đảm bảo tính nhất quán tuyệt đối cho các giao dịch quan trọng như đặt chỗ, cập nhật lịch trình, và ghi vết kiểm toán (audit trail), ngay cả trong điều kiện tải cao \cite{postgres17_docs}.
+    Cơ chế WAL và MVCC tích hợp sâu ở lõi hệ thống đảm bảo tính nhất quán tuyệt đối cho các giao dịch quan trọng (đặt chỗ, ghi vết kiểm toán), không xảy ra tình trạng mất dữ liệu ngay cả khi hệ thống gặp sự cố \cite{postgres17_manual}.
 
     \item Bảo mật đa lớp: 
-    Hệ thống tích hợp sẵn các cơ chế bảo mật cấp cao như Row-Level Security (RLS) và mã hóa cột (pgcrypto), giúp bảo vệ dữ liệu nhạy cảm của người dùng theo đúng các tiêu chuẩn bảo mật hiện đại.
+    Hệ thống hỗ trợ các phương án triển khai bảo mật mức cao nhất trong vận hành thực tế, bao gồm Row-Level Security (RLS) để phân quyền chi tiết từng dòng dữ liệu và cơ chế xác thực chuỗi bảo mật SCRAM-SHA-256 \cite{chan2025_dba}.
 
     \item Khả năng mở rộng và Tích hợp: 
-    PostgreSQL dễ dàng tích hợp với các pipeline xử lý dữ liệu lớn (ETL) và hỗ trợ mở rộng chiều ngang (sharding) hoặc chiều dọc, đáp ứng nhu cầu tăng trưởng dữ liệu của hệ thống trong dài hạn \cite{gigson2025}.
+    PostgreSQL cung cấp các kỹ thuật tối ưu hóa nâng cao như Partitioning và Indexing chuyên sâu, đáp ứng khả năng mở rộng quy mô lưu trữ dữ liệu khổng lồ của nền tảng trong dài hạn \cite{schonig2024}.
 \end{itemize}
 
 \subsubsubsubsection{So sánh PostgreSQL và các công nghệ khác}
-Bảng dưới đây so sánh PostgreSQL với các hệ quản trị cơ sở dữ liệu phổ biến khác dựa trên các nghiên cứu hiệu năng mới nhất năm 2025 \cite{uddin2024, nayak2025}.
-
 \clearpage
 \begin{landscape}
 \begin{table}[h!]
@@ -40,51 +38,51 @@ Bảng dưới đây so sánh PostgreSQL với các hệ quản trị cơ sở d
 \textbf{Tiêu chí} & \textbf{PostgreSQL} & \textbf{MySQL} & \textbf{MongoDB} & \textbf{SQLite} \\
 \hline
 \textbf{Mô hình dữ liệu} & 
-Cao: Hỗ trợ xuất sắc cả SQL truyền thống và NoSQL (JSONB) với hiệu suất cao \cite{gigson2025}. & 
-Trung bình: Mạnh về quan hệ, hỗ trợ JSON nhưng hạn chế về khả năng đánh chỉ mục và truy vấn sâu. & 
-Cao: Native JSON (BSON), schema-less, nhưng yếu khi cần xử lý quan hệ phức tạp. & 
+Cao: Hỗ trợ xuất sắc SQL truyền thống và xử lý NoSQL (JSONB) với hiệu suất đánh chỉ mục cao \cite{schonig2024}. & 
+Trung bình: Mạnh về quan hệ, có hỗ trợ JSON nhưng hạn chế về khả năng truy vấn sâu so với PostgreSQL. & 
+Cao: Native JSON (BSON), schema-less, linh hoạt nhưng khó đảm bảo tính toàn vẹn khi dữ liệu có tính quan hệ cao. & 
 Thấp: Phù hợp cho thiết bị di động/nhúng, không hỗ trợ đa người dùng đồng thời. \\
 \hline
 \textbf{Hiệu suất truy vấn} & 
-Cao: Tối ưu cho các truy vấn phân tích phức tạp, JOIN nhiều bảng và xử lý địa lý \cite{uddin2024}. & 
-Trung bình: Rất nhanh cho các truy vấn đọc đơn giản, nhưng giảm tốc khi truy vấn phức tạp. & 
-Trung bình: Nhanh cho thao tác đọc/ghi đơn lẻ, nhưng chậm khi cần tổng hợp dữ liệu (Aggregation). & 
-Thấp: Chỉ phù hợp cho các truy vấn cục bộ đơn giản, không có bộ tối ưu hóa truy vấn lớn. \\
+Cao: Tối ưu cho phân tích phức tạp. Thực nghiệm đo lường cho thấy tốc độ truy vấn SELECT trên tập dữ liệu lớn nhanh gấp ~13 lần MySQL \cite{uddin2024_benchmark}. & 
+Trung bình: Nhanh cho thao tác đọc đơn giản, nhưng giảm tốc độ đáng kể khi thực hiện JOIN phức tạp trên dữ liệu lớn \cite{uddin2024_benchmark}. & 
+Trung bình: Rất nhanh cho thao tác đọc/ghi tài liệu đơn lẻ, nhưng chậm khi cần tổng hợp (Aggregation) phức tạp. & 
+Thấp: Chỉ phù hợp cho các truy vấn cục bộ, không có bộ tối ưu hóa cho các hệ thống tải cao. \\
 \hline
 \textbf{Độ tin cậy (ACID)} & 
-Cao: Tiêu chuẩn vàng về bảo vệ dữ liệu, không mất dữ liệu ngay cả khi sập nguồn \cite{postgres17_docs}. & 
-Trung bình: InnoDB engine hỗ trợ ACID tốt, nhưng các engine khác có thể không đảm bảo. & 
-Trung bình: Hỗ trợ giao dịch đa tài liệu gần đây nhưng vẫn chưa chặt chẽ bằng RDBMS truyền thống. & 
-Thấp: ACID đầy đủ nhưng cơ chế khóa file gây nghẽn khi có nhiều ghi đồng thời. \\
+Cao: Tiêu chuẩn vàng với cơ chế MVCC và WAL cốt lõi, đảm bảo an toàn dữ liệu tuyệt đối \cite{postgres17_manual}. & 
+Trung bình: InnoDB engine hỗ trợ ACID tốt, nhưng kiến trúc xử lý đồng thời không ổn định bằng PostgreSQL khi tải cao \cite{uddin2024_benchmark}. & 
+Trung bình: Đã hỗ trợ giao dịch đa tài liệu nhưng kiến trúc phân tán khiến việc kiểm soát ACID phức tạp hơn. & 
+Thấp: Hỗ trợ ACID nhưng cơ chế khóa file toàn cục (file-level lock) gây nghẽn cổ chai khi ghi đồng thời. \\
 \hline
 \textbf{Bảo mật} & 
-Cao: Hỗ trợ Row-Level Security, mã hóa cột, và xác thực đa yếu tố (SCRAM-SHA-256) \cite{chan2025}. & 
-Trung bình: Có các tính năng bảo mật chuẩn, nhưng cấu hình phân quyền chi tiết phức tạp hơn. & 
-Trung bình: Mô hình bảo mật mặc định thường lỏng lẻo, cần cấu hình kỹ lưỡng. & 
-Thấp: Bảo mật dựa trên quyền truy cập file hệ thống, không có quản lý user nội tại. \\
+Cao: Hỗ trợ Row-Level Security (RLS) và chuẩn xác thực SCRAM-SHA-256 mã hóa mạnh mẽ \cite{chan2025_dba}. & 
+Trung bình: Cấu hình bảo mật tốt nhưng việc phân quyền chi tiết đến từng dòng dữ liệu khó khăn hơn. & 
+Trung bình: Thường yêu cầu cấu hình thủ công kỹ lưỡng do mô hình bảo mật mặc định tập trung vào tính tiện dụng. & 
+Thấp: Phụ thuộc hoàn toàn vào quyền truy cập file của hệ điều hành. \\
 \hline
 \textbf{Khả năng mở rộng} & 
-Cao: Hỗ trợ Partitioning, Replication và Sharding (qua extension) cho dữ liệu lớn \cite{schonig2024}. & 
-Trung bình: Replication rất phổ biến và dễ cấu hình, phù hợp mở rộng tính năng đọc. & 
-Cao: Sharding tự động là tính năng cốt lõi, dễ dàng mở rộng ngang (horizontal scaling). & 
-Thấp: Thiết kế cho đơn máy, không có khả năng mở rộng qua mạng. \\
+Cao: Quản lý dữ liệu lớn xuất sắc thông qua cơ chế Partitioning phân mảnh dọc và tối ưu Indexing \cite{schonig2024}. & 
+Trung bình: Replication dễ thiết lập để mở rộng đọc, nhưng sharding phức tạp hơn so với các hệ NoSQL. & 
+Cao: Thiết kế gốc hướng tới Sharding tự động, mở rộng ngang (horizontal scaling) cực kỳ dễ dàng. & 
+Thấp: Cơ sở dữ liệu cục bộ, hoàn toàn không có khả năng mở rộng phân tán. \\
 \hline
 \end{tabularx}
-\caption{So sánh hiệu năng và tính năng giữa PostgreSQL và các đối thủ}
+\caption{So sánh hiệu năng, kiến trúc và bảo mật giữa PostgreSQL và các hệ quản trị cơ sở dữ liệu khác}
 \end{table}
 \end{landscape}
 
 \subsubsubsection{Redis}
 
 \subsubsubsubsection{Giới thiệu}
-Redis là một hệ quản trị cơ sở dữ liệu key-value trong bộ nhớ (in-memory), nổi bật với tốc độ truy xuất cực nhanh. Trong hệ thống gợi ý hành trình, Redis được sử dụng làm lớp đệm (caching layer) và quản lý phiên (session management). Cụ thể, Redis sẽ lưu trữ các dữ liệu thường xuyên truy cập như hồ sơ người dùng, các bài viết/review nổi bật, kết quả tìm kiếm phổ biến, và token đăng nhập. Điều này giúp giảm tải đáng kể cho PostgreSQL và tăng tốc độ phản hồi của hệ thống, đặc biệt với các chức năng tương tác cộng đồng và tìm kiếm.
+Redis là một hệ quản trị cơ sở dữ liệu key-value lưu trữ trên bộ nhớ chính (In-memory Data Structure Store), được công nhận rộng rãi nhờ tốc độ truy xuất độ trễ thấp (sub-millisecond) \cite{redis_docs}. Trong kiến trúc của hệ thống, Redis đảm nhận vai trò lớp đệm (Caching layer) và quản trị phiên (Session Management). Redis tối ưu hóa việc lưu trữ các dữ liệu có tần suất truy cập cao như kết quả gợi ý hành trình, token xác thực, và metadata người dùng.
 
 \subsubsubsubsection{Ưu điểm}
 \begin{itemize}
-    \item Tăng tốc độ phản hồi: Lưu các dữ liệu hay đọc vào RAM giúp các chức năng như xem review, tìm kiếm điểm đến, xem hồ sơ người dùng phản hồi gần như tức thì.
-    \item Quản lý phiên đăng nhập hiệu quả: Lưu trữ session/JWT token của người dùng trong Redis giúp xác thực các yêu cầu tiếp theo nhanh hơn rất nhiều so với việc truy vấn vào PostgreSQL.
-    \item Hỗ trợ các tác vụ thời gian thực: Redis Pub/Sub là nền tảng lý tưởng để xây dựng hệ thống thông báo theo thời gian thực khi có người tương tác với bài viết hoặc nhận được tin nhắn mới.
-    \item Giảm tải cho cơ sở dữ liệu chính: Giảm số lượng truy vấn đọc đến PostgreSQL, giúp cơ sở dữ liệu này tập trung vào các tác vụ ghi và truy vấn phức tạp, đảm bảo sự ổn định chung.
+    \item Tốc độ truy xuất và Cấu trúc linh hoạt: Hoạt động hoàn toàn trên RAM và hỗ trợ đa dạng cấu trúc dữ liệu phức tạp (Strings, Hashes, Lists, Sets), cho phép truy xuất và thao tác dữ liệu linh hoạt, giảm độ trễ phản hồi của hệ thống \cite{redis_docs}.
+    \item Quản lý phiên tuân thủ bảo mật: Theo chuẩn khuyến nghị của tổ chức quốc tế OWASP, việc sử dụng cơ sở dữ liệu máy chủ tốc độ cao như Redis để quản lý tập trung trạng thái phiên (Server-Side Session Store) giúp giảm thiểu rủi ro bảo mật phía client \cite{owasp_session}.
+    \item Điều phối thời gian thực: Cung cấp tính năng Pub/Sub nguyên bản, tạo nền tảng vững chắc cho các tác vụ thông báo thời gian thực (real-time notifications) và giao tiếp giữa các microservices \cite{redis_pubsub}.
+    \item Độ bền dữ liệu (Persistence): Khác với các hệ thống cache truyền thống, Redis cho phép cấu hình lưu trữ dữ liệu xuống ổ cứng thông qua cơ chế RDB (Snapshot) hoặc AOF (Append-Only File), đảm bảo khả năng phục hồi dữ liệu khi khởi động lại \cite{redis_persistence}.
 \end{itemize}
 
 \subsubsubsubsection{So sánh Redis và các công nghệ khác}
@@ -94,31 +92,32 @@ Redis là một hệ quản trị cơ sở dữ liệu key-value trong bộ nh�
 \centering
 \setlength{\tabcolsep}{4pt}
 \footnotesize
+\renewcommand{\arraystretch}{1.4}
 \begin{tabularx}{\linewidth}{|l|X|X|X|}
 \hline
-\textbf{Tiêu chí} & \textbf{Redis} & \textbf{Memcached} & \textbf{Dùng PostgreSQL làm Cache} \\
+\textbf{Tiêu chí} & \textbf{Redis} & \textbf{Memcached} & \textbf{Sử dụng RDBMS (PostgreSQL) làm Cache} \\
 \hline
-\textbf{Hiệu suất} & 
-Cao: Hoạt động trên RAM, tối ưu cho các tác vụ đọc/ghi nhanh. & 
-Trung bình: Tương tự Redis nhưng đơn giản hơn, chỉ hỗ trợ key-value dạng chuỗi. & 
-Thấp: Phải truy cập từ đĩa, chậm hơn RAM rất nhiều, không phù hợp cho caching. \\
+\textbf{Hiệu suất và Cấu trúc dữ liệu} & 
+Cao: Xử lý In-memory với độ trễ cực thấp. Hỗ trợ đa dạng cấu trúc dữ liệu (Hashes, Sets, Lists) phục vụ nhiều bài toán phức tạp \cite{redis_docs}. & 
+Trung bình: Kiến trúc Slab Allocator tối ưu hóa tốc độ cao nhưng chỉ hỗ trợ kiểu dữ liệu chuỗi đơn giản (Plain Strings/Blobs) \cite{memcached_docs}. & 
+Thấp: Dù có bộ nhớ đệm nội tại, tốc độ vẫn bị giới hạn bởi chi phí phân tích cú pháp SQL và cơ chế I/O đĩa cứng \cite{postgres17_manual}. \\
 \hline
-\textbf{Tính linh hoạt dữ liệu} & 
-Cao: Hỗ trợ nhiều cấu trúc (string, list, hash, set), phù hợp cho session, cache, và hàng đợi (queue). & 
-Thấp: Chỉ hỗ trợ key-value dạng chuỗi, ít linh hoạt hơn. & 
-Cao: Hỗ trợ đầy đủ dữ liệu quan hệ và JSONB. \\
+\textbf{Tính bền vững của dữ liệu (Persistence)} & 
+Cao: Cung cấp tùy chọn cấu hình linh hoạt RDB và AOF để lưu dữ liệu xuống đĩa, tránh mất mát khi sự cố \cite{redis_persistence}. & 
+Thấp: Hoạt động hoàn toàn ở chế độ bốc hơi (Volatile), toàn bộ dữ liệu sẽ bị xóa sạch khi dịch vụ khởi động lại \cite{memcached_docs}. & 
+Rất cao: Thiết kế mặc định với chuẩn ACID nghiêm ngặt, dữ liệu luôn được đảm bảo an toàn \cite{postgres17_manual}. \\
 \hline
-\textbf{Độ bền (Persistence)} & 
-Trung bình: Có thể cấu hình để lưu dữ liệu xuống đĩa (snapshotting, AOF), tránh mất cache khi khởi động lại. & 
-Thấp: Dữ liệu sẽ mất hoàn toàn khi dịch vụ khởi động lại. & 
-Cao: Dữ liệu được lưu trữ an toàn trên đĩa. \\
+\textbf{Bảo mật và Quản lý Session} & 
+Cao: Đáp ứng tốt tiêu chuẩn OWASP cho Server-Side Session Store, hỗ trợ ACL (Access Control List) phân quyền chi tiết \cite{owasp_session}. & 
+Trung bình: Đơn giản, chủ yếu sử dụng SASL để xác thực, thiếu hệ thống phân quyền chi tiết và khó mở rộng mô hình bảo mật. & 
+Cao: Rất an toàn, nhưng dùng để liên tục cập nhật/đọc Session ID sẽ tạo ra tải không cần thiết lên hệ thống lưu trữ chính. \\
 \hline
-\textbf{Tính năng mở rộng} & 
-Cao: Hỗ trợ Pub/Sub cho thông báo, transaction, và có thể dùng làm hàng đợi cho các tác vụ nền. & 
-Thấp: Chỉ tập trung vào caching, không có các tính năng mở rộng. & 
-Thấp: Không có các tính năng chuyên dụng cho caching hoặc Pub/Sub. \\
+\textbf{Khả năng mở rộng và Tính năng phụ} & 
+Cao: Hỗ trợ Redis Cluster (Sharding tự động) và tích hợp sẵn cơ chế Pub/Sub cực kỳ mạnh mẽ cho thông báo thời gian thực \cite{redis_pubsub}. & 
+Trung bình: Có thể mở rộng ngang đơn giản, nhưng thiếu hoàn toàn các tính năng điều phối thông điệp thời gian thực (Pub/Sub). & 
+Trung bình: Không được thiết kế cho các tác vụ Pub/Sub nhẹ hoặc vai trò Message Broker tần suất cao. \\
 \hline
 \end{tabularx}
-\caption{So sánh Redis và các công nghệ khác}
+\caption{So sánh công nghệ lưu trữ đệm và quản lý phiên giữa Redis, Memcached và PostgreSQL}
 \end{table}
 \end{landscape}

@@ -29,7 +29,7 @@ Thời gian phát triển & Rất dài (tháng/năm): Bao gồm thời gian thu 
 
 Yêu cầu dữ liệu & Cực kỳ lớn: Cần một tập dữ liệu (dataset) khổng lồ, được gán nhãn chất lượng cao về du lịch Việt Nam. & Không yêu cầu: Tận dụng các Mô hình Nền tảng (FMs) đã được huấn luyện trước trên dữ liệu toàn cầu. \\ \hline
 
-Giải quyết đa phương thức & Cực kỳ phức tạp: Đòi hỏi huấn luyện các mô hình riêng biệt (text, image, video) và xây dựng cơ chế "fusion" (kết hợp) phức tạp. & Có sẵn: Các mô hình AaaS hàng đầu (như Gemini) hỗ trợ đa phương thức (văn bản, hình ảnh, video). \\ \hline
+Giải quyết đa phương thức & Cực kỳ phức tạp: Đòi hỏi huấn luyện các mô hình riêng biệt (text, image, video) và xây dựng cơ chế "fusion"\ (kết hợp) phức tạp. & Có sẵn: Các mô hình AaaS hàng đầu (như Gemini) hỗ trợ đa phương thức (văn bản, hình ảnh, video). \\ \hline
 
 \end{longtable}
 }
@@ -49,7 +49,7 @@ Với hướng tiếp cận AaaS, mô hình AI được chọn phải giải quy
 
 Việc lựa chọn mô hình AI cho TravelEZ được quyết định bởi đặc thù của dữ liệu đầu vào (Input Data) mà hệ thống phải xử lý và yêu cầu về tính đơn giản của kiến trúc (Architectural Simplicity). Dưới đây là 4 thách thức kỹ thuật cốt lõi xác định tiêu chí chọn mô hình:
 
-\textbf{a. Thách thức về dung lượng ngữ cảnh:} Đây là rào cản kỹ thuật lớn nhất đối với module 1 (gợi ý lộ trình). Để AI có thể sắp xếp một lịch trình tối ưu, nó không thể hoạt động rời rạc mà phải "nhìn thấy" toàn bộ dữ liệu ứng viên trong một lần suy luận.
+\textbf{a. Thách thức về dung lượng ngữ cảnh:} Đây là rào cản kỹ thuật lớn nhất đối với module 1 (gợi ý lộ trình). Để AI có thể sắp xếp một lịch trình tối ưu, nó không thể hoạt động rời rạc mà phải "nhìn thấy"\ toàn bộ dữ liệu ứng viên trong một lần suy luận.
 
 \begin{itemize}
     \item Phân tích dữ liệu đầu vào (Input Data):
@@ -59,19 +59,17 @@ Việc lựa chọn mô hình AI cho TravelEZ được quyết định bởi đ�
         \item Dữ liệu người dùng (User Input): sở thích, lịch sử, yêu cầu đặc biệt $\approx$ 2.000 tokens.
         \item System Prompt \& Format instruction: $\approx$ 3.000 tokens.
     \end{itemize}
-
     \item Bài toán tính toán:
     \begin{equation}
     \text{Tổng Token} = (500 \times 700) + 2.000 + 3.000 \approx 355.000 \text{ (tokens)}
     \end{equation}
-
     \item Kết luận tiêu chí 1: Dung lượng này đã vượt giới hạn của các mô hình tiêu chuẩn (thường là 128k tokens). Để đảm bảo hệ thống hoạt động ổn định khi dữ liệu tăng trưởng (ví dụ: lên 600-800 POIs) và tránh lỗi cắt cụt dữ liệu (truncation error), mô hình bắt buộc phải có Context Window lớn hơn 500.000 tokens.
 \end{itemize}
 
-\textbf{b. Thách thức về xử lý đa phương thức:} Đối với Module 5 (Kiểm duyệt nội dung), hệ thống yêu cầu phát hiện các vi phạm (bạo lực, nhạy cảm) trong video do người dùng tải lên. Thách thức nằm ở kiến trúc tích hợp chứ không chỉ là độ thông minh của AI.
+\textbf{b. Thách thức về xử lý đa phương thức:} Đối với Module 5 (Kiểm duyệt nội dung), hệ thống yêu cầu phát hiện các vi phạm (bạo lực, nhạy cảm) trong hình ảnh, video do người dùng tải lên. Thách thức nằm ở kiến trúc tích hợp chứ không chỉ là độ thông minh của AI.
 \begin{itemize}
     \item Vấn đề kiến trúc: Nếu chọn mô hình chỉ hỗ trợ xử lý ảnh (Image-only Model), đội dự án buộc phải xây dựng một quy trình Backend phức tạp: Tải video $\rightarrow$ Dùng thư viện (như FFmpeg) cắt video thành hàng trăm ảnh tĩnh (frames) $\rightarrow$ Gửi từng ảnh lên AI $\rightarrow$ Tổng hợp kết quả. Cách làm này gây tốn tài nguyên server, tăng độ trễ và rủi ro lỗi phần mềm.
-    \item Kết luận tiêu chí 2: Để đơn giản hóa kiến trúc và giảm tải cho Backend, mô hình được chọn bắt buộc phải hỗ trợ Native Video Input (cho phép gửi trực tiếp file video qua API để mô hình tự xử lý nội bộ). Điều này giúp quy trình kiểm duyệt chỉ còn là 1 API call duy nhất.
+    \item Kết luận tiêu chí 2: Để đơn giản hóa kiến trúc và giảm tải cho Backend, mô hình được chọn sẽ chỉ hỗ trợ việc kiểm duyệt nội dung text. Điều này giúp quy trình kiểm duyệt và xử lý nội dung vi phạm nhanh và chính xác hơn.
 \end{itemize}
 
 \textbf{c. Thách thức về tổng hợp dữ liệu lớn:} Module 6 (Khai phá Xu hướng) yêu cầu hệ thống đọc và tổng hợp thông tin từ hàng ngàn bài review của người dùng (UGC) để đưa ra báo cáo xu hướng.
@@ -129,7 +127,7 @@ Chi phí input (mỗi 1000 tokens) & Ưu tiên chi phí hợp lý & \$0.00125 & 
 
     \item Đánh giá Claude 4.5 Sonnet: Mô hình không đáp ứng tiêu chí Context Window (yêu cầu tối thiểu 500.000 tokens). Bên cạnh đó, mô hình cũng không hỗ trợ Native Video (Tiêu chí số 2). Việc triển khai sẽ cần bổ sung hạ tầng xử lý video riêng, làm tăng độ phức tạp của kiến trúc tổng thể. Bên cạnh đó, đây là phương án có chi phí cao nhất trong danh sách khảo sát. Do đó, phương án này cũng không tối ưu về mặt tích hợp hệ thống.
 
-    \item Đánh giá Gemini 2.5 (Pro \& Flash): Hệ sinh thái Gemini 2.5 được lựa chọn vì giải quyết được bài toán cân bằng giữa "Sức mạnh" và "Ngân sách":
+    \item Đánh giá Gemini 2.5 (Pro \& Flash): Hệ sinh thái Gemini 2.5 được lựa chọn vì giải quyết được bài toán cân bằng giữa "Sức mạnh"\ và "Ngân sách":
     \begin{itemize}
         \item Về kỹ thuật: Context Window lớn (>1 Triệu tokens) và khả năng xử lý Native Video đáp ứng trọn vẹn yêu cầu nghiệp vụ mà không cần chia nhỏ dữ liệu hay cài đặt thêm tool xử lý ảnh.
         \item Về chi phí: Phiên bản Gemini 2.5 Flash có mức giá cực thấp, chỉ \$0.00015/1k tokens. Mức giá này thấp hơn khoảng 8 lần so với GPT-5 (\$0.00125) và 20 lần so với Claude 4.5 Sonnet (\$0.003).

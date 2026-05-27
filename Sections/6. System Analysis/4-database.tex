@@ -5,7 +5,7 @@
 \subsubsubsubsection{Giới thiệu}
 PostgreSQL là hệ quản trị cơ sở dữ liệu quan hệ đối tượng (ORDBMS) mã nguồn mở tiên tiến nhất hiện nay, nổi bật với khả năng xử lý linh hoạt cả dữ liệu có cấu trúc (SQL) và bán cấu trúc (JSONB) trong cùng một hệ thống \cite{schonig2024}. 
 
-Trong hệ thống gợi ý hành trình du lịch thông minh, PostgreSQL đóng vai trò là "kho chứa sự thật" (single source of truth). Nó không chỉ lưu trữ các thông tin cốt lõi như hồ sơ người dùng, lịch sử tương tác, và nội dung cộng đồng, mà còn đảm bảo tính toàn vẹn của dữ liệu giao dịch phức tạp thông qua kiến trúc Multi-Version Concurrency Control (MVCC) và Write-Ahead Logging (WAL) \cite{postgres17_manual}. Đặc biệt, với các bản cập nhật mới nhất, hệ thống tận dụng tính năng UUIDv7 để tối ưu hóa hiệu suất đánh chỉ mục theo thời gian và cơ chế I/O không đồng bộ (Asynchronous I/O) để tăng tốc độ truy xuất dữ liệu lớn \cite{postgres18_docs}.
+Trong hệ thống gợi ý hành trình du lịch thông minh, PostgreSQL đóng vai trò là "kho chứa sự thật"\ (single source of truth). Nó không chỉ lưu trữ các thông tin cốt lõi như hồ sơ người dùng, lịch sử tương tác, và nội dung cộng đồng, mà còn đảm bảo tính toàn vẹn của dữ liệu giao dịch phức tạp thông qua kiến trúc Multi-Version Concurrency Control (MVCC) và Write-Ahead Logging (WAL) \cite{postgres17_manual}. Đặc biệt, với các bản cập nhật mới nhất, hệ thống tận dụng tính năng UUIDv7 để tối ưu hóa hiệu suất đánh chỉ mục theo thời gian và cơ chế I/O không đồng bộ (Asynchronous I/O) để tăng tốc độ truy xuất dữ liệu lớn \cite{postgres18_docs}.
 
 \subsubsubsubsection{Ưu điểm kỹ thuật}
 \begin{itemize}

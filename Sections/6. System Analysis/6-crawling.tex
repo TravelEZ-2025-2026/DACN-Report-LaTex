@@ -5,7 +5,7 @@ Apify là một nền tảng thu thập dữ liệu web và tự động hóa ho
 Trong hệ sinh thái các Actor của Apify, chúng tôi sử dụng Google Maps Scraper - một công cụ chuyên biệt được phát triển để trích xuất dữ liệu từ Google Maps, đã được Apify cam kết chịu trách nhiệm.
 \begin{itemize}
     \item Cơ chế hoạt động: Công cụ này không sử dụng các API trả phí giới hạn của Google. Thay vào đó, nó sử dụng công nghệ giả lập trình duyệt. Nó khởi tạo một trình duyệt ảo, truy cập trực tiếp vào giao diện người dùng của Google Maps, tải nội dung và trích xuất dữ liệu từ mã nguồn trang web.
-    \item Khả năng trích xuất:Công cụ có khả năng lấy được toàn bộ thông tin hiển thị công khai của địa điểm bao gồm: Tên doanh nghiệp, địa chỉ, tọa độ địa lý, số điện thoại, website, giờ mở cửa, và đặc biệt là dữ liệu chi tiết về đánh giá và điểm số xếp hạng.
+    \item Khả năng trích xuất: Công cụ có khả năng lấy được toàn bộ thông tin hiển thị công khai của địa điểm bao gồm: Tên doanh nghiệp, địa chỉ, tọa độ địa lý, số điện thoại, website, giờ mở cửa, và đặc biệt là dữ liệu chi tiết về đánh giá và điểm số xếp hạng.
     \item Tính xác thực: Vì hoạt động dựa trên việc đọc trực tiếp giao diện hiển thị trên trình duyệt, dữ liệu thu được đảm bảo phản ánh chính xác thông tin hiện có trên Google Maps tại thời điểm thu thập.
 \end{itemize}
 \subsubsubsubsection{So sánh Apify platform và các lựa chọn khác}
@@ -18,7 +18,7 @@ Trong hệ sinh thái các Actor của Apify, chúng tôi sử dụng Google Map
 \footnotesize
 \begin{tabularx}{\linewidth}{|l|X|X|}
 \hline
-\textbf{Tiêu chí} & \textbf{Tự xây dụng công cụ crawling} & \textbf{Sử dụng Apify Platform (Google Maps Scraper)} \\
+\textbf{Tiêu chí} & \textbf{Tự xây dựng công cụ crawling} & \textbf{Sử dụng Apify Platform (Google Maps Scraper)} \\
 \hline
 \textbf{Cơ chế chống chặn} & \textbf{Thấp.} Cần tự tích hợp Proxy xoay vòng, tự xử lý Captcha và Fingerprinting trình duyệt. & \textbf{Cao.} Tự động tích hợp sẵn Proxy dân cư và cơ chế giả lập hành vi người dùng để vượt qua tường lửa của Google. \\
 \hline
@@ -28,7 +28,7 @@ Trong hệ sinh thái các Actor của Apify, chúng tôi sử dụng Google Map
 \hline
 \textbf{Chất lượng dữ liệu} & \textbf{Rủi ro.} Code tự viết có thể gặp lỗi logic dẫn đến thiếu trường dữ liệu hoặc parse sai thông tin nếu không test kỹ.& \textbf{Chuẩn hóa.} Các bộ scraper uy tín trên Apify đã được kiểm thử trên diện rộng, dữ liệu đầu ra được chuẩn hóa giảm thiểu lỗi logic. \\
 \hline
-\textbf{Cam kết về tính toàn vẹn dữ liệu} & \textbf{Chủ quan.} Phụ thuộc hoàn toàn vào người viết code. Không có cơ chế kiểm toán hay bên thứ ba xác nhận quy trình xử lý dữ liệu đúng chuẩn. Dễ phát sinh nghi vấn về việc sửa đổi dữ liệu thủ công. & \textbf{Khách quan và Minh bạch.} Apify hoạt động dưới vai trò Data Processor tuân thủ \textbf{GDPR} và \textbf{DPA}. Có cam kết pháp lý không can thiệp nội dung dữ liệu. Quy trình có log rõ ràng để kiểm chứng nguồn gốc. \\
+\textbf{Cam kết về tính toàn vẹn dữ liệu} & \textbf{Chủ quan.} Phụ thuộc hoàn toàn vào người viết code. Không có cơ chế kiểm toán hay bên thứ ba xác nhận quy trình xử lý dữ liệu đúng chuẩn. Dễ phát sinh nghi vấn về việc sửa đổi dữ liệu thủ công. & \textbf{Khách quan và minh bạch.} Apify hoạt động dưới vai trò Data Processor tuân thủ \textbf{GDPR} và \textbf{DPA}. Có cam kết pháp lý không can thiệp nội dung dữ liệu. Quy trình có log rõ ràng để kiểm chứng nguồn gốc. \\
 \hline
 \end{tabularx}
 \caption{So sánh Apify platform và các lựa chọn khác}

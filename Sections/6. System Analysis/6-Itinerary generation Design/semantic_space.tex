@@ -3,11 +3,11 @@
 \textbf{Cấu trúc hóa dữ liệu ngữ nghĩa địa điểm:}
 Thay vì sử dụng các mô tả thô từ cơ sở dữ liệu, hệ thống ứng dụng mô hình ngôn ngữ lớn (LLM) dạng instruct để đóng vai trò trích xuất dữ liệu. LLM đọc các đánh giá thực tế của người dùng và tổng hợp thông tin theo năm trường ngữ nghĩa có cấu trúc:
 \begin{itemize}
-    \item Category \& Entity (Phân loại \& thực thể): Định danh rõ loại hình (Ví dụ: nhà hàng, quán cafe, điểm tham quan).
-    \item Vibe (Không khí): Các đặc tính như yên tĩnh, lãng mạn, nhộn nhịp, v.v.
-    \item Scenario (Ngữ cảnh sử dụng): Các tình huống như hẹn hò, làm việc, họp mặt gia đình, v.v.
-    \item Audience (Đối tượng phù hợp): Sinh viên, cặp đôi, gia đình có trẻ nhỏ, v.v.
-    \item Highlights \& Amenities (Điểm nổi bật \& tiện ích): Bãi đỗ xe, nhạc sống, tầm nhìn hoàng hôn, v.v.
+    \item Category \& Entity (Phân loại \& thực thể): Định danh rõ loại hình (Ví dụ: nhà hàng, quán cafe, điểm tham quan...).
+    \item Vibe (Không khí): Các đặc tính như yên tĩnh, lãng mạn, nhộn nhịp...
+    \item Scenario (Ngữ cảnh sử dụng): Các tình huống như hẹn hò, làm việc, họp mặt gia đình...
+    \item Audience (Đối tượng phù hợp): Sinh viên, cặp đôi, gia đình có trẻ nhỏ...
+    \item Highlights \& Amenities (Điểm nổi bật \& tiện ích): Bãi đỗ xe, nhạc sống, tầm nhìn hoàng hôn...
 \end{itemize}
 Năm trường này được ghép nối thành một văn bản ngữ nghĩa duy nhất (\textit{semantic\_text}) cho mỗi điểm đến (POI). Cách biểu diễn này đảm bảo rằng văn bản đại diện chứa các từ khóa mô tả đặc trưng mà người dùng thường sử dụng khi tìm kiếm địa điểm du lịch. \textit{semantic\_text} sau đó được truyền qua mô hình embedding để tạo vector POI. Các vector này được lưu trữ trong PostgreSQL với phần mở rộng \texttt{pgvector}.
 

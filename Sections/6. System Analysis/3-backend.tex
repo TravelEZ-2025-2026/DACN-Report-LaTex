@@ -2,7 +2,7 @@
 \subsubsubsection{Spring Boot}
 
 \subsubsubsubsection{Giới thiệu}
-Spring Boot là một framework Java mã nguồn mở, được phát triển từ hệ sinh thái Spring, thiết kế để đơn giản hóa quá trình phát triển ứng dụng thông qua cơ chế "Convention over Configuration" (Quy ước hơn cấu hình) \cite{walls-2022}. Nó cung cấp các tính năng tự động cấu hình (auto-configuration), tích hợp sẵn server (embedded server), và quản lý phụ thuộc tối ưu, giúp giảm thiểu các thiết lập rườm rà ban đầu \cite{spring-boot-ref}.
+Spring Boot là một framework Java mã nguồn mở, được phát triển từ hệ sinh thái Spring, thiết kế để đơn giản hóa quá trình phát triển ứng dụng thông qua cơ chế "Convention over Configuration"\ (Quy ước hơn cấu hình) \cite{walls-2022}. Nó cung cấp các tính năng tự động cấu hình (auto-configuration), tích hợp sẵn server (embedded server), và quản lý phụ thuộc tối ưu, giúp giảm thiểu các thiết lập rườm rà ban đầu \cite{spring-boot-ref}.
 Trong ngữ cảnh của hệ thống gợi ý hành trình du lịch thông minh, Spring Boot đóng vai trò là xương sống (backbone) của phía server. Nó chịu trách nhiệm xử lý các luồng nghiệp vụ phức tạp bao gồm: tạo gợi ý hành trình dựa trên AI, quản lý định danh người dùng, tìm kiếm điểm đến và kiểm duyệt nội dung cộng đồng \cite{musib-2020}. Nền tảng này đảm bảo khả năng mở rộng (scalability) và tính toàn vẹn dữ liệu khi tích hợp với các nguồn thông tin bên ngoài \cite{webb-2020}.
 \subsubsubsubsection{Ưu điểm}
 \begin{itemize}
@@ -10,7 +10,7 @@ Trong ngữ cảnh của hệ thống gợi ý hành trình du lịch thông min
     Spring Boot hỗ trợ phát triển các API REST nhanh chóng thông qua kiến trúc Spring MVC, giúp xử lý hiệu quả các yêu cầu phức tạp như gợi ý hành trình du lịch và cập nhật chi phí tức thời \cite{walls-2022}. Việc tách biệt rõ ràng giữa các lớp xử lý giúp mã nguồn dễ bảo trì và mở rộng.
     
     \item Tích hợp dữ liệu dễ dàng: 
-    Các module chuyên biệt như Spring Batch và Spring Integration cung cấp khả năng thu thập và xử lý dữ liệu mạnh mẽ từ các nguồn bên ngoài (review, thời tiết, sự kiện). Hệ thống hỗ trợ cả xử lý theo lô (batch) và theo luồng (streaming), đảm bảo dữ liệu luôn được chuẩn hóa và cập nhật ngữ cảnh thời gian thực \cite{spring-batch-ref}.
+    Các module chuyên biệt như Spring Batch và Spring Integration cung cấp khả năng thu thập và xử lý dữ liệu mạnh mẽ từ các nguồn bên ngoài (review, thời tiết, sự kiện...). Hệ thống hỗ trợ cả xử lý theo lô (batch) và theo luồng (streaming), đảm bảo dữ liệu luôn được chuẩn hóa và cập nhật ngữ cảnh thời gian thực \cite{spring-batch-ref}.
     
     \item Bảo mật mạnh mẽ: 
     Module Spring Security tích hợp sẵn giúp triển khai xác thực đa lớp (OAuth2/JWT) và phân quyền chi tiết. Điều này đóng vai trò then chốt trong việc bảo vệ dữ liệu nhạy cảm của người dùng như hồ sơ sở thích du lịch và lịch sử hội thoại \cite{spring-security-ref}.

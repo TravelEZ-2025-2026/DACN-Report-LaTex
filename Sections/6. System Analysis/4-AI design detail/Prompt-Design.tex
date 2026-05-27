@@ -62,7 +62,7 @@ Phần này trình bày thiết kế (design) cho các prompt, áp dụng kiến
     \begin{itemize}
         \item \textbf{Block 1: Định danh \& Chính sách}
         \begin{itemize}
-            \item \textit{Vai trò:} Định nghĩa AI là "AI Trust \& Safety Officer" (Cán bộ An toàn \& Tin cậy).
+            \item \textit{Vai trò:} Định nghĩa AI là "AI Trust \& Safety Officer"\ (Cán bộ An toàn \& Tin cậy).
             \item \textit{Định nghĩa Chính sách:} Liệt kê rõ ràng các danh mục cấm như:
             \begin{itemize}
                 \item Nội dung tình dục/Khỏa thân.
@@ -96,7 +96,7 @@ Phần này trình bày thiết kế (design) cho các prompt, áp dụng kiến
 \begin{itemize} 
     \item \textbf{Lựa chọn Model: Gemini 2.5 Flash.} Đối với tác vụ đọc hiểu và tổng hợp thông tin từ văn bản (Text Summarization \& Sentiment Analysis), nhóm ưu tiên sử dụng Gemini 2.5 Flash vì:
     \begin{enumerate}[label=\arabic*., leftmargin=*]
-        \item \textbf{Tối ưu Chi phí cho Dữ liệu Lớn:} Để phân tích xu hướng, hệ thống cần xử lý hàng nghìn bài đánh giá (Reviews). Với mức giá input cực thấp (\$0.00015/1k tokens), Flash là lựa chọn kinh tế nhất để "đọc" khối lượng văn bản khổng lồ này mà không làm bùng nổ ngân sách.
+        \item \textbf{Tối ưu Chi phí cho Dữ liệu Lớn:} Để phân tích xu hướng, hệ thống cần xử lý hàng nghìn bài đánh giá (Reviews). Với mức giá input cực thấp (\$0.00015/1k tokens), Flash là lựa chọn kinh tế nhất để "đọc"\ khối lượng văn bản khổng lồ này mà không làm bùng nổ ngân sách.
         
         \item \textbf{Context Window Lớn:} Khả năng xử lý cửa sổ ngữ cảnh hơn 1 triệu tokens cho phép nạp hàng trăm bài review vào một lần gọi (Prompt) duy nhất, giúp AI có cái nhìn tổng quan toàn diện thay vì phân tích rời rạc.
     \end{enumerate}
@@ -111,7 +111,7 @@ Phần này trình bày thiết kế (design) cho các prompt, áp dụng kiến
     \begin{itemize}
         \item \textbf{Block 1: Định danh}
         \begin{itemize}
-            \item \textit{Vai trò:} Định nghĩa AI là "Chuyên gia Phân tích Dữ liệu Du lịch" (Travel Data Analyst).
+            \item \textit{Vai trò:} Định nghĩa AI là "Chuyên gia Phân tích Dữ liệu Du lịch"\ (Travel Data Analyst).
             \item \textit{Mục tiêu:} Phát hiện các mẫu hình lặp lại trong ý kiến khách hàng và xác định cảm xúc chủ đạo.
         \end{itemize}
         
@@ -140,10 +140,10 @@ Phần này trình bày thiết kế (design) cho các prompt, áp dụng kiến
     \begin{enumerate}[label=\arabic*., leftmargin=*]
         \item \textbf{Tốc độ Phản hồi:} Tính năng này thường được người dùng kích hoạt khi đang xem lịch trình (On-demand). Người dùng cần nhận được gợi ý sửa đổi ngay lập tức, không thể chờ đợi mô hình Pro suy luận chậm.
         
-        \item \textbf{Khả năng So sánh:} Flash đủ mạnh để thực hiện tác vụ so sánh đối chiếu (Mapping \& Comparison) giữa "Lịch trình hiện tại" và "Dữ liệu xu hướng" mà không cần đến khả năng sáng tạo cao cấp của bản Pro.
+        \item \textbf{Khả năng So sánh:} Flash đủ mạnh để thực hiện tác vụ so sánh đối chiếu (Mapping \& Comparison) giữa "Lịch trình hiện tại"\ và "Dữ liệu xu hướng"\ mà không cần đến khả năng sáng tạo cao cấp của bản Pro.
     \end{enumerate}
 
-    \item \textbf{Cơ chế quản lý dữ liệu.} Đây là module tổng hợp thông tin, backend sẽ "tiêm" (inject) đồng thời 3 nguồn dữ liệu vào ngữ cảnh để AI đối chiếu:
+    \item \textbf{Cơ chế quản lý dữ liệu.} Đây là module tổng hợp thông tin, backend sẽ "tiêm"\ (inject) đồng thời 3 nguồn dữ liệu vào ngữ cảnh để AI đối chiếu:
     \begin{itemize}
         \item \textbf{Source 1 - Lịch trình gốc:} JSON lịch trình hiện tại.
         \item \textbf{Source 2 - Dữ liệu Thị trường:} Kết quả JSON từ Module 6. \textit{Ví dụ: Module 6 báo "Quán A đang bị chê phục vụ tệ", AI sẽ dùng thông tin này để cảnh báo.}
@@ -154,7 +154,7 @@ Phần này trình bày thiết kế (design) cho các prompt, áp dụng kiến
     \begin{itemize}
         \item \textbf{Block 1: Định danh \& Mục tiêu}
         \begin{itemize}
-            \item \textit{Vai trò:} Định nghĩa AI là "Chuyên gia Tối ưu hóa Trải nghiệm Du lịch" (Experience Optimizer).
+            \item \textit{Vai trò:} Định nghĩa AI là "Chuyên gia Tối ưu hóa Trải nghiệm Du lịch"\ (Experience Optimizer).
             \item \textit{Nhiệm vụ:} Tìm ra các rủi ro (Risk) trong lịch trình và đề xuất phương án thay thế tốt hơn, nhưng \textbf{không được thay đổi cấu trúc cốt lõi} nếu không cần thiết.
         \end{itemize}
         

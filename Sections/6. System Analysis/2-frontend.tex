@@ -14,8 +14,8 @@ Trong kiến trúc của hệ thống gợi ý hành trình du lịch thông min
     \item Kiến trúc định tuyến linh hoạt (Routing): 
     Cơ chế File-based Routing của Next.js cho phép xây dựng cấu trúc điều hướng trực quan, dễ dàng mở rộng các trang chức năng như chi tiết hành trình, bảng xếp hạng điểm đến, hoặc trang cá nhân người dùng mà không cần cấu hình phức tạp \cite{hansen2020}.
     
-    \item Tương tác dữ liệu và Hệ sinh thái: 
-    Sự kết hợp giữa API Routes và các thư viện quản lý trạng thái server (như React Query/SWR) cho phép đồng bộ hóa dữ liệu hai chiều theo thời gian thực (ví dụ: cập nhật chi phí chuyến đi tức thời) \cite{thakur2023}. Hệ sinh thái phong phú hỗ trợ tích hợp nhanh các module như React-Leaflet (bản đồ) hay React-Markdown (soạn thảo) \cite{waqar2021}.
+    \item Tương tác dữ liệu và hệ sinh thái: 
+    Sự kết hợp giữa API Routes và các thư viện quản lý trạng thái server (như React Query/SWR) cho phép đồng bộ hóa dữ liệu hai chiều theo thời gian thực \cite{thakur2023}. Hệ sinh thái phong phú hỗ trợ tích hợp nhanh các module như React-Leaflet (bản đồ) hay React-Markdown (soạn thảo) \cite{waqar2021}.
     
     \item Tối ưu hóa công cụ tìm kiếm (SEO): 
     Khả năng render HTML từ phía server (SSR) giải quyết triệt để hạn chế về SEO của các ứng dụng Client-side truyền thống, giúp nội dung chia sẻ từ cộng đồng dễ dàng được lập chỉ mục và tiếp cận người dùng tự nhiên \cite{kshirsagar2022}.
@@ -91,10 +91,10 @@ Trong hệ thống TravelEZ, ShadCN/UI được sử dụng làm nền tảng c�
     \item Khả năng tiếp cận tiêu chuẩn (Accessibility): 
     Được xây dựng trên các primitives của Radix UI, mọi thành phần giao diện đều tuân thủ nghiêm ngặt chuẩn WAI-ARIA. Điều này đảm bảo hệ thống thân thiện với mọi đối tượng người dùng, bao gồm cả người khuyết tật sử dụng trình đọc màn hình (screen readers) \cite{radix_accessibility}.
 
-    \item Hiệu suất và Tối ưu hóa Bundle: 
-    Phương pháp "copy-paste" giúp loại bỏ hoàn toàn mã thừa (dead code). Ứng dụng chỉ chứa mã nguồn của những component thực sự được sử dụng, giúp giảm đáng kể kích thước bundle cuối cùng so với việc import toàn bộ một thư viện UI đồ sộ \cite{kitemetric2025}.
+    \item Hiệu suất và tối ưu hóa Bundle: 
+    Phương pháp "copy-paste"\ giúp loại bỏ hoàn toàn mã thừa (dead code). Ứng dụng chỉ chứa mã nguồn của những component thực sự được sử dụng, giúp giảm đáng kể kích thước bundle cuối cùng so với việc import toàn bộ một thư viện UI đồ sộ \cite{kitemetric2025}.
 
-    \item Tính nhất quán và Bảo trì: 
+    \item Tính nhất quán và bảo trì: 
     Việc sử dụng Tailwind CSS kết hợp với biến CSS (CSS variables) giúp duy trì sự đồng bộ về thiết kế (design tokens) trên toàn hệ thống. Hơn nữa, việc quản lý component trực tiếp trong codebase giúp quy trình bảo trì và nâng cấp trở nên minh bạch và dễ kiểm soát \cite{shadcn_docs}.
     
     \item Tăng tốc độ phát triển: 
@@ -102,7 +102,7 @@ Trong hệ thống TravelEZ, ShadCN/UI được sử dụng làm nền tảng c�
 \end{itemize}
 
 \subsubsubsubsection{So sánh ShadCN/UI và các thư viện UI khác}
-Bảng so sánh dưới đây phân tích sự khác biệt giữa ShadCN/UI và các đối thủ cạnh tranh chính như Material-UI (MUI), Ant Design dựa trên các tiêu chí về khả năng tùy biến và hiệu suất \cite{kitemetric2025, ui_comparison_2025}.
+Bảng so sánh dưới đây phân tích sự khác biệt giữa ShadCN/UI và các đối thủ cạnh tranh chính như Material-UI (MUI), Ant Design, Chakra UI dựa trên các tiêu chí về khả năng tùy biến và hiệu suất \cite{kitemetric2025, ui_comparison_2025}.
 
 \clearpage
 \begin{landscape}
@@ -124,10 +124,10 @@ Dependency: Cài đặt qua NPM, phụ thuộc vào Emotion engine. \\
 \textbf{Khả năng tùy biến} & 
 Cao: Chỉnh sửa trực tiếp logic và style tại mã nguồn gốc \cite{fabrizio2025}. & 
 Cao: Tùy biến qua props/theme, nhưng bị giới hạn bởi kiến trúc nội tại. & 
-Trung bình: Khó thoát khỏi "phong cách Ant Design" mặc định, override CSS phức tạp. & 
+Trung bình: Khó thoát khỏi "phong cách Ant Design"\ mặc định, override CSS phức tạp. & 
 Cao: Dễ dàng qua style props nhưng hiệu suất giảm khi style phức tạp. \\
 \hline
-\textbf{Công nghệ Styling} & 
+\textbf{Công nghệ styling} & 
 Tailwind CSS: Utility-first, tối ưu cho Tailwind v4.0 mới nhất \cite{tailwind_v4}. & 
 CSS-in-JS: Emotion/Styled-components, gây tải runtime lớn hơn. & 
 Less/CSS-in-JS: Hệ thống style cũ, tích hợp với stack hiện đại khó khăn hơn. & 

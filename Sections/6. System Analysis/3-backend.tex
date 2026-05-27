@@ -33,19 +33,49 @@ Trong ngữ cảnh của hệ thống gợi ý hành trình du lịch thông min
 \hline
 \textbf{Tiêu chí} & \textbf{Spring Boot} & \textbf{Node.js (Express)} & \textbf{Django (Python)} & \textbf{Ruby on Rails} & \textbf{Flask (Python)} \\
 \hline
-\textbf{Xử lý logic nghiệp vụ} & Cao: REST API dễ cấu hình, Spring MVC mạnh mẽ, hỗ trợ gợi ý hành trình và cập nhật chi phí tức thời. & Cao: Express nhẹ, nhanh, phù hợp cho API gợi ý và cộng đồng. Nhưng cần thêm thư viện cho logic phức tạp. & Cao: Django REST Framework mạnh, hỗ trợ gợi ý và quản lý nội dung. Nhưng cần cấu hình thêm cho AI. & Cao: Convention-over-configuration, nhanh cho cộng đồng, nhưng chậm hơn Spring Boot cho API phức tạp. & Trung bình: Nhẹ, linh hoạt, nhưng cần xây dựng logic phức tạp từ đầu, không tối ưu như Spring Boot. \\
+\textbf{Xử lý logic nghiệp vụ} & 
+Cao: REST API dễ cấu hình, Spring MVC mạnh mẽ, hỗ trợ gợi ý hành trình và cập nhật chi phí tức thời \cite{walls-2022}. & 
+Cao: Express nhẹ, nhanh \cite{express-docs}, phù hợp cho API gợi ý. Nhưng cần cài thêm thư viện cho logic phức tạp. & 
+Cao: Django REST Framework mạnh mẽ \cite{django-drf}, hỗ trợ tốt việc quản lý nội dung. Cần cấu hình thêm cho AI. & 
+Cao: Convention-over-configuration \cite{rails-guides}, phát triển nhanh nhưng chậm hơn Spring Boot ở các API phức tạp. & 
+Trung bình: Vi khung (microframework) nhẹ, linh hoạt \cite{flask-docs}, nhưng cần tự xây dựng logic cấu trúc từ đầu. \\
 \hline
-\textbf{Tích hợp dữ liệu} & Cao: Spring Batch (batch) và Spring Integration (streaming) hỗ trợ ETL, chuẩn hóa dữ liệu từ nguồn ngoài (review, thời tiết). & Trung bình: Cần thư viện bên ngoài (như Axios, node-cron) để xử lý ETL, phức tạp hơn Spring Boot. & Cao: Django ORM và Celery hỗ trợ ETL, nhưng streaming kém hơn Spring Integration. & Trung bình: Active Record tốt cho dữ liệu, nhưng streaming và ETL cần thêm gem, không tích hợp sẵn. & Trung bình: Cần thư viện như Flask-SQLAlchemy, Celery, phức tạp hơn Spring Batch cho ETL. \\
+\textbf{Tích hợp dữ liệu} & 
+Cao: Spring Batch và Spring Integration hỗ trợ mạnh mẽ ETL (batch \& streaming) \cite{spring-batch-ref}. & 
+Trung bình: Cần sử dụng các thư viện bên ngoài (như Axios, node-cron) để xử lý ETL, thiếu module chuẩn hóa tích hợp sẵn. & 
+Cao: Hỗ trợ xử lý nền tốt thông qua Celery \cite{celery-docs} và Django ORM, nhưng streaming kém hơn Spring Integration. & 
+Trung bình: Active Record xử lý dữ liệu tốt \cite{rails-guides}, nhưng streaming và ETL đòi hỏi cài đặt thêm các gem ngoài. & 
+Trung bình: Yêu cầu cài đặt thêm các thư viện mở rộng như Flask-SQLAlchemy \cite{flask-sqlalchemy} để xử lý dữ liệu. \\
 \hline
-\textbf{Bảo mật} & Cao: Spring Security tích hợp sẵn OAuth2/JWT, bảo vệ hồ sơ người dùng và hội thoại. & Trung bình: Cần thư viện như Passport.js, cấu hình bảo mật phức tạp hơn Spring Security. & Cao: Django Authentication mạnh, nhưng cấu hình OAuth2 phức tạp hơn Spring Boot. & Cao: Devise hỗ trợ bảo mật tốt, nhưng tích hợp OAuth2 kém hơn Spring Security. & Trung bình: Cần thư viện bên ngoài (Flask-Login), không mạnh bằng Spring Security. \\
+\textbf{Bảo mật} & 
+Cao: Spring Security tích hợp sẵn OAuth2/JWT \cite{spring-security-ref}, bảo vệ tốt dữ liệu nhạy cảm. & 
+Trung bình: Đòi hỏi cấu hình thủ công phức tạp qua các middleware bên ngoài như Passport.js \cite{passport-docs}. & 
+Cao: Django Authentication có sẵn cơ chế bảo mật mạnh \cite{django-admin}, nhưng tích hợp OAuth2 tốn nhiều bước hơn. & 
+Cao: Gem Devise \cite{devise-docs} cung cấp giải pháp xác thực toàn diện, nhưng tùy biến luồng OAuth2 phức tạp. & 
+Trung bình: Cần phụ thuộc vào thư viện ngoài như Flask-Login \cite{flask-login}, không mạnh và đồng bộ như Spring Security. \\
 \hline
-\textbf{Quản trị người dùng/ nội dung} & Cao: Spring MVC và Spring Security hỗ trợ API quản trị, kiểm duyệt nội dung, audit trail dễ dàng. & Trung bình: Cần xây dựng API quản trị từ đầu, không có module tích hợp sẵn như Spring Boot. & Cao: Django Admin mạnh, hỗ trợ kiểm duyệt, nhưng audit trail cần thêm thư viện. & Cao: Rails Admin tốt, nhưng tích hợp audit trail phức tạp hơn Spring Boot. & Thấp: Cần xây dựng quản trị từ đầu, không có module sẵn như Spring Boot. \\
+\textbf{Quản trị người dùng/ nội dung} & 
+Cao: Spring MVC hỗ trợ API quản trị, phân quyền và audit trail rõ ràng, minh bạch \cite{musib-2020}. & 
+Trung bình: Không có sẵn module quản trị, lập trình viên phải tự thiết kế và xây dựng API từ đầu. & 
+Cao: Tích hợp sẵn trang quản trị (Django Admin) \cite{django-admin} cực kỳ trực quan để kiểm duyệt nội dung. & 
+Cao: Gem Rails Admin \cite{rails-admin} hỗ trợ tạo giao diện quản trị tự động rất nhanh chóng và tiện lợi. & 
+Thấp: Hoàn toàn không có module quản trị tích hợp sẵn, đòi hỏi nỗ lực phát triển lớn từ con số không. \\
 \hline
-\textbf{Giám sát và bảo trì} & Cao: Spring Boot Actuator cung cấp log, telemetry, và giám sát pipeline, dễ tích hợp với Grafana. & Trung bình: Cần thư viện như Winston, PM2, không tích hợp sẵn như Actuator. & Trung bình: Django cần thêm thư viện như Sentry, không mạnh bằng Actuator. & Trung bình: Cần gem như New Relic, phức tạp hơn Actuator. & Thấp: Cần tự xây dựng log, giám sát, không có công cụ tích hợp sẵn. \\
+\textbf{Giám sát và bảo trì} & 
+Cao: Spring Boot Actuator \cite{spring-boot-ref} cung cấp sẵn telemetry, log, health checks cực kỳ dễ theo dõi. & 
+Trung bình: Cần cấu hình công cụ quản lý tiến trình bên ngoài như PM2 \cite{pm2-docs} và Winston để thu thập log. & 
+Trung bình: Đòi hỏi tích hợp các hệ thống giám sát của bên thứ ba (như Sentry) để theo dõi chi tiết ứng dụng. & 
+Trung bình: Cần sử dụng các công cụ hoặc gem ngoài (như New Relic) để có được chỉ số hiệu suất hệ thống. & 
+Thấp: Cơ chế giám sát lỏng lẻo, lập trình viên phải tự thiết lập toàn bộ quy trình logging và monitoring. \\
 \hline
-\textbf{Hệ sinh thái và cộng đồng} & Cao: Hệ sinh thái Java lớn, nhiều thư viện (Spring Batch, Security), tài liệu phong phú. & Cao: Hệ sinh thái Node.js lớn, nhưng thư viện phân tán, khó chọn hơn Spring Boot. & Cao: Hệ sinh thái Python mạnh, nhưng Django kém linh hoạt hơn Spring Boot cho API. & Trung bình: Hệ sinh thái Rails nhỏ hơn, tài liệu ít hơn Spring Boot. & Trung bình: Hệ sinh thái Python tốt, nhưng Flask thiếu module tích hợp so với Spring Boot. \\
+\textbf{Hệ sinh thái và cộng đồng} & 
+Cao: Hệ sinh thái Java khổng lồ, ổn định ở môi trường doanh nghiệp lớn \cite{spring-boot-ref}. & 
+Cao: Hệ sinh thái npm phong phú nhưng phân tán, chất lượng thư viện không đồng đều \cite{express-docs}. & 
+Cao: Cộng đồng Python lớn mạnh, hỗ trợ rất tốt nếu dự án có định hướng kết hợp AI/Machine Learning sâu. & 
+Trung bình: Cộng đồng từng rất mạnh nhưng hiện đang thu hẹp hơn so với Node.js và Spring Boot. & 
+Trung bình: Linh hoạt cho các dự án nhỏ hoặc microservices, nhưng thiếu tính đồng bộ cho dự án monolithic lớn. \\
 \hline
 \end{tabularx}
-\caption{So sánh Spring Boot và các công nghệ khác}
+\caption{So sánh tính năng và độ tương thích của Spring Boot với các công nghệ Backend phổ biến}
 \end{table}
 \end{landscape}

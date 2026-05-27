@@ -29,8 +29,9 @@ Các thành phần chính trong kiến trúc hệ thống:
                         \item \textbf{Notification module}: Tạo và gửi thông báo đến người dùng khi có các sự kiện liên quan (tin nhắn mới, lượt tương tác).
                         \item \textbf{Media module}: Quản lý tệp đính kèm -- điều phối việc upload/xóa file thông qua Infrastructure service.
                         \item \textbf{Report module}: Tiếp nhận và quản lý báo cáo vi phạm nội dung từ người dùng.
+                        \item \textbf{Content moderation module}: Tự động quét, phát hiện và xử lý các nội dung vi phạm dựa trên các từ khóa đã được quy định.
                     \end{itemize}
-
+                    
               \item \textbf{Infrastructure Module} -- Module hạ tầng dùng chung, cung cấp các dịch vụ kỹ thuật nền tảng cho các Feature Module sử dụng:
                     \begin{itemize}
                         \item \textbf{AiService}: Giao tiếp với Gemini AI API để sinh gợi ý lộ trình du lịch từ ngữ cảnh và sở thích người dùng.
@@ -54,5 +55,5 @@ Các thành phần chính trong kiến trúc hệ thống:
               \item \textbf{Google APIs (Auth \& Maps)}: Xác thực OAuth2 và tra cứu thông tin địa điểm.
           \end{itemize}
 
-    \item \textbf{Crawling Data Service}: Dịch vụ độc lập có nhiệm vụ thu thập dữ liệu điểm tham quan từ nền tảng Apify, sau đó ghi dữ liệu vào cơ sở dữ liệu PostgreSQL để bổ sung nguồn POI cho hệ thống.
+    \item \textbf{Crawling Data Service}: Dịch vụ độc lập có nhiệm vụ thu thập dữ liệu điểm tham quan, review từ nền tảng Apify, xử lý dữ liệu và cập nhật vào cơ sở dữ liệu PostgreSQL để bổ sung nguồn POI cho hệ thống.
 \end{itemize}

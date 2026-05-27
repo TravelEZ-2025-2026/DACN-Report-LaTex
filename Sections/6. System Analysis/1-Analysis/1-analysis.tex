@@ -4,7 +4,7 @@
 \subsubsubsection{Quy trình gợi ý lộ trình cá nhân hóa}
 Quy trình này mô tả sự tương tác giữa Khách du lịch, hệ thống TravelEZ và hệ thống AI để tạo ra một lịch trình du lịch tối ưu.
 \begin{itemize}
-    \item Bắt đầu: Khách du lịch yêu cầu tạo lộ trình mới và cung cấp các thông tin mong muốn (điểm đến, phong cách, thời gian, chi phí,...).
+    \item Bắt đầu: Khách du lịch yêu cầu tạo lộ trình mới và cung cấp các thông tin mong muốn (điểm đến, phong cách, thời gian, chi phí...).
     \item Xử lý: Hệ thống AI tiếp nhận và trích xuất ý định từ yêu cầu của người dùng. Dựa trên các ý định này, hệ thống TravelEZ thực hiện tìm kiếm vector để chọn ra các địa điểm (POI) phù hợp. Sau đó, hệ thống tạo prompt chứa ngữ cảnh và danh sách POI ứng viên để gửi request đến AI.
     \item Phản hồi: AI xử lý thông tin để sinh ra lộ trình phù hợp. Hệ thống TravelEZ tiến hành kiểm tra (validate) kết quả này; nếu không hợp lệ, hệ thống sẽ đính kèm thông tin lỗi vào prompt và yêu cầu AI xử lý lại. Nếu hợp lệ, lộ trình đề xuất sẽ được hiển thị cho khách du lịch.
 \end{itemize}
@@ -16,7 +16,7 @@ Quy trình này mô tả sự tương tác giữa Khách du lịch, hệ thống
 \end{figure}
 
 % --- QUY TRÌNH 2: Quy trình Kiểm duyệt Nội dung Tự động ---
-\subsubsubsection{Quy trình kiểm duyệt nội dung Tự động}
+\subsubsubsection{Quy trình kiểm duyệt nội dung tự động}
 Đây là quy trình quan trọng nhằm đảm bảo tính lành mạnh của cộng đồng du lịch thông qua hai lớp kiểm duyệt.
 \begin{itemize}
     \item Lớp 1 (Thời gian thực): Ngay khi khách du lịch nhấn đăng bài, hệ thống sẽ quét nội dung dựa trên danh sách từ cấm. Nếu vi phạm, bài viết bị chặn ngay lập tức.
@@ -190,7 +190,6 @@ Dựa trên Hình \ref{fig:use_case_tong_quan}, sơ đồ mô tả các tương 
 \end{figure}
 \input{Sections/6. System Analysis/1-Analysis/use-case-diagram/8-module8.tex}
 \textbf{Module 8: Quản trị người dùng} (Hình \ref{fig:use_case_module_8}) thiết lập nền tảng định danh và phân quyền cho toàn bộ hệ thống. Các nhóm chức năng chính bao gồm:
-
 \begin{itemize}
     \item Người dùng chung: Thực hiện các tác vụ cơ bản về tài khoản như đăng ký, đăng nhập (Google/mật khẩu), đăng xuất và khôi phục mật khẩu.
     \item Người dùng đã xác thực: Quản lý hồ sơ cá nhân thông qua việc xem và cập nhật thông tin chi tiết, đồng thời nhận thông báo về trạng thái tài khoản.

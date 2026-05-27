@@ -1,10 +1,10 @@
 \subsubsection{Dịch vụ lưu trữ}
 \subsubsubsection{Google cloud storage}
-\textbf{Google Cloud Storage (GCS)} là dịch vụ lưu trữ đối tượng (object storage) dành cho các doanh nghiệp và nhà phát triển, được cung cấp bởi Google Cloud Platform (GCP). Trong hệ thống TravelEZ, S3 được sử dụng chuyên biệt cho việc lưu trữ các file media (hình ảnh, video) mà người dùng tải lên khi viết review hoặc đăng bài blog. Việc tách biệt lưu trữ file ra khỏi máy chủ ứng dụng giúp giảm tải cho backend và dễ dàng mở rộng dung lượng lưu trữ trong tương lai.\\
+\textbf{Google Cloud Storage (GCS)} là dịch vụ lưu trữ đối tượng (object storage) dành cho các doanh nghiệp và nhà phát triển, được cung cấp bởi Google Cloud Platform (GCP). Trong hệ thống TravelEZ, Google cloud storage được sử dụng chuyên biệt cho việc lưu trữ các file media (hình ảnh, video) mà người dùng tải lên khi viết review hoặc đăng bài blog. Việc tách biệt lưu trữ file ra khỏi máy chủ ứng dụng giúp giảm tải cho backend và dễ dàng mở rộng dung lượng lưu trữ trong tương lai.\\
 \textbf{Ưu điểm}
 \begin{itemize}
-    \item Độ bền và tính sẵn sàng cao: Google cam kết độ bền dữ liệu lên tới 99.999999999\%. Điều này đảm bảo dữ liệu quan trọng của đồ án (như review của người dùng) không bao giờ bị mất mát do lỗi phần cứng.
-    \item Khả năng mở rộng lớn: Bạn có thể lưu trữ bao nhiêu file tùy thích mà không cần lo lắng về việc hết dung lượng ổ đĩa trên máy chủ.
+    \item Độ bền và tính sẵn sàng cao: Google cam kết độ bền dữ liệu lên tới 99.99\%. Điều này đảm bảo dữ liệu quan trọng của đồ án (như review của người dùng) không bao giờ bị mất mát do lỗi phần cứng.
+    \item Khả năng mở rộng lớn: Có thể lưu trữ bao nhiêu file tùy thích mà không cần lo lắng về việc hết dung lượng ổ đĩa trên máy chủ.
     \item Chi phí hiệu quả: Mô hình trả phí theo dung lượng sử dụng (pay-as-you-go) rất tiết kiệm, đặc biệt khi so sánh với chi phí nâng cấp ổ cứng cho máy chủ.
     \item Tối ưu tốc độ truy cập: Google sở hữu mạng lưới cáp quang riêng lớn nhất thế giới. Điều này giúp việc tải ảnh/video địa điểm du lịch nhanh chóng cho người dùng ở bất kỳ đâu, cải thiện trải nghiệm người dùng.
     \item Giảm tải cho Backend: Máy chủ Spring Boot sẽ không phải xử lý việc truyền tải các file tĩnh nặng, giúp tập trung tài nguyên cho việc xử lý logic nghiệp vụ.
@@ -28,7 +28,7 @@
             \hline
             \textbf{Hiệu suất}        & Tối ưu cho việc lưu và đọc file.                                                                                   & Tối ưu cho việc lưu và đọc file.                                       & Bị ảnh hưởng bởi tải của server. Có thể gây nghẽn khi nhiều người truy cập file. \\
             \hline
-            \textbf{Chi phí}          & Cạnh tranh, có gói Free Tier hào phóng cho sinh viên/dev. Tính năng phân loại dữ liệu tự động giúp tiết kiệm tiền. & Phức tạp hơn trong cách tính phí (request, data transfer).             & Chi phí đầu tư ban đầu cao (mua ổ cứng), tốn chi phí bảo trì, điện năng.         \\
+            \textbf{Chi phí}          & Cạnh tranh, có gói Free Tier. Tính năng phân loại dữ liệu tự động giúp tiết kiệm tiền. & Phức tạp hơn trong cách tính phí (request, data transfer).             & Chi phí đầu tư ban đầu cao (mua ổ cứng), tốn chi phí bảo trì, điện năng.         \\
             \hline
             \textbf{Độ phức tạp}      & Giao diện và SDK thân thiện, dễ dùng cho lập trình viên mới tiếp cận Cloud.                                        & Nhiều tính năng nâng cao nhưng cấu hình có thể phức tạp với người mới. & Phải tự quản lý bảo mật, backup, mở rộng dung lượng (Rất tốn công sức).          \\
             \hline

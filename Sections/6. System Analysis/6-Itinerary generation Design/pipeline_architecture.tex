@@ -11,7 +11,7 @@ Kiến trúc này tuân thủ nguyên lý trách nhiệm duy nhất, phân tách
     \caption{Biểu đồ tuần tự minh họa kiến trúc Pipeline 6 giai đoạn sinh lộ trình}
     \label{fig:pipeline_seq_diagram}
 \end{figure}
-
+\newpage
 \textbf{Giai đoạn 1: Biên dịch chiến lược}
 \begin{itemize}
  \item \textbf{Mục tiêu:} Chuyển đổi yêu cầu ngôn ngữ tự nhiên không cấu trúc của người dùng thành các truy vấn có chủ đích.
@@ -26,7 +26,7 @@ Kiến trúc này tuân thủ nguyên lý trách nhiệm duy nhất, phân tách
 
 \textbf{Giai đoạn 3: Khởi tạo bản nháp}
 \begin{itemize}
-\item \textbf{Mục tiêu:} Xử lý các ràng buộc mềm và phân bổ lịch trình sơ bộ theo cơ chế RAG.\\
+\item \textbf{Mục tiêu:} Xử lý các ràng buộc mềm và phân bổ lịch trình sơ bộ theo cơ chế RAG.
 \item \textbf{Chi tiết thực thi:} LLM đóng vai trò là bộ lập kế hoạch (planner), tiếp nhận cửa sổ ngữ cảnh (context window) bao gồm thông tin người dùng và tập dữ liệu POI ứng viên đã được xác thực. Thông qua kỹ thuật tinh chỉnh câu lệnh (prompt engineering), mô hình bị ràng buộc bởi các quy tắc trải nghiệm để sinh ra bản nháp lộ trình dưới định dạng JSON.
 \end{itemize}
 
@@ -51,5 +51,5 @@ Kết quả là một báo cáo kiểm duyệt chứa danh sách các mã lỗi 
 \textbf{Giai đoạn 6: Tích hợp dữ liệu}
 \begin{itemize}
 \item \textbf{Mục tiêu:} Hoàn thiện đối tượng dữ liệu trước khi chuyển giao cho tầng giao diện.
-\item \textbf{Chi tiết thực thi:} Giai đoạn cuối cùng thực hiện thao tác ánh xạ ngược các mã ID từ JSON vào cơ sở dữ liệu để truy xuất và đè/bổ sung các thông tin "chuẩn" như: hình ảnh đại diện, địa chỉ chi tiết, tọa độ bản đồ. Lộ trình lúc này trở thành một thực thể dữ liệu hoàn chỉnh, hoàn toàn loại bỏ nguy cơ "ảo giác dữ liệu" của AI.
+\item \textbf{Chi tiết thực thi:} Giai đoạn cuối cùng thực hiện thao tác ánh xạ ngược các mã ID từ JSON vào cơ sở dữ liệu để truy xuất và đè/bổ sung các thông tin "chuẩn"\ như: hình ảnh đại diện, địa chỉ chi tiết, tọa độ bản đồ. Lộ trình lúc này trở thành một thực thể dữ liệu hoàn chỉnh, hoàn toàn loại bỏ nguy cơ "ảo giác dữ liệu"\ của AI.
 \end{itemize}

@@ -1,6 +1,6 @@
 \subsubsection{Thiết kế cơ sở dữ liệu}
 \subsubsubsection{Thiết kế ý niệm}
-Mục tiêu chính của phần này là xây dựng một mô hình dữ liệu trừu tượng, độc lập với các hệ quản trị cơ sở dữ liệu (DBMS) cụ thể, nhằm phản ánh chính xác các đối tượng dữ liệu và mối quan hệ giữa chúng trong hệ thống. Nhóm sử dụng mô hình Thực thể kết hợp mở rộng (EERD - Enhanced Entity-Relationship Diagram) để trực quan hóa cấu trúc thông tin, đảm bảo tính toàn vẹn và đáp ứng đầy đủ các chức năng cốt lõi của ứng dụng
+Mục tiêu chính của phần này là xây dựng một mô hình dữ liệu trừu tượng, độc lập với các hệ quản trị cơ sở dữ liệu (DBMS) cụ thể, nhằm phản ánh chính xác các đối tượng dữ liệu và mối quan hệ giữa chúng trong hệ thống. Nhóm sử dụng mô hình Thực thể kết hợp mở rộng (EERD - Enhanced Entity-Relationship Diagram) để trực quan hóa cấu trúc thông tin, đảm bảo tính toàn vẹn và đáp ứng đầy đủ các chức năng cốt lõi của ứng dụng.
 
 \begin{landscape}
 \begin{figure}[htp]
@@ -213,6 +213,6 @@ Nhóm đã phân tích các luồng nghiệp vụ chính và xác định các c
     \textbf{idx\_poi\_place\_type\_status} & Tối ưu hóa các truy vấn tìm kiếm, lọc địa điểm tham quan (POI) theo khu vực (place\_id), loại hình (poi\_type) và trạng thái. Rất quan trọng cho tính năng bản đồ, khám phá và gợi ý điểm đến. \\ \hline
     \textbf{idx\_itinerary\_traveler\_status} & Tối ưu hóa việc truy xuất danh sách lịch trình chuyến đi của một du khách (traveler\_id) theo trạng thái (đang lên kế hoạch, đang đi, đã hoàn thành). Giúp trang quản lý chuyến đi cá nhân tải dữ liệu nhanh chóng. \\ \hline  
     \textbf{idx\_comment\_post\_created} & Hỗ trợ truy vấn tải danh sách bình luận của một bài đăng cụ thể. Tránh việc hệ thống phải quét toàn bộ bảng comment, đồng thời hỗ trợ sắp xếp thứ tự bình luận theo thời gian một cách mượt mà. \\ \hline
-    \textbf{idx\_follow\_following\_id} & Phục vụ truy vấn lấy danh sách "Người theo dõi" (Followers) của một cá nhân. Do khóa chính (follower\_id, following\_id) chỉ hỗ trợ tốt chiều tìm "Đang theo dõi", index này bắt buộc phải có để tối ưu chiều ngược lại. \\ \hline
+    \textbf{idx\_follow\_following\_id} & Phục vụ truy vấn lấy danh sách "Người theo dõi"\ (Followers) của một cá nhân. Do khóa chính (follower\_id, following\_id) chỉ hỗ trợ tốt chiều tìm "Đang theo dõi", index này bắt buộc phải có để tối ưu chiều ngược lại. \\ \hline
     \textbf{idx\_message\_conv\_created} & Tăng tốc các truy vấn tải lịch sử tin nhắn trong một hộp thoại cụ thể, thường xuyên dùng kết hợp với ORDER BY trong màn hình chat để luôn hiển thị các tin nhắn mới nhất lên trước. \\ \hline
 \end{longtable}

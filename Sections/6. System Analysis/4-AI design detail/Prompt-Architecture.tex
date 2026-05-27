@@ -9,15 +9,15 @@ Trong bối cảnh phát triển phần mềm tích hợp LLM, Prompt Engineerin
 Dựa trên khung phân loại lỗi do Tian et al. (2025) đề xuất và được tổng hợp trong báo cáo khảo sát tháng 11/2025 \cite{tian2025llm}, nhóm xác định 3 thách thức kỹ thuật lớn nhất tương ứng với 3 tiêu chí đánh giá:
 
 \begin{enumerate}[label=\alph*., leftmargin=*]
-    \item \textbf{Thách thức về đặc tả và ý định:} Các yêu cầu lập lịch trình du lịch thường phức tạp về logic không gian và thời gian. Nếu prompt không rõ ràng, mô hình dễ mắc lỗi "Chỉ dẫn mơ hồ" (Ambiguous Instructions) hoặc "Ràng buộc thiếu đặc tả" (Underspecified Constraints).
+    \item \textbf{Thách thức về đặc tả và ý định:} Các yêu cầu lập lịch trình du lịch thường phức tạp về logic không gian và thời gian. Nếu prompt không rõ ràng, mô hình dễ mắc lỗi "Chỉ dẫn mơ hồ"\ (Ambiguous Instructions) hoặc "Ràng buộc thiếu đặc tả"\ (Underspecified Constraints).
     
     Tiêu chí 1: Kỹ thuật được chọn phải có khả năng diễn giải chính xác các ý định phức tạp và tuân thủ chặt chẽ logic nghiệp vụ.
     
-    \item \textbf{Thách thức về độ tin cậy nội dung:} Mô hình ngôn ngữ có xu hướng sinh ra "Ảo giác" (Hallucination) hoặc sử dụng thông tin sai lệch khi không được kiểm soát. Đối với ứng dụng du lịch, việc bịa đặt địa điểm không tồn tại là lỗi nghiêm trọng thuộc nhóm "Input \& Content Defects".
+    \item \textbf{Thách thức về độ tin cậy nội dung:} Mô hình ngôn ngữ có xu hướng sinh ra "Ảo giác"\ (Hallucination) hoặc sử dụng thông tin sai lệch khi không được kiểm soát. Đối với ứng dụng du lịch, việc bịa đặt địa điểm không tồn tại là lỗi nghiêm trọng thuộc nhóm "Input \& Content Defects".
     
     Tiêu chí 2: Kỹ thuật phải tối đa hóa độ trung thực (Fidelity), đảm bảo đầu ra bám sát dữ liệu POIs được cung cấp.
     
-    \item \textbf{Thách thức về hiệu suất vận hành:} Các kỹ thuật prompt quá dài hoặc cơ chế suy luận phức tạp có thể gây ra lỗi "Prompt quá khổ" (Excessive Prompt Length) hoặc "Đầu ra không giới hạn" (Unbounded Output), dẫn đến độ trễ cao và chi phí vận hành lớn.
+    \item \textbf{Thách thức về hiệu suất vận hành:} Các kỹ thuật prompt quá dài hoặc cơ chế suy luận phức tạp có thể gây ra lỗi "Prompt quá khổ"\ (Excessive Prompt Length) hoặc "Đầu ra không giới hạn" (Unbounded Output), dẫn đến độ trễ cao và chi phí vận hành lớn.
     
     Tiêu chí 3: Kỹ thuật phải tối ưu hóa số lượng token (đặc biệt là token đầu ra đắt đỏ) để đảm bảo tính kinh tế.
 \end{enumerate}
@@ -45,7 +45,7 @@ Dựa trên tài liệu khảo sát, nhóm thực hiện xem xét 4 kỹ thuật
     \item \textit{Thấp:} Thường xuyên đưa ra lộ trình bất khả thi hoặc sai lệch hoàn toàn yêu cầu.
     \item \textit{Trung bình:} Hiểu được yêu cầu cơ bản nhưng thất bại khi xử lý các ràng buộc chồng chéo.
     \item \textit{Khá:} Xử lý tốt logic thông thường, đôi khi gặp khó khăn với các ràng buộc phức tạp.
-    \item \textit{Cao:} Khả năng suy luận sâu, xử lý tốt các bài toán đa bước (multi-step) về không gian/thời gian.
+    \item \textit{Cao:} Khả năng suy luận sâu, xử lý tốt các bài toán đa bước (multi-step) về không gian, thời gian.
 \end{itemize}
 
 \textbf{Tiêu chí 2 - Độ tin cậy:}
@@ -93,8 +93,8 @@ Dựa trên phân tích đánh đổi, nhóm nhận thấy không có một kỹ
 Kiến trúc này được thiết kế để tận dụng nền tảng vững chắc của Structured Prompting và bổ sung sức mạnh suy luận của CoT theo cách tối ưu nhất:
 
 \begin{itemize}
-    \item Lớp 1: Suy luận ngầm - Giải quyết tiêu chí 1 \& 3: Thay vì yêu cầu AI phải xuất ra toàn bộ quá trình suy nghĩ (gây tốn chi phí cho phần Output), nhóm đã lựa chọn sử dụng chỉ thị "Suy nghĩ trong im lặng" hoặc "Lập kế hoạch tổng quát rồi xuất ra dưới dạng JSON". Điều này giúp kích hoạt khả năng suy luận logic của CoT nhưng loại bỏ gánh nặng chi phí của việc sinh văn bản thừa.
-    \item Lớp 2: Ràng buộc cấu trúc - Giải quyết tiêu chí 2: Sử dụng định dạng JSON Schema nghiêm ngặt để ngăn chặn lỗi sai định dạng (Undefined Output Format). Kết hợp với các "Luật cấm" (Negative Constraints) để giảm thiểu ảo giác.
+    \item Lớp 1: Suy luận ngầm - Giải quyết tiêu chí 1 \& 3: Thay vì yêu cầu AI phải xuất ra toàn bộ quá trình suy nghĩ (gây tốn chi phí cho phần Output), nhóm đã lựa chọn sử dụng chỉ thị "Suy nghĩ trong im lặng"\ hoặc "Lập kế hoạch tổng quát rồi xuất ra dưới dạng JSON". Điều này giúp kích hoạt khả năng suy luận logic của CoT nhưng loại bỏ gánh nặng chi phí của việc sinh văn bản thừa.
+    \item Lớp 2: Ràng buộc cấu trúc - Giải quyết tiêu chí 2: Sử dụng định dạng JSON Schema nghiêm ngặt để ngăn chặn lỗi sai định dạng (Undefined Output Format). Kết hợp với các "Luật cấm"\ (Negative Constraints) để giảm thiểu ảo giác.
     \item Lớp 3: Kiểm soát đầu ra: Để khắc phục tính ngẫu nhiên của mô hình, hệ thống tích hợp bộ Validation ngay sau bước nhận kết quả để phát hiện các lỗi logic hoặc ảo giác còn sót lại.
 \end{itemize}
 

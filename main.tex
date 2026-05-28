@@ -185,10 +185,14 @@
         \tiny \bf 
     \end{tabular}  }
 \fancyfoot{} % clear all footer fields
-\fancyfoot[R]{\scriptsize  Trang {\thepage}/\pageref{LastPage}}
+\fancyfoot[R]{}
 \renewcommand{\headrulewidth}{0.3pt}
 \renewcommand{\footrulewidth}{0.3pt}
 
+\fancypagestyle{plain}{
+    \fancyfoot{}
+    \renewcommand{\headrulewidth}{0.3pt}
+}
 
 %%%
 \setcounter{secnumdepth}{5}
@@ -342,7 +346,7 @@
 
 % (etc.)
 
-\pagenumbering{roman}
+\pagenumbering{gobble}
 
 \newpage
 \pagestyle{fancy}
@@ -470,6 +474,8 @@ Tourism is a crucial sector in promoting the country and its people to the world
 
 \clearpage
 \pagenumbering{arabic}
+\fancyfoot[R]{\scriptsize  Trang {\thepage}/\pageref{EndMainBody}}
+
 
 \input{Sections/1. Introduction/introduction}
 
@@ -497,6 +503,13 @@ Tourism is a crucial sector in promoting the country and its people to the world
 
 \newpage
 \input{Sections/9. Conclusion/conclusion}
+
+\label{EndMainBody}
+
+\clearpage
+\pagenumbering{gobble} 
+\fancyfoot[R]{}
+
 
 \newpage
 % \section*{References}
